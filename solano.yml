@@ -15,14 +15,14 @@ system:
   mode: parallel
   output: exit-status
   files:
-  - include: '**/*Test.java'
-  - include: '**/*Test.groovy'
+  - include: 'src/**Test.java'
+  - include: 'src/**Test.groovy'
   report_files:
-  - "**/test-results/TEST-*.xml"
+  - "build/test-results/TEST-*.xml"
 
 - type: junit
   command: cd java/multiproject && gradle test
   invocation: single
   mode: basic
   report_files:
-  - "**/test-results/TEST-*.xml"
+  - "./**/test-results/TEST-*.xml"
