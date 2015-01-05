@@ -1,0 +1,9 @@
+apply plugin: 'java'
+
+version = 'SNAPSHOT'
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.3.6'
+}
+
+apply from: '../solano.gradle'

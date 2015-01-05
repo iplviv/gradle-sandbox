@@ -1,0 +1,25 @@
+---
+system:
+  disable_dodge_preload: true
+:java:
+  :java_version: java-7-openjdk
+  :maven_version: 3.0.5
+  :gradle_version: 2.0
+:timeout_hook: 1200
+:timeout: 7200
+:tests:
+#- type: junit
+#  command: bin/solano-runner -Dwebdriver.browser.type=GOOGLECHROME -DtestThreadCount=4
+#  invocation: single
+#  mode: parallel
+#  output: exit-status
+#  files:
+#  - include: '**/*Test.java'
+#  report_files:
+#  - "**/surefir-reports/TEST-*.xml"
+- type: junit
+  command: cd java/multiproject && gradle test
+  invocation: single
+  mode: basic
+  report_files:
+  - "**/test-results/TEST-*.xml"

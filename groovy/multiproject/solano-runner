@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+
+require 'fileutils'
+
+# Separate JVM options from arguments.
+# Arguments are treated as files paths list.
+(options, files) = ARGV.partition {|arg| arg.start_with?('-D')}
+
+# Make a copy of existing build.gradle
+# Add apply command to include solano.gradle at the end of the build.gradle
+gradle_config = 'build.gradle'
+gradle_config_backup = gradle_config + '.solano-backup'
+solano_config = 'solano.gradle'
+
+if File.exist?(gradle_config) and !File.exist?(gradle_config_backup)
+  # Make backup.
+  FileUtils::copy_file(gradle_config, gradle_config_backup)
+
+  # Append command line.
+  open(gradle_config, 'a') { |file|
+    file.puts "\n// The following line has been automatically added by the Solano runner"
+    file.puts "apply from: '#{solano_config}'"
+  }
+end
+
+# Compose maven command.
+cmd = "("
+cmd += "gradle clean test #{options.join(' ')}"
+cmd += " -DtestFiles=#{files.join(',')}" if files.length > 0
+cmd += ")"
+ 
+puts cmd
+ 
+# Run.
+system(cmd)

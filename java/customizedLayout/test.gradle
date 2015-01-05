@@ -1,0 +1,4 @@
+apply from: 'build.gradle'
+
+println sourceSets.test.java.getSrcDirs()
+//println sourceSets.test.runtimeClasspath

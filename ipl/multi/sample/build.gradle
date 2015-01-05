@@ -1,0 +1,6 @@
+subprojects {
+    apply plugin: 'java'
+    println "[PROJECT] $project"
+}
+
+apply from: 'custom.gradle'

@@ -1,0 +1,115 @@
+/* Solano configurator.
+
+Features:
+  - custom filtering by source files paths;
+  - works with single and multi-project builds
+
+Requires inclusion of the following line into the top-level build.gradle, at the end:
+  apply from: 'solano.gradle'
+
+The bin/solano-runner script, which should be included into the customer's repository,
+adds the mentioned line of code into build.gradle automatically.
+*/
+
+Closure cl = { thisProject ->
+    rootProject.subprojects.size() == 0 || rootProject != thisProject
+}
+
+configure(allprojects.findAll(cl)) {
+    println "P " + project
+    afterEvaluate {
+        test {
+            outputs.upToDateWhen({return false})
+    
+            testLogging {
+                events "passed", "skipped", "failed"
+            }
+    
+            doFirst {
+                apply plugin: TestsFilter
+                String testFiles = System.properties.get('testFiles', "")
+                if (testFiles) {
+                    List names = testsFilter.filterClassNames(project, testFiles)
+                    if (names) {
+                        filter {
+                            setIncludePatterns( names as String[] )
+                        }
+                    } else {
+                        throw new StopExecutionException()
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+class TestsFilter implements Plugin<Project> {
+
+    void apply(Project project) {
+        project.extensions.create("testsFilter", TestsFilterExtension)
+    }
+
+}
+
+
+class TestsFilterExtension {
+
+    List getTestClassNames(project) {
+        File classesDir = project.sourceSets.test.output.classesDir
+        String prefix = classesDir.toString() + '/'
+        List names = []
+        classesDir.traverse {
+            if( it.absolutePath.endsWith( '.class' ) ) {
+                String name = (it.absolutePath - prefix).replaceAll( '/', '.' ) - '.class'
+                names << name
+            }
+        }
+        return names
+    }
+    
+    Set<File> getProperSrcDirs(project, path) {
+        return (project.sourceSets.test.java.getSrcDirs() +
+                project.sourceSets.test.groovy.getSrcDirs())
+    }
+    
+    String pathToClassName(project, path) {
+        Set<File> srcDirs = getProperSrcDirs(project, path)
+        srcDirs.each { dir ->
+            if (path.startsWith(dir.toString())) {
+                path = path - dir
+                if (path.startsWith('/')) {
+                    path = path.replaceFirst('/', '')
+                }
+            }
+        }
+        String className = path.lastIndexOf('.').with {it != -1 ? path[0..<it] : path}
+        return className.replaceAll( '/', '.' )
+    }
+    
+    List filterClassNames(project, files) {
+        List names = getTestClassNames(project)
+        List paths = []
+        List filtered = []
+        
+        if (!files) {
+            return names
+        }
+    
+        if (files =~ /,/) {
+            paths = files.tokenize(',')
+        } else {
+            paths << files
+        }
+    
+        paths.each { path ->
+            String className = pathToClassName(project, project.file(path).getAbsolutePath())
+            if (className in names) {
+                filtered << className
+            }
+        }
+    
+        return filtered
+    }
+
+}
