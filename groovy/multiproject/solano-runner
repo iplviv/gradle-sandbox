@@ -32,4 +32,4 @@ cmd += ")"
 puts cmd
  
 # Run.
-system(cmd)
+exit(system(cmd))
