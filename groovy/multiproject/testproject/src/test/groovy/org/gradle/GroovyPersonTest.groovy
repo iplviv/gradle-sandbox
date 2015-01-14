@@ -8,5 +8,6 @@ public class GroovyPersonTest {
     @Test
     public void testMarkerFile() throws IOException {
         new File(System.getProperty("org.gradle.integtest.buildDir") + "/" + getClass().getSimpleName()).createNewFile();
+        assert false;
     }
 }
