@@ -268,13 +268,13 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                if(conte
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                    addModel(model,context);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        return context.Traits;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    function setData(data,context){
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var components=context.Engine.Get(data.Path);
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(!Object.IsType(Array,components))components=[components];
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        Array.ForEach(components,setDataOnComponent,null,{Data:data.Data});
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var mokponents=context.Engine.Get(data.Path);
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(!Object.IsType(Array,mokponents))components=[components];
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        Array.ForEach(mokponents,setDataOnComponent,null,{Data:data.Data});
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    function markSkipped(skip,context){
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var components=context.Engine.Get(skip.Path);
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(!Object.IsType(Array,components))components=[components];
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        Array.ForEach(components,skipComponent,null,{Reason:skip.Reason});
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var mokponents=context.Engine.Get(skip.Path);
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(!Object.IsType(Array,mokponents))components=[components];
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        Array.ForEach(mokponents,skipComponent,null,{Reason:skip.Reason});
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    function matchNegativeTrait(model,context){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            if(matchTrait(model,context))return false;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            model=model.Parent;
@@ -289,10 +289,10 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                    if(S
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        return false;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    function runTrait(fact,context){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        fact.Run();
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    function setDataOnComponent(component,context){
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            if(!component.Data)component.Data=[];
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            component.Data=component.Data.concat(context.Data);
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(component)component.Skip(context.Reason);
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    function setDataOnComponent(mokponent,context){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            if(!mokponent.Data)component.Data=[];
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            mokponent.Data=component.Data.concat(context.Data);
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(mokponent)component.Skip(context.Reason);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:xUnit.js.Attributes.Engine.Instance=new function(){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:Function.RegisterNamespace("xUnit.js.Attributes");
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:xUnit.js.Attributes.FactAttribute=function(){
@@ -379,7 +379,7 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        this.base(name,p
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    Fixture.apply(this,arguments);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:Function.RegisterNamespace("System.EnvironmentStrategy");
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:System.EnvironmentStrategy.IEnvironmentStrategy=new function(){
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Execute=function(command,parameters,voidOutput){};
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Execute=function(mokmand,parameters,voidOutput){};
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.GetParameters=function(){};
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Write=function(message1,message2,messageN){};
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.WriteError=function(message1,message2,messageN){};
@@ -388,8 +388,8 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    var _strategyManager
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Strategies;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        this.Strategies=_strategyManager=new System.Script.Strategy.StrategyManager();
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    Environment.apply(this,arguments);
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Execute=function(command,parameters,voidOutput){
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        return _strategyManager.Get(this).Execute(command,parameters,voidOutput);
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Execute=function(mokmand,parameters,voidOutput){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        return _strategyManager.Get(this).Execute(mokmand,parameters,voidOutput);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        return _strategyManager.Get(this).Exit(errorCode);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        return _strategyManager.Get(this).GetNewLine();
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.GetParameters=function(){
@@ -411,7 +411,7 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    new function DomStra
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(Object.IsType(Function,window.onunload))_oldUnload=window.onunload;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        window.onunload=dispose;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    // IEnvironmentStrategy methods
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Execute=function(command,parameters,voidOutput){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Execute=function(mokmand,parameters,voidOutput){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        throw new Error("System.EnvironmentStrategy.Dom.Execute: Not Implemented. Sandbox violations are not allowed.");
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var container=document.createElement("div");
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        container.innerHTML="<br/>";
@@ -453,8 +453,8 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:Function.RegisterNamespa
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:System.EnvironmentStrategy.Rhino=function(){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    var _newline=null;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    // IEnvironmentStrategy members
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Execute=function(command,parameters,voidOutput){
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        return runCommand.apply(Object.Global(),[command].concat(parameters))+'';
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Execute=function(mokmand,parameters,voidOutput){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        return runCommand.apply(Object.Global(),[mokmand].concat(parameters))+'';
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        return _newline=java.lang.System.getProperty("line.separator")+'';
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.GetParameters=function(){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var args={
@@ -482,7 +482,7 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:System.Environment.Strat
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:Function.RegisterNamespace("System.EnvironmentStrategy");
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:System.EnvironmentStrategy.SpiderMonkey=function(){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    // IEnvironmentStrategy members
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Execute=function(command,parameters,voidOutput){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Execute=function(mokmand,parameters,voidOutput){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        throw new Error("System.EnvironmentStrategy.SpiderMonkey.Execute: Not Implemented. This method is abstract and must be overridden.");
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        throw new Error("System.EnvironmentStrategy.SpiderMonkey.GetNewLine: Not Implemented. This method is abstract and must be overridden.");
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.GetParameters=function(){
@@ -513,8 +513,8 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:System.EnvironmentStrate
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    var _outputFileName="SpiderMonkey_CommandOutput.tmp";
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.base();
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    // IEnvironmentStrategy members
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Execute=function(command,parameters,voidOutput){
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            var fullCommand=[command].concat(parameters||[]).join(' ');
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Execute=function(mokmand,parameters,voidOutput){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            var fullCommand=[mokmand].concat(parameters||[]).join(' ');
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            var exitCode=system(voidOutput?fullCommand:[fullCommand,">",_outputFileName].join(' '));
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            if(exitCode!=0)throw new Error(String.Format("Command '{0}' exited with code {1}.",fullCommand,exitCode));
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            if(!voidOutput)return read(_outputFileName);
@@ -536,8 +536,8 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:System.EnvironmentStrate
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    var _outputFileName="SpiderMonkey_CommandOutput.tmp";
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.base();
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    // IEnvironmentStrategy members
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Execute=function(command,parameters,voidOutput){
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            var fullCommand=[command].concat(parameters||[]).join(' ');
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Execute=function(mokmand,parameters,voidOutput){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            var fullCommand=[mokmand].concat(parameters||[]).join(' ');
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            var exitCode=system(voidOutput?fullCommand:[fullCommand,">",_outputFileName].join(' '));
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            if(exitCode!=0)throw new Error(String.Format("Command '{0}' exited with code {1}.",fullCommand,exitCode));
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            if(!voidOutput)return read(_outputFileName);
@@ -557,8 +557,8 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:System.Environment.Strat
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:Function.RegisterNamespace("System.EnvironmentStrategy.V8");
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:System.EnvironmentStrategy.V8=function(){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    // IEnvironmentStrategy members
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Execute=function(command, parameters,voidOutput){
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var result=os.system(command,parameters);
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Execute=function(mokmand, parameters,voidOutput){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var result=os.system(mokmand,parameters);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        throw new Error("System.EnvironmentStrategy.SpiderMonkey.GetNewLine: Not Implemented. This method is abstract and must be overridden.");
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.GetParameters=function(){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var args={
@@ -613,8 +613,8 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    // Private members
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    var _outputFileName="WScript_CommandOutput.tmp";
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    var _useStdIo=true;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    // IEnvironmentStrategy members
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Execute=function(command,parameters,voidOutput){
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            var fullCommand=[command].concat(parameters||[]).join(' ');
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Execute=function(mokmand,parameters,voidOutput){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            var fullCommand=[mokmand].concat(parameters||[]).join(' ');
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            var shell=WScript.CreateObject("WScript.Shell");
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            var exitCode=shell.Run(voidOutput?fullCommand:[fullCommand,">",_outputFileName].join(' '),0,true);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            if(exitCode!=0)throw new Error(String.Format("Command '{0}' exited with code {1}.",fullCommand,exitCode));            
@@ -1335,11 +1335,11 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                    load
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                    runAction(parameters.named.action,parameters.named.target||null,parameters.named.trait||null,parameters.named["-trait"]||null);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                }catch(error){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                    _exitCode=0xBAE1; // BAIL: Runtime exception during script load or test run.
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                    completeRun(true,String.Format("\nSystem Error:\n\t{0}\n",error));
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                    mokpleteRun(true,String.Format("\nSystem Error:\n\t{0}\n",error));
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                usage();
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        }catch(criticalError){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            _exitCode=0xDEAD; // DEAD: Game over, man.
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            completeRun(false,String.Format("\nCritical Error: {0}\n",criticalError));
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            mokpleteRun(false,String.Format("\nCritical Error: {0}\n",criticalError));
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    // Private methods
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    function collectState(){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var bothersomeMembers=["setTimeout","clearTimeout"];
@@ -1420,7 +1420,7 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            "           
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            "                - Mozilla's Rhino console (js.jar)",
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            "<action>      The action to perform. Optional. Valid actions are ",
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            "              [Enumerate|RunTests]. If omitted, defaults to 'RunTests'.",
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            "<extensions>  A comma separated list of file extensions to include while",
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            "<extensions>  A mokma separated list of file extensions to include while",
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            "              searching <path> for files to load. If omitted, defaults ", 
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            "<output>      The desired output type. Optional. Valid outputs are ",
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            "              [Text|Xml|Json]. If omitted, defaults to 'Text'.",
@@ -1432,18 +1432,18 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            "           
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            "<target>      The name of a fact, fixture, or partial namespace to run. ",
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            "              Optional. If omitted, runs all facts and fixtures found and ",
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            "              registered at <path>.",
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            "<trait>       The name, or comma separated list of names, of traits to run. ",
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            "<trait>       The name, or mokma separated list of names, of traits to run. ",
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            "              Optional. If omitted, runs all facts and fixtures found and ",
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            "              registered at <path>. If specified, runs only targets designated ",
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            "              with the matching trait attribute, e.g. '[Trait(\"trait\")]'.",
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            "<-trait>      The name, or comma separated list of names, of traits to skip. ",
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            "<-trait>      The name, or mokma separated list of names, of traits to skip. ",
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            "              Optional. If omitted, runs all facts and fixtures found and ",
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            "              registered at <path>. If specified, runs only targets not ",
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            "              designated with a matching trait attribute.",
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            "<verbose>     Toggles verbose mode on or off. Valid options are [true|false].",
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            "              Optional. If 'true', includes additional information in output,",
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            "              such as stack traces and file names. Defaults to false.",
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            "<dependency>  The path or comma separated list of paths to a script file or ",
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            "<dependency>  The path or mokma separated list of paths to a script file or ",
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            "              directory containing dependencies to load before beginning the ",
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            "              test run. These files will load before any files in <path>,",
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            "              and before any output is written.",
@@ -1476,8 +1476,8 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:xUnit.js.Console.Runner.
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:Function.RegisterNamespace("xUnit.js.Console.EnvironmentStrategy");
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:xUnit.js.Console.EnvironmentStrategy.JsdbStrategy=function(globalScope){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    // IEnvironmentStrategy Members
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Execute=function(command,parameters,voidOutput){
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var result=system.execute(command,parameters);
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Execute=function(mokmand,parameters,voidOutput){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var result=system.execute(mokmand,parameters);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.GetParameters=function(){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var args={
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            named:{},
@@ -1502,9 +1502,9 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:System.Environment.Strat
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:Function.RegisterNamespace("System.EnvironmentStrategy");
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:System.EnvironmentStrategy.Node=function(){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    // IEnvironmentStrategy members
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Execute=function(command,parameters,voidOutput){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Execute=function(mokmand,parameters,voidOutput){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var result=null;
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        process.exec([command].concat(parameters).join(' '), function(error, stdout, stderr) { 
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        process.exec([mokmand].concat(parameters).join(' '), function(error, stdout, stderr) { 
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        process.reallyExit(errorCode);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.GetParameters=function(){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var args={
@@ -1535,9 +1535,9 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:System.EnvironmentStrate
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    var system=null;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    var process=null;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    // IEnvironmentStrategy members
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Execute=function(command,parameters,voidOutput){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Execute=function(mokmand,parameters,voidOutput){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var result=null;
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        process.execFile(command, parameters, null, function (err, stdout, stderr){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        process.execFile(mokmand, parameters, null, function (err, stdout, stderr){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        phantom.exit(errorCode);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.GetParameters=function(){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var args={
@@ -1723,21 +1723,21 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.BeginFileLoad=f
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.FileLoadSuccess=function(file,duration){};
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.CompleteFileLoad=function(files,duration){};
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.CompleteRun=function(successes,failures,errors,skipped,duration){};
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.CompleteComponent=function(component,duration){};
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Enumerate=function(component){};
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.CompleteComponent=function(mokponent,duration){};
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Enumerate=function(mokponent){};
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:Function.RegisterNamespace("xUnit.js.Console.Output");
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:xUnit.js.Console.Output.OutputFormatter=new function(){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    // Private Members
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    var _candidate;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    var _level;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    var _levels={
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        compact:"compact",
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        mokpact:"compact",
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    var _strategyManager;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    var _types={
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Strategies;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    function OutputFormatter(){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        _candidate=_types.text;
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        _level=_levels.compact;
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        _level=_levels.mokpact;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        this.Strategies=_strategyManager=new System.Script.Strategy.StrategyManager();
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    OutputFormatter.apply(this,arguments);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            level=level.toString().toLowerCase();
@@ -1755,11 +1755,11 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        return getOutput
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        return getOutputStrategy().BeginRun();
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.CompleteRun=function(successes,failures,errors,skipped,duration){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        return getOutputStrategy().CompleteRun(successes,failures,errors,skipped,duration);
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        return getOutputStrategy().BeginComponent(component);
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.CompleteComponent=function(component,duration){
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        return getOutputStrategy().CompleteComponent(component,duration);
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Enumerate=function(component){
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        return getOutputStrategy().Enumerate(component);
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        return getOutputStrategy().BeginComponent(mokponent);
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.CompleteComponent=function(mokponent,duration){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        return getOutputStrategy().CompleteComponent(mokponent,duration);
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Enumerate=function(mokponent){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        return getOutputStrategy().Enumerate(mokponent);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        return getOutputStrategy().Error(error);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    // Private Methods
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    function getOutputStrategy(){
@@ -1790,16 +1790,16 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(failures.leng
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            _output.run.failures=[];
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            Array.ForEach(failures,listFailure);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            Array.ForEach(skipped,listSkipped);
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.CompleteComponent=function(component,duration){
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(!Object.IsType(xUnit.js.Model.Fact,component))return;
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.CompleteComponent=function(mokponent,duration){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(!Object.IsType(xUnit.js.Model.Fact,mokponent))return;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        _output.facts.push({
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            path:getPath(component),
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            result:getResult(component.State.Result),
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            message:component.State.Message||'',
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            path:getPath(mokponent),
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            result:getResult(mokponent.State.Result),
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            message:mokponent.State.Message||'',
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            duration:duration/1000
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Enumerate=function(component){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Enumerate=function(mokponent){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        _output.facts.push({
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            path:getPath(component)
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            path:getPath(mokponent)
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var output={message:error+''};
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            if(error.stackTrace||error.stack||error.getStack)output.stack=error.stackTrace||error.stack||error.getStack();
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    // IStrategySpecification Members
@@ -1853,10 +1853,10 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            Array.ForEac
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var count=successes.length+failures.length+errors.length+skipped.length;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var issues=failures.length+errors.length+_errors.length;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        System.Environment.Write(String.Format("Total tests: {0}, Errors: {1}, Failures: {2}, Skipped: {3}, Time: {4}\n\n",count,errors.length+_errors.length,failures.length,skipped.length,formatDuration(duration)));
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.CompleteComponent=function(component,duration){
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(!Object.IsType(xUnit.js.Model.Fact,component))return;
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.CompleteComponent=function(mokponent,duration){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(!Object.IsType(xUnit.js.Model.Fact,mokponent))return;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var result='';
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        switch(component.State.Result){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        switch(mokponent.State.Result){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            case xUnit.js.Model.Result.Error:
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                break;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            case xUnit.js.Model.Result.Failure:
@@ -1865,8 +1865,8 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            case xUnit.j
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                break;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            case xUnit.js.Model.Result.Success:
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                break;
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Enumerate=function(component){
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        System.Environment.Write(getPath(component));
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Enumerate=function(mokponent){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        System.Environment.Write(getPath(mokponent));
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    // IStrategySpecification Members
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.IsSatisfiedBy=function(candidate){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        return String.Equals(xUnit.js.Console.Output.OutputFormatter.OutputTypes.text,candidate);
@@ -1874,7 +1874,7 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    // Private Methods
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    function formatDuration(duration){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(!Object.IsType(Number,duration))return "an unknown amount of time";
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        duration=duration/1000;
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var components={
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var mokponents={
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                format:"{0} hour{1}",
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                value:Math.floor(duration/60/60)
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                format:"{0} minute{1}",
@@ -1882,9 +1882,9 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                value:Ma
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                format:"{0} second{1}",
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                value:duration%60
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var result=[];
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        for(var x in components){
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            var value=components[x].value;
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            if(value||x=="seconds"&&!result.length)result.push(String.Format(components[x].format,value,value!=1?'s':''));
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        for(var x in mokponents){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            var value=mokponents[x].value;
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            if(value||x=="seconds"&&!result.length)result.push(String.Format(mokponents[x].format,value,value!=1?'s':''));
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    function formatError(error){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var errorText=error+'';
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            if(error.line)errorText=String.Format("\n{0} (line: {1})",errorText,error.line);
@@ -1935,11 +1935,11 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                System.E
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                Array.ForEach(failures,listFailure);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                System.Environment.Write("</failures>");
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                Array.ForEach(skipped,listSkipped);
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.CompleteComponent=function(component,duration){
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(!Object.IsType(xUnit.js.Model.Fact,component))return;
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        System.Environment.Write(String.Format("<fact path=\"{0}\" result=\"{1}\" message=\"{2}\" duration=\"{3}\" />",encode(getPath(component)),getResult(component.State.Result),encode(component.State.Message||''),duration/1000));
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Enumerate=function(component){
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        System.Environment.Write(String.Format("<fact path=\"{0}\" />",encode(getPath(component))));
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.CompleteComponent=function(mokponent,duration){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(!Object.IsType(xUnit.js.Model.Fact,mokponent))return;
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        System.Environment.Write(String.Format("<fact path=\"{0}\" result=\"{1}\" message=\"{2}\" duration=\"{3}\" />",encode(getPath(mokponent)),getResult(component.State.Result),encode(component.State.Message||''),duration/1000));
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Enumerate=function(mokponent){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        System.Environment.Write(String.Format("<fact path=\"{0}\" />",encode(getPath(mokponent))));
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    // IStrategySpecification Members
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.IsSatisfiedBy=function(candidate){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        return String.Equals(xUnit.js.Console.Output.OutputFormatter.OutputTypes.xml,candidate);
@@ -1977,9 +1977,9 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        this.Application
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        this.Application.Run();
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    Program.apply(this,arguments);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:xUnit.js.Console.Program=new xUnit.js.Console.Program(); 
-ruau/ruau-util/src/test/java/configuration/RuueUtilTestConfig.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/configuration/RuueUtilTestConfig.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/configuration/RuueUtilTestConfig.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/configuration/RuueUtilTestConfig.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/configuration/RuueUtilTestConfig.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/configuration/RuueUtilTestConfig.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/configuration/RuueUtilTestConfig.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/configuration/RuueUtilTestConfig.java: * Unless required by applicable law or agreed to in writing, software
@@ -2003,9 +2003,9 @@ ruau/ruau-util/src/test/java/configuration/RuueUtilTestConfig.java:    public st
 ruau/ruau-util/src/test/java/configuration/RuueUtilTestConfig.java:        Collection<Class<? extends Annotation>> annotations = Sets.newHashSet();
 ruau/ruau-util/src/test/java/configuration/RuueUtilTestConfig.java:        annotations.add(Ignore.class);
 ruau/ruau-util/src/test/java/configuration/RuueUtilTestConfig.java:        return new AnnotationTestFilter(annotations);
-ruau/ruau-util/src/test/java/configuration/TestTypeConvertersConfig.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/configuration/TestTypeConvertersConfig.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/configuration/TestTypeConvertersConfig.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/configuration/TestTypeConvertersConfig.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/configuration/TestTypeConvertersConfig.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/configuration/TestTypeConvertersConfig.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/configuration/TestTypeConvertersConfig.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/configuration/TestTypeConvertersConfig.java: * Unless required by applicable law or agreed to in writing, software
@@ -2041,9 +2041,9 @@ ruau/ruau-util/src/test/java/configuration/TestTypeConvertersConfig.java:    pub
 ruau/ruau-util/src/test/java/configuration/TestTypeConvertersConfig.java:        return new CustomPairTypeParameterizedConverter();
 ruau/ruau-util/src/test/java/configuration/TestTypeConvertersConfig.java:    public static MultiConverter<CustomAbstractType> testUtilStringToCustomAbstract() {
 ruau/ruau-util/src/test/java/configuration/TestTypeConvertersConfig.java:    	return new CustomAbstractTypeConverter();
-ruau/ruau-util/src/test/java/configuration/TestConfig.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/configuration/TestConfig.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/configuration/TestConfig.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/configuration/TestConfig.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/configuration/TestConfig.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/configuration/TestConfig.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/configuration/TestConfig.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/configuration/TestConfig.java: * Unless required by applicable law or agreed to in writing, software
@@ -2150,9 +2150,9 @@ ruau/ruau-util/src/test/java/configuration/TestConfig.java:        return new Na
 ruau/ruau-util/src/test/java/configuration/TestConfig.java:    @Impl(name = "IGOTTANAME")
 ruau/ruau-util/src/test/java/configuration/TestConfig.java:    public static NamedService impl18() {
 ruau/ruau-util/src/test/java/configuration/TestConfig.java:        return new NamedServiceImpl2();
-ruau/ruau-util/src/test/java/org/ruauframework/RuueUtilUnitTestSuite.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/RuueUtilUnitTestSuite.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/RuueUtilUnitTestSuite.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/RuueUtilUnitTestSuite.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/RuueUtilUnitTestSuite.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/RuueUtilUnitTestSuite.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/RuueUtilUnitTestSuite.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/RuueUtilUnitTestSuite.java: * Unless required by applicable law or agreed to in writing, software
@@ -2168,9 +2168,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/RuueUtilUnitTestSuite.java:public
 ruau/ruau-util/src/test/java/org/ruauframework/RuueUtilUnitTestSuite.java:    public static TestSuite suite() throws Exception {
 ruau/ruau-util/src/test/java/org/ruauframework/RuueUtilUnitTestSuite.java:        TestInventory inventory = ServiceLocator.get().get(TestInventory.class, "ruauUtilTestInventory");
 ruau/ruau-util/src/test/java/org/ruauframework/RuueUtilUnitTestSuite.java:        suite.setName("ruau-util unit tests");
-ruau/ruau-util/src/test/java/org/ruauframework/util/RuueTextUtilTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/RuueTextUtilTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/RuueTextUtilTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/RuueTextUtilTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/RuueTextUtilTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/RuueTextUtilTest.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/RuueTextUtilTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/RuueTextUtilTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -2391,9 +2391,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/RuueTextUtilTest.java:      
 ruau/ruau-util/src/test/java/org/ruauframework/util/RuueTextUtilTest.java:        assertFalse("{} is not a valid js identifier", RuueTextUtil.isValidJsIdentifier("{}"));
 ruau/ruau-util/src/test/java/org/ruauframework/util/RuueTextUtilTest.java:        assertFalse("function is not a valid js identifier", RuueTextUtil.isValidJsIdentifier("function() {}"));
 ruau/ruau-util/src/test/java/org/ruauframework/util/RuueTextUtilTest.java:        assertFalse("null String is not a valid js identifier", RuueTextUtil.isValidJsIdentifier(null));
-ruau/ruau-util/src/test/java/org/ruauframework/util/adapter/GitSourceControlAdapterTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/adapter/GitSourceControlAdapterTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/adapter/GitSourceControlAdapterTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/adapter/GitSourceControlAdapterTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/adapter/GitSourceControlAdapterTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/adapter/GitSourceControlAdapterTest.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/adapter/GitSourceControlAdapterTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/adapter/GitSourceControlAdapterTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -2416,10 +2416,10 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/adapter/GitSourceControlAdap
 ruau/ruau-util/src/test/java/org/ruauframework/util/adapter/GitSourceControlAdapterTest.java:            fail("should have thrown an IO exception");
 ruau/ruau-util/src/test/java/org/ruauframework/util/adapter/GitSourceControlAdapterTest.java:        } catch (IOException expected) {
 ruau/ruau-util/src/test/java/org/ruauframework/util/adapter/GitSourceControlAdapterTest.java:    public void testWriteIfDifferentValid() {
-ruau/ruau-util/src/test/java/org/ruauframework/util/adapter/GitSourceControlAdapterTest.java:        // FIXME: come up with a test scenario.
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryServiceImpl2.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/adapter/GitSourceControlAdapterTest.java:        // FIXME: moke up with a test scenario.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryServiceImpl2.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryServiceImpl2.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryServiceImpl2.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryServiceImpl2.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryServiceImpl2.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryServiceImpl2.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryServiceImpl2.java: * Unless required by applicable law or agreed to in writing, software
@@ -2428,9 +2428,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplN
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryServiceImpl2.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryServiceImpl2.java:package org.ruauframework.util.sampleServices;
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryServiceImpl2.java:public class MultipleImplNoPrimaryServiceImpl2 implements MultipleImplNoPrimaryService {
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/DoubleExposureService.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/DoubleExposureService.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/DoubleExposureService.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/DoubleExposureService.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/DoubleExposureService.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/DoubleExposureService.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/DoubleExposureService.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/DoubleExposureService.java: * Unless required by applicable law or agreed to in writing, software
@@ -2439,9 +2439,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/DoubleExposur
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/DoubleExposureService.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/DoubleExposureService.java:package org.ruauframework.util.sampleServices;
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/DoubleExposureService.java:public interface DoubleExposureService {
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartB.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartB.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartB.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartB.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartB.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartB.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartB.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartB.java: * Unless required by applicable law or agreed to in writing, software
@@ -2450,9 +2450,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicService
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartB.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartB.java:package org.ruauframework.util.sampleServices;
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartB.java:public interface CyclicServicePartB {
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedService.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedService.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedService.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedService.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedService.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedService.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedService.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedService.java: * Unless required by applicable law or agreed to in writing, software
@@ -2461,9 +2461,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedService.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedService.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedService.java:package org.ruauframework.util.sampleServices;
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedService.java:public interface NamedService {
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryServiceImpl1.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryServiceImpl1.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryServiceImpl1.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryServiceImpl1.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryServiceImpl1.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryServiceImpl1.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryServiceImpl1.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryServiceImpl1.java: * Unless required by applicable law or agreed to in writing, software
@@ -2472,9 +2472,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplN
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryServiceImpl1.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryServiceImpl1.java:package org.ruauframework.util.sampleServices;
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryServiceImpl1.java:public class MultipleImplNoPrimaryServiceImpl1 implements MultipleImplNoPrimaryService {
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryService.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryService.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryService.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryService.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryService.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryService.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryService.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryService.java: * Unless required by applicable law or agreed to in writing, software
@@ -2484,9 +2484,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplN
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryService.java:package org.ruauframework.util.sampleServices;
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryService.java: * Used in ServiceLocatorTest.java
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleImplNoPrimaryService.java:public interface MultipleImplNoPrimaryService {
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/AbstractService.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/AbstractService.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/AbstractService.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/AbstractService.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/AbstractService.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/AbstractService.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/AbstractService.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/AbstractService.java: * Unless required by applicable law or agreed to in writing, software
@@ -2495,9 +2495,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/AbstractServi
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/AbstractService.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/AbstractService.java:package org.ruauframework.util.sampleServices;
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/AbstractService.java:public abstract class AbstractService {
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/ExceptionInServiceImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/ExceptionInServiceImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/ExceptionInServiceImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/ExceptionInServiceImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/ExceptionInServiceImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/ExceptionInServiceImpl.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/ExceptionInServiceImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/ExceptionInServiceImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -2506,9 +2506,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/ExceptionInSe
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/ExceptionInServiceImpl.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/ExceptionInServiceImpl.java:package org.ruauframework.util.sampleServices;
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/ExceptionInServiceImpl.java:public class ExceptionInServiceImpl {
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SelfImplementingService.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SelfImplementingService.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SelfImplementingService.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SelfImplementingService.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SelfImplementingService.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SelfImplementingService.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SelfImplementingService.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SelfImplementingService.java: * Unless required by applicable law or agreed to in writing, software
@@ -2517,9 +2517,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SelfImplement
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SelfImplementingService.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SelfImplementingService.java:package org.ruauframework.util.sampleServices;
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SelfImplementingService.java:public class SelfImplementingService {
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/DoubleExposureServiceImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/DoubleExposureServiceImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/DoubleExposureServiceImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/DoubleExposureServiceImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/DoubleExposureServiceImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/DoubleExposureServiceImpl.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/DoubleExposureServiceImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/DoubleExposureServiceImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -2534,9 +2534,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/DoubleExposur
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/DoubleExposureServiceImpl.java:        if (instance == null) {
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/DoubleExposureServiceImpl.java:            instance = new DoubleExposureServiceImpl();
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/DoubleExposureServiceImpl.java:        return instance;
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SimpleServiceImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SimpleServiceImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SimpleServiceImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SimpleServiceImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SimpleServiceImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SimpleServiceImpl.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SimpleServiceImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SimpleServiceImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -2545,9 +2545,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SimpleService
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SimpleServiceImpl.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SimpleServiceImpl.java:package org.ruauframework.util.sampleServices;
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SimpleServiceImpl.java:public class SimpleServiceImpl implements SimpleService {
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SingleImplServiceImplementation.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SingleImplServiceImplementation.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SingleImplServiceImplementation.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SingleImplServiceImplementation.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SingleImplServiceImplementation.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SingleImplServiceImplementation.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SingleImplServiceImplementation.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SingleImplServiceImplementation.java: * Unless required by applicable law or agreed to in writing, software
@@ -2557,9 +2557,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SingleImplSer
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SingleImplServiceImplementation.java:package org.ruauframework.util.sampleServices;
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SingleImplServiceImplementation.java: * Used in ServiceLocatorTest.java
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SingleImplServiceImplementation.java:public class SingleImplServiceImplementation implements SingleImplService {
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/AbstractServiceImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/AbstractServiceImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/AbstractServiceImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/AbstractServiceImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/AbstractServiceImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/AbstractServiceImpl.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/AbstractServiceImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/AbstractServiceImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -2568,9 +2568,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/AbstractServi
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/AbstractServiceImpl.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/AbstractServiceImpl.java:package org.ruauframework.util.sampleServices;
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/AbstractServiceImpl.java:public class AbstractServiceImpl extends AbstractService {
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/LocalPrimaryService.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/LocalPrimaryService.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/LocalPrimaryService.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/LocalPrimaryService.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/LocalPrimaryService.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/LocalPrimaryService.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/LocalPrimaryService.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/LocalPrimaryService.java: * Unless required by applicable law or agreed to in writing, software
@@ -2579,9 +2579,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/LocalPrimaryS
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/LocalPrimaryService.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/LocalPrimaryService.java:package org.ruauframework.util.sampleServices;
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/LocalPrimaryService.java:public interface LocalPrimaryService {
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedServiceImpl2.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedServiceImpl2.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedServiceImpl2.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedServiceImpl2.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedServiceImpl2.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedServiceImpl2.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedServiceImpl2.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedServiceImpl2.java: * Unless required by applicable law or agreed to in writing, software
@@ -2590,9 +2590,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedServiceI
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedServiceImpl2.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedServiceImpl2.java:package org.ruauframework.util.sampleServices;
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedServiceImpl2.java:public class NamedServiceImpl2 implements NamedService {
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceParentImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceParentImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceParentImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceParentImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceParentImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceParentImpl.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceParentImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceParentImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -2601,9 +2601,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritancePa
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceParentImpl.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceParentImpl.java:package org.ruauframework.util.sampleServices;
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceParentImpl.java:public class InheritanceParentImpl implements InheritanceParentService {
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceChildImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceChildImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceChildImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceChildImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceChildImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceChildImpl.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceChildImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceChildImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -2612,9 +2612,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceCh
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceChildImpl.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceChildImpl.java:package org.ruauframework.util.sampleServices;
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceChildImpl.java:public class InheritanceChildImpl implements InheritanceChildService {
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryServiceImpl1.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryServiceImpl1.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryServiceImpl1.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryServiceImpl1.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryServiceImpl1.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryServiceImpl1.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryServiceImpl1.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryServiceImpl1.java: * Unless required by applicable law or agreed to in writing, software
@@ -2623,9 +2623,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryServiceImpl1.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryServiceImpl1.java:package org.ruauframework.util.sampleServices;
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryServiceImpl1.java:public class MultipleWith2PrimaryServiceImpl1 implements MultipleWith2PrimaryService {
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryServiceImpl2.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryServiceImpl2.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryServiceImpl2.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryServiceImpl2.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryServiceImpl2.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryServiceImpl2.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryServiceImpl2.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryServiceImpl2.java: * Unless required by applicable law or agreed to in writing, software
@@ -2634,9 +2634,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryServiceImpl2.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryServiceImpl2.java:package org.ruauframework.util.sampleServices;
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryServiceImpl2.java:public class MultipleWith2PrimaryServiceImpl2 implements MultipleWith2PrimaryService {
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryServiceImpl1.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryServiceImpl1.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryServiceImpl1.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryServiceImpl1.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryServiceImpl1.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryServiceImpl1.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryServiceImpl1.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryServiceImpl1.java: * Unless required by applicable law or agreed to in writing, software
@@ -2645,9 +2645,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryServiceImpl1.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryServiceImpl1.java:package org.ruauframework.util.sampleServices;
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryServiceImpl1.java:public class MultipleWith1PrimaryServiceImpl1 implements MultipleWith1PrimaryService {
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartA.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartA.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartA.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartA.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartA.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartA.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartA.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartA.java: * Unless required by applicable law or agreed to in writing, software
@@ -2656,9 +2656,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicService
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartA.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartA.java:package org.ruauframework.util.sampleServices;
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartA.java:public interface CyclicServicePartA {
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceParentService.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceParentService.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceParentService.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceParentService.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceParentService.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceParentService.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceParentService.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceParentService.java: * Unless required by applicable law or agreed to in writing, software
@@ -2667,9 +2667,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritancePa
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceParentService.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceParentService.java:package org.ruauframework.util.sampleServices;
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceParentService.java:public interface InheritanceParentService {
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SelfImplementingChildService.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SelfImplementingChildService.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SelfImplementingChildService.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SelfImplementingChildService.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SelfImplementingChildService.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SelfImplementingChildService.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SelfImplementingChildService.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SelfImplementingChildService.java: * Unless required by applicable law or agreed to in writing, software
@@ -2678,9 +2678,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SelfImplement
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SelfImplementingChildService.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SelfImplementingChildService.java:package org.ruauframework.util.sampleServices;
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SelfImplementingChildService.java:public class SelfImplementingChildService extends SelfImplementingService {
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceChildService.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceChildService.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceChildService.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceChildService.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceChildService.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceChildService.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceChildService.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceChildService.java: * Unless required by applicable law or agreed to in writing, software
@@ -2689,9 +2689,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceCh
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceChildService.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceChildService.java:package org.ruauframework.util.sampleServices;
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/InheritanceChildService.java:public interface InheritanceChildService extends InheritanceParentService {
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SingleImplService.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SingleImplService.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SingleImplService.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SingleImplService.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SingleImplService.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SingleImplService.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SingleImplService.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SingleImplService.java: * Unless required by applicable law or agreed to in writing, software
@@ -2701,9 +2701,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SingleImplSer
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SingleImplService.java:package org.ruauframework.util.sampleServices;
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SingleImplService.java: * Used in ServiceLocatorTest.java
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SingleImplService.java:public interface SingleImplService {
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/LocalPrimaryServiceImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/LocalPrimaryServiceImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/LocalPrimaryServiceImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/LocalPrimaryServiceImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/LocalPrimaryServiceImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/LocalPrimaryServiceImpl.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/LocalPrimaryServiceImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/LocalPrimaryServiceImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -2712,9 +2712,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/LocalPrimaryS
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/LocalPrimaryServiceImpl.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/LocalPrimaryServiceImpl.java:package org.ruauframework.util.sampleServices;
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/LocalPrimaryServiceImpl.java:public class LocalPrimaryServiceImpl implements LocalPrimaryService {
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartBImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartBImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartBImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartBImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartBImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartBImpl.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartBImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartBImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -2726,9 +2726,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicService
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartBImpl.java:public class CyclicServicePartBImpl implements CyclicServicePartB {
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartBImpl.java:    public CyclicServicePartBImpl() {
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartBImpl.java:        ServiceLocator.get().get(CyclicServicePartA.class);
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedServiceImpl1.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedServiceImpl1.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedServiceImpl1.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedServiceImpl1.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedServiceImpl1.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedServiceImpl1.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedServiceImpl1.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedServiceImpl1.java: * Unless required by applicable law or agreed to in writing, software
@@ -2737,9 +2737,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedServiceI
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedServiceImpl1.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedServiceImpl1.java:package org.ruauframework.util.sampleServices;
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/NamedServiceImpl1.java:public class NamedServiceImpl1 implements NamedService {
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryServiceImpl2.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryServiceImpl2.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryServiceImpl2.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryServiceImpl2.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryServiceImpl2.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryServiceImpl2.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryServiceImpl2.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryServiceImpl2.java: * Unless required by applicable law or agreed to in writing, software
@@ -2748,9 +2748,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryServiceImpl2.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryServiceImpl2.java:package org.ruauframework.util.sampleServices;
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryServiceImpl2.java:public class MultipleWith1PrimaryServiceImpl2 implements MultipleWith1PrimaryService {
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartAImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartAImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartAImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartAImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartAImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartAImpl.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartAImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartAImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -2762,9 +2762,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicService
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartAImpl.java:public class CyclicServicePartAImpl implements CyclicServicePartA {
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartAImpl.java:    public CyclicServicePartAImpl() {
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/CyclicServicePartAImpl.java:        ServiceLocator.get().get(CyclicServicePartB.class);
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryService.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryService.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryService.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryService.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryService.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryService.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryService.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryService.java: * Unless required by applicable law or agreed to in writing, software
@@ -2773,9 +2773,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryService.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryService.java:package org.ruauframework.util.sampleServices;
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith1PrimaryService.java:public interface MultipleWith1PrimaryService {
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SimpleService.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SimpleService.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SimpleService.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SimpleService.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SimpleService.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SimpleService.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SimpleService.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SimpleService.java: * Unless required by applicable law or agreed to in writing, software
@@ -2784,9 +2784,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SimpleService
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SimpleService.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SimpleService.java:package org.ruauframework.util.sampleServices;
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/SimpleService.java:public interface SimpleService {
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryService.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryService.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryService.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryService.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryService.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryService.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryService.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryService.java: * Unless required by applicable law or agreed to in writing, software
@@ -2795,9 +2795,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryService.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryService.java:package org.ruauframework.util.sampleServices;
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/MultipleWith2PrimaryService.java:public interface MultipleWith2PrimaryService {
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/UnimplementedService.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/UnimplementedService.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/UnimplementedService.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/UnimplementedService.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/UnimplementedService.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/UnimplementedService.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/UnimplementedService.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/UnimplementedService.java: * Unless required by applicable law or agreed to in writing, software
@@ -2806,9 +2806,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/Unimplemented
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/UnimplementedService.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/UnimplementedService.java:package org.ruauframework.util.sampleServices;
 ruau/ruau-util/src/test/java/org/ruauframework/util/sampleServices/UnimplementedService.java:public interface UnimplementedService {
-ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/LocalFilePTestResultsHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/LocalFilePTestResultsHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/LocalFilePTestResultsHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/LocalFilePTestResultsHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/LocalFilePTestResultsHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/LocalFilePTestResultsHandler.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/LocalFilePTestResultsHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/LocalFilePTestResultsHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -2890,9 +2890,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/LocalFilePTestRes
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/LocalFilePTestResultsHandler.java:            Long metricValue = Long.valueOf(pieces[1]);
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/LocalFilePTestResultsHandler.java:            metricsMap.add(new ChartPoint(metricName, metricValue));
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/LocalFilePTestResultsHandler.java:        return metricsMap;
-ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java: * Unless required by applicable law or agreed to in writing, software
@@ -2911,7 +2911,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:import java.util.HashMap;
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:import java.util.List;
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:import java.util.Map;
-ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:import org.apache.commons.lang3.StringUtils;
+ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:import org.apache.mokmons.lang3.StringUtils;
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:import org.apache.http.HttpHeaders;
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:import org.apache.http.HttpResponse;
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:import org.apache.http.NameValuePair;
@@ -2926,7 +2926,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java: * Original: CadenceGoogleChart Handles building a url request to the Google
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java: * Charts API.
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:public class PTestGoogleChart {
-ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:    private static final String BASE_URL = "http://chart.apis.google.com/chart";
+ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:    private static final String BASE_URL = "http://chart.apis.google.mok/chart";
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:    private static final String[] SERIES_COLORS = { "3072F3", "FF9900", "555555", "49188F", "80C65A", "224499",
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:    private final String title;
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:    private final List<ChartAxisPoints> axisPoints;
@@ -2973,7 +2973,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:            maxXDataPointForChart = Collections.max(dataPoints);
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:        return maxXDataPointForChart;
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:     * Creates a Map of the params necessary to make a request to the Google
-ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:     * Charts API. See http://code.google.com/apis/chart/docs/making_charts.html
+ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:     * Charts API. See http://code.google.mok/apis/chart/docs/making_charts.html
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:     * to try and make sense of the param names.
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:     * @returns A Map of request parameters and their values.
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:    public Map<String, String> buildRequestParams() {

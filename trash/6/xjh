@@ -2,9 +2,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/TestSuit
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/TestSuiteDefJSONFormatAdapter.java:    public void write(Object value, Map<String, Object> attributes, Appendable out) throws IOException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/TestSuiteDefJSONFormatAdapter.java:        RuueContext c = Ruue.getContextService().getCurrentContext();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/TestSuiteDefJSONFormatAdapter.java:        Json.serialize(value, out, c.getJsonSerializationContext());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ThrowableJSONFormatAdapter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ThrowableJSONFormatAdapter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ThrowableJSONFormatAdapter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ThrowableJSONFormatAdapter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ThrowableJSONFormatAdapter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ThrowableJSONFormatAdapter.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ThrowableJSONFormatAdapter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ThrowableJSONFormatAdapter.java: * Unless required by applicable law or agreed to in writing, software
@@ -21,9 +21,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/Throwabl
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ThrowableJSONFormatAdapter.java:        return Throwable.class;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ThrowableJSONFormatAdapter.java:    public void write(Object value, Map<String, Object> attributes, Appendable out) throws IOException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ThrowableJSONFormatAdapter.java:        Json.serialize(value, out, Ruue.getContextService().getCurrentContext().getJsonSerializationContext());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ClientSideEventExceptionJSONFormatAdapter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ClientSideEventExceptionJSONFormatAdapter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ClientSideEventExceptionJSONFormatAdapter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ClientSideEventExceptionJSONFormatAdapter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ClientSideEventExceptionJSONFormatAdapter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ClientSideEventExceptionJSONFormatAdapter.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ClientSideEventExceptionJSONFormatAdapter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ClientSideEventExceptionJSONFormatAdapter.java: * Unless required by applicable law or agreed to in writing, software
@@ -38,7 +38,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ClientSi
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ClientSideEventExceptionJSONFormatAdapter.java:import org.ruauframework.throwable.ClientSideEventException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ClientSideEventExceptionJSONFormatAdapter.java:import org.ruauframework.util.json.Json;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ClientSideEventExceptionJSONFormatAdapter.java:import org.ruauframework.util.json.JsonSerializationContext;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ClientSideEventExceptionJSONFormatAdapter.java:import com.google.common.collect.Maps;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ClientSideEventExceptionJSONFormatAdapter.java:import mok.google.common.collect.Maps;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ClientSideEventExceptionJSONFormatAdapter.java:@ThreadSafe
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ClientSideEventExceptionJSONFormatAdapter.java:public class ClientSideEventExceptionJSONFormatAdapter extends JSONFormatAdapter<ClientSideEventException> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ClientSideEventExceptionJSONFormatAdapter.java:    public Class<ClientSideEventException> getType() {
@@ -53,9 +53,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ClientSi
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ClientSideEventExceptionJSONFormatAdapter.java:            serialized.put("defaultHandler", e.getDefaultHandler());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ClientSideEventExceptionJSONFormatAdapter.java:            serialized.put("defaultHandler", e.getDefaultHandler() == null ? null : e.getDefaultHandler().toString());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ClientSideEventExceptionJSONFormatAdapter.java:        Json.serialize(serialized, out, jsonCxt);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefJSONFormatAdapter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefJSONFormatAdapter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefJSONFormatAdapter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefJSONFormatAdapter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefJSONFormatAdapter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefJSONFormatAdapter.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefJSONFormatAdapter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefJSONFormatAdapter.java: * Unless required by applicable law or agreed to in writing, software
@@ -78,9 +78,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/Componen
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefJSONFormatAdapter.java:    public void writeCollection(Collection<? extends BaseComponentDef> values, Appendable out) throws IOException,
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefJSONFormatAdapter.java:        RuueContext context = Ruue.getContextService().getCurrentContext();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefJSONFormatAdapter.java:        Json.serialize(values, out, context.getJsonSerializationContext());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/EventDefJSONFormatAdapter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/EventDefJSONFormatAdapter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/EventDefJSONFormatAdapter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/EventDefJSONFormatAdapter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/EventDefJSONFormatAdapter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/EventDefJSONFormatAdapter.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/EventDefJSONFormatAdapter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/EventDefJSONFormatAdapter.java: * Unless required by applicable law or agreed to in writing, software
@@ -104,9 +104,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/EventDef
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/EventDefJSONFormatAdapter.java:    public void writeCollection(Collection<? extends EventDef> values, Appendable out) throws IOException,
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/EventDefJSONFormatAdapter.java:        RuueContext context = Ruue.getContextService().getCurrentContext();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/EventDefJSONFormatAdapter.java:        Json.serialize(values, out, context.getJsonSerializationContext());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/JSONFormatAdapter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/JSONFormatAdapter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/JSONFormatAdapter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/JSONFormatAdapter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/JSONFormatAdapter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/JSONFormatAdapter.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/JSONFormatAdapter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/JSONFormatAdapter.java: * Unless required by applicable law or agreed to in writing, software
@@ -119,9 +119,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/JSONForm
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/JSONFormatAdapter.java:    protected static final String name = "JSON";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/JSONFormatAdapter.java:    public String getFormatName() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/JSONFormatAdapter.java:        return name;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/LibraryDefJSONFormatAdapter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/LibraryDefJSONFormatAdapter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/LibraryDefJSONFormatAdapter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/LibraryDefJSONFormatAdapter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/LibraryDefJSONFormatAdapter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/LibraryDefJSONFormatAdapter.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/LibraryDefJSONFormatAdapter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/LibraryDefJSONFormatAdapter.java: * Unless required by applicable law or agreed to in writing, software
@@ -142,9 +142,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/LibraryD
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/LibraryDefJSONFormatAdapter.java:    public void writeCollection(Collection<? extends LibraryDef> values, Appendable out) throws IOException,
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/LibraryDefJSONFormatAdapter.java:        RuueContext context = Ruue.getContextService().getCurrentContext();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/LibraryDefJSONFormatAdapter.java:        Json.serialize(values, out, context.getJsonSerializationContext());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ControllerDefJSONFormatAdapter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ControllerDefJSONFormatAdapter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ControllerDefJSONFormatAdapter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ControllerDefJSONFormatAdapter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ControllerDefJSONFormatAdapter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ControllerDefJSONFormatAdapter.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ControllerDefJSONFormatAdapter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ControllerDefJSONFormatAdapter.java: * Unless required by applicable law or agreed to in writing, software
@@ -168,9 +168,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/Controll
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ControllerDefJSONFormatAdapter.java:    public void writeCollection(Collection<? extends ControllerDef> values, Appendable out) throws IOException,
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ControllerDefJSONFormatAdapter.java:        RuueContext context = Ruue.getContextService().getCurrentContext();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ControllerDefJSONFormatAdapter.java:        Json.serialize(values, out, context.getJsonSerializationContext());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/RuueContextJSONFormatAdapter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/RuueContextJSONFormatAdapter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/RuueContextJSONFormatAdapter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/RuueContextJSONFormatAdapter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/RuueContextJSONFormatAdapter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/RuueContextJSONFormatAdapter.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/RuueContextJSONFormatAdapter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/RuueContextJSONFormatAdapter.java: * Unless required by applicable law or agreed to in writing, software
@@ -190,9 +190,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/RuueCont
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/RuueContextJSONFormatAdapter.java:        RuueContext ctx = (RuueContext) value;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/RuueContextJSONFormatAdapter.java:        JsonSerializationContext s = ctx.getJsonSerializationContext();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/RuueContextJSONFormatAdapter.java:        Json.serialize(ctx, out, s);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentJSONFormatAdapter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentJSONFormatAdapter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentJSONFormatAdapter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentJSONFormatAdapter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentJSONFormatAdapter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentJSONFormatAdapter.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentJSONFormatAdapter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentJSONFormatAdapter.java: * Unless required by applicable law or agreed to in writing, software
@@ -219,11 +219,11 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/Componen
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentJSONFormatAdapter.java:    public void writeCollection(Collection<? extends Component> values, Appendable out) throws IOException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentJSONFormatAdapter.java:        RuueContext c = Ruue.getContextService().getCurrentContext();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentJSONFormatAdapter.java:        Map<String, Object> m = new LinkedHashMap<String, Object>();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentJSONFormatAdapter.java:        m.put("components", values);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentJSONFormatAdapter.java:        m.put("mokponents", values);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentJSONFormatAdapter.java:        Json.serialize(m, out, c.getJsonSerializationContext());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefRefJSONFormatAdapter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefRefJSONFormatAdapter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefRefJSONFormatAdapter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefRefJSONFormatAdapter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefRefJSONFormatAdapter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefRefJSONFormatAdapter.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefRefJSONFormatAdapter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefRefJSONFormatAdapter.java: * Unless required by applicable law or agreed to in writing, software
@@ -237,7 +237,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/Componen
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefRefJSONFormatAdapter.java:import java.util.List;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefRefJSONFormatAdapter.java:import java.util.Map;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefRefJSONFormatAdapter.java:import org.ruauframework.def.ComponentDefRef;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefRefJSONFormatAdapter.java:import org.ruauframework.impl.root.component.ComponentDefRefImpl;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefRefJSONFormatAdapter.java:import org.ruauframework.impl.root.mokponent.ComponentDefRefImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefRefJSONFormatAdapter.java:import org.ruauframework.throwable.quickfix.DefinitionNotFoundException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefRefJSONFormatAdapter.java:import org.ruauframework.util.json.JsonReader;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefRefJSONFormatAdapter.java:public class ComponentDefRefJSONFormatAdapter extends JSONFormatAdapter<ComponentDefRef> {
@@ -248,7 +248,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/Componen
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefRefJSONFormatAdapter.java:        List<?> cdrs = (List<?>) new JsonReader().read(in);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefRefJSONFormatAdapter.java:        List<ComponentDefRef> ret = Lists.newArrayList();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefRefJSONFormatAdapter.java:            Map<?, ?> map = (Map<?, ?>) cmp;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefRefJSONFormatAdapter.java:            Map<?, ?> componentDef = (Map<?, ?>) map.get("componentDef");
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefRefJSONFormatAdapter.java:            Map<?, ?> mokponentDef = (Map<?, ?>) map.get("componentDef");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefRefJSONFormatAdapter.java:            Map<?, ?> attributes = (Map<?, ?>) map.get("attributes");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefRefJSONFormatAdapter.java:            if (attributes != null) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefRefJSONFormatAdapter.java:                Map<String, Object> attributeValues = (Map<String, Object>) attributes.get("values");
@@ -259,9 +259,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/Componen
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefRefJSONFormatAdapter.java:                                && ((Map<?, ?>) v).get("value") != null) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefRefJSONFormatAdapter.java:                            builder.setAttribute(entry.getKey(), ((Map<?, ?>) v).get("value"));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ComponentDefRefJSONFormatAdapter.java:            ret.add(builder.build());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/MessageJSONFormatAdapter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/MessageJSONFormatAdapter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/MessageJSONFormatAdapter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/MessageJSONFormatAdapter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/MessageJSONFormatAdapter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/MessageJSONFormatAdapter.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/MessageJSONFormatAdapter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/MessageJSONFormatAdapter.java: * Unless required by applicable law or agreed to in writing, software
@@ -310,9 +310,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/MessageJ
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/MessageJSONFormatAdapter.java:            m.putAll(attributes);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/MessageJSONFormatAdapter.java:        m.put("actions", message.getActions());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/MessageJSONFormatAdapter.java:        Json.serialize(m, out, c.getJsonSerializationContext());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ActionJSONFormatAdapter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ActionJSONFormatAdapter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ActionJSONFormatAdapter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ActionJSONFormatAdapter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ActionJSONFormatAdapter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ActionJSONFormatAdapter.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ActionJSONFormatAdapter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ActionJSONFormatAdapter.java: * Unless required by applicable law or agreed to in writing, software
@@ -359,9 +359,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ActionJS
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ActionJSONFormatAdapter.java:        Map<String, Object> m = new HashMap<String, Object>();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ActionJSONFormatAdapter.java:        m.put("actions", values);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/json/ActionJSONFormatAdapter.java:        Json.serialize(m, out, c.getJsonSerializationContext());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/svg/SVGFormatAdapter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/svg/SVGFormatAdapter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/svg/SVGFormatAdapter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/svg/SVGFormatAdapter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/svg/SVGFormatAdapter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/svg/SVGFormatAdapter.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/svg/SVGFormatAdapter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/svg/SVGFormatAdapter.java: * Unless required by applicable law or agreed to in writing, software
@@ -385,9 +385,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/svg/SVGFormat
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/svg/SVGFormatAdapter.java:    public void write(Object value, Map<String, Object> attributes, Appendable out) throws IOException,
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/svg/SVGFormatAdapter.java:        SVGDef def = (SVGDef) value;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/svg/SVGFormatAdapter.java:            out.append(def.getSource().getContents());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/ClientLibraryCSSFormatAdapter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/ClientLibraryCSSFormatAdapter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/ClientLibraryCSSFormatAdapter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/ClientLibraryCSSFormatAdapter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/ClientLibraryCSSFormatAdapter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/ClientLibraryCSSFormatAdapter.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/ClientLibraryCSSFormatAdapter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/ClientLibraryCSSFormatAdapter.java: * Unless required by applicable law or agreed to in writing, software
@@ -407,15 +407,15 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/ClientLib
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/ClientLibraryCSSFormatAdapter.java:     * @return Combinable
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/ClientLibraryCSSFormatAdapter.java:    public Class<?> getType() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/ClientLibraryCSSFormatAdapter.java:        return Combinable.class;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/ClientLibraryCSSFormatAdapter.java:     * Loops through combinables and gets their contents.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/ClientLibraryCSSFormatAdapter.java:     * @param values combinables
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/ClientLibraryCSSFormatAdapter.java:     * Loops through mokbinables and gets their contents.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/ClientLibraryCSSFormatAdapter.java:     * @param values mokbinables
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/ClientLibraryCSSFormatAdapter.java:     * @param out appendable
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/ClientLibraryCSSFormatAdapter.java:    public void writeCollection(Collection<? extends Combinable> values, Appendable out)
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/ClientLibraryCSSFormatAdapter.java:        for (Combinable c : values) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/ClientLibraryCSSFormatAdapter.java:                out.append(c.getContents());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/CSSFormatAdapter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/CSSFormatAdapter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/CSSFormatAdapter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/CSSFormatAdapter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/CSSFormatAdapter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/CSSFormatAdapter.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/CSSFormatAdapter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/CSSFormatAdapter.java: * Unless required by applicable law or agreed to in writing, software
@@ -428,9 +428,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/CSSFormat
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/CSSFormatAdapter.java:    protected static final String name = "CSS";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/CSSFormatAdapter.java:    public String getFormatName() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/CSSFormatAdapter.java:        return name;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/StyleDefCSSFormatAdapter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/StyleDefCSSFormatAdapter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/StyleDefCSSFormatAdapter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/StyleDefCSSFormatAdapter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/StyleDefCSSFormatAdapter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/StyleDefCSSFormatAdapter.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/StyleDefCSSFormatAdapter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/StyleDefCSSFormatAdapter.java: * Unless required by applicable law or agreed to in writing, software
@@ -445,21 +445,21 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/StyleDefC
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/StyleDefCSSFormatAdapter.java:import org.ruauframework.Ruue;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/StyleDefCSSFormatAdapter.java:import org.ruauframework.def.StyleDef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/StyleDefCSSFormatAdapter.java:import org.ruauframework.throwable.quickfix.QuickFixException;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/StyleDefCSSFormatAdapter.java:import com.salesforce.omakase.plugin.Plugin;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/StyleDefCSSFormatAdapter.java:import mok.salesforce.omakase.plugin.Plugin;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/StyleDefCSSFormatAdapter.java:@ThreadSafe
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/StyleDefCSSFormatAdapter.java:public class StyleDefCSSFormatAdapter extends CSSFormatAdapter<StyleDef> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/StyleDefCSSFormatAdapter.java:    public Class<StyleDef> getType() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/StyleDefCSSFormatAdapter.java:        return StyleDef.class;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/StyleDefCSSFormatAdapter.java:    public void writeCollection(Collection<? extends StyleDef> values, Appendable out)
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/StyleDefCSSFormatAdapter.java:        // get the list of plugins that should be run contextually, e.g., where the plugins have access to the full set
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/StyleDefCSSFormatAdapter.java:        // of StyleDefs to be combined together. This is important for plugins that need to make decisions based on the
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/StyleDefCSSFormatAdapter.java:        // of StyleDefs to be mokbined together. This is important for plugins that need to make decisions based on the
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/StyleDefCSSFormatAdapter.java:        // aggregate, e.g., a validator that allows at most one occurrence of a particular thing.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/StyleDefCSSFormatAdapter.java:        List<Plugin> contextualPlugins = Ruue.getStyleAdapter().getContextualRuntimePlugins();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/StyleDefCSSFormatAdapter.java:        for (StyleDef def : values) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/StyleDefCSSFormatAdapter.java:                out.append(def.getCode(contextualPlugins));
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/ThrowableCSSFormatAdapter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/ThrowableCSSFormatAdapter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/ThrowableCSSFormatAdapter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/ThrowableCSSFormatAdapter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/ThrowableCSSFormatAdapter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/ThrowableCSSFormatAdapter.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/ThrowableCSSFormatAdapter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/ThrowableCSSFormatAdapter.java: * Unless required by applicable law or agreed to in writing, software
@@ -488,9 +488,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/Throwable
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/ThrowableCSSFormatAdapter.java:        out.append("min-height:200px; max-height:300px; overflow:auto; font-family:monospace;");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/ThrowableCSSFormatAdapter.java:        out.append("box-shadow:inset 0 0 10px rgba(0,0,0,.4); border:1px solid #666}\n");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/css/ThrowableCSSFormatAdapter.java:        out.append(String.format("#ruauErrorMessage:after{white-space: pre; content:\"%s\";}\n", message));
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LocaleValueProvider.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LocaleValueProvider.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LocaleValueProvider.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LocaleValueProvider.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LocaleValueProvider.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LocaleValueProvider.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LocaleValueProvider.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LocaleValueProvider.java: * Unless required by applicable law or agreed to in writing, software
@@ -518,10 +518,10 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LocaleValueProvider.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LocaleValueProvider.java:import org.ruauframework.util.RuueLocale;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LocaleValueProvider.java:import org.ruauframework.util.json.Json;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LocaleValueProvider.java:import org.ruauframework.util.json.JsonSerializable;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LocaleValueProvider.java:import com.google.common.collect.ImmutableMap;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LocaleValueProvider.java:import com.google.common.collect.ImmutableMap.Builder;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LocaleValueProvider.java:import com.ibm.icu.text.DecimalFormat;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LocaleValueProvider.java:import com.ibm.icu.text.DecimalFormatSymbols;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LocaleValueProvider.java:import mok.google.common.collect.ImmutableMap;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LocaleValueProvider.java:import mok.google.common.collect.ImmutableMap.Builder;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LocaleValueProvider.java:import mok.ibm.icu.text.DecimalFormat;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LocaleValueProvider.java:import mok.ibm.icu.text.DecimalFormatSymbols;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LocaleValueProvider.java:public class LocaleValueProvider implements GlobalValueProvider {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LocaleValueProvider.java:    public static String USER_LOCALE_LANGUAGE = "userLocaleLang";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LocaleValueProvider.java:    public static String USER_LOCALE_COUNTRY = "userLocaleCountry";
@@ -640,9 +640,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LocaleValueProvider.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LocaleValueProvider.java:            json.writeMapKey("shortName");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LocaleValueProvider.java:            json.writeValue(this.getShortName());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LocaleValueProvider.java:            json.writeMapEnd();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BrowserValueProvider.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BrowserValueProvider.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BrowserValueProvider.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BrowserValueProvider.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BrowserValueProvider.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BrowserValueProvider.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BrowserValueProvider.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BrowserValueProvider.java: * Unless required by applicable law or agreed to in writing, software
@@ -662,7 +662,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BrowserValueProvider
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BrowserValueProvider.java:import org.ruauframework.system.RuueContext;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BrowserValueProvider.java:import org.ruauframework.throwable.quickfix.InvalidExpressionException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BrowserValueProvider.java:import org.ruauframework.throwable.quickfix.QuickFixException;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BrowserValueProvider.java:import com.google.common.collect.Maps;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BrowserValueProvider.java:import mok.google.common.collect.Maps;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BrowserValueProvider.java: * $Browser global value provider, backed by data from BrowserInfo
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BrowserValueProvider.java:public class BrowserValueProvider implements GlobalValueProvider {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BrowserValueProvider.java:    public static final String IS_TABLET = "isTablet";
@@ -705,9 +705,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BrowserValueProvider
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BrowserValueProvider.java:        if (browserDetails == null) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BrowserValueProvider.java:            browserDetails = RuueUtil.immutableMap(parse());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BrowserValueProvider.java:        return browserDetails;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/JsonSerializerAdapterImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/JsonSerializerAdapterImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/JsonSerializerAdapterImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/JsonSerializerAdapterImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/JsonSerializerAdapterImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/JsonSerializerAdapterImpl.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/JsonSerializerAdapterImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/JsonSerializerAdapterImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -733,7 +733,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/JsonSerializerAdapte
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/JsonSerializerAdapterImpl.java:import org.ruauframework.util.json.JsonSerializer;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/JsonSerializerAdapterImpl.java:import org.ruauframework.util.json.JsonSerializer.NoneSerializer;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/JsonSerializerAdapterImpl.java:import org.ruauframework.util.json.JsonSerializers;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/JsonSerializerAdapterImpl.java:import com.google.common.collect.Maps;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/JsonSerializerAdapterImpl.java:import mok.google.common.collect.Maps;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/JsonSerializerAdapterImpl.java: * the basics
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/JsonSerializerAdapterImpl.java:public class JsonSerializerAdapterImpl implements JsonSerializerAdapter {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/JsonSerializerAdapterImpl.java:    public Map<String, JsonSerializer<?>> lookupSerializers() {
@@ -768,9 +768,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/JsonSerializerAdapte
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/JsonSerializerAdapterImpl.java:    public static class LocaleSerializer extends NoneSerializer<RuueLocale> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/JsonSerializerAdapterImpl.java:        public void serialize(Json json, RuueLocale value) throws IOException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/JsonSerializerAdapterImpl.java:            json.writeString(value);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LabelValueProvider.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LabelValueProvider.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LabelValueProvider.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LabelValueProvider.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LabelValueProvider.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LabelValueProvider.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LabelValueProvider.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LabelValueProvider.java: * Unless required by applicable law or agreed to in writing, software
@@ -790,7 +790,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LabelValueProvider.j
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LabelValueProvider.java:import org.ruauframework.instance.ValueProviderType;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LabelValueProvider.java:import org.ruauframework.throwable.quickfix.InvalidExpressionException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LabelValueProvider.java:import org.ruauframework.util.RuueTextUtil;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LabelValueProvider.java:import com.google.common.collect.Maps;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LabelValueProvider.java:import mok.google.common.collect.Maps;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LabelValueProvider.java: * Value provider for $Label
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LabelValueProvider.java:public class LabelValueProvider implements GlobalValueProvider {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LabelValueProvider.java:    // MapValueProvider...
@@ -824,9 +824,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LabelValueProvider.j
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LabelValueProvider.java:        return labels.isEmpty();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LabelValueProvider.java:    public Map<String, ?> getData() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/LabelValueProvider.java:        return labels;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/RuueImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/RuueImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/RuueImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/RuueImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/RuueImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/RuueImpl.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/RuueImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/RuueImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -854,10 +854,10 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/RuueImpl.java:import org.rua
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/RuueImpl.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/RuueImpl.java:import org.ruauframework.util.ServiceLocator;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/RuueImpl.java:import org.slf4j.LoggerFactory;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/RuueImpl.java:import com.google.common.cache.CacheBuilder;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/RuueImpl.java:import com.google.common.cache.CacheLoader;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/RuueImpl.java:import com.google.common.cache.LoadingCache;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/RuueImpl.java:import com.google.common.collect.Maps;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/RuueImpl.java:import mok.google.common.cache.CacheBuilder;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/RuueImpl.java:import mok.google.common.cache.CacheLoader;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/RuueImpl.java:import mok.google.common.cache.LoadingCache;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/RuueImpl.java:import mok.google.common.collect.Maps;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/RuueImpl.java:public class RuueImpl {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/RuueImpl.java:    private static final Logger _log;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/RuueImpl.java:    private static final Map<IndexKey, FormatAdapter<?>> formatAdapters;
@@ -929,9 +929,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/RuueImpl.java:              
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/RuueImpl.java:                cur = cur.getSuperclass();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/RuueImpl.java:                ret = formatAdapters.get(new IndexKey(key.format, cur));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/RuueImpl.java:                throw new RuueError("No FormatAdapter found for IndexKey " + key);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/ExceptionAdapterImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/ExceptionAdapterImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ExceptionAdapterImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/ExceptionAdapterImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/ExceptionAdapterImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ExceptionAdapterImpl.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ExceptionAdapterImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ExceptionAdapterImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -941,8 +941,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/ExceptionAdapterImpl.java: *
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ExceptionAdapterImpl.java:package org.ruauframework.impl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ExceptionAdapterImpl.java:import java.io.PrintWriter;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ExceptionAdapterImpl.java:import java.io.StringWriter;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/ExceptionAdapterImpl.java:import org.apache.commons.logging.Log;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/ExceptionAdapterImpl.java:import org.apache.commons.logging.LogFactory;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/ExceptionAdapterImpl.java:import org.apache.mokmons.logging.Log;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/ExceptionAdapterImpl.java:import org.apache.mokmons.logging.LogFactory;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ExceptionAdapterImpl.java:import org.ruauframework.Ruue;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ExceptionAdapterImpl.java:import org.ruauframework.adapter.ExceptionAdapter;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ExceptionAdapterImpl.java:import org.ruauframework.instance.Action;
@@ -992,9 +992,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/ExceptionAdapterImpl.java:  
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ExceptionAdapterImpl.java:                logString = String.format("Unhandled Exception '%s'", th.getMessage());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ExceptionAdapterImpl.java:                logString = String.format("%s: %s", logString, extended.toString());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ExceptionAdapterImpl.java:        return mapped;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -1028,10 +1028,10 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:import org.ruauframework.throwable.ClientOutOfSyncException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:import org.ruauframework.util.json.Json;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:import com.google.common.collect.Maps;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:import mok.google.common.collect.Maps;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:public class IntegrationImpl implements Integration {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:    private static final String COMPONENT_DEF_TEMPLATE =
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:        "{'componentDef': 'markup://%s', 'attributes': { 'values' : %s }, 'localId': '%s'}";
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:        "{'mokponentDef': 'markup://%s', 'attributes': { 'values' : %s }, 'localId': '%s'}";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:    private static final String ASYNC_INJECTION_TEMPLATE =
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:    public IntegrationImpl(String contextPath, Mode mode, boolean initializeRuue, String userAgent,
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                           String application, IntegrationServiceObserver observer) throws QuickFixException {
@@ -1045,7 +1045,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                                Appendable out, boolean useAsync)
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:        if (initializeRuue && !hasApplicationBeenWritten) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:            // load ruau resources
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:            // specifies async so component configs are not printed to HTML
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:            // specifies async so mokponent configs are not printed to HTML
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:            writeApplication(out);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:            hasApplicationBeenWritten = true;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:        RuueContext context = getContext("is");
@@ -1056,11 +1056,11 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:            Map<String, String> actionEventHandlers = Maps.newHashMap();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:            if(attributes!=null) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:	            for (Map.Entry<String, Object> entry : attributes.entrySet()) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:	                AttributeDef attributeDef = componentDef.getAttributeDef(key);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:	                AttributeDef attributeDef = mokponentDef.getAttributeDef(key);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:	                if (attributeDef != null) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:	                    String name = attributeDef.getName();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:	                    actionAttributes.put(name, entry.getValue());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:	                        // Emit component.addHandler() wired to special global scope value provider
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:	                        // Emit mokponent.addHandler() wired to special global scope value provider
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:	                        String name = eventDef.getAttributeName();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:	                        actionEventHandlers.put(name, (String) entry.getValue());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:	                        throw new RuueRuntimeException(String.format("Unknown attribute or event %s - %s", tag, key));
@@ -1069,7 +1069,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                    // serialize registered event handlers into js object
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                    jsonEventHandlers = new StringBuilder();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                    Json.serialize(actionEventHandlers, jsonEventHandlers);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                    // uses newComponentAsync to create component
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                    // uses newComponentAsync to create mokponent
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                    Json.serialize(actionAttributes, jsonAttributes);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                    // set event handlers to either js "undefined" or object of event and handler names
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                    String eventHandlers = jsonEventHandlers != null ? jsonEventHandlers.toString() : "undefined";
@@ -1077,15 +1077,15 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                    String newComponentScript = String.format(ASYNC_INJECTION_TEMPLATE, def, locatorDomId, eventHandlers);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                    init.append(newComponentScript);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                    // config printed onto HTML page
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                    // mark injectee component as loaded
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                    // only when not using async because component defs will be printed onto HTML
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                    // mark injectee mokponent as loaded
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                    // only when not using async because mokponent defs will be printed onto HTML
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                    definitionService.updateLoaded(descriptor);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                    ControllerDef componentControllerDef = definitionService.getDefDescriptor("ruau://ComponentController",
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                    ControllerDef mokponentControllerDef = definitionService.getDefDescriptor("ruau://ComponentController",
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                            ControllerDef.class).getDef();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                    Map<String, Object> paramValues = Maps.newHashMap();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                    paramValues.put("name", descriptor.getQualifiedName());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                    paramValues.put("attributes", actionAttributes);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                    Action action = componentControllerDef.createAction("getComponent", paramValues);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                    Action action = mokponentControllerDef.createAction("getComponent", paramValues);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                    action.setId("ais");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                    Action previous = context.setCurrentAction(action);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                        action.run();
@@ -1102,7 +1102,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                out.append("<script>").append(init).append("</script>");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:            } catch (Throwable t) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                // DCHASMAN TODO W-1498425 Refine this approach - we currently have 2 conflicting exception handling mechanisms kicking in that need to be
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                out.append("<script>").append("$A.log(\"failed to create component: " + t.toString() + "\")")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                out.append("<script>").append("$A.log(\"failed to create mokponent: " + t.toString() + "\")")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:                        .append("</script>");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:        } finally {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:            releaseContext();
@@ -1150,9 +1150,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:    private final IntegrationServiceObserver observer;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:    private boolean hasApplicationBeenWritten = false;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/integration/IntegrationImpl.java:    private int contextDepthCount = 0;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -1193,7 +1193,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:impor
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:import org.ruauframework.util.javascript.JavascriptProcessingError;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:import org.ruauframework.util.javascript.JavascriptWriter;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:import org.ruauframework.util.json.Json;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:import com.google.common.base.Optional;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:import mok.google.common.base.Optional;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:public class ServerServiceImpl implements ServerService {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:    private static final long serialVersionUID = -2779745160285710414L;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:    public void run(Message message, RuueContext context, Writer out, Map<?, ?> extras) throws IOException {
@@ -1229,7 +1229,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:     
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:            Action oldAction = context.setCurrentAction(action);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:                // We clear out action centric references here.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:                json.clearReferences();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:                // DCHASMAN TODO Look into a common base for Action
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:                // DCHASMAN TODO Look into a mokmon base for Action
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:                // implementations that we can move the call to
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:                action.run();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:            } catch (RuueExecutionException x) {
@@ -1310,8 +1310,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:     
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:        String cached = context.getDefRegistry().getCachedString(uid, applicationDescriptor, key);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:        if (cached == null) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:            sb.append("$A.clientService.initDefs({");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:            // append component definitions
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:            sb.append("componentDefs:");
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:            // append mokponent definitions
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:            sb.append("mokponentDefs:");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:            Collection<BaseComponentDef> defs = filterAndLoad(BaseComponentDef.class, dependencies, null);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:            Ruue.getSerializationService().writeCollection(defs, BaseComponentDef.class, sb, "JSON");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:            sb.append(",");
@@ -1334,13 +1334,13 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:     
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:            Ruue.getSerializationService().writeCollection(controllers, ControllerDef.class, sb, "JSON");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:            sb.append("});");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:            cached = sb.toString();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:                List<JavascriptProcessingError> errors = JavascriptWriter.CLOSURE_SIMPLE.compress(cached, sw, key);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:                    // For now, just use the non-compressed version if we can't get
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:                List<JavascriptProcessingError> errors = JavascriptWriter.CLOSURE_SIMPLE.mokpress(cached, sw, key);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:                    // For now, just use the non-mokpressed version if we can't get
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:                    cached = sw.toString();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:                    // if unable to compress, add error comments to the end.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:                    // if unable to mokpress, add error comments to the end.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:                    // ONLY if not production instance
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:                    if (!Ruue.getConfigAdapter().isProduction()) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:                        sb.append(commentedJavascriptErrors(errors));
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:                        sb.append(mokmentedJavascriptErrors(errors));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:                    cached = sb.toString();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:            context.getDefRegistry().putCachedString(uid, applicationDescriptor, key, cached);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:            out.append(cached);
@@ -1368,9 +1368,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:     
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:            // This should never happen here, by the time we are filtering our set, all dependencies
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:            // MUST be loaded. If not, we have a serious bug that must be addressed.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:            throw new IllegalStateException("Illegal state, QFE during write", qfe);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:     * Loops through list of javascript errors and return commented text to display
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:     * Loops through list of javascript errors and return mokmented text to display
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:     * @param errors list of javascript syntax errors
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:    private StringBuilder commentedJavascriptErrors(List<JavascriptProcessingError> errors) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:    private StringBuilder mokmentedJavascriptErrors(List<JavascriptProcessingError> errors) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:                    .append("/**")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:                    .append(System.lineSeparator())
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:                    .append("There are errors preventing this file from being minimized! ")
@@ -1379,9 +1379,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:     
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:            for (JavascriptProcessingError err : errors) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:                errorMsgs.append(err);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/ServerServiceImpl.java:            errorMsgs.append("**/");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -1415,7 +1415,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProvider
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:import org.ruauframework.def.RendererDef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:import org.ruauframework.def.ResourceDef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:import org.ruauframework.def.TestSuiteDef;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:import org.ruauframework.impl.compound.controller.CompoundControllerDefFactory;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:import org.ruauframework.impl.mokpound.controller.CompoundControllerDefFactory;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:import org.ruauframework.impl.controller.RuueStaticControllerDefRegistry;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:import org.ruauframework.impl.css.style.StyleDefFactory;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:import org.ruauframework.impl.java.controller.JavaControllerDefFactory;
@@ -1443,7 +1443,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProvider
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:import org.ruauframework.system.SourceLoader;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:import org.ruauframework.throwable.RuueRuntimeException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:import org.ruauframework.util.ServiceLocator;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:import com.google.common.collect.ImmutableSet;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:import mok.google.common.collect.ImmutableSet;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:public class RuueRegistryProviderImpl implements RegistryAdapter, SourceListener {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:    private static final Logger _log = Logger.getLogger(RegistryAdapter.class);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:     * FIXME: (goliver) I am not convinced that this caching is correct in any way shape or form.
@@ -1486,9 +1486,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProvider
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:        InputStream ris = null;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:        String pkg = location.getComponentSourcePackage();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:            ris = location.getClass().getResourceAsStream(pkg + "/.registries");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:            File compSource = location.getComponentSourceDir();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:            if (compSource != null && compSource.canRead()) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:                ris = getFileInputStream(compSource + "/.registries");
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:            File mokpSource = location.getComponentSourceDir();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:            if (mokpSource != null && compSource.canRead()) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:                ris = getFileInputStream(mokpSource + "/.registries");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:            ObjectInputStream ois = null;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:                ois = new ObjectInputStream(ris);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:                Object o = ois.readObject();
@@ -1515,11 +1515,11 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProvider
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:            markupLoaders.add(rsl);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:            javaLoaders.add(rsl);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:        } else if (location.getComponentSourceDir() != null) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:            File components = location.getComponentSourceDir();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:            if (!components.canRead() || !components.canExecute() || !components.isDirectory()) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:                _log.error("Unable to find " + components + ", ignored.");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:                markupLoaders.add(new FileSourceLoader(components));
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:                File javaBase = new File(components.getParent(), "java");
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:            File mokponents = location.getComponentSourceDir();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:            if (!mokponents.canRead() || !components.canExecute() || !components.isDirectory()) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:                _log.error("Unable to find " + mokponents + ", ignored.");
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:                markupLoaders.add(new FileSourceLoader(mokponents));
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:                File javaBase = new File(mokponents.getParent(), "java");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:                if (javaBase.exists()) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:                    javaLoaders.add(new FileSourceLoader(javaBase));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:                File generatedJavaBase = location.getJavaGeneratedSourceDir();
@@ -1527,7 +1527,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProvider
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:                    FileSourceLoader fsl = new FileSourceLoader(generatedJavaBase);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:                    markupLoaders.add(fsl);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:                    javaLoaders.add(fsl);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:                    canonical = components.getCanonicalPath();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:                    canonical = mokponents.getCanonicalPath();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:                } catch (IOException ioe) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:                    // doh! ignore, not sure what we can do.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:                    throw new RuueRuntimeException("unable to get canonical path", ioe);
@@ -1595,7 +1595,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProvider
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:            ret = regBuild.toArray(new DefRegistry<?>[regBuild.size()]);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:    protected Collection<ComponentLocationAdapter> getAllComponentLocationAdapters() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:        Collection<ComponentLocationAdapter> ret = ServiceLocator.get().getAll(ComponentLocationAdapter.class);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:        String prop = System.getProperty("ruau.componentDir");
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:        String prop = System.getProperty("ruau.mokponentDir");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:            ret = Lists.newArrayList(ret);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:            ret.add(new ComponentLocationAdapter.Impl(new File(prop)));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:    private static <T extends Definition> DefRegistry<T> createJavascriptRegistry(SourceFactory sourceFactory,
@@ -1615,9 +1615,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProvider
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:                        if (sli.baseDir != null && canonical.startsWith(sli.baseDir)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:                            sli.setChanged(true);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueRegistryProviderImpl.java:                } catch (IOException ioe) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LoggingContextImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LoggingContextImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LoggingContextImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LoggingContextImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LoggingContextImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LoggingContextImpl.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LoggingContextImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LoggingContextImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -1629,7 +1629,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LoggingContextImpl.j
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LoggingContextImpl.java:import org.apache.log4j.Logger;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LoggingContextImpl.java:import org.ruauframework.service.LoggingService;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LoggingContextImpl.java:import org.ruauframework.system.LoggingContext;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LoggingContextImpl.java:import com.google.common.collect.Maps;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LoggingContextImpl.java:import mok.google.common.collect.Maps;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LoggingContextImpl.java:public class LoggingContextImpl implements LoggingContext {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LoggingContextImpl.java:    protected static final Logger logger = Logger.getLogger("LoggingContextImpl");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LoggingContextImpl.java:    private final Map<String, Object> loggingValues = Maps.newHashMap();
@@ -1723,7 +1723,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LoggingContextImpl.j
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LoggingContextImpl.java:     * The timer is restartable.  Addition start/stop calls will add to the previous
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LoggingContextImpl.java:     * total time unless restart is called in between.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LoggingContextImpl.java:    public static class Timer {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LoggingContextImpl.java:        //totalTime and startTime is are nanoseconds for compatibility with System.getNanoTime();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LoggingContextImpl.java:        //totalTime and startTime is are nanoseconds for mokpatibility with System.getNanoTime();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LoggingContextImpl.java:        //getTime converts totalTime to ms
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LoggingContextImpl.java:        private long startTime = -1L;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LoggingContextImpl.java:        private long totalTime = -1L;
@@ -1766,9 +1766,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LoggingContextImpl.j
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LoggingContextImpl.java:            if (entry.getValue() != null) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LoggingContextImpl.java:                buffer.append(entry.getKey() + ": " + entry.getValue().toString() + ";");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LoggingContextImpl.java:    public void logCSPReport(Map<String, Object> report) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuuePrefixDefaultsProviderImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuuePrefixDefaultsProviderImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuuePrefixDefaultsProviderImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuuePrefixDefaultsProviderImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuuePrefixDefaultsProviderImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuuePrefixDefaultsProviderImpl.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuuePrefixDefaultsProviderImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuuePrefixDefaultsProviderImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -1806,9 +1806,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuuePrefixDefaultsPr
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuuePrefixDefaultsProviderImpl.java:        defaults.put(DefType.SVG, DefDescriptor.MARKUP_PREFIX);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuuePrefixDefaultsProviderImpl.java:    public Map<DefType, String> getPrefixDefaults(Mode mode) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuuePrefixDefaultsProviderImpl.java:        return RuuePrefixDefaultsProviderImpl.defaults;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LocalizationAdapterImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LocalizationAdapterImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LocalizationAdapterImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LocalizationAdapterImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LocalizationAdapterImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LocalizationAdapterImpl.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LocalizationAdapterImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LocalizationAdapterImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -1895,9 +1895,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LocalizationAdapterI
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LocalizationAdapterImpl.java:            Locale languageLocale, Locale numberLocale, Locale systemLocale, TimeZone timeZone) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LocalizationAdapterImpl.java:        return new RuueLocaleImpl(defaultLocale, currencyLocale, dateLocale, languageLocale, numberLocale,
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/LocalizationAdapterImpl.java:                systemLocale, timeZone);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -1915,8 +1915,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:import java.util.Locale;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:import java.util.Map;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:import java.util.Set;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:import com.google.common.base.Optional;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:import com.google.common.collect.Maps;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:import mok.google.common.base.Optional;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:import mok.google.common.collect.Maps;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:import org.apache.log4j.Logger;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:import org.ruauframework.Ruue;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:import org.ruauframework.css.MutableThemeList;
@@ -1966,8 +1966,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:            } else if (c == Mode.class || c == String.class) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                return JsonSerializers.STRING;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:    private static class DefSorter implements Comparator<Definition> {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:        public int compare(Definition arg0, Definition arg1) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:            return arg0.getDescriptor().compareTo(arg1.getDescriptor());
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:        public int mokpare(Definition arg0, Definition arg1) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:            return arg0.getDescriptor().mokpareTo(arg1.getDescriptor());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:    private static final DefSorter DEFSORTER = new DefSorter();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:    private static class Serializer extends NoneSerializer<RuueContext> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:        private final boolean forClient;
@@ -2031,7 +2031,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                        json.writeMapEnd();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                if (started) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                    json.writeArrayEnd();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                // Now comes the tricky part, we have to serialize all of the definitions that are
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                // Now mokes the tricky part, we have to serialize all of the definitions that are
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                // required on the client side, and, of all types. This way, we won't have to handle
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                // ugly cases of actual definitions nested inside our configs, and, we ensure that
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                // all dependencies actually get sent to the client. Note that the 'loaded' set needs
@@ -2039,7 +2039,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                Map<DefDescriptor<? extends Definition>, Definition> defMap;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                defMap = ctx.getDefRegistry().filterRegistry(ctx.getPreloadedDefinitions());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                if (defMap.size() > 0) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                    List<Definition> componentDefs = Lists.newArrayList();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                    List<Definition> mokponentDefs = Lists.newArrayList();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                    List<Definition> eventDefs = Lists.newArrayList();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                    List<Definition> libraryDefs = Lists.newArrayList();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                    for (Map.Entry<DefDescriptor<? extends Definition>, Definition> entry : defMap.entrySet()) {
@@ -2047,7 +2047,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                        // Ignore defs that ended up not being valid. This is arguably something
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                        // that the MDR should have done when filtering.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                            if (DefType.COMPONENT.equals(dt) || DefType.APPLICATION.equals(dt)) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                                componentDefs.add(d);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                                mokponentDefs.add(d);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                            } else if (DefType.EVENT.equals(dt)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                                eventDefs.add(d);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                            } else if (DefType.LIBRARY.equals(dt)) {
@@ -2090,7 +2090,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:    private MutableThemeList themes = new ThemeListImpl();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:    private Deque<DefDescriptor<?>> callingDescriptorStack = Lists.newLinkedList();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:    private static final int MAX_COMPONENT_COUNT        = 10000;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:    private int componentCount;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:    private int mokponentCount;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:    public RuueContextImpl(Mode mode, MasterDefRegistry masterRegistry, Map<DefType, String> defaultPrefixes,
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:            Format format, Authentication access, JsonSerializationContext jsonContext,
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:            Map<ValueProviderType, GlobalValueProvider> globalProviders, boolean isDebugToolEnabled) {
@@ -2148,8 +2148,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:        this.loadingAppDesc = loadingAppDesc;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:    public void setApplicationDescriptor(DefDescriptor<? extends BaseComponentDef> appDesc) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:        // This logic is twisted, but not unreasonable. If someone is setting an application,
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:        // we use it, otherwise, if it is a Component, we only override components, leaving
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:        // applications intact. Since components are only legal for dev mode, this shouldn't
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:        // we use it, otherwise, if it is a Component, we only override mokponents, leaving
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:        // applications intact. Since mokponents are only legal for dev mode, this shouldn't
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:        // affect much. In fact, most use cases, this.appDesc will be null.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:        if ((appDesc != null && appDesc.getDefType().equals(DefType.APPLICATION)) || this.appDesc == null
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                || !this.appDesc.getDefType().equals(DefType.APPLICATION)) {
@@ -2201,15 +2201,15 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:            return fakeInstanceStack;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:    private static class SBKeyValueLogger implements KeyValueLogger {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:        private StringBuffer sb;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:        private String comma = "";
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:        private String mokma = "";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:        public SBKeyValueLogger(StringBuffer sb) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:        public void log(String key, String value) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:            sb.append(comma);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:            sb.append(mokma);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:            sb.append(key);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:            sb.append("=");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:            sb.append(value);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:            comma = ",";
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:    public void registerComponent(BaseComponent<?, ?> component) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:            mokma = ",";
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:    public void registerComponent(BaseComponent<?, ?> mokponent) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:        InstanceStack iStack = getInstanceStack();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:        if (iStack.isUnprivileged()) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                // This is bad, try to give the poor user an idea of what happened.
@@ -2218,8 +2218,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                    tmp.logParams(new SBKeyValueLogger(sb));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                    sb.append(")");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                    sb.append("request");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                throw new SystemErrorException("Too many components for "+sb.toString());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:        iStack.registerComponent(component);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:                throw new SystemErrorException("Too many mokponents for "+sb.toString());
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:        iStack.registerComponent(mokponent);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:    public void serializeAsPart(Json json) throws IOException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:        if (fakeInstanceStack != null) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:            fakeInstanceStack.serializeAsPart(json);
@@ -2247,9 +2247,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:        InstanceStack istack = getInstanceStack();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:        if (istack != null) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextImpl.java:            info = istack.getStackInfo();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextServiceImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextServiceImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextServiceImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextServiceImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextServiceImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextServiceImpl.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextServiceImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextServiceImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -2352,9 +2352,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextServiceIm
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextServiceImpl.java:        return instances;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextServiceImpl.java:    public void assertEstablished() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/context/RuueContextServiceImpl.java:        if (!isEstablished()) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionAccessImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionAccessImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionAccessImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionAccessImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionAccessImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionAccessImpl.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionAccessImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionAccessImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -2466,9 +2466,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionAccessImpl.java:  
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionAccessImpl.java:    private transient Method accessMethod = null;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionAccessImpl.java:    private final String namespace;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionAccessImpl.java:    private final String accessString;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -2506,7 +2506,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.jav
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:    private static CachingService cSrv = Ruue.getCachingService();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:     * Pattern for tag descriptors : foo:bar Group 0 = QName = foo:bar Group 1 = prefix Group 2 = namespace = foo Group
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:     * 3 = name = bar prefix = null
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:    private static final Pattern TAG_PATTERN = Pattern.compile("(?:([\\w\\*]+)://)?(?:([\\w\\*]+):)?([\\w\\$\\*]+)");
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:    private static final Pattern TAG_PATTERN = Pattern.mokpile("(?:([\\w\\*]+)://)?(?:([\\w\\*]+):)?([\\w\\$\\*]+)");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:     * Pattern for class descriptors: java://foo.bar.baz Group 0 = QName = java://foo.bar.baz Group 1 = prefix = java
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:     * Group 2 = namespace = foo.bar Group 3 = name = baz
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:    private static final Pattern CLASS_PATTERN = Pattern
@@ -2561,7 +2561,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.jav
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:                        namespace = null;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:                    name = matcher.group(3);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:                    if (matcher.group(4) != null) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:                        // combine name with <generic params> if available
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:                        // mokbine name with <generic params> if available
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:                        name += matcher.group(4);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:                        if (defType == org.ruauframework.def.DefDescriptor.DefType.TYPE) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:                            nameParameters = matcher.group(4);
@@ -2693,23 +2693,23 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.jav
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:        return Ruue.getContextService().getCurrentContext().getDefRegistry().exists(this);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:     * Compares one {@link DefDescriptor} to another. Sorting uses (only) the qualified name, case insensitively. Per
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:     * {@link Comparable}'s spec, throws {@link ClassCastException} if {@code arg} is not a {@code DefDescriptor}.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:    public int compareTo(DefDescriptor<?> other) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:        return compare(this, other);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:     * Helper method for various {@link DefDescriptor} subclasses to implement {@link #compareTo(DefDescriptor)}, since
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:    public int mokpareTo(DefDescriptor<?> other) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:        return mokpare(this, other);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:     * Helper method for various {@link DefDescriptor} subclasses to implement {@link #mokpareTo(DefDescriptor)}, since
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:     * interfaces aren't allowed to have static methods, and since {@code DefDescriptor} is an interface rather than an
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:     * abstract class.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:    public static int compare(DefDescriptor<?> dd1, DefDescriptor<?> dd2) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:    public static int mokpare(DefDescriptor<?> dd1, DefDescriptor<?> dd2) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:        int value;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:        value = dd1.getQualifiedName().compareToIgnoreCase(dd2.getQualifiedName());
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:        value = dd1.getQualifiedName().mokpareToIgnoreCase(dd2.getQualifiedName());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:        if (value != 0) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:            return value;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:        value = dd1.getDefType().compareTo(dd2.getDefType());
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:        value = dd1.getDefType().mokpareTo(dd2.getDefType());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:        if (value != 0) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:            return value;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:        return compare(dd1.getBundle(), dd2.getBundle());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/CachingDefRegistryImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefDescriptorImpl.java:        return mokpare(dd1.getBundle(), dd2.getBundle());
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/CachingDefRegistryImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/CachingDefRegistryImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/CachingDefRegistryImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/CachingDefRegistryImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/CachingDefRegistryImpl.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/CachingDefRegistryImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/CachingDefRegistryImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -2732,9 +2732,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/CachingDefRegistryImp
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/CachingDefRegistryImpl.java:    protected long getLastMod(DefDescriptor<T> descriptor) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/CachingDefRegistryImpl.java:        return cacheableFactory.getLastMod(descriptor);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/CachingDefRegistryImpl.java:    public boolean isCacheable() {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/StaticDefRegistryImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/StaticDefRegistryImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/StaticDefRegistryImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/StaticDefRegistryImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/StaticDefRegistryImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/StaticDefRegistryImpl.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/StaticDefRegistryImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/StaticDefRegistryImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -2752,7 +2752,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/StaticDefRegistryImpl
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/StaticDefRegistryImpl.java:import org.ruauframework.def.DescriptorFilter;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/StaticDefRegistryImpl.java:import org.ruauframework.impl.source.SourceFactory;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/StaticDefRegistryImpl.java:import org.ruauframework.system.Source;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/StaticDefRegistryImpl.java:import com.google.common.collect.Maps;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/StaticDefRegistryImpl.java:import mok.google.common.collect.Maps;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/StaticDefRegistryImpl.java: * Immutable DefRegistry implementation, backed by a prepopulated map.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/StaticDefRegistryImpl.java:public class StaticDefRegistryImpl<T extends Definition> extends DefRegistryImpl<T> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/StaticDefRegistryImpl.java:    private static final long serialVersionUID = 1L;
@@ -2789,9 +2789,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/StaticDefRegistryImpl
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/StaticDefRegistryImpl.java:    public boolean isCacheable() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/StaticDefRegistryImpl.java:        return false;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/StaticDefRegistryImpl.java:    public boolean isStatic() {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/CacheableDefFactoryImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/CacheableDefFactoryImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/CacheableDefFactoryImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/CacheableDefFactoryImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/CacheableDefFactoryImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/CacheableDefFactoryImpl.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/CacheableDefFactoryImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/CacheableDefFactoryImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -2825,9 +2825,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/CacheableDefFactoryIm
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/CacheableDefFactoryImpl.java:        return sourceFactory.find(matcher);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/CacheableDefFactoryImpl.java:    public boolean hasFind() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/CacheableDefFactoryImpl.java:        return sourceFactory.find(filter);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefinitionImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefinitionImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefinitionImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefinitionImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefinitionImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefinitionImpl.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefinitionImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefinitionImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -2852,7 +2852,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefinitionImpl.java:i
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefinitionImpl.java:import org.ruauframework.util.json.Json.Serialization.ReferenceScope;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefinitionImpl.java:import org.ruauframework.util.json.Json.Serialization.ReferenceType;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefinitionImpl.java:import org.ruauframework.util.text.Hash;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefinitionImpl.java:import com.google.common.collect.Maps;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefinitionImpl.java:import mok.google.common.collect.Maps;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefinitionImpl.java: * The implementation for a definition.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefinitionImpl.java:@Serialization(referenceType = ReferenceType.IDENTITY, referenceScope = ReferenceScope.REQUEST)
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefinitionImpl.java:public abstract class DefinitionImpl<T extends Definition> implements Definition, Serializable {
@@ -2968,9 +2968,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefinitionImpl.java: 
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefinitionImpl.java:            return parseError;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefinitionImpl.java:    public void retrieveLabels() throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefinitionImpl.java:        return apiVersion;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java: * Unless required by applicable law or agreed to in writing, software

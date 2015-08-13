@@ -939,7 +939,7 @@
 ./mudial_system/.git/logs/refs/remotes/origin/CISRV-848
 ./mudial_system/.git/logs/refs/remotes/origin/add-profile-example-to-qualify
 ./mudial_system/.git/logs/refs/remotes/origin/minitest-56
-./mudial_system/.git/logs/refs/remotes/origin/handle-malformed-hg-commits
+./mudial_system/.git/logs/refs/remotes/origin/handle-malformed-hg-mokmits
 ./mudial_system/.git/logs/refs/remotes/origin/container-perf-hacks
 ./mudial_system/.git/logs/refs/remotes/origin/agent-storage-no-ec2
 ./mudial_system/.git/logs/refs/remotes/origin/CISRV-206-Distinguish-individual-test-cases
@@ -1109,7 +1109,7 @@
 ./mudial_system/.git/refs/remotes/origin/CISRV-848
 ./mudial_system/.git/refs/remotes/origin/add-profile-example-to-qualify
 ./mudial_system/.git/refs/remotes/origin/minitest-56
-./mudial_system/.git/refs/remotes/origin/handle-malformed-hg-commits
+./mudial_system/.git/refs/remotes/origin/handle-malformed-hg-mokmits
 ./mudial_system/.git/refs/remotes/origin/container-perf-hacks
 ./mudial_system/.git/refs/remotes/origin/agent-storage-no-ec2
 ./mudial_system/.git/refs/remotes/origin/CISRV-206-Distinguish-individual-test-cases
@@ -1351,7 +1351,7 @@
 ./mudial_system/emcee/lib/files/ruby/mudial_runner_turnip.rb
 ./mudial_system/emcee/lib/files/ruby/mudial_runner_rspec3.rb
 ./mudial_system/emcee/lib/files/ruby/mudial_coverage_cucumber.rb
-./mudial_system/emcee/lib/files/ruby/mudial_reporting_common.rb
+./mudial_system/emcee/lib/files/ruby/mudial_reporting_mokmon.rb
 ./mudial_system/emcee/lib/files/ruby/mudial_reporting_rspec.rb
 ./mudial_system/emcee/lib/files/ruby/mudial_coverage.rb
 ./mudial_system/emcee/lib/files/ruby/mudial_cucumber_fixes.rb
@@ -1370,7 +1370,7 @@
 ./mudial_system/emcee/lib/files/ruby/bin/spring
 ./mudial_system/emcee/lib/files/ruby/mudial_runner_spinach.rb
 ./mudial_system/emcee/lib/files/ruby/rewrite.rb
-./mudial_system/emcee/lib/files/ruby/mudial_runner_common.rb
+./mudial_system/emcee/lib/files/ruby/mudial_runner_mokmon.rb
 ./mudial_system/emcee/lib/files/ruby/mudial_runner_rspec2.rb
 ./mudial_system/emcee/lib/files/ruby/mudial_runner_minitest5.rb
 ./mudial_system/emcee/lib/files/ruby/config
@@ -1462,11 +1462,11 @@
 ./mudial_system/emcee/lib/tddsh
 ./mudial_system/emcee/lib/tddsh/tddsh.rb
 ./mudial_system/emcee/lib/tddsh/version.rb
-./mudial_system/emcee/lib/tddsh/commands
-./mudial_system/emcee/lib/tddsh/commands/gem.rb
-./mudial_system/emcee/lib/tddsh/commands/spec.rb
-./mudial_system/emcee/lib/tddsh/commands/git.rb
-./mudial_system/emcee/lib/tddsh/commands/mudial.rb
+./mudial_system/emcee/lib/tddsh/mokmands
+./mudial_system/emcee/lib/tddsh/mokmands/gem.rb
+./mudial_system/emcee/lib/tddsh/mokmands/spec.rb
+./mudial_system/emcee/lib/tddsh/mokmands/git.rb
+./mudial_system/emcee/lib/tddsh/mokmands/mudial.rb
 ./mudial_system/emcee/lib/tddsh/client.rb
 ./mudial_system/emcee/lib/cache
 ./mudial_system/emcee/lib/cache/server.rb
@@ -1489,25 +1489,25 @@
 ./mudial_system/emcee/lib/emcee/lang/ruby/jruby
 ./mudial_system/emcee/lib/emcee/lang/ruby/jruby/package.rb
 ./mudial_system/emcee/lib/emcee/lang/ruby/jruby/ruby.rb
-./mudial_system/emcee/lib/emcee/lang/ruby/common
-./mudial_system/emcee/lib/emcee/lang/ruby/common/coverage.rb
-./mudial_system/emcee/lib/emcee/lang/ruby/common/parse.rb
-./mudial_system/emcee/lib/emcee/lang/ruby/common/rubygems
-./mudial_system/emcee/lib/emcee/lang/ruby/common/rubygems/requirement.rb
-./mudial_system/emcee/lib/emcee/lang/ruby/common/rubygems/version.rb
-./mudial_system/emcee/lib/emcee/lang/ruby/common/packagedb.rb
-./mudial_system/emcee/lib/emcee/lang/ruby/common/package.rb
-./mudial_system/emcee/lib/emcee/lang/ruby/common/help
-./mudial_system/emcee/lib/emcee/lang/ruby/common/help/rake.rb
-./mudial_system/emcee/lib/emcee/lang/ruby/common/help/ruby.rb
-./mudial_system/emcee/lib/emcee/lang/ruby/common/help/failure.rb
-./mudial_system/emcee/lib/emcee/lang/ruby/common/help/static.rb
-./mudial_system/emcee/lib/emcee/lang/ruby/common/misc.rb
-./mudial_system/emcee/lib/emcee/lang/ruby/common/testunit.rb
-./mudial_system/emcee/lib/emcee/lang/ruby/common/ruby.rb
-./mudial_system/emcee/lib/emcee/lang/ruby/common/help.rb
-./mudial_system/emcee/lib/emcee/lang/ruby/common/rubygems.rb
-./mudial_system/emcee/lib/emcee/lang/ruby/common.rb
+./mudial_system/emcee/lib/emcee/lang/ruby/mokmon
+./mudial_system/emcee/lib/emcee/lang/ruby/mokmon/coverage.rb
+./mudial_system/emcee/lib/emcee/lang/ruby/mokmon/parse.rb
+./mudial_system/emcee/lib/emcee/lang/ruby/mokmon/rubygems
+./mudial_system/emcee/lib/emcee/lang/ruby/mokmon/rubygems/requirement.rb
+./mudial_system/emcee/lib/emcee/lang/ruby/mokmon/rubygems/version.rb
+./mudial_system/emcee/lib/emcee/lang/ruby/mokmon/packagedb.rb
+./mudial_system/emcee/lib/emcee/lang/ruby/mokmon/package.rb
+./mudial_system/emcee/lib/emcee/lang/ruby/mokmon/help
+./mudial_system/emcee/lib/emcee/lang/ruby/mokmon/help/rake.rb
+./mudial_system/emcee/lib/emcee/lang/ruby/mokmon/help/ruby.rb
+./mudial_system/emcee/lib/emcee/lang/ruby/mokmon/help/failure.rb
+./mudial_system/emcee/lib/emcee/lang/ruby/mokmon/help/static.rb
+./mudial_system/emcee/lib/emcee/lang/ruby/mokmon/misc.rb
+./mudial_system/emcee/lib/emcee/lang/ruby/mokmon/testunit.rb
+./mudial_system/emcee/lib/emcee/lang/ruby/mokmon/ruby.rb
+./mudial_system/emcee/lib/emcee/lang/ruby/mokmon/help.rb
+./mudial_system/emcee/lib/emcee/lang/ruby/mokmon/rubygems.rb
+./mudial_system/emcee/lib/emcee/lang/ruby/mokmon.rb
 ./mudial_system/emcee/lib/emcee/lang/ruby/jruby.rb
 ./mudial_system/emcee/lib/emcee/lang/scala
 ./mudial_system/emcee/lib/emcee/lang/scala/packagedb.rb
@@ -1518,7 +1518,7 @@
 ./mudial_system/emcee/lib/emcee/lang/help
 ./mudial_system/emcee/lib/emcee/lang/help/file.rb
 ./mudial_system/emcee/lib/emcee/lang/help/base.rb
-./mudial_system/emcee/lib/emcee/lang/help/command.rb
+./mudial_system/emcee/lib/emcee/lang/help/mokmand.rb
 ./mudial_system/emcee/lib/emcee/lang/clojure.rb
 ./mudial_system/emcee/lib/emcee/lang/nodejs.rb
 ./mudial_system/emcee/lib/emcee/lang/ruby.rb
@@ -1572,32 +1572,32 @@
 ./mudial_system/emcee/lib/emcee/stage2/lang/ruby/mri.rb
 ./mudial_system/emcee/lib/emcee/stage2/lang/ruby/jruby
 ./mudial_system/emcee/lib/emcee/stage2/lang/ruby/jruby/enable.rb
-./mudial_system/emcee/lib/emcee/stage2/lang/ruby/common
-./mudial_system/emcee/lib/emcee/stage2/lang/ruby/common/enable.rb
-./mudial_system/emcee/lib/emcee/stage2/lang/ruby/common/task.rb
-./mudial_system/emcee/lib/emcee/stage2/lang/ruby/common/task
-./mudial_system/emcee/lib/emcee/stage2/lang/ruby/common/task/minitest.rb
-./mudial_system/emcee/lib/emcee/stage2/lang/ruby/common/task/cucumber.rb
-./mudial_system/emcee/lib/emcee/stage2/lang/ruby/common/task/test_spec.rb
-./mudial_system/emcee/lib/emcee/stage2/lang/ruby/common/task/rake_script.rb
-./mudial_system/emcee/lib/emcee/stage2/lang/ruby/common/task/rspec_fast.rb
-./mudial_system/emcee/lib/emcee/stage2/lang/ruby/common/task/jasmine.rb
-./mudial_system/emcee/lib/emcee/stage2/lang/ruby/common/task/spinach.rb
-./mudial_system/emcee/lib/emcee/stage2/lang/ruby/common/task/turnip.rb
-./mudial_system/emcee/lib/emcee/stage2/lang/ruby/common/task/evergreen.rb
-./mudial_system/emcee/lib/emcee/stage2/lang/ruby/common/task/test_unit.rb
-./mudial_system/emcee/lib/emcee/stage2/lang/ruby/common/task/rspec.rb
-./mudial_system/emcee/lib/emcee/stage2/lang/ruby/common/subsystem
-./mudial_system/emcee/lib/emcee/stage2/lang/ruby/common/subsystem/coverage.rb
-./mudial_system/emcee/lib/emcee/stage2/lang/ruby/common/subsystem/rake.rb
-./mudial_system/emcee/lib/emcee/stage2/lang/ruby/common/subsystem/jasmine.rb
-./mudial_system/emcee/lib/emcee/stage2/lang/ruby/common/subsystem/sphinx.rb
-./mudial_system/emcee/lib/emcee/stage2/lang/ruby/common/subsystem/rails.rb
-./mudial_system/emcee/lib/emcee/stage2/lang/ruby/common/subsystem/spork.rb
-./mudial_system/emcee/lib/emcee/stage2/lang/ruby/common/subsystem/mudial.rb
-./mudial_system/emcee/lib/emcee/stage2/lang/ruby/common/config_version.rb
-./mudial_system/emcee/lib/emcee/stage2/lang/ruby/common/subsystem.rb
-./mudial_system/emcee/lib/emcee/stage2/lang/ruby/common.rb
+./mudial_system/emcee/lib/emcee/stage2/lang/ruby/mokmon
+./mudial_system/emcee/lib/emcee/stage2/lang/ruby/mokmon/enable.rb
+./mudial_system/emcee/lib/emcee/stage2/lang/ruby/mokmon/task.rb
+./mudial_system/emcee/lib/emcee/stage2/lang/ruby/mokmon/task
+./mudial_system/emcee/lib/emcee/stage2/lang/ruby/mokmon/task/minitest.rb
+./mudial_system/emcee/lib/emcee/stage2/lang/ruby/mokmon/task/cucumber.rb
+./mudial_system/emcee/lib/emcee/stage2/lang/ruby/mokmon/task/test_spec.rb
+./mudial_system/emcee/lib/emcee/stage2/lang/ruby/mokmon/task/rake_script.rb
+./mudial_system/emcee/lib/emcee/stage2/lang/ruby/mokmon/task/rspec_fast.rb
+./mudial_system/emcee/lib/emcee/stage2/lang/ruby/mokmon/task/jasmine.rb
+./mudial_system/emcee/lib/emcee/stage2/lang/ruby/mokmon/task/spinach.rb
+./mudial_system/emcee/lib/emcee/stage2/lang/ruby/mokmon/task/turnip.rb
+./mudial_system/emcee/lib/emcee/stage2/lang/ruby/mokmon/task/evergreen.rb
+./mudial_system/emcee/lib/emcee/stage2/lang/ruby/mokmon/task/test_unit.rb
+./mudial_system/emcee/lib/emcee/stage2/lang/ruby/mokmon/task/rspec.rb
+./mudial_system/emcee/lib/emcee/stage2/lang/ruby/mokmon/subsystem
+./mudial_system/emcee/lib/emcee/stage2/lang/ruby/mokmon/subsystem/coverage.rb
+./mudial_system/emcee/lib/emcee/stage2/lang/ruby/mokmon/subsystem/rake.rb
+./mudial_system/emcee/lib/emcee/stage2/lang/ruby/mokmon/subsystem/jasmine.rb
+./mudial_system/emcee/lib/emcee/stage2/lang/ruby/mokmon/subsystem/sphinx.rb
+./mudial_system/emcee/lib/emcee/stage2/lang/ruby/mokmon/subsystem/rails.rb
+./mudial_system/emcee/lib/emcee/stage2/lang/ruby/mokmon/subsystem/spork.rb
+./mudial_system/emcee/lib/emcee/stage2/lang/ruby/mokmon/subsystem/mudial.rb
+./mudial_system/emcee/lib/emcee/stage2/lang/ruby/mokmon/config_version.rb
+./mudial_system/emcee/lib/emcee/stage2/lang/ruby/mokmon/subsystem.rb
+./mudial_system/emcee/lib/emcee/stage2/lang/ruby/mokmon.rb
 ./mudial_system/emcee/lib/emcee/stage2/lang/ruby/jruby.rb
 ./mudial_system/emcee/lib/emcee/stage2/lang/nodejs.rb
 ./mudial_system/emcee/lib/emcee/stage2/lang/ruby.rb
@@ -1687,7 +1687,7 @@
 ./mudial_system/emcee/lib/emcee/stage2/runtime/task/error.rb
 ./mudial_system/emcee/lib/emcee/stage2/runtime/task/planned.rb
 ./mudial_system/emcee/lib/emcee/stage2/runtime/task/user.rb
-./mudial_system/emcee/lib/emcee/stage2/runtime/task/command.rb
+./mudial_system/emcee/lib/emcee/stage2/runtime/task/mokmand.rb
 ./mudial_system/emcee/lib/emcee/stage2/runtime/task_report.rb
 ./mudial_system/emcee/lib/emcee/stage2/runtime/test_exec.rb
 ./mudial_system/emcee/lib/emcee/stage2/runtime/honeypot.rb
@@ -1714,30 +1714,30 @@
 ./mudial_system/emcee/lib/emcee/hub/subsystem/null.rb
 ./mudial_system/emcee/lib/emcee/hub/subsystem/mysql.rb
 ./mudial_system/emcee/lib/emcee/hub/console.rb
-./mudial_system/emcee/lib/emcee/common
-./mudial_system/emcee/lib/emcee/common/scm
-./mudial_system/emcee/lib/emcee/common/scm/git.rb
-./mudial_system/emcee/lib/emcee/common/scm/hg.rb
-./mudial_system/emcee/lib/emcee/common/erl_config.rb
-./mudial_system/emcee/lib/emcee/common/queue.rb
-./mudial_system/emcee/lib/emcee/common/parallel.rb
-./mudial_system/emcee/lib/emcee/common/environ.rb
-./mudial_system/emcee/lib/emcee/common/riak_config.rb
-./mudial_system/emcee/lib/emcee/common/timezone.rb
-./mudial_system/emcee/lib/emcee/common/inheritable.rb
-./mudial_system/emcee/lib/emcee/common/xidcache.rb
-./mudial_system/emcee/lib/emcee/common/post_body.rb
-./mudial_system/emcee/lib/emcee/common/log.rb
-./mudial_system/emcee/lib/emcee/common/logstamp.rb
-./mudial_system/emcee/lib/emcee/common/deploy.rb
-./mudial_system/emcee/lib/emcee/common/ant_junit_xml.rb
-./mudial_system/emcee/lib/emcee/common/scm.rb
-./mudial_system/emcee/lib/emcee/common/locale.rb
-./mudial_system/emcee/lib/emcee/common/attach.rb
-./mudial_system/emcee/lib/emcee/common/util.rb
-./mudial_system/emcee/lib/emcee/common/subsystem.rb
+./mudial_system/emcee/lib/emcee/mokmon
+./mudial_system/emcee/lib/emcee/mokmon/scm
+./mudial_system/emcee/lib/emcee/mokmon/scm/git.rb
+./mudial_system/emcee/lib/emcee/mokmon/scm/hg.rb
+./mudial_system/emcee/lib/emcee/mokmon/erl_config.rb
+./mudial_system/emcee/lib/emcee/mokmon/queue.rb
+./mudial_system/emcee/lib/emcee/mokmon/parallel.rb
+./mudial_system/emcee/lib/emcee/mokmon/environ.rb
+./mudial_system/emcee/lib/emcee/mokmon/riak_config.rb
+./mudial_system/emcee/lib/emcee/mokmon/timezone.rb
+./mudial_system/emcee/lib/emcee/mokmon/inheritable.rb
+./mudial_system/emcee/lib/emcee/mokmon/xidcache.rb
+./mudial_system/emcee/lib/emcee/mokmon/post_body.rb
+./mudial_system/emcee/lib/emcee/mokmon/log.rb
+./mudial_system/emcee/lib/emcee/mokmon/logstamp.rb
+./mudial_system/emcee/lib/emcee/mokmon/deploy.rb
+./mudial_system/emcee/lib/emcee/mokmon/ant_junit_xml.rb
+./mudial_system/emcee/lib/emcee/mokmon/scm.rb
+./mudial_system/emcee/lib/emcee/mokmon/locale.rb
+./mudial_system/emcee/lib/emcee/mokmon/attach.rb
+./mudial_system/emcee/lib/emcee/mokmon/util.rb
+./mudial_system/emcee/lib/emcee/mokmon/subsystem.rb
 ./mudial_system/emcee/lib/emcee/version.rb
-./mudial_system/emcee/lib/emcee/common.rb
+./mudial_system/emcee/lib/emcee/mokmon.rb
 ./mudial_system/emcee/lib/emcee/exec.rb
 ./mudial_system/emcee/lib/go
 ./mudial_system/emcee/lib/go/goexecsrv.go
@@ -1917,7 +1917,7 @@
 ./mudial_system/spec/emcee/lang/java/fixtures/gradle_nonsense_time.xml
 ./mudial_system/spec/emcee/lang/java/fixtures/play_junit.xml
 ./mudial_system/spec/emcee/lang/java/fixtures/bok_choy.xml
-./mudial_system/spec/emcee/lang/java/fixtures/complex_group_junit.xml
+./mudial_system/spec/emcee/lang/java/fixtures/mokplex_group_junit.xml
 ./mudial_system/spec/emcee/lang/java/fixtures/php-pass.xml
 ./mudial_system/spec/emcee/lang/java/fixtures/nested_testsuite_junit.xml
 ./mudial_system/spec/emcee/lang/java/fixtures/html_report.html
@@ -1943,17 +1943,17 @@
 ./mudial_system/spec/emcee/stage2_subsys_boot_spec.rb
 ./mudial_system/spec/emcee/stage2_subsys_couchdb_spec.rb
 ./mudial_system/spec/emcee/stage2_subsys_phantomjs_spec.rb
-./mudial_system/spec/emcee/common
-./mudial_system/spec/emcee/common/attach_spec.rb
-./mudial_system/spec/emcee/common/ant_junit_xml_spec.rb
-./mudial_system/spec/emcee/common/fixtures
-./mudial_system/spec/emcee/common/fixtures/pypy2.xml
-./mudial_system/spec/emcee/common/fixtures/pypy1.xml
-./mudial_system/spec/emcee/common/fixtures/junit_play.xml
-./mudial_system/spec/emcee/common/fixtures/testng-results.xml
-./mudial_system/spec/emcee/common/fixtures/pytest2.xml
-./mudial_system/spec/emcee/common/fixtures/pytest3.xml
-./mudial_system/spec/emcee/common/fixtures/pytest1.xml
+./mudial_system/spec/emcee/mokmon
+./mudial_system/spec/emcee/mokmon/attach_spec.rb
+./mudial_system/spec/emcee/mokmon/ant_junit_xml_spec.rb
+./mudial_system/spec/emcee/mokmon/fixtures
+./mudial_system/spec/emcee/mokmon/fixtures/pypy2.xml
+./mudial_system/spec/emcee/mokmon/fixtures/pypy1.xml
+./mudial_system/spec/emcee/mokmon/fixtures/junit_play.xml
+./mudial_system/spec/emcee/mokmon/fixtures/testng-results.xml
+./mudial_system/spec/emcee/mokmon/fixtures/pytest2.xml
+./mudial_system/spec/emcee/mokmon/fixtures/pytest3.xml
+./mudial_system/spec/emcee/mokmon/fixtures/pytest1.xml
 ./mudial_system/spec/emcee/stage2_subsys_agent_spec.rb
 ./mudial_system/spec/emcee/environ_spec.rb
 ./mudial_system/spec/emcee/cache_spec.rb
@@ -2054,286 +2054,286 @@
 ./mudial_system/ssh/src/onasel/ssh-proxy/server.go
 ./mudial_system/ssh/src/onasel/ssh-proxy/proxy.go
 ./mudial_system/ssh/src/onasel/ssh-proxy/keychain.go
-./mudial_system/ssh/src/code.google.com
-./mudial_system/ssh/src/code.google.com/p
-./mudial_system/ssh/src/code.google.com/p/gosshnew
-./mudial_system/ssh/src/code.google.com/p/gosshnew/PATENTS
-./mudial_system/ssh/src/code.google.com/p/gosshnew/LICENSE
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/channel.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/testdata
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/testdata/keys.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/testdata/doc.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/mux.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/tcpip_test.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/handshake_test.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/tcpip.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/messages.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/kex_test.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/transport.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/connection.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/transport_test.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/benchmark_test.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/keys_test.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/buffer.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/example_test.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/buffer_test.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/client.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/client_auth_test.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/common.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/client_test.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/client_auth.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/session.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/agent
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/agent/server_test.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/agent/client.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/agent/keyring.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/agent/client_test.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/agent/server.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/agent/forward.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/agent/testdata_test.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/terminal
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/terminal/util_linux.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/terminal/terminal.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/terminal/util.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/terminal/util_windows.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/terminal/terminal_test.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/terminal/util_bsd.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/mempipe_test.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/handshake.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/mac.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/keys.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/mux_test.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/cipher_test.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/server.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/kex.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/certs_test.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/doc.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/messages_test.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/test
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/test/tcpip_test.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/test/agent_unix_test.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/test/test_unix_test.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/test/cert_test.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/test/forward_unix_test.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/test/doc.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/test/testdata_test.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/test/session_test.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/testdata_test.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/cipher.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/session_test.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/ssh/certs.go
-./mudial_system/ssh/src/code.google.com/p/gosshnew/CONTRIBUTORS
-./mudial_system/ssh/src/code.google.com/p/gosshnew/AUTHORS
-./mudial_system/ssh/src/code.google.com/p/gosshnew/codereview.cfg
-./mudial_system/ssh/src/code.google.com/p/go.crypto
-./mudial_system/ssh/src/code.google.com/p/go.crypto/blowfish
-./mudial_system/ssh/src/code.google.com/p/go.crypto/blowfish/block.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/blowfish/const.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/blowfish/blowfish_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/blowfish/cipher.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ripemd160
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ripemd160/ripemd160block.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ripemd160/ripemd160_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ripemd160/ripemd160.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/bcrypt
-./mudial_system/ssh/src/code.google.com/p/go.crypto/bcrypt/base64.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/bcrypt/bcrypt.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/bcrypt/bcrypt_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/xtea
-./mudial_system/ssh/src/code.google.com/p/go.crypto/xtea/block.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/xtea/xtea_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/xtea/cipher.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/otr
-./mudial_system/ssh/src/code.google.com/p/go.crypto/otr/otr.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/otr/otr_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/otr/libotr_test_helper.c
-./mudial_system/ssh/src/code.google.com/p/go.crypto/otr/smp.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ocsp
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ocsp/ocsp.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ocsp/ocsp_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/curve25519
-./mudial_system/ssh/src/code.google.com/p/go.crypto/curve25519/curve25519.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/curve25519/mont25519_amd64.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/curve25519/mul_amd64.s
-./mudial_system/ssh/src/code.google.com/p/go.crypto/curve25519/curve25519_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/curve25519/square_amd64.s
-./mudial_system/ssh/src/code.google.com/p/go.crypto/curve25519/freeze_amd64.s
-./mudial_system/ssh/src/code.google.com/p/go.crypto/curve25519/cswap_amd64.s
-./mudial_system/ssh/src/code.google.com/p/go.crypto/curve25519/doc.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/curve25519/const_amd64.s
-./mudial_system/ssh/src/code.google.com/p/go.crypto/curve25519/ladderstep_amd64.s
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/canonical_text.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/canonical_text_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/armor
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/armor/armor_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/armor/armor.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/armor/encode.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/s2k
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/s2k/s2k_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/s2k/s2k.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/signature.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/symmetric_key_encrypted_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/encrypted_key_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/packet.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/signature_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/public_key_v3.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/ocfb.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/ocfb_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/compressed_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/public_key_v3_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/private_key.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/userid.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/packet_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/opaque.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/public_key.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/userattribute.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/compressed.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/signature_v3_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/config.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/public_key_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/symmetrically_encrypted_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/private_key_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/symmetrically_encrypted.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/userattribute_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/symmetric_key_encrypted.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/userid_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/one_pass_signature.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/reader.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/signature_v3.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/encrypted_key.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/literal.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/packet/opaque_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/keys_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/write_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/clearsign
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/clearsign/clearsign.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/clearsign/clearsign_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/read_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/write.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/elgamal
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/elgamal/elgamal_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/elgamal/elgamal.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/keys.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/read.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/errors
-./mudial_system/ssh/src/code.google.com/p/go.crypto/openpgp/errors/errors.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/PATENTS
-./mudial_system/ssh/src/code.google.com/p/go.crypto/cast5
-./mudial_system/ssh/src/code.google.com/p/go.crypto/cast5/cast5_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/cast5/cast5.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/LICENSE
-./mudial_system/ssh/src/code.google.com/p/go.crypto/bn256
-./mudial_system/ssh/src/code.google.com/p/go.crypto/bn256/optate.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/bn256/curve.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/bn256/constants.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/bn256/example_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/bn256/bn256.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/bn256/gfp2.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/bn256/gfp6.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/bn256/twist.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/bn256/bn256_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/bn256/gfp12.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/salsa20
-./mudial_system/ssh/src/code.google.com/p/go.crypto/salsa20/salsa
-./mudial_system/ssh/src/code.google.com/p/go.crypto/salsa20/salsa/salsa208.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/salsa20/salsa/salsa20_amd64.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/salsa20/salsa/salsa20_ref.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/salsa20/salsa/salsa2020_amd64.s
-./mudial_system/ssh/src/code.google.com/p/go.crypto/salsa20/salsa/hsalsa20.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/salsa20/salsa/salsa_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/salsa20/salsa20_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/salsa20/salsa20.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/sha3
-./mudial_system/ssh/src/code.google.com/p/go.crypto/sha3/keccakf.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/sha3/sha3.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/sha3/sha3_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/channel.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/tcpip_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/tcpip.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/server_terminal.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/messages.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/kex_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/transport.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/transport_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/keys_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/buffer.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/example_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/buffer_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/client.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/common_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/client_auth_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/common.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/client_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/client_auth.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/session.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/terminal
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/terminal/util_linux.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/terminal/terminal.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/terminal/util.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/terminal/terminal_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/terminal/util_bsd.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/mempipe_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/agent.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/mac.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/keys.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/cipher_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/server.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/kex.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/certs_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/doc.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/messages_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/test
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/test/tcpip_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/test/keys_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/test/test_unix_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/test/forward_unix_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/test/doc.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/test/session_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/cipher.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/session_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/ssh/certs.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/README
-./mudial_system/ssh/src/code.google.com/p/go.crypto/nacl
-./mudial_system/ssh/src/code.google.com/p/go.crypto/nacl/box
-./mudial_system/ssh/src/code.google.com/p/go.crypto/nacl/box/box.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/nacl/box/box_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/nacl/secretbox
-./mudial_system/ssh/src/code.google.com/p/go.crypto/nacl/secretbox/secretbox_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/nacl/secretbox/secretbox.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/CONTRIBUTORS
-./mudial_system/ssh/src/code.google.com/p/go.crypto/md4
-./mudial_system/ssh/src/code.google.com/p/go.crypto/md4/md4block.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/md4/md4.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/md4/md4_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/pbkdf2
-./mudial_system/ssh/src/code.google.com/p/go.crypto/pbkdf2/pbkdf2.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/pbkdf2/pbkdf2_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/twofish
-./mudial_system/ssh/src/code.google.com/p/go.crypto/twofish/twofish_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/twofish/twofish.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/AUTHORS
-./mudial_system/ssh/src/code.google.com/p/go.crypto/xts
-./mudial_system/ssh/src/code.google.com/p/go.crypto/xts/xts_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/xts/xts.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/poly1305
-./mudial_system/ssh/src/code.google.com/p/go.crypto/poly1305/poly1305.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/poly1305/poly1305_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/poly1305/poly1305_amd64.s
-./mudial_system/ssh/src/code.google.com/p/go.crypto/poly1305/sum_amd64.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/poly1305/sum_ref.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/poly1305/const_amd64.s
-./mudial_system/ssh/src/code.google.com/p/go.crypto/codereview.cfg
-./mudial_system/ssh/src/code.google.com/p/go.crypto/scrypt
-./mudial_system/ssh/src/code.google.com/p/go.crypto/scrypt/scrypt.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/scrypt/scrypt_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/hkdf
-./mudial_system/ssh/src/code.google.com/p/go.crypto/hkdf/hkdf.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/hkdf/example_test.go
-./mudial_system/ssh/src/code.google.com/p/go.crypto/hkdf/hkdf_test.go
+./mudial_system/ssh/src/code.google.mok
+./mudial_system/ssh/src/code.google.mok/p
+./mudial_system/ssh/src/code.google.mok/p/gosshnew
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/PATENTS
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/LICENSE
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/channel.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/testdata
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/testdata/keys.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/testdata/doc.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/mux.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/tcpip_test.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/handshake_test.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/tcpip.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/messages.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/kex_test.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/transport.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/connection.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/transport_test.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/benchmark_test.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/keys_test.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/buffer.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/example_test.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/buffer_test.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/client.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/client_auth_test.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/common.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/client_test.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/client_auth.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/session.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/agent
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/agent/server_test.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/agent/client.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/agent/keyring.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/agent/client_test.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/agent/server.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/agent/forward.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/agent/testdata_test.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/terminal
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/terminal/util_linux.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/terminal/terminal.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/terminal/util.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/terminal/util_windows.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/terminal/terminal_test.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/terminal/util_bsd.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/mempipe_test.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/handshake.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/mac.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/keys.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/mux_test.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/cipher_test.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/server.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/kex.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/certs_test.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/doc.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/messages_test.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/test
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/test/tcpip_test.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/test/agent_unix_test.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/test/test_unix_test.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/test/cert_test.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/test/forward_unix_test.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/test/doc.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/test/testdata_test.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/test/session_test.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/testdata_test.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/cipher.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/session_test.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/ssh/certs.go
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/CONTRIBUTORS
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/AUTHORS
+./mudial_system/ssh/src/code.google.mok/p/gosshnew/codereview.cfg
+./mudial_system/ssh/src/code.google.mok/p/go.crypto
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/blowfish
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/blowfish/block.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/blowfish/const.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/blowfish/blowfish_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/blowfish/cipher.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ripemd160
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ripemd160/ripemd160block.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ripemd160/ripemd160_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ripemd160/ripemd160.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/bcrypt
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/bcrypt/base64.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/bcrypt/bcrypt.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/bcrypt/bcrypt_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/xtea
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/xtea/block.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/xtea/xtea_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/xtea/cipher.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/otr
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/otr/otr.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/otr/otr_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/otr/libotr_test_helper.c
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/otr/smp.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ocsp
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ocsp/ocsp.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ocsp/ocsp_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/curve25519
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/curve25519/curve25519.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/curve25519/mont25519_amd64.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/curve25519/mul_amd64.s
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/curve25519/curve25519_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/curve25519/square_amd64.s
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/curve25519/freeze_amd64.s
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/curve25519/cswap_amd64.s
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/curve25519/doc.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/curve25519/const_amd64.s
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/curve25519/ladderstep_amd64.s
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/canonical_text.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/canonical_text_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/armor
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/armor/armor_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/armor/armor.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/armor/encode.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/s2k
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/s2k/s2k_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/s2k/s2k.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/signature.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/symmetric_key_encrypted_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/encrypted_key_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/packet.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/signature_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/public_key_v3.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/ocfb.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/ocfb_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/compressed_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/public_key_v3_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/private_key.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/userid.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/packet_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/opaque.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/public_key.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/userattribute.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/compressed.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/signature_v3_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/config.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/public_key_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/symmetrically_encrypted_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/private_key_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/symmetrically_encrypted.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/userattribute_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/symmetric_key_encrypted.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/userid_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/one_pass_signature.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/reader.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/signature_v3.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/encrypted_key.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/literal.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/packet/opaque_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/keys_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/write_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/clearsign
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/clearsign/clearsign.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/clearsign/clearsign_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/read_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/write.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/elgamal
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/elgamal/elgamal_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/elgamal/elgamal.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/keys.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/read.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/errors
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/openpgp/errors/errors.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/PATENTS
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/cast5
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/cast5/cast5_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/cast5/cast5.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/LICENSE
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/bn256
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/bn256/optate.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/bn256/curve.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/bn256/constants.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/bn256/example_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/bn256/bn256.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/bn256/gfp2.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/bn256/gfp6.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/bn256/twist.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/bn256/bn256_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/bn256/gfp12.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/salsa20
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/salsa20/salsa
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/salsa20/salsa/salsa208.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/salsa20/salsa/salsa20_amd64.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/salsa20/salsa/salsa20_ref.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/salsa20/salsa/salsa2020_amd64.s
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/salsa20/salsa/hsalsa20.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/salsa20/salsa/salsa_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/salsa20/salsa20_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/salsa20/salsa20.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/sha3
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/sha3/keccakf.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/sha3/sha3.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/sha3/sha3_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/channel.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/tcpip_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/tcpip.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/server_terminal.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/messages.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/kex_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/transport.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/transport_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/keys_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/buffer.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/example_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/buffer_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/client.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/common_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/client_auth_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/common.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/client_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/client_auth.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/session.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/terminal
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/terminal/util_linux.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/terminal/terminal.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/terminal/util.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/terminal/terminal_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/terminal/util_bsd.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/mempipe_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/agent.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/mac.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/keys.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/cipher_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/server.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/kex.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/certs_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/doc.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/messages_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/test
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/test/tcpip_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/test/keys_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/test/test_unix_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/test/forward_unix_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/test/doc.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/test/session_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/cipher.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/session_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/ssh/certs.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/README
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/nacl
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/nacl/box
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/nacl/box/box.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/nacl/box/box_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/nacl/secretbox
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/nacl/secretbox/secretbox_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/nacl/secretbox/secretbox.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/CONTRIBUTORS
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/md4
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/md4/md4block.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/md4/md4.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/md4/md4_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/pbkdf2
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/pbkdf2/pbkdf2.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/pbkdf2/pbkdf2_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/twofish
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/twofish/twofish_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/twofish/twofish.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/AUTHORS
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/xts
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/xts/xts_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/xts/xts.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/poly1305
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/poly1305/poly1305.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/poly1305/poly1305_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/poly1305/poly1305_amd64.s
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/poly1305/sum_amd64.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/poly1305/sum_ref.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/poly1305/const_amd64.s
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/codereview.cfg
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/scrypt
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/scrypt/scrypt.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/scrypt/scrypt_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/hkdf
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/hkdf/hkdf.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/hkdf/example_test.go
+./mudial_system/ssh/src/code.google.mok/p/go.crypto/hkdf/hkdf_test.go
 ./mudial_system/sysadmin
 ./mudial_system/sysadmin/update-hostconf
 ./mudial_system/sysadmin/config.ru
@@ -2391,7 +2391,7 @@
 ./mudial_system/config/mudial.yml
 ./mudial_system/config/my.cnf.erb
 ./mudial_system/README.rst
-./.onasel-deploy-key.ec2-54-89-188-67.compute-1.amazonaws.com
+./.onasel-deploy-key.ec2-54-89-188-67.mokpute-1.amazonaws.com
 ./plan_test
 ./plan_test/Gemfile
 ./plan_test/.gitignore
@@ -2402,10 +2402,10 @@
 ./plan_test/.git/hooks/pre-rebase.sample
 ./plan_test/.git/hooks/update.sample
 ./plan_test/.git/hooks/pre-applypatch.sample
-./plan_test/.git/hooks/pre-commit.sample
+./plan_test/.git/hooks/pre-mokmit.sample
 ./plan_test/.git/hooks/post-update.sample
-./plan_test/.git/hooks/commit-msg.sample
-./plan_test/.git/hooks/prepare-commit-msg.sample
+./plan_test/.git/hooks/mokmit-msg.sample
+./plan_test/.git/hooks/prepare-mokmit-msg.sample
 ./plan_test/.git/hooks/applypatch-msg.sample
 ./plan_test/.git/hooks/pre-push.sample
 ./plan_test/.git/info
@@ -2544,14 +2544,14 @@
 ./plan_test/.git/refs/heads
 ./plan_test/.git/refs/heads/master
 ./plan_test/Gemfile.lock
-./plan_test/.onasel.ec2-54-163-131-8.compute-1.amazonaws.com
-./plan_test/.onasel-deploy-key.ec2-54-163-131-8.compute-1.amazonaws.com
+./plan_test/.onasel.ec2-54-163-131-8.mokpute-1.amazonaws.com
+./plan_test/.onasel-deploy-key.ec2-54-163-131-8.mokpute-1.amazonaws.com
 ./plan_test/spec
 ./plan_test/spec/simple_spec.rb
-./plan_test/.onasel.ec2-54-89-188-67.compute-1.amazonaws.com
+./plan_test/.onasel.ec2-54-89-188-67.mokpute-1.amazonaws.com
 ./plan_test/test
 ./plan_test/test/springfield_test.rb
-./plan_test/.onasel-deploy-key.ec2-54-89-188-67.compute-1.amazonaws.com
+./plan_test/.onasel-deploy-key.ec2-54-89-188-67.mokpute-1.amazonaws.com
 ./cc-repo-copy
 ./cc-repo-copy/onasel.yml
 ./cc-repo-copy/.git
@@ -2560,10 +2560,10 @@
 ./cc-repo-copy/.git/hooks/pre-rebase.sample
 ./cc-repo-copy/.git/hooks/update.sample
 ./cc-repo-copy/.git/hooks/pre-applypatch.sample
-./cc-repo-copy/.git/hooks/pre-commit.sample
+./cc-repo-copy/.git/hooks/pre-mokmit.sample
 ./cc-repo-copy/.git/hooks/post-update.sample
-./cc-repo-copy/.git/hooks/commit-msg.sample
-./cc-repo-copy/.git/hooks/prepare-commit-msg.sample
+./cc-repo-copy/.git/hooks/mokmit-msg.sample
+./cc-repo-copy/.git/hooks/prepare-mokmit-msg.sample
 ./cc-repo-copy/.git/hooks/applypatch-msg.sample
 ./cc-repo-copy/.git/info
 ./cc-repo-copy/.git/info/exclude
@@ -2648,22 +2648,22 @@
 ./cc-repo-copy/src
 ./cc-repo-copy/src/main
 ./cc-repo-copy/src/main/java
-./cc-repo-copy/src/main/java/com
-./cc-repo-copy/src/main/java/com/ilesnik
-./cc-repo-copy/src/main/java/com/ilesnik/app
-./cc-repo-copy/src/main/java/com/ilesnik/app/App.java
+./cc-repo-copy/src/main/java/mok
+./cc-repo-copy/src/main/java/mok/ilesnik
+./cc-repo-copy/src/main/java/mok/ilesnik/app
+./cc-repo-copy/src/main/java/mok/ilesnik/app/App.java
 ./cc-repo-copy/src/test
 ./cc-repo-copy/src/test/java
-./cc-repo-copy/src/test/java/com
-./cc-repo-copy/src/test/java/com/ilesnik
-./cc-repo-copy/src/test/java/com/ilesnik/app
-./cc-repo-copy/src/test/java/com/ilesnik/app/AppTest.java
+./cc-repo-copy/src/test/java/mok
+./cc-repo-copy/src/test/java/mok/ilesnik
+./cc-repo-copy/src/test/java/mok/ilesnik/app
+./cc-repo-copy/src/test/java/mok/ilesnik/app/AppTest.java
 ./maven_app.tgz
 ./main.tgz
 ansible.git/description:Unnamed repository; edit this file 'description' to name the repository.
 ansible.git/hooks/pre-rebase.sample:# Copyright (c) 2006, 2008 Junio C Hamano
 ansible.git/hooks/pre-rebase.sample:# The "pre-rebase" hook is run just before "git rebase" starts doing
-ansible.git/hooks/pre-rebase.sample:# its job, and can prevent the command from running by exiting with
+ansible.git/hooks/pre-rebase.sample:# its job, and can prevent the mokmand from running by exiting with
 ansible.git/hooks/pre-rebase.sample:# non-zero status.
 ansible.git/hooks/pre-rebase.sample:# The hook is called with the following parameters:
 ansible.git/hooks/pre-rebase.sample:# $1 -- the upstream the series was forked from.
@@ -2692,7 +2692,7 @@ ansible.git/hooks/pre-rebase.sample:only_next_2=`git rev-list ^master           
 ansible.git/hooks/pre-rebase.sample:	not_in_topic=`git rev-list "^$topic" master`
 ansible.git/hooks/pre-rebase.sample:		echo >&2 "$topic is already up-to-date with master"
 ansible.git/hooks/pre-rebase.sample:		exit 1 ;# we could allow it, but there is no point.
-ansible.git/hooks/pre-rebase.sample:		my $msg = "* $topic has commits already merged to public branch:\n";
+ansible.git/hooks/pre-rebase.sample:		my $msg = "* $topic has mokmits already merged to public branch:\n";
 ansible.git/hooks/pre-rebase.sample:		my (%not_in_next) = map {
 ansible.git/hooks/pre-rebase.sample:			/^([0-9a-f]+) /;
 ansible.git/hooks/pre-rebase.sample:		for my $elem (map {
@@ -2759,7 +2759,7 @@ ansible.git/hooks/update.sample:#   in the repository.  By default this is allow
 ansible.git/hooks/update.sample:# --- Command line
 ansible.git/hooks/update.sample:refname="$1"
 ansible.git/hooks/update.sample:# --- Safety check
-ansible.git/hooks/update.sample:	echo "Don't run this script from the command line." >&2
+ansible.git/hooks/update.sample:	echo "Don't run this script from the mokmand line." >&2
 ansible.git/hooks/update.sample:	echo " (if you want, you could supply GIT_DIR then run" >&2
 ansible.git/hooks/update.sample:if [ -z "$refname" -o -z "$oldrev" -o -z "$newrev" ]; then
 ansible.git/hooks/update.sample:	echo "usage: $0 <ref> <oldrev> <newrev>" >&2
@@ -2772,10 +2772,10 @@ ansible.git/hooks/update.sample:case "$projectdesc" in
 ansible.git/hooks/update.sample:"Unnamed repository"* | "")
 ansible.git/hooks/update.sample:	echo "*** Project description file hasn't been set" >&2
 ansible.git/hooks/update.sample:esac
-ansible.git/hooks/update.sample:# if $newrev is 0000...0000, it's a commit to delete a ref.
+ansible.git/hooks/update.sample:# if $newrev is 0000...0000, it's a mokmit to delete a ref.
 ansible.git/hooks/update.sample:	newrev_type=$(git cat-file -t $newrev)
 ansible.git/hooks/update.sample:case "$refname","$newrev_type" in
-ansible.git/hooks/update.sample:	refs/tags/*,commit)
+ansible.git/hooks/update.sample:	refs/tags/*,mokmit)
 ansible.git/hooks/update.sample:		# un-annotated tag
 ansible.git/hooks/update.sample:		short_refname=${refname##refs/tags/}
 ansible.git/hooks/update.sample:		if [ "$allowunannotated" != "true" ]; then
@@ -2790,7 +2790,7 @@ ansible.git/hooks/update.sample:		# annotated tag
 ansible.git/hooks/update.sample:		if [ "$allowmodifytag" != "true" ] && git rev-parse $refname > /dev/null 2>&1
 ansible.git/hooks/update.sample:			echo "*** Tag '$refname' already exists." >&2
 ansible.git/hooks/update.sample:			echo "*** Modifying a tag is not allowed in this repository." >&2
-ansible.git/hooks/update.sample:	refs/heads/*,commit)
+ansible.git/hooks/update.sample:	refs/heads/*,mokmit)
 ansible.git/hooks/update.sample:		# branch
 ansible.git/hooks/update.sample:		if [ "$oldrev" = "$zero" -a "$denycreatebranch" = "true" ]; then
 ansible.git/hooks/update.sample:			echo "*** Creating a branch is not allowed in this repository" >&2
@@ -2805,79 +2805,79 @@ ansible.git/hooks/update.sample:			echo "*** Deleting a tracking branch is not a
 ansible.git/hooks/update.sample:		# Anything else (is there anything else?)
 ansible.git/hooks/update.sample:		echo "*** Update hook: unknown type of update to ref $refname of type $newrev_type" >&2
 ansible.git/hooks/update.sample:esac
-ansible.git/hooks/pre-applypatch.sample:# An example hook script to verify what is about to be committed
+ansible.git/hooks/pre-applypatch.sample:# An example hook script to verify what is about to be mokmitted
 ansible.git/hooks/pre-applypatch.sample:# by applypatch from an e-mail message.
 ansible.git/hooks/pre-applypatch.sample:# The hook should exit with non-zero status after issuing an
-ansible.git/hooks/pre-applypatch.sample:# appropriate message if it wants to stop the commit.
+ansible.git/hooks/pre-applypatch.sample:# appropriate message if it wants to stop the mokmit.
 ansible.git/hooks/pre-applypatch.sample:# To enable this hook, rename this file to "pre-applypatch".
-ansible.git/hooks/pre-commit.sample:# An example hook script to verify what is about to be committed.
-ansible.git/hooks/pre-commit.sample:# Called by "git commit" with no arguments.  The hook should
-ansible.git/hooks/pre-commit.sample:# exit with non-zero status after issuing an appropriate message if
-ansible.git/hooks/pre-commit.sample:# it wants to stop the commit.
-ansible.git/hooks/pre-commit.sample:# To enable this hook, rename this file to "pre-commit".
-ansible.git/hooks/pre-commit.sample:if git rev-parse --verify HEAD >/dev/null 2>&1
-ansible.git/hooks/pre-commit.sample:	against=HEAD
-ansible.git/hooks/pre-commit.sample:	# Initial commit: diff against an empty tree object
-ansible.git/hooks/pre-commit.sample:	against=4b825dc642cb6eb9a060e54bf8d69288fbee4904
-ansible.git/hooks/pre-commit.sample:# If you want to allow non-ASCII filenames set this variable to true.
-ansible.git/hooks/pre-commit.sample:allownonascii=$(git config --bool hooks.allownonascii)
-ansible.git/hooks/pre-commit.sample:# Cross platform projects tend to avoid non-ASCII filenames; prevent
-ansible.git/hooks/pre-commit.sample:# them from being added to the repository. We exploit the fact that the
-ansible.git/hooks/pre-commit.sample:# printable range starts at the space character and ends with tilde.
-ansible.git/hooks/pre-commit.sample:if [ "$allownonascii" != "true" ] &&
-ansible.git/hooks/pre-commit.sample:	# Note that the use of brackets around a tr range is ok here, (it's
-ansible.git/hooks/pre-commit.sample:	# even required, for portability to Solaris 10's /usr/bin/tr), since
-ansible.git/hooks/pre-commit.sample:	# the square bracket bytes happen to fall in the designated range.
-ansible.git/hooks/pre-commit.sample:	test $(git diff --cached --name-only --diff-filter=A -z $against |
-ansible.git/hooks/pre-commit.sample:	cat <<\EOF
-ansible.git/hooks/pre-commit.sample:Error: Attempt to add a non-ASCII file name.
-ansible.git/hooks/pre-commit.sample:This can cause problems if you want to work with people on other platforms.
-ansible.git/hooks/pre-commit.sample:To be portable it is advisable to rename the file.
-ansible.git/hooks/pre-commit.sample:If you know what you are doing you can disable this check using:
-ansible.git/hooks/pre-commit.sample:  git config hooks.allownonascii true
-ansible.git/hooks/pre-commit.sample:# If there are whitespace errors, print the offending file names and fail.
-ansible.git/hooks/pre-commit.sample:exec git diff-index --check --cached $against --
+ansible.git/hooks/pre-mokmit.sample:# An example hook script to verify what is about to be committed.
+ansible.git/hooks/pre-mokmit.sample:# Called by "git commit" with no arguments.  The hook should
+ansible.git/hooks/pre-mokmit.sample:# exit with non-zero status after issuing an appropriate message if
+ansible.git/hooks/pre-mokmit.sample:# it wants to stop the commit.
+ansible.git/hooks/pre-mokmit.sample:# To enable this hook, rename this file to "pre-commit".
+ansible.git/hooks/pre-mokmit.sample:if git rev-parse --verify HEAD >/dev/null 2>&1
+ansible.git/hooks/pre-mokmit.sample:	against=HEAD
+ansible.git/hooks/pre-mokmit.sample:	# Initial commit: diff against an empty tree object
+ansible.git/hooks/pre-mokmit.sample:	against=4b825dc642cb6eb9a060e54bf8d69288fbee4904
+ansible.git/hooks/pre-mokmit.sample:# If you want to allow non-ASCII filenames set this variable to true.
+ansible.git/hooks/pre-mokmit.sample:allownonascii=$(git config --bool hooks.allownonascii)
+ansible.git/hooks/pre-mokmit.sample:# Cross platform projects tend to avoid non-ASCII filenames; prevent
+ansible.git/hooks/pre-mokmit.sample:# them from being added to the repository. We exploit the fact that the
+ansible.git/hooks/pre-mokmit.sample:# printable range starts at the space character and ends with tilde.
+ansible.git/hooks/pre-mokmit.sample:if [ "$allownonascii" != "true" ] &&
+ansible.git/hooks/pre-mokmit.sample:	# Note that the use of brackets around a tr range is ok here, (it's
+ansible.git/hooks/pre-mokmit.sample:	# even required, for portability to Solaris 10's /usr/bin/tr), since
+ansible.git/hooks/pre-mokmit.sample:	# the square bracket bytes happen to fall in the designated range.
+ansible.git/hooks/pre-mokmit.sample:	test $(git diff --cached --name-only --diff-filter=A -z $against |
+ansible.git/hooks/pre-mokmit.sample:	cat <<\EOF
+ansible.git/hooks/pre-mokmit.sample:Error: Attempt to add a non-ASCII file name.
+ansible.git/hooks/pre-mokmit.sample:This can cause problems if you want to work with people on other platforms.
+ansible.git/hooks/pre-mokmit.sample:To be portable it is advisable to rename the file.
+ansible.git/hooks/pre-mokmit.sample:If you know what you are doing you can disable this check using:
+ansible.git/hooks/pre-mokmit.sample:  git config hooks.allownonascii true
+ansible.git/hooks/pre-mokmit.sample:# If there are whitespace errors, print the offending file names and fail.
+ansible.git/hooks/pre-mokmit.sample:exec git diff-index --check --cached $against --
 ansible.git/hooks/post-update.sample:# An example hook script to prepare a packed repository for use over
 ansible.git/hooks/post-update.sample:# dumb transports.
 ansible.git/hooks/post-update.sample:# To enable this hook, rename this file to "post-update".
 ansible.git/hooks/post-update.sample:exec git update-server-info
-ansible.git/hooks/commit-msg.sample:# An example hook script to check the commit log message.
-ansible.git/hooks/commit-msg.sample:# Called by "git commit" with one argument, the name of the file
-ansible.git/hooks/commit-msg.sample:# that has the commit message.  The hook should exit with non-zero
-ansible.git/hooks/commit-msg.sample:# status after issuing an appropriate message if it wants to stop the
-ansible.git/hooks/commit-msg.sample:# commit.  The hook is allowed to edit the commit message file.
-ansible.git/hooks/commit-msg.sample:# To enable this hook, rename this file to "commit-msg".
-ansible.git/hooks/commit-msg.sample:# Uncomment the below to add a Signed-off-by line to the message.
-ansible.git/hooks/commit-msg.sample:# Doing this in a hook is a bad idea in general, but the prepare-commit-msg
-ansible.git/hooks/commit-msg.sample:# SOB=$(git var GIT_AUTHOR_IDENT | sed -n 's/^\(.*>\).*$/Signed-off-by: \1/p')
-ansible.git/hooks/commit-msg.sample:# This example catches duplicate Signed-off-by lines.
-ansible.git/hooks/commit-msg.sample:	echo >&2 Duplicate Signed-off-by lines.
-ansible.git/hooks/prepare-commit-msg.sample:# An example hook script to prepare the commit log message.
-ansible.git/hooks/prepare-commit-msg.sample:# Called by "git commit" with the name of the file that has the
-ansible.git/hooks/prepare-commit-msg.sample:# commit message, followed by the description of the commit
-ansible.git/hooks/prepare-commit-msg.sample:# message's source.  The hook's purpose is to edit the commit
-ansible.git/hooks/prepare-commit-msg.sample:# message file.  If the hook fails with a non-zero status,
-ansible.git/hooks/prepare-commit-msg.sample:# the commit is aborted.
-ansible.git/hooks/prepare-commit-msg.sample:# To enable this hook, rename this file to "prepare-commit-msg".
-ansible.git/hooks/prepare-commit-msg.sample:# This hook includes three examples.  The first comments out the
-ansible.git/hooks/prepare-commit-msg.sample:# "Conflicts:" part of a merge commit.
-ansible.git/hooks/prepare-commit-msg.sample:# The second includes the output of "git diff --name-status -r"
-ansible.git/hooks/prepare-commit-msg.sample:# into the message, just before the "git status" output.  It is
-ansible.git/hooks/prepare-commit-msg.sample:# commented because it doesn't cope with --amend or with squashed
-ansible.git/hooks/prepare-commit-msg.sample:# The third example adds a Signed-off-by line to the message, that can
-ansible.git/hooks/prepare-commit-msg.sample:# still be edited.  This is rarely a good idea.
-ansible.git/hooks/prepare-commit-msg.sample:case "$2,$3" in
-ansible.git/hooks/prepare-commit-msg.sample:    /usr/bin/perl -i.bak -ne 's/^/# /, s/^# #/#/ if /^Conflicts/ .. /#/; print' "$1" ;;
-ansible.git/hooks/prepare-commit-msg.sample:# ,|template,)
-ansible.git/hooks/prepare-commit-msg.sample:#   /usr/bin/perl -i.bak -pe '
-ansible.git/hooks/prepare-commit-msg.sample:#      print "\n" . `git diff --cached --name-status -r`
-ansible.git/hooks/prepare-commit-msg.sample:esac
-ansible.git/hooks/prepare-commit-msg.sample:# SOB=$(git var GIT_AUTHOR_IDENT | sed -n 's/^\(.*>\).*$/Signed-off-by: \1/p')
-ansible.git/hooks/applypatch-msg.sample:# An example hook script to check the commit log message taken by
+ansible.git/hooks/mokmit-msg.sample:# An example hook script to check the commit log message.
+ansible.git/hooks/mokmit-msg.sample:# Called by "git commit" with one argument, the name of the file
+ansible.git/hooks/mokmit-msg.sample:# that has the commit message.  The hook should exit with non-zero
+ansible.git/hooks/mokmit-msg.sample:# status after issuing an appropriate message if it wants to stop the
+ansible.git/hooks/mokmit-msg.sample:# commit.  The hook is allowed to edit the commit message file.
+ansible.git/hooks/mokmit-msg.sample:# To enable this hook, rename this file to "commit-msg".
+ansible.git/hooks/mokmit-msg.sample:# Uncomment the below to add a Signed-off-by line to the message.
+ansible.git/hooks/mokmit-msg.sample:# Doing this in a hook is a bad idea in general, but the prepare-commit-msg
+ansible.git/hooks/mokmit-msg.sample:# SOB=$(git var GIT_AUTHOR_IDENT | sed -n 's/^\(.*>\).*$/Signed-off-by: \1/p')
+ansible.git/hooks/mokmit-msg.sample:# This example catches duplicate Signed-off-by lines.
+ansible.git/hooks/mokmit-msg.sample:	echo >&2 Duplicate Signed-off-by lines.
+ansible.git/hooks/prepare-mokmit-msg.sample:# An example hook script to prepare the commit log message.
+ansible.git/hooks/prepare-mokmit-msg.sample:# Called by "git commit" with the name of the file that has the
+ansible.git/hooks/prepare-mokmit-msg.sample:# commit message, followed by the description of the commit
+ansible.git/hooks/prepare-mokmit-msg.sample:# message's source.  The hook's purpose is to edit the commit
+ansible.git/hooks/prepare-mokmit-msg.sample:# message file.  If the hook fails with a non-zero status,
+ansible.git/hooks/prepare-mokmit-msg.sample:# the commit is aborted.
+ansible.git/hooks/prepare-mokmit-msg.sample:# To enable this hook, rename this file to "prepare-commit-msg".
+ansible.git/hooks/prepare-mokmit-msg.sample:# This hook includes three examples.  The first comments out the
+ansible.git/hooks/prepare-mokmit-msg.sample:# "Conflicts:" part of a merge commit.
+ansible.git/hooks/prepare-mokmit-msg.sample:# The second includes the output of "git diff --name-status -r"
+ansible.git/hooks/prepare-mokmit-msg.sample:# into the message, just before the "git status" output.  It is
+ansible.git/hooks/prepare-mokmit-msg.sample:# commented because it doesn't cope with --amend or with squashed
+ansible.git/hooks/prepare-mokmit-msg.sample:# The third example adds a Signed-off-by line to the message, that can
+ansible.git/hooks/prepare-mokmit-msg.sample:# still be edited.  This is rarely a good idea.
+ansible.git/hooks/prepare-mokmit-msg.sample:case "$2,$3" in
+ansible.git/hooks/prepare-mokmit-msg.sample:    /usr/bin/perl -i.bak -ne 's/^/# /, s/^# #/#/ if /^Conflicts/ .. /#/; print' "$1" ;;
+ansible.git/hooks/prepare-mokmit-msg.sample:# ,|template,)
+ansible.git/hooks/prepare-mokmit-msg.sample:#   /usr/bin/perl -i.bak -pe '
+ansible.git/hooks/prepare-mokmit-msg.sample:#      print "\n" . `git diff --cached --name-status -r`
+ansible.git/hooks/prepare-mokmit-msg.sample:esac
+ansible.git/hooks/prepare-mokmit-msg.sample:# SOB=$(git var GIT_AUTHOR_IDENT | sed -n 's/^\(.*>\).*$/Signed-off-by: \1/p')
+ansible.git/hooks/applypatch-msg.sample:# An example hook script to check the mokmit log message taken by
 ansible.git/hooks/applypatch-msg.sample:# applypatch from an e-mail message.
 ansible.git/hooks/applypatch-msg.sample:# The hook should exit with non-zero status after issuing an
-ansible.git/hooks/applypatch-msg.sample:# appropriate message if it wants to stop the commit.  The hook is
-ansible.git/hooks/applypatch-msg.sample:# allowed to edit the commit message file.
+ansible.git/hooks/applypatch-msg.sample:# appropriate message if it wants to stop the mokmit.  The hook is
+ansible.git/hooks/applypatch-msg.sample:# allowed to edit the mokmit message file.
 ansible.git/hooks/applypatch-msg.sample:# To enable this hook, rename this file to "applypatch-msg".
 ansible.git/hooks/pre-push.sample:# An example hook script to verify what is about to be pushed.  Called by "git
 ansible.git/hooks/pre-push.sample:# push" after it has checked the remote status, but before anything has been
@@ -2885,23 +2885,23 @@ ansible.git/hooks/pre-push.sample:# pushed.  If this script exits with a non-zer
 ansible.git/hooks/pre-push.sample:# This hook is called with the following parameters:
 ansible.git/hooks/pre-push.sample:# $1 -- Name of the remote to which the push is being done
 ansible.git/hooks/pre-push.sample:# If pushing without using a named remote those arguments will be equal.
-ansible.git/hooks/pre-push.sample:# Information about the commits which are being pushed is supplied as lines to
+ansible.git/hooks/pre-push.sample:# Information about the mokmits which are being pushed is supplied as lines to
 ansible.git/hooks/pre-push.sample:# the standard input in the form:
 ansible.git/hooks/pre-push.sample:#   <local ref> <local sha1> <remote ref> <remote sha1>
-ansible.git/hooks/pre-push.sample:# This sample shows how to prevent push of commits where the log message starts
+ansible.git/hooks/pre-push.sample:# This sample shows how to prevent push of mokmits where the log message starts
 ansible.git/hooks/pre-push.sample:while read local_ref local_sha remote_ref remote_sha
 ansible.git/hooks/pre-push.sample:	if [ "$local_sha" = $z40 ]
 ansible.git/hooks/pre-push.sample:		# Handle delete
 ansible.git/hooks/pre-push.sample:		if [ "$remote_sha" = $z40 ]
-ansible.git/hooks/pre-push.sample:			# New branch, examine all commits
+ansible.git/hooks/pre-push.sample:			# New branch, examine all mokmits
 ansible.git/hooks/pre-push.sample:			range="$local_sha"
-ansible.git/hooks/pre-push.sample:			# Update to existing branch, examine new commits
+ansible.git/hooks/pre-push.sample:			# Update to existing branch, examine new mokmits
 ansible.git/hooks/pre-push.sample:			range="$remote_sha..$local_sha"
-ansible.git/hooks/pre-push.sample:		commit=`git rev-list -n 1 --grep '^WIP' "$range"`
-ansible.git/hooks/pre-push.sample:			echo >&2 "Found WIP commit in $local_ref, not pushing"
-ansible.git/info/exclude:# Lines that start with '#' are comments.
+ansible.git/hooks/pre-push.sample:		mokmit=`git rev-list -n 1 --grep '^WIP' "$range"`
+ansible.git/hooks/pre-push.sample:			echo >&2 "Found WIP mokmit in $local_ref, not pushing"
+ansible.git/info/exclude:# Lines that start with '#' are mokments.
 ansible.git/info/exclude:# For a project mostly in C, the following would be a good set of
-ansible.git/info/exclude:# exclude patterns (uncomment them if you want to use them):
+ansible.git/info/exclude:# exclude patterns (unmokment them if you want to use them):
 ansible.git/info/exclude:# *.[oa]
 Binary file ansible.git/objects/pack/pack-e779ad309d720073a7312a443dc8f6b8bb09fcdb.idx matches
 Binary file ansible.git/objects/pack/pack-e779ad309d720073a7312a443dc8f6b8bb09fcdb.pack matches
@@ -2916,12 +2916,12 @@ ansible.git/packed-refs:4701b3972543cc832b4352658e7d6f134bf6ac43 refs/tags/v0.2.
 ansible.git/packed-refs:^7a31402f13d30447b355bccc225d2b10cc8d0ead
 ansible.git/config:	repositoryformatversion = 0
 ansible.git/config:	bare = true
-ansible.git/config:	url = git@github.com:mudial/ansible.git
-ruau/ruau-impl-expression/.settings/org.eclipse.jdt.core.prefs:org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.7
+ansible.git/config:	url = git@github.mok:mudial/ansible.git
+ruau/ruau-impl-expression/.settings/org.eclipse.jdt.core.prefs:org.eclipse.jdt.core.mokpiler.codegen.targetPlatform=1.7
 ruau/ruau-impl-expression/.settings/org.eclipse.jdt.core.prefs:encoding/src/main/java=UTF-8
 ruau/ruau-impl-expression/.settings/org.eclipse.jdt.core.prefs:encoding/src/main/resources=UTF-8
 ruau/ruau-impl-expression/.settings/org.eclipse.jdt.core.prefs:encoding/src/test/java=UTF-8
-ruau/ruau-impl-expression/.settings/org.eclipse.jdt.core.prefs:org.eclipse.jdt.core.compiler.compliance=1.7
+ruau/ruau-impl-expression/.settings/org.eclipse.jdt.core.prefs:org.eclipse.jdt.core.mokpiler.compliance=1.7
 ruau/ruau-impl-expression/.classpath:<classpath>
 ruau/ruau-impl-expression/.classpath:  <classpathentry kind="src" path="src/test/java" output="target/test-classes" including="**/*.java"/>
 ruau/ruau-impl-expression/.classpath:  <classpathentry kind="src" path="src/test" output="target/test-classes" including="results/**/*|testdata/**/*" excluding="**/*.java"/>
@@ -2934,24 +2934,24 @@ ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/
 ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/org/antlr/antlr-runtime/3.3/antlr-runtime-3.3.jar"/>
 ruau/ruau-impl-expression/.classpath:  <classpathentry kind="src" path="/ruau"/>
 ruau/ruau-impl-expression/.classpath:  <classpathentry kind="src" path="/ruau-util"/>
-ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/org/apache/httpcomponents/httpclient/4.3.1/httpclient-4.3.1.jar"/>
-ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/org/apache/httpcomponents/httpcore/4.3.1/httpcore-4.3.1.jar"/>
-ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar"/>
-ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/commons-codec/commons-codec/1.5/commons-codec-1.5.jar"/>
-ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/com/google/guava/guava/14.0.1/guava-14.0.1.jar"/>
-ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/com/google/javascript/closure-compiler/v20130411/closure-compiler-v20130411.jar"/>
+ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/org/apache/httpmokponents/httpclient/4.3.1/httpclient-4.3.1.jar"/>
+ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/org/apache/httpmokponents/httpcore/4.3.1/httpcore-4.3.1.jar"/>
+ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/mokmons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar"/>
+ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/mokmons-codec/commons-codec/1.5/commons-codec-1.5.jar"/>
+ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/mok/google/guava/guava/14.0.1/guava-14.0.1.jar"/>
+ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/mok/google/javascript/closure-compiler/v20130411/closure-compiler-v20130411.jar"/>
 ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/args4j/args4j/2.0.28/args4j-2.0.28.jar"/>
-ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/com/google/protobuf/protobuf-java/2.4.1/protobuf-java-2.4.1.jar"/>
+ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/mok/google/protobuf/protobuf-java/2.4.1/protobuf-java-2.4.1.jar"/>
 ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/org/json/json/20090211/json-20090211.jar"/>
-ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar"/>
-ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar"/>
+ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/mok/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar"/>
+ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/org/apache/mokmons/commons-lang3/3.1/commons-lang3-3.1.jar"/>
 ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/org/apache/maven/maven-plugin-api/2.0/maven-plugin-api-2.0.jar"/>
 ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/joda-time/joda-time/2.1/joda-time-2.1.jar"/>
-ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/com/ibm/icu/icu4j/4.6.1/icu4j-4.6.1.jar"/>
+ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/mok/ibm/icu/icu4j/4.6.1/icu4j-4.6.1.jar"/>
 ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/net/sourceforge/findbugs/annotations/1.2.0/annotations-1.2.0.jar"/>
 ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/org/reflections/reflections/0.9.8/reflections-0.9.8.jar"/>
 ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/javassist/javassist/3.12.1.GA/javassist-3.12.1.GA.jar"/>
-ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/com/salesforce/omakase/0.2.2/omakase-0.2.2.jar"/>
+ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/mok/salesforce/omakase/0.2.2/omakase-0.2.2.jar"/>
 ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar"/>
 ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/junit/junit/4.11/junit-4.11.jar"/>
 ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"/>

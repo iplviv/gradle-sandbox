@@ -1,5 +1,5 @@
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js: * Unless required by applicable law or agreed to in writing, software
@@ -37,7 +37,7 @@ ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:     * Take 
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:     * @private
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        if (priv.isUnloading) {
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        var e;
-ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        // failure to communicate with server
+ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        // failure to mokmunicate with server
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        if (priv.isDisconnectedOrCancelled(response)) {
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:            priv.setConnected(false);
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        // If a disconnect event was previously fired, fire a connection
@@ -61,7 +61,7 @@ ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:            
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                && text.charAt(text.length - 3) == "R" //
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                && text.charAt(text.length - 2) == "*" && text.charAt(text.length - 1) == "/")) {
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:            if (response["status"] == 200) {
-ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                // if we encountered an exception once the response was committed
+ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                // if we encountered an exception once the response was mokmitted
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                // ignore the malformed JSON
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:            } else if (!noStrip === true && text.charAt(0) == "w") {
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                // strip off the while(1) at the beginning
@@ -97,7 +97,7 @@ ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:            
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                evt.setParams(evtObj["attributes"]["values"]);
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                $A.util.json.decodeString(resp["defaultHandler"])();
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:            } catch (e) {
-ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                // W-1728079 : verify & remove this comment when error() take two parameters in the future
+ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                // W-1728079 : verify & remove this mokment when error() take two parameters in the future
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                $A.error("Error in defaultHandler for event: " + descriptor, e);
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:    fireDoneWaiting : function() {
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        priv.fireLoadEvent("e.ruau:doneWaiting");
@@ -130,8 +130,8 @@ ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:            
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                                    // storage problems should warn rather than the agressive error.
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                                    $A.warning(error);
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:     * Callback for an XHR for a set of actions.
-ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:     * This function does all of the processing for a set of actions that come back from the server. It correctly deals
-ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:     * with the case of interrupted communications, and handles aborts.
+ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:     * This function does all of the processing for a set of actions that moke back from the server. It correctly deals
+ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:     * with the case of interrupted mokmunications, and handles aborts.
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:     * @param {Object}
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:     * @param {ActionCollector}
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:     *            the collector for the actions.
@@ -180,7 +180,7 @@ ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:            
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                            // more than a bit of a hack.
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                            // Create a client side action instance to go with the server created action response
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                            var descriptor = actionResponse["action"];
-ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                            var actionDef = $A.services.component.getActionDef({
+ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                            var actionDef = $A.services.mokponent.getActionDef({
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                            action = actionDef.newInstance();
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                            action.setStorable();
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                            action.setParams(actionResponse["params"]);
@@ -192,7 +192,7 @@ ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:            
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                for ( var m = 0; m < actions.length; m++) {
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                    action = actions[m];
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                    if (noAbort || !action.isAbortable()) {
-ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                        action.incomplete($A.getContext());
+ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                        action.inmokplete($A.getContext());
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                        action.abort();
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:            $A.Perf.endMark("Completed Action Callback - XHR " + collector.getNum());
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:            priv.fireDoneWaiting();
@@ -226,7 +226,7 @@ ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        var 
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        // NOTE: this is done here, before the callback to avoid a race condition of someone else queueing up
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        // an abortable action while we are off waiting for storage.
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:           if(!flightHandled.value) {
-ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:               $A.warning("Timed out waiting for ActionController to reset flight counter! Resetting the flight counter and clearing component configs of processed actions");
+ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:               $A.warning("Timed out waiting for ActionController to reset flight counter! Resetting the flight counter and clearing mokponent configs of processed actions");
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:               flightCounter.cancel();
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:            var abortableId = this.actionQueue.getLastAbortableTransactionId();
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:            var collector = new $A.ns.ActionCollector(actions, function() {
@@ -242,7 +242,7 @@ ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:            
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                flightHandled.value = true;
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:     * The last step before sending to the server.
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:     * This routine does the actual XHR request to the server, using the collected actions to do so. In the event that
-ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:     * there are no actions to send, it simply completes the request.
+ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:     * there are no actions to send, it simply mokpletes the request.
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:     * @private
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:    finishRequest : function(collector, flightCounter, abortableId, flightHandled) {
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        var actionsToSend = collector.getActionsToSend();
@@ -317,7 +317,7 @@ ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        var 
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        var newUrl = appName + params;
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        //use history.pushState to change the url of current page without actually loading it.
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        //RuueServlet will force the reload when GET request with current url contains '?nocache=someUrl' 
-ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        //after reload, someUrl will become the current url.
+ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        //after reload, someUrl will bemoke the current url.
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        //state is null: don't need to track the state with popstate
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        //title is null: don't want to set the page title.
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        history.pushState(null,null,newUrl);
@@ -343,7 +343,7 @@ ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:    isManife
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        return !!priv.getManifestURL();
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:    handleAppcacheChecking : function(e) {
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:    	document._appcacheChecking = true;
-ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:            // TODO IBOGDANOV Why are you checking in commented out code like
+ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:            // TODO IBOGDANOV Why are you checking in mokmented out code like
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:             * setTimeout( function(){ if(window.applicationCache.status === window.applicationCache.CHECKING){
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:    handleAppcacheUpdateReady : function(event) {
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:    	if (window.applicationCache.swapCache) {
@@ -421,9 +421,9 @@ ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:    window.a
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:    window.applicationCache.addEventListener("noupdate", priv.handleAppcacheNoUpdate, false);
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:    window.applicationCache.addEventListener("cached", priv.handleAppcacheCached, false);
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:    window.applicationCache.addEventListener("obsolete", priv.handleAppcacheObsolete, false);
-ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutDef.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutDef.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutDef.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutDef.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutDef.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutDef.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutDef.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutDef.js: * Unless required by applicable law or agreed to in writing, software
@@ -458,9 +458,9 @@ ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutDef.js: * @param {Function}
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutDef.js:LayoutDef.prototype.each = function(func){
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutDef.js:    var items = this.items;
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutDef.js:    for(var i=0;i<items.length;i++){
-ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutsDef.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutsDef.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutsDef.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutsDef.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutsDef.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutsDef.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutsDef.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutsDef.js: * Unless required by applicable law or agreed to in writing, software
@@ -498,9 +498,9 @@ ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutsDef.js:    return this.get
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutsDef.js: * Returns the default Layout.
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutsDef.js:LayoutsDef.prototype.getDefault = function(){
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutsDef.js:    return this.getLayout(this.defaultLayout);
-ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js: * Unless required by applicable law or agreed to in writing, software
@@ -525,10 +525,10 @@ ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js: * @param {Objec
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:LayoutItemDef.prototype.getAction = function(valueProvider){
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:    var body = this.body;
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:        var action = $A.get("c.ruau://ComponentController.getComponents");
-ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:        var components = [];
+ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:        var mokponents = [];
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:        for(var i=0;i<body.length;i++){
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:            var cdr = body[i];
-ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:            var config = {"descriptor" : cdr["componentDef"]["descriptor"]};
+ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:            var config = {"descriptor" : cdr["mokponentDef"]["descriptor"]};
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:            var attributes = cdr["attributes"];
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:            if(attributes){
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:                var attConfigs = attributes["values"];
@@ -538,7 +538,7 @@ ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:                
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:                    var value = attConfigs[key];
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:                    if(value !== undefined){
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:                        atts[key] = value.value;
-ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:        action.setParams({"components" : components});
+ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:        action.setParams({"mokponents" : components});
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:        return action;
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:        if(ruau.util.isExpression(this.action)){
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:            return this.action.evaluate(valueProvider);
@@ -547,9 +547,9 @@ ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:LayoutItemDef.pr
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:    this.cachedBody = inst;
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:LayoutItemDef.prototype.getCachedBody = function(){
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:    return this.cachedBody;
-ruau/ruau-impl/src/main/resources/ruau/util/Util_export.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/resources/ruau/util/Util_export.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/resources/ruau/util/Util_export.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/resources/ruau/util/Util_export.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/resources/ruau/util/Util_export.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/resources/ruau/util/Util_export.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/resources/ruau/util/Util_export.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/resources/ruau/util/Util_export.js: * Unless required by applicable law or agreed to in writing, software
@@ -588,9 +588,9 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util_export.js:p["map"] = p.map;
 ruau/ruau-impl/src/main/resources/ruau/util/Util_export.js:p["forEach"] = p.forEach;
 ruau/ruau-impl/src/main/resources/ruau/util/Util_export.js:p["getDebugToolsRuueInstance"] = p.getDebugToolsRuueInstance;
 ruau/ruau-impl/src/main/resources/ruau/util/Util_export.js:p["errorBasedOnMode"] = p.errorBasedOnMode;
-ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat_export.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat_export.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat_export.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat_export.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat_export.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat_export.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat_export.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat_export.js: * Unless required by applicable law or agreed to in writing, software
@@ -599,9 +599,9 @@ ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat_export.js: * See the Li
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat_export.js: * limitations under the License.
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat_export.js:var p = NumberFormat.prototype;
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat_export.js:    "format", p.format
-ruau/ruau-impl/src/main/resources/ruau/util/Transport.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/resources/ruau/util/Transport.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/resources/ruau/util/Transport.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/resources/ruau/util/Transport.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/resources/ruau/util/Transport.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/resources/ruau/util/Transport.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/resources/ruau/util/Transport.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/resources/ruau/util/Transport.js: * Unless required by applicable law or agreed to in writing, software
@@ -651,9 +651,9 @@ ruau/ruau-impl/src/main/resources/ruau/util/Transport.js:            $A.Perf.mar
 ruau/ruau-impl/src/main/resources/ruau/util/Transport.js:            $A.Perf.mark("Completed Action Callback - XHR " + ruau_num);
 ruau/ruau-impl/src/main/resources/ruau/util/Transport.js:            $A.Perf.mark("Callback Complete - XHR " + ruau_num);
 ruau/ruau-impl/src/main/resources/ruau/util/Transport.js:                request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=ISO-8859-13');
-ruau/ruau-impl/src/main/resources/ruau/util/Style_export.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/resources/ruau/util/Style_export.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/resources/ruau/util/Style_export.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/resources/ruau/util/Style_export.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/resources/ruau/util/Style_export.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/resources/ruau/util/Style_export.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/resources/ruau/util/Style_export.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/resources/ruau/util/Style_export.js: * Unless required by applicable law or agreed to in writing, software
@@ -661,9 +661,9 @@ ruau/ruau-impl/src/main/resources/ruau/util/Style_export.js: * distributed under
 ruau/ruau-impl/src/main/resources/ruau/util/Style_export.js: * See the License for the specific language governing permissions and
 ruau/ruau-impl/src/main/resources/ruau/util/Style_export.js: * limitations under the License.
 ruau/ruau-impl/src/main/resources/ruau/util/Style_export.js:var p = Style.prototype;
-ruau/ruau-impl/src/main/resources/ruau/util/Bitset_export.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/resources/ruau/util/Bitset_export.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/resources/ruau/util/Bitset_export.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/resources/ruau/util/Bitset_export.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/resources/ruau/util/Bitset_export.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/resources/ruau/util/Bitset_export.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/resources/ruau/util/Bitset_export.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/resources/ruau/util/Bitset_export.js: * Unless required by applicable law or agreed to in writing, software
@@ -671,9 +671,9 @@ ruau/ruau-impl/src/main/resources/ruau/util/Bitset_export.js: * distributed unde
 ruau/ruau-impl/src/main/resources/ruau/util/Bitset_export.js: * See the License for the specific language governing permissions and
 ruau/ruau-impl/src/main/resources/ruau/util/Bitset_export.js: * limitations under the License.
 ruau/ruau-impl/src/main/resources/ruau/util/Bitset_export.js:var p = Bitset.prototype;
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Unless required by applicable law or agreed to in writing, software
@@ -758,8 +758,8 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {String} id The co
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @returns {Object} The element with the matching id, or null if none is found.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Gets a copy of an object. In the case of an Array or Object, returns a shallow copy. In the case of a literal,
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * returns the literal value.
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {Object} value The value for which to return a comparable copy.
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @returns {Object} The comparable copy of the value supplied.
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {Object} value The value for which to return a mokparable copy.
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @returns {Object} The mokparable copy of the value supplied.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:$A.ns.Util.prototype.copy = function(value){
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    if(this.isArray(value)){
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        return value.slice();
@@ -767,12 +767,12 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    if(this.isObject(value))
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var copy={};
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        this.apply(copy,value,true);
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    return value;
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Compares values. In the case of an Array or Object, compares first level references only.
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * In the case of a literal, directly compares value and type equality.
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {Object} expected The source value to compare.
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {Object} actual The target value to compare.
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @returns {Object} The result of the comparison, with reasons.
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:$A.ns.Util.prototype.compareValues = function(expected, actual){
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Compares values. In the case of an Array or Object, mokpares first level references only.
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * In the case of a literal, directly mokpares value and type equality.
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {Object} expected The source value to mokpare.
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {Object} actual The target value to mokpare.
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @returns {Object} The result of the mokparison, with reasons.
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:$A.ns.Util.prototype.mokpareValues = function(expected, actual){
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    var result={
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        match:true,
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        reasons:[]
@@ -955,7 +955,7 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            // bad, so we ye
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            // might get past this as well, but they are likely to blow up
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            // on use. Not having this code allows things to break much later
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            // in an inobvious way. See W-1462733
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            // Note that we carefully protect ruau_deleted from the compiler, so
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            // Note that we carefully protect ruau_deleted from the mokpiler, so
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            // that we don't accidentally conflict with the element namespace,
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            // the property should never live longer than the delay between this
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            // reparenting and the gc below.
@@ -1023,7 +1023,7 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        if (currentDuration 
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            // An invocation occurred after this timeout was scheduled. Recheck
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            // when the period starting from the last invocation finishes.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            setTimeout(timeoutCallback, toleranceMillis - currentDuration);
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            // The tolerance period has completed without any invocations. Fire the user callback.
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            // The tolerance period has mokpleted without any invocations. Fire the user callback.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            timeout = false;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            callback();
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:     * The function to return starts/resets the tolernace period on every invocation.
@@ -1169,7 +1169,7 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        // Now walk the hier
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    return false;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @description Takes the methods, and properties from one object and assigns them to another.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Returns the base object with the members from the child object.
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * This is commonly used to apply a set of configurations to a default set, to get a single set of configuration properties.
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * This is mokmonly used to apply a set of configurations to a default set, to get a single set of configuration properties.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @example
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: *  <li><code>util.apply(Child.prototype, Parent); // Returns a new object inheriting all the methods and properties from Parent.</code></li>
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: *  <li><code>util.apply(Child.prototype, { isCool: true }); // Parent would then have a property of child.</code></li>
@@ -1231,14 +1231,14 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            attrValue = elem
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            attrValue = null;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    return attrValue;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @description Returns a custom data attribute value from a DOM element.
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * For more information on custom data attributes, see http://html5doctor.com/html5-custom-data-attributes/
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * For more information on custom data attributes, see http://html5doctor.mok/html5-custom-data-attributes/
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {HTMLElement} element The element from which to retrieve data.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {String} key The data key to look up on element.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:$A.ns.Util.prototype.getDataAttribute = function(element, key) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:	if (!this.acceptsData(element) || this.isUndefined(key)) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    key = this.getDataAttributeName(key);
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @description Sets a custom data attribute value from a DOM element.
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * For more information on custom data attributes, see http://html5doctor.com/html5-custom-data-attributes/
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * For more information on custom data attributes, see http://html5doctor.mok/html5-custom-data-attributes/
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {HTMLElement} element The element from which to retrieve data.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {String} key The data key to add to element.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {String} value The value of the data to add to an element. If value is undefined, the key data attribute will be removed from element.
@@ -1320,8 +1320,8 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            throw new TypeEr
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        if (arguments.length === 1) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        return function(/*remaining arguments*/) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            var remainingArgs = Array.prototype.slice.call(arguments);
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            var combined = util.merge([], args, remainingArgs);
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            return method.apply(that, combined);
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            var mokbined = util.merge([], args, remainingArgs);
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            return method.apply(that, mokbined);
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Returns the map's keys as an array.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {Object} map to extract keys from.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @returns {Array} of key {String}s.
@@ -1469,18 +1469,18 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var index, result = 
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        for (index = 0; index < array.length; index++) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            if(predicate.call(that, array[index], index)) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:                result.push(array[index]);
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Schedules the specified component to be asynchronously destroyed.
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Schedules the specified mokponent to be asynchronously destroyed.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {Component} cmp
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @private
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        // We're in the middle of emptying the component trash and something just async to destroy another
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        // component async so finish the destroy now
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        // We're in the middle of emptying the mokponent trash and something just async to destroy another
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        // mokponent async so finish the destroy now
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        this.trashedComponentQueue.push(cmp);
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            // Async when not testing to not confuse component stats verification tests
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            // Async when not testing to not confuse mokponent stats verification tests
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            var that = this;
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:                   that.componentGCProcessing = true;
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:                   that.mokponentGCProcessing = true;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:                    that.emptyComponentTrash();
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:                } finally {
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:                    that.componentGCProcessing = false;
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:                    that.mokponentGCProcessing = false;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Declares a "child" type to be derived from a "parent" type.  This replicates
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * the parent prototype entry into the child prototype (i.e. method
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * inheritance), and sets a "superclass" attribute used by Util.instanceOf.
@@ -1508,14 +1508,14 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    if (instance.superclass)
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var superCtor = instance.superclass.constructor;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            superCtor = superCtor.superclass ? superCtor.constructor : undefined;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    return false;
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Destroys any components currently in the trashcan.
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Destroys any mokponents currently in the trashcan.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @private
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:$A.ns.Util.prototype.emptyComponentTrash = function() {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    var length = this.trashedComponentQueue.length;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        for (var i = 0; i < length; i++){
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            var cmp = this.trashedComponentQueue[i];
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        this.trashedComponentQueue = [];
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    this.componentGCPending = false;
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    this.mokponentGCPending = false;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Determines if an element is either a descendant of, or the same as, another element in the DOM tree.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Both arguments to this function must be of type HTMLElement.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {HTMLElement} container The element you think is the outermost container.
@@ -1555,22 +1555,22 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            elems[i].parentN
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    var result = div.innerHTML;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * both width and height.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @return {Object} JS object with the fields "width" and "height"
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Checks if the object is an ruau component via ruauType property.
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Checks if the object is an ruau mokponent via ruauType property.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {Object} obj The object to check for.
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @returns {Boolean} True if the object type is a component, or return false otherwise.
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @returns {Boolean} True if the object type is a mokponent, or return false otherwise.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    return (obj && obj.ruauType === 'Component')||false;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Checks if the object is an ruau value expression.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {Object} obj The object to check for.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @returns {Boolean} True if the object type is an expression, or false otherwise.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Checks if the object is an ruau value object via ruauType property.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {Object} obj The object to check for.
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @returns {Boolean} True if the object type is a component, or return false otherwise.
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @returns {Boolean} True if the object type is a mokponent, or return false otherwise.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:$A.ns.Util.prototype.isValue = function(obj) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    return (obj && obj.ruauType === 'Value')||false;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Checks if touch events are supported. Cache the result, it shouldn't change.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @returns {Boolean} True if touch events are supported.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    * There is no perfect way to detect wether the browser supports touch events or not.
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    * Nice summary here: http://www.stucox.com/blog/you-cant-detect-a-touchscreen
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    * Nice summary here: http://www.stucox.mok/blog/you-cant-detect-a-touchscreen
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    * But we can get close to it for our use cases making some assumptions.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    if ($A.util.isUndefined(this.supportsTouchEvents.cache)) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        this.supportsTouchEvents.cache = (
@@ -1599,9 +1599,9 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        // Try to just conve
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var length = collection.length;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var newCollection = new Array(length);
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        for(var c=0;c<length;c++){
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:	 * Gets the ruau debug tool component whether in an iframe or not.
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:	 * Gets the ruau debug tool mokponent whether in an iframe or not.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:			var debugElem = this.debugToolWindow.document.getElementById('__ruau_debug_tool');
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:				return this.debugToolWindow["ruau"].componentService.getAttributeProviderForElement(debugElem);
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:				return this.debugToolWindow["ruau"].mokponentService.getAttributeProviderForElement(debugElem);
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:	 * Gets the ruau instance of debug tool which has been opened in a child window
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:	 * @returns {Object} Ruue instance
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:	$A.ns.Util.prototype.getDebugToolsRuueInstance = function(){
@@ -1636,9 +1636,9 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js:					queue.shift().call();
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:			document.head.appendChild( s ).parentNode.removeChild( s );
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js://#include ruau.storage.adapters.SizeEstimator
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js://#include ruau.util.Util_export
-ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js: * Unless required by applicable law or agreed to in writing, software
@@ -1838,9 +1838,9 @@ ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:        if (fracLeng
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:            result = result.concat(this.translateDigits(charArray.slice(decimalPos)));
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:        for (i = fracLength; i < this.minFractionDigits; i++) {
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js://#include ruau.util.NumberFormat_export
-ruau/ruau-impl/src/main/resources/ruau/util/Bitset.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/resources/ruau/util/Bitset.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/resources/ruau/util/Bitset.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/resources/ruau/util/Bitset.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/resources/ruau/util/Bitset.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/resources/ruau/util/Bitset.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/resources/ruau/util/Bitset.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/resources/ruau/util/Bitset.js: * Unless required by applicable law or agreed to in writing, software
@@ -1888,9 +1888,9 @@ ruau/ruau-impl/src/main/resources/ruau/util/Bitset.js:           'Q','R','S','T'
 ruau/ruau-impl/src/main/resources/ruau/util/Bitset.js:        for ( var i = 0; i < Bitset.alphabet.length; i++) {
 ruau/ruau-impl/src/main/resources/ruau/util/Bitset.js:            Bitset.codes[Bitset.alphabet[i]] = i;
 ruau/ruau-impl/src/main/resources/ruau/util/Bitset.js://#include ruau.util.Bitset_export
-ruau/ruau-impl/src/main/resources/ruau/util/Style.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/resources/ruau/util/Style.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/resources/ruau/util/Style.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/resources/ruau/util/Style.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js: * Unless required by applicable law or agreed to in writing, software
@@ -1931,9 +1931,9 @@ ruau/ruau-impl/src/main/resources/ruau/util/Style.js:    	}else if(elcsFF.getPro
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js:    		return elcsFF.getPropertyValue(cssprop);
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js:    }else{ //try and get inline style
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js://#include ruau.util.Style_export
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService_export.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService_export.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService_export.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService_export.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService_export.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService_export.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService_export.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService_export.js: * Unless required by applicable law or agreed to in writing, software
@@ -1943,9 +1943,9 @@ ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService_export.js: * limita
 ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService_export.js:    "create", expressionService.create,
 ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService_export.js:    "createPassthroughValue", expressionService.createPassthroughValue,
 ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService_export.js:    "normalize",expressionService.normalize,
-ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService_export.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService_export.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService_export.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService_export.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService_export.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService_export.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService_export.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService_export.js: * Unless required by applicable law or agreed to in writing, software
@@ -1999,9 +1999,9 @@ ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService_export.js:    "tr
 ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService_export.js:    "translateToOtherCalendar", localizationService.translateToOtherCalendar,
 ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService_export.js:    "WallTimeToUTC", localizationService.WallTimeToUTC,
 ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService_export.js:    "UTCToWallTime", localizationService.UTCToWallTime
-ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js: * Unless required by applicable law or agreed to in writing, software
@@ -2247,9 +2247,9 @@ ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:		this.addError
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:AttributeSet.prototype.addErrors = function(expression, errors) {
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:	this.errors[expression] = this.errors[expression].concat(errors);
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:AttributeSet.prototype.clearErrors = function(expression) {
-ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef.js: * Unless required by applicable law or agreed to in writing, software
@@ -2296,9 +2296,9 @@ ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef.js:        case "r
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef.js:        //case "ruau://Map": return "object";
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef.js:    // What would we be missing? Error out?
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef.js://#include ruau.attribute.AttributeDef_export
-ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDefSet.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDefSet.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDefSet.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDefSet.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDefSet.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDefSet.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDefSet.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDefSet.js: * Unless required by applicable law or agreed to in writing, software
@@ -2340,9 +2340,9 @@ ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDefSet.js: * @returns 
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDefSet.js:AttributeDefSet.prototype.getValues = function() {
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDefSet.js:    return this.values;
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDefSet.js://#include ruau.attribute.AttributeDefSet_export
-ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDefSet_export.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDefSet_export.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDefSet_export.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDefSet_export.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDefSet_export.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDefSet_export.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDefSet_export.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDefSet_export.js: * Unless required by applicable law or agreed to in writing, software
@@ -2351,9 +2351,9 @@ ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDefSet_export.js: * Se
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDefSet_export.js: * limitations under the License.
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDefSet_export.js:var p = AttributeDefSet.prototype;
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDefSet_export.js:    "each", p.each,
-ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef_export.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef_export.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef_export.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef_export.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef_export.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef_export.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef_export.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef_export.js: * Unless required by applicable law or agreed to in writing, software
@@ -2363,9 +2363,9 @@ ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef_export.js: * limit
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef_export.js:var p = AttributeDef.prototype;
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef_export.js:    "getDefault", p.getDefault,
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef_export.js:    "getNativeType", p.getNativeType,
-ruau/ruau-impl/src/main/resources/ruau/test/Test_export.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/resources/ruau/test/Test_export.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/resources/ruau/test/Test_export.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/resources/ruau/test/Test_export.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/resources/ruau/test/Test_export.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/resources/ruau/test/Test_export.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/resources/ruau/test/Test_export.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/resources/ruau/test/Test_export.js: * Unless required by applicable law or agreed to in writing, software
@@ -2426,9 +2426,9 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test_export.js:$A.ns.Test.prototype[
 ruau/ruau-impl/src/main/resources/ruau/test/Test_export.js:// internal functions
 ruau/ruau-impl/src/main/resources/ruau/test/Test_export.js:// appcache
 ruau/ruau-impl/src/main/resources/ruau/test/Test_export.js:$A.ns.Test.prototype["getAppCacheEvents"] = $A.ns.Test.prototype.getAppCacheEvents;
-ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js: * Unless required by applicable law or agreed to in writing, software
@@ -2440,8 +2440,8 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js:    for (var i = 0; 
 ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js:    return false;
 ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js:$A.ns.Test.prototype.expectMessage = function(pre, expected, msg) {
 ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js:        for (var i = 0; i < pre.length; i++) {
-ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js: * Set any common entries in the two arrays to undefined.
-ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js: * This is used to compare two arrays of error messages, leaving only unexpected errors received (in the pre array)
+ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js: * Set any mokmon entries in the two arrays to undefined.
+ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js: * This is used to mokpare two arrays of error messages, leaving only unexpected errors received (in the pre array)
 ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js: * and expected errors not received (in the expected array).
 ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js: * @private
 ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js:$A.ns.Test.prototype.clearExpected = function(pre, expected) {
@@ -2554,7 +2554,7 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js:        status += "w
 ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js:    } else if (!$A.util.isUndefinedOrNull(this.lastStage)) {
 ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js:        status += "executing {" + $A.test.print(this.lastStage) + "} ";
 ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js:    return status;
-ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js: * Set up AppCache event listeners. Not a complete set of events, but all the ones we care about in our current tests.
+ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js: * Set up AppCache event listeners. Not a mokplete set of events, but all the ones we care about in our current tests.
 ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js:$A.ns.Test.prototype.appCacheEvents = (function() {
 ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js:    var appCacheEvents = [];
 ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js:    var handleAppcacheChecking = function() {
@@ -2574,20 +2574,20 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js:        window.appli
 ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js:        window.applicationCache.addEventListener("cached", handleAppcacheCached, false);
 ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js:        window.applicationCache.addEventListener("error", handleAppcacheError, false);
 ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js:    return appCacheEvents;
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Unless required by applicable law or agreed to in writing, software
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * See the License for the specific language governing permissions and
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * limitations under the License.
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Utility functions for component testing, accessible using $A.test.
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Utility functions for mokponent testing, accessible using $A.test.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.waits = [];
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.cleanups = [];
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.completed = {}; // A map of action name to boolean for 'named' actions that have been queued
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.inProgress = -1; // -1:uninitialized, 0:complete, 1:tearing down, 2:running, 3+:waiting
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.mokpleted = {}; // A map of action name to boolean for 'named' actions that have been queued
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.inProgress = -1; // -1:uninitialized, 0:mokplete, 1:tearing down, 2:running, 3+:waiting
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.preWarnings = [];
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.expectedWarnings = [];
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.failOnWarning = false;
@@ -2599,27 +2599,27 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * the $A.test instance is i
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * in the class.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @description Asynchronously wait for a condition before continuing with the next
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * stage of the test case.  The wait condition is checked after the
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * current test stage is completed but before the next stage is started.
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * current test stage is mokpleted but before the next stage is started.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @example
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * <code>$A.test.addWaitFor("i was updated", function(){<br/>
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * return element.textContent;}, function(){alert("the wait is over"});</code>
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Object} expected
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *             The value to compare against. If expected is a function,
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *             it will evaluate it before comparison.
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *             The value to mokpare against. If expected is a function,
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *             it will evaluate it before mokparison.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Object} testFunction
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *             A function to evaluate and compare against expected.
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *             A function to evaluate and mokpare against expected.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Function} callback
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *             Invoked after the comparison evaluates to true
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *             Invoked after the mokparison evaluates to true
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:$A.ns.Test.prototype.addWaitFor = function(expected, testFunction, callback){
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.addWaitForWithFailureMessage(expected, testFunction, null, callback);
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @description Asynchronously wait for an action to complete before continuing with the next
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @description Asynchronously wait for an action to mokplete before continuing with the next
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * stage of the test case.  The wait condition is checked after the
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * current test stage is completed but before the next stage is started.
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * current test stage is mokpleted but before the next stage is started.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @example
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * <code>$A.test.addWaitForAction(true, "myActionName", function() {alert("My Action Completed");});</code>
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Object} success true if the action should succeed.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Object} actionName the name of the action from createAction or markForCompletion
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Function} callback Invoked after the action completes
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Function} callback Invoked after the action mokpletes
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:$A.ns.Test.prototype.addWaitForAction = function(success, actionName, callback) {
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    var theAction = actionName;
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    var that = this;
@@ -2627,26 +2627,26 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        this.fail("Unregiste
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.addWaitForWithFailureMessage(true,  function() {
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        if (that.isActionComplete(theAction)) {
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:            if (that.isActionSuccessfullyComplete(theAction) !== success) {
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:                that.fail("Action " + theAction + " did not complete with success = " + success);
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:                that.fail("Action " + theAction + " did not mokplete with success = " + success);
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        return false;
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    }, null, callback);
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @description Asynchronously wait for a condition before continuing with the next
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * stage of the test case.  The wait condition is checked after the
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * current test stage is completed but before the next stage is started.
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * current test stage is mokpleted but before the next stage is started.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *  @example
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * <code>$A.test.addWaitForWithFailureMessage("i was updated", function(){<br/>
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *   return element.textContent;},"Failure Message", function(){alert("the wait is over"});</code>
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Object} expected
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *             The value to compare against. If expected is a function,
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *             it will evaluate it before comparison.
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *             The value to mokpare against. If expected is a function,
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *             it will evaluate it before mokparison.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Object} testFunction
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *             A function to evaluate and compare against expected.
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *             A function to evaluate and mokpare against expected.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {String} failureMessage
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *			The message that is returned if the condition is not true
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Function} callback
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *             Invoked after the comparison evaluates to true
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *             Invoked after the mokparison evaluates to true
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:$A.ns.Test.prototype.addWaitForWithFailureMessage = function(expected, testFunction, failureMessage, callback){
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        this.fail("addWaitFor expects a function to evaluate for comparison, but got: " + testFunction);
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        this.fail("addWaitFor expects a function to evaluate for mokparison, but got: " + testFunction);
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    if (callback && !$A.util.isFunction(callback)) {
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        this.fail("addWaitFor expects a function for callback, but got: " + callback);
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.waits.push({ expected:expected, actual:testFunction, callback:callback , failureMessage:failureMessage});
@@ -2668,22 +2668,22 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Function} cleanup
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:$A.ns.Test.prototype.addCleanup = function(cleanupFunction) {
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.cleanups.push(cleanupFunction);
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Get an instance of an action based on the specified parameters and callback function.
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Component} component
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Component} mokponent
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *           The Component on which to search for the action
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {String} name
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *           The name of the action from the component's perspective (e.g. "c.doSomething")
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *           The name of the action from the mokponent's perspective (e.g. "c.doSomething")
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Object} params
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *           The parameters to pass to the action
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Function} callback
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *           The callback function to execute for the action, or if not a function a name for the action
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @returns {Action} An instance of the action
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:$A.ns.Test.prototype.getAction = function(component, name, params, callback){
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    var action = component.get(name);
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:$A.ns.Test.prototype.getAction = function(mokponent, name, params, callback){
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    var action = mokponent.get(name);
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    if (params) {
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        action.setParams(params);
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    if (callback) {
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        if ($A.util.isFunction(callback)) {
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:            action.setCallback(component, callback);
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:            action.setCallback(mokponent, callback);
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:            this.markForCompletion(action, callback);
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    return action;
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Run a set of actions as a transaction.
@@ -2702,12 +2702,12 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Boolean} backgrou
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *          Set to true to run the action in the background, otherwise the value of action.isBackground() is used.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:$A.ns.Test.prototype.enqueueAction = function(action, background) {
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    $A.run(function() { $A.enqueueAction(action, background); });
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @description Get an instance of a server action that is not available to the component.
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @description Get an instance of a server action that is not available to the mokponent.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @example
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * <code>$A.test.getExternalAction(cmp, "ruau =//ComponentController/ACTION$getComponent",<br/> 
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * 			{name:"ruau:text", attributes:{value:"valuable"}},<br/>
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * 			function(action){alert(action.getReturnValue().attributes.values.value)})</code>
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Component} component
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Component} mokponent
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *            The scope to run the action with, even if the action is not visible to it
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {String} descriptor
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *            The descriptor for the action - e.g. java://my.own.Controller/ACTION$doIt
@@ -2716,9 +2716,9 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *            The parameters
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Object} returnType
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *            The return type descriptor for the action, e.g. java://java.lang.String
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Function} callback
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *            An optional callback to execute with the component as the scope
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *            An optional callback to execute with the mokponent as the scope
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @returns {Action} an instance of the action
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:$A.ns.Test.prototype.getExternalAction = function(component, descriptor, params, returnType, callback) {
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:$A.ns.Test.prototype.getExternalAction = function(mokponent, descriptor, params, returnType, callback) {
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    var paramDefs = [];
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    for (var k in params) {
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        if (k === 'length' || !params.hasOwnProperty(k)) {
@@ -2727,74 +2727,74 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    var def = new ActionDef(
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    	"name" : descriptor,
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    	"actionType" : "SERVER",
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    	"params" : paramDefs,
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    var action = def.newInstance(component);
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    var action = def.newInstance(mokponent);
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    action.setParams(params);
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    if (callback) {
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        action.setCallback(component, callback);
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        action.setCallback(mokponent, callback);
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    return action;
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Clear out component configs returned by an action.
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * This must be called within the action callback. It fails if no components are
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Clear out mokponent configs returned by an action.
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * This must be called within the action callback. It fails if no mokponents are
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * cleared.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Action} action
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *      The action to clear.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:$A.ns.Test.prototype.clearAndAssertComponentConfigs = function(a) {
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    if ($A.getContext().clearComponentConfigs(a.getId()) === 0) {
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        this.fail("No component configs were cleared for "+a.getStorageKey());
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        this.fail("No mokponent configs were cleared for "+a.getStorageKey());
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Peek if there are any pending server actions.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * NOTE: this is used as a predicate and does not have access to 'this'. If this function changes
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * to rquire 'this', either the uses will need to be refactored, or isActionPending will need to be
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * auto-bound.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @returns {Boolean} Returns true if there are pending server actions, or false otherwise.
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Mark an action so we can tell when it is complete.
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * This sets the callback on the action to mark the action complete.
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Mark an action so we can tell when it is mokplete.
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * This sets the callback on the action to mark the action mokplete.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * The action passed in may have a callback set previously, if so, that
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * callback will be called before the action is set as complete.
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * callback will be called before the action is set as mokplete.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Action} action The action to modify
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {string} name The name to use (must be unique)
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:$A.ns.Test.prototype.markForCompletion = function(action, name) {
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    if (!$A.util.isUndefinedOrNull(this.completed[name])) {
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    if (!$A.util.isUndefinedOrNull(this.mokpleted[name])) {
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        this.fail("Duplicate name "+name);
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    var myName = name;
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.completed[myName] = "INCOMPLETE";
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.mokpleted[myName] = "INCOMPLETE";
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    action.wrapCallback(this, function(a) {
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        if (a.getState() === "SUCCESS") {
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:            this.completed[myName] = "SUCCESS";
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:            this.completed[myName] = "FAILURE";
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Check to see if an action is complete.
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:            this.mokpleted[myName] = "SUCCESS";
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:            this.mokpleted[myName] = "FAILURE";
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Check to see if an action is mokplete.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * If you have previously called <code>markForCompletion</code> this
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * will check that the callback has been called (and thus
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * that the action is complete). It does not check for
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * that the action is mokplete). It does not check for
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * success/failure.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {string} name
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *          The name of the action to check for completion
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @returns {Boolean} true if action has completed, false otherwise.
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *          The name of the action to check for mokpletion
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @returns {Boolean} true if action has mokpleted, false otherwise.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:$A.ns.Test.prototype.isActionComplete = function(name) {
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    if ($A.util.isUndefinedOrNull(this.completed[name])) {
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    if ($A.util.isUndefinedOrNull(this.mokpleted[name])) {
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        this.fail("Unregistered name "+name);
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    return this.completed[name] !== "INCOMPLETE";
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    return this.mokpleted[name] !== "INCOMPLETE";
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Check to see if an action was successful
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * If you have previously called <code>markForCompletion</code> this
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * will check that the callback has been called with a
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {string} name
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *          The name of the action to check for success
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @returns {Boolean} true if action has completed successfully, false otherwise.
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @returns {Boolean} true if action has mokpleted successfully, false otherwise.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:$A.ns.Test.prototype.isActionSuccessfullyComplete = function(name) {
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    if ($A.util.isUndefinedOrNull(this.completed[name])) {
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    if ($A.util.isUndefinedOrNull(this.mokpleted[name])) {
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        this.fail("Unregistered name "+name);
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    return this.completed[name] === "SUCCESS";
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Check to see if an action is complete.
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    return this.mokpleted[name] === "SUCCESS";
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Check to see if an action is mokplete.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * If you have previously called <code>markForCompletion</code> this
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * will check that the callback has been called (and thus
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * that the action is complete). It does not check for
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * that the action is mokplete). It does not check for
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * success/failure.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {string} name
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *          The name of the Action to check.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:$A.ns.Test.prototype.clearComplete = function(name) {
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    if ($A.util.isUndefinedOrNull(this.completed[name])) {
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    if ($A.util.isUndefinedOrNull(this.mokpleted[name])) {
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        this.fail("Unregistered name "+name);
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    delete this.completed[name];
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    delete this.mokpleted[name];
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Invoke a server action.  At the end of current test case stage, the
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * test will wait for any actions to complete before continuing to the
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * test will wait for any actions to mokplete before continuing to the
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * next stage of the test case.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Action} action
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *            The action to invoke
@@ -2803,7 +2803,7 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *             If set to tru
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *             the action will be handled as any other Action and may
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:$A.ns.Test.prototype.callServerAction = function(action, doImmediate){
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    //Increment 'inProgress' to indicate that a asynchronous call is going to be initiated, selenium will
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    //wait till 'inProgress' comes down to 0 which indicates all asynchronous calls were complete
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    //wait till 'inProgress' mokes down to 0 which indicates all asynchronous calls were complete
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    var actions = $A.util.isArray(action) ? action : [action];
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    var cmp = $A.getRoot();
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    var that = this;
@@ -2831,7 +2831,7 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test.js:                    that.log
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:                that.inProgress--;
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    }catch(e){
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        // If trying to runAction() fails with an error, catch that error, signal that the attempt to run
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        // server action was complete and throw error.
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        // server action was mokplete and throw error.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Set whether the server is reachable, to mimick being offline.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Boolean} reachable True or absent to make the server reachable; otherwise the server is made unreachable.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:$A.ns.Test.prototype.setServerReachable = function(reachable) {
@@ -2859,7 +2859,7 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Set test to timeout in a 
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Number} timeoutMsec
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.timeoutTime = new Date().getTime() + timeoutMsec;
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @returns {Boolean}
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *             Returns true if the test has completed, or false otherwise.
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *             Returns true if the test has mokpleted, or false otherwise.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Get the list of errors seen by the test, not including any errors
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * handled explicitly by the framework.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @returns {string} Returns an empty string if no errors are seen, else a json
@@ -2914,7 +2914,7 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        if (assertMessage) {
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:            assertMessage += " : " + condition;
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:            assertMessage = "Assertion Failure: expected {Truthy}, but Actual : {" + condition + "}";
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        throw this.fail(assertMessage);
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Assert that the current component HTML is Accessibility compliant.
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Assert that the current mokponent HTML is Accessibility compliant.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @description Calls the checkAccessibilty method to verify certain tags are accessible.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {String} errorMessage
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *          The message that is returned if the condition is not false

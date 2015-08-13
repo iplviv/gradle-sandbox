@@ -5,9 +5,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/Descript
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DescriptionDefHandler.java:    public String getHandledTag() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DescriptionDefHandler.java:    protected DescriptionDefImpl createDefinition() throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DescriptionDefHandler.java:    public void writeElement(DescriptionDefImpl def, Appendable out) throws IOException {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -30,15 +30,15 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/Componen
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:import org.ruauframework.def.InterfaceDef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:import org.ruauframework.def.RootDefinition;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:import org.ruauframework.impl.root.AttributeDefRefImpl;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:import org.ruauframework.impl.root.component.ComponentDefRefImpl;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:import org.ruauframework.impl.root.mokponent.ComponentDefRefImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:import org.ruauframework.impl.system.DefDescriptorImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:import org.ruauframework.impl.util.TextTokenizer;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:import org.ruauframework.system.Source;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:import org.ruauframework.throwable.RuueRuntimeException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:import org.ruauframework.util.RuueTextUtil;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java: * Handles all references to other components. Note that while the reference to
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java: * the other component is created here, it is not validated until the
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java: * Handles all references to other mokponents. Note that while the reference to
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java: * the other mokponent is created here, it is not validated until the
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java: * {@link ComponentDefRefImpl#validateReferences()} method is called by loading
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:public class ComponentDefRefHandler<P extends RootDefinition> extends ParentedTagHandler<ComponentDefRef, P> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:    private List<ComponentDefRef> body;
@@ -82,7 +82,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/Componen
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:            String attName = xmlReader.getAttributeLocalName(i);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:            String prefix = xmlReader.getAttributePrefix(i);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:            if (!XMLHandler.isSystemPrefixed(attName, prefix)) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:                // W-2316503: remove compatibility code for both SJSXP and Woodstox
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:                // W-2316503: remove mokpatibility code for both SJSXP and Woodstox
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:                if (!RuueTextUtil.isNullEmptyOrWhitespace(prefix) && !attName.contains(":")) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:                    attName = prefix + ":" + attName;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:                DefDescriptor<AttributeDef> att = DefDescriptorImpl.getInstance(attName, AttributeDef.class);
@@ -116,9 +116,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/Componen
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:        // ones we know it doesn't handle. #W-690036
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:    public void writeElement(ComponentDefRef def, Appendable out) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:        // TODO Auto-generated method stub
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventDefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventDefHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventDefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventDefHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventDefHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventDefHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventDefHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventDefHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -137,7 +137,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventDef
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventDefHandler.java:import org.ruauframework.system.Source;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventDefHandler.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventDefHandler.java:import org.ruauframework.util.RuueTextUtil;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventDefHandler.java:import com.google.common.collect.ImmutableSet;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventDefHandler.java:import mok.google.common.collect.ImmutableSet;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventDefHandler.java:public class EventDefHandler extends RootTagHandler<EventDef> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventDefHandler.java:    public static final String TAG = "ruau:event";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventDefHandler.java:    private static final String ATTRIBUTE_TYPE = "type";
@@ -178,9 +178,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventDef
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventDefHandler.java:    public void writeElement(EventDef def, Appendable out) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventDefHandler.java:        // TODO Auto-generated method stub
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventDefHandler.java:	protected boolean allowPrivateAttribute() {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -204,8 +204,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/Attribut
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefHandler.java:import org.ruauframework.throwable.quickfix.InvalidAccessValueException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefHandler.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefHandler.java:import org.ruauframework.util.RuueTextUtil;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefHandler.java:import com.google.common.base.Optional;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefHandler.java:import com.google.common.collect.ImmutableSet;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefHandler.java:import mok.google.common.base.Optional;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefHandler.java:import mok.google.common.collect.ImmutableSet;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefHandler.java:public class AttributeDefHandler<P extends RootDefinition> extends ParentedTagHandler<AttributeDefImpl, P> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefHandler.java:     * The tag that this Handler handles
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefHandler.java:    public static final String TAG = "ruau:attribute";
@@ -277,9 +277,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/Attribut
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefHandler.java:        body.addAll(tokenizeChildText());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefHandler.java:    public void writeElement(AttributeDefImpl def, Appendable out) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefHandler.java:	protected boolean allowPrivateAttribute() {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefRefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefRefHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefRefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefRefHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefRefHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefRefHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefRefHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefRefHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -301,7 +301,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/Attribut
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefRefHandler.java:import org.ruauframework.system.Source;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefRefHandler.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefRefHandler.java:import org.ruauframework.util.RuueTextUtil;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefRefHandler.java:import com.google.common.collect.ImmutableSet;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefRefHandler.java:import mok.google.common.collect.ImmutableSet;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefRefHandler.java: * <ruau:set> tags
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefRefHandler.java:public class AttributeDefRefHandler<P extends RootDefinition> extends ParentedTagHandler<AttributeDefRefImpl, P> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefRefHandler.java:    public static final String TAG = "ruau:set";
@@ -330,9 +330,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/Attribut
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefRefHandler.java:    protected void handleChildText() throws XMLStreamException, QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefRefHandler.java:        children.addAll(tokenizeChildText());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDefRefHandler.java:    public void writeElement(AttributeDefRefImpl def, Appendable out) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/InterfaceDefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/InterfaceDefHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/InterfaceDefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/InterfaceDefHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/InterfaceDefHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/InterfaceDefHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/InterfaceDefHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/InterfaceDefHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -354,7 +354,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/Interfac
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/InterfaceDefHandler.java:import org.ruauframework.system.Source;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/InterfaceDefHandler.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/InterfaceDefHandler.java:import org.ruauframework.util.RuueTextUtil;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/InterfaceDefHandler.java:import com.google.common.collect.ImmutableSet;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/InterfaceDefHandler.java:import mok.google.common.collect.ImmutableSet;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/InterfaceDefHandler.java:public class InterfaceDefHandler extends RootTagHandler<InterfaceDef> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/InterfaceDefHandler.java:    public static final String TAG = "ruau:interface";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/InterfaceDefHandler.java:    private static final String ATTRIBUTE_PROVIDER = "provider";
@@ -413,9 +413,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/Interfac
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/InterfaceDefHandler.java:    public void writeElement(InterfaceDef def, Appendable out) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/InterfaceDefHandler.java:        // TODO Auto-generated method stub
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/InterfaceDefHandler.java:    protected RootDefinitionBuilder<InterfaceDef> getBuilder() {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateDefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateDefHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateDefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateDefHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateDefHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateDefHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateDefHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateDefHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -435,7 +435,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTe
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateDefHandler.java:import org.ruauframework.system.Source;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateDefHandler.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateDefHandler.java:import org.ruauframework.util.RuueTextUtil;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateDefHandler.java:import com.google.common.collect.ImmutableSet;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateDefHandler.java:import mok.google.common.collect.ImmutableSet;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateDefHandler.java:public class DesignTemplateDefHandler extends ParentedTagHandler<DesignTemplateDef, DesignDef> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateDefHandler.java:    public static final String TAG = "design:template";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateDefHandler.java:    private final static String ATTRIBUTE_NAME = "name";
@@ -467,9 +467,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTe
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateDefHandler.java:    public String getHandledTag() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateDefHandler.java:    protected DesignTemplateDef createDefinition() throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateDefHandler.java:    public void writeElement(DesignTemplateDef def, Appendable out) throws IOException {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExpressionContainerHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExpressionContainerHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExpressionContainerHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExpressionContainerHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExpressionContainerHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExpressionContainerHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExpressionContainerHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExpressionContainerHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -481,9 +481,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/Expressi
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExpressionContainerHandler.java:import org.ruauframework.expression.PropertyReference;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExpressionContainerHandler.java:public interface ExpressionContainerHandler {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExpressionContainerHandler.java:    public void addExpressionReferences(Set<PropertyReference> propRefs);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LazyComponentDefRefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LazyComponentDefRefHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LazyComponentDefRefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LazyComponentDefRefHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LazyComponentDefRefHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LazyComponentDefRefHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LazyComponentDefRefHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LazyComponentDefRefHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -496,9 +496,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LazyComp
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LazyComponentDefRefHandler.java:import org.ruauframework.def.ComponentDef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LazyComponentDefRefHandler.java:import org.ruauframework.def.ComponentDefRef.Load;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LazyComponentDefRefHandler.java:import org.ruauframework.def.RootDefinition;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LazyComponentDefRefHandler.java:import org.ruauframework.impl.root.component.LazyComponentDefRef;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LazyComponentDefRefHandler.java:import org.ruauframework.impl.root.mokponent.LazyComponentDefRef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LazyComponentDefRefHandler.java:import org.ruauframework.system.Source;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LazyComponentDefRefHandler.java: * Handles lazy component references
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LazyComponentDefRefHandler.java: * Handles lazy mokponent references
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LazyComponentDefRefHandler.java:public class LazyComponentDefRefHandler<P extends RootDefinition> extends ComponentDefRefHandler<P> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LazyComponentDefRefHandler.java:    protected LazyComponentDefRef.Builder lazyBuilder = new LazyComponentDefRef.Builder();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LazyComponentDefRefHandler.java:    protected LazyComponentDefRefHandler(RootTagHandler<P> parentHandler, String tag, XMLStreamReader xmlReader,
@@ -511,9 +511,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LazyComp
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LazyComponentDefRefHandler.java:            Load load = Load.valueOf(loadString.toUpperCase());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LazyComponentDefRefHandler.java:            if (load == Load.EXCLUSIVE) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LazyComponentDefRefHandler.java:                lazyBuilder.setComponentAttribute("exclusive", true);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ParentedTagHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ParentedTagHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ParentedTagHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ParentedTagHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ParentedTagHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ParentedTagHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ParentedTagHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ParentedTagHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -583,9 +583,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/Parented
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ParentedTagHandler.java:        String text = xmlReader.getText();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ParentedTagHandler.java:        if (!RuueTextUtil.isNullEmptyOrWhitespace(text)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ParentedTagHandler.java:            ret = RuueTextUtil.replaceSimple(text,  new String[]{"<", ">"}, new String[]{"&lt;", "&gt;"});
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/HTMLComponentDefRefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/HTMLComponentDefRefHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/HTMLComponentDefRefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/HTMLComponentDefRefHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/HTMLComponentDefRefHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/HTMLComponentDefRefHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/HTMLComponentDefRefHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/HTMLComponentDefRefHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -600,10 +600,10 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/HTMLComp
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/HTMLComponentDefRefHandler.java:import org.ruauframework.def.HtmlTag;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/HTMLComponentDefRefHandler.java:import org.ruauframework.def.RootDefinition;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/HTMLComponentDefRefHandler.java:import org.ruauframework.impl.root.AttributeDefRefImpl;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/HTMLComponentDefRefHandler.java:import org.ruauframework.impl.root.component.HTMLDefRefBuilderImpl;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/HTMLComponentDefRefHandler.java:import org.ruauframework.impl.root.mokponent.HTMLDefRefBuilderImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/HTMLComponentDefRefHandler.java:import org.ruauframework.system.Source;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/HTMLComponentDefRefHandler.java:import com.google.common.collect.ImmutableSet;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/HTMLComponentDefRefHandler.java: * Handles free HTML in component markup.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/HTMLComponentDefRefHandler.java:import mok.google.common.collect.ImmutableSet;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/HTMLComponentDefRefHandler.java: * Handles free HTML in mokponent markup.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/HTMLComponentDefRefHandler.java:public class HTMLComponentDefRefHandler<P extends RootDefinition> extends ComponentDefRefHandler<P> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/HTMLComponentDefRefHandler.java:    protected HTMLComponentDefRefHandler(RootTagHandler<P> parentHandler, String tag, XMLStreamReader xmlReader,
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/HTMLComponentDefRefHandler.java:        super(parentHandler, xmlReader, source);
@@ -614,10 +614,10 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/HTMLComp
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/HTMLComponentDefRefHandler.java:    protected boolean handlesTag(String tag) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/HTMLComponentDefRefHandler.java:        return HtmlTag.allowed(tag);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/HTMLComponentDefRefHandler.java:    public static final Set<String> SPECIAL_BOOLEANS = ImmutableSet.of("checked", "selected", "disabled", "readonly",
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/HTMLComponentDefRefHandler.java:            "multiple", "ismap", "defer", "declare", "noresize", "nowrap", "noshade", "compact", "autocomplete",
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutDefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/HTMLComponentDefRefHandler.java:            "multiple", "ismap", "defer", "declare", "noresize", "nowrap", "noshade", "mokpact", "autocomplete",
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutDefHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutDefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutDefHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutDefHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutDefHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutDefHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutDefHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -638,7 +638,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutDe
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutDefHandler.java:import org.ruauframework.impl.util.TextTokenizer;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutDefHandler.java:import org.ruauframework.system.Source;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutDefHandler.java:import org.ruauframework.throwable.quickfix.QuickFixException;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutDefHandler.java:import com.google.common.collect.ImmutableSet;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutDefHandler.java:import mok.google.common.collect.ImmutableSet;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutDefHandler.java:public class LayoutDefHandler<P extends RootDefinition> extends ParentedTagHandler<LayoutDef, P> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutDefHandler.java:    public static final String TAG = "ruau:layout";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutDefHandler.java:    private static final String ATTRIBUTE_TITLE = "title";
@@ -671,9 +671,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutDe
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutDefHandler.java:            error("Found unexpected tag %s", tag);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutDefHandler.java:    protected void handleChildText() throws XMLStreamException, QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutDefHandler.java:    public void writeElement(LayoutDef def, Appendable out) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -710,7 +710,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComp
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:import org.ruauframework.expression.PropertyReference;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:import org.ruauframework.impl.root.AttributeDefImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:import org.ruauframework.impl.root.AttributeDefRefImpl;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:import org.ruauframework.impl.root.component.BaseComponentDefImpl.Builder;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:import org.ruauframework.impl.root.mokponent.BaseComponentDefImpl.Builder;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:import org.ruauframework.impl.root.event.RegisterEventDefImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:import org.ruauframework.impl.system.DefDescriptorImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:import org.ruauframework.impl.system.SubDefDescriptorImpl;
@@ -722,8 +722,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComp
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:import org.ruauframework.system.SubDefDescriptor;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:import org.ruauframework.util.RuueTextUtil;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:import com.google.common.collect.ImmutableSet;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:import com.google.common.collect.Maps;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:import mok.google.common.collect.ImmutableSet;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:import mok.google.common.collect.Maps;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:public abstract class BaseComponentDefHandler<T extends BaseComponentDef> extends RootTagHandler<T> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:    private static final String ATTRIBUTE_RENDER = "render";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:    private static final String ATTRIBUTE_TEMPLATE = "template";
@@ -748,8 +748,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComp
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:    private int innerCount = 0;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:    private final List<ComponentDefRef> body = Lists.newArrayList();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:    public BaseComponentDefHandler() {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:    public BaseComponentDefHandler(DefDescriptor<T> componentDefDescriptor, Source<?> source, XMLStreamReader xmlReader) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:        super(componentDefDescriptor, source, xmlReader);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:    public BaseComponentDefHandler(DefDescriptor<T> mokponentDefDescriptor, Source<?> source, XMLStreamReader xmlReader) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:        super(mokponentDefDescriptor, source, xmlReader);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:        builder = createBuilder();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:        builder.setLocation(getLocation());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:            builder.setOwnHash(source.getHash());
@@ -889,7 +889,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComp
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:                    builder.interfaces.add(DefDescriptorImpl.getInstance(
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:                            implementsName.trim(), InterfaceDef.class));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:            builder.isAbstract = getBooleanAttributeValue(ATTRIBUTE_ABSTRACT);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:            // if a component is abstract, it should be extensible by default
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:            // if a mokponent is abstract, it should be extensible by default
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:            if (builder.isAbstract
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:                    && getAttributeValue(ATTRIBUTE_EXTENSIBLE) == null) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:                builder.isExtensible = getBooleanAttributeValue(ATTRIBUTE_EXTENSIBLE);
@@ -949,9 +949,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComp
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:            builder.facets.add(adr);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:    public void addExpressionReferences(Set<PropertyReference> propRefs) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:        builder.expressionRefs.addAll(propRefs);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/SVGDefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/SVGDefHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/SVGDefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/SVGDefHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/SVGDefHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/SVGDefHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/SVGDefHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/SVGDefHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -983,9 +983,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/SVGDefHa
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/SVGDefHandler.java:        } catch (IOException e) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/SVGDefHandler.java:            throw new SVGParserException(e.getMessage(), null);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/SVGDefHandler.java:    public SVGDef createDefinition() throws QuickFixException {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefRefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefRefHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefRefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefRefHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefRefHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefRefHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefRefHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefRefHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -1006,7 +1006,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDef
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefRefHandler.java:import org.ruauframework.system.Source;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefRefHandler.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefRefHandler.java:import org.ruauframework.util.RuueTextUtil;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefRefHandler.java:import com.google.common.collect.ImmutableSet;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefRefHandler.java:import mok.google.common.collect.ImmutableSet;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefRefHandler.java:public class ThemeDefRefHandler<P extends RootDefinition> extends ParentedTagHandler<ThemeDefRef, P> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefRefHandler.java:    protected static final String TAG = "ruau:importTheme";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefRefHandler.java:    private static final String ATTRIBUTE_NAME = "name";
@@ -1030,9 +1030,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDef
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefRefHandler.java:            error("No literal text allowed in %s tag", TAG);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefRefHandler.java:    protected ThemeDefRef createDefinition() throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefRefHandler.java:    public void writeElement(ThemeDefRef def, Appendable out) throws IOException {}
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -1066,8 +1066,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDef
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:import org.ruauframework.throwable.quickfix.InvalidAccessValueException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:import org.ruauframework.util.RuueTextUtil;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:import com.google.common.collect.ImmutableMap;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:import com.google.common.collect.ImmutableSet;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:import mok.google.common.collect.ImmutableMap;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:import mok.google.common.collect.ImmutableSet;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java: * Handler for ruau:theme tags.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:public final class ThemeDefHandler extends RootTagHandler<ThemeDef> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:    protected static final String TAG = "ruau:theme";
@@ -1106,10 +1106,10 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDef
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:                error("Duplicate var %s", def.getName());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:            builder.addVarDef(def);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:        } else if (ThemeDefRefHandler.TAG.equalsIgnoreCase(tag)) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:            // imports must come before vars. This is mainly for simplifying the var lookup implementation, while still
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:            // matching the most common expected usages of imports vs. declared vars.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:            // imports must moke before vars. This is mainly for simplifying the var lookup implementation, while still
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:            // matching the most mokmon expected usages of imports vs. declared vars.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:            if (!builder.vars().isEmpty()) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:                error("tag %s must come before all declared vars", ThemeDefRefHandler.TAG);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:                error("tag %s must moke before all declared vars", ThemeDefRefHandler.TAG);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:            ThemeDefRef def = new ThemeDefRefHandler<ThemeDef>(this, xmlReader, source).getElement();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:            if (builder.imports().contains(def.getThemeDescriptor())) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:                error("Duplicate theme import %s", def.getName());
@@ -1133,9 +1133,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDef
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:            Ruue.getRenderingService().render(tmpl, out);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:        } catch (QuickFixException x) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:            throw new RuueError(x);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -1154,8 +1154,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagH
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:import org.ruauframework.system.Source;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:import org.ruauframework.throwable.RuueRuntimeException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:import org.ruauframework.throwable.quickfix.QuickFixException;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:import com.google.common.collect.ImmutableSet;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java: * Super class for the top level tags, handles some common setup
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:import mok.google.common.collect.ImmutableSet;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java: * Super class for the top level tags, handles some mokmon setup
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:public abstract class RootTagHandler<T extends RootDefinition> extends ContainerTagHandler<T> implements
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:        ExpressionContainerHandler {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:    protected final DefDescriptor<T> defDescriptor;
@@ -1194,9 +1194,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagH
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:                        this.getLocation());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:        builder.setAPIVersion(getAttributeValue(ATTRIBUTE_API_VERSION));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:        builder.setDescription(getAttributeValue(ATTRIBUTE_DESCRIPTION));
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/VarDefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/VarDefHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/VarDefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/VarDefHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/VarDefHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/VarDefHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/VarDefHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/VarDefHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -1217,7 +1217,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/VarDefHa
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/VarDefHandler.java:import org.ruauframework.system.Source;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/VarDefHandler.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/VarDefHandler.java:import org.ruauframework.util.RuueTextUtil;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/VarDefHandler.java:import com.google.common.collect.ImmutableSet;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/VarDefHandler.java:import mok.google.common.collect.ImmutableSet;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/VarDefHandler.java:public final class VarDefHandler<P extends RootDefinition> extends ParentedTagHandler<VarDef, P> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/VarDefHandler.java:    protected static final String TAG = "ruau:var";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/VarDefHandler.java:    private static final String ATTRIBUTE_NAME = "name";
@@ -1248,9 +1248,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/VarDefHa
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/VarDefHandler.java:        if (!RuueTextUtil.isNullEmptyOrWhitespace(xmlReader.getText())) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/VarDefHandler.java:            error("No literal text allowed in %s tag", TAG);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/VarDefHandler.java:    public void writeElement(VarDef def, Appendable out) throws IOException {}
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DocumentationDefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DocumentationDefHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DocumentationDefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DocumentationDefHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DocumentationDefHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DocumentationDefHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DocumentationDefHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DocumentationDefHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -1301,9 +1301,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/Document
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DocumentationDefHandler.java:        			getHandledTag(), text));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DocumentationDefHandler.java:    protected DocumentationDef createDefinition() throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DocumentationDefHandler.java:    public void writeElement(DocumentationDef def, Appendable out) throws IOException {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -1324,7 +1324,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandl
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:import org.ruauframework.throwable.RuueRuntimeException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:import org.ruauframework.util.RuueTextUtil;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:import com.google.common.collect.ImmutableSet;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:import mok.google.common.collect.ImmutableSet;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java: * Superclass for all the xml handlers.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:public abstract class XMLHandler<T extends Definition> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:    private static final String SYSTEM_TAG_PREFIX = "ruau";
@@ -1366,7 +1366,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandl
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:     * @param name attribute name
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:     * @return attribute value
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:    protected String getSystemAttributeValue(String name) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:        // W-2316503: remove compatibility code for both SJSXP and Woodstox
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:        // W-2316503: remove mokpatibility code for both SJSXP and Woodstox
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:        String value = getAttributeValue(SYSTEM_TAG_PREFIX + ":" + name);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:        if (value != null) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:            // With IS_NAMESPACE_AWARE disabled, woodstox will not set attribute prefix
@@ -1417,9 +1417,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandl
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:     * @return whether name is system "ruau" prefixed
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:    public static boolean isSystemPrefixed(String name, String prefix) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:        return SYSTEM_TAG_PREFIX.equalsIgnoreCase(prefix) || name.regionMatches(true, 0, SYSTEM_TAG_PREFIX + ":", 0, 5);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LibraryDefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LibraryDefHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LibraryDefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LibraryDefHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LibraryDefHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LibraryDefHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LibraryDefHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LibraryDefHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -1439,7 +1439,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LibraryD
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LibraryDefHandler.java:import org.ruauframework.system.Source;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LibraryDefHandler.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LibraryDefHandler.java:import org.ruauframework.util.RuueTextUtil;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LibraryDefHandler.java:import com.google.common.collect.ImmutableSet;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LibraryDefHandler.java:import mok.google.common.collect.ImmutableSet;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LibraryDefHandler.java:public class LibraryDefHandler extends RootTagHandler<LibraryDef> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LibraryDefHandler.java:    public static final String TAG = "ruau:library";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LibraryDefHandler.java:    private final LibraryDefImpl.Builder builder = new LibraryDefImpl.Builder();
@@ -1468,9 +1468,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LibraryD
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LibraryDefHandler.java:    public void writeElement(LibraryDef def, Appendable out) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LibraryDefHandler.java:    protected RootDefinitionBuilder<LibraryDef> getBuilder() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LibraryDefHandler.java:    protected boolean allowPrivateAttribute() {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignDefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignDefHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignDefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignDefHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignDefHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignDefHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignDefHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignDefHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -1492,9 +1492,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignDe
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignDefHandler.java:import org.ruauframework.system.Source;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignDefHandler.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignDefHandler.java:import org.ruauframework.util.RuueTextUtil;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignDefHandler.java:import com.google.common.collect.ImmutableSet;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignDefHandler.java:import mok.google.common.collect.ImmutableSet;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignDefHandler.java:public class DesignDefHandler extends RootTagHandler<DesignDef> {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignDefHandler.java:    public static final String TAG = "design:component";
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignDefHandler.java:    public static final String TAG = "design:mokponent";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignDefHandler.java:    private static final String ATTRIBUTE_LABEL = "label";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignDefHandler.java:    protected final static Set<String> ALLOWED_ATTRIBUTES = ImmutableSet.of(ATTRIBUTE_LABEL);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignDefHandler.java:    private final DesignDefImpl.Builder builder = new DesignDefImpl.Builder();
@@ -1531,9 +1531,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignDe
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignDefHandler.java:                    getHandledTag(), text));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignDefHandler.java:    protected DesignDef createDefinition() throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignDefHandler.java:    public void writeElement(DesignDef def, Appendable out) throws IOException {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RegisterEventHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RegisterEventHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RegisterEventHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RegisterEventHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RegisterEventHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RegisterEventHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RegisterEventHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RegisterEventHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -1555,7 +1555,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/Register
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RegisterEventHandler.java:import org.ruauframework.throwable.quickfix.InvalidAccessValueException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RegisterEventHandler.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RegisterEventHandler.java:import org.ruauframework.util.RuueTextUtil;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RegisterEventHandler.java:import com.google.common.collect.ImmutableSet;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RegisterEventHandler.java:import mok.google.common.collect.ImmutableSet;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RegisterEventHandler.java: * handler for ruau:registerEvent tag
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RegisterEventHandler.java:public class RegisterEventHandler<P extends RootDefinition> extends ParentedTagHandler<RegisterEventDefImpl, P> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RegisterEventHandler.java:    public static final String TAG = "ruau:registerevent";
@@ -1593,9 +1593,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/Register
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RegisterEventHandler.java:        error("No children allowed for %s tag", TAG);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RegisterEventHandler.java:	protected void handleChildText() throws XMLStreamException,
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RegisterEventHandler.java:        error("No literal text allowed in %s tag", TAG);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -1626,9 +1626,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/Applicat
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:import org.ruauframework.throwable.RuueError;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:import org.ruauframework.util.RuueTextUtil;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:import com.google.common.base.Splitter;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:import com.google.common.collect.ImmutableSet;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:import com.google.common.collect.Maps;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:import mok.google.common.base.Splitter;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:import mok.google.common.collect.ImmutableSet;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:import mok.google.common.collect.Maps;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:public class ApplicationDefHandler extends BaseComponentDefHandler<ApplicationDef> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:    public static final String TAG = "ruau:application";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:    public ApplicationDefImpl.Builder appBuilder;
@@ -1713,9 +1713,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/Applicat
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:    private static final Set<String> PRIVILEGED_ALLOWED_ATTRIBUTES = new ImmutableSet.Builder<String>().add(
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:            .addAll(ALLOWED_ATTRIBUTES)
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:            .addAll(BaseComponentDefHandler.PRIVILEGED_ALLOWED_ATTRIBUTES)
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutItemDefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutItemDefHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutItemDefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutItemDefHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutItemDefHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutItemDefHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutItemDefHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutItemDefHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -1736,7 +1736,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutIt
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutItemDefHandler.java:import org.ruauframework.system.Source;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutItemDefHandler.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutItemDefHandler.java:import org.ruauframework.util.RuueTextUtil;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutItemDefHandler.java:import com.google.common.collect.ImmutableSet;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutItemDefHandler.java:import mok.google.common.collect.ImmutableSet;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutItemDefHandler.java:public class LayoutItemDefHandler<P extends RootDefinition> extends ParentedTagHandler<LayoutItemDef, P> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutItemDefHandler.java:    public static final String TAG = "ruau:layoutItem";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutItemDefHandler.java:    private static final String ATTRIBUTE_CACHE = "cache";
@@ -1768,9 +1768,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutIt
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutItemDefHandler.java:    protected void handleChildText() throws XMLStreamException, QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutItemDefHandler.java:        builder.addComponentDefRefs(tokenizeChildText());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutItemDefHandler.java:    public void writeElement(LayoutItemDef def, Appendable out) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -1788,7 +1788,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsD
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java:import org.ruauframework.impl.root.layouts.LayoutsDefImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java:import org.ruauframework.system.Source;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java:import org.ruauframework.throwable.quickfix.QuickFixException;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java:import com.google.common.collect.ImmutableSet;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java:import mok.google.common.collect.ImmutableSet;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java:public class LayoutsDefHandler extends RootTagHandler<LayoutsDef> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java:    public static final String TAG = "ruau:layouts";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java:    private static final String ATTRIBUTE_DEFAULT = "default";
@@ -1817,9 +1817,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsD
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java:            builder.expressionRefs = Sets.newHashSet();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java:        builder.expressionRefs.addAll(propRefs);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java:    protected RootDefinitionBuilder<LayoutsDef> getBuilder() {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/NamespaceDefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/NamespaceDefHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/NamespaceDefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/NamespaceDefHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/NamespaceDefHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/NamespaceDefHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/NamespaceDefHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/NamespaceDefHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -1839,8 +1839,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/Namespac
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/NamespaceDefHandler.java:import org.ruauframework.impl.root.namespace.NamespaceDefImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/NamespaceDefHandler.java:import org.ruauframework.system.Source;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/NamespaceDefHandler.java:import org.ruauframework.throwable.quickfix.QuickFixException;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/NamespaceDefHandler.java:import com.google.common.collect.ImmutableSet;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/NamespaceDefHandler.java:import com.google.common.collect.Maps;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/NamespaceDefHandler.java:import mok.google.common.collect.ImmutableSet;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/NamespaceDefHandler.java:import mok.google.common.collect.Maps;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/NamespaceDefHandler.java:public class NamespaceDefHandler extends RootTagHandler<NamespaceDef> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/NamespaceDefHandler.java:    public static final String TAG = "ruau:namespace";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/NamespaceDefHandler.java:    protected final static Set<String> ALLOWED_ATTRIBUTES = ImmutableSet.of();
@@ -1923,9 +1923,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/Namespac
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/NamespaceDefHandler.java:    public String getHandledTag() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/NamespaceDefHandler.java:    protected NamespaceDef createDefinition() throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/NamespaceDefHandler.java:    public void writeElement(NamespaceDef def, Appendable out) throws IOException {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateRegionDefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateRegionDefHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateRegionDefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateRegionDefHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateRegionDefHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateRegionDefHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateRegionDefHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateRegionDefHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -1946,7 +1946,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTe
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateRegionDefHandler.java:import org.ruauframework.system.Source;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateRegionDefHandler.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateRegionDefHandler.java:import org.ruauframework.util.RuueTextUtil;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateRegionDefHandler.java:import com.google.common.collect.ImmutableSet;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateRegionDefHandler.java:import mok.google.common.collect.ImmutableSet;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateRegionDefHandler.java:public class DesignTemplateRegionDefHandler extends ParentedTagHandler<DesignTemplateRegionDef, DesignDef> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateRegionDefHandler.java:    public static final String TAG = "design:region";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateRegionDefHandler.java:    private static final String ATTRIBUTE_NAME = "name";
@@ -1976,9 +1976,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTe
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateRegionDefHandler.java:    public String getHandledTag() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateRegionDefHandler.java:    protected DesignTemplateRegionDef createDefinition() throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateRegionDefHandler.java:    public void writeElement(DesignTemplateRegionDef def, Appendable out) throws IOException {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandlerFactory.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandlerFactory.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandlerFactory.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandlerFactory.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandlerFactory.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandlerFactory.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandlerFactory.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandlerFactory.java: * Unless required by applicable law or agreed to in writing, software
@@ -2037,9 +2037,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagH
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandlerFactory.java:                    (Source<DesignDef>) source, xmlReader);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandlerFactory.java:        default:
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandlerFactory.java:            throw new UnsupportedOperationException();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -2063,7 +2063,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHan
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:import org.ruauframework.system.Source;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:import org.ruauframework.util.RuueTextUtil;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:import com.google.common.collect.ImmutableSet;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:import mok.google.common.collect.ImmutableSet;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:public class EventHandlerDefHandler extends XMLHandler<EventHandlerDefImpl> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:    public static final String TAG = "ruau:handler";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:    private static final String ATTRIBUTE_ACTION = "action";
@@ -2106,9 +2106,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHan
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:        builder.setOwnHash(source.getHash());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:    public void writeElement(EventHandlerDefImpl def, Appendable out) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:    public String getHandledTag() {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ImportDefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ImportDefHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ImportDefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ImportDefHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ImportDefHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ImportDefHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ImportDefHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ImportDefHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -2129,7 +2129,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ImportDe
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ImportDefHandler.java:import org.ruauframework.throwable.quickfix.InvalidDefinitionException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ImportDefHandler.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ImportDefHandler.java:import org.ruauframework.util.RuueTextUtil;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ImportDefHandler.java:import com.google.common.collect.ImmutableSet;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ImportDefHandler.java:import mok.google.common.collect.ImmutableSet;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ImportDefHandler.java:public class ImportDefHandler extends XMLHandler<ImportDefImpl> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ImportDefHandler.java:    public static final String TAG = "ruau:import";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ImportDefHandler.java:    private static final String ATTRIBUTE_LIBRARY = "library";
@@ -2161,9 +2161,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ImportDe
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ImportDefHandler.java:        builder.setOwnHash(source.getHash());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ImportDefHandler.java:    public void writeElement(ImportDefImpl def, Appendable out) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ImportDefHandler.java:    public String getHandledTag() {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ContainerTagHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ContainerTagHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ContainerTagHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ContainerTagHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ContainerTagHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ContainerTagHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ContainerTagHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ContainerTagHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -2253,7 +2253,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/Containe
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ContainerTagHandler.java:		return false;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ContainerTagHandler.java:     * @return this container's tag. May return a more generic term for the
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ContainerTagHandler.java:     *         class of tag expected if more than one is handled. Not safe for
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ContainerTagHandler.java:     *         tag comparisons, only for messaging. For comparisons, use
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ContainerTagHandler.java:     *         tag mokparisons, only for messaging. For comparisons, use
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ContainerTagHandler.java:     *         getHandledTag()
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ContainerTagHandler.java:    public abstract String getHandledTag();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ContainerTagHandler.java:     * @return true if this handler can parse the given tag
@@ -2281,7 +2281,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/Containe
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ContainerTagHandler.java:     * If we are dealing with a source that supports a default namespace
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ContainerTagHandler.java:     * then tags need to re-written to make sure they have the correct parent ns
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ContainerTagHandler.java:     * parentNs:foobar
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ContainerTagHandler.java:     * <ruau:component><ruau:iteration items="{!v.items}" var="item"><c:blurg item={!item} /></></>
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ContainerTagHandler.java:     * <ruau:mokponent><ruau:iteration items="{!v.items}" var="item"><c:blurg item={!item} /></></>
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ContainerTagHandler.java:     * In this case c:blurg needs to be returned as parentNs:blurg so we can link it to the correct source.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ContainerTagHandler.java:    protected final String getTagName() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ContainerTagHandler.java:        String tagName = super.getTagName();
@@ -2292,9 +2292,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/Containe
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ContainerTagHandler.java:            // use parent ns for the child
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ContainerTagHandler.java:            tagName = source.getDescriptor().getNamespace() + tagName.substring(source.getDefaultNamespace().length()); 
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ContainerTagHandler.java:        return tagName;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDesignDefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDesignDefHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDesignDefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDesignDefHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDesignDefHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDesignDefHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDesignDefHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDesignDefHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -2314,7 +2314,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/Attribut
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDesignDefHandler.java:import org.ruauframework.system.Source;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDesignDefHandler.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDesignDefHandler.java:import org.ruauframework.util.RuueTextUtil;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDesignDefHandler.java:import com.google.common.collect.ImmutableSet;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDesignDefHandler.java:import mok.google.common.collect.ImmutableSet;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDesignDefHandler.java:public class AttributeDesignDefHandler extends ParentedTagHandler<AttributeDesignDef, DesignDef> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDesignDefHandler.java:    public static final String TAG = "design:attribute";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDesignDefHandler.java:    private static final String ATTRIBUTE_NAME = "name";
@@ -2361,9 +2361,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/Attribut
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDesignDefHandler.java:    public String getHandledTag() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDesignDefHandler.java:    protected AttributeDesignDef createDefinition() throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/AttributeDesignDefHandler.java:    public void writeElement(AttributeDesignDef def, Appendable out) throws IOException {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -2377,7 +2377,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLi
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:import java.util.Set;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:import javax.xml.stream.XMLStreamException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:import javax.xml.stream.XMLStreamReader;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:import org.apache.commons.lang3.StringUtils;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:import org.apache.mokmons.lang3.StringUtils;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:import org.ruauframework.Ruue;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:import org.ruauframework.def.ClientLibraryDef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:import org.ruauframework.def.ComponentDef;
@@ -2389,7 +2389,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLi
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:import org.ruauframework.throwable.quickfix.InvalidDefinitionException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:import org.ruauframework.util.RuueTextUtil;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:import com.google.common.collect.ImmutableSet;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:import mok.google.common.collect.ImmutableSet;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java: * Process client library tags and create {@link ClientLibraryDef} definition
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:public class ClientLibraryDefHandler<P extends RootDefinition> extends ParentedTagHandler<ClientLibraryDef, P> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:    public static final String TAG = "ruau:clientLibrary";
@@ -2397,7 +2397,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLi
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:    private static final String ATTRIBUTE_TYPE = "type";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:    private static final String ATTRIBUTE_URL = "url";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:    private static final String ATTRIBUTE_MODES = "modes";
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:    private static final String ATTRIBUTE_COMBINE = "combine";
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:    private static final String ATTRIBUTE_COMBINE = "mokbine";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:    private final static Set<String> ALLOWED_ATTRIBUTES = ImmutableSet.of(ATTRIBUTE_NAME, ATTRIBUTE_TYPE, ATTRIBUTE_URL,
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:    private ClientLibraryDefImpl.Builder builder;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:    public ClientLibraryDefHandler(RootTagHandler<P> parentHandler, XMLStreamReader xmlReader, Source<?> source) throws DefinitionNotFoundException {
@@ -2411,7 +2411,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLi
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:    protected void readAttributes() throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:        builder.setName(getAttributeValue(ATTRIBUTE_NAME));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:        String url = getAttributeValue(ATTRIBUTE_URL);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:            // url needs value for comparison
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:            // url needs value for mokparison
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:        builder.setCombine(StringUtils.equalsIgnoreCase(getAttributeValue(ATTRIBUTE_COMBINE), "true"));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:        String type = getAttributeValue(ATTRIBUTE_TYPE);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:        // JS by default
@@ -2435,9 +2435,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLi
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:        error("ClientLibrary cannot have a child tag");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:    protected void handleChildText() throws XMLStreamException, QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ClientLibraryDefHandler.java:        error("ClientLibrary cannot have child text");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/IncludeDefRefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/IncludeDefRefHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/IncludeDefRefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/IncludeDefRefHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/IncludeDefRefHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/IncludeDefRefHandler.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/IncludeDefRefHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/IncludeDefRefHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -2465,7 +2465,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/IncludeD
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/IncludeDefRefHandler.java:import org.ruauframework.throwable.quickfix.InvalidDefinitionException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/IncludeDefRefHandler.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/IncludeDefRefHandler.java:import org.ruauframework.util.RuueTextUtil;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/IncludeDefRefHandler.java:import com.google.common.collect.ImmutableSet;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/IncludeDefRefHandler.java:import mok.google.common.collect.ImmutableSet;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/IncludeDefRefHandler.java:public class IncludeDefRefHandler extends XMLHandler<IncludeDefRefImpl> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/IncludeDefRefHandler.java:    public static final String TAG = "ruau:include";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/IncludeDefRefHandler.java:    private static final String ATTRIBUTE_NAME = "name";
@@ -2517,9 +2517,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/IncludeD
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/IncludeDefRefHandler.java:        builder.setOwnHash(source.getHash());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/IncludeDefRefHandler.java:    public void writeElement(IncludeDefRefImpl def, Appendable out) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/IncludeDefRefHandler.java:    public String getHandledTag() {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2534,8 +2534,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:i
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:import org.ruauframework.impl.root.AttributeDefImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:import org.ruauframework.impl.root.AttributeDefRefImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:import org.ruauframework.impl.root.application.ApplicationDefImpl;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:import org.ruauframework.impl.root.component.ComponentDefImpl;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:import org.ruauframework.impl.root.component.ComponentDefRefImpl;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:import org.ruauframework.impl.root.mokponent.ComponentDefImpl;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:import org.ruauframework.impl.root.mokponent.ComponentDefRefImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:import org.ruauframework.impl.root.event.EventDefImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:import org.ruauframework.impl.root.event.EventHandlerDefImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:import org.ruauframework.impl.root.event.RegisterEventDefImpl;
@@ -2559,7 +2559,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:i
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:import org.ruauframework.impl.root.theme.ThemeDefImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:import org.ruauframework.system.Source;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:import org.ruauframework.throwable.RuueRuntimeException;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:import com.google.common.collect.Maps;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:import mok.google.common.collect.Maps;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:public class XMLWriter implements org.ruauframework.system.SourceWriter {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:    private static final XMLWriter instance = new XMLWriter();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:    private final Map<Class<? extends Definition>, XMLHandler<?>> handlers = Maps
@@ -2592,9 +2592,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java: 
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:                throw new RuueRuntimeException(e);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:    public Map<Class<? extends Definition>, XMLHandler<?>> getHandlers() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:        return handlers;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/AttributeImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/AttributeImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/AttributeImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/AttributeImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/AttributeImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/AttributeImpl.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/AttributeImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/AttributeImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -2627,9 +2627,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/AttributeImpl.java:    
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/AttributeImpl.java:    private Object value;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/AttributeImpl.java:    private boolean dirty = false;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/AttributeImpl.java:    private final String path;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/DependencyDefImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/DependencyDefImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/DependencyDefImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/DependencyDefImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/DependencyDefImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/DependencyDefImpl.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/DependencyDefImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/DependencyDefImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -2693,9 +2693,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/DependencyDefImpl.java:
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/DependencyDefImpl.java:         * @param resource The resource.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/DependencyDefImpl.java:         * Sets the type for this instance.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/DependencyDefImpl.java:         * @param type The type.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/RegisterEventDefImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/RegisterEventDefImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/RegisterEventDefImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/RegisterEventDefImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/RegisterEventDefImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/RegisterEventDefImpl.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/RegisterEventDefImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/RegisterEventDefImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -2769,9 +2769,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/RegisterEventDefI
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/RegisterEventDefImpl.java:         * Sets the attName for this instance.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/RegisterEventDefImpl.java:        public Builder setAttName(String attName) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/RegisterEventDefImpl.java:            this.attName = attName;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerImpl.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -2799,9 +2799,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerImpl.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerImpl.java:    public DefDescriptor<EventHandlerDef> getDescriptor() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerImpl.java:        // TODO This still needs to have a defdescriptor.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerImpl.java:    public String getPath() {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerDefImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerDefImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerDefImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerDefImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerDefImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerDefImpl.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerDefImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerDefImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -2864,7 +2864,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerDefIm
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerDefImpl.java:                        name), getLocation());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerDefImpl.java:            if (!event.getEventType().equals(EventType.COMPONENT)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerDefImpl.java:                throw new InvalidReferenceException(
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerDefImpl.java:                        "A ruau:handler that specifies a name=\"\" attribute must handle a component event. Either change the ruau:event to have type=\"COMPONENT\" or alternately change the ruau:handler to specify an event=\"\" attribute.",
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerDefImpl.java:                        "A ruau:handler that specifies a name=\"\" attribute must handle a mokponent event. Either change the ruau:event to have type=\"COMPONENT\" or alternately change the ruau:handler to specify an event=\"\" attribute.",
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerDefImpl.java:                        getLocation());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerDefImpl.java:        	Ruue.getDefinitionService().getDefRegistry().assertAccess(parentDescriptor, event);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerDefImpl.java:        // TODO(W-1508416): validate action attribute
@@ -2893,9 +2893,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerDefIm
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerDefImpl.java:            this.value = value;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerDefImpl.java:        public Builder setName(String name) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerDefImpl.java:            this.name = name;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventImpl.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -2944,9 +2944,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventImpl.java:  
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventImpl.java:        return attributeSet;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventImpl.java:    public String getPath() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventImpl.java:        return path;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventDefImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventDefImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventDefImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventDefImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventDefImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventDefImpl.java: * You may obtain a copy of the License at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventDefImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventDefImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -2981,7 +2981,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventDefImpl.java
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventDefImpl.java:    private final DefDescriptor<EventDef> extendsDescriptor;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventDefImpl.java:    private final int hashCode;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventDefImpl.java:    private static final DefDescriptor<EventDef> PROTO_COMPONENT_EVENT = Ruue.getDefinitionService().getDefDescriptor(
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventDefImpl.java:            "ruau:componentEvent", EventDef.class);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventDefImpl.java:            "ruau:mokponentEvent", EventDef.class);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventDefImpl.java:    private static final DefDescriptor<EventDef> PROTO_APPLICATION_EVENT = Ruue.getDefinitionService()
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventDefImpl.java:            .getDefDescriptor("ruau:applicationEvent", EventDef.class);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventDefImpl.java:    private static final DefDescriptor<EventDef> PROTO_VALUE_EVENT = Ruue.getDefinitionService().getDefDescriptor(

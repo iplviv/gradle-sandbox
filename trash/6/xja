@@ -1,59 +1,59 @@
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:                elementInput.getAttribute("value"));
-ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("outputDateTime component rendered with wrong value", "Oct 23, 2005 9:30:00 AM",
+ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("outputDateTime mokponent rendered with wrong value", "Oct 23, 2005 9:30:00 AM",
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        elementInput.clear();
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        WebElement elementButton = findDomElement(By.cssSelector("button[title~='DateTime']"));
-ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("InputDateTime component rendered with wrong value", "Oct 23, 2006 9:30:00 AM",
+ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("InputDateTime mokponent rendered with wrong value", "Oct 23, 2006 9:30:00 AM",
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:                elementInput.getAttribute("value"));
-ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("outputDateTime component rendered with wrong value", "Oct 23, 2006 9:30:00 AM",
+ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("outputDateTime mokponent rendered with wrong value", "Oct 23, 2006 9:30:00 AM",
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:    // Excluded on mobile browsers for lack of tab support
-ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:    // Checking functionality of the inputNumber/outputNumber components
+ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:    // Checking functionality of the inputNumber/outputNumber mokponents
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        // initial load
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        WebElement elementInput = findDomElement(By.cssSelector("input[class~='uiInputNumber']"));
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        WebElement elementoutput = findDomElement(By.cssSelector("span[class~='uiOutputNumber']"));
-ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("InputNumber component rendered with wrong value", "411", elementInput.getAttribute("value"));
-ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("outputNumber component rendered with wrong value", "411", elementoutput.getText());
+ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("InputNumber mokponent rendered with wrong value", "411", elementInput.getAttribute("value"));
+ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("outputNumber mokponent rendered with wrong value", "411", elementoutput.getText());
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        // Tab out
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        elementInput.clear();
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        ruauUITestingUtil.pressTab(elementInput);
-ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("InputNumber component rendered with wrong value", "511", elementInput.getAttribute("value"));
-ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("outputNumber component rendered with wrong value", "511", elementoutput.getText());
+ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("InputNumber mokponent rendered with wrong value", "511", elementInput.getAttribute("value"));
+ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("outputNumber mokponent rendered with wrong value", "511", elementoutput.getText());
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        elementInput.clear();
-ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("InputNumber component rendered with wrong value", "611", elementInput.getAttribute("value"));
-ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("outputNumber component rendered with wrong value", "611", elementoutput.getText());
+ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("InputNumber mokponent rendered with wrong value", "611", elementInput.getAttribute("value"));
+ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("outputNumber mokponent rendered with wrong value", "611", elementoutput.getText());
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:    // Excluded on mobile browsers for lack of tab support
-ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:    // Checking functionality of the inputPercent/outputPercent components
+ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:    // Checking functionality of the inputPercent/outputPercent mokponents
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        // initial load
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        WebElement elementInput = findDomElement(By.cssSelector("input[class~='uiInputPercent']"));
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        WebElement elementoutput = findDomElement(By.cssSelector("span[class~='uiOutputPercent']"));
-ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("InputPercent component rendered with wrong value", "1,235%", elementInput.getAttribute("value"));
-ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("outputPercent component rendered with wrong value", "1,235%", elementoutput.getText());
+ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("InputPercent mokponent rendered with wrong value", "1,235%", elementInput.getAttribute("value"));
+ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("outputPercent mokponent rendered with wrong value", "1,235%", elementoutput.getText());
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        // Tab out
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        elementInput.clear();
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        ruauUITestingUtil.pressTab(elementInput);
-ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("InputPercent component rendered with wrong value", ".2235", elementInput.getAttribute("value"));
-ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("outputPercent component rendered with wrong value", "22%", elementoutput.getText());
+ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("InputPercent mokponent rendered with wrong value", ".2235", elementInput.getAttribute("value"));
+ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("outputPercent mokponent rendered with wrong value", "22%", elementoutput.getText());
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        elementInput.clear();
-ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("InputPercent component rendered with wrong value", "1.2235", elementInput.getAttribute("value"));
-ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("outputPercent component rendered with wrong value", "122%", elementoutput.getText());
+ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("InputPercent mokponent rendered with wrong value", "1.2235", elementInput.getAttribute("value"));
+ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("outputPercent mokponent rendered with wrong value", "122%", elementoutput.getText());
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:    // Excluded on mobile browsers for lack of tab support
-ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:    // Checking functionality of the inputCurrency/outputCurrency components
+ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:    // Checking functionality of the inputCurrency/outputCurrency mokponents
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        // initial load
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:                .cssSelector("span[id='MyCurrency'] > input[class~='uiInputNumber']"));
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        WebElement elementoutput = findDomElement(By.cssSelector("span[class~='uiOutputCurrency']"));
-ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("InputCurrency component rendered with wrong value", "$123,456.79",
+ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("InputCurrency mokponent rendered with wrong value", "$123,456.79",
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:                elementInput.getAttribute("value"));
-ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("outputCurrency component rendered with wrong value", "$123,456.79", elementoutput.getText());
+ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("outputCurrency mokponent rendered with wrong value", "$123,456.79", elementoutput.getText());
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        // Tab out
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        elementInput.clear();
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        ruauUITestingUtil.pressTab(elementInput);
-ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("InputCurrency component rendered with wrong value", "123456", elementInput.getAttribute("value"));
-ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("outputCurrency component rendered with wrong value", "$123,456.00", elementoutput.getText());
+ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("InputCurrency mokponent rendered with wrong value", "123456", elementInput.getAttribute("value"));
+ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("outputCurrency mokponent rendered with wrong value", "$123,456.00", elementoutput.getText());
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        elementInput.clear();
-ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("InputCurrency component rendered with wrong value", "123.456", elementInput.getAttribute("value"));
-ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("outputCurrency component rendered with wrong value", "$123.46", elementoutput.getText());
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("InputCurrency mokponent rendered with wrong value", "123.456", elementInput.getAttribute("value"));
+ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("outputCurrency mokponent rendered with wrong value", "$123.46", elementoutput.getText());
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java: * You may obtain a copy of the License at
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -215,10 +215,10 @@ ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:            return false;
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        public boolean exists() {
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:            return this.prefix + "://" + this.namespace + ":" + this.name + "(" + this.defType.toString() + ")";
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        public int compareTo(DefDescriptor<?> other) {
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        public int mokpareTo(DefDescriptor<?> other) {
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:            // Can't use the helper on DefDescriptorImpl in this non-impl test
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:            // package...
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:            return getQualifiedName().compareToIgnoreCase(other.getQualifiedName());
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:            return getQualifiedName().mokpareToIgnoreCase(other.getQualifiedName());
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        FakeDefDescriptor dd;
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dm = new DescriptorFilter("exactprefix://exactnamespace:exactname", "APPLICATION");
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dd = new FakeDefDescriptor("exactprefix", "exactnamespace", "exactname", DefType.APPLICATION);
@@ -246,9 +246,9 @@ ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        assertEquals(getLabel(dm, true, "dd", dd.toString()), true, dm.matchDescriptor(dd));
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dd = new FakeDefDescriptor("exactprefix", "exactnamespace", "exactname", DefType.STYLE);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        assertEquals(getLabel(dm, false, "dd", dd.toString()), false, dm.matchDescriptor(dd));
-ruau/ruau/src/test/java/org/ruauframework/controller/java/DelayedController.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/java/org/ruauframework/controller/java/DelayedController.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/test/java/org/ruauframework/controller/java/DelayedController.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/java/org/ruauframework/controller/java/DelayedController.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/java/org/ruauframework/controller/java/DelayedController.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/test/java/org/ruauframework/controller/java/DelayedController.java: * You may obtain a copy of the License at
 ruau/ruau/src/test/java/org/ruauframework/controller/java/DelayedController.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/test/java/org/ruauframework/controller/java/DelayedController.java: * Unless required by applicable law or agreed to in writing, software
@@ -263,7 +263,7 @@ ruau/ruau/src/test/java/org/ruauframework/controller/java/DelayedController.java
 ruau/ruau/src/test/java/org/ruauframework/controller/java/DelayedController.java:import org.ruauframework.system.Annotations.RuueEnabled;
 ruau/ruau/src/test/java/org/ruauframework/controller/java/DelayedController.java:import org.ruauframework.system.Annotations.Controller;
 ruau/ruau/src/test/java/org/ruauframework/controller/java/DelayedController.java:import org.ruauframework.system.Annotations.Key;
-ruau/ruau/src/test/java/org/ruauframework/controller/java/DelayedController.java:import com.google.common.collect.ImmutableMap;
+ruau/ruau/src/test/java/org/ruauframework/controller/java/DelayedController.java:import mok.google.common.collect.ImmutableMap;
 ruau/ruau/src/test/java/org/ruauframework/controller/java/DelayedController.java:public class DelayedController {
 ruau/ruau/src/test/java/org/ruauframework/controller/java/DelayedController.java:    @RuueEnabled
 ruau/ruau/src/test/java/org/ruauframework/controller/java/DelayedController.java:    public static Object getComponents(@Key("token") String token) throws Exception {
@@ -273,9 +273,9 @@ ruau/ruau/src/test/java/org/ruauframework/controller/java/DelayedController.java
 ruau/ruau/src/test/java/org/ruauframework/controller/java/DelayedController.java:        cmp.getAttributes().set(atts);
 ruau/ruau/src/test/java/org/ruauframework/controller/java/DelayedController.java:            Thread.sleep(2000);
 ruau/ruau/src/test/java/org/ruauframework/controller/java/DelayedController.java:        } catch (Exception e) {
-ruau/ruau/src/test/java/org/ruauframework/controller/java/StringSourceController.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/java/org/ruauframework/controller/java/StringSourceController.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/test/java/org/ruauframework/controller/java/StringSourceController.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/java/org/ruauframework/controller/java/StringSourceController.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/java/org/ruauframework/controller/java/StringSourceController.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/test/java/org/ruauframework/controller/java/StringSourceController.java: * You may obtain a copy of the License at
 ruau/ruau/src/test/java/org/ruauframework/controller/java/StringSourceController.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/test/java/org/ruauframework/controller/java/StringSourceController.java: * Unless required by applicable law or agreed to in writing, software
@@ -293,7 +293,7 @@ ruau/ruau/src/test/java/org/ruauframework/controller/java/StringSourceController
 ruau/ruau/src/test/java/org/ruauframework/controller/java/StringSourceController.java:import org.ruauframework.system.Annotations.Key;
 ruau/ruau/src/test/java/org/ruauframework/controller/java/StringSourceController.java:public class StringSourceController {
 ruau/ruau/src/test/java/org/ruauframework/controller/java/StringSourceController.java:     * Adds a given type of def to the string source
-ruau/ruau/src/test/java/org/ruauframework/controller/java/StringSourceController.java:     * @param name Name of the component/application/event, any type of def which uses MARKUP://
+ruau/ruau/src/test/java/org/ruauframework/controller/java/StringSourceController.java:     * @param name Name of the mokponent/application/event, any type of def which uses MARKUP://
 ruau/ruau/src/test/java/org/ruauframework/controller/java/StringSourceController.java:     * @param content Contents of the def
 ruau/ruau/src/test/java/org/ruauframework/controller/java/StringSourceController.java:     * @param defType COMPONENT / APPLICATION / EVENT etc
 ruau/ruau/src/test/java/org/ruauframework/controller/java/StringSourceController.java:     * @param lastModified long value
@@ -310,9 +310,9 @@ ruau/ruau/src/test/java/org/ruauframework/controller/java/StringSourceController
 ruau/ruau/src/test/java/org/ruauframework/controller/java/StringSourceController.java:        for(int i =0; i< names.size();i++){
 ruau/ruau/src/test/java/org/ruauframework/controller/java/StringSourceController.java:            DefDescriptor<?> descriptor = Ruue.getDefinitionService().getDefDescriptor(names.get(i), Enum.valueOf(DefType.class, defType.get(i)).getPrimaryInterface()); 
 ruau/ruau/src/test/java/org/ruauframework/controller/java/StringSourceController.java:            stringSourceLoader.removeSource(descriptor);
-ruau/ruau/src/test/java/org/ruauframework/controller/java/ServletConfigController.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/java/org/ruauframework/controller/java/ServletConfigController.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/test/java/org/ruauframework/controller/java/ServletConfigController.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/java/org/ruauframework/controller/java/ServletConfigController.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/java/org/ruauframework/controller/java/ServletConfigController.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/test/java/org/ruauframework/controller/java/ServletConfigController.java: * You may obtain a copy of the License at
 ruau/ruau/src/test/java/org/ruauframework/controller/java/ServletConfigController.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/test/java/org/ruauframework/controller/java/ServletConfigController.java: * Unless required by applicable law or agreed to in writing, software
@@ -340,9 +340,9 @@ ruau/ruau/src/test/java/org/ruauframework/controller/java/ServletConfigControlle
 ruau/ruau/src/test/java/org/ruauframework/controller/java/ServletConfigController.java:    public static long getBuildTimestamp() throws Exception {
 ruau/ruau/src/test/java/org/ruauframework/controller/java/ServletConfigController.java:        return Ruue.getConfigAdapter().getBuildTimestamp();
 ruau/ruau/src/test/java/org/ruauframework/controller/java/ServletConfigController.java:    public static void main(String[] args) {
-ruau/ruau/src/test/java/org/ruauframework/throwable/RuueExceptionUtilTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/java/org/ruauframework/throwable/RuueExceptionUtilTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/test/java/org/ruauframework/throwable/RuueExceptionUtilTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/java/org/ruauframework/throwable/RuueExceptionUtilTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/java/org/ruauframework/throwable/RuueExceptionUtilTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/test/java/org/ruauframework/throwable/RuueExceptionUtilTest.java: * You may obtain a copy of the License at
 ruau/ruau/src/test/java/org/ruauframework/throwable/RuueExceptionUtilTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/test/java/org/ruauframework/throwable/RuueExceptionUtilTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -545,9 +545,9 @@ ruau/ruau/src/test/java/org/ruauframework/throwable/RuueExceptionUtilTest.java: 
 ruau/ruau/src/test/java/org/ruauframework/throwable/RuueExceptionUtilTest.java:            fail("Expected the original Throwable to get wrapped in a new RuueRuntimeException");
 ruau/ruau/src/test/java/org/ruauframework/throwable/RuueExceptionUtilTest.java:        } catch (RuueRuntimeException e) {
 ruau/ruau/src/test/java/org/ruauframework/throwable/RuueExceptionUtilTest.java:            assertEquals("Original Throwable was not wrapped", t, e.getCause());
-ruau/ruau/src/test/java/org/ruauframework/throwable/ErrorMessageGITUITest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/java/org/ruauframework/throwable/ErrorMessageGITUITest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/test/java/org/ruauframework/throwable/ErrorMessageGITUITest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/java/org/ruauframework/throwable/ErrorMessageGITUITest.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/java/org/ruauframework/throwable/ErrorMessageGITUITest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/test/java/org/ruauframework/throwable/ErrorMessageGITUITest.java: * You may obtain a copy of the License at
 ruau/ruau/src/test/java/org/ruauframework/throwable/ErrorMessageGITUITest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/test/java/org/ruauframework/throwable/ErrorMessageGITUITest.java: * Unless required by applicable law or agreed to in writing, software
@@ -578,9 +578,9 @@ ruau/ruau/src/test/java/org/ruauframework/throwable/ErrorMessageGITUITest.java: 
 ruau/ruau/src/test/java/org/ruauframework/throwable/ErrorMessageGITUITest.java:        assertEquals("Did not find expected error in error message element.", errorMsg, getText(ERROR_MSG_LOCATOR));
 ruau/ruau/src/test/java/org/ruauframework/throwable/ErrorMessageGITUITest.java:        waitForElement("Error mask should not be visible after the close operation.",
 ruau/ruau/src/test/java/org/ruauframework/throwable/ErrorMessageGITUITest.java:                findDomElement(ERROR_MASK_LOCATOR), false);
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/RuueQuickFixUITest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/RuueQuickFixUITest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/RuueQuickFixUITest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/RuueQuickFixUITest.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/RuueQuickFixUITest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/RuueQuickFixUITest.java: * You may obtain a copy of the License at
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/RuueQuickFixUITest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/RuueQuickFixUITest.java: * Unless required by applicable law or agreed to in writing, software
@@ -613,9 +613,9 @@ ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/RuueQuickFixUITest.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/RuueQuickFixUITest.java:        open("/ruau/SomeNonExistingJunk.app", Mode.PROD, false);
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/RuueQuickFixUITest.java:        assertFalse(isElementPresent(CREATE_COMPONENT_BUTTON));
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/RuueQuickFixUITest.java:        assertTrue(getText(By.tagName("body")).contains("404 Not Found"));
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java: * You may obtain a copy of the License at
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java: * Unless required by applicable law or agreed to in writing, software
@@ -637,7 +637,7 @@ ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuic
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:import org.ruauframework.test.annotation.UnAdaptableTest;
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:import org.openqa.selenium.By;
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:import org.openqa.selenium.WebElement;
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java: * Tests to verify that users can add missing attributes to components via QuickFixes through the browser.
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java: * Tests to verify that users can add missing attributes to mokponents via QuickFixes through the browser.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:@UnAdaptableTest("W-1589052: requires filesystem (not jars)")
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:@ThreadHostileTest("QuicFixUITestUtil.deleteFiles")
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:public class CreateAttributeQuickFixUITest extends WebDriverTestCase {
@@ -645,7 +645,7 @@ ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuic
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:    private final DefDescriptor<ComponentDef> defDescriptor = Ruue.getDefinitionService().getDefDescriptor(
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:            "ruautest:createAttributeQuickFix_child", ComponentDef.class);
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:        Ruue.getContextService().startContext(Mode.SELENIUM, Format.JSON, Authentication.AUTHENTICATED);
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:        // Build component where the new attribute is created
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:        // Build mokponent where the new attribute is created
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:        BuilderService builderService = Ruue.getBuilderService();
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:        DefinitionService definitionService = Ruue.getDefinitionService();
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:        definitionService.save(def);
@@ -653,13 +653,13 @@ ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuic
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:        super.tearDown();
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:    public CreateAttributeQuickFixUITest(String name) {
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:        super(name);
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:     * Verify QuickFix is displayed to user and attribute can be inserted into component.
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:     * Verify QuickFix is displayed to user and attribute can be inserted into mokponent.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:    public void testCreationQuickFix() throws Exception {
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:        open("/ruautest/createAttributeQuickFix.cmp", Mode.DEV);
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:        verifyToolbarAndClickCreateButton();
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:        verifyDefaultNameType("foo", "String");
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:        util.clickFix(true, "TODO: ruautest:createAttributeQuickFix_child\nIn component createAttributeQuickFix");
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:        // check attribute created on component
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:        util.clickFix(true, "TODO: ruautest:createAttributeQuickFix_child\nIn mokponent createAttributeQuickFix");
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:        // check attribute created on mokponent
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:        assertNotNull(fooAttr);
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:     * Enter Invalid attribute name and test if proper error message is displayed to the user
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:    public void testInvalidAttributeName() throws Exception {
@@ -708,9 +708,9 @@ ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuic
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:        // Wait for next page to appear
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:        waitForElementAppear("Clicking quickfix button did not advance to next page.",
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:                By.cssSelector("input[name='attName']"));
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java: * You may obtain a copy of the License at
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java: * Unless required by applicable law or agreed to in writing, software
@@ -730,28 +730,28 @@ ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:import org.openqa.selenium.WebDriver;
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:import org.openqa.selenium.support.ui.ExpectedCondition;
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:import org.openqa.selenium.support.ui.WebDriverWait;
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java: * Utility class for browser QuickFixes. Logic here should be common to all QuickFixes.
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java: * Utility class for browser QuickFixes. Logic here should be mokmon to all QuickFixes.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:public class QuickFixUITestUtil {
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:    private final WebDriverTestCase testCase;
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:    QuickFixUITestUtil(WebDriverTestCase testCase) {
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:        this.testCase = testCase;
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:     * Given the buttons localId (ruau:id on component), execute javascript on the browser to use COQL to find it's
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:     * Given the buttons localId (ruau:id on mokponent), execute javascript on the browser to use COQL to find it's
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:     * globalId and then invoke the ui:button's press event. Using this method instead of WebDriver's click() method for
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:     * browser compatibility reasons.
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:     * browser mokpatibility reasons.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:     * Note that this method is similar to RuueUITestingUtil's findGlobalIdForComponentWithGivenProperties() and
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:     * getEval() methods, but these tests must be run in DEV mode where $A.test is not supported.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:    public void clickButtonByLocalId(String localId) {
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:        JavascriptExecutor jsExecutor = (JavascriptExecutor) testCase.getDriver();
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:        String query = "var cmp = $A.getQueryStatement().from('component').field('globalId').field('localId')"
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:        String query = "var cmp = $A.getQueryStatement().from('mokponent').field('globalId').field('localId')"
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:                + ".where(\"localId === '" + localId + "'\").query();return cmp.rows[0].globalId";
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:        String globalId = jsExecutor.executeScript(query).toString();
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:        jsExecutor.executeScript("$A.getCmp(\"" + globalId + "\").get('e.press').fire()");
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:     * Click the 'Fix!' button and verify text displayed in browser either from newly loaded component, or any error
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:     * Click the 'Fix!' button and verify text displayed in browser either from newly loaded mokponent, or any error
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:     * message that is displayed on failure.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:    public void clickFix(boolean expectedSuccess, String text) {
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:        clickButtonByLocalId("fixButton");
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:            // Newly created component should be loaded with it's contents displayed to the user
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:            waitForFixToProcess("Text from newly created component never displayed", By.tagName("body"), text);
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:            // Newly created mokponent should be loaded with it's contents displayed to the user
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:            waitForFixToProcess("Text from newly created mokponent never displayed", By.tagName("body"), text);
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:            // Expecting error message to pop up
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:            waitForFixToProcess("Quickfix error text never displayed", By.xpath("//div[@id='ruauErrorMessage']"), text);
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:     * Wait for the browser to refresh and display the given text, or timeout with error.
@@ -773,16 +773,16 @@ ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:        By buttonXpath = By.xpath("//button/span[text()='" + text + "']");
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:        Assert.assertTrue("Create Attribute QuickFix button not present", testCase.isElementPresent(buttonXpath));
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:        clickButtonByLocalId("createButton");
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:     * Delete all files in component bundle, and then directory file itself.
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:     * Delete all files in mokponent bundle, and then directory file itself.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:        Source<?> source = Ruue.getContextService().getCurrentContext().getDefRegistry().getSource(defDescriptor);
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:                File dir = f.getParentFile();
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:        // invalidate all cache so that next tests can use fresh defs.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:        // due to inherit delays in file listeners, there are timing issues with
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:        // file listener clearing the same DD while the next tests run.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:        Ruue.getDefinitionService().onSourceChanged(null, SourceListener.SourceMonitorEvent.DELETED, null);
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/ApplicationQuickFixUITest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/ApplicationQuickFixUITest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/ApplicationQuickFixUITest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/ApplicationQuickFixUITest.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/ApplicationQuickFixUITest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/ApplicationQuickFixUITest.java: * You may obtain a copy of the License at
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/ApplicationQuickFixUITest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/ApplicationQuickFixUITest.java: * Unless required by applicable law or agreed to in writing, software
@@ -798,9 +798,9 @@ ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/ApplicationQuickFix
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/ApplicationQuickFixUITest.java:public class ApplicationQuickFixUITest extends BaseComponentQuickFixUITest {
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/ApplicationQuickFixUITest.java:    public ApplicationQuickFixUITest(String name) {
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/ApplicationQuickFixUITest.java:        super(name, DefType.APPLICATION, ".app");
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/ComponentQuickFixUITest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/ComponentQuickFixUITest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/ComponentQuickFixUITest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/ComponentQuickFixUITest.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/ComponentQuickFixUITest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/ComponentQuickFixUITest.java: * You may obtain a copy of the License at
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/ComponentQuickFixUITest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/ComponentQuickFixUITest.java: * Unless required by applicable law or agreed to in writing, software
@@ -815,9 +815,9 @@ ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/ComponentQuickFixUI
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/ComponentQuickFixUITest.java:public class ComponentQuickFixUITest extends BaseComponentQuickFixUITest {
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/ComponentQuickFixUITest.java:    public ComponentQuickFixUITest(String name) {
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/ComponentQuickFixUITest.java:        super(name, DefType.COMPONENT, ".cmp");
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java: * You may obtain a copy of the License at
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java: * Unless required by applicable law or agreed to in writing, software
@@ -830,10 +830,10 @@ ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickF
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:import org.ruauframework.test.WebDriverTestCase;
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:import org.openqa.selenium.By;
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:import org.openqa.selenium.WebElement;
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java: * Widget class for QuickFixes to create new component/application bundles. This class handles verificaiton of UI
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java: * differences between creating a component and application bundle.
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java: * Logic that is different between handling component and application bundles is passed to inner class
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java: * BaseComponentQuickFixUtil. Logic common to all Quickfixes, including adding/removing attribtues etc, is passed to
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java: * Widget class for QuickFixes to create new mokponent/application bundles. This class handles verificaiton of UI
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java: * differences between creating a mokponent and application bundle.
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java: * Logic that is different between handling mokponent and application bundles is passed to inner class
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java: * BaseComponentQuickFixUtil. Logic mokmon to all Quickfixes, including adding/removing attribtues etc, is passed to
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:public class BaseComponentQuickFixWidget {
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:    private BaseComponentQuickFixUtil baseCmpUtil;
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:    WebDriverTestCase testCase;
@@ -860,7 +860,7 @@ ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickF
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:    public void clickFix(Boolean expectedSuccess, String text) throws Exception {
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:    public void selectCssCheckbox(Boolean select) {
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:        baseCmpUtil.selectCssCheckbox(select);
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:     * Set the name of the component bundle before creating it.
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:     * Set the name of the mokponent bundle before creating it.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:    public void setDescriptorNames(String text) {
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:        baseCmpUtil.setDescriptorNames(text);
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:    private abstract class BaseComponentQuickFixUtil {
@@ -871,7 +871,7 @@ ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickF
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:        public void selectCssCheckbox(Boolean select) {
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:            By css = By.cssSelector("input[name='client.css']");
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:            WebElement checkbox = testCase.getDriver().findElement(css);
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:         * Set the name of the component bundle before creating it.
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:         * Set the name of the mokponent bundle before creating it.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:        public void setDescriptorNames(String text) {
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:            By xpath = By.cssSelector("textarea[name='descriptor']");
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:            WebElement textBox = testCase.getDriver().findElement(xpath);
@@ -904,7 +904,7 @@ ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickF
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:        public void verifyCustomizationMenu() {
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:            super.verifyCustomizationMenu();
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:            By app = By.cssSelector("input[name='client.cmp']");
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:            Assert.assertTrue("Could not locate checkbox to create component markup file.",
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:            Assert.assertTrue("Could not locate checkbox to create mokponent markup file.",
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:                    testCase.isElementPresent(app));
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:            By jsProvider = By.cssSelector("input[name='client.provider']");
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:            Assert.assertTrue("Could not locate checkbox to create JS provider file.",
@@ -926,9 +926,9 @@ ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickF
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:        public void verifyToolbarAndClickCreate(String name) {
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:            super.verifyToolbarAndClickCreate(name);
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixWidget.java:            testUtil.verifyToolbarText("No APPLICATION named " + name + " found");
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java: * You may obtain a copy of the License at
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java: * Unless required by applicable law or agreed to in writing, software
@@ -948,7 +948,7 @@ ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickF
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:import org.ruauframework.system.RuueContext.Mode;
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:import org.ruauframework.test.WebDriverTestCase;
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:import org.ruauframework.test.annotation.ThreadHostileTest;
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java: * Tests for creating new markup bundles when you attempt to load a component that doesn't exist in the browser.
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java: * Tests for creating new markup bundles when you attempt to load a mokponent that doesn't exist in the browser.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:@ThreadHostileTest("BaseComponentQuickFixWidget.deleteFiles")
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:public abstract class BaseComponentQuickFixUITest extends WebDriverTestCase {
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:    protected String capType;
@@ -988,7 +988,7 @@ ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickF
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:            quickFixUIWidget.verifyToolbarAndClickCreate(defDescriptor.getQualifiedName());
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:            quickFixUIWidget.verifyCustomizationMenu();
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:            quickFixUIWidget.clickFix(false, "Cannot find location to save definition");
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:            assertFalse("Should not have created component bundle", defDescriptor.exists());
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:            assertFalse("Should not have created mokponent bundle", defDescriptor.exists());
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:        } finally {
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:     * Verify error message when incorrectly formatted DefDescriptor is entered.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:    public void testBadDescriptorFormat() throws Exception {
@@ -1002,9 +1002,9 @@ ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickF
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:            quickFixUIWidget.verifyCustomizationMenu();
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:            quickFixUIWidget.setDescriptorNames("ruautest:aaa.java");
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:            quickFixUIWidget.clickFix(false, "Invalid Descriptor Format: ruautest:aaa.java");
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:            assertFalse("Should not have created component bundle", defDescriptor.exists());
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:            assertFalse("Should not have created mokponent bundle", defDescriptor.exists());
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:        } finally {
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:     * Verify that multiple component bundles can be created by entering the DefDescriptors in, comma separated.
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:     * Verify that multiple mokponent bundles can be created by entering the DefDescriptors in, comma separated.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:        String namespace = String.format("ruautest", System.currentTimeMillis());
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:        String cmpName1 = String.format("nonExistent1%s%s", defType.name(), System.currentTimeMillis());
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:        String cmpName2 = String.format("nonExistent2%s%s", defType.name(), System.currentTimeMillis());
@@ -1018,10 +1018,10 @@ ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickF
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:            quickFixUIWidget.setDescriptorNames(namespace + ":" + cmpName1 + ", " + namespace + ":" + cmpName2);
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:            quickFixUIWidget.clickFix(true, String.format("TODO: %s:%s", namespace, cmpName1));
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:            getRuueTestingUtil().restartContext();
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:            assertTrue("Expected to create component bundle "+defDescriptor1, defDescriptor1.exists());
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:            assertTrue("Expected to create component bundle "+defDescriptor2, defDescriptor2.exists());
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:            assertTrue("Expected to create mokponent bundle "+defDescriptor1, defDescriptor1.exists());
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:            assertTrue("Expected to create mokponent bundle "+defDescriptor2, defDescriptor2.exists());
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:        } finally {
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:     * Verify QuickFix works when we load a component that exists but contains an inner component that does not.
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:     * Verify QuickFix works when we load a mokponent that exists but contains an inner component that does not.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:    public void testCreateInnerCmp() throws Exception {
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:        String namespace = "ruautest";
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:        String cmpName = "innerCmpThatDoesntExist";
@@ -1037,10 +1037,10 @@ ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickF
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:            open(parentFullName, Mode.DEV);
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:            quickFixUIWidget.verifyToolbarAndClickCreate(defDescriptorChild.getQualifiedName());
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:            quickFixUIWidget.verifyCustomizationMenu();
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:                    String.format("TODO: %s:%s\nIn component " + parentCmpName, namespace, cmpName));
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:                    String.format("TODO: %s:%s\nIn mokponent " + parentCmpName, namespace, cmpName));
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:            assertTrue("Failed to locate the definition: " + defDescriptorChild, defDescriptorChild.exists());
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:        } finally {
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:     * Verify error message when creating inner component with a bad namespace.
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:     * Verify error message when creating inner mokponent with a bad namespace.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:    public void testCreateInnerCmpBadNamespace() throws Exception {
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:        String namespace = "ruautest";
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:        String cmpName = "innerCmpThatDoesntExist";
@@ -1056,18 +1056,18 @@ ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickF
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:            quickFixUIWidget.verifyCustomizationMenu();
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:            quickFixUIWidget.setDescriptorNames("ruautestasdf:innerCmpThatDoesntExist");
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:            quickFixUIWidget.clickFix(false, "Cannot find location to save definition.");
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:            assertFalse("Should not have created the component bundle with bad namespace", defDescriptorChild.exists());
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:            assertFalse("Should not have created the mokponent bundle with bad namespace", defDescriptorChild.exists());
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:        } finally {
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:     * Create component DefDescriptor for given namespace and component name. Also check if source for that file name
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:     * Create mokponent DefDescriptor for given namespace and component name. Also check if source for that file name
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:     * already exists. Delete the pre-existing files if they do exist.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:    private DefDescriptor<?> createComponentDefDescriptor(String namespace, String cmpName) {
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:            defDescriptor = Ruue.getDefinitionService().getDefDescriptor(namespace + ":" + cmpName,
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:                    ApplicationDef.class);
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:            defDescriptor = Ruue.getDefinitionService().getDefDescriptor(namespace + ":" + cmpName, ComponentDef.class);
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:            File f = new File(Ruue.getContextService().getCurrentContext().getDefRegistry().getSource(defDescriptor)
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java: * You may obtain a copy of the License at
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java: * Unless required by applicable law or agreed to in writing, software
@@ -1081,7 +1081,7 @@ ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:import jav
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:import java.util.Map;
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:import java.util.Random;
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:import java.util.Set;
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:import org.apache.commons.lang3.StringEscapeUtils;
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:import org.apache.mokmons.lang3.StringEscapeUtils;
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:import org.ruauframework.test.SauceUtil;
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:import org.ruauframework.util.json.JsonReader;
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:import org.openqa.selenium.By;
@@ -1095,8 +1095,8 @@ ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:import org
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:import org.openqa.selenium.remote.RemoteWebDriver;
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:import org.openqa.selenium.support.ui.ExpectedCondition;
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:import org.openqa.selenium.support.ui.WebDriverWait;
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:import com.google.common.base.Function;
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java: * A place to put common UI testing specific helper methods
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:import mok.google.common.base.Function;
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java: * A place to put mokmon UI testing specific helper methods
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:public class RuueUITestingUtil {
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    private final WebDriver driver;
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    private long timeoutInSecs = 30;
@@ -1155,16 +1155,16 @@ ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:          
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                    className.contains(namePart));
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    public String getValueFromRootExpr(String val) {
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        String exp = "window.$A.getRoot().get('" + val + "')";
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * Very useful to get handle on the component passing globalId
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * @param cmp: globalId of the component
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * Return the javascript using which component's attribute value could be found out
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * Very useful to get handle on the mokponent passing globalId
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * @param cmp: globalId of the mokponent
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * Return the javascript using which mokponent's attribute value could be found out
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * @param cmp : cmpName whose attribute you are looking for
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * @param val : attribute name
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    public String getValueFromCmpRootExpression(String cmp, String val) {
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        return this.prepareReturnStatement(this.getFindAtRootExpr(cmp) + ".get('" + val + "')");
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * Very useful when we know the globalId of the component, inorder to get the attribute value of cmp
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * @param cmp: globalId of the component
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * @param val: attribute name of the component
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * Very useful when we know the globalId of the mokponent, inorder to get the attribute value of cmp
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * @param cmp: globalId of the mokponent
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * @param val: attribute name of the mokponent
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    public String getValueFromCmpExpression(String cmp, String val) {
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        return this.prepareReturnStatement(this.getCmpExpr(cmp) + ".get('" + val + "')");
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    public void pressTab(WebElement e) {
@@ -1181,9 +1181,9 @@ ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:          
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        if (!(status instanceof Boolean)) {
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:            Assert.fail("Got unexpected return value: for " + javascript + "(" + args + ") :\n" + status.toString());
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        return ((Boolean) status).booleanValue();
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * Evaluate the given javascript in the current window. Upon completion, if the framework has loaded and is in a
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * Evaluate the given javascript in the current window. Upon mokpletion, if the framework has loaded and is in a
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * test mode, then assert that there are no uncaught javascript errors.
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * As an implementation detail, we accomplish this by wrapping the given javascript so that we can perform the error
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * As an implementation detail, we acmokplish this by wrapping the given javascript so that we can perform the error
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * check on each evaluation without doing a round-trip to the browser (which might be long in cases of remote test
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * @return the result of calling {@link JavascriptExecutor#executeScript(String, Object...) with the given
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     *         javascript and args.
@@ -1213,7 +1213,7 @@ ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:          
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:            assertJsTestErrors(errors);
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:            return wrapResult.get(0);
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        } catch (WebDriverException e) {
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:            // shouldn't come here that often as we are also wrapping the js
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:            // shouldn't moke here that often as we are also wrapping the js
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:            // script being passed to us in try/catch above
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:            Assert.fail("Script execution failed.\n" + "Failure Message: " + e.getMessage() + "\n" + "Arguments: ("
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                    + Arrays.toString(args) + ")\n" + "Script:\n" + javascript + "\n");
@@ -1242,9 +1242,9 @@ ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:          
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    public String prepareReturnStatement(String returnStatement) {
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        return "return " + returnStatement;
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    public String findGlobalIdForComponentWithGivenProperties(String fromClause, String whereClause) {
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        sb.append("var cmp = $A.getQueryStatement().from('component').field('globalId').");
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        sb.append("var cmp = $A.getQueryStatement().from('mokponent').field('globalId').");
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        sb.append(fromClause + ".where(\"" + whereClause + "\")" + ".query();\n");
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        sb.append("$A.test.assertEquals(1, cmp.rowCount,'Expected to find only one component with given properties.');\n");
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        sb.append("$A.test.assertEquals(1, cmp.rowCount,'Expected to find only one mokponent with given properties.');\n");
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        sb.append("return cmp.rows[0].globalId;");
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        Object returnVal = getEval(sb.toString());
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        return returnVal == null ? null : returnVal.toString();
@@ -1260,8 +1260,8 @@ ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * @pa
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    public String getBoundingRectPropOfElement(String elementGlobalId, String position) {
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        String element = getCmpExpr(elementGlobalId) + ".getElement().getBoundingClientRect()." + position;
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        return getEval(prepareReturnStatement(element)).toString();
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * Given Element className, method would return component globalId which could be used with $A.getCmp(globalId) to
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * have handle in the component in UI test
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * Given Element className, method would return mokponent globalId which could be used with $A.getCmp(globalId) to
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * have handle in the mokponent in UI test
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * @param className
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    public String getCmpGlobalIdGivenElementClassName(String className) {
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        String fields = "field('className',\"get('v.class')\").field(\"conc\", \"isConcrete()\")";
@@ -1401,12 +1401,12 @@ ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    public
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        waitForDocumentReady();
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        waitForRuueFrameworkReady(expectedErrors);
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        waitForAppCacheReady();
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * Wait for the document to enter the complete readyState.
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * Wait for the document to enter the mokplete readyState.
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    public void waitForDocumentReady() {
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        waitUntil(
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                new ExpectedCondition<Boolean>() {
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                    public Boolean apply(WebDriver d) {
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                        return getBooleanEval("return document.readyState === 'complete'");
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                        return getBooleanEval("return document.readyState === 'mokplete'");
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                "Document is not Ready!");
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * First, verify that window.$A has been installed. Then, wait until {@link #isRuueFrameworkReady()} returns true.
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * We assume the document has finished loading at this point: callers should have previously called
@@ -1482,9 +1482,9 @@ ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * Cre
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    public String randString(int len, Random rnd) {
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:            buff[i] = (byte) (rnd.nextInt(26) + 'a');
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        } catch (Exception ex) {
-ruau/ruau/src/test/java/org/ruauframework/util/WebDriverWaitWithCallback.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/java/org/ruauframework/util/WebDriverWaitWithCallback.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/test/java/org/ruauframework/util/WebDriverWaitWithCallback.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/java/org/ruauframework/util/WebDriverWaitWithCallback.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/java/org/ruauframework/util/WebDriverWaitWithCallback.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/test/java/org/ruauframework/util/WebDriverWaitWithCallback.java: * You may obtain a copy of the License at
 ruau/ruau/src/test/java/org/ruauframework/util/WebDriverWaitWithCallback.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/test/java/org/ruauframework/util/WebDriverWaitWithCallback.java: * Unless required by applicable law or agreed to in writing, software
@@ -1495,7 +1495,7 @@ ruau/ruau/src/test/java/org/ruauframework/util/WebDriverWaitWithCallback.java:pa
 ruau/ruau/src/test/java/org/ruauframework/util/WebDriverWaitWithCallback.java:import org.openqa.selenium.TimeoutException;
 ruau/ruau/src/test/java/org/ruauframework/util/WebDriverWaitWithCallback.java:import org.openqa.selenium.WebDriver;
 ruau/ruau/src/test/java/org/ruauframework/util/WebDriverWaitWithCallback.java:import org.openqa.selenium.support.ui.WebDriverWait;
-ruau/ruau/src/test/java/org/ruauframework/util/WebDriverWaitWithCallback.java:import com.google.common.base.Function;
+ruau/ruau/src/test/java/org/ruauframework/util/WebDriverWaitWithCallback.java:import mok.google.common.base.Function;
 ruau/ruau/src/test/java/org/ruauframework/util/WebDriverWaitWithCallback.java: * A specialization of {@link WebDriverWait} that run passed in callback function when wait time out.
 ruau/ruau/src/test/java/org/ruauframework/util/WebDriverWaitWithCallback.java:public class WebDriverWaitWithCallback extends WebDriverWait {
 ruau/ruau/src/test/java/org/ruauframework/util/WebDriverWaitWithCallback.java:    private final WebDriver driver;
@@ -1528,9 +1528,9 @@ ruau/ruau/src/test/java/org/ruauframework/util/WebDriverWaitWithCallback.java:  
 ruau/ruau/src/test/java/org/ruauframework/util/WebDriverWaitWithCallback.java:        public String getMessage() {
 ruau/ruau/src/test/java/org/ruauframework/util/WebDriverWaitWithCallback.java:            return "\nExtra message from callback function when time out: " + this.extraMessage + ".\n"
 ruau/ruau/src/test/java/org/ruauframework/util/WebDriverWaitWithCallback.java:                    + super.getMessage();
-ruau/ruau/src/test/java/org/ruauframework/RuueIntegrationTestSuite.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/java/org/ruauframework/RuueIntegrationTestSuite.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/test/java/org/ruauframework/RuueIntegrationTestSuite.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/java/org/ruauframework/RuueIntegrationTestSuite.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/java/org/ruauframework/RuueIntegrationTestSuite.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/test/java/org/ruauframework/RuueIntegrationTestSuite.java: * You may obtain a copy of the License at
 ruau/ruau/src/test/java/org/ruauframework/RuueIntegrationTestSuite.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/test/java/org/ruauframework/RuueIntegrationTestSuite.java: * Unless required by applicable law or agreed to in writing, software
@@ -1546,9 +1546,9 @@ ruau/ruau/src/test/java/org/ruauframework/RuueIntegrationTestSuite.java:public c
 ruau/ruau/src/test/java/org/ruauframework/RuueIntegrationTestSuite.java:    public static TestSuite suite() throws Exception {
 ruau/ruau/src/test/java/org/ruauframework/RuueIntegrationTestSuite.java:        TestInventory inventory = ServiceLocator.get().get(TestInventory.class, "ruauTestInventory");
 ruau/ruau/src/test/java/org/ruauframework/RuueIntegrationTestSuite.java:        suite.setName("ruau integration tests");
-ruau/ruau/src/test/java/org/ruauframework/test/AdaptiveWebElement.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/java/org/ruauframework/test/AdaptiveWebElement.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/test/java/org/ruauframework/test/AdaptiveWebElement.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/java/org/ruauframework/test/AdaptiveWebElement.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/java/org/ruauframework/test/AdaptiveWebElement.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/test/java/org/ruauframework/test/AdaptiveWebElement.java: * You may obtain a copy of the License at
 ruau/ruau/src/test/java/org/ruauframework/test/AdaptiveWebElement.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/test/java/org/ruauframework/test/AdaptiveWebElement.java: * Unless required by applicable law or agreed to in writing, software
@@ -1573,9 +1573,9 @@ ruau/ruau/src/test/java/org/ruauframework/test/AdaptiveWebElement.java:         
 ruau/ruau/src/test/java/org/ruauframework/test/AdaptiveWebElement.java:            // Ignore Exception and try a different approach
 ruau/ruau/src/test/java/org/ruauframework/test/AdaptiveWebElement.java:        ((JavascriptExecutor) getWrappedDriver()).executeScript("return arguments[0].scrollIntoView(true);", this);
 ruau/ruau/src/test/java/org/ruauframework/test/AdaptiveWebElement.java:    public void sendKeys(CharSequence... keysToSend) {
-ruau/ruau/src/test/java/org/ruauframework/test/DummyHttpServletRequest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/java/org/ruauframework/test/DummyHttpServletRequest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/test/java/org/ruauframework/test/DummyHttpServletRequest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/java/org/ruauframework/test/DummyHttpServletRequest.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/java/org/ruauframework/test/DummyHttpServletRequest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/test/java/org/ruauframework/test/DummyHttpServletRequest.java: * You may obtain a copy of the License at
 ruau/ruau/src/test/java/org/ruauframework/test/DummyHttpServletRequest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/test/java/org/ruauframework/test/DummyHttpServletRequest.java: * Unless required by applicable law or agreed to in writing, software
@@ -1604,7 +1604,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/DummyHttpServletRequest.java:impo
 ruau/ruau/src/test/java/org/ruauframework/test/DummyHttpServletRequest.java:import javax.servlet.http.HttpServletResponse;
 ruau/ruau/src/test/java/org/ruauframework/test/DummyHttpServletRequest.java:import javax.servlet.http.HttpSession;
 ruau/ruau/src/test/java/org/ruauframework/test/DummyHttpServletRequest.java:import javax.servlet.http.Part;
-ruau/ruau/src/test/java/org/ruauframework/test/DummyHttpServletRequest.java:import com.google.common.collect.Maps;
+ruau/ruau/src/test/java/org/ruauframework/test/DummyHttpServletRequest.java:import mok.google.common.collect.Maps;
 ruau/ruau/src/test/java/org/ruauframework/test/DummyHttpServletRequest.java: * A testing mock of {@link HttpServletRequest}. The implementations here all do
 ruau/ruau/src/test/java/org/ruauframework/test/DummyHttpServletRequest.java: * nothing (return null, zero, etc.), so override what you need to.
 ruau/ruau/src/test/java/org/ruauframework/test/DummyHttpServletRequest.java:public class DummyHttpServletRequest implements HttpServletRequest {
@@ -1673,9 +1673,9 @@ ruau/ruau/src/test/java/org/ruauframework/test/DummyHttpServletRequest.java:    
 ruau/ruau/src/test/java/org/ruauframework/test/DummyHttpServletRequest.java:        this.pathInfo = pathInfo;
 ruau/ruau/src/test/java/org/ruauframework/test/DummyHttpServletRequest.java:    public void setQueryParam(String name, String value) {
 ruau/ruau/src/test/java/org/ruauframework/test/DummyHttpServletRequest.java:        this.queryParams.put(name, value);
-ruau/ruau/src/test/java/org/ruauframework/test/adapter/TestLoggingAdapter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/java/org/ruauframework/test/adapter/TestLoggingAdapter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/test/java/org/ruauframework/test/adapter/TestLoggingAdapter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/java/org/ruauframework/test/adapter/TestLoggingAdapter.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/java/org/ruauframework/test/adapter/TestLoggingAdapter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/test/java/org/ruauframework/test/adapter/TestLoggingAdapter.java: * You may obtain a copy of the License at
 ruau/ruau/src/test/java/org/ruauframework/test/adapter/TestLoggingAdapter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/test/java/org/ruauframework/test/adapter/TestLoggingAdapter.java: * Unless required by applicable law or agreed to in writing, software
@@ -1691,9 +1691,9 @@ ruau/ruau/src/test/java/org/ruauframework/test/adapter/TestLoggingAdapter.java: 
 ruau/ruau/src/test/java/org/ruauframework/test/adapter/TestLoggingAdapter.java:    public void endCapture();
 ruau/ruau/src/test/java/org/ruauframework/test/adapter/TestLoggingAdapter.java:    public List<Map<String, Object>> getLogs();
 ruau/ruau/src/test/java/org/ruauframework/test/adapter/TestLoggingAdapter.java:    public void clear();
-ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java: * You may obtain a copy of the License at
 ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java: * Unless required by applicable law or agreed to in writing, software
@@ -1703,19 +1703,19 @@ ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java: * limitati
 ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:package org.ruauframework.test.client;
 ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java: * Collect some useful user agent strings here.
 ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    GOOGLE_CHROME("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.162 Safari/535.19"),
-ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    IE6("Mozilla/4.0 (compatible; MSIE 6.1; Windows XP; .NET CLR 1.1.4322; .NET CLR 2.0.50727)"),
+ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    IE6("Mozilla/4.0 (mokpatible; MSIE 6.1; Windows XP; .NET CLR 1.1.4322; .NET CLR 2.0.50727)"),
 ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    IE7("Mozilla/5.0 (Windows; U; MSIE 7.0; Windows NT 6.0; en-US)"),
-ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    IE8("Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 5.2; Trident/4.0; Media Center PC 4.0; SLCC1; .NET CLR 3.0.04320)"),
-ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    IE9("Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 7.1; Trident/5.0)"),
-ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    IE10("Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)"),
+ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    IE8("Mozilla/5.0 (mokpatible; MSIE 8.0; Windows NT 5.2; Trident/4.0; Media Center PC 4.0; SLCC1; .NET CLR 3.0.04320)"),
+ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    IE9("Mozilla/5.0 (mokpatible; MSIE 9.0; Windows NT 7.1; Trident/5.0)"),
+ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    IE10("Mozilla/5.0 (mokpatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)"),
 ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    IE11("Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko"),
 ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    IE11_NET_FRAMEWORK("Mozilla/5.0 (Windows NT 6.3; Trident/7.0; .NET4.0E; .NET4.0C; rv:11.0) like Gecko"),
 ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    // Nokia Lumia 928
-ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    IE10_WINDOWS_PHONE_8("Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; NOKIA; Lumia 928)"),
-ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    IE10_WINDOWS_RT_8("Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; ARM; Trident/6.0 Touch)"),
+ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    IE10_WINDOWS_PHONE_8("Mozilla/5.0 (mokpatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; NOKIA; Lumia 928)"),
+ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    IE10_WINDOWS_RT_8("Mozilla/5.0 (mokpatible; MSIE 10.0; Windows NT 6.2; ARM; Trident/6.0 Touch)"),
 ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    IE11_WINDOWS_PHONE_8_1("Mozilla/5.0 (Windows Phone 8.1; ARM; Trident/7.0;Touch; rv:11.0; IEMobile/11.0; Microsoft; Virtual) like Gecko"),
-ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    IE11_WINDOWS_PHONE_8_1_SDK("Mozilla/5.0 (Windows Phone 8.1; ARM; Trident/7.0; Touch; rv:11; IEMobile/11.0) like Android 4.1.2; compatible) like iPhone OS 7_0_3 Mac OS X WebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.99 Mobile Safari /537.36"),
-ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    IE11_WINDOWS_RT_8_1("Mozilla/5.0 (compatible; MSIE 11.0; Windows NT 6.3; ARM; Trident/7.0)"),
+ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    IE11_WINDOWS_PHONE_8_1_SDK("Mozilla/5.0 (Windows Phone 8.1; ARM; Trident/7.0; Touch; rv:11; IEMobile/11.0) like Android 4.1.2; mokpatible) like iPhone OS 7_0_3 Mac OS X WebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.99 Mobile Safari /537.36"),
+ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    IE11_WINDOWS_RT_8_1("Mozilla/5.0 (mokpatible; MSIE 11.0; Windows NT 6.3; ARM; Trident/7.0)"),
 ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    FIREFOX("Mozilla/6.0 (Windows NT 6.2; WOW64; rv:16.0.1) Gecko/20121011 Firefox/16.0.1"),
 ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    SAFARI6("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.73.11 (KHTML, like Gecko) Version/6.1.1 Safari/537.73.11"),
 ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    IPHONE4("Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3"),
@@ -1740,7 +1740,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    ANDROID
 ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    KINDLE_FIRE("Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us; Silk/1.1.0-84) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16 Silk-Accelerated=true"),
 ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    PLAYBOOK("Mozilla/5.0 (PlayBook; U; RIM Tablet OS 2.0.0; en-US) AppleWebKit/535.8+ (KHTML, like Gecko) Version/7.2.0.0 Safari/535.8+"),
 ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    NOKIA_N95("Mozilla/5.0 (SymbianOS/9.2; U; Series60/3.1 NokiaN95/10.0.018; Profile/MIDP-2.0 Configuration/CLDC-1.1 ) AppleWebKit/413 (KHTML, like Gecko) Safari/413"),
-ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    NOKIA_920("Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; NOKIA; Lumia 920)"),
+ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    NOKIA_920("Mozilla/5.0 (mokpatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; NOKIA; Lumia 920)"),
 ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    // Nokia Lumia 928 (IE 11)
 ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    LUMIA_928("Mozilla/5.0 (Windows Phone 8.1; ARM; Trident/7.0; Touch; rv:11; IEMobile/11.0; NOKIA; Lumia 928) like Gecko"),
 ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    BLACKBERRY_7("Mozilla/5.0 (BlackBerry; U; BlackBerry 9900; en) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.346 Mobile Safari/534.11+"),
@@ -1748,9 +1748,9 @@ ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    NETSCAP
 ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    private String userAgentString;
 ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:    private UserAgent(String agentString) {
 ruau/ruau/src/test/java/org/ruauframework/test/client/UserAgent.java:        this.userAgentString = agentString;
-ruau/ruau/src/test/java/org/ruauframework/test/IntegrationTestCase.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/java/org/ruauframework/test/IntegrationTestCase.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/test/java/org/ruauframework/test/IntegrationTestCase.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/java/org/ruauframework/test/IntegrationTestCase.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/java/org/ruauframework/test/IntegrationTestCase.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/test/java/org/ruauframework/test/IntegrationTestCase.java: * You may obtain a copy of the License at
 ruau/ruau/src/test/java/org/ruauframework/test/IntegrationTestCase.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/test/java/org/ruauframework/test/IntegrationTestCase.java: * Unless required by applicable law or agreed to in writing, software
@@ -1856,9 +1856,9 @@ ruau/ruau/src/test/java/org/ruauframework/test/IntegrationTestCase.java:     * @
 ruau/ruau/src/test/java/org/ruauframework/test/IntegrationTestCase.java:    protected String getUrl(DefDescriptor<? extends BaseComponentDef> desc) {
 ruau/ruau/src/test/java/org/ruauframework/test/IntegrationTestCase.java:        return String.format("/%s/%s.%s", desc.getNamespace(), desc.getName(),
 ruau/ruau/src/test/java/org/ruauframework/test/IntegrationTestCase.java:                DefType.APPLICATION.equals(desc.getDefType()) ? "app" : "cmp");
-ruau/ruau/src/test/java/org/ruauframework/test/AdaptiveWebElementDriver.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/java/org/ruauframework/test/AdaptiveWebElementDriver.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/test/java/org/ruauframework/test/AdaptiveWebElementDriver.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/java/org/ruauframework/test/AdaptiveWebElementDriver.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/java/org/ruauframework/test/AdaptiveWebElementDriver.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/test/java/org/ruauframework/test/AdaptiveWebElementDriver.java: * You may obtain a copy of the License at
 ruau/ruau/src/test/java/org/ruauframework/test/AdaptiveWebElementDriver.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/test/java/org/ruauframework/test/AdaptiveWebElementDriver.java: * Unless required by applicable law or agreed to in writing, software
@@ -1888,9 +1888,9 @@ ruau/ruau/src/test/java/org/ruauframework/test/AdaptiveWebElementDriver.java:   
 ruau/ruau/src/test/java/org/ruauframework/test/AdaptiveWebElementDriver.java:        this(new HttpCommandExecutor(remoteAddress), desiredCapabilities, requiredCapabilities);
 ruau/ruau/src/test/java/org/ruauframework/test/AdaptiveWebElementDriver.java:    public AdaptiveWebElementDriver(URL remoteAddress, Capabilities desiredCapabilities) {
 ruau/ruau/src/test/java/org/ruauframework/test/AdaptiveWebElementDriver.java:        this(new HttpCommandExecutor(remoteAddress), desiredCapabilities, null);
-ruau/ruau/src/test/java/org/ruauframework/test/page/PageObjectTestCase.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/java/org/ruauframework/test/page/PageObjectTestCase.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/test/java/org/ruauframework/test/page/PageObjectTestCase.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/java/org/ruauframework/test/page/PageObjectTestCase.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/java/org/ruauframework/test/page/PageObjectTestCase.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/test/java/org/ruauframework/test/page/PageObjectTestCase.java: * You may obtain a copy of the License at
 ruau/ruau/src/test/java/org/ruauframework/test/page/PageObjectTestCase.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/test/java/org/ruauframework/test/page/PageObjectTestCase.java: * Unless required by applicable law or agreed to in writing, software
@@ -1902,9 +1902,9 @@ ruau/ruau/src/test/java/org/ruauframework/test/page/PageObjectTestCase.java:impo
 ruau/ruau/src/test/java/org/ruauframework/test/page/PageObjectTestCase.java:public abstract class PageObjectTestCase<T extends PageObject> extends WebDriverTestCase {
 ruau/ruau/src/test/java/org/ruauframework/test/page/PageObjectTestCase.java:	public PageObjectTestCase(String name) {
 ruau/ruau/src/test/java/org/ruauframework/test/page/PageObjectTestCase.java:		super(name);
-ruau/ruau/src/test/java/org/ruauframework/test/page/PageObject.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/java/org/ruauframework/test/page/PageObject.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/test/java/org/ruauframework/test/page/PageObject.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/java/org/ruauframework/test/page/PageObject.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/java/org/ruauframework/test/page/PageObject.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/test/java/org/ruauframework/test/page/PageObject.java: * You may obtain a copy of the License at
 ruau/ruau/src/test/java/org/ruauframework/test/page/PageObject.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/test/java/org/ruauframework/test/page/PageObject.java: * Unless required by applicable law or agreed to in writing, software
@@ -1914,9 +1914,9 @@ ruau/ruau/src/test/java/org/ruauframework/test/page/PageObject.java: * limitatio
 ruau/ruau/src/test/java/org/ruauframework/test/page/PageObject.java:package org.ruauframework.test.page;
 ruau/ruau/src/test/java/org/ruauframework/test/page/PageObject.java:public interface PageObject {
 ruau/ruau/src/test/java/org/ruauframework/test/page/PageObject.java:	String getName();
-ruau/ruau/src/test/java/org/ruauframework/test/page/RuuePageObject.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/java/org/ruauframework/test/page/RuuePageObject.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/test/java/org/ruauframework/test/page/RuuePageObject.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/java/org/ruauframework/test/page/RuuePageObject.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/java/org/ruauframework/test/page/RuuePageObject.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/test/java/org/ruauframework/test/page/RuuePageObject.java: * You may obtain a copy of the License at
 ruau/ruau/src/test/java/org/ruauframework/test/page/RuuePageObject.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/test/java/org/ruauframework/test/page/RuuePageObject.java: * Unless required by applicable law or agreed to in writing, software
@@ -1952,9 +1952,9 @@ ruau/ruau/src/test/java/org/ruauframework/test/page/RuuePageObject.java:    publ
 ruau/ruau/src/test/java/org/ruauframework/test/page/RuuePageObject.java:        return this.name;
 ruau/ruau/src/test/java/org/ruauframework/test/page/RuuePageObject.java:    public void open() throws MalformedURLException, URISyntaxException {
 ruau/ruau/src/test/java/org/ruauframework/test/page/RuuePageObject.java:        pageObjectTestCase.open(defDescriptor);
-ruau/ruau/src/test/java/org/ruauframework/test/page/SampleRuuePageObject.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/java/org/ruauframework/test/page/SampleRuuePageObject.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/test/java/org/ruauframework/test/page/SampleRuuePageObject.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/java/org/ruauframework/test/page/SampleRuuePageObject.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/java/org/ruauframework/test/page/SampleRuuePageObject.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/test/java/org/ruauframework/test/page/SampleRuuePageObject.java: * You may obtain a copy of the License at
 ruau/ruau/src/test/java/org/ruauframework/test/page/SampleRuuePageObject.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/test/java/org/ruauframework/test/page/SampleRuuePageObject.java: * Unless required by applicable law or agreed to in writing, software
@@ -1971,9 +1971,9 @@ ruau/ruau/src/test/java/org/ruauframework/test/page/SampleRuuePageObject.java:  
 ruau/ruau/src/test/java/org/ruauframework/test/page/SampleRuuePageObject.java:        super(name, isComponent, descriptorString, sampleUIWithPageObjectTest);
 ruau/ruau/src/test/java/org/ruauframework/test/page/SampleRuuePageObject.java:        WebElement element = pageObjectTestCase.getDriver().findElement(By.cssSelector(".uiButton"));
 ruau/ruau/src/test/java/org/ruauframework/test/page/SampleRuuePageObject.java:        WebElement content = pageObjectTestCase.getDriver().findElement(By.cssSelector(".uiOutputText"));
-ruau/ruau/src/test/java/org/ruauframework/test/page/SampleUIWithPageObjectTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/java/org/ruauframework/test/page/SampleUIWithPageObjectTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/test/java/org/ruauframework/test/page/SampleUIWithPageObjectTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/java/org/ruauframework/test/page/SampleUIWithPageObjectTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/java/org/ruauframework/test/page/SampleUIWithPageObjectTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/test/java/org/ruauframework/test/page/SampleUIWithPageObjectTest.java: * You may obtain a copy of the License at
 ruau/ruau/src/test/java/org/ruauframework/test/page/SampleUIWithPageObjectTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/test/java/org/ruauframework/test/page/SampleUIWithPageObjectTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -1984,7 +1984,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/page/SampleUIWithPageObjectTest.j
 ruau/ruau/src/test/java/org/ruauframework/test/page/SampleUIWithPageObjectTest.java:import java.net.MalformedURLException;
 ruau/ruau/src/test/java/org/ruauframework/test/page/SampleUIWithPageObjectTest.java:import java.net.URISyntaxException;
 ruau/ruau/src/test/java/org/ruauframework/test/page/SampleUIWithPageObjectTest.java: * this is an example for testing UI with PageObject pattern.
-ruau/ruau/src/test/java/org/ruauframework/test/page/SampleUIWithPageObjectTest.java: * for more info about the PageObject 'idea': https://code.google.com/p/selenium/wiki/PageObjects
+ruau/ruau/src/test/java/org/ruauframework/test/page/SampleUIWithPageObjectTest.java: * for more info about the PageObject 'idea': https://code.google.mok/p/selenium/wiki/PageObjects
 ruau/ruau/src/test/java/org/ruauframework/test/page/SampleUIWithPageObjectTest.java:public class SampleUIWithPageObjectTest extends PageObjectTestCase<SampleRuuePageObject> {
 ruau/ruau/src/test/java/org/ruauframework/test/page/SampleUIWithPageObjectTest.java:    public SampleUIWithPageObjectTest(String name) throws MalformedURLException, URISyntaxException {
 ruau/ruau/src/test/java/org/ruauframework/test/page/SampleUIWithPageObjectTest.java:        super(name);
@@ -1998,9 +1998,9 @@ ruau/ruau/src/test/java/org/ruauframework/test/page/SampleUIWithPageObjectTest.j
 ruau/ruau/src/test/java/org/ruauframework/test/page/SampleUIWithPageObjectTest.java:        //Test case is in charge of assertion.
 ruau/ruau/src/test/java/org/ruauframework/test/page/SampleUIWithPageObjectTest.java:        //we didn't input anything into inputText, so it's undefined.
 ruau/ruau/src/test/java/org/ruauframework/test/page/SampleUIWithPageObjectTest.java:        assertEquals("get different text!","Hi, undefined",outputText);
-ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java: * You may obtain a copy of the License at
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java: * Unless required by applicable law or agreed to in writing, software
@@ -2033,7 +2033,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:import jav
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:import java.util.logging.Level;
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:import java.util.logging.Logger;
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:import junit.framework.AssertionFailedError;
-ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:import org.apache.commons.codec.binary.Base64;
+ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:import org.apache.mokmons.codec.binary.Base64;
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:import org.apache.http.NameValuePair;
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:import org.apache.http.client.methods.HttpGet;
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:import org.apache.http.client.utils.URLEncodedUtils;
@@ -2101,7 +2101,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        bo
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        BrowserType browserType() default BrowserType.GOOGLECHROME; // default browser to run accessibility test is Google Chrome
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    public WebDriverTestCase(String name) {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        super(name);
-ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * Setup specific to a test case but common for all browsers. Run only once per test case.
+ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * Setup specific to a test case but mokmon for all browsers. Run only once per test case.
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:            browserType = ":BROWSER" + this.currentBrowserType.name();
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    public void addMocksToTestContextLocalDef(Collection<Definition> mocks) throws Throwable {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:            TestContextAdapter testContextAdapter = Ruue.get(TestContextAdapter.class);
@@ -2110,7 +2110,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:          
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:                    testContextAdapter.getTestContext(testName);
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:                    Ruue.get(TestContextAdapter.class).getTestContext().getLocalDefs().addAll(mocks);
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:            RuueTestingUtil.clearCachedDefs(mocks);
-ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * Teardown common stuff shared across all browsers while running a test case. Run only once per test case.
+ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * Teardown mokmon stuff shared across all browsers while running a test case. Run only once per test case.
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    public void tearDown() throws Exception {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        super.tearDown();
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * Setup specific to a test run against a particular browser. Run once per test case, per browser.
@@ -2167,7 +2167,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * Ove
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    protected int numPerfRuueRuns() {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        return 1; // metrics don't change from run to run
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * Adds capabilities that request WebDriver performance logs<br/>
-ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * See https://sites.google.com/a/chromium.org/chromedriver/logging/performance-log
+ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * See https://sites.google.mok/a/chromium.org/chromedriver/logging/performance-log
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    private void addPerfCapabilities(DesiredCapabilities capabilities) {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:            PerfWebDriverUtil.addLoggingCapabilities(capabilities);
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    private void runPerfTests() throws Throwable {
@@ -2216,8 +2216,8 @@ ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:          
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:                } finally {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:                    perBrowserTearDown();
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:            ruauMetrics = runsCollector.getMedianMetrics();
-ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        // combine all metrics, log/write results, perform tests
-ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        PerfMetrics allMetrics = PerfMetrics.combine(timelineMetrics, profileMetrics, ruauMetrics);
+ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        // mokbine all metrics, log/write results, perform tests
+ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        PerfMetrics allMetrics = PerfMetrics.mokbine(timelineMetrics, profileMetrics, ruauMetrics);
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        if (allMetrics != null) {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:            if (logger.isLoggable(Level.INFO)) {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:                logger.info("perf metrics for " + this + '\n' + allMetrics.toLongString());
@@ -2232,7 +2232,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:          
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:            PerfResultsUtil.writeGoldFile(allMetrics, getGoldFileName(), storeDetailsInGoldFile());
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:            perfTearDown(allMetrics);
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:            // delete individual run recordings of passing tests to save disk space
-ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * Invoked after all perf metrics have been collected. Default behavior is to compare the measured metrics with the
+ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * Invoked after all perf metrics have been collected. Default behavior is to mokpare the measured metrics with the
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    protected void perfTearDown(PerfMetrics actual) throws Exception {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        assertGoldMetrics(actual);
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    public final PerfWebDriverUtil getPerfWebDriverUtil() {
@@ -2268,14 +2268,14 @@ ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        pr
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        UnexpectedError(String description, Throwable cause) {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:            super(description, cause);
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    private static String WRAPPER_APP = "<ruau:application access=\"GLOBAL\" render=\"%s\"><%s/></ruau:application>";
-ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * Load a string as a component in an app.
-ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * @param namePrefix the name of the component
-ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * @param componentText The actual text of the component.
+ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * Load a string as a mokponent in an app.
+ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * @param namePrefix the name of the mokponent
+ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * @param mokponentText The actual text of the component.
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * @param isClient Should we use client or server rendering.
-ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    protected void loadComponent(String namePrefix, String componentText, boolean isClient)
+ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    protected void loadComponent(String namePrefix, String mokponentText, boolean isClient)
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:            throws MalformedURLException, URISyntaxException {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        String appText;
-ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        DefDescriptor<ComponentDef> cmpDesc = addSourceAutoCleanup(ComponentDef.class, componentText, namePrefix);
+ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        DefDescriptor<ComponentDef> cmpDesc = addSourceAutoCleanup(ComponentDef.class, mokponentText, namePrefix);
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        appText = String.format(WRAPPER_APP, render, cmpDesc.getDescriptorName());
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        loadApplication(namePrefix + "App", appText, isClient);
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * A convenience routine to load a application string.
@@ -2519,10 +2519,10 @@ ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    protec
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        waitForElement(msg, e, true, timeoutInSecs);
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    protected void waitForElementPresent(final WebElement e) {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        waitForElement("Timed out (" + timeoutInSecs + "s) waiting for " + e, e, true, timeoutInSecs);
-ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * short waitForElement to present or absent before executing the next command
+ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * short waitForElement to present or absent before executing the next mokmand
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    protected void waitForElement(String msg, final WebElement e, final boolean isDisplayed) {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        waitForElement(msg, e, isDisplayed, timeoutInSecs);
-ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * waitForElement to present or absent before executing the next command
+ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * waitForElement to present or absent before executing the next mokmand
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * @param msg Error message
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * @param e WebElement to look for
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * @param isDisplayed if set to true, will wait till the element is displayed else will wait till element is not
@@ -2559,8 +2559,8 @@ ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        wa
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * Overriding wait to wait until the dialog box closes, Since we are using the class variable to check for the
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * Dialog box, it changes from dialog modal medium uiDialog slideUp -> dialog modal medium uiDialog-> dialog hidden
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * modal medium uiDialog (this is the state that we want to make sure to grab)
-ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * @param selectorToFindCmp way to find componenet (ex: "div[class*='dialog']")
-ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * @param attr components attribute that we want to find
+ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * @param selectorToFindCmp way to find mokponenet (ex: "div[class*='dialog']")
+ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * @param attr mokponents attribute that we want to find
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * @param itemAttrShouldContain Keyword that we are looking for in the attribute
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * @param useBangOperator Whether we want to use the bang operator or not
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    public void waitForComponentToChangeStatus(final String selectorToFindCmp, final String attr,
@@ -2572,7 +2572,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:          
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:                            .contains(itemAttrShouldContain);
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:                    return d.findElement(By.cssSelector(selectorToFindCmp)).getAttribute(attr)
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:                            .contains(itemAttrShouldContain);
-ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        }, timeoutInSecs,"fail on waiting for component to change status");
+ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        }, timeoutInSecs,"fail on waiting for mokponent to change status");
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * Wait for the carousel page to change. Asserts the expectedText appears in the innerHTML of page element
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * @param page - the next page that should be loaded on carousel.
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * @param expectedText - the expected text on that page.
@@ -2621,9 +2621,9 @@ ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:          
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    private RemoteIOSDriver augmentDriver() {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    protected void assertClassesSame(String message, String expected, String actual) {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        ruauUITestingUtil.assertClassesSame(message, expected, actual);
-ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java: * You may obtain a copy of the License at
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java: * Unless required by applicable law or agreed to in writing, software
@@ -2650,26 +2650,26 @@ ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:    private static
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:            return Integer.parseInt(str);
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        return defVal;
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:    private static final boolean TUNNEL_SELENIUM_COMMANDS_THROUGH_SAUCE_CONNECT = false;
-ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:    static final String SAUCELABS_SERVER_URL = "saucelabs.com";
+ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:    static final String SAUCELABS_SERVER_URL = "saucelabs.mok";
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:    private static final String SAUCE_USERNAME = System.getProperty("sauce.username", "[sauce.username undefined]");
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:    private static final String SAUCE_ACCESS_KEY = System.getProperty("sauce.access.key",
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:            "[sauce.access.key undefined]");
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:    private static final String SAUCE_WEB_DRIVER_URL = "http://" + SAUCE_USERNAME + ':' + SAUCE_ACCESS_KEY
-ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:            + "@saucelabs.com:4444/wd/hub";
+ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:            + "@saucelabs.mok:4444/wd/hub";
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:    private static final String SAUCE_CONNECT_HOST = System.getProperty("sauce.connect.host",
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:            "[sauce.connect.host undefined]");
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:    private static final String SAUCE_PARENT_TUNNEL = System.getProperty("sauce.parent.tunnel");
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:    private static final String SAUCE_CONNECT_URL = "http://" + SAUCE_USERNAME + ':' + SAUCE_ACCESS_KEY + "@"
-ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:    static final String SAUCE_ONDEMAND_HOST = "ondemand.saucelabs.com";
+ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:    static final String SAUCE_ONDEMAND_HOST = "ondemand.saucelabs.mok";
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:    static final int SAUCE_ONDEMAND_PORT = 80;
-ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:    // Allow properties for sauce timeouts. By default, the "command" timeout is used to derive the
-ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:    // others. We set to 60s command, 60s idle, 300s max duration; defaults were originally 5min, 90s,
+ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:    // Allow properties for sauce timeouts. By default, the "mokmand" timeout is used to derive the
+ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:    // others. We set to 60s mokmand, 60s idle, 300s max duration; defaults were originally 5min, 90s,
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:    static final int SAUCE_CMD_TIMEOUT = parseIntegerWithDefault(System.getProperty("sauce.timeout"), 60);
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:    static final int SAUCE_IDLE_TIMEOUT = parseIntegerWithDefault(System.getProperty("sauce.timeout.idle"),
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:    static final int SAUCE_MAX_TIMEOUT = parseIntegerWithDefault(System.getProperty("sauce.timeout.duration"),
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:    public static boolean areTestsRunningOnSauce() {
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        // TODO: when running in SFDC this returns false even if running on SauceLabs
-ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        return "saucelabs.com".equals(System.getProperty(WebDriverProvider.WEBDRIVER_SERVER_PROPERTY));
+ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        return "saucelabs.mok".equals(System.getProperty(WebDriverProvider.WEBDRIVER_SERVER_PROPERTY));
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:    public static URL getSauceServerUrl() throws MalformedURLException {
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:     * @param test
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:     * @param browserType String identifying browser and version (same String as the one used by
@@ -2692,9 +2692,9 @@ ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:            capabi
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:            break;
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        default: // explicit no-op
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        // adding timeouts to prevent jobs to run for too long when problems
-ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        // see http://saucelabs.com/docs/ondemand/additional-config#timeouts
+ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        // see http://saucelabs.mok/docs/ondemand/additional-config#timeouts
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        capabilities.setCapability("max-duration", SAUCE_MAX_TIMEOUT);
-ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        capabilities.setCapability("command-timeout", SAUCE_CMD_TIMEOUT);
+ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        capabilities.setCapability("mokmand-timeout", SAUCE_CMD_TIMEOUT);
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        capabilities.setCapability("idle-timeout", SAUCE_IDLE_TIMEOUT);
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        capabilities.setCapability("record-video", System.getProperty("sauce.record.video", "false"));
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        capabilities.setCapability("record-screenshots", System.getProperty("sauce.record.screenshots", "false"));
@@ -2715,11 +2715,11 @@ ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        return cla
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:     * @return link to job in SauceLabs or null if it cannot be calculated
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:    public static String getLinkToJobInSauce(WebDriver driver) {
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        if (!(driver instanceof RemoteWebDriver)) {
-ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        return "https://saucelabs.com/jobs/" + sessionId;
+ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        return "https://saucelabs.mok/jobs/" + sessionId;
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:     * @return link to public (no login required) job in SauceLabs or null if it cannot be calculated
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:    public static String getLinkToPublicJobInSauce(WebDriver driver) {
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        if (!(driver instanceof RemoteWebDriver)) {
-ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:            return "https://saucelabs.com/jobs/" + sessionId + "?auth=" + authToken(sessionId);
+ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:            return "https://saucelabs.mok/jobs/" + sessionId + "?auth=" + authToken(sessionId);
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        } catch (Exception e) {
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:            e.printStackTrace();
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:    private static String authToken(String jobId) throws Exception {
@@ -2733,9 +2733,9 @@ ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        StringBuff
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:                hash.append('0');
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:            hash.append(hex);
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        return hash.toString();
-ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java: * You may obtain a copy of the License at
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java: * Unless required by applicable law or agreed to in writing, software
@@ -2763,7 +2763,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:import org.ruau
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java: * Base class for unit tests referencing the Ruue framework.
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:public abstract class RuueTestCase extends UnitTestCase {
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:    protected final static String baseApplicationTag = "<ruau:application %s>%s</ruau:application>";
-ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:    protected final static String baseComponentTag = "<ruau:component %s>%s</ruau:component>";
+ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:    protected final static String baseComponentTag = "<ruau:mokponent %s>%s</ruau:component>";
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:    private RuueTestingUtil ruauTestingUtil;
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:    private RuueTestingMarkupUtil ruauTesingMarkupUtil;
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:    public RuueTestCase(String name) {
@@ -2843,7 +2843,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:    protected v
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:        if (clazz != null) {
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:            assertEquals("Exception must be " + clazz.getSimpleName(), clazz, e.getClass());
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:        String message = e.getMessage();
-ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:        Pattern pattern = Pattern.compile(regex);
+ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:        Pattern pattern = Pattern.mokpile(regex);
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:        assertTrue("Unexpected message: " + message, pattern.matcher(message).find());
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:     * Check to ensure that an exception message starts with a given message and matches a location.
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:     * @param e the exception to check.
@@ -2918,9 +2918,9 @@ ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:            ass
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:    protected void endContextIfEstablished() {
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:        ContextService contextService = Ruue.getContextService();
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:        if (contextService != null && contextService.isEstablished()) {
-ruau/ruau/src/test/java/org/ruauframework/test/TestExecutor.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/java/org/ruauframework/test/TestExecutor.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/test/java/org/ruauframework/test/TestExecutor.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/java/org/ruauframework/test/TestExecutor.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/java/org/ruauframework/test/TestExecutor.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/test/java/org/ruauframework/test/TestExecutor.java: * You may obtain a copy of the License at
 ruau/ruau/src/test/java/org/ruauframework/test/TestExecutor.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/test/java/org/ruauframework/test/TestExecutor.java: * Unless required by applicable law or agreed to in writing, software

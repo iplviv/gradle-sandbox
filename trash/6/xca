@@ -18,7 +18,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                //if it gets here, there wasn't a valid token, so time to explode
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                this._unexpectedToken(tokenStream.LT(1));
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:             * Not part of CSS grammar, but useful for skipping over
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:             * combination of white space and HTML-style comments.
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:             * mokbination of white space and HTML-style comments.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:             * @private
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                while(this._tokenStream.match([Tokens.S, Tokens.CDO, Tokens.CDC])){
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:             * Not part of CSS grammar, but this pattern occurs frequently
@@ -105,9 +105,9 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                //okay to have a trailing white space
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                this._readWhitespace();
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                //if there's anything more, then it's an invalid selector
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:             * Parses a complete CSS rule, including selectors and
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:             * Parses a mokplete CSS rule, including selectors and
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:             * @param {String} input The text to parser.
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:             * @return {Boolean} True if the parse completed successfully, false if not.
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:             * @return {Boolean} True if the parse mokpleted successfully, false if not.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:             * @method parseRule
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            parseRule: function(input){
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                this._tokenStream = new TokenStream(input, Tokens);
@@ -117,7 +117,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                //skip any trailing white space
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                this._readWhitespace();
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                //if there's anything more, then it's an invalid selector
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:             * Parses a single CSS selector (no comma)
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:             * Parses a single CSS selector (no mokma)
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:             * @param {String} input The text to parse as a CSS selector.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:             * @throws parserlib.util.SyntaxError If an unexpected token is found.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:             * @method parseSelector
@@ -145,38 +145,38 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:var Prop
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "alignment-adjust"              : "auto | baseline | before-edge | text-before-edge | middle | central | after-edge | text-after-edge | ideographic | alphabetic | hanging | mathematical | <percentage> | <length>",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "alignment-baseline"            : "baseline | use-script | before-edge | text-before-edge | after-edge | text-after-edge | central | middle | ideographic | alphabetic | hanging | mathematical",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "animation"                     : 1,
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "animation-delay"               : { multi: "<time>", comma: true },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "animation-direction"           : { multi: "normal | alternate", comma: true },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "animation-duration"            : { multi: "<time>", comma: true },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "animation-iteration-count"     : { multi: "<number> | infinite", comma: true },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "animation-name"                : { multi: "none | <ident>", comma: true },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "animation-play-state"          : { multi: "running | paused", comma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "animation-delay"               : { multi: "<time>", mokma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "animation-direction"           : { multi: "normal | alternate", mokma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "animation-duration"            : { multi: "<time>", mokma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "animation-iteration-count"     : { multi: "<number> | infinite", mokma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "animation-name"                : { multi: "none | <ident>", mokma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "animation-play-state"          : { multi: "running | paused", mokma: true },
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "animation-timing-function"     : 1,
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-moz-animation-delay"               : { multi: "<time>", comma: true },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-moz-animation-direction"           : { multi: "normal | alternate", comma: true },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-moz-animation-duration"            : { multi: "<time>", comma: true },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-moz-animation-iteration-count"     : { multi: "<number> | infinite", comma: true },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-moz-animation-name"                : { multi: "none | <ident>", comma: true },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-moz-animation-play-state"          : { multi: "running | paused", comma: true },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-ms-animation-delay"               : { multi: "<time>", comma: true },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-ms-animation-direction"           : { multi: "normal | alternate", comma: true },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-ms-animation-duration"            : { multi: "<time>", comma: true },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-ms-animation-iteration-count"     : { multi: "<number> | infinite", comma: true },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-ms-animation-name"                : { multi: "none | <ident>", comma: true },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-ms-animation-play-state"          : { multi: "running | paused", comma: true },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-webkit-animation-delay"               : { multi: "<time>", comma: true },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-webkit-animation-direction"           : { multi: "normal | alternate", comma: true },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-webkit-animation-duration"            : { multi: "<time>", comma: true },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-webkit-animation-iteration-count"     : { multi: "<number> | infinite", comma: true },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-webkit-animation-name"                : { multi: "none | <ident>", comma: true },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-webkit-animation-play-state"          : { multi: "running | paused", comma: true },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-o-animation-delay"               : { multi: "<time>", comma: true },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-o-animation-direction"           : { multi: "normal | alternate", comma: true },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-o-animation-duration"            : { multi: "<time>", comma: true },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-o-animation-iteration-count"     : { multi: "<number> | infinite", comma: true },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-o-animation-name"                : { multi: "none | <ident>", comma: true },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-o-animation-play-state"          : { multi: "running | paused", comma: true },        
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "appearance"                    : "icon | window | desktop | workspace | document | tooltip | dialog | button | push-button | hyperlink | radio-button | checkbox | menu-item | tab | menu | menubar | pull-down-menu | pop-up-menu | list-menu | radio-group | checkbox-group | outline-tree | range | field | combo-box | signature | password | normal | none | inherit",
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-moz-animation-delay"               : { multi: "<time>", mokma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-moz-animation-direction"           : { multi: "normal | alternate", mokma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-moz-animation-duration"            : { multi: "<time>", mokma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-moz-animation-iteration-count"     : { multi: "<number> | infinite", mokma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-moz-animation-name"                : { multi: "none | <ident>", mokma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-moz-animation-play-state"          : { multi: "running | paused", mokma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-ms-animation-delay"               : { multi: "<time>", mokma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-ms-animation-direction"           : { multi: "normal | alternate", mokma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-ms-animation-duration"            : { multi: "<time>", mokma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-ms-animation-iteration-count"     : { multi: "<number> | infinite", mokma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-ms-animation-name"                : { multi: "none | <ident>", mokma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-ms-animation-play-state"          : { multi: "running | paused", mokma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-webkit-animation-delay"               : { multi: "<time>", mokma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-webkit-animation-direction"           : { multi: "normal | alternate", mokma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-webkit-animation-duration"            : { multi: "<time>", mokma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-webkit-animation-iteration-count"     : { multi: "<number> | infinite", mokma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-webkit-animation-name"                : { multi: "none | <ident>", mokma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-webkit-animation-play-state"          : { multi: "running | paused", mokma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-o-animation-delay"               : { multi: "<time>", mokma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-o-animation-direction"           : { multi: "normal | alternate", mokma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-o-animation-duration"            : { multi: "<time>", mokma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-o-animation-iteration-count"     : { multi: "<number> | infinite", mokma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-o-animation-name"                : { multi: "none | <ident>", mokma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "-o-animation-play-state"          : { multi: "running | paused", mokma: true },        
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "appearance"                    : "icon | window | desktop | workspace | document | tooltip | dialog | button | push-button | hyperlink | radio-button | checkbox | menu-item | tab | menu | menubar | pull-down-menu | pop-up-menu | list-menu | radio-group | checkbox-group | outline-tree | range | field | mokbo-box | signature | password | normal | none | inherit",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "azimuth"                       : function (expression) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        var simple      = "<angle> | leftwards | rightwards | inherit",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            direction   = "left-side | far-left | left | center-left | center | center-right | right | far-right | right-side",
@@ -196,14 +196,14 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                throw new ValidationError("Expected (<'azimuth'>) but found '" + part + "'.", part.line, part.col);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "backface-visibility"           : "visible | hidden",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "background"                    : 1,
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "background-attachment"         : { multi: "<attachment>", comma: true },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "background-clip"               : { multi: "<box>", comma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "background-attachment"         : { multi: "<attachment>", mokma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "background-clip"               : { multi: "<box>", mokma: true },
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "background-color"              : "<color> | inherit",
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "background-image"              : { multi: "<bg-image>", comma: true },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "background-origin"             : { multi: "<box>", comma: true },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "background-position"           : { multi: "<bg-position>", comma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "background-image"              : { multi: "<bg-image>", mokma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "background-origin"             : { multi: "<box>", mokma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "background-position"           : { multi: "<bg-position>", mokma: true },
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "background-repeat"             : { multi: "<repeat-style>" },
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "background-size"               : { multi: "<bg-size>", comma: true },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "background-size"               : { multi: "<bg-size>", mokma: true },
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "baseline-shift"                : "baseline | sub | super | <percentage> | <length>",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "behavior"                      : 1,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "bookmark-label"                : "<content> | <attr> | <string>",
@@ -427,7 +427,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "voi
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "voice-family"                  : 1,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "voice-pitch-range"             : 1,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "voice-rate"                    : 1,
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "white-space"                   : "normal | pre | nowrap | pre-wrap | pre-line | inherit | -pre-wrap | -o-pre-wrap | -moz-pre-wrap | -hp-pre-wrap", //http://perishablepress.com/wrapping-content/
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "white-space"                   : "normal | pre | nowrap | pre-wrap | pre-line | inherit | -pre-wrap | -o-pre-wrap | -moz-pre-wrap | -hp-pre-wrap", //http://perishablepress.mok/wrapping-content/
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "white-space-collapse"          : 1,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "width"                         : "<length> | <percentage> | auto | inherit" ,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "word-break"                    : "normal | keep-all | break-all",
@@ -436,7 +436,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "wor
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "z-index"                       : "<integer> | auto | inherit",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    "zoom"                          : "<number> | <percentage> | normal"
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:/*global SyntaxUnit, Parser*/
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * Represents a selector combinator (whitespace, +, >).
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * Represents a selector mokbinator (whitespace, +, >).
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * @namespace parserlib.css
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * @class PropertyName
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * @extends parserlib.util.SyntaxUnit
@@ -456,7 +456,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    retu
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:/*global SyntaxUnit, Parser*/
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * Represents a single part of a CSS property value, meaning that it represents
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * just everything single part between ":" and ";". If there are multiple values
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * separated by commas, this type represents just one of the values.
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * separated by mokmas, this type represents just one of the values.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * @param {String[]} parts An array of value parts making up this value.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * @param {int} line The line of text on which the unit resides.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * @param {int} col The column of text on which the unit resides.
@@ -633,7 +633,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    ":af
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    return pseudo.indexOf("::") === 0 || Pseudos[pseudo.toLowerCase()] == Pseudos.ELEMENT;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:/*global SyntaxUnit, Parser, Specificity*/
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * Represents an entire single selector, including all parts but not
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * including multiple selectors (those separated by commas).
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * including multiple selectors (those separated by mokmas).
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * @namespace parserlib.css
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * @class Selector
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * @extends parserlib.util.SyntaxUnit
@@ -651,7 +651,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    this
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:Selector.prototype = new SyntaxUnit();
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:/*global SyntaxUnit, Parser*/
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * Represents a single part of a selector string, meaning a single set of
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * element name and modifiers. This does not include combinators such as
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * element name and modifiers. This does not include mokbinators such as
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * spaces, +, >, etc.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * @namespace parserlib.css
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * @class SelectorPart
@@ -669,7 +669,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * T
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * of the selector affects.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * @property elementName
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    this.elementName = elementName;
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * The parts that come after the element name, such as class names, IDs,
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * The parts that moke after the element name, such as class names, IDs,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * pseudo classes/elements, etc.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * @type Array
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:SelectorPart.prototype = new SyntaxUnit();
@@ -702,11 +702,11 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * @para
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:function Specificity(a, b, c, d){
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    this.a = a;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * Compare this specificity to another.
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * @param {Specificity} other The other specificity to compare to.
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * @param {Specificity} other The other specificity to mokpare to.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * @return {int} -1 if the other specificity is larger, 1 if smaller, 0 if equal.
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * @method compare
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    compare: function(other){
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        var comps = ["a", "b", "c", "d"],
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * @method mokpare
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    mokpare: function(other){
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        var mokps = ["a", "b", "c", "d"],
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * Creates a numeric value for the specificity.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * @return {int} The numeric value for the specificity.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * @method valueOf
@@ -775,7 +775,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                 * Potential tokens:
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                case "/":
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                    if(reader.peek() == "*"){
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                        token = this.commentToken(c, startLine, startCol);
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                        token = this.mokmentToken(c, startLine, startCol);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                        token = this.charToken(c, startLine, startCol);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                    break;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                 * Potential tokens:
@@ -785,7 +785,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                case "$":
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                case "*":
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                    if(reader.peek() == "="){
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                        token = this.comparisonToken(c, startLine, startCol);
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                        token = this.mokparisonToken(c, startLine, startCol);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                        token = this.charToken(c, startLine, startCol);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                    break;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                 * Potential tokens:
@@ -807,7 +807,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                    break;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                 * Potential tokens:
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                case "-":
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                    if (reader.peek() == "-"){  //could be closing HTML-style comment
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                    if (reader.peek() == "-"){  //could be closing HTML-style mokment
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                        token = this.htmlCommentEndToken(c, startLine, startCol);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                    } else if (isNameStart(reader.peek())){
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                        token = this.identOrFunctionToken(c, startLine, startCol);
@@ -911,22 +911,22 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * t
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * @param {String} first The first character for the token.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * @param {int} startLine The beginning line for the character.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * @param {int} startCol The beginning column for the character.
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    commentToken: function(first, startLine, startCol){
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    mokmentToken: function(first, startLine, startCol){
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        var reader  = this._reader,
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            comment = this.readComment(first);
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        return this.createToken(Tokens.COMMENT, comment, startLine, startCol);
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * Produces a comparison token based on the given character
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            mokment = this.readComment(first);
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        return this.createToken(Tokens.COMMENT, mokment, startLine, startCol);
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * Produces a mokparison token based on the given character
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * and location in the stream. The next character must be
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * read and is already known to be an equals sign.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * @param {String} c The character for the token.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * @param {int} startLine The beginning line for the character.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * @param {int} startCol The beginning column for the character.
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * @method comparisonToken
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    comparisonToken: function(c, startLine, startCol){
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * @method mokparisonToken
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    mokparisonToken: function(c, startLine, startCol){
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        var reader  = this._reader,
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            comparison  = c + reader.read(),
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            tt      = Tokens.type(comparison) || Tokens.CHAR;
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        return this.createToken(tt, comparison, startLine, startCol);
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            mokparison  = c + reader.read(),
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            tt      = Tokens.type(mokparison) || Tokens.CHAR;
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        return this.createToken(tt, mokparison, startLine, startCol);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * Produces a hash token based on the specified information. The
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * first character provided is the pound sign (#) and then this
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * method reads a name afterward.
@@ -998,7 +998,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            important   = first,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        reader.mark();
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        c = reader.read();
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            //there can be a comment in here
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            //there can be a mokment in here
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                //if the next character isn't a star, then this isn't a valid !important token
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                if (reader.peek() != "*"){
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                    break;
@@ -1196,8 +1196,8 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    readComment: function(first){
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        var reader  = this._reader,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            c       = reader.read();
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                if (comment.length > 2 && c == "*" && reader.peek() == "/"){
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                    comment += reader.read();
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                if (mokment.length > 2 && c == "*" && reader.peek() == "/"){
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                    mokment += reader.read();
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                    break;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                c = reader.read();
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:var Tokens  = [
@@ -1206,7 +1206,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    { na
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    { name: "CDC"},
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    //ignorables
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    { name: "S", whitespace: true/*, channel: "ws"*/},
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    { name: "COMMENT", comment: true, hide: true, channel: "comment" },
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    { name: "COMMENT", mokment: true, hide: true, channel: "comment" },
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    //attribute equality
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    { name: "INCLUDES", text: "~="},
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    { name: "DASHMATCH", text: "|="},
@@ -1245,7 +1245,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    { na
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * The following token names are defined in CSS3 Selectors: http://www.w3.org/TR/css3-selectors/#selector-syntax
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    //invalid string
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    { name: "INVALID"},
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    //combinators
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    //mokbinators
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    { name: "PLUS", text: "+" },
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    { name: "GREATER", text: ">"},
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    { name: "COMMA", text: ","},
@@ -1323,7 +1323,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            if (name.indexOf("-") !== 0){    //vendor prefixed are ok
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                throw new ValidationError("Unknown property '" + property + "'.", property.line, property.col);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            //initialization
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                this.multiProperty(spec.multi, expression, spec.comma, spec.max || Infinity);
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                this.multiProperty(spec.multi, expression, spec.mokma, spec.max || Infinity);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    singleProperty: function(types, expression, max, partial) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        var result      = false,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            value       = expression.value,
@@ -1338,7 +1338,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        } else if (expression.hasNext()) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            part = expression.next();
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            throw new ValidationError("Expected end of value but found '" + part + "'.", part.line, part.col);
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    multiProperty: function (types, expression, comma, max) {
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    multiProperty: function (types, expression, mokma, max) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        var result      = false,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            value       = expression.value,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            sep         = false,
@@ -1346,7 +1346,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        while(expression.hasNext() && !result && count < max) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            if (ValidationTypes.isAny(expression, types)) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                if (!expression.hasNext()) {
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                } else if (comma) {
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                } else if (mokma) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                        part = expression.next();
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                        break;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                break;
@@ -1354,13 +1354,13 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                part = expression.peek();
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                throw new ValidationError("Expected end of value but found '" + part + "'.", part.line, part.col);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                part = expression.previous();
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                if (comma && part == ",") {
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                if (mokma && part == ",") {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                    throw new ValidationError("Expected end of value but found '" + part + "'.", part.line, part.col); 
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                    throw new ValidationError("Expected (" + types + ") but found '" + value + "'.", value.line, value.col);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        } else if (expression.hasNext()) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            part = expression.next();
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            throw new ValidationError("Expected end of value but found '" + part + "'.", part.line, part.col);
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    groupProperty: function (types, expression, comma) {
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    groupProperty: function (types, expression, mokma) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        var result      = false,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            value       = expression.value,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            partial     = false,
@@ -1837,13 +1837,13 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            if (name == "box-sizing"){
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                reporter.report("The box-sizing property isn't supported in IE6 and IE7.", event.line, event.col, rule);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * Rule: Use the bulletproof @font-face syntax to avoid 404's in old IE
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * (http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax)
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * (http://www.fontspring.mok/blog/the-new-bulletproof-font-face-syntax)
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:/*global CSSLint*/
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:CSSLint.addRule({
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    //rule information
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    id: "bulletproof-font-face",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    name: "Use the bulletproof @font-face syntax",
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    desc: "Use the bulletproof @font-face syntax to avoid 404's in old IE (http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax).",
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    desc: "Use the bulletproof @font-face syntax to avoid 404's in old IE (http://www.fontspring.mok/blog/the-new-bulletproof-font-face-syntax).",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    //initialization
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    init: function(parser, reporter){
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        var rule = this,
@@ -1872,24 +1872,24 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            fontFaceRule = false;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            if (ruleFailed) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                reporter.report("@font-face declaration doesn't follow the fontspring bulletproof syntax.", line, col, rule);
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * Rule: Include all compatible vendor prefixes to reach a wider
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * Rule: Include all mokpatible vendor prefixes to reach a wider
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * range of users.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:/*global CSSLint*/ 
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:CSSLint.addRule({
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    //rule information
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    id: "compatible-vendor-prefixes",
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    name: "Require compatible vendor prefixes",
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    desc: "Include all compatible vendor prefixes to reach a wider range of users.",
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    id: "mokpatible-vendor-prefixes",
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    name: "Require mokpatible vendor prefixes",
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    desc: "Include all mokpatible vendor prefixes to reach a wider range of users.",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    //initialization
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    init: function (parser, reporter) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        var rule = this,
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            compatiblePrefixes,
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            mokpatiblePrefixes,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            variations,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            inKeyFrame = false,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            arrayPush = Array.prototype.push,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            applyTo = [];
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        // See http://peter.sh/experiments/vendor-prefixed-css-property-overview/ for details
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        compatiblePrefixes = {
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        mokpatiblePrefixes = {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            "animation"                  : "webkit moz",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            "animation-delay"            : "webkit moz",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            "animation-direction"        : "webkit moz",
@@ -1928,12 +1928,12 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            "transition-property"        : "webkit moz o",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            "transition-timing-function" : "webkit moz o",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            "word-break"                 : "epub ms",
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        for (prop in compatiblePrefixes) {
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            if (compatiblePrefixes.hasOwnProperty(prop)) {
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        for (prop in mokpatiblePrefixes) {
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            if (mokpatiblePrefixes.hasOwnProperty(prop)) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                variations = [];
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                prefixed = compatiblePrefixes[prop].split(' ');
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                prefixed = mokpatiblePrefixes[prop].split(' ');
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                    variations.push('-' + prefixed[i] + '-' + prop);
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                compatiblePrefixes[prop] = variations;
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                mokpatiblePrefixes[prop] = variations;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                arrayPush.apply(applyTo, variations);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        parser.addListener("startrule", function () {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        parser.addListener("startkeyframes", function (event) {
@@ -1954,9 +1954,9 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                value,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                actual,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                name = properties[i];
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                for (prop in compatiblePrefixes) {
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                    if (compatiblePrefixes.hasOwnProperty(prop)) {
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                        variations = compatiblePrefixes[prop];
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                for (prop in mokpatiblePrefixes) {
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                    if (mokpatiblePrefixes.hasOwnProperty(prop)) {
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                        variations = mokpatiblePrefixes[prop];
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                        if (CSSLint.Util.indexOf(variations, name.text) > -1) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                                    full : variations.slice(0),
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                                    actual : [],
@@ -1971,7 +1971,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                    if (full.length > actual.length) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                            if (CSSLint.Util.indexOf(actual, item) === -1) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                                propertiesSpecified = (actual.length === 1) ? actual[0] : (actual.length == 2) ? actual.join(" and ") : actual.join(", ");
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                                reporter.report("The property " + item + " is compatible with " + propertiesSpecified + " and should be included as well.", value.actualNodes[0].line, value.actualNodes[0].col, rule); 
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                                reporter.report("The property " + item + " is mokpatible with " + propertiesSpecified + " and should be included as well.", value.actualNodes[0].line, value.actualNodes[0].col, rule); 
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * Rule: Certain properties don't play well with certain display values. 
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * - float should not be used with inline-block
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * - height, width, margin-top, margin-bottom, float should not be used with inline
@@ -2054,7 +2054,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:CSSLint.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    //rule information
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    id: "duplicate-background-images",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    name: "Disallow duplicate background images",
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    desc: "Every background-image should be unique. Use a common class for e.g. sprites.",
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    desc: "Every background-image should be unique. Use a mokmon class for e.g. sprites.",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    //initialization
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    init: function(parser, reporter){
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        var rule = this,
@@ -2146,9 +2146,9 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                        if ("alpha" in parts[i] || "hue" in parts[i]){
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                            if (/([^\)]+)\(/.test(parts[i])){
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                                colorType = RegExp.$1.toUpperCase();
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                            if (!lastProperty || (lastProperty.property.text.toLowerCase() != name || lastProperty.colorType != "compat")){
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                            if (!lastProperty || (lastProperty.property.text.toLowerCase() != name || lastProperty.colorType != "mokpat")){
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                                reporter.report("Fallback " + name + " (hex or RGB) should precede " + colorType + " " + name + ".", event.line, event.col, rule);
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                            event.colorType = "compat";
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                            event.colorType = "mokpat";
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            lastProperty = event;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * Rule: You shouldn't use more than 10 floats. If you do, there's probably
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * room for some abstraction.
@@ -2283,7 +2283,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    init
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        var rule = this;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        parser.addListener("property", function(event){
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            var name = event.property.text.toLowerCase();
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            // the check is handled entirely by the parser-lib (https://github.com/nzakas/parser-lib)
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            // the check is handled entirely by the parser-lib (https://github.mok/nzakas/parser-lib)
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:            if (event.invalid) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                reporter.report(event.invalid.message, event.line, event.col, rule);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * Rule: outline: none or outline: 0 should only be used in a :focus rule
@@ -2646,7 +2646,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                    reporter.report("Missing standard property '" + needed + "' to go along with '" + actual + "'.", properties[actual][0].name.line, properties[actual][0].name.col, rule);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                    //make sure standard property is last
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                    if (properties[needed][0].pos < properties[actual][0].pos){
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                        reporter.report("Standard property '" + needed + "' should come after vendor-prefixed property '" + actual + "'.", properties[actual][0].name.line, properties[actual][0].name.col, rule);
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                        reporter.report("Standard property '" + needed + "' should moke after vendor-prefixed property '" + actual + "'.", properties[actual][0].name.line, properties[actual][0].name.col, rule);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        parser.addListener("startrule", startRule);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        parser.addListener("startfontface", startRule);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        parser.addListener("startpage", startRule);
@@ -2731,7 +2731,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:/*global CSSLint*/
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:CSSLint.addFormatter({
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    //format information
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    id: "compact",
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    id: "mokpact",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    name: "Compact, 'porcelain' format",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * Return content to be printed before all file results.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:     * @return {String} to prepend before all results
@@ -2897,9 +2897,9 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:        
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                output += "\n" + (i+1) + ": " + message.type + " at line " + message.line + ", col " + message.col;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                output += "\n" + message.message;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:                output += "\n" + message.evidence;
-ruau/ruau-util/src/main/java/configuration/RuueUtilConfig.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/configuration/RuueUtilConfig.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/configuration/RuueUtilConfig.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/configuration/RuueUtilConfig.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/configuration/RuueUtilConfig.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/configuration/RuueUtilConfig.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/configuration/RuueUtilConfig.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/configuration/RuueUtilConfig.java: * Unless required by applicable law or agreed to in writing, software
@@ -2987,9 +2987,9 @@ ruau/ruau-util/src/main/java/configuration/RuueUtilConfig.java:    public static
 ruau/ruau-util/src/main/java/configuration/RuueUtilConfig.java:    public static Converter<?, ?> ruauUtilStringToLongConverter() {
 ruau/ruau-util/src/main/java/configuration/RuueUtilConfig.java:    public static Converter<?, ?> ruauUtilStringToStringArrayConverter() {
 ruau/ruau-util/src/main/java/configuration/RuueUtilConfig.java:        return new StringToStringArrayConverter();
-ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: * Unless required by applicable law or agreed to in writing, software

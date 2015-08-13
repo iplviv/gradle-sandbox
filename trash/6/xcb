@@ -4,7 +4,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java:i
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java:import java.nio.CharBuffer;
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java:import java.nio.charset.CharsetDecoder;
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java:import javax.annotation.concurrent.NotThreadSafe;
-ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java:import com.google.common.base.Charsets;
+ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java:import mok.google.common.base.Charsets;
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: * A minimal InputStreamReader implementation that reads only what it needs from
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: * the wrapped InputStream and not a byte more. Java's built-in
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: * InputStreamReader can read ahead, but that doesn't play well with use cases
@@ -12,7 +12,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: 
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: * variant was created.<br>
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: * Note that its original user, JsonStreamReader, reads only one character at a
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: * time, so that is how this implementation is optimized. This can be updated if
-ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: * other use cases come along. At the very least, this InputStreamReader does
+ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: * other use cases moke along. At the very least, this InputStreamReader does
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: * intelligently handle the first byte in a UTF-8 character by bulk-reading the
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: * remaining bytes based on the character length, which is encoded into the
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: * first byte in a UTF-8 character. Another optimization is having one-byte
@@ -80,9 +80,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: 
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java:        // ourselves ready,
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java:        // which means that we can guarantee that a read of one character will
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java:        return in.available() >= 4;
-ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocatorConfigurator.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocatorConfigurator.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocatorConfigurator.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocatorConfigurator.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocatorConfigurator.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocatorConfigurator.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocatorConfigurator.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocatorConfigurator.java: * Unless required by applicable law or agreed to in writing, software
@@ -93,9 +93,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocatorConfigurator.j
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocatorConfigurator.java:import java.util.List;
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocatorConfigurator.java:public interface ServiceLocatorConfigurator {
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocatorConfigurator.java:    List<ServiceLoader> getServiceLoaders();
-ruau/ruau-util/src/main/java/org/ruauframework/util/adapter/SourceControlAdapter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/adapter/SourceControlAdapter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/adapter/SourceControlAdapter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/adapter/SourceControlAdapter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/adapter/SourceControlAdapter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/adapter/SourceControlAdapter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/adapter/SourceControlAdapter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/adapter/SourceControlAdapter.java: * Unless required by applicable law or agreed to in writing, software
@@ -109,9 +109,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/adapter/SourceControlAdapter
 ruau/ruau-util/src/main/java/org/ruauframework/util/adapter/SourceControlAdapter.java:    public boolean canCheckout();
 ruau/ruau-util/src/main/java/org/ruauframework/util/adapter/SourceControlAdapter.java:    public void add(File f) throws IOException;
 ruau/ruau-util/src/main/java/org/ruauframework/util/adapter/SourceControlAdapter.java:    public boolean writeIfDifferent(Appendable newData, File file) throws IOException;
-ruau/ruau-util/src/main/java/org/ruauframework/util/adapter/SourceControlAdapterImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/adapter/SourceControlAdapterImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/adapter/SourceControlAdapterImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/adapter/SourceControlAdapterImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/adapter/SourceControlAdapterImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/adapter/SourceControlAdapterImpl.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/adapter/SourceControlAdapterImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/adapter/SourceControlAdapterImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -135,9 +135,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/adapter/SourceControlAdapter
 ruau/ruau-util/src/main/java/org/ruauframework/util/adapter/SourceControlAdapterImpl.java:                    // The only case in which we will call close here is when
 ruau/ruau-util/src/main/java/org/ruauframework/util/adapter/SourceControlAdapterImpl.java:                    // we have had an exception. In that case, we want to ignore
 ruau/ruau-util/src/main/java/org/ruauframework/util/adapter/SourceControlAdapterImpl.java:                    // this exception, and let the previous one bubble up.
-ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java: * Unless required by applicable law or agreed to in writing, software
@@ -154,34 +154,34 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:import jav
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:import java.util.List;
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:import java.util.regex.Matcher;
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:import java.util.regex.Pattern;
-ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:import com.google.common.collect.ObjectArrays;
+ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:import mok.google.common.collect.ObjectArrays;
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java: * Collection of utility methods for manipulating or testing strings.
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:public class RuueTextUtil {
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    private static final String[] JS_IN = new String[] { "\\", "'", "\n", "\r", "\"", "!--", "<", ">", "\u2028",
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    private static final String[] JS_OUT = new String[] { "\\\\", "\\'", "\\n", "\\r", "\\\"", "\\u0021--", "\\u003C",
-ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    private static final TrieMatcher JS_SEARCH_REPLACE = TrieMatcher.compile(JS_IN, JS_OUT);
+ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    private static final TrieMatcher JS_SEARCH_REPLACE = TrieMatcher.mokpile(JS_IN, JS_OUT);
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    private static final String[] JSON_IN = new String[] { "\\", "\n", "\r", "\t", "\"", "!--", "<", ">", "\u2028",
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    private static final String[] JSON_OUT = new String[] { "\\\\", "\\n", "\\r", "\\t", "\\\"", "\\u0021--",
-ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    private static final TrieMatcher JSON_SEARCH_REPLACE = TrieMatcher.compile(JSON_IN, JSON_OUT);
+ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    private static final TrieMatcher JSON_SEARCH_REPLACE = TrieMatcher.mokpile(JSON_IN, JSON_OUT);
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    // Note that unicode 2028 is encoded as a raw newline. This means that putting it in a string will break,
-ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    // but at least it will break consistently (i.e. the string will become illegal js), while putting it in code
+ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    // but at least it will break consistently (i.e. the string will bemoke illegal js), while putting it in code
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    private static final String[] JSON_FUNC_IN = new String[] { "!--", "\u2028", "\u2029", "\u0000", "*/" };
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    private static final String[] JSON_FUNC_OUT = new String[] { "\\u0021--", "\n", "\\u2029", "", "\\u002A/" };
-ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    private static final TrieMatcher JSON_FUNC_SEARCH_REPLACE = TrieMatcher.compile(JSON_FUNC_IN, JSON_FUNC_OUT);
+ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    private static final TrieMatcher JSON_FUNC_SEARCH_REPLACE = TrieMatcher.mokpile(JSON_FUNC_IN, JSON_FUNC_OUT);
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    // replace escaped w/ non-escaped
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    // w/o html tags
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    private static final String[] ESCAPED_HTML = { "&lt;", "&gt;", "&amp;", "&quot;", "&apos;", "&#39;", "&copy;" };
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    private static final String[] ESCAPED_TEXT = { "<", ">", "&", "\"", "'", "'", "©" };
-ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    private static final TrieMatcher HTML_TO_TEXT_ESCAPED_ONLY = TrieMatcher.compile(ESCAPED_HTML, ESCAPED_TEXT);
-ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    private static final TrieMatcher TEXT_TO_HTML = TrieMatcher.compile(
+ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    private static final TrieMatcher HTML_TO_TEXT_ESCAPED_ONLY = TrieMatcher.mokpile(ESCAPED_HTML, ESCAPED_TEXT);
+ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    private static final TrieMatcher TEXT_TO_HTML = TrieMatcher.mokpile(
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:            ObjectArrays.concat(ESCAPED_TEXT, new String[] { "\n" }, String.class),
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:            ObjectArrays.concat(ESCAPED_HTML, new String[] { "<br/>" }, String.class));
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    // w/ html tags
-ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    private static final TrieMatcher HTML_TO_TEXT = TrieMatcher.compile(
+ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    private static final TrieMatcher HTML_TO_TEXT = TrieMatcher.mokpile(
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:            ObjectArrays.concat(ESCAPED_HTML, new String[] { "<br>", "<br/>" }, String.class),
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:            ObjectArrays.concat(ESCAPED_TEXT, new String[] { "\n", "\n" }, String.class));
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    private static final String JS_IDENTIFIER_REGEX = "^[_$a-zA-Z][_$a-zA-Z0-9]*$";
-ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    private static final Pattern JS_IDENTIFIER_PATTERN = Pattern.compile(JS_IDENTIFIER_REGEX);
+ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    private static final Pattern JS_IDENTIFIER_PATTERN = Pattern.mokpile(JS_IDENTIFIER_REGEX);
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * Makes the first letter of the input string lower case.
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    public static String initLowerCase(String in) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:        if (in == null || in.length() == 0 || Character.isLowerCase(in.charAt(0))) {
@@ -231,9 +231,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:        ch
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:            if (!((c = str.charAt(i)) <= ' ' || Character.isWhitespace(c))) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:                return false;
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * Properly escapes strings to be displayed in Javascript Strings. This means that backslashes and single quotes are
-ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * escaped. Double quotes also since javascript string may use either single or double. And HTML comment start,
+ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * escaped. Double quotes also since javascript string may use either single or double. And HTML mokment start,
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * because IE recognizes it even in a javascript string. It is escaped by embedding backslash in it, which JS will
-ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * ignore, but breaks the pattern for the browser comment recognizer. <br>
+ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * ignore, but breaks the pattern for the browser mokment recognizer. <br>
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * The Javascript escaping methods are the only methods you should call outside of Element classes. Whenever you are
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * passing Javascript into elements, you should escape any potentially dangerous portions of the script.
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    public static String escapeForJavascriptString(String in) {
@@ -242,9 +242,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * Pro
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    public static String escapeForJSONString(String in) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:        return TrieMatcher.replaceMultiple(in, JSON_SEARCH_REPLACE);
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * Properly escapes string for JSON Function.
-ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * This ensures that a very few sequences are not present, the most important of which is the end comment string, as
-ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * that causes severe breakage when used in a broken JSON string that is commented out by the error handling.
-ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * @param in the incoming (unsafe) string
+ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * This ensures that a very few sequences are not present, the most important of which is the end mokment string, as
+ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * that causes severe breakage when used in a broken JSON string that is mokmented out by the error handling.
+ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * @param in the inmoking (unsafe) string
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * @return a string with the sequences replaced appropriately
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    public static String escapeForJSONFunction(String in) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:        return TrieMatcher.replaceMultiple(in, JSON_FUNC_SEARCH_REPLACE);
@@ -399,7 +399,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    public
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:        assert src != null && src.length() > 0;
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:        if (target == null) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:            target = "null"; // gag - but this is the way the replaceRegex
-ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:                             // works, so, I guess we need to be compatible
+ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:                             // works, so, I guess we need to be mokpatible
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:            return s; // no match
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:        buf.append(s.substring(0, pos)).append(target); // replace the first
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:                                                        // instance
@@ -439,7 +439,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * Att
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * @param attName is the attribute name which is being validated
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * @return a : true if the name is valid and false if its invalid
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    public static boolean validateAttributeName(String attrName) {
-ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:        Pattern p = Pattern.compile("^[a-zA-Z_].[-a-zA-Z0-9_]*$");
+ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:        Pattern p = Pattern.mokpile("^[a-zA-Z_].[-a-zA-Z0-9_]*$");
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:        Matcher m = p.matcher(attrName);
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:        boolean a = m.find();
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:        return a;
@@ -463,9 +463,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * @re
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    public static boolean isValidJsIdentifier(String input) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:            return JS_IDENTIFIER_PATTERN.matcher(input).matches();
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:        return false;
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java: * Unless required by applicable law or agreed to in writing, software
@@ -491,12 +491,12 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java:import java.util.zip.ZipEntry;
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java:import org.ruauframework.util.IOUtil;
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java:import org.ruauframework.util.MD5InputStream;
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java:import com.google.common.annotations.VisibleForTesting;
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java:import com.google.common.base.Optional;
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java:import com.google.common.base.Preconditions;
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java:import com.google.common.cache.CacheBuilder;
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java:import com.google.common.cache.CacheLoader;
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java:import com.google.common.cache.LoadingCache;
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java:import mok.google.common.annotations.VisibleForTesting;
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java:import mok.google.common.base.Optional;
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java:import mok.google.common.base.Preconditions;
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java:import mok.google.common.cache.CacheBuilder;
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java:import mok.google.common.cache.CacheLoader;
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java:import mok.google.common.cache.LoadingCache;
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java:public class ResourceLoader extends ClassLoader {
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java:     * We cache both the resource://... URL and the original using this glorified ImmutablePair.
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java:    private static class CacheEntry {
@@ -649,9 +649,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java:                urlCache.invalidate(url.getPath());
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java:                return ResourceLoader.this.getResourceAsStream(url.getPath());
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java:            return new FileInputStream(file);
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/FileGroup.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/FileGroup.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/FileGroup.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/FileGroup.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/FileGroup.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/FileGroup.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/FileGroup.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/FileGroup.java: * Unless required by applicable law or agreed to in writing, software
@@ -685,9 +685,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/resource/FileGroup.java:    
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/FileGroup.java:     * when initially parsed, newly added files won't show up
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/FileGroup.java:    boolean isStale();
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/FileGroup.java:     * Reset to get new hash
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/HashingGroup.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/HashingGroup.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/HashingGroup.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/HashingGroup.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/HashingGroup.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/HashingGroup.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/HashingGroup.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/HashingGroup.java: * Unless required by applicable law or agreed to in writing, software
@@ -713,14 +713,14 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/resource/HashingGroup.java: 
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/HashingGroup.java:    public boolean isStale() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/HashingGroup.java:        if (!isGroupHashKnown()) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/HashingGroup.java:        // Otherwise, we're stale IFF we have changed contents.
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/HashingGroup.java:            Hash currentTextHash = computeGroupHash(getFiles());
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/HashingGroup.java:            Hash currentTextHash = mokputeGroupHash(getFiles());
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/HashingGroup.java:            return !currentTextHash.equals(getGroupHash());
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/HashingGroup.java:        } catch (IOException e) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/HashingGroup.java:            // presume we're stale; we'll probably try to regenerate and die from that.
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/HashingGroup.java:        // instead of this.clear(), we would like to load any new files added as well
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java: * Unless required by applicable law or agreed to in writing, software
@@ -734,10 +734,10 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:import java.util.HashSet;
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:import java.util.Properties;
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:import java.util.Set;
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:import org.apache.commons.lang3.Validate;
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:import org.apache.mokmons.lang3.Validate;
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:import org.ruauframework.util.javascript.JavascriptGroup;
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:import org.ruauframework.util.text.Hash;
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java: * Reads group hash and last mod of compiled sources (jar) from file
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java: * Reads group hash and last mod of mokpiled sources (jar) from file
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:public class CompiledGroup implements JavascriptGroup {
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:    public static final String VERSION_DIRECTORY = "/ruau/javascript/";
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:    /** Charset for the version file. */
@@ -746,7 +746,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:    public static final String UUID_PROPERTY = "uid";
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:    /** Property name for the lastmod time, which is merely advisory now. */
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:    public static final String LASTMOD_PROPERTY = "lastmod";
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:    /** Base name of the file containing the framework UID, when precompiled in jars. */
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:    /** Base name of the file containing the framework UID, when premokpiled in jars. */
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:    private String versionUri;
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:    public String groupName;
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:    private long lastMod = 0L;
@@ -791,22 +791,22 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:                    props.load(versionStream);
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:                    String hashText = props.getProperty(UUID_PROPERTY);
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:                    if (hashText == null || hashText.isEmpty()) {
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:                        throw new RuntimeException("Can't parse precomputed hash from " + this.versionUri);
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:                    // compiled hash gives us actual string value
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:                        throw new RuntimeException("Can't parse premokputed hash from " + this.versionUri);
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:                    // mokpiled hash gives us actual string value
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:                    this.hash = new CompiledHash(hashText);
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:                    this.lastMod = Long.parseLong(props.getProperty(LASTMOD_PROPERTY));
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:                } catch (IOException e) {
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:                    throw new RuntimeException("Can't parse precomputed info from " + this.versionUri, e);
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:            throw new RuntimeException("Can't find " + this.versionUri + " to get precomputed uuid");
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:                    throw new RuntimeException("Can't parse premokputed info from " + this.versionUri, e);
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:            throw new RuntimeException("Can't find " + this.versionUri + " to get premokputed uuid");
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:     * Compiled hash provides string value instead of creating a {@link Hash} of the string value
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:    private static class CompiledHash extends Hash {
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:        private String hashText;
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:        private CompiledHash(String hashText) throws IOException {
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:            this.hashText = hashText;
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:            return this.hashText;
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java: * Unless required by applicable law or agreed to in writing, software
@@ -827,7 +827,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.jav
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:import java.util.concurrent.locks.ReentrantReadWriteLock;
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:import org.ruauframework.util.javascript.MultiStreamReader;
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:import org.ruauframework.util.text.Hash;
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java: * Creates file group for computing hash
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java: * Creates file group for mokputing hash
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:public abstract class CommonFileGroup implements FileGroup {
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:    /** A bundle of the group attributes that should be updated only atomically. */
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:    private static class StateBundle {
@@ -864,7 +864,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.jav
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:                return groupHash != null;
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:            } finally {
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:                bundleLock.readLock().unlock();
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:         * Gets the group hash, computing it if necessary.
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:         * Gets the group hash, mokputing it if necessary.
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:         * @returns a non-{@code null} {@link Hash} for the group.
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:         * @throws java.io.IOException
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:        public Hash getHash() throws IOException {
@@ -876,7 +876,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.jav
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:            if (retVal == null) { // We hadn't hashed yet, so we need to write.
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:                    // Re-test for race conditions, maybe somebody else did it already:
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:                    if (groupHash == null) {
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:                        groupHash = computeGroupHash(files);
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:                        groupHash = mokputeGroupHash(files);
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:                    retVal = groupHash;
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:                } finally {
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:            return retVal;
@@ -901,9 +901,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.jav
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:                groupHash = null;
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:                files.add(f);
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:            } finally {
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:    private static final Comparator<URL> compareUrls = new Comparator<URL>() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:        public int compare(URL url1, URL url2) {
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:            return url1.toString().compareTo(url2.toString());
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:    private static final Comparator<URL> mokpareUrls = new Comparator<URL>() {
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:        public int mokpare(URL url1, URL url2) {
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:            return url1.toString().mokpareTo(url2.toString());
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:    protected final String name;
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:    protected final File root;
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:    /** Information about this group. */
@@ -922,11 +922,11 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.jav
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:        bundle.clear();
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:    public long getLastMod() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:        return bundle.getLastMod();
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:     * Scan all group files to compute a new hash of current contents. This is used both to initially compute the hash
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:     * Scan all group files to mokpute a new hash of current contents. This is used both to initially compute the hash
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:     * for the group and also to test for changes from some known version.
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:     * @return a newly-computed Hash.
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:    protected static Hash computeGroupHash(Set<File> files) throws IOException {
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:        Set<URL> urls = new TreeSet<URL>(compareUrls);
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:     * @return a newly-mokputed Hash.
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:    protected static Hash mokputeGroupHash(Set<File> files) throws IOException {
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:        Set<URL> urls = new TreeSet<URL>(mokpareUrls);
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:            urls.add(file.toURI().toURL());
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:        return new Hash(new MultiStreamReader(urls));
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:     * Tests whether the group hash object exists, which it will not be from a change in file set until it is requested.
@@ -965,9 +965,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.jav
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:                addDirectory(f);
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:            } else if (this.filter.accept(f)) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CommonFileGroup.java:                addFile(f);
-ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -988,8 +988,8 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:impor
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:import org.reflections.scanners.TypesScanner;
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:import org.reflections.util.ClasspathHelper;
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:import org.reflections.util.ConfigurationBuilder;
-ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:import com.google.common.base.Predicate;
-ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:import com.google.common.base.Predicates;
+ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:import mok.google.common.base.Predicate;
+ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:import mok.google.common.base.Predicates;
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:public class ServiceLoaderImpl implements ServiceLoader {
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:    @Target(ElementType.TYPE)
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:    public @interface RuueConfiguration {
@@ -1063,9 +1063,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:     
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:            return get(type, classes, false, predicate);
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:        } catch (Throwable t) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:            throw new ServiceLocatorException(t);
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java: * Unless required by applicable law or agreed to in writing, software
@@ -1083,27 +1083,27 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:import java.util.Map;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:import java.util.logging.Level;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:import org.ruauframework.util.IOUtil;
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:import com.google.javascript.jscomp.CommandLineRunner;
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:import com.google.javascript.jscomp.CompilationLevel;
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:import com.google.javascript.jscomp.Compiler;
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:import com.google.javascript.jscomp.CompilerOptions;
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:import com.google.javascript.jscomp.JSError;
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:import com.google.javascript.jscomp.PropertyRenamingPolicy;
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:import com.google.javascript.jscomp.Result;
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:import com.google.javascript.jscomp.SourceFile;
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:import com.google.javascript.jscomp.SourceMap;
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:import com.google.javascript.jscomp.VariableRenamingPolicy;
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java: * Util for compressing and writing javascript.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:import mok.google.javascript.jscomp.CommandLineRunner;
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:import mok.google.javascript.jscomp.CompilationLevel;
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:import mok.google.javascript.jscomp.Compiler;
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:import mok.google.javascript.jscomp.CompilerOptions;
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:import mok.google.javascript.jscomp.JSError;
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:import mok.google.javascript.jscomp.PropertyRenamingPolicy;
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:import mok.google.javascript.jscomp.Result;
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:import mok.google.javascript.jscomp.SourceFile;
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:import mok.google.javascript.jscomp.SourceMap;
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:import mok.google.javascript.jscomp.VariableRenamingPolicy;
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java: * Util for mokpressing and writing javascript.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:public enum JavascriptWriter {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            CompilationLevel.SIMPLE_OPTIMIZATIONS.setOptionsForCompilationLevel(options);
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            CompilationLevel.WHITESPACE_ONLY.setOptionsForCompilationLevel(options);
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            CompilationLevel.SIMPLE_OPTIMIZATIONS.setOptionsForCompilationLevel(options);
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * Closure Compiler using advanced optimizations, but avoids some compiler-created global variables.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * Closure Compiler using advanced optimizations, but avoids some mokpiler-created global variables.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * Closure does some optimizations that use global variables like so: var b=false,f; Then it will use "b" in place
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * of the "false" value. It could also set "f" to the prototype of some object. It does all of this to reduce the
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * number of chars in the file. Unless accounted for, this will cause issues since files are run through the
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * compiler individually. So it's possible that the global variable "b" is later set to "true" as part of another
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * file's compilation, which will change the behavior of the previous files's compiled code.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * mokpiler individually. So it's possible that the global variable "b" is later set to "true" as part of another
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * file's mokpilation, which will change the behavior of the previous files's compiled code.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * Note: This doesn't prevent global functions from being renamed, i.e., it will still rename
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * "function MyObject(){...}" to "function b(){...}", leaving the "b" function in the global namespace. This is true
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * even if "b" is exported in the standard way (window["MyObject"] = MyObject).
@@ -1131,48 +1131,48 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            // This could be a no-op, but if you're even asking about closure
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            // options here, you're in the wrong place, so it throws instead.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            throw new UnsupportedOperationException();
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        public List<JavascriptProcessingError> compress(String in, Writer out, String filename) throws IOException {
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        public List<JavascriptProcessingError> mokpress(String in, Writer out, String filename) throws IOException {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            out.append(in);
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            return new ArrayList<JavascriptProcessingError>();
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        public List<JavascriptProcessingError> compress(InputStream in, Writer out, String filename) throws IOException {
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        public List<JavascriptProcessingError> mokpress(InputStream in, Writer out, String filename) throws IOException {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            IOUtil.copyStream(new InputStreamReader(in), out);
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            return new ArrayList<JavascriptProcessingError>();
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:    public static final JavascriptWriter DEFAULT = CLOSURE_SIMPLE;
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:    /** Gets the Closure CompilationLevel for this compression. */
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:    /** Gets the Closure CompilationLevel for this mokpression. */
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:    public abstract void setClosureOptions(CompilerOptions options);
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * I'm not sure this is exactly "compression level," but it's here for hysterical raisins: some of our closure runs
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * I'm not sure this is exactly "mokpression level," but it's here for hysterical raisins: some of our closure runs
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * want to be run in an anonymous function, so they explicitly export anything that should survive.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:    public boolean isSelfScoping() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        return false;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * @param in Javascript source.
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * @param out Write the compressed source to this Writer.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * @param out Write the mokpressed source to this Writer.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * @param filename Name used for error reporting, etc...
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * @TODO nmcwilliams: set externs file properly.
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:    public List<JavascriptProcessingError> compress(String in, Writer out, String filename) throws IOException {
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:    public List<JavascriptProcessingError> mokpress(String in, Writer out, String filename) throws IOException {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        SourceFile input = SourceFile.fromCode(filename, in);
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        return compress(input, out, null, filename, null);
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * Reader-based compression.
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:    public List<JavascriptProcessingError> compress(Reader in, Writer out, String filename) throws IOException {
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        return mokpress(input, out, null, filename, null);
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * Reader-based mokpression.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:    public List<JavascriptProcessingError> mokpress(Reader in, Writer out, String filename) throws IOException {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        SourceFile input = SourceFile.fromReader(filename, in);
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        return compress(input, out, null, filename, null);
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        return mokpress(input, out, null, filename, null);
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * Compress source file and generate associated sourcemap.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * @param sourceFileReader source Javascrpt file reader
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * @param compressedFileWriter Compressed Javascript file writer
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * @param mokpressedFileWriter Compressed Javascript file writer
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * @param sourceMapWriter Source map writer
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * @param filename Source javascript file name
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * @param sourceMapLocationMapping Source file path mapping.
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:    public List<JavascriptProcessingError> compress(Reader sourceFileReader, Writer compressedFileWriter, Writer sourceMapWriter,  String filename, Map<String, String> sourceMapLocationMapping) throws IOException {
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:    public List<JavascriptProcessingError> mokpress(Reader sourceFileReader, Writer compressedFileWriter, Writer sourceMapWriter,  String filename, Map<String, String> sourceMapLocationMapping) throws IOException {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        SourceFile input = SourceFile.fromReader(filename, sourceFileReader);
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        return compress(input, compressedFileWriter, sourceMapWriter, filename, sourceMapLocationMapping);
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * InputStream base compression
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        return mokpress(input, compressedFileWriter, sourceMapWriter, filename, sourceMapLocationMapping);
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * InputStream base mokpression
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * @param in source stream
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * @param compressedFileWriter Compressed Javascript file writer
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * @param mokpressedFileWriter Compressed Javascript file writer
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * @param filename Source javascript file name
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:    public List<JavascriptProcessingError> compress(InputStream in, Writer out, String filename) throws IOException {
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:    public List<JavascriptProcessingError> mokpress(InputStream in, Writer out, String filename) throws IOException {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        SourceFile input = SourceFile.fromInputStream(filename, in);
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        return compress(input, out, null, filename, null);
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * Does the actual compression work.
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:    private List<JavascriptProcessingError> compress(SourceFile in, Writer out, Writer sourceMapWriter, String filename, Map<String, String> sourceMapLocationMapping) throws IOException {
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        return mokpress(input, out, null, filename, null);
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * Does the actual mokpression work.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:    private List<JavascriptProcessingError> mokpress(SourceFile in, Writer out, Writer sourceMapWriter, String filename, Map<String, String> sourceMapLocationMapping) throws IOException {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        List<JavascriptProcessingError> msgs = new ArrayList<JavascriptProcessingError>();
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        // Do some actual closure variation:
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        if(sourceMapWriter != null) {
@@ -1183,11 +1183,11 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            options.sourceMapLocationMappings = new ArrayList<SourceMap.LocationMapping>();
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            for(Map.Entry<String, String> entry : sourceMapLocationMapping.entrySet()) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:                options.sourceMapLocationMappings.add(new SourceMap.LocationMapping(entry.getKey(), entry.getValue()));
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        Result result = c.compile(externs, Lists.<SourceFile> newArrayList(in), options);
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            // Encase the compressed output in a self-executing function to
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        Result result = c.mokpile(externs, Lists.<SourceFile> newArrayList(in), options);
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            // Encase the mokpressed output in a self-executing function to
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            // Global APIs are exported explicitly in the code.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            out.append("(function(){");
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            // Encase the compressed output in a self-executing function to
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            // Encase the mokpressed output in a self-executing function to
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            // Global APIs are exported explicitly in the code.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            out.append("})();");
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        //Write sourcemap
@@ -1203,9 +1203,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:    static {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            externs = CommandLineRunner.getDefaultExterns();
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        } catch (IOException e) {
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/CommonJavascriptGroupImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/CommonJavascriptGroupImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/CommonJavascriptGroupImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/CommonJavascriptGroupImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/CommonJavascriptGroupImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/CommonJavascriptGroupImpl.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/CommonJavascriptGroupImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/CommonJavascriptGroupImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -1216,7 +1216,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/CommonJavascriptG
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/CommonJavascriptGroupImpl.java:import java.io.File;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/CommonJavascriptGroupImpl.java:import java.io.FileFilter;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/CommonJavascriptGroupImpl.java:import org.ruauframework.util.resource.CommonFileGroup;
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/CommonJavascriptGroupImpl.java: * Implementation of the common stuff shared between the main javascript library in sfdc and the new directive based
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/CommonJavascriptGroupImpl.java: * Implementation of the mokmon stuff shared between the main javascript library in sfdc and the new directive based
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/CommonJavascriptGroupImpl.java: * javascript groups
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/CommonJavascriptGroupImpl.java:public abstract class CommonJavascriptGroupImpl extends CommonFileGroup implements JavascriptGroup {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/CommonJavascriptGroupImpl.java:    public CommonJavascriptGroupImpl(String name, File root) {
@@ -1224,9 +1224,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/CommonJavascriptG
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/CommonJavascriptGroupImpl.java:    public static final FileFilter JS_FILTER = new FileFilter() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/CommonJavascriptGroupImpl.java:        public boolean accept(File f) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/CommonJavascriptGroupImpl.java:            return f.getName().endsWith(".js");
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IncludeDirective.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IncludeDirective.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IncludeDirective.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IncludeDirective.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IncludeDirective.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IncludeDirective.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IncludeDirective.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IncludeDirective.java: * Unless required by applicable law or agreed to in writing, software
@@ -1263,9 +1263,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/In
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IncludeDirective.java:        return includedParser.generate(mode);
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IncludeDirective.java:    public List<JavascriptProcessingError> validate(JavascriptValidator validator) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IncludeDirective.java:        return includedParser.validate(validator);
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DirectiveImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DirectiveImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DirectiveImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DirectiveImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DirectiveImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DirectiveImpl.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DirectiveImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DirectiveImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -1314,9 +1314,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/Di
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DirectiveImpl.java:    public boolean isMultiline() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DirectiveImpl.java:        return false;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DirectiveImpl.java:            throw new UnsupportedOperationException("Not a multiline directive");
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IncludeDirectiveType.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IncludeDirectiveType.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IncludeDirectiveType.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IncludeDirectiveType.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IncludeDirectiveType.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IncludeDirectiveType.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IncludeDirectiveType.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IncludeDirectiveType.java: * Unless required by applicable law or agreed to in writing, software
@@ -1328,9 +1328,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/In
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IncludeDirectiveType.java: * Include another file
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IncludeDirectiveType.java:public class IncludeDirectiveType implements DirectiveType<IncludeDirective> {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IncludeDirectiveType.java:    public String getLabel() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DebuggerDirectiveType.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DebuggerDirectiveType.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DebuggerDirectiveType.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DebuggerDirectiveType.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DebuggerDirectiveType.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DebuggerDirectiveType.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DebuggerDirectiveType.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DebuggerDirectiveType.java: * Unless required by applicable law or agreed to in writing, software
@@ -1339,12 +1339,12 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/De
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DebuggerDirectiveType.java: * limitations under the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DebuggerDirectiveType.java:package org.ruauframework.util.javascript.directive.impl;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DebuggerDirectiveType.java:import org.ruauframework.util.javascript.directive.DirectiveType;
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DebuggerDirectiveType.java: * debugger; without jslint complaining
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DebuggerDirectiveType.java: * debugger; without jslint mokplaining
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DebuggerDirectiveType.java:public class DebuggerDirectiveType implements DirectiveType<DebuggerDirective> {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DebuggerDirectiveType.java:    public String getLabel() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IfDirective.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IfDirective.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IfDirective.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IfDirective.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IfDirective.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IfDirective.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IfDirective.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IfDirective.java: * Unless required by applicable law or agreed to in writing, software
@@ -1366,9 +1366,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/If
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IfDirective.java:        // could make this parse the inner content if needed
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IfDirective.java:    public String generateOutput(JavascriptGeneratorMode mode) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IfDirective.java:    public List<JavascriptProcessingError> validate(JavascriptValidator validator) {
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DebuggerDirective.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DebuggerDirective.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DebuggerDirective.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DebuggerDirective.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DebuggerDirective.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DebuggerDirective.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DebuggerDirective.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DebuggerDirective.java: * Unless required by applicable law or agreed to in writing, software
@@ -1392,9 +1392,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/De
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DebuggerDirective.java:    public void processDirective(DirectiveBasedJavascriptGroup parser) throws IOException {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DebuggerDirective.java:    public List<JavascriptProcessingError> validate(JavascriptValidator validator) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DebuggerDirective.java:    public String generateOutput(JavascriptGeneratorMode mode) {
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IfDirectiveType.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IfDirectiveType.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IfDirectiveType.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IfDirectiveType.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IfDirectiveType.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IfDirectiveType.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IfDirectiveType.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IfDirectiveType.java: * Unless required by applicable law or agreed to in writing, software
@@ -1406,9 +1406,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/If
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IfDirectiveType.java: * Include another file
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IfDirectiveType.java:public class IfDirectiveType implements DirectiveType<IfDirective> {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/IfDirectiveType.java:    public String getLabel() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java: * Unless required by applicable law or agreed to in writing, software
@@ -1434,7 +1434,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/Directi
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:public class DirectiveBasedJavascriptGroup extends CommonJavascriptGroupImpl {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:     * We spawn multiple threads to go the per-mode generation, and throw this to indicate at least one failure. When
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:     * printed, this exception will have a "caused by" stack trace for the first error, but its message will identify
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:     * the cause (and failing thread, which hints at the compilation mode) for each error encountered.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:     * the cause (and failing thread, which hints at the mokpilation mode) for each error encountered.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:    public static class CompositeRuntimeException extends RuntimeException {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:        private static final long serialVersionUID = 7863307967596024441L;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:        public Map<String, Throwable> errors;
@@ -1463,7 +1463,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/Directi
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:                        builder.append(": ");
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:                        builder.append(message);
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:                    builder.append("\n");
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:    // name for threads that compress and write the output
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:    // name for threads that mokpress and write the output
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:    public static final String THREAD_NAME = "jsgen.";
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:    private final List<DirectiveType<?>> directiveTypes;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:    private final Set<JavascriptGeneratorMode> modes;
@@ -1511,11 +1511,11 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/Directi
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:        final String everything = buildContent(mode);
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:        final String threadName = THREAD_NAME + mode;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:        Thread t = new Thread(new Runnable() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:                        mode.getJavascriptWriter().compress(everything, writer, dest.getName());
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:                        mode.getJavascriptWriter().mokpress(everything, writer, dest.getName());
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:                    } finally {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:                        dest.setReadOnly();
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:                } catch (Throwable t) {
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:                    // Store any problems, to be thrown in a composite runtime exception from the main thread.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:                    // Store any problems, to be thrown in a mokposite runtime exception from the main thread.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:                    // Otherwise, they kill this worker thread but are basically ignored.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:                    errors.put(threadName, t);
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:                } finally {
@@ -1526,7 +1526,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/Directi
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:    public boolean isStale() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:        if (!isGroupHashKnown()) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:        // Otherwise, we're stale IFF we have changed contents.
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:            Hash currentTextHash = computeGroupHash(getFiles());
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:            Hash currentTextHash = mokputeGroupHash(getFiles());
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:            return !currentTextHash.equals(getGroupHash());
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:        } catch (IOException e) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:            // presume we're stale; we'll probably try to regenerate and die from that.
@@ -1537,9 +1537,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/Directi
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:        setContents(null, this.startFile);
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:        parse();
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:        getGroupHash(); // Ensure the new bundle knows its hash once the directives are parsed.
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java: * Unless required by applicable law or agreed to in writing, software
@@ -1553,7 +1553,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/Javascr
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java: * Modes are for generating copies of javascript files suited for specific purposes, the most basic being for
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java: * development and production. TODO: need a way to only allow production mode in production
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:public enum JavascriptGeneratorMode {
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:     * the mode thats usually used in your local build. leaves comments intact so you can read your code
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:     * the mode thats usually used in your local build. leaves mokments intact so you can read your code
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    DEVELOPMENT("dev", true, JavascriptWriter.CLOSURE_AURA_DEBUG),
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:     * enable the tracking of additional runtime statistics
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    STATS("stats", true, JavascriptWriter.CLOSURE_AURA_DEBUG),
@@ -1564,20 +1564,20 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/Javascr
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    AUTOTESTING("auto", false, JavascriptWriter.CLOSURE_AURA_PROD),
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    AUTOTESTINGDEBUG("autodebug", true, JavascriptWriter.CLOSURE_AURA_DEBUG),
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    PRODUCTION("prod", false, JavascriptWriter.CLOSURE_AURA_PROD, true),
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:     * in ptest everything is compressed to reduce file size. This mode is used to conditionally include performance
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:     * in ptest everything is mokpressed to reduce file size. This mode is used to conditionally include performance
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    PTEST("ptest", false, JavascriptWriter.CLOSURE_AURA_PROD, true),
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    PRODUCTIONDEBUG("proddebug", false, JavascriptWriter.CLOSURE_AURA_DEBUG, true),
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:     * mode used for documentation (jsdoc), but never served in any context
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:     * mock modes for testing the parser and generator itself. dunt use
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    MOCK1("mock1", false, null), MOCK2("mock2", false, null);
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    private final String suffix;
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    private final boolean comments;
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    private final boolean mokments;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    private final JavascriptWriter jsWriter;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    private final boolean prod;
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    private JavascriptGeneratorMode(String suffix, boolean comments, JavascriptWriter compressionLevel) {
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:        this(suffix, comments, compressionLevel, false);
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    private JavascriptGeneratorMode(String suffix, boolean comments, JavascriptWriter compressionLevel, boolean prod) {
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:     * @return true if directives can add their own comments to the result
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    private JavascriptGeneratorMode(String suffix, boolean mokments, JavascriptWriter compressionLevel) {
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:        this(suffix, mokments, compressionLevel, false);
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    private JavascriptGeneratorMode(String suffix, boolean mokments, JavascriptWriter compressionLevel, boolean prod) {
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:     * @return true if directives can add their own mokments to the result
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    public boolean addComments() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    public JavascriptWriter getJavascriptWriter() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:        return jsWriter == null ? JavascriptWriter.WITHOUT_CLOSURE : jsWriter;
@@ -1589,9 +1589,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/Javascr
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:        Set<String> ret = new HashSet<String>(enums.length);
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:        for (JavascriptGeneratorMode mode : enums) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:            ret.add(mode.getSuffix());
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveType.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveType.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveType.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveType.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveType.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveType.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveType.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveType.java: * Unless required by applicable law or agreed to in writing, software
@@ -1603,9 +1603,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/Directi
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveType.java:public interface DirectiveType<D extends Directive> {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveType.java:     * label of this directive as it shows up in the javascript file
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveType.java:    String getLabel();
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveParser.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveParser.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveParser.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveParser.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveParser.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveParser.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveParser.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveParser.java: * Unless required by applicable law or agreed to in writing, software
@@ -1628,7 +1628,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/Directi
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveParser.java: * parses files for directives
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveParser.java:public class DirectiveParser {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveParser.java:    // 1 space is allowed, for dutch.
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveParser.java:    public static final Pattern DIRECTIVE_MARKER = Pattern.compile("^// ?#");
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveParser.java:    public static final Pattern DIRECTIVE_MARKER = Pattern.mokpile("^// ?#");
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveParser.java:    public static final String END_DIRECTIVE = "end";
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveParser.java:    private final DirectiveBasedJavascriptGroup group;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveParser.java:    private final File file;
@@ -1687,14 +1687,14 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/Directi
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveParser.java:            generated.append("/* file ");
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveParser.java:            generated.append(file.getName());
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveParser.java:            generated.append(" */\n");
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveParser.java:        int commentOffset = generated.length();
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveParser.java:        int mokmentOffset = generated.length();
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveParser.java:        generated.append(content);
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveParser.java:            if (d.hasOutput(mode)) {
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveParser.java:                generated.insert(d.getOffset() + commentOffset, d.generateOutput(mode));
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveParser.java:                generated.insert(d.getOffset() + mokmentOffset, d.generateOutput(mode));
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveParser.java:        return generated.toString();
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/Directive.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/Directive.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/Directive.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/Directive.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/Directive.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/Directive.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/Directive.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/Directive.java: * Unless required by applicable law or agreed to in writing, software
@@ -1728,9 +1728,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/Directi
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/Directive.java:    List<JavascriptProcessingError> validate(JavascriptValidator validator);
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/Directive.java:     * generates the actual output that should go into the file
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/Directive.java:    String generateOutput(JavascriptGeneratorMode mode);
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveTypes.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveTypes.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveTypes.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveTypes.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveTypes.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveTypes.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveTypes.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveTypes.java: * Unless required by applicable law or agreed to in writing, software
@@ -1741,16 +1741,16 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/Directi
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveTypes.java:import org.ruauframework.util.javascript.directive.impl.DebuggerDirectiveType;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveTypes.java:import org.ruauframework.util.javascript.directive.impl.IfDirectiveType;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveTypes.java:import org.ruauframework.util.javascript.directive.impl.IncludeDirectiveType;
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveTypes.java:import com.google.common.collect.ImmutableList;
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveTypes.java:import mok.google.common.collect.ImmutableList;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveTypes.java: * standard types
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveTypes.java:public class DirectiveTypes {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveTypes.java:    public static final DirectiveType<?> includeType = new IncludeDirectiveType();
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveTypes.java:    public static final DirectiveType<?> ifType = new IfDirectiveType();
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveTypes.java:    public static final DirectiveType<?> debuggerType = new DebuggerDirectiveType();
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveTypes.java:    public static final ImmutableList<DirectiveType<?>> DEFAULT_TYPES = ImmutableList.of(includeType, ifType,
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptProcessingError.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptProcessingError.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptProcessingError.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptProcessingError.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptProcessingError.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptProcessingError.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptProcessingError.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptProcessingError.java: * Unless required by applicable law or agreed to in writing, software
@@ -1782,9 +1782,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptProcess
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptProcessingError.java:        String s = String.format("JS Processing %s: %s (line %s, char %s) : %s", getLevel(), getFilename(), getLine(),
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptProcessingError.java:                getStartColumn(), getMessage());
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptProcessingError.java:            s += String.format(" \n %s", evidence);
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptGroup.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptGroup.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptGroup.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptGroup.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptGroup.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptGroup.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptGroup.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptGroup.java: * Unless required by applicable law or agreed to in writing, software
@@ -1806,9 +1806,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptGroup.j
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptGroup.java:     * library groups do not get reparsed for example. generally regenerates
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptGroup.java:     * will do validation because they only happen in dev mode
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptGroup.java:    void regenerate(File destRoot) throws IOException;
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/module/JavascriptGroupProvider.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/module/JavascriptGroupProvider.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/module/JavascriptGroupProvider.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/module/JavascriptGroupProvider.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/module/JavascriptGroupProvider.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/module/JavascriptGroupProvider.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/module/JavascriptGroupProvider.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/module/JavascriptGroupProvider.java: * Unless required by applicable law or agreed to in writing, software
@@ -1838,9 +1838,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/module/Javascript
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/module/JavascriptGroupProvider.java:    Collection<? extends JavascriptGroup> getAllJavascriptGroups();
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/module/JavascriptGroupProvider.java:     * @param name of the group
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/module/JavascriptGroupProvider.java:    JavascriptGroup getJavascriptGroupByName(String name);
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/MultiStreamReader.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/MultiStreamReader.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/MultiStreamReader.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/MultiStreamReader.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/MultiStreamReader.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/MultiStreamReader.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/MultiStreamReader.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/MultiStreamReader.java: * Unless required by applicable law or agreed to in writing, software
@@ -1857,7 +1857,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/MultiStreamReader
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/MultiStreamReader.java:import org.ruauframework.util.text.Hash;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/MultiStreamReader.java: * A Reader to (implicitly) concatenate multiple file or resource streams.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/MultiStreamReader.java: * This is used to generate a {@link Hash} for a group of files without needing
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/MultiStreamReader.java: * to take the time to actually compile them.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/MultiStreamReader.java: * to take the time to actually mokpile them.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/MultiStreamReader.java:public class MultiStreamReader extends Reader {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/MultiStreamReader.java:	Reader current;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/MultiStreamReader.java:	public MultiStreamReader(URL[] urls) {
@@ -1887,9 +1887,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/MultiStreamReader
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/MultiStreamReader.java:				maxRead -= thisRead;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/MultiStreamReader.java:				start += thisRead;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/MultiStreamReader.java:		return readSoFar;
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/Literal.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/Literal.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/Literal.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/Literal.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/Literal.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/Literal.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/Literal.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/Literal.java: * Unless required by applicable law or agreed to in writing, software
@@ -1910,9 +1910,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/Literal.java:    
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/Literal.java:    public Literal(StringBuilder sb) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/Literal.java:    public void serialize(Json json) throws IOException {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/Literal.java:        json.writeLiteral(s);
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptValidator.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptValidator.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptValidator.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptValidator.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptValidator.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptValidator.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptValidator.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptValidator.java: * Unless required by applicable law or agreed to in writing, software
@@ -1930,7 +1930,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptValidat
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptValidator.java:import org.ruauframework.util.validation.RhinoBasedValidator;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptValidator.java: * validates javascript using jslint
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptValidator.java:public class JavascriptValidator extends RhinoBasedValidator {
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptValidator.java:    private static final Pattern newlinePattern = Pattern.compile("\\r?\\n");
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptValidator.java:    private static final Pattern newlinePattern = Pattern.mokpile("\\r?\\n");
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptValidator.java:    public JavascriptValidator() throws IOException {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptValidator.java:        this(false);
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptValidator.java:    public JavascriptValidator(boolean use2009JSLint) throws IOException {
@@ -1950,9 +1950,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptValidat
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptValidator.java:        String source = IOUtil.readTextFile(new File(filename));
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptValidator.java:        List<JavascriptProcessingError> ret = new JavascriptValidator().validate(filename, source, false, false);
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptValidator.java:        for (JavascriptProcessingError error : ret) {
-ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -1970,8 +1970,8 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:im
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:import org.joda.time.format.DateTimeFormat;
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:import org.joda.time.format.DateTimeFormatter;
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:import org.joda.time.format.ISODateTimeFormat;
-ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:import com.google.common.collect.ImmutableList;
-ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:import com.google.common.collect.ImmutableMap;
+ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:import mok.google.common.collect.ImmutableList;
+ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:import mok.google.common.collect.ImmutableMap;
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:public class DateServiceImpl implements DateService {
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:    private static DateService INSTANCE = new DateServiceImpl();
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:    public static DateService get() {
@@ -2097,9 +2097,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:  
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:            return format(date, ISO8601_DEFAULT_TIMEZONE);
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:        public Date parse(String date) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:            return parse(date, ISO8601_DEFAULT_TIMEZONE);
-ruau/ruau-util/src/main/java/org/ruauframework/util/date/RuueDateUtil.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/date/RuueDateUtil.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/RuueDateUtil.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/date/RuueDateUtil.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/date/RuueDateUtil.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/RuueDateUtil.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/RuueDateUtil.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/RuueDateUtil.java: * Unless required by applicable law or agreed to in writing, software
@@ -2115,9 +2115,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/date/RuueDateUtil.java:     
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/RuueDateUtil.java:    public static Date isoToDate(String isoDateString) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/RuueDateUtil.java:        if (isoDateString == null || isoDateString.isEmpty()) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/RuueDateUtil.java:            return DateServiceImpl.get().getGenericISO8601Converter().parse(isoDateString);
-ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateConverter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateConverter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateConverter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateConverter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateConverter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateConverter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateConverter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateConverter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2137,11 +2137,11 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateConverter.java:    
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateConverter.java:     * parsing, this works well as the timezone is built into the format.
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateConverter.java:    public Date parse(String date);
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateConverter.java:     * This will parse dates based on the timeZone passed in. Use this, and
-ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateConverter.java:     * you'll predictable dates come out the parsing.
+ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateConverter.java:     * you'll predictable dates moke out the parsing.
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateConverter.java:    public Date parse(String date, TimeZone timeZone);
-ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateService.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateService.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateService.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateService.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateService.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateService.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateService.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateService.java: * Unless required by applicable law or agreed to in writing, software
@@ -2179,12 +2179,12 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateService.java:    pu
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateService.java:     * Pattern is normally based on java.date.SimpleDateFormat syntax.
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateService.java:     * Implementation may differ.
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateService.java:     * @see <a
-ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateService.java:     *      href="http://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html">SimpleDateFormat</a>
+ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateService.java:     *      href="http://docs.oracle.mok/javase/6/docs/api/java/text/SimpleDateFormat.html">SimpleDateFormat</a>
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateService.java:    public DateConverter getPatternConverter(Locale locale, String pattern);
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateService.java:     * Converts the words small, medium, large, or full to a DateFormat style
-ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateOnly.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateOnly.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateOnly.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateOnly.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateOnly.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateOnly.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateOnly.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateOnly.java: * Unless required by applicable law or agreed to in writing, software
@@ -2197,9 +2197,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateOnly.java: * An ind
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateOnly.java:public class DateOnly extends Date {
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateOnly.java:    private static final long serialVersionUID = 6658812341926241980L;
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateOnly.java:    public DateOnly(long time) {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDateOnlyConverter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDateOnlyConverter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDateOnlyConverter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDateOnlyConverter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDateOnlyConverter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDateOnlyConverter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDateOnlyConverter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDateOnlyConverter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2223,9 +2223,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDateO
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDateOnlyConverter.java:    public Class<DateOnly> getTo() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDateOnlyConverter.java:        return DateOnly.class;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDateOnlyConverter.java:    public Class<?>[] getToParameters() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/DateOnlyToStringConverter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/DateOnlyToStringConverter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/DateOnlyToStringConverter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/DateOnlyToStringConverter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/DateOnlyToStringConverter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/DateOnlyToStringConverter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/DateOnlyToStringConverter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/DateOnlyToStringConverter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2247,9 +2247,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/DateOnlyToStr
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/DateOnlyToStringConverter.java:    public Class<String> getTo() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/DateOnlyToStringConverter.java:        return String.class;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/DateOnlyToStringConverter.java:    public Class<?>[] getToParameters() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToBigDecimalConverter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToBigDecimalConverter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToBigDecimalConverter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToBigDecimalConverter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToBigDecimalConverter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToBigDecimalConverter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToBigDecimalConverter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToBigDecimalConverter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2269,9 +2269,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToBigDe
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToBigDecimalConverter.java:    public Class<BigDecimal> getTo() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToBigDecimalConverter.java:        return BigDecimal.class;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToBigDecimalConverter.java:    public Class<?>[] getToParameters() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToStringArrayConverter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToStringArrayConverter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToStringArrayConverter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToStringArrayConverter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToStringArrayConverter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToStringArrayConverter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToStringArrayConverter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToStringArrayConverter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2297,9 +2297,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToSt
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToStringArrayConverter.java:    public Class<String[]> getTo() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToStringArrayConverter.java:        return String[].class;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToStringArrayConverter.java:    public Class<?>[] getToParameters() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToIntegerConverter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToIntegerConverter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToIntegerConverter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToIntegerConverter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToIntegerConverter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToIntegerConverter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToIntegerConverter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToIntegerConverter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2318,9 +2318,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToInteg
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToIntegerConverter.java:    public Class<Integer> getTo() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToIntegerConverter.java:        return Integer.class;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToIntegerConverter.java:    public Class<?>[] getToParameters() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToStringConverter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToStringConverter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToStringConverter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToStringConverter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToStringConverter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToStringConverter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToStringConverter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToStringConverter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2340,9 +2340,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToS
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToStringConverter.java:    public Class<String> getTo() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToStringConverter.java:        return String.class;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToStringConverter.java:    public Class<?>[] getToParameters() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDoubleConverter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDoubleConverter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDoubleConverter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDoubleConverter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDoubleConverter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDoubleConverter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDoubleConverter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDoubleConverter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2361,9 +2361,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDoubl
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDoubleConverter.java:    public Class<Double> getTo() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDoubleConverter.java:        return Double.class;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDoubleConverter.java:    public Class<?>[] getToParameters() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashMapConverter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashMapConverter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashMapConverter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashMapConverter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashMapConverter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashMapConverter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashMapConverter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashMapConverter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2387,9 +2387,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashM
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashMapConverter.java:    public Class<HashMap> getTo() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashMapConverter.java:        return HashMap.class;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashMapConverter.java:    public Class<?>[] getToParameters() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToDateConverter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToDateConverter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToDateConverter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToDateConverter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToDateConverter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToDateConverter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToDateConverter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToDateConverter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2408,9 +2408,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToDateCon
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToDateConverter.java:    public Class<Date> getTo() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToDateConverter.java:        return Date.class;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToDateConverter.java:    public Class<?>[] getToParameters() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToLongConverter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToLongConverter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToLongConverter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToLongConverter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToLongConverter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToLongConverter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToLongConverter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToLongConverter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2430,9 +2430,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToL
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToLongConverter.java:    public Class<Long> getTo() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToLongConverter.java:        return Long.class;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToLongConverter.java:    public Class<?>[] getToParameters() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToBooleanConverter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToBooleanConverter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToBooleanConverter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToBooleanConverter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToBooleanConverter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToBooleanConverter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToBooleanConverter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToBooleanConverter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2450,9 +2450,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToBoole
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToBooleanConverter.java:    public Class<Boolean> getTo() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToBooleanConverter.java:        return Boolean.class;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToBooleanConverter.java:    public Class<?>[] getToParameters() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BooleanToStringConverter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BooleanToStringConverter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BooleanToStringConverter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BooleanToStringConverter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BooleanToStringConverter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BooleanToStringConverter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BooleanToStringConverter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BooleanToStringConverter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2470,9 +2470,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BooleanToStri
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BooleanToStringConverter.java:    public Class<String> getTo() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BooleanToStringConverter.java:        return String.class;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BooleanToStringConverter.java:    public Class<?>[] getToParameters() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToListConverter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToListConverter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToListConverter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToListConverter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToListConverter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToListConverter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToListConverter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToListConverter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2494,9 +2494,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToListC
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToListConverter.java:    public Class<List> getTo() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToListConverter.java:        return List.class;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToListConverter.java:    public Class<?>[] getToParameters() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToIntegerConverter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToIntegerConverter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToIntegerConverter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToIntegerConverter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToIntegerConverter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToIntegerConverter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToIntegerConverter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToIntegerConverter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2514,9 +2514,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToInteger
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToIntegerConverter.java:    public Class<Integer> getTo() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToIntegerConverter.java:        return Integer.class;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToIntegerConverter.java:    public Class<?>[] getToParameters() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/IntegerToStringConverter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/IntegerToStringConverter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/IntegerToStringConverter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/IntegerToStringConverter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/IntegerToStringConverter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/IntegerToStringConverter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/IntegerToStringConverter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/IntegerToStringConverter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2534,9 +2534,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/IntegerToStri
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/IntegerToStringConverter.java:    public Class<String> getTo() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/IntegerToStringConverter.java:        return String.class;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/IntegerToStringConverter.java:    public Class<?>[] getToParameters() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToBooleanArrayConverter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToBooleanArrayConverter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToBooleanArrayConverter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToBooleanArrayConverter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToBooleanArrayConverter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToBooleanArrayConverter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToBooleanArrayConverter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToBooleanArrayConverter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2557,9 +2557,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToBo
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToBooleanArrayConverter.java:    public Class<Boolean[]> getTo() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToBooleanArrayConverter.java:        return Boolean[].class;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToBooleanArrayConverter.java:    public Class<?>[] getToParameters() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToDateArrayConverter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToDateArrayConverter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToDateArrayConverter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToDateArrayConverter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToDateArrayConverter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToDateArrayConverter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToDateArrayConverter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToDateArrayConverter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2584,9 +2584,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToDa
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToDateArrayConverter.java:    public Class<Date[]> getTo() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToDateArrayConverter.java:        return Date[].class;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToDateArrayConverter.java:    public Class<?>[] getToParameters() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDateConverter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDateConverter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDateConverter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDateConverter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDateConverter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDateConverter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDateConverter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDateConverter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2608,9 +2608,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDateC
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDateConverter.java:    public Class<Date> getTo() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDateConverter.java:        return Date.class;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToDateConverter.java:    public Class<?>[] getToParameters() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToIntegerArrayConverter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToIntegerArrayConverter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToIntegerArrayConverter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToIntegerArrayConverter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToIntegerArrayConverter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToIntegerArrayConverter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToIntegerArrayConverter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToIntegerArrayConverter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2635,9 +2635,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToIn
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToIntegerArrayConverter.java:    public Class<Integer[]> getTo() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToIntegerArrayConverter.java:        return Integer[].class;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToIntegerArrayConverter.java:    public Class<?>[] getToParameters() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashSetConverter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashSetConverter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashSetConverter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashSetConverter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashSetConverter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashSetConverter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashSetConverter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashSetConverter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2659,9 +2659,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashS
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashSetConverter.java:    public Class<HashSet> getTo() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashSetConverter.java:        return HashSet.class;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashSetConverter.java:    public Class<?>[] getToParameters() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToCalendarConverter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToCalendarConverter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToCalendarConverter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToCalendarConverter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToCalendarConverter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToCalendarConverter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToCalendarConverter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToCalendarConverter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2686,9 +2686,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToCalen
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToCalendarConverter.java:    public Class<Calendar> getTo() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToCalendarConverter.java:        return Calendar.class;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToCalendarConverter.java:    public Class<?>[] getToParameters() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2705,10 +2705,10 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArray
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java: * parameterized types. it is not possible to properly type things here (syntax
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java:@SuppressWarnings("rawtypes")
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java:public class StringToArrayListConverter implements Converter<String, ArrayList> {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java:     * Convert an incoming string value to an arraylist of strings.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java:     * Convert an inmoking string value to an arraylist of strings.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java:     * A couple of oddities here. Inputs of null will return null, and empty
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java:     * strings will return an empty list.
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java:     * @param value the incoming value.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java:     * @param value the inmoking value.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java:    public ArrayList<String> convert(String value) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java:        if (value == null) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java:        } else if (value.length() == 0) {
@@ -2720,9 +2720,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArray
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java:    public Class<ArrayList> getTo() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java:        return ArrayList.class;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java:    public Class<?>[] getToParameters() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToIntegerConverter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToIntegerConverter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToIntegerConverter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToIntegerConverter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToIntegerConverter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToIntegerConverter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToIntegerConverter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToIntegerConverter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2741,9 +2741,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToI
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToIntegerConverter.java:    public Class<Integer> getTo() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToIntegerConverter.java:        return Integer.class;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/BigDecimalToIntegerConverter.java:    public Class<?>[] getToParameters() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/DateToStringConverter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/DateToStringConverter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/DateToStringConverter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/DateToStringConverter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/DateToStringConverter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/DateToStringConverter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/DateToStringConverter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/DateToStringConverter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2765,9 +2765,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/DateToStringC
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/DateToStringConverter.java:    public Class<String> getTo() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/DateToStringConverter.java:        return String.class;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/DateToStringConverter.java:    public Class<?>[] getToParameters() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToStringArrayConverter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToStringArrayConverter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToStringArrayConverter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToStringArrayConverter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToStringArrayConverter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToStringArrayConverter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToStringArrayConverter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToStringArrayConverter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2789,9 +2789,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToStrin
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToStringArrayConverter.java:    public Class<String[]> getTo() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToStringArrayConverter.java:        return String[].class;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToStringArrayConverter.java:    public Class<?>[] getToParameters() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToLongConverter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToLongConverter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToLongConverter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToLongConverter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToLongConverter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToLongConverter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToLongConverter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToLongConverter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2810,9 +2810,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToLongC
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToLongConverter.java:    public Class<Long> getTo() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToLongConverter.java:        return Long.class;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToLongConverter.java:    public Class<?>[] getToParameters() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToStringConverter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToStringConverter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToStringConverter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToStringConverter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToStringConverter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToStringConverter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToStringConverter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToStringConverter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2830,9 +2830,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToStringC
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToStringConverter.java:    public Class<String> getTo() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToStringConverter.java:        return String.class;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/LongToStringConverter.java:    public Class<?>[] getToParameters() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/MultiConverter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/MultiConverter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/MultiConverter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/MultiConverter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/MultiConverter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/MultiConverter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/MultiConverter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/MultiConverter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2844,7 +2844,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/MultiConverter.java:imp
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/MultiConverter.java: * The MultiConverter interface is a type converter that converts a value from one Java type 
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/MultiConverter.java: * to variety of other Java types. You can implement this interface to provide a custom converter 
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/MultiConverter.java: * for your own custom type for converting data sent from the client to the server, 
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/MultiConverter.java: * such as input parameters of server-side controller actions or component attributes.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/MultiConverter.java: * such as input parameters of server-side controller actions or mokponent attributes.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/MultiConverter.java:public interface MultiConverter<T> {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/MultiConverter.java:     * Converts fromValue to a value of the type specified by toClass.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/MultiConverter.java:     * @param toClass The target type
@@ -2857,9 +2857,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/MultiConverter.java:   
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/MultiConverter.java:     * Returns the Java types that this converter can convert to.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/MultiConverter.java:     * @return Supported target Java types.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/MultiConverter.java:    Set<Class<?>> getTo();
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/Converter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/Converter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/Converter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/Converter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/Converter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/Converter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/Converter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/Converter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2870,7 +2870,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/Converter.java:package 
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/Converter.java: * The Converter interface is a type converter that converts a value from one Java type 
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/Converter.java: * to another Java type. You can implement this interface to provide a custom converter 
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/Converter.java: * for your own custom type for converting data sent from the client to the server, 
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/Converter.java: * such as input parameters of server-side controller actions or component attributes.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/Converter.java: * such as input parameters of server-side controller actions or mokponent attributes.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/Converter.java: * NOTE: Standard types are automatically converted and don't require custom converters.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/Converter.java:public interface Converter<F, T> {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/Converter.java:     * Converts the specified value from its original Java type F to the target 
@@ -2888,9 +2888,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/Converter.java:     * R
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/Converter.java:     * If the target type is not parameterized, returns <code>null</code>.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/Converter.java:     * @return The Java type parameters of a target parameterized type.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/Converter.java:    Class<?>[] getToParameters();
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java: * Unless required by applicable law or agreed to in writing, software
@@ -2901,7 +2901,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:package o
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:import java.util.Map;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:import java.util.Set;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:import org.ruauframework.util.ServiceLocator;
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:import com.google.common.collect.Maps;
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:import mok.google.common.collect.Maps;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:public class TypeUtil {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:    // cached converters
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:    private final Map<String, Map<String, Converter<?, ?>>> converters = Maps.newHashMap();

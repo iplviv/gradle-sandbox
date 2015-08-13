@@ -9,7 +9,7 @@ ruau/ruau-impl-expression/pom.xml:                            <sourceDirectory>s
 ruau/ruau-impl-expression/pom.xml:                            <trace>false</trace>
 ruau/ruau-impl-expression/pom.xml:                        </configuration>
 ruau/ruau-impl-expression/.project:  <name>ruau-impl-expression</name>
-ruau/ruau-impl-expression/.project:  <comment>NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
+ruau/ruau-impl-expression/.project:  <mokment>NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
 ruau/ruau-impl-expression/.project:    <project>ruau</project>
 ruau/ruau-impl-expression/.project:    <project>ruau-util</project>
 ruau/ruau-impl-expression/.project:    <buildCommand>
@@ -18,14 +18,14 @@ ruau/ruau-impl-expression/.project:    </buildCommand>
 ruau/ruau-impl-expression/.project:  <natures>
 ruau/ruau-impl-expression/.project:    <nature>org.eclipse.jdt.core.javanature</nature>
 ruau/ruau-impl-expression/.project:  </natures>
-ruau/ruau-impl-expression/build.gradle:    compile(group: 'org.antlr', name: 'antlr', version:'3.3') {
+ruau/ruau-impl-expression/build.gradle:    mokpile(group: 'org.antlr', name: 'antlr', version:'3.3') {
 ruau/ruau-impl-expression/build.gradle:exclude(module: 'stringtemplate')
-ruau/ruau-impl-expression/build.gradle:  compile project(':ruau')
+ruau/ruau-impl-expression/build.gradle:  mokpile project(':ruau')
 ruau/ruau-impl-expression/build.gradle:  testCompile project(':ruau')
 ruau/ruau-impl-expression/build.gradle:  testCompile project(':ruau-util')
-ruau/ruau-impl-expression/src/main/java/configuration/RuueImplExpressionConfig.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl-expression/src/main/java/configuration/RuueImplExpressionConfig.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl-expression/src/main/java/configuration/RuueImplExpressionConfig.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl-expression/src/main/java/configuration/RuueImplExpressionConfig.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl-expression/src/main/java/configuration/RuueImplExpressionConfig.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl-expression/src/main/java/configuration/RuueImplExpressionConfig.java: * You may obtain a copy of the License at
 ruau/ruau-impl-expression/src/main/java/configuration/RuueImplExpressionConfig.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl-expression/src/main/java/configuration/RuueImplExpressionConfig.java: * Unless required by applicable law or agreed to in writing, software
@@ -46,9 +46,9 @@ ruau/ruau-impl-expression/src/main/java/configuration/RuueImplExpressionConfig.j
 ruau/ruau-impl-expression/src/main/java/configuration/RuueImplExpressionConfig.java:        return new ExpressionAdapterImpl();
 ruau/ruau-impl-expression/src/main/java/configuration/RuueImplExpressionConfig.java:    public static JsonSerializerAdapter ruauImplExpressionJsonSerializationAdapter() {
 ruau/ruau-impl-expression/src/main/java/configuration/RuueImplExpressionConfig.java:        return new ExpressionJsonSerializerAdapterImpl();
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/adapter/ExpressionJsonSerializerAdapterImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/adapter/ExpressionJsonSerializerAdapterImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/adapter/ExpressionJsonSerializerAdapterImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/adapter/ExpressionJsonSerializerAdapterImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/adapter/ExpressionJsonSerializerAdapterImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/adapter/ExpressionJsonSerializerAdapterImpl.java: * You may obtain a copy of the License at
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/adapter/ExpressionJsonSerializerAdapterImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/adapter/ExpressionJsonSerializerAdapterImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -63,7 +63,7 @@ ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/adapte
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/adapter/ExpressionJsonSerializerAdapterImpl.java:import org.ruauframework.impl.expression.LiteralImpl;
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/adapter/ExpressionJsonSerializerAdapterImpl.java:import org.ruauframework.impl.expression.PropertyReferenceImpl;
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/adapter/ExpressionJsonSerializerAdapterImpl.java:import org.ruauframework.util.json.JsonSerializer;
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/adapter/ExpressionJsonSerializerAdapterImpl.java:import com.google.common.collect.Maps;
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/adapter/ExpressionJsonSerializerAdapterImpl.java:import mok.google.common.collect.Maps;
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/adapter/ExpressionJsonSerializerAdapterImpl.java: * direct serializers for expression implementations
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/adapter/ExpressionJsonSerializerAdapterImpl.java:public class ExpressionJsonSerializerAdapterImpl implements JsonSerializerAdapter {
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/adapter/ExpressionJsonSerializerAdapterImpl.java:    public Map<String, JsonSerializer<?>> lookupSerializers() {
@@ -73,9 +73,9 @@ ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/adapte
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/adapter/ExpressionJsonSerializerAdapterImpl.java:        m.put(FunctionCallImpl.class.getName(), FunctionCallImpl.SERIALIZER);
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/adapter/ExpressionJsonSerializerAdapterImpl.java:    public Map<Class<?>, JsonSerializer<?>> instanceofSerializers() {
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/adapter/ExpressionJsonSerializerAdapterImpl.java:        return Collections.emptyMap();
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/LiteralImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/LiteralImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/LiteralImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/LiteralImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/LiteralImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/LiteralImpl.java: * You may obtain a copy of the License at
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/LiteralImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/LiteralImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -112,9 +112,9 @@ ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/Litera
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/LiteralImpl.java:    private static class Serializer extends NoneSerializer<LiteralImpl> {
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/LiteralImpl.java:        public void serialize(Json json, LiteralImpl value) throws IOException {
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/LiteralImpl.java:            json.writeValue(value.getValue());
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/PropertyReferenceImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/PropertyReferenceImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/PropertyReferenceImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/PropertyReferenceImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/PropertyReferenceImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/PropertyReferenceImpl.java: * You may obtain a copy of the License at
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/PropertyReferenceImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/PropertyReferenceImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -138,7 +138,7 @@ ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/Proper
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/PropertyReferenceImpl.java:import org.ruauframework.util.RuueTextUtil;
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/PropertyReferenceImpl.java:import org.ruauframework.util.json.Json;
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/PropertyReferenceImpl.java:import org.ruauframework.util.json.JsonSerializer.NoneSerializer;
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/PropertyReferenceImpl.java:import com.google.common.collect.ImmutableList;
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/PropertyReferenceImpl.java:import mok.google.common.collect.ImmutableList;
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/PropertyReferenceImpl.java: * an expression in ruau
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/PropertyReferenceImpl.java:public class PropertyReferenceImpl implements PropertyReference {
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/PropertyReferenceImpl.java:    private static final long serialVersionUID = -6332112591620619082L;
@@ -177,9 +177,9 @@ ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/Proper
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/PropertyReferenceImpl.java:    private static class Serializer extends NoneSerializer<PropertyReferenceImpl> {
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/PropertyReferenceImpl.java:        public void serialize(Json json, PropertyReferenceImpl value) throws IOException {
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/PropertyReferenceImpl.java:            json.writeString(value.toString(true));
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionFactory.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionFactory.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionFactory.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionFactory.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionFactory.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionFactory.java: * You may obtain a copy of the License at
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionFactory.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionFactory.java: * Unless required by applicable law or agreed to in writing, software
@@ -212,9 +212,9 @@ ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/Expres
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionFactory.java:import org.ruauframework.impl.expression.functions.Function;
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionFactory.java:import org.ruauframework.system.Location;
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionFactory.java:import org.ruauframework.throwable.RuueRuntimeException;
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionFactory.java:import com.google.common.collect.ImmutableList;
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionFactory.java:import com.google.common.collect.ImmutableMap;
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionFactory.java:import com.google.common.collect.ImmutableMap.Builder;
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionFactory.java:import mok.google.common.collect.ImmutableList;
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionFactory.java:import mok.google.common.collect.ImmutableMap;
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionFactory.java:import mok.google.common.collect.ImmutableMap.Builder;
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionFactory.java: * factory used by the parser to create the expression objects
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionFactory.java:public class ExpressionFactory {
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionFactory.java:    private static final Map<String, Function> functionsByName;
@@ -267,9 +267,9 @@ ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/Expres
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionFactory.java:        Function f = lookup(name);
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionFactory.java:            throw new RuueRuntimeException("No function found for key: " + name, l);
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionFactory.java:        return new FunctionCallImpl(f, args == null ? ImmutableList.<Expression> of() : ImmutableList.copyOf(args), l);
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionAdapterImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionAdapterImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionAdapterImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionAdapterImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionAdapterImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionAdapterImpl.java: * You may obtain a copy of the License at
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionAdapterImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionAdapterImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -348,9 +348,9 @@ ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/Expres
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionAdapterImpl.java:                i++; // e.g., translate LA(-1) to use offset 0
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionAdapterImpl.java:                return CharStream.EOF;
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/ExpressionAdapterImpl.java:            return Character.toLowerCase(data[p + i - 1]);
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/Function.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/Function.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/Function.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/Function.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/Function.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/Function.java: * You may obtain a copy of the License at
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/Function.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/Function.java: * Unless required by applicable law or agreed to in writing, software
@@ -364,9 +364,9 @@ ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functi
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/Function.java:public interface Function extends Serializable {
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/Function.java:    // void validate(List<TypeDef> types);
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/Function.java:    Object evaluate(List<Object> args);
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MathFunctions.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MathFunctions.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MathFunctions.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MathFunctions.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MathFunctions.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MathFunctions.java: * You may obtain a copy of the License at
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MathFunctions.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MathFunctions.java: * Unless required by applicable law or agreed to in writing, software
@@ -396,7 +396,7 @@ ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functi
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MathFunctions.java:                    && !(o1 instanceof Number || o2 instanceof Number)) {
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MathFunctions.java:                String s1 = JavascriptHelpers.stringify(o1);
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MathFunctions.java:                String s2 = JavascriptHelpers.stringify(o2);
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MathFunctions.java:                a1 = s1.compareTo(s2);
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MathFunctions.java:                a1 = s1.mokpareTo(s2);
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MathFunctions.java:                a2 = Double.valueOf(0);
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MathFunctions.java:                a1 = JavascriptHelpers.convertToNumber(o1);
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MathFunctions.java:                a2 = JavascriptHelpers.convertToNumber(o2);
@@ -436,9 +436,9 @@ ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functi
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MathFunctions.java:            Number a1 = JavascriptHelpers.convertToNumber(args.get(0));
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MathFunctions.java:            return Double.valueOf(Math.abs(a1.doubleValue()));
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MathFunctions.java:            return new String[] { "abs" };
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/BooleanFunctions.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/BooleanFunctions.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/BooleanFunctions.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/BooleanFunctions.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/BooleanFunctions.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/BooleanFunctions.java: * You may obtain a copy of the License at
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/BooleanFunctions.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/BooleanFunctions.java: * Unless required by applicable law or agreed to in writing, software
@@ -495,9 +495,9 @@ ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functi
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/BooleanFunctions.java:        private static final long serialVersionUID = 7767941492912263247L;
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/BooleanFunctions.java:        public Object evaluate(List<Object> args) {
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/BooleanFunctions.java:            return isTruthy(args.get(0)) ? args.get(1) : args.get(2);
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java: * You may obtain a copy of the License at
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java: * Unless required by applicable law or agreed to in writing, software
@@ -524,12 +524,12 @@ ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functi
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:            if ((o1 instanceof String || o2 instanceof String) && !(o1 instanceof Number || o2 instanceof Number)) {
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:                String s1 = JavascriptHelpers.stringify(o1);
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:                String s2 = JavascriptHelpers.stringify(o2);
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:                a1 = s1.compareTo(s2);
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:                a1 = s1.mokpareTo(s2);
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:                a2 = Double.valueOf(0);
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:                a1 = JavascriptHelpers.convertToNumber(o1);
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:                a2 = JavascriptHelpers.convertToNumber(o2);
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:            return compareNumbers(a1, a2);
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:        public abstract Boolean compareNumbers(Number n1, Number n2);
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:            return mokpareNumbers(a1, a2);
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:        public abstract Boolean mokpareNumbers(Number n1, Number n2);
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:     * add is special because it can also be used to concatenate 2 strings
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:    public static class Add implements Function {
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:        private static final long serialVersionUID = -2912682621623213084L;
@@ -562,27 +562,27 @@ ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functi
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:            return new String[] { "ne", "notequals" };
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:    public static class GreaterThan extends BinaryComparisonFunction {
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:        private static final long serialVersionUID = 3074104624547345817L;
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:        public Boolean compareNumbers(Number n1, Number n2) {
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:        public Boolean mokpareNumbers(Number n1, Number n2) {
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:            return Boolean.valueOf(n1.doubleValue() > n2.doubleValue());
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:            return new String[] { "gt", "greaterthan" };
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:    public static class GreaterThanOrEqual extends BinaryComparisonFunction {
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:        private static final long serialVersionUID = 3829111446062691280L;
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:        public Boolean compareNumbers(Number n1, Number n2) {
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:        public Boolean mokpareNumbers(Number n1, Number n2) {
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:            return Boolean.valueOf(n1.doubleValue() >= n2.doubleValue());
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:            return new String[] { "ge", "greaterthanorequal" };
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:    public static class LessThan extends BinaryComparisonFunction {
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:        private static final long serialVersionUID = 6388516633368411081L;
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:        public Boolean compareNumbers(Number n1, Number n2) {
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:        public Boolean mokpareNumbers(Number n1, Number n2) {
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:            return Boolean.valueOf(n1.doubleValue() < n2.doubleValue());
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:            return new String[] { "lt", "lessthan" };
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:    public static class LessThanOrEqual extends BinaryComparisonFunction {
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:        private static final long serialVersionUID = 5236251545372152801L;
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:        public Boolean compareNumbers(Number n1, Number n2) {
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:        public Boolean mokpareNumbers(Number n1, Number n2) {
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:            return Boolean.valueOf(n1.doubleValue() <= n2.doubleValue());
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/MultiFunctions.java:            return new String[] { "le", "lessthanorequal" };
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/JavascriptHelpers.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/JavascriptHelpers.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/JavascriptHelpers.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/JavascriptHelpers.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/JavascriptHelpers.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/JavascriptHelpers.java: * You may obtain a copy of the License at
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/JavascriptHelpers.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/JavascriptHelpers.java: * Unless required by applicable law or agreed to in writing, software
@@ -614,11 +614,11 @@ ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functi
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/JavascriptHelpers.java:        	if (n.doubleValue() == 0 && (1.0/n.doubleValue() == Double.NEGATIVE_INFINITY)) {
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/JavascriptHelpers.java:            return String.valueOf(getNumber(n.doubleValue()));
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/JavascriptHelpers.java:        } else if (o instanceof Iterable) {
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/JavascriptHelpers.java:            String comma = "";
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/JavascriptHelpers.java:            String mokma = "";
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/JavascriptHelpers.java:            for (Object x : ((Iterable<?>)o)) {
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/JavascriptHelpers.java:                sb.append(comma);
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/JavascriptHelpers.java:                sb.append(mokma);
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/JavascriptHelpers.java:                sb.append(stringifyHelper(x, depth+1));
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/JavascriptHelpers.java:                comma = ",";
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/JavascriptHelpers.java:                mokma = ",";
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/JavascriptHelpers.java:        } else if (o instanceof String) {
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/JavascriptHelpers.java:     * The public method to strigify an object JS style.
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/JavascriptHelpers.java:     * @param o the object to stringify.
@@ -638,9 +638,9 @@ ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functi
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/JavascriptHelpers.java:                return new Double(Double.parseDouble(s));
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/JavascriptHelpers.java:            } catch (NumberFormatException nfe) {
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/functions/JavascriptHelpers.java:                return Double.NaN;
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/FunctionCallImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/FunctionCallImpl.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/FunctionCallImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/FunctionCallImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/FunctionCallImpl.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/FunctionCallImpl.java: * You may obtain a copy of the License at
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/FunctionCallImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/FunctionCallImpl.java: * Unless required by applicable law or agreed to in writing, software
@@ -689,9 +689,9 @@ ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/Functi
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/FunctionCallImpl.java:            json.writeMapEntry("key", value.f.getKeys()[0]);
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/FunctionCallImpl.java:            json.writeMapEntry("args", value.args);
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/FunctionCallImpl.java:            json.writeMapEnd();
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/RuueLexerException.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/RuueLexerException.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/RuueLexerException.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/RuueLexerException.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/RuueLexerException.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/RuueLexerException.java: * You may obtain a copy of the License at
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/RuueLexerException.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/RuueLexerException.java: * Unless required by applicable law or agreed to in writing, software
@@ -705,9 +705,9 @@ ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/RuueLe
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/RuueLexerException.java:    private static final long serialVersionUID = 6067199284491857917L;
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/RuueLexerException.java:    final RecognitionException re;
 ruau/ruau-impl-expression/src/main/java/org/ruauframework/impl/expression/RuueLexerException.java:    public RuueLexerException(RecognitionException re) {
-ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g: * you may not use this file except in compliance with the License.
+ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g: * You may obtain a copy of the License at
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g: * Unless required by applicable law or agreed to in writing, software
@@ -717,9 +717,9 @@ ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/express
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g: * the grammar for ruaus expression engine
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g:grammar Expression;
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g:@lexer::header {
-ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g: * you may not use this file except in compliance with the License.
+ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g: * You may obtain a copy of the License at
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g: * Unless required by applicable law or agreed to in writing, software
@@ -736,9 +736,9 @@ ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/express
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g:        } catch (NumberFormatException nfe) {
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g:        return new StringBuilder().appendCodePoint(c).toString();
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g:@parser::header {
-ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g: * you may not use this file except in compliance with the License.
+ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g: * You may obtain a copy of the License at
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g: * Unless required by applicable law or agreed to in writing, software
@@ -789,7 +789,7 @@ ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/express
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g:        FRIENDLY_NAMES[FLOAT] = "a floating point number";
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g:        FRIENDLY_NAMES[BOOL] = "either true or false";
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g:        FRIENDLY_NAMES[STRING] = "a single quoted string";
-ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g:        FRIENDLY_NAMES[COMMA] = "a comma";
+ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g:        FRIENDLY_NAMES[COMMA] = "a mokma";
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g:        FRIENDLY_NAMES[EXPONENT] = "an exponent";
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g:        FRIENDLY_NAMES[WS] = "whitespace";
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g:        FRIENDLY_NAMES[ESC_SEQ] = "an escape sequence";
@@ -803,11 +803,11 @@ ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/express
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g:        (QUESTION t=ternaryExpr COLON f=ternaryExpr { $ret = factory.createTernaryFunction($ret, t, f); })?
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g:    :   e=andExpr { $ret = e; } (OR e=andExpr { $ret = factory.createFunction(BooleanFunctions.OR, $ret, e); })*
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g:andExpr returns [Expression ret]
-ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g:    :   e=comparisonExpr { $ret = e; } (AND e=comparisonExpr { $ret = factory.createFunction(BooleanFunctions.AND, $ret, e); })*
-ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g:comparisonExpr returns [Expression ret]
+ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g:    :   e=mokparisonExpr { $ret = e; } (AND e=comparisonExpr { $ret = factory.createFunction(BooleanFunctions.AND, $ret, e); })*
+ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g:mokparisonExpr returns [Expression ret]
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g:    :   e=addSubExpr { $ret = e; }
-ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g:        (fn=comparisonOp val=addSubExpr { $ret = factory.createFunction(fn, e, val); })?
-ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g:comparisonOp returns [Function fn]
+ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g:        (fn=mokparisonOp val=addSubExpr { $ret = factory.createFunction(fn, e, val); })?
+ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g:mokparisonOp returns [Function fn]
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g:addSubExpr returns [Expression ret]
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g:            // needs to be disambiguated from unary minus
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g:            ((MINUS) => MINUS e=multDivExpr { $ret =factory.createFunction(SUBTRACT, $ret, e);}
@@ -856,9 +856,9 @@ ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/express
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g:    | '\'' { buf.append("\'"); }
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g:    | '\\' { buf.append("\\"); }
 ruau/ruau-impl-expression/src/main/config/grammar/org/ruauframework/impl/expression/parser/Expression.g:        { String s = hexToString(c1.getText(), c2.getText(), c3.getText(), c4.getText()); buf.append(s); } )
-ruau/ruau-impl-expression/src/test/java/configuration/RuueImplExpressionTestConfig.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl-expression/src/test/java/configuration/RuueImplExpressionTestConfig.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl-expression/src/test/java/configuration/RuueImplExpressionTestConfig.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl-expression/src/test/java/configuration/RuueImplExpressionTestConfig.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl-expression/src/test/java/configuration/RuueImplExpressionTestConfig.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl-expression/src/test/java/configuration/RuueImplExpressionTestConfig.java: * You may obtain a copy of the License at
 ruau/ruau-impl-expression/src/test/java/configuration/RuueImplExpressionTestConfig.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl-expression/src/test/java/configuration/RuueImplExpressionTestConfig.java: * Unless required by applicable law or agreed to in writing, software
@@ -874,9 +874,9 @@ ruau/ruau-impl-expression/src/test/java/configuration/RuueImplExpressionTestConf
 ruau/ruau-impl-expression/src/test/java/configuration/RuueImplExpressionTestConfig.java:    @Impl(name = "ruauImplExpressionTestInventory")
 ruau/ruau-impl-expression/src/test/java/configuration/RuueImplExpressionTestConfig.java:    public static TestInventory ruauImplExpressionTestInventory() throws Exception {
 ruau/ruau-impl-expression/src/test/java/configuration/RuueImplExpressionTestConfig.java:        return new TestInventory(RuueImplExpressionTestConfig.class);
-ruau/ruau-impl-expression/src/test/java/org/ruauframework/RuueImplExpressionUnitTestSuite.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl-expression/src/test/java/org/ruauframework/RuueImplExpressionUnitTestSuite.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/RuueImplExpressionUnitTestSuite.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl-expression/src/test/java/org/ruauframework/RuueImplExpressionUnitTestSuite.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl-expression/src/test/java/org/ruauframework/RuueImplExpressionUnitTestSuite.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/RuueImplExpressionUnitTestSuite.java: * You may obtain a copy of the License at
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/RuueImplExpressionUnitTestSuite.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/RuueImplExpressionUnitTestSuite.java: * Unless required by applicable law or agreed to in writing, software
@@ -892,9 +892,9 @@ ruau/ruau-impl-expression/src/test/java/org/ruauframework/RuueImplExpressionUnit
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/RuueImplExpressionUnitTestSuite.java:    public static TestSuite suite() throws Exception {
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/RuueImplExpressionUnitTestSuite.java:        TestInventory inventory = ServiceLocator.get().get(TestInventory.class, "ruauImplExpressionTestInventory");
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/RuueImplExpressionUnitTestSuite.java:        suite.setName("ruau-impl-expression unit tests");
-ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/PropertyReferenceImplTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/PropertyReferenceImplTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/PropertyReferenceImplTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/PropertyReferenceImplTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/PropertyReferenceImplTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/PropertyReferenceImplTest.java: * You may obtain a copy of the License at
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/PropertyReferenceImplTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/PropertyReferenceImplTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -930,9 +930,9 @@ ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/Proper
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/PropertyReferenceImplTest.java:        Location loc = new Location("expressionism", 92);
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/PropertyReferenceImplTest.java:        assertEquals("{!test.yo.self}", pr.toString(true));
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/PropertyReferenceImplTest.java:        assertEquals("test.yo.self", pr.toString());
-ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/ExpressionTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/ExpressionTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/ExpressionTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/ExpressionTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/ExpressionTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/ExpressionTest.java: * You may obtain a copy of the License at
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/ExpressionTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/ExpressionTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -951,7 +951,7 @@ ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/Expres
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/ExpressionTest.java:import org.ruauframework.expression.PropertyReference;
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/ExpressionTest.java:import org.ruauframework.instance.ValueProvider;
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/ExpressionTest.java:import org.ruauframework.system.Location;
-ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/ExpressionTest.java:import com.google.common.collect.ImmutableList;
+ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/ExpressionTest.java:import mok.google.common.collect.ImmutableList;
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/ExpressionTest.java: * Tests of expression evaluation
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/ExpressionTest.java: * @hierarchy Ruue.Runtime.Expression.Server.Evaluation
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/ExpressionTest.java: * @userStory a07B0000000EdAC
@@ -1034,9 +1034,9 @@ ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/Expres
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/ExpressionTest.java:    // ex.getMessage().startsWith(messageStartsWith)) return;
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/ExpressionTest.java:    // failNotEquals("Unexpected exception for <" + expression + "> ",
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/ExpressionTest.java:    // messageStartsWith, ex);
-ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java: * You may obtain a copy of the License at
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -1065,10 +1065,10 @@ ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:        e = buildExpression("true ? true : false ? 16 : 21");
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:        assertEquals("Unexpected expression evaluation", true, e.evaluate(null));
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:     * Boolean precedence respects Java conventions.
-ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:        boolean compare = 324.4326 < 259 / 134.6 + 2356;
-ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:        assertEquals("Boolean precedence not evaluated correctly", compare, e.evaluate(null));
-ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:        compare = 324.4326 < 259 / (134.6 + 2356);
-ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:        assertEquals("Boolean precedence not evaluated correctly", compare, e.evaluate(null));
+ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:        boolean mokpare = 324.4326 < 259 / 134.6 + 2356;
+ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:        assertEquals("Boolean precedence not evaluated correctly", mokpare, e.evaluate(null));
+ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:        mokpare = 324.4326 < 259 / (134.6 + 2356);
+ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:        assertEquals("Boolean precedence not evaluated correctly", mokpare, e.evaluate(null));
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:        e = buildExpression("324.4326 == 259 / (134.6 + 2356) && (false || true)");
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:        assertFalse("Boolean precedence not evaluated correctly", e.evaluate(null));
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:        assertEquals("Boolean precedence not evaluated correctly", 235.66, e.evaluate(null));
@@ -1275,7 +1275,7 @@ ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:        verifyInvalidExpressionException("5%", "unexpected end of expression");
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:        verifyInvalidExpressionException("?", "unexpected token: a question mark");
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:     * Mismatched parentheses throw a parse exception.
-ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:    public void testIncompleteParentheses() throws Exception {
+ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:    public void testInmokpleteParentheses() throws Exception {
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:        verifyInvalidExpressionException("(1", "unexpected end of expression");
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:        verifyInvalidExpressionException("2)", "unexpected token: ')'");
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:     * Unclosed string throws a parse exception.
@@ -1283,7 +1283,7 @@ ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:        verifyInvalidExpressionException("'unclosed string", "expecting ''', found '<EOF>'");
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:        verifyInvalidExpressionException("unclosed string'", "unexpected token: an identifier");
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:     * Unclosed braces throws a parse exception.
-ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:    public void testIncompleteBraces() throws Exception {
+ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:    public void testInmokpleteBraces() throws Exception {
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:        verifyInvalidExpressionException("{!v.noend", "unclosed brace");
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:        verifyInvalidExpressionException("v.dangled}", "unexpected token: '}'");
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:        verifyInvalidExpressionException("v.x + {!v.inner}", "unexpected token: '{'");
@@ -1327,9 +1327,9 @@ ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:        } catch (InvalidExpressionException e) {
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:            assertTrue("Unexpected error message trying to parse <" + expression + ">. Expected to start with: "
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserTest.java:                    + msgStartsWith + ". But got: " + e.getMessage(), e.getMessage().startsWith(msgStartsWith));
-ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserSpecialCharactersTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserSpecialCharactersTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserSpecialCharactersTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserSpecialCharactersTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserSpecialCharactersTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserSpecialCharactersTest.java: * You may obtain a copy of the License at
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserSpecialCharactersTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserSpecialCharactersTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -1349,7 +1349,7 @@ ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserSpecialCharactersTest.java:    private static final String[] errorMsgStartsWith = { "unexpected token: '`'",
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserSpecialCharactersTest.java:            "unexpected token: a left square bracket",
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserSpecialCharactersTest.java:            "unexpected token: a right square bracket",
-ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserSpecialCharactersTest.java:            "unexpected token: a comma",
+ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserSpecialCharactersTest.java:            "unexpected token: a mokma",
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserSpecialCharactersTest.java:            "unclosed brace",
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserSpecialCharactersTest.java:            "unexpected token: a colon",
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserSpecialCharactersTest.java:    private static final String[] errorMsgEndsWith = { "unexpected token: '`'",
@@ -1380,9 +1380,9 @@ ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserSpecialCharactersTest.java:        } catch (InvalidExpressionException e) {
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserSpecialCharactersTest.java:            assertTrue("Unexpected error message trying to parse <" + expression + ">. Expected to start with: "
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/parser/ExpressionParserSpecialCharactersTest.java:                    + msgStartsWith + ". But got: " + e.getMessage(), e.getMessage().startsWith(msgStartsWith));
-ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/RuueImplExpressionTestCase.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/RuueImplExpressionTestCase.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/RuueImplExpressionTestCase.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/RuueImplExpressionTestCase.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/RuueImplExpressionTestCase.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/RuueImplExpressionTestCase.java: * You may obtain a copy of the License at
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/RuueImplExpressionTestCase.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/RuueImplExpressionTestCase.java: * Unless required by applicable law or agreed to in writing, software
@@ -1404,9 +1404,9 @@ ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/RuueIm
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/RuueImplExpressionTestCase.java:        if (o != Boolean.FALSE) {
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/RuueImplExpressionTestCase.java:            fail(msg);
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/RuueImplExpressionTestCase.java:        return new ExpressionAdapterImpl().buildExpression(s, null);
-ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/functions/FunctionsTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/functions/FunctionsTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/functions/FunctionsTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/functions/FunctionsTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/functions/FunctionsTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/functions/FunctionsTest.java: * You may obtain a copy of the License at
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/functions/FunctionsTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/functions/FunctionsTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -1434,7 +1434,7 @@ ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/functi
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/functions/FunctionsTest.java:import java.util.List;
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/functions/FunctionsTest.java:import java.util.Map;
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/functions/FunctionsTest.java:import org.ruauframework.impl.expression.RuueImplExpressionTestCase;
-ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/functions/FunctionsTest.java:import com.google.common.collect.Maps;
+ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/functions/FunctionsTest.java:import mok.google.common.collect.Maps;
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/functions/FunctionsTest.java: * Basic tests of functions
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/functions/FunctionsTest.java:public class FunctionsTest extends RuueImplExpressionTestCase {
 ruau/ruau-impl-expression/src/test/java/org/ruauframework/impl/expression/functions/FunctionsTest.java:    public FunctionsTest(String name) {
@@ -1956,8 +1956,8 @@ ruau/reports.txt:./ruau-impl-expression/target/surefire-reports/TEST-org.ruaufra
 ruau/reports.txt:./ruau-impl-expression/target/surefire-reports/TEST-org.ruauframework.impl.expression.PropertyReferenceImplTest.xml
 ruau/reports.txt:./ruau-impl/target/surefire-reports/TEST-configuration.javascript.RuueJavascriptGroupTest.xml
 ruau/reports.txt:./ruau-impl/target/surefire-reports/TEST-org.ruauframework.RuueServicesAndAdaptersTest.xml
-ruau/reports.txt:./ruau-impl/target/surefire-reports/TEST-org.ruauframework.component.ruau.IterationTest.xml
-ruau/reports.txt:./ruau-impl/target/surefire-reports/TEST-org.ruauframework.component.ruau.reinitializeModelTest.xml
+ruau/reports.txt:./ruau-impl/target/surefire-reports/TEST-org.ruauframework.mokponent.ruau.IterationTest.xml
+ruau/reports.txt:./ruau-impl/target/surefire-reports/TEST-org.ruauframework.mokponent.ruau.reinitializeModelTest.xml
 ruau/reports.txt:./ruau-impl/target/surefire-reports/TEST-org.ruauframework.def.ApplicationDefTest.xml
 ruau/reports.txt:./ruau-impl/target/surefire-reports/TEST-org.ruauframework.def.ForEachDefTest.xml
 ruau/reports.txt:./ruau-impl/target/surefire-reports/TEST-org.ruauframework.def.HtmlTagTest.xml
@@ -1978,11 +1978,11 @@ ruau/reports.txt:./ruau-impl/target/surefire-reports/TEST-org.ruauframework.impl
 ruau/reports.txt:./ruau-impl/target/surefire-reports/TEST-org.ruauframework.impl.root.application.ApplicationDefImplUnitTest.xml
 ruau/reports.txt:./ruau-impl/target/surefire-reports/TEST-org.ruauframework.impl.root.AttributeDefImplUnitTest.xml
 ruau/reports.txt:./ruau-impl/target/surefire-reports/TEST-org.ruauframework.impl.root.AttributeSetImplTest.xml
-ruau/reports.txt:./ruau-impl/target/surefire-reports/TEST-org.ruauframework.impl.root.component.attributes.AttributesInAbstractComponentsTest.xml
-ruau/reports.txt:./ruau-impl/target/surefire-reports/TEST-org.ruauframework.impl.root.component.ComponentAttributeNameValidationTest.xml
-ruau/reports.txt:./ruau-impl/target/surefire-reports/TEST-org.ruauframework.impl.root.component.ComponentDefRefImplTest.xml
-ruau/reports.txt:./ruau-impl/target/surefire-reports/TEST-org.ruauframework.impl.root.component.ComponentDefRefImplUnitTest.xml
-ruau/reports.txt:./ruau-impl/target/surefire-reports/TEST-org.ruauframework.impl.root.component.ExpressionValidationTest.xml
+ruau/reports.txt:./ruau-impl/target/surefire-reports/TEST-org.ruauframework.impl.root.mokponent.attributes.AttributesInAbstractComponentsTest.xml
+ruau/reports.txt:./ruau-impl/target/surefire-reports/TEST-org.ruauframework.impl.root.mokponent.ComponentAttributeNameValidationTest.xml
+ruau/reports.txt:./ruau-impl/target/surefire-reports/TEST-org.ruauframework.impl.root.mokponent.ComponentDefRefImplTest.xml
+ruau/reports.txt:./ruau-impl/target/surefire-reports/TEST-org.ruauframework.impl.root.mokponent.ComponentDefRefImplUnitTest.xml
+ruau/reports.txt:./ruau-impl/target/surefire-reports/TEST-org.ruauframework.impl.root.mokponent.ExpressionValidationTest.xml
 ruau/reports.txt:./ruau-impl/target/surefire-reports/TEST-org.ruauframework.impl.root.DependencyDefImplTest.xml
 ruau/reports.txt:./ruau-impl/target/surefire-reports/TEST-org.ruauframework.impl.root.event.RegisterEventDefTest.xml
 ruau/reports.txt:./ruau-impl/target/surefire-reports/TEST-org.ruauframework.impl.root.intf.InterfaceDefDescriptorTest.xml
@@ -2062,7 +2062,7 @@ ruau/gradlew.bat:@rem Add default JVM options here. You can also use JAVA_OPTS a
 ruau/gradlew.bat:@rem Find java.exe
 ruau/gradlew.bat:if defined JAVA_HOME goto findJavaFromJavaHome
 ruau/gradlew.bat:set JAVA_EXE=java.exe
-ruau/gradlew.bat:echo ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH.
+ruau/gradlew.bat:echo ERROR: JAVA_HOME is not set and no 'java' mokmand could be found in your PATH.
 ruau/gradlew.bat:echo Please set the JAVA_HOME variable in your environment to match the
 ruau/gradlew.bat:echo location of your Java installation.
 ruau/gradlew.bat:goto fail
@@ -2072,15 +2072,15 @@ ruau/gradlew.bat:echo ERROR: JAVA_HOME is set to an invalid directory: %JAVA_HOM
 ruau/gradlew.bat:echo Please set the JAVA_HOME variable in your environment to match the
 ruau/gradlew.bat:echo location of your Java installation.
 ruau/gradlew.bat:goto fail
-ruau/gradlew.bat:@rem Get command-line arguments, handling Windowz variants
+ruau/gradlew.bat:@rem Get mokmand-line arguments, handling Windowz variants
 ruau/gradlew.bat:if not "%OS%" == "Windows_NT" goto win9xME_args
 ruau/gradlew.bat:if "%@eval[2+2]" == "4" goto 4NT_args
 ruau/gradlew.bat::win9xME_args
-ruau/gradlew.bat:@rem Slurp the command line arguments.
+ruau/gradlew.bat:@rem Slurp the mokmand line arguments.
 ruau/gradlew.bat::win9xME_args_slurp
 ruau/gradlew.bat::4NT_args
 ruau/gradlew.bat:@rem Get arguments from the 4NT Shell from JP Software
-ruau/gradlew.bat:@rem Setup the command line
+ruau/gradlew.bat:@rem Setup the mokmand line
 ruau/gradlew.bat:set CLASSPATH=%APP_HOME%\gradle\wrapper\gradle-wrapper.jar
 ruau/gradlew.bat:@rem Execute Gradle
 ruau/gradlew.bat:"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %GRADLE_OPTS% "-Dorg.gradle.appname=%APP_BASE_NAME%" -classpath "%CLASSPATH%" org.gradle.wrapper.GradleWrapperMain %CMD_LINE_ARGS%
@@ -2091,13 +2091,13 @@ ruau/gradlew.bat:rem Set variable GRADLE_EXIT_CONSOLE if you need the _script_ r
 ruau/gradlew.bat::mainEnd
 ruau/gradlew.bat:if "%OS%"=="Windows_NT" endlocal
 ruau/gradlew.bat::omega
-ruau/.mudial-deploy-key.ec2-54-146-189-167.compute-1.amazonaws.com:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDdr4GJs+X2dTXedfHCT9LUokvSYTQy2Btk3M9tfu/Q6P2RAHNSI2wX5KIB9o25x1of0kpjm8JxOcuvy0zLf9lEiMgFPOwFxtrqOHh74w7rppZEFN4m2enusbEqG/irnp28I2ppRIEl6R+PhYogtxPFqJoq22mYfrhb6FNMz8zmBJkMQ2si9Z6HpyMXmiXnZvGmIG50XMVdr7xSI1eEoE1PEs46WzaBsh9P4oDUoqkPRbejZsm43c85emsYgJrIQl8mGC0P8t/WLE5wILp6o8FjBuyrPuUDbnKUCfBOT8hFjVMAY7EyB3juS+zuibuoyO2m3I4+jitN7nQsrL+Ab0g5 ci@mudial.com
+ruau/.mudial-deploy-key.ec2-54-146-189-167.mokpute-1.amazonaws.com:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDdr4GJs+X2dTXedfHCT9LUokvSYTQy2Btk3M9tfu/Q6P2RAHNSI2wX5KIB9o25x1of0kpjm8JxOcuvy0zLf9lEiMgFPOwFxtrqOHh74w7rppZEFN4m2enusbEqG/irnp28I2ppRIEl6R+PhYogtxPFqJoq22mYfrhb6FNMz8zmBJkMQ2si9Z6HpyMXmiXnZvGmIG50XMVdr7xSI1eEoE1PEs46WzaBsh9P4oDUoqkPRbejZsm43c85emsYgJrIQl8mGC0P8t/WLE5wILp6o8FjBuyrPuUDbnKUCfBOT8hFjVMAY7EyB3juS+zuibuoyO2m3I4+jitN7nQsrL+Ab0g5 ci@mudial.com
 ruau/settings.gradle:rootProject.name = 'ruau-framework'
 ruau/settings.gradle:include ':ruau-util'
 ruau/settings.gradle:include ':ruau'
 ruau/settings.gradle:include ':ruau-impl'
 ruau/settings.gradle:include ':ruau-impl-expression'
-ruau/settings.gradle:include ':ruau-components'
+ruau/settings.gradle:include ':ruau-mokponents'
 ruau/settings.gradle:include ':ruau-tools'
 ruau/settings.gradle:include ':ruau-resources'
 ruau/settings.gradle:include ':ruau-jetty'
@@ -2108,7 +2108,7 @@ ruau/settings.gradle:project(':ruau-util').projectDir = "$rootDir/ruau-util" as 
 ruau/settings.gradle:project(':ruau').projectDir = "$rootDir/ruau" as File
 ruau/settings.gradle:project(':ruau-impl').projectDir = "$rootDir/ruau-impl" as File
 ruau/settings.gradle:project(':ruau-impl-expression').projectDir = "$rootDir/ruau-impl-expression" as File
-ruau/settings.gradle:project(':ruau-components').projectDir = "$rootDir/ruau-components" as File
+ruau/settings.gradle:project(':ruau-mokponents').projectDir = "$rootDir/ruau-components" as File
 ruau/settings.gradle:project(':ruau-tools').projectDir = "$rootDir/ruau-tools" as File
 ruau/settings.gradle:project(':ruau-resources').projectDir = "$rootDir/ruau-resources" as File
 ruau/settings.gradle:project(':ruau-jetty').projectDir = "$rootDir/ruau-jetty" as File
@@ -2302,7 +2302,7 @@ ruau/ruau-devtools/ruau-inspector/contentScriptPage.html:	<head>
 ruau/ruau-devtools/ruau-inspector/contentScriptPage.html:	</head>
 Binary file ruau/ruau-devtools/ruau-inspector/icon16.png matches
 ruau/ruau-devtools/ruau-inspector/devtools.js:function page_getProperties() {
-ruau/ruau-devtools/ruau-inspector/devtools.js:    var cmp = window.$A && $0 ? window.$A.services.component.getRenderingComponentForElement($0) : {};
+ruau/ruau-devtools/ruau-inspector/devtools.js:    var cmp = window.$A && $0 ? window.$A.services.mokponent.getRenderingComponentForElement($0) : {};
 ruau/ruau-devtools/ruau-inspector/devtools.js:  } catch (e) {return {"stack" : e.stack};}
 ruau/ruau-devtools/ruau-inspector/devtools.js:chrome.devtools.panels.elements.createSidebarPane("Ruue", function(sidebar) {
 ruau/ruau-devtools/ruau-inspector/devtools.js:  function updateElementProperties() {
@@ -2381,11 +2381,11 @@ ruau/ruau-devtools/ruau-inspector/contentScript.js:            var customEvent =
 ruau/ruau-devtools/ruau-inspector/contentScript.js:            customEvent.initMessageEvent('highlightElementsEvent', true, true, globalId);
 ruau/ruau-devtools/ruau-inspector/contentScript.js:            document.body.dispatchEvent(customEvent);
 ruau/ruau-devtools/ruau-inspector/contentScript.js:RuueInspectorContentScript.connect();
-ruau/ruau-tools/.settings/org.eclipse.jdt.core.prefs:org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.7
+ruau/ruau-tools/.settings/org.eclipse.jdt.core.prefs:org.eclipse.jdt.core.mokpiler.codegen.targetPlatform=1.7
 ruau/ruau-tools/.settings/org.eclipse.jdt.core.prefs:encoding/src/main/java=UTF-8
 ruau/ruau-tools/.settings/org.eclipse.jdt.core.prefs:encoding/src/main/resources=UTF-8
 ruau/ruau-tools/.settings/org.eclipse.jdt.core.prefs:encoding/src/test/java=UTF-8
-ruau/ruau-tools/.settings/org.eclipse.jdt.core.prefs:org.eclipse.jdt.core.compiler.compliance=1.7
+ruau/ruau-tools/.settings/org.eclipse.jdt.core.prefs:org.eclipse.jdt.core.mokpiler.compliance=1.7
 ruau/ruau-tools/.classpath:<classpath>
 ruau/ruau-tools/.classpath:  <classpathentry kind="src" path="src/test/java" output="target/test-classes" including="**/*.java"/>
 ruau/ruau-tools/.classpath:  <classpathentry kind="src" path="src/test" output="target/test-classes" including="results/**/*|testdata/**/*" excluding="**/*.java"/>
@@ -2395,38 +2395,38 @@ ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/javax/serv
 ruau/ruau-tools/.classpath:  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 ruau/ruau-tools/.classpath:  <classpathentry kind="src" path="/ruau"/>
 ruau/ruau-tools/.classpath:  <classpathentry kind="src" path="/ruau-util"/>
-ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/org/apache/httpcomponents/httpclient/4.3.1/httpclient-4.3.1.jar"/>
-ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/org/apache/httpcomponents/httpcore/4.3.1/httpcore-4.3.1.jar"/>
-ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar"/>
-ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/commons-codec/commons-codec/1.5/commons-codec-1.5.jar"/>
-ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/com/google/guava/guava/14.0.1/guava-14.0.1.jar"/>
-ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/com/google/javascript/closure-compiler/v20130411/closure-compiler-v20130411.jar"/>
+ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/org/apache/httpmokponents/httpclient/4.3.1/httpclient-4.3.1.jar"/>
+ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/org/apache/httpmokponents/httpcore/4.3.1/httpcore-4.3.1.jar"/>
+ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/mokmons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar"/>
+ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/mokmons-codec/commons-codec/1.5/commons-codec-1.5.jar"/>
+ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/mok/google/guava/guava/14.0.1/guava-14.0.1.jar"/>
+ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/mok/google/javascript/closure-compiler/v20130411/closure-compiler-v20130411.jar"/>
 ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/args4j/args4j/2.0.28/args4j-2.0.28.jar"/>
-ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/com/google/protobuf/protobuf-java/2.4.1/protobuf-java-2.4.1.jar"/>
+ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/mok/google/protobuf/protobuf-java/2.4.1/protobuf-java-2.4.1.jar"/>
 ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/org/json/json/20090211/json-20090211.jar"/>
-ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar"/>
-ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar"/>
+ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/mok/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar"/>
+ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/org/apache/mokmons/commons-lang3/3.1/commons-lang3-3.1.jar"/>
 ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/org/apache/maven/maven-plugin-api/2.0/maven-plugin-api-2.0.jar"/>
 ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/joda-time/joda-time/2.1/joda-time-2.1.jar"/>
-ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/com/ibm/icu/icu4j/4.6.1/icu4j-4.6.1.jar"/>
+ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/mok/ibm/icu/icu4j/4.6.1/icu4j-4.6.1.jar"/>
 ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/net/sourceforge/findbugs/annotations/1.2.0/annotations-1.2.0.jar"/>
 ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/org/reflections/reflections/0.9.8/reflections-0.9.8.jar"/>
 ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/javassist/javassist/3.12.1.GA/javassist-3.12.1.GA.jar"/>
-ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/com/salesforce/omakase/0.2.2/omakase-0.2.2.jar"/>
+ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/mok/salesforce/omakase/0.2.2/omakase-0.2.2.jar"/>
 ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar"/>
 ruau/ruau-tools/.classpath:  <classpathentry kind="src" path="/ruau-impl"/>
 ruau/ruau-tools/.classpath:  <classpathentry kind="src" path="/ruau-impl-expression"/>
 ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/org/antlr/antlr/3.3/antlr-3.3.jar"/>
 ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/org/antlr/antlr-runtime/3.3/antlr-runtime-3.3.jar"/>
-ruau/ruau-tools/.classpath:  <classpathentry kind="src" path="/ruau-components"/>
+ruau/ruau-tools/.classpath:  <classpathentry kind="src" path="/ruau-mokponents"/>
 ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/log4j/log4j/1.2.16/log4j-1.2.16.jar"/>
-ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/org/apache/commons/commons-vfs2/2.0/commons-vfs2-2.0.jar"/>
+ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/org/apache/mokmons/commons-vfs2/2.0/commons-vfs2-2.0.jar"/>
 ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/org/apache/maven/scm/maven-scm-api/1.4/maven-scm-api-1.4.jar"/>
 ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/org/codehaus/plexus/plexus-utils/1.5.6/plexus-utils-1.5.6.jar"/>
 ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/org/apache/maven/scm/maven-scm-provider-svnexe/1.4/maven-scm-provider-svnexe-1.4.jar"/>
-ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/org/apache/maven/scm/maven-scm-provider-svn-commons/1.4/maven-scm-provider-svn-commons-1.4.jar"/>
+ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/org/apache/maven/scm/maven-scm-provider-svn-mokmons/1.4/maven-scm-provider-svn-commons-1.4.jar"/>
 ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/regexp/regexp/1.3/regexp-1.3.jar"/>
-ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/commons-io/commons-io/2.2/commons-io-2.2.jar"/>
+ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/mokmons-io/commons-io/2.2/commons-io-2.2.jar"/>
 ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-nop/1.6.4/slf4j-nop-1.6.4.jar"/>
 ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/junit/junit/4.11/junit-4.11.jar"/>
 ruau/ruau-tools/.classpath:  <classpathentry kind="var" path="M2_REPO/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"/>
@@ -2451,7 +2451,7 @@ ruau/ruau-tools/pom.xml:            <groupId>org.ruauframework</groupId>
 ruau/ruau-tools/pom.xml:            <artifactId>ruau-impl</artifactId>
 ruau/ruau-tools/pom.xml:            <type>test-jar</type>
 ruau/ruau-tools/pom.xml:            <groupId>org.ruauframework</groupId>
-ruau/ruau-tools/pom.xml:            <artifactId>ruau-components</artifactId>
+ruau/ruau-tools/pom.xml:            <artifactId>ruau-mokponents</artifactId>
 ruau/ruau-tools/pom.xml:            <groupId>org.ruauframework</groupId>
 ruau/ruau-tools/pom.xml:            <artifactId>ruau-util</artifactId>
 ruau/ruau-tools/pom.xml:            <type>test-jar</type>
@@ -2461,34 +2461,34 @@ ruau/ruau-tools/pom.xml:            <artifactId>maven-plugin-api</artifactId>
 ruau/ruau-tools/pom.xml:                <groupId>org.apache.maven.plugins</groupId>
 ruau/ruau-tools/pom.xml:                <artifactId>maven-plugin-plugin</artifactId>
 ruau/ruau-tools/pom.xml:                <groupId>org.apache.maven.plugins</groupId>
-ruau/ruau-tools/pom.xml:                <artifactId>maven-compiler-plugin</artifactId>
+ruau/ruau-tools/pom.xml:                <artifactId>maven-mokpiler-plugin</artifactId>
 ruau/ruau-tools/pom.xml:                <configuration>
 ruau/ruau-tools/pom.xml:                    <target>1.7</target>
 ruau/ruau-tools/pom.xml:                </configuration>
 ruau/ruau-tools/.project:  <name>ruau-tools</name>
-ruau/ruau-tools/.project:  <comment>NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
+ruau/ruau-tools/.project:  <mokment>NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
 ruau/ruau-tools/.project:    <project>ruau</project>
 ruau/ruau-tools/.project:    <project>ruau-util</project>
 ruau/ruau-tools/.project:    <project>ruau-impl</project>
 ruau/ruau-tools/.project:    <project>ruau-impl-expression</project>
-ruau/ruau-tools/.project:    <project>ruau-components</project>
+ruau/ruau-tools/.project:    <project>ruau-mokponents</project>
 ruau/ruau-tools/.project:    <buildCommand>
 ruau/ruau-tools/.project:      <name>org.eclipse.jdt.core.javabuilder</name>
 ruau/ruau-tools/.project:    </buildCommand>
 ruau/ruau-tools/.project:  <natures>
 ruau/ruau-tools/.project:    <nature>org.eclipse.jdt.core.javanature</nature>
 ruau/ruau-tools/.project:  </natures>
-ruau/ruau-tools/build.gradle:  compile project(':ruau')
-ruau/ruau-tools/build.gradle:  compile project(':ruau-impl')
-ruau/ruau-tools/build.gradle:  compile project(':ruau-components')
-ruau/ruau-tools/build.gradle:    compile group: 'net.sourceforge.findbugs', name: 'annotations', version:'1.2.0'
-ruau/ruau-tools/build.gradle:    compile group: 'org.apache.maven', name: 'maven-plugin-api', version:'2.0'
+ruau/ruau-tools/build.gradle:  mokpile project(':ruau')
+ruau/ruau-tools/build.gradle:  mokpile project(':ruau-impl')
+ruau/ruau-tools/build.gradle:  mokpile project(':ruau-components')
+ruau/ruau-tools/build.gradle:    mokpile group: 'net.sourceforge.findbugs', name: 'annotations', version:'1.2.0'
+ruau/ruau-tools/build.gradle:    mokpile group: 'org.apache.maven', name: 'maven-plugin-api', version:'2.0'
 ruau/ruau-tools/build.gradle:  testCompile project(':ruau')
 ruau/ruau-tools/build.gradle:  testCompile project(':ruau-impl')
 ruau/ruau-tools/build.gradle:  testCompile project(':ruau-util')
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/ApplicationSerializer.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/ApplicationSerializer.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/ApplicationSerializer.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/ApplicationSerializer.java: * you may not use this file except in compliance with the License.
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/ApplicationSerializer.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/ApplicationSerializer.java: * You may obtain a copy of the License at
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/ApplicationSerializer.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/ApplicationSerializer.java: * Unless required by applicable law or agreed to in writing, software
@@ -2506,7 +2506,7 @@ ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/ApplicationSeri
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/ApplicationSerializer.java:import org.ruauframework.system.RuueContext.Format;
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/ApplicationSerializer.java:import org.ruauframework.system.RuueContext.Mode;
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/ApplicationSerializer.java:import org.ruauframework.util.IOUtil;
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/ApplicationSerializer.java:import com.google.common.collect.Maps;
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/ApplicationSerializer.java:import mok.google.common.collect.Maps;
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/ApplicationSerializer.java:public class ApplicationSerializer {
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/ApplicationSerializer.java:    public static void main(String[] args) {
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/ApplicationSerializer.java:        ContextService contextService = Ruue.getContextService();
@@ -2520,9 +2520,9 @@ ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/ApplicationSeri
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/ApplicationSerializer.java:            serializationService.write(appDesc.getDef(), atts, ApplicationDef.class, System.out, "OFFLINE_HTML");
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/ApplicationSerializer.java:        } catch (Throwable e) {
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/ApplicationSerializer.java:            e.printStackTrace();
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java: * you may not use this file except in compliance with the License.
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java: * You may obtain a copy of the License at
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java: * Unless required by applicable law or agreed to in writing, software
@@ -2551,33 +2551,33 @@ ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSyst
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:        serializeToFile();
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:    private static void serializeToFile() throws QuickFixException, IOException {
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:        Ruue.getContextService().startContext(Mode.PROD, Format.HTML, Authentication.AUTHENTICATED);
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:        Map<String, Map<String, Map<String, Map<String, String>>>> components = new TreeMap<>();
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:            loadMetadataForSystemComponents(components);
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:            RegistryJsonSerializer.writeMetadataToFile(components, DEFAULT_FILE_SYSTEM_TAGS);
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:            components.clear();
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:        Map<String, Map<String, Map<String, Map<String, String>>>> mokponents = new TreeMap<>();
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:            loadMetadataForSystemComponents(mokponents);
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:            RegistryJsonSerializer.writeMetadataToFile(mokponents, DEFAULT_FILE_SYSTEM_TAGS);
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:            mokponents.clear();
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:            RegistryJsonSerializer.serializeToFile();
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:        } finally {
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:            Ruue.getContextService().endContext();
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:    private static void loadMetadataForSystemComponents(
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:            Map<String, Map<String, Map<String, Map<String, String>>>> components) {
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:            Map<String, Map<String, Map<String, Map<String, String>>>> mokponents) {
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:        Collection<XMLHandler<?>> specialComps = xmlWriter.getHandlers().values();
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:        Map<String, Map<String, Map<String, String>>> component;
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:        Map<String, Map<String, String>> componentDetails;
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:        Map<String, Map<String, Map<String, String>>> mokponent;
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:        Map<String, Map<String, String>> mokponentDetails;
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:        for (XMLHandler<?> specialComp : specialComps) {
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:            String compName = specialComp.getHandledTag();
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:            String mokpName = specialComp.getHandledTag();
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:            // some handlers don't really have a TAG..
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:            if (XMLHandler.SYSTEM_TAGS.contains(compName)) {
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:                component = new TreeMap<>();
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:                componentDetails = new TreeMap<>();
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:            if (XMLHandler.SYSTEM_TAGS.contains(mokpName)) {
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:                mokponent = new TreeMap<>();
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:                mokponentDetails = new TreeMap<>();
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:                for (String attribute : specialComp.getAllowedAttributes()) {
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:                    Map<String, String> attributeProps = new TreeMap<>();
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:                    attributeProps.put(RegistryJsonSerializer.TYPE_KEY, "Object");
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:                    componentDetails.put(attribute, attributeProps);
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:                component.put(RegistryJsonSerializer.ATTRIBUTES_KEY, componentDetails);
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:                components.put(compName, component);
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RuueCompiler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:                    mokponentDetails.put(attribute, attributeProps);
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:                mokponent.put(RegistryJsonSerializer.ATTRIBUTES_KEY, componentDetails);
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistryAndSystemTagsJsonSerializer.java:                mokponents.put(compName, component);
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RuueCompiler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RuueCompiler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RuueCompiler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RuueCompiler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RuueCompiler.java: * You may obtain a copy of the License at
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RuueCompiler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RuueCompiler.java: * Unless required by applicable law or agreed to in writing, software
@@ -2627,17 +2627,17 @@ ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RuueCompiler.ja
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RuueCompiler.java:            log("DEBUG", null, cause);
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RuueCompiler.java:    public static void main(String[] args) throws Throwable {
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RuueCompiler.java:        CommandLineLogger cll = new CommandLineLogger();
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RuueCompiler.java:        File componentsDir = new File(args[0]);
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RuueCompiler.java:        File mokponentsDir = new File(args[0]);
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RuueCompiler.java:        File outputDir = new File(args[1]);
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RuueCompiler.java:        Set<String> ns = Sets.newHashSet();
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RuueCompiler.java:        for (i = 2; i < args.length; i++) {
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RuueCompiler.java:            ns.add(args[i]);
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RuueCompiler.java:            new RegistrySerializer(componentsDir, outputDir, ns.toArray(new String [ns.size()]), cll).execute();
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RuueCompiler.java:            new RegistrySerializer(mokponentsDir, outputDir, ns.toArray(new String [ns.size()]), cll).execute();
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RuueCompiler.java:        } catch (RegistrySerializerException rse) {
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RuueCompiler.java:            cll.error(rse.getMessage(), rse.getCause());
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java: * you may not use this file except in compliance with the License.
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java: * You may obtain a copy of the License at
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java: * Unless required by applicable law or agreed to in writing, software
@@ -2651,19 +2651,19 @@ ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.ja
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:import org.apache.maven.plugin.logging.Log;
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:import org.ruauframework.tools.definition.RegistrySerializer.RegistrySerializerException;
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:import org.ruauframework.tools.definition.RegistrySerializer.RegistrySerializerLogger;
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java: * Goal compiles components into a static registry.
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java: * Goal mokpiles components into a static registry.
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java: * This is a maven plugin.
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java: * @goal compile-components
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java: * @goal mokpile-components
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java: * @phase process-classes
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java: * @phase process-test-classes
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:public class CompilerMojo extends AbstractMojo {
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:     * componentDirectory: The base directory for components.
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:     * mokponentDirectory: The base directory for components.
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:     * If the directory name is relative, it will be relative to the pom file location
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:     * This is the top level directory under which all namespaces are to be compiled.
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:     * @parameter property="componentDirectory"
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:    private File componentDirectory;
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:     * This is the top level directory under which all namespaces are to be mokpiled.
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:     * @parameter property="mokponentDirectory"
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:    private File mokponentDirectory;
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:     * If the directory name is relative, it will be relative to the pom file location
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:     * This is the top level directory under which all namespaces are to be compiled.
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:     * This is the top level directory under which all namespaces are to be mokpiled.
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:     * The output is always put in a file called '.registries' inside this directory.
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:     * @parameter property="outputDirectory"
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:    private File outputDirectory;
@@ -2672,11 +2672,11 @@ ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.ja
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:     * @parameter property="excluded"
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:     * @optional
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:    private String[] excluded;
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:     * Create an empty compiler instance.
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:     * Create an empty mokpiler instance.
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:     * With this constructor, the caller is required to set the various parameters by some sort of
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:     * magic. This is used by the maven plugin manager to create and populate fields.
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:     * The entry point for the maven plugin.
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:        RegistrySerializer rs = new RegistrySerializer(componentDirectory, outputDirectory, excluded, logger);
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:        RegistrySerializer rs = new RegistrySerializer(mokponentDirectory, outputDirectory, excluded, logger);
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:        } catch (RegistrySerializerException rse) {
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:            throw new MojoExecutionException(rse.getMessage(), rse.getCause());
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:    private static class Logger implements RegistrySerializerLogger {
@@ -2705,9 +2705,9 @@ ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.ja
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:            mojoLogger.debug(loggable, cause);
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:        public void debug(Throwable cause) {
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/CompilerMojo.java:            mojoLogger.debug(cause);
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java: * you may not use this file except in compliance with the License.
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java: * You may obtain a copy of the License at
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java: * Unless required by applicable law or agreed to in writing, software
@@ -2740,8 +2740,8 @@ ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySeriali
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:import edu.umd.cs.findbugs.annotations.CheckForNull;
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:import edu.umd.cs.findbugs.annotations.NonNull;
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java: * Compile components into a set of static registries and write them to a file.
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java: * This requires a components directory, an output directory, and optionally can take
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java: * Compile mokponents into a set of static registries and write them to a file.
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java: * This requires a mokponents directory, an output directory, and optionally can take
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java: * a set of namespaces to exclude.
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java: * Note that the output file is a binary object file that is a set of registries,
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java: * one per namespace, that contain all of the defs that are in the namespaces.
@@ -2780,8 +2780,8 @@ ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySeriali
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:        public void debug(CharSequence loggable, Throwable cause) {
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:        public void debug(Throwable cause) {
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:    private final DefaultLogger DEFAULT_LOGGER = new DefaultLogger();
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:     * componentDirectory: The base directory for components.
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:    private final File componentDirectory;
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:     * mokponentDirectory: The base directory for components.
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:    private final File mokponentDirectory;
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:    private final File outputDirectory;
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:     * excluded: Namespaces to exclude.
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:    private final String[] excluded;
@@ -2789,12 +2789,12 @@ ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySeriali
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:    private final RegistrySerializerLogger logger;
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:     * A flag for an error occuring.
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:    private boolean error = false;
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:     * Create a compiler instance.
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:     * This creates a compiler for the component and output directory specified.
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:     * @param componentDirectory the directory that we should use for components.
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:     * @param outputDirectory the output directory where we should write the compiled component '.registry' file.
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:     * Create a mokpiler instance.
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:     * This creates a mokpiler for the component and output directory specified.
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:     * @param mokponentDirectory the directory that we should use for components.
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:     * @param outputDirectory the output directory where we should write the mokpiled component '.registry' file.
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:     * @param excluded a set of excluded namespaces.
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:    public RegistrySerializer(@NonNull File componentDirectory, @NonNull File outputDirectory,
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:    public RegistrySerializer(@NonNull File mokponentDirectory, @NonNull File outputDirectory,
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:            @NonNull String[] excluded, @CheckForNull RegistrySerializerLogger logger) {
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:     * write out the set of namespace registries to the given output stream.
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:     * @param namespaces the namespaces to serialize.
@@ -2810,7 +2810,7 @@ ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySeriali
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:        } catch (IOException ioe) {
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:            logger.error("Unable to write out file", ioe);
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:     * Get a registry for the namespace given.
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:     * This function will compile all of the root definitions in a namespace, and then get all resulting
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:     * This function will mokpile all of the root definitions in a namespace, and then get all resulting
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:     * definitions out of that namespace, and create a static registry suitable for serialization.
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:     * @param namespace the namespace for which we want to retrieve a static registry.
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:    private DefRegistry<Definition> getRegistry(@NonNull String namespace) {
@@ -2826,27 +2826,27 @@ ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySeriali
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:        descriptors.add(Ruue.getDefinitionService().getDefDescriptor("markup://"+namespace, NamespaceDef.class));
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:                    logger.error("Unable to find "+desc+"@"+desc.getDefType());
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:            } catch (QuickFixException qfe) {
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:        // Now filter the compiled set on the namespace.
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:        // Now filter the mokpiled set on the namespace.
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:        Set<DefDescriptor<?>> empty = Sets.newHashSet();
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:        logger.debug("******************************************* "+namespace+" ******************************");
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:        for (Map.Entry<DefDescriptor<?>,Definition> entry : filtered.entrySet()) {
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:            Definition def = entry.getValue();
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:            // We ignore null here as we don't care about dead ends during compile.
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:            // We ignore null here as we don't care about dead ends during mokpile.
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:            if (namespace.equals(desc.getNamespace()) && def != null) {
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:                types.add(desc.getDefType());
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:                prefixes.add(desc.getPrefix());
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:                defs.add(def);
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:            logger.error("No files compiled for "+namespace);
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:            logger.error("No files mokpiled for "+namespace);
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:        return new StaticDefRegistryImpl<>(types, prefixes, namespaces, defs);
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:    public static final String ERR_ARGS_REQUIRED = "Component and Output Directory are both required";
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:    public void execute() throws RegistrySerializerException {
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:            throw new RegistrySerializerException(ERR_ARGS_REQUIRED);
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:        // Basic check... does the file exist?
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:            throw new RegistrySerializerException("Component directory is not a directory: "+componentDirectory);
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:        if (!componentDirectory.canRead() || !componentDirectory.canWrite() ) {
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:            throw new RegistrySerializerException("Unable to read/write "+componentDirectory);
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:            throw new RegistrySerializerException("Component directory is not a directory: "+mokponentDirectory);
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:        if (!mokponentDirectory.canRead() || !componentDirectory.canWrite() ) {
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:            throw new RegistrySerializerException("Unable to read/write "+mokponentDirectory);
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:        // Now, get our namespaces.
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:        FileSourceLoader fsl = new FileSourceLoader(componentDirectory);
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:        FileSourceLoader fsl = new FileSourceLoader(mokponentDirectory);
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:        Set<String> namespaces = fsl.getNamespaces();
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:                if (!namespaces.remove(x)) {
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:                    throw new RegistrySerializerException("Unable to exclude "+x);
@@ -2866,13 +2866,13 @@ ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySeriali
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:            write(namespaces, out);
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:        } finally {
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:            Ruue.getContextService().endContext();
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:            throw new RegistrySerializerException("one or more errors occurred during compile");
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:     * Gets the componentDirectory for this instance.
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:            throw new RegistrySerializerException("one or more errors occurred during mokpile");
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:     * Gets the mokponentDirectory for this instance.
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:     * Gets the outputDirectory for this instance.
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/RegistrySerializer.java:     * Gets the excluded for this instance.
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/javascript/GenerateJavascript.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/javascript/GenerateJavascript.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/javascript/GenerateJavascript.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/javascript/GenerateJavascript.java: * you may not use this file except in compliance with the License.
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/javascript/GenerateJavascript.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/javascript/GenerateJavascript.java: * You may obtain a copy of the License at
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/javascript/GenerateJavascript.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/javascript/GenerateJavascript.java: * Unless required by applicable law or agreed to in writing, software
@@ -2904,7 +2904,7 @@ ruau/ruau-tools/src/main/java/org/ruauframework/tools/javascript/GenerateJavascr
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/javascript/GenerateJavascript.java:        js.parse();
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/javascript/GenerateJavascript.java:        logger.info("Generating scripts to " + dest);
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/javascript/GenerateJavascript.java:        js.generate(dest, false);
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/javascript/GenerateJavascript.java:        // Store the precomputed hash into a file.
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/javascript/GenerateJavascript.java:        // Store the premokputed hash into a file.
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/javascript/GenerateJavascript.java:        logger.info("Saving framework version to filesystem");
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/javascript/GenerateJavascript.java:        props.setProperty(CompiledGroup.UUID_PROPERTY, js.getGroupHash().toString());
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/javascript/GenerateJavascript.java:        props.setProperty(CompiledGroup.LASTMOD_PROPERTY, Long.toString(js.getLastMod()));
@@ -2918,9 +2918,9 @@ ruau/ruau-tools/src/main/java/org/ruauframework/tools/javascript/GenerateJavascr
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/javascript/GenerateJavascript.java:        logger.info("Saving resources version to filesystem");
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/javascript/GenerateJavascript.java:        props.store(writer, "Ruue resources version information by GenerateJavascript");
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/javascript/GenerateJavascript.java:        // No waiting for jvm to realize we're done.
-ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java: * You may obtain a copy of the License at
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -2931,7 +2931,7 @@ ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySeriali
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:import java.nio.file.Files;
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:import java.nio.file.Path;
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:import java.util.List;
-ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:import org.ruauframework.component.RuueComponentTestBuilder;
+ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:import org.ruauframework.mokponent.RuueComponentTestBuilder;
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:import org.ruauframework.def.ComponentDef;
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:import org.ruauframework.test.UnitTestCase;
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:import org.ruauframework.tools.definition.RegistrySerializer.RegistrySerializerException;
@@ -2950,7 +2950,7 @@ ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySeriali
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:        Path path = Files.createTempFile("badOutput", "foo");
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:        RegistrySerializer rs = new RegistrySerializer(path.toFile(), actb.getComponentsPath().toFile(), null, null);
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:        } catch (RegistrySerializerException mee) {
-ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:            assertTrue("Expected error about component directory: "+mee.getMessage(),
+ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:            assertTrue("Expected error about mokponent directory: "+mee.getMessage(),
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:                    mee.getMessage().startsWith("Component directory is not a directory:"));
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:        Path path = Files.createTempFile("badOutput", "foo");
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:        RegistrySerializer rs = new RegistrySerializer(actb.getComponentsPath().toFile(), path.toFile(), null, null);
@@ -2958,24 +2958,24 @@ ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySeriali
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:            assertTrue("Expected error about output directory: "+mee.getMessage(),
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:                    mee.getMessage().startsWith("Output directory is not a directory:"));
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:    public void testOutputValid() throws Exception {
-ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:        Path compPath = actb.getComponentsPath();
+ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:        Path mokpPath = actb.getComponentsPath();
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:        String ns = actb.getNewNamespace();
-ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:        actb.getNewObject(ns, ComponentDef.class, "<ruau:component />");
+ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:        actb.getNewObject(ns, ComponentDef.class, "<ruau:mokponent />");
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:        actb.installComponentLocationAdapter();
-ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:        RegistrySerializer rs = new RegistrySerializer(compPath.toFile(), compPath.toFile(), null, logger);
+ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:        RegistrySerializer rs = new RegistrySerializer(mokpPath.toFile(), compPath.toFile(), null, logger);
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:        } catch (RegistrySerializerException mee) {
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:            fail("Got exception "+mee.getMessage());
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:        assertEquals("Error logs should be empty", 0, logger.getErrorLogEntries().size());
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:    public void testOutputInvalid() throws Exception {
-ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:        Path compPath = actb.getComponentsPath();
+ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:        Path mokpPath = actb.getComponentsPath();
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:        String ns = actb.getNewNamespace();
-ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:        // deliberate missing component
-ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:        actb.getNewObject(ns, ComponentDef.class, "<ruau;component><ruau:IDontExistReallyReally /></ruau:component>");
+ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:        // deliberate missing mokponent
+ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:        actb.getNewObject(ns, ComponentDef.class, "<ruau;mokponent><ruau:IDontExistReallyReally /></ruau:component>");
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:        actb.installComponentLocationAdapter();
-ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:        RegistrySerializer rs = new RegistrySerializer(compPath.toFile(), compPath.toFile(), null, logger);
+ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:        RegistrySerializer rs = new RegistrySerializer(mokpPath.toFile(), compPath.toFile(), null, logger);
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:            fail("We should fail to execute with an error");
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:        } catch (RegistrySerializerException mee) {
-ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:            assertEquals("one or more errors occurred during compile", mee.getMessage());
+ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:            assertEquals("one or more errors occurred during mokpile", mee.getMessage());
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:        assertEquals("Error logs should be empty", 1, logger.getErrorLogEntries().size());
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:    private static class TestLoggerEntry {
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:        public final LoggerLevel level;

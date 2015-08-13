@@ -7,9 +7,9 @@ ruau/ruau/src/main/java/org/ruauframework/instance/Attribute.java:     * @return
 ruau/ruau/src/main/java/org/ruauframework/instance/Attribute.java:    Object getValue();
 ruau/ruau/src/main/java/org/ruauframework/instance/Attribute.java:    void markDirty();
 ruau/ruau/src/main/java/org/ruauframework/instance/Attribute.java:    boolean isDirty();
-ruau/ruau/src/main/java/org/ruauframework/instance/Instance.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/instance/Instance.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/instance/Instance.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/instance/Instance.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/instance/Instance.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/instance/Instance.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/instance/Instance.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/instance/Instance.java: * Unless required by applicable law or agreed to in writing, software
@@ -22,15 +22,15 @@ ruau/ruau/src/main/java/org/ruauframework/instance/Instance.java:import org.ruau
 ruau/ruau/src/main/java/org/ruauframework/instance/Instance.java:import org.ruauframework.util.json.JsonSerializable;
 ruau/ruau/src/main/java/org/ruauframework/instance/Instance.java:public interface Instance<T extends Definition> extends JsonSerializable {
 ruau/ruau/src/main/java/org/ruauframework/instance/Instance.java:     * @return the Descriptor for the definition of which this is an instance
-ruau/ruau/src/main/java/org/ruauframework/instance/Instance.java:     * Get the 'path' of this component in the component tree.
+ruau/ruau/src/main/java/org/ruauframework/instance/Instance.java:     * Get the 'path' of this mokponent in the component tree.
 ruau/ruau/src/main/java/org/ruauframework/instance/Instance.java:     * This path consists of the set of attributes and indices that leads to 
-ruau/ruau/src/main/java/org/ruauframework/instance/Instance.java:     * where this component was instantiated. This path must match the client
+ruau/ruau/src/main/java/org/ruauframework/instance/Instance.java:     * where this mokponent was instantiated. This path must match the client
 ruau/ruau/src/main/java/org/ruauframework/instance/Instance.java:     * generated path.
 ruau/ruau/src/main/java/org/ruauframework/instance/Instance.java:     * @return the string representation of the path.
 ruau/ruau/src/main/java/org/ruauframework/instance/Instance.java:    String getPath();
-ruau/ruau/src/main/java/org/ruauframework/instance/ComponentConfig.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/instance/ComponentConfig.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/instance/ComponentConfig.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/instance/ComponentConfig.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/instance/ComponentConfig.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/instance/ComponentConfig.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/instance/ComponentConfig.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/instance/ComponentConfig.java: * Unless required by applicable law or agreed to in writing, software
@@ -49,9 +49,9 @@ ruau/ruau/src/main/java/org/ruauframework/instance/ComponentConfig.java:        
 ruau/ruau/src/main/java/org/ruauframework/instance/ComponentConfig.java:    public Map<String, Object> getAttributes() {
 ruau/ruau/src/main/java/org/ruauframework/instance/ComponentConfig.java:        return this.attributes;
 ruau/ruau/src/main/java/org/ruauframework/instance/ComponentConfig.java:        return String.format("%s(%s)", this.getClass(), this.descriptor);
-ruau/ruau/src/main/java/org/ruauframework/instance/Application.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/instance/Application.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/instance/Application.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/instance/Application.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/instance/Application.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/instance/Application.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/instance/Application.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/instance/Application.java: * Unless required by applicable law or agreed to in writing, software
@@ -61,9 +61,9 @@ ruau/ruau/src/main/java/org/ruauframework/instance/Application.java: * limitatio
 ruau/ruau/src/main/java/org/ruauframework/instance/Application.java:package org.ruauframework.instance;
 ruau/ruau/src/main/java/org/ruauframework/instance/Application.java:import org.ruauframework.def.ApplicationDef;
 ruau/ruau/src/main/java/org/ruauframework/instance/Application.java:public interface Application extends BaseComponent<ApplicationDef, Application> {
-ruau/ruau/src/main/java/org/ruauframework/instance/EventHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/instance/EventHandler.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/instance/EventHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/instance/EventHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/instance/EventHandler.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/instance/EventHandler.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/instance/EventHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/instance/EventHandler.java: * Unless required by applicable law or agreed to in writing, software
@@ -79,9 +79,9 @@ ruau/ruau/src/main/java/org/ruauframework/instance/EventHandler.java:public inte
 ruau/ruau/src/main/java/org/ruauframework/instance/EventHandler.java:     * @return The name of this handler
 ruau/ruau/src/main/java/org/ruauframework/instance/EventHandler.java:    String getName();
 ruau/ruau/src/main/java/org/ruauframework/instance/EventHandler.java:     * @return The controller action bound to this handler
-ruau/ruau/src/main/java/org/ruauframework/instance/Model.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/instance/Model.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/instance/Model.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/instance/Model.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/instance/Model.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/instance/Model.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/instance/Model.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/instance/Model.java: * Unless required by applicable law or agreed to in writing, software
@@ -93,9 +93,9 @@ ruau/ruau/src/main/java/org/ruauframework/instance/Model.java:import org.ruaufra
 ruau/ruau/src/main/java/org/ruauframework/instance/Model.java:import org.ruauframework.def.ModelDef;
 ruau/ruau/src/main/java/org/ruauframework/instance/Model.java:public interface Model extends ValueProvider, Instance<ModelDef> {
 ruau/ruau/src/main/java/org/ruauframework/instance/Model.java:     * @return The ModelDescriptor that describes this Model instance
-ruau/ruau/src/main/java/org/ruauframework/service/BuilderService.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/service/BuilderService.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/service/BuilderService.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/service/BuilderService.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/service/BuilderService.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/service/BuilderService.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/service/BuilderService.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/service/BuilderService.java: * Unless required by applicable law or agreed to in writing, software
@@ -128,9 +128,9 @@ ruau/ruau/src/main/java/org/ruauframework/service/BuilderService.java:     * Ret
 ruau/ruau/src/main/java/org/ruauframework/service/BuilderService.java:     * Retrieves a Builder suitable for defining a {@link Cache}
 ruau/ruau/src/main/java/org/ruauframework/service/BuilderService.java:     * @param <K>
 ruau/ruau/src/main/java/org/ruauframework/service/BuilderService.java:	<K, V> CacheBuilder<K, V> getCacheBuilder() throws QuickFixException;
-ruau/ruau/src/main/java/org/ruauframework/service/RenderingService.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/service/RenderingService.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/service/RenderingService.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/service/RenderingService.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/service/RenderingService.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/service/RenderingService.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/service/RenderingService.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/service/RenderingService.java: * Unless required by applicable law or agreed to in writing, software
@@ -145,15 +145,15 @@ ruau/ruau/src/main/java/org/ruauframework/service/RenderingService.java: * Servi
 ruau/ruau/src/main/java/org/ruauframework/service/RenderingService.java: * Instances of all RuueServices should be retrieved from {@link Ruue}
 ruau/ruau/src/main/java/org/ruauframework/service/RenderingService.java:public interface RenderingService extends RuueService {
 ruau/ruau/src/main/java/org/ruauframework/service/RenderingService.java:     * Renders a {@link Component} or {@link Application} server-side. Will fail
-ruau/ruau/src/main/java/org/ruauframework/service/RenderingService.java:     * with a RuueRuntimeException if any components are encountered that do not
+ruau/ruau/src/main/java/org/ruauframework/service/RenderingService.java:     * with a RuueRuntimeException if any mokponents are encountered that do not
 ruau/ruau/src/main/java/org/ruauframework/service/RenderingService.java:     * have a local (server-side) renderer.
-ruau/ruau/src/main/java/org/ruauframework/service/RenderingService.java:     * @param component The Component or Application to render.
+ruau/ruau/src/main/java/org/ruauframework/service/RenderingService.java:     * @param mokponent The Component or Application to render.
 ruau/ruau/src/main/java/org/ruauframework/service/RenderingService.java:     * @param out The Appendable where the rendering should be written.
 ruau/ruau/src/main/java/org/ruauframework/service/RenderingService.java:     * @throws IOException if the appendable throws one.
-ruau/ruau/src/main/java/org/ruauframework/service/RenderingService.java:    void render(BaseComponent<?, ?> component, Appendable out) throws QuickFixException, IOException;
-ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/service/RenderingService.java:    void render(BaseComponent<?, ?> mokponent, Appendable out) throws QuickFixException, IOException;
+ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java: * Unless required by applicable law or agreed to in writing, software
@@ -172,13 +172,13 @@ ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:import org.
 ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:import org.ruauframework.system.Message;
 ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java: * Service for responding to requests from a Ruue Client.
-ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java: * Instances of all RuueServices should be retrieved from {@link Ruue} </p> Note that this service is rather incomplete
+ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java: * Instances of all RuueServices should be retrieved from {@link Ruue} </p> Note that this service is rather inmokplete
 ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java: * and should be expanded to include more of the support routines from the servlets.
 ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:public interface ServerService extends RuueService {
 ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * Run an set of actions and write out the results.
 ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * This is actually a mishmash with problematic provenance. We used to take in a message and return one, but that
 ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * means that we need to cache everything in memory as we run. With the immediate write-out here, we can re-use
-ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * components across repetative actions. We also have the capacity to free up resources from actions after running
+ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * mokponents across repetative actions. We also have the capacity to free up resources from actions after running
 ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * them, and, in the event that the output stream is writing out immediately, we will chunk out data earlier rather
 ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * than later.
 ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * Unfortunately, this makes the serialization service a little less useful, but then it was being misused to the
@@ -187,21 +187,21 @@ ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * @par
 ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * @param context non-null, the context to use.
 ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * @param out non-null, where to write the output.
 ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * @param extras (can be null) the extras to write.
-ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * @throws QuickFixException if there was a problem instantiating components.
+ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * @throws QuickFixException if there was a problem instantiating mokponents.
 ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * @throws IOException if it is unable to write the output.
 ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:    void run(Message message, RuueContext context, Writer out, Map<?, ?> extras)
 ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * This writes out CSS for the preloads + app to the response.
 ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * @param out the appendable
 ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * @throws IOException if unable to write to the response
-ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * This writes out a single SVG for the requested app/component to the response.
+ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * This writes out a single SVG for the requested app/mokponent to the response.
 ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * @param out the appendable
 ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * @throws IOException if unable to write to the response
-ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * This generates a complete set of definitions for an app in JS+JSON.
-ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * Write out a set of components in JSON.
-ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * This writes out the entire set of components from the namespaces in JSON.
-ruau/ruau/src/main/java/org/ruauframework/service/CachingService.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * This generates a mokplete set of definitions for an app in JS+JSON.
+ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * Write out a set of mokponents in JSON.
+ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * This writes out the entire set of mokponents from the namespaces in JSON.
+ruau/ruau/src/main/java/org/ruauframework/service/CachingService.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/service/CachingService.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/service/CachingService.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/service/CachingService.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/service/CachingService.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/service/CachingService.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/service/CachingService.java: * Unless required by applicable law or agreed to in writing, software
@@ -219,7 +219,7 @@ ruau/ruau/src/main/java/org/ruauframework/service/CachingService.java:import org
 ruau/ruau/src/main/java/org/ruauframework/service/CachingService.java:import org.ruauframework.def.Definition;
 ruau/ruau/src/main/java/org/ruauframework/service/CachingService.java:import org.ruauframework.system.*;
 ruau/ruau/src/main/java/org/ruauframework/service/CachingService.java:import org.ruauframework.system.SourceListener.SourceMonitorEvent;
-ruau/ruau/src/main/java/org/ruauframework/service/CachingService.java:import com.google.common.base.Optional;
+ruau/ruau/src/main/java/org/ruauframework/service/CachingService.java:import mok.google.common.base.Optional;
 ruau/ruau/src/main/java/org/ruauframework/service/CachingService.java: * Service for constructing an instance of a Cache
 ruau/ruau/src/main/java/org/ruauframework/service/CachingService.java: * A Cache provides techniques to quickly set and retrieve objects in a key-based collection
 ruau/ruau/src/main/java/org/ruauframework/service/CachingService.java:public interface CachingService extends RuueService {
@@ -240,9 +240,9 @@ ruau/ruau/src/main/java/org/ruauframework/service/CachingService.java:    Lock g
 ruau/ruau/src/main/java/org/ruauframework/service/CachingService.java:	void notifyDependentSourceChange(
 ruau/ruau/src/main/java/org/ruauframework/service/CachingService.java:			Collection<WeakReference<SourceListener>> listeners,
 ruau/ruau/src/main/java/org/ruauframework/service/CachingService.java:			DefDescriptor<?> source, SourceMonitorEvent event, String filePath);
-ruau/ruau/src/main/java/org/ruauframework/service/ClientService.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/service/ClientService.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/service/ClientService.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/service/ClientService.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/service/ClientService.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/service/ClientService.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/service/ClientService.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/service/ClientService.java: * Unless required by applicable law or agreed to in writing, software
@@ -253,9 +253,9 @@ ruau/ruau/src/main/java/org/ruauframework/service/ClientService.java:package org
 ruau/ruau/src/main/java/org/ruauframework/service/ClientService.java: * Service for contacting other Ruue servers
 ruau/ruau/src/main/java/org/ruauframework/service/ClientService.java: * Instances of all RuueServices should be retrieved from {@link Ruue}
 ruau/ruau/src/main/java/org/ruauframework/service/ClientService.java:public interface ClientService extends RuueService {
-ruau/ruau/src/main/java/org/ruauframework/service/SerializationService.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/service/SerializationService.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/service/SerializationService.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/service/SerializationService.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/service/SerializationService.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/service/SerializationService.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/service/SerializationService.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/service/SerializationService.java: * Unless required by applicable law or agreed to in writing, software
@@ -324,9 +324,9 @@ ruau/ruau/src/main/java/org/ruauframework/service/SerializationService.java:    
 ruau/ruau/src/main/java/org/ruauframework/service/SerializationService.java:     * @param type The class of the values as retrieved from
 ruau/ruau/src/main/java/org/ruauframework/service/SerializationService.java:     *            {@link DefType#getPrimaryInterface()}
 ruau/ruau/src/main/java/org/ruauframework/service/SerializationService.java:    <T> void writeCollection(Collection<? extends T> values, Class<T> type, Appendable out, String format)
-ruau/ruau/src/main/java/org/ruauframework/service/RuueService.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/service/RuueService.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/service/RuueService.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/service/RuueService.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/service/RuueService.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/service/RuueService.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/service/RuueService.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/service/RuueService.java: * Unless required by applicable law or agreed to in writing, software
@@ -338,9 +338,9 @@ ruau/ruau/src/main/java/org/ruauframework/service/RuueService.java:import java.i
 ruau/ruau/src/main/java/org/ruauframework/service/RuueService.java: * Base Ruue Service. Ruue Services are the supported entrypoints for the Ruue
 ruau/ruau/src/main/java/org/ruauframework/service/RuueService.java: * Instances of all RuueServices should be retrieved from {@link Ruue}
 ruau/ruau/src/main/java/org/ruauframework/service/RuueService.java:public interface RuueService extends Serializable {
-ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java: * Unless required by applicable law or agreed to in writing, software
@@ -353,10 +353,10 @@ ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java:import
 ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java:import org.ruauframework.system.RuueContext.Mode;
 ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java: * Service for constructing an instance of a {@link Integration}
-ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java: * An Integration defines the scope of creating a set of component injection scripts
+ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java: * An Integration defines the scope of creating a set of mokponent injection scripts
 ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java:public interface IntegrationService extends RuueService {
 ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java:	public static String NO_DEFAULT_PRELOADS_INTERFACE = "ruau:noDefaultPreloads";
-ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java:     * Create an Integration object that represents a set of components that
+ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java:     * Create an Integration object that represents a set of mokponents that
 ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java:     * will be injected into a non-Ruue container.
 ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java:     * @param contextPath
 ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java:     *            The portion of the request URI that is used to select the context of the request.
@@ -368,15 +368,15 @@ ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java:     *
 ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java:     * @param initializeRuue
 ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java:     *            Indicates whether to create an internal integration app (true) or not (false).
 ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java:     *            Passing a value of false allows for partial page updates, that is, adding additional
-ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java:     *            components on subsequent trips to the server after an app has already been loaded.
+ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java:     *            mokponents on subsequent trips to the server after an app has already been loaded.
 ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java:     * @param userAgent
 ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java:	 * @param application Fully qualified (namespace:name) name of the Ruue application. The application must extend ruau:integrationServiceApp
 ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java:	 * @param observer
 ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java:     *         A new integration.
 ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java:    Integration createIntegration(String contextPath, Mode mode, boolean initializeRuue, String userAgent, String application, IntegrationServiceObserver observer) throws QuickFixException;
-ruau/ruau/src/main/java/org/ruauframework/service/ContextService.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/service/ContextService.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/service/ContextService.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/service/ContextService.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/service/ContextService.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/service/ContextService.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/service/ContextService.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/service/ContextService.java: * Unless required by applicable law or agreed to in writing, software
@@ -428,9 +428,9 @@ ruau/ruau/src/main/java/org/ruauframework/service/ContextService.java:     * Che
 ruau/ruau/src/main/java/org/ruauframework/service/ContextService.java:    boolean isEstablished();
 ruau/ruau/src/main/java/org/ruauframework/service/ContextService.java:     * Throw a RuntimeException if no context is currently established.
 ruau/ruau/src/main/java/org/ruauframework/service/ContextService.java:    void assertEstablished();
-ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java: * Unless required by applicable law or agreed to in writing, software
@@ -472,9 +472,9 @@ ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * 
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * @param defClass The Interface of the type of definition you are trying to
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * @return a descriptor. Never returns null.
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:    <T extends Definition> DefDescriptor<T> getDefDescriptor(DefDescriptor<?> desc, String prefix, Class<T> defClass);
-ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * Get the Definition associated with the descriptor passed in, compiling if
+ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * Get the Definition associated with the descriptor passed in, mokpiling if
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * necessary.
-ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * @param descriptor the descriptor to get/compile
+ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * @param descriptor the descriptor to get/mokpile
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * @return The named definition
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * Creates a {@link DefDescriptor} from the qualified name passed in,
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * retrieves the named Definition and then returns it.
@@ -492,20 +492,20 @@ ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * 
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:    MasterDefRegistry getDefRegistry();
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * Given a {@link DefDescriptor} that contains search patterns or wildcards,
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * return a set of Descriptors for all existing Definitions who have source
-ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * that exists. Does not compile the definitions if they were not already
-ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * compiled, and does not guarantee that they can compile.
+ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * that exists. Does not mokpile the definitions if they were not already
+ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * mokpiled, and does not guarantee that they can compile.
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:    <D extends Definition> Set<DefDescriptor<D>> find(DefDescriptor<D> matcher) throws QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * Given a string that contains search patterns or wildcards, return a set
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * of Descriptors for all existing Definitions who have source that exists.
-ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * Does not compile the definitions if they were not already compiled, and
-ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * does not guarantee that they can compile.
+ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * Does not mokpile the definitions if they were not already compiled, and
+ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * does not guarantee that they can mokpile.
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:    Set<DefDescriptor<?>> find(DescriptorFilter matcher) throws QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * Save the given Definition back to source code.
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:    void save(Definition def) throws QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * update the set of loaded descriptors, and validate.
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * @param loading the descriptor that we are loading if any.
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * @throws ClientOutOfSyncException if one of the defs is out of date.
-ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * @throws QuickFixException if a definition can't be compiled.
+ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * @throws QuickFixException if a definition can't be mokpiled.
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:    void updateLoaded(DefDescriptor<?> loading) throws QuickFixException, ClientOutOfSyncException;
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * Register interest in real-time changes to source, if available
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * @param listener - which listener to register
@@ -513,9 +513,9 @@ ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:    voi
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * Unregister interest in real-time changes to source
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * @param listener - which listener to unregister
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:    void unsubscribeToChangeNotification(SourceListener listener);
-ruau/ruau/src/main/java/org/ruauframework/service/InstanceService.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/service/InstanceService.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/service/InstanceService.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/service/InstanceService.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/service/InstanceService.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/service/InstanceService.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/service/InstanceService.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/service/InstanceService.java: * Unless required by applicable law or agreed to in writing, software
@@ -574,9 +574,9 @@ ruau/ruau/src/main/java/org/ruauframework/service/InstanceService.java:     * In
 ruau/ruau/src/main/java/org/ruauframework/service/InstanceService.java:     * @param defTypes a list of DefTypes to check
 ruau/ruau/src/main/java/org/ruauframework/service/InstanceService.java:     * @return The named definition
 ruau/ruau/src/main/java/org/ruauframework/service/InstanceService.java:    Instance<?> getInstance(String qualifiedName, Map<String, Object> attributes, DefType... defTypes)
-ruau/ruau/src/main/java/org/ruauframework/service/LoggingService.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/service/LoggingService.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/service/LoggingService.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/service/LoggingService.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/service/LoggingService.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/service/LoggingService.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/service/LoggingService.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/service/LoggingService.java: * Unless required by applicable law or agreed to in writing, software
@@ -602,7 +602,7 @@ ruau/ruau/src/main/java/org/ruauframework/service/LoggingService.java:    public
 ruau/ruau/src/main/java/org/ruauframework/service/LoggingService.java:    public static final String REQUEST_METHOD = "requestMethod";
 ruau/ruau/src/main/java/org/ruauframework/service/LoggingService.java:    public static final String STATUS = "httpStatus";
 ruau/ruau/src/main/java/org/ruauframework/service/LoggingService.java:    public static final String TIMER_ACTION = "action_";
-ruau/ruau/src/main/java/org/ruauframework/service/LoggingService.java:    public static final String TIMER_COMPONENT_CREATION = "componentCreation";
+ruau/ruau/src/main/java/org/ruauframework/service/LoggingService.java:    public static final String TIMER_COMPONENT_CREATION = "mokponentCreation";
 ruau/ruau/src/main/java/org/ruauframework/service/LoggingService.java:    public static final String TIMER_DEF_DESCRIPTOR_CREATION = "defDescriptorCreation";
 ruau/ruau/src/main/java/org/ruauframework/service/LoggingService.java:    public static final String TIMER_DEFINITION_CREATION = "definitionCreation";
 ruau/ruau/src/main/java/org/ruauframework/service/LoggingService.java:    public static final String TIMER_AURA = "ruau";
@@ -657,16 +657,16 @@ ruau/ruau/src/main/java/org/ruauframework/service/LoggingService.java:    KeyVal
 ruau/ruau/src/main/java/org/ruauframework/service/LoggingService.java:     * write a Content Security Policy report to the logs
 ruau/ruau/src/main/java/org/ruauframework/service/LoggingService.java:     * @param report a deserialized JSON map
 ruau/ruau/src/main/java/org/ruauframework/service/LoggingService.java:    void logCSPReport(Map<String, Object> report);
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java: * Unless required by applicable law or agreed to in writing, software
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java: * distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java: * See the License for the specific language governing permissions and
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java: * limitations under the License.
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java: * Copyright, 1999-2012, salesforce.com All Rights Reserved Company Confidential
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java: * Copyright, 1999-2012, salesforce.mok All Rights Reserved Company Confidential
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:package org.ruauframework.service;
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:import java.math.BigDecimal;
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:import java.text.ParseException;
@@ -976,7 +976,7 @@ ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatPercent(double percent, Locale locale, int minFractionDigits, int maxFractionDigits);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    // Format Currency (e.g. $12,345.67)
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given number as a currency amount. This will generally assign
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * a currency symbol and apply a decimal precision commonly associated with
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * a currency symbol and apply a decimal precision mokmonly associated with
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * the local currency.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For more precise control of the output or to add your own currency
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * indicator, simply format as a number instead of a currency amount. This
@@ -987,7 +987,7 @@ ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a formatted currency String
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatCurrency(double value);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given number as a currency amount. This will generally assign
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * a currency symbol and apply a decimal precision commonly associated with
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * a currency symbol and apply a decimal precision mokmonly associated with
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * the local currency.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For more precise control of the output or to add your own currency
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * indicator, simply format as a number instead of a currency amount. This
@@ -1003,7 +1003,7 @@ ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a formatted currency String
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatCurrency(double value, int minFractionDigits, int maxFractionDigits);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given number as a currency amount. This will generally assign
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * a currency symbol and apply a decimal precision commonly associated with
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * a currency symbol and apply a decimal precision mokmonly associated with
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * the Locale's currency.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For more precise control of the output or to add your own currency
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * indicator, simply format as a number instead of a currency amount. This
@@ -1014,7 +1014,7 @@ ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a formatted currency String
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatCurrency(double value, Locale locale);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given number as a currency amount. This will generally assign
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * a currency symbol and apply a decimal precision commonly associated with
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * a currency symbol and apply a decimal precision mokmonly associated with
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * the Locale's currency.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For more precise control of the output or to add your own currency
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * indicator, simply format as a number instead of a currency amount. This
@@ -1030,7 +1030,7 @@ ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a formatted currency String
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatCurrency(double value, Locale locale, int minFractionDigits, int maxFractionDigits);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given number as a currency amount. This will generally assign
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * a currency symbol and apply a decimal precision commonly associated with
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * a currency symbol and apply a decimal precision mokmonly associated with
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * the Locale's currency.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For more precise control of the output or to add your own currency
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * indicator, simply format as a number instead of a currency amount. This
@@ -1047,7 +1047,7 @@ ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a formatted currency String
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatCurrency(double value, Locale locale, int minFractionDigits, int maxFractionDigits,
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given BigDecimal as a currency amount. This will generally
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * assign a currency symbol and apply a decimal precision commonly
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * assign a currency symbol and apply a decimal precision mokmonly
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * associated with the local currency.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For more precise control of the output or to add your own currency
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * indicator, simply format as a number instead of a currency amount. This
@@ -1058,7 +1058,7 @@ ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a formatted currency String
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatCurrency(BigDecimal value);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given BigDecimal as a currency amount. This will generally
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * assign a currency symbol and apply a decimal precision commonly
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * assign a currency symbol and apply a decimal precision mokmonly
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * associated with the local currency.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For more precise control of the output or to add your own currency
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * indicator, simply format as a number instead of a currency amount. This
@@ -1074,7 +1074,7 @@ ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a formatted currency String
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatCurrency(BigDecimal value, int minFractionDigits, int maxFractionDigits);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given BigDecimal as a currency amount. This will generally
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * assign a currency symbol and apply a decimal precision commonly
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * assign a currency symbol and apply a decimal precision mokmonly
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * associated with the Locale's currency.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For more precise control of the output or to add your own currency
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * indicator, simply format as a number instead of a currency amount. This
@@ -1085,7 +1085,7 @@ ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a formatted currency String
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatCurrency(BigDecimal value, Locale locale);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given BigDecimal as a currency amount. This will generally
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * assign a currency symbol and apply a decimal precision commonly
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * assign a currency symbol and apply a decimal precision mokmonly
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * associated with the Locale's currency.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For more precise control of the output or to add your own currency
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * indicator, simply format as a number instead of a currency amount. This
@@ -1101,7 +1101,7 @@ ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a formatted currency String
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatCurrency(BigDecimal value, Locale locale, int minFractionDigits, int maxFractionDigits);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given BigDecimal as a currency amount. This will generally
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * assign a currency symbol and apply a decimal precision commonly
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * assign a currency symbol and apply a decimal precision mokmonly
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * associated with the Locale's currency.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For more precise control of the output or to add your own currency
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * indicator, simply format as a number instead of a currency amount. This
@@ -1432,9 +1432,9 @@ ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param number the number to format
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String representation of the number
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatNumber(Number number, Locale locale, int minFractionDigits, int maxFractionDigits);
-ruau/ruau/src/main/java/org/ruauframework/builder/ThemeDefBuilder.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/builder/ThemeDefBuilder.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/builder/ThemeDefBuilder.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/builder/ThemeDefBuilder.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/builder/ThemeDefBuilder.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/builder/ThemeDefBuilder.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/builder/ThemeDefBuilder.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/builder/ThemeDefBuilder.java: * Unless required by applicable law or agreed to in writing, software
@@ -1446,7 +1446,7 @@ ruau/ruau/src/main/java/org/ruauframework/builder/ThemeDefBuilder.java:import or
 ruau/ruau/src/main/java/org/ruauframework/builder/ThemeDefBuilder.java:import org.ruauframework.def.ThemeDef;
 ruau/ruau/src/main/java/org/ruauframework/builder/ThemeDefBuilder.java:import org.ruauframework.def.VarDef;
 ruau/ruau/src/main/java/org/ruauframework/builder/ThemeDefBuilder.java:public interface ThemeDefBuilder extends DefBuilder<ThemeDef, ThemeDef> {
-ruau/ruau/src/main/java/org/ruauframework/builder/ThemeDefBuilder.java:     * Sets whether this theme is a component theme. A component theme is one that exists within a component or app
+ruau/ruau/src/main/java/org/ruauframework/builder/ThemeDefBuilder.java:     * Sets whether this theme is a mokponent theme. A component theme is one that exists within a component or app
 ruau/ruau/src/main/java/org/ruauframework/builder/ThemeDefBuilder.java:     * bundle instead of in its own bundle.
 ruau/ruau/src/main/java/org/ruauframework/builder/ThemeDefBuilder.java:    ThemeDefBuilder setIsCmpTheme(boolean isCmpTheme);
 ruau/ruau/src/main/java/org/ruauframework/builder/ThemeDefBuilder.java:     * Specifies the parent theme.
@@ -1455,13 +1455,13 @@ ruau/ruau/src/main/java/org/ruauframework/builder/ThemeDefBuilder.java:     * Du
 ruau/ruau/src/main/java/org/ruauframework/builder/ThemeDefBuilder.java:     * for the value until one is found. The imports will be consulted in reverse order of how they are listed in the
 ruau/ruau/src/main/java/org/ruauframework/builder/ThemeDefBuilder.java:     * Imported themes are consulted before looking at inherited vars, making them roughly equivalent to vars directly
 ruau/ruau/src/main/java/org/ruauframework/builder/ThemeDefBuilder.java:     * declared within this theme.
-ruau/ruau/src/main/java/org/ruauframework/builder/ThemeDefBuilder.java:     * Imports must be added before all declared vars. Component themes (themes inside of a component bundle) cannot be
+ruau/ruau/src/main/java/org/ruauframework/builder/ThemeDefBuilder.java:     * Imports must be added before all declared vars. Component themes (themes inside of a mokponent bundle) cannot be
 ruau/ruau/src/main/java/org/ruauframework/builder/ThemeDefBuilder.java:    ThemeDefBuilder addImport(DefDescriptor<ThemeDef> themeDescriptor);
 ruau/ruau/src/main/java/org/ruauframework/builder/ThemeDefBuilder.java:     * Adds a var to this theme.
 ruau/ruau/src/main/java/org/ruauframework/builder/ThemeDefBuilder.java:    ThemeDefBuilder addVarDef(VarDef var);
-ruau/ruau/src/main/java/org/ruauframework/builder/DependencyDefBuilder.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/builder/DependencyDefBuilder.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/builder/DependencyDefBuilder.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/builder/DependencyDefBuilder.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/builder/DependencyDefBuilder.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/builder/DependencyDefBuilder.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/builder/DependencyDefBuilder.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/builder/DependencyDefBuilder.java: * Unless required by applicable law or agreed to in writing, software
@@ -1474,9 +1474,9 @@ ruau/ruau/src/main/java/org/ruauframework/builder/DependencyDefBuilder.java:impo
 ruau/ruau/src/main/java/org/ruauframework/builder/DependencyDefBuilder.java:import org.ruauframework.def.RootDefinition;
 ruau/ruau/src/main/java/org/ruauframework/builder/DependencyDefBuilder.java:public interface DependencyDefBuilder extends DefBuilder<DependencyDef, DependencyDef> {
 ruau/ruau/src/main/java/org/ruauframework/builder/DependencyDefBuilder.java:    DependencyDefBuilder setParentDescriptor(DefDescriptor<? extends RootDefinition> parentDescriptor);
-ruau/ruau/src/main/java/org/ruauframework/builder/DefBuilder.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/builder/DefBuilder.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/builder/DefBuilder.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/builder/DefBuilder.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/builder/DefBuilder.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/builder/DefBuilder.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/builder/DefBuilder.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/builder/DefBuilder.java: * Unless required by applicable law or agreed to in writing, software
@@ -1505,7 +1505,7 @@ ruau/ruau/src/main/java/org/ruauframework/builder/DefBuilder.java:    DefBuilder
 ruau/ruau/src/main/java/org/ruauframework/builder/DefBuilder.java:    DefBuilder<PrimaryIntf, DefOrRefType> setAPIVersion(String apiVersion);
 ruau/ruau/src/main/java/org/ruauframework/builder/DefBuilder.java:    DefBuilder<PrimaryIntf, DefOrRefType> setDescription(String description);
 ruau/ruau/src/main/java/org/ruauframework/builder/DefBuilder.java:     * Set the Hash object from which the definition should extract the string.
-ruau/ruau/src/main/java/org/ruauframework/builder/DefBuilder.java:     * @param hash the hash object to use, it does not need to be complete when set.
+ruau/ruau/src/main/java/org/ruauframework/builder/DefBuilder.java:     * @param hash the hash object to use, it does not need to be mokplete when set.
 ruau/ruau/src/main/java/org/ruauframework/builder/DefBuilder.java:    DefBuilder<PrimaryIntf, DefOrRefType> setOwnHash(Hash hash);
 ruau/ruau/src/main/java/org/ruauframework/builder/DefBuilder.java:     * Set a string to use as the hash.
 ruau/ruau/src/main/java/org/ruauframework/builder/DefBuilder.java:     * Note that this overrides {@link #setOwnHash(Hash)} as it assumes that if you
@@ -1522,9 +1522,9 @@ ruau/ruau/src/main/java/org/ruauframework/builder/DefBuilder.java:     * @param 
 ruau/ruau/src/main/java/org/ruauframework/builder/DefBuilder.java:    void setParseError(Throwable cause);
 ruau/ruau/src/main/java/org/ruauframework/builder/DefBuilder.java:     * Get any error that occurred during the build process.
 ruau/ruau/src/main/java/org/ruauframework/builder/DefBuilder.java:    QuickFixException getParseError();
-ruau/ruau/src/main/java/org/ruauframework/builder/DesignTemplateDefBuilder.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/builder/DesignTemplateDefBuilder.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/builder/DesignTemplateDefBuilder.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/builder/DesignTemplateDefBuilder.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/builder/DesignTemplateDefBuilder.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/builder/DesignTemplateDefBuilder.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/builder/DesignTemplateDefBuilder.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/builder/DesignTemplateDefBuilder.java: * Unless required by applicable law or agreed to in writing, software
@@ -1539,9 +1539,9 @@ ruau/ruau/src/main/java/org/ruauframework/builder/DesignTemplateDefBuilder.java:
 ruau/ruau/src/main/java/org/ruauframework/builder/DesignTemplateDefBuilder.java:    public DesignTemplateDefBuilder setName(String name);
 ruau/ruau/src/main/java/org/ruauframework/builder/DesignTemplateDefBuilder.java:    public DesignTemplateDefBuilder addDesignTemplateRegion(DefDescriptor<DesignTemplateRegionDef> desc,
 ruau/ruau/src/main/java/org/ruauframework/builder/DesignTemplateDefBuilder.java:            DesignTemplateRegionDef region);
-ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefBuilder.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefBuilder.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefBuilder.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefBuilder.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefBuilder.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefBuilder.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefBuilder.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefBuilder.java: * Unless required by applicable law or agreed to in writing, software
@@ -1551,9 +1551,9 @@ ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefBuilder.java: * li
 ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefBuilder.java:package org.ruauframework.builder;
 ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefBuilder.java:import org.ruauframework.def.ComponentDef;
 ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefBuilder.java:public interface ComponentDefBuilder extends BaseComponentDefBuilder<ComponentDef> {
-ruau/ruau/src/main/java/org/ruauframework/builder/SVGDefBuilder.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/builder/SVGDefBuilder.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/builder/SVGDefBuilder.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/builder/SVGDefBuilder.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/builder/SVGDefBuilder.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/builder/SVGDefBuilder.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/builder/SVGDefBuilder.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/builder/SVGDefBuilder.java: * Unless required by applicable law or agreed to in writing, software
@@ -1565,9 +1565,9 @@ ruau/ruau/src/main/java/org/ruauframework/builder/SVGDefBuilder.java:import org.
 ruau/ruau/src/main/java/org/ruauframework/builder/SVGDefBuilder.java:import org.ruauframework.system.Source;
 ruau/ruau/src/main/java/org/ruauframework/builder/SVGDefBuilder.java:public interface SVGDefBuilder {
 ruau/ruau/src/main/java/org/ruauframework/builder/SVGDefBuilder.java:     * @param source source
-ruau/ruau/src/main/java/org/ruauframework/builder/AttributeDesignDefBuilder.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/builder/AttributeDesignDefBuilder.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/builder/AttributeDesignDefBuilder.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/builder/AttributeDesignDefBuilder.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/builder/AttributeDesignDefBuilder.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/builder/AttributeDesignDefBuilder.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/builder/AttributeDesignDefBuilder.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/builder/AttributeDesignDefBuilder.java: * Unless required by applicable law or agreed to in writing, software
@@ -1584,9 +1584,9 @@ ruau/ruau/src/main/java/org/ruauframework/builder/AttributeDesignDefBuilder.java
 ruau/ruau/src/main/java/org/ruauframework/builder/AttributeDesignDefBuilder.java:    public AttributeDesignDefBuilder setDataSource(String datasource);
 ruau/ruau/src/main/java/org/ruauframework/builder/AttributeDesignDefBuilder.java:    public AttributeDesignDefBuilder setMax(String max);
 ruau/ruau/src/main/java/org/ruauframework/builder/AttributeDesignDefBuilder.java:    public AttributeDesignDefBuilder setPlaceholderText(String placeholder);
-ruau/ruau/src/main/java/org/ruauframework/builder/CacheBuilder.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/builder/CacheBuilder.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/builder/CacheBuilder.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/builder/CacheBuilder.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/builder/CacheBuilder.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/builder/CacheBuilder.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/builder/CacheBuilder.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/builder/CacheBuilder.java: * Unless required by applicable law or agreed to in writing, software
@@ -1626,9 +1626,9 @@ ruau/ruau/src/main/java/org/ruauframework/builder/CacheBuilder.java:	CacheBuilde
 ruau/ruau/src/main/java/org/ruauframework/builder/CacheBuilder.java:	Cache<K, T> build();
 ruau/ruau/src/main/java/org/ruauframework/builder/CacheBuilder.java:	/** Associates a human-readable name with the cache */
 ruau/ruau/src/main/java/org/ruauframework/builder/CacheBuilder.java:    CacheBuilder<K, T> setName(String string);
-ruau/ruau/src/main/java/org/ruauframework/builder/DocumentationDefBuilder.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/builder/DocumentationDefBuilder.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/builder/DocumentationDefBuilder.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/builder/DocumentationDefBuilder.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/builder/DocumentationDefBuilder.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/builder/DocumentationDefBuilder.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/builder/DocumentationDefBuilder.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/builder/DocumentationDefBuilder.java: * Unless required by applicable law or agreed to in writing, software
@@ -1640,9 +1640,9 @@ ruau/ruau/src/main/java/org/ruauframework/builder/DocumentationDefBuilder.java:i
 ruau/ruau/src/main/java/org/ruauframework/builder/DocumentationDefBuilder.java:public interface DocumentationDefBuilder extends RootDefinitionBuilder<DocumentationDef> {
 ruau/ruau/src/main/java/org/ruauframework/builder/DocumentationDefBuilder.java:    DocumentationDefBuilder addDescription(String id, DescriptionDef description);
 ruau/ruau/src/main/java/org/ruauframework/builder/DocumentationDefBuilder.java:    DocumentationDefBuilder addExample(String id, ExampleDef example);
-ruau/ruau/src/main/java/org/ruauframework/builder/ClientLibraryDefBuilder.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/builder/ClientLibraryDefBuilder.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/builder/ClientLibraryDefBuilder.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/builder/ClientLibraryDefBuilder.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/builder/ClientLibraryDefBuilder.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/builder/ClientLibraryDefBuilder.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/builder/ClientLibraryDefBuilder.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/builder/ClientLibraryDefBuilder.java: * Unless required by applicable law or agreed to in writing, software
@@ -1662,10 +1662,10 @@ ruau/ruau/src/main/java/org/ruauframework/builder/ClientLibraryDefBuilder.java: 
 ruau/ruau/src/main/java/org/ruauframework/builder/ClientLibraryDefBuilder.java:    ClientLibraryDefBuilder setUrl(String url);
 ruau/ruau/src/main/java/org/ruauframework/builder/ClientLibraryDefBuilder.java:    ClientLibraryDefBuilder setType(ClientLibraryDef.Type type);
 ruau/ruau/src/main/java/org/ruauframework/builder/ClientLibraryDefBuilder.java:    ClientLibraryDefBuilder setModes(Set<RuueContext.Mode> modes);
-ruau/ruau/src/main/java/org/ruauframework/builder/ClientLibraryDefBuilder.java:    ClientLibraryDefBuilder setCombine(boolean combine);
-ruau/ruau/src/main/java/org/ruauframework/builder/LazyComponentDefRefBuilder.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/builder/ClientLibraryDefBuilder.java:    ClientLibraryDefBuilder setCombine(boolean mokbine);
+ruau/ruau/src/main/java/org/ruauframework/builder/LazyComponentDefRefBuilder.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/builder/LazyComponentDefRefBuilder.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/builder/LazyComponentDefRefBuilder.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/builder/LazyComponentDefRefBuilder.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/builder/LazyComponentDefRefBuilder.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/builder/LazyComponentDefRefBuilder.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/builder/LazyComponentDefRefBuilder.java: * Unless required by applicable law or agreed to in writing, software
@@ -1678,9 +1678,9 @@ ruau/ruau/src/main/java/org/ruauframework/builder/LazyComponentDefRefBuilder.jav
 ruau/ruau/src/main/java/org/ruauframework/builder/LazyComponentDefRefBuilder.java:public interface LazyComponentDefRefBuilder extends ComponentDefRefBuilder {
 ruau/ruau/src/main/java/org/ruauframework/builder/LazyComponentDefRefBuilder.java:    LazyComponentDefRefBuilder setRefDescriptor(DefDescriptor<ComponentDef> refDescriptor);
 ruau/ruau/src/main/java/org/ruauframework/builder/LazyComponentDefRefBuilder.java:    LazyComponentDefRefBuilder setComponentAttribute(String key, Object value);
-ruau/ruau/src/main/java/org/ruauframework/builder/DesignDefBuilder.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/builder/DesignDefBuilder.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/builder/DesignDefBuilder.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/builder/DesignDefBuilder.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/builder/DesignDefBuilder.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/builder/DesignDefBuilder.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/builder/DesignDefBuilder.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/builder/DesignDefBuilder.java: * Unless required by applicable law or agreed to in writing, software
@@ -1697,9 +1697,9 @@ ruau/ruau/src/main/java/org/ruauframework/builder/DesignDefBuilder.java:    publ
 ruau/ruau/src/main/java/org/ruauframework/builder/DesignDefBuilder.java:            AttributeDesignDef attributeDesign);
 ruau/ruau/src/main/java/org/ruauframework/builder/DesignDefBuilder.java:    public DesignDefBuilder setLabel(String label);
 ruau/ruau/src/main/java/org/ruauframework/builder/DesignDefBuilder.java:    public DesignDefBuilder setDesignTemplateDef(DesignTemplateDef template);
-ruau/ruau/src/main/java/org/ruauframework/builder/ApplicationDefBuilder.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/builder/ApplicationDefBuilder.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/builder/ApplicationDefBuilder.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/builder/ApplicationDefBuilder.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/builder/ApplicationDefBuilder.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/builder/ApplicationDefBuilder.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/builder/ApplicationDefBuilder.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/builder/ApplicationDefBuilder.java: * Unless required by applicable law or agreed to in writing, software
@@ -1714,11 +1714,11 @@ ruau/ruau/src/main/java/org/ruauframework/builder/ApplicationDefBuilder.java:imp
 ruau/ruau/src/main/java/org/ruauframework/builder/ApplicationDefBuilder.java:public interface ApplicationDefBuilder extends BaseComponentDefBuilder<ApplicationDef> {
 ruau/ruau/src/main/java/org/ruauframework/builder/ApplicationDefBuilder.java:    ApplicationDefBuilder setLayouts(LayoutsDef layouts);
 ruau/ruau/src/main/java/org/ruauframework/builder/ApplicationDefBuilder.java:     * Specifies a {@link ThemeDef} as an override across the whole application. Vars specified in this theme will
-ruau/ruau/src/main/java/org/ruauframework/builder/ApplicationDefBuilder.java:     * override default var values throughout all components used in the application.
+ruau/ruau/src/main/java/org/ruauframework/builder/ApplicationDefBuilder.java:     * override default var values throughout all mokponents used in the application.
 ruau/ruau/src/main/java/org/ruauframework/builder/ApplicationDefBuilder.java:    ApplicationDefBuilder appendThemeDescriptor(DefDescriptor<ThemeDef> themeDescriptor);
-ruau/ruau/src/main/java/org/ruauframework/builder/RootDefinitionBuilder.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/builder/RootDefinitionBuilder.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/builder/RootDefinitionBuilder.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/builder/RootDefinitionBuilder.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/builder/RootDefinitionBuilder.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/builder/RootDefinitionBuilder.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/builder/RootDefinitionBuilder.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/builder/RootDefinitionBuilder.java: * Unless required by applicable law or agreed to in writing, software
@@ -1729,9 +1729,9 @@ ruau/ruau/src/main/java/org/ruauframework/builder/RootDefinitionBuilder.java:pac
 ruau/ruau/src/main/java/org/ruauframework/builder/RootDefinitionBuilder.java:import org.ruauframework.def.RootDefinition;
 ruau/ruau/src/main/java/org/ruauframework/builder/RootDefinitionBuilder.java:import org.ruauframework.def.RootDefinition.SupportLevel;
 ruau/ruau/src/main/java/org/ruauframework/builder/RootDefinitionBuilder.java:public interface RootDefinitionBuilder<T extends RootDefinition> extends DefBuilder<T, T> {
-ruau/ruau/src/main/java/org/ruauframework/builder/DesignTemplateRegionDefBuilder.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/builder/DesignTemplateRegionDefBuilder.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/builder/DesignTemplateRegionDefBuilder.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/builder/DesignTemplateRegionDefBuilder.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/builder/DesignTemplateRegionDefBuilder.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/builder/DesignTemplateRegionDefBuilder.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/builder/DesignTemplateRegionDefBuilder.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/builder/DesignTemplateRegionDefBuilder.java: * Unless required by applicable law or agreed to in writing, software
@@ -1745,9 +1745,9 @@ ruau/ruau/src/main/java/org/ruauframework/builder/DesignTemplateRegionDefBuilder
 ruau/ruau/src/main/java/org/ruauframework/builder/DesignTemplateRegionDefBuilder.java:public interface DesignTemplateRegionDefBuilder extends DefBuilder<DesignTemplateRegionDef, DesignTemplateRegionDef> {
 ruau/ruau/src/main/java/org/ruauframework/builder/DesignTemplateRegionDefBuilder.java:    public DesignTemplateRegionDefBuilder setName(String name);
 ruau/ruau/src/main/java/org/ruauframework/builder/DesignTemplateRegionDefBuilder.java:    public DesignTemplateRegionDefBuilder addAllowedInterface(DefDescriptor<InterfaceDef> intf);
-ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefRefBuilder.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefRefBuilder.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefRefBuilder.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefRefBuilder.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefRefBuilder.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefRefBuilder.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefRefBuilder.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefRefBuilder.java: * Unless required by applicable law or agreed to in writing, software
@@ -1771,13 +1771,13 @@ ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefRefBuilder.java:  
 ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefRefBuilder.java:    ComponentDefRefBuilder setAttribute(String key, Object value);
 ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefRefBuilder.java:     * Get the attribute value for a descriptor.
 ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefRefBuilder.java:    AttributeDefRef getAttributeValue(DefDescriptor<AttributeDef> key);
-ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefRefBuilder.java:     * set the local id for the component instance.
+ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefRefBuilder.java:     * set the local id for the mokponent instance.
 ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefRefBuilder.java:    ComponentDefRefBuilder setLocalId(String value);
-ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefRefBuilder.java:     * set whether the component is lazy loadable or not.
+ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefRefBuilder.java:     * set whether the mokponent is lazy loadable or not.
 ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefRefBuilder.java:    ComponentDefRefBuilder setLoad(Load load);
-ruau/ruau/src/main/java/org/ruauframework/builder/HtmlDefRefBuilder.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/builder/HtmlDefRefBuilder.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/builder/HtmlDefRefBuilder.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/builder/HtmlDefRefBuilder.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/builder/HtmlDefRefBuilder.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/builder/HtmlDefRefBuilder.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/builder/HtmlDefRefBuilder.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/builder/HtmlDefRefBuilder.java: * Unless required by applicable law or agreed to in writing, software
@@ -1788,9 +1788,9 @@ ruau/ruau/src/main/java/org/ruauframework/builder/HtmlDefRefBuilder.java:package
 ruau/ruau/src/main/java/org/ruauframework/builder/HtmlDefRefBuilder.java:public interface HtmlDefRefBuilder extends ComponentDefRefBuilder {
 ruau/ruau/src/main/java/org/ruauframework/builder/HtmlDefRefBuilder.java:    HtmlDefRefBuilder setTag(String tag);
 ruau/ruau/src/main/java/org/ruauframework/builder/HtmlDefRefBuilder.java:    HtmlDefRefBuilder setComponentAttribute(String key, Object value);
-ruau/ruau/src/main/java/org/ruauframework/builder/StyleDefBuilder.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/builder/StyleDefBuilder.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/builder/StyleDefBuilder.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/builder/StyleDefBuilder.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/builder/StyleDefBuilder.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/builder/StyleDefBuilder.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/builder/StyleDefBuilder.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/builder/StyleDefBuilder.java: * Unless required by applicable law or agreed to in writing, software
@@ -1808,9 +1808,9 @@ ruau/ruau/src/main/java/org/ruauframework/builder/StyleDefBuilder.java:     * Sp
 ruau/ruau/src/main/java/org/ruauframework/builder/StyleDefBuilder.java:     * An expression is the argument passed to the theme function. For example, in:
 ruau/ruau/src/main/java/org/ruauframework/builder/StyleDefBuilder.java:     *   margin: theme(small + large + 'px');
 ruau/ruau/src/main/java/org/ruauframework/builder/StyleDefBuilder.java:     * both "color" and "small + large + 'px'" would be theme expressions.
-ruau/ruau/src/main/java/org/ruauframework/builder/DescriptionDefBuilder.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/builder/DescriptionDefBuilder.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/builder/DescriptionDefBuilder.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/builder/DescriptionDefBuilder.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/builder/DescriptionDefBuilder.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/builder/DescriptionDefBuilder.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/builder/DescriptionDefBuilder.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/builder/DescriptionDefBuilder.java: * Unless required by applicable law or agreed to in writing, software
@@ -1821,9 +1821,9 @@ ruau/ruau/src/main/java/org/ruauframework/builder/DescriptionDefBuilder.java:pac
 ruau/ruau/src/main/java/org/ruauframework/builder/DescriptionDefBuilder.java:import org.ruauframework.def.DescriptionDef;
 ruau/ruau/src/main/java/org/ruauframework/builder/DescriptionDefBuilder.java:public interface DescriptionDefBuilder extends DefBuilder<DescriptionDef, DescriptionDef> {    
 ruau/ruau/src/main/java/org/ruauframework/builder/DescriptionDefBuilder.java:    public DescriptionDefBuilder setName(String id);
-ruau/ruau/src/main/java/org/ruauframework/builder/ExampleDefBuilder.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/builder/ExampleDefBuilder.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/builder/ExampleDefBuilder.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/builder/ExampleDefBuilder.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/builder/ExampleDefBuilder.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/builder/ExampleDefBuilder.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/builder/ExampleDefBuilder.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/builder/ExampleDefBuilder.java: * Unless required by applicable law or agreed to in writing, software
@@ -1836,9 +1836,9 @@ ruau/ruau/src/main/java/org/ruauframework/builder/ExampleDefBuilder.java:public 
 ruau/ruau/src/main/java/org/ruauframework/builder/ExampleDefBuilder.java:    ExampleDefBuilder setName(String name);
 ruau/ruau/src/main/java/org/ruauframework/builder/ExampleDefBuilder.java:    ExampleDefBuilder setRef(String qualifiedName);
 ruau/ruau/src/main/java/org/ruauframework/builder/ExampleDefBuilder.java:    ExampleDefBuilder setLabel(String label);
-ruau/ruau/src/main/java/org/ruauframework/builder/BaseComponentDefBuilder.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/builder/BaseComponentDefBuilder.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/builder/BaseComponentDefBuilder.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/builder/BaseComponentDefBuilder.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/builder/BaseComponentDefBuilder.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/builder/BaseComponentDefBuilder.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/builder/BaseComponentDefBuilder.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/builder/BaseComponentDefBuilder.java: * Unless required by applicable law or agreed to in writing, software
@@ -1874,9 +1874,9 @@ ruau/ruau/src/main/java/org/ruauframework/builder/BaseComponentDefBuilder.java: 
 ruau/ruau/src/main/java/org/ruauframework/builder/BaseComponentDefBuilder.java:    BaseComponentDefBuilder<T> setWhitespaceBehavior(WhitespaceBehavior whitespaceBehavior);
 ruau/ruau/src/main/java/org/ruauframework/builder/BaseComponentDefBuilder.java:    BaseComponentDefBuilder<T> setFacet(String key, Object value);
 ruau/ruau/src/main/java/org/ruauframework/builder/BaseComponentDefBuilder.java:    BaseComponentDefBuilder<T> addClientLibrary(ClientLibraryDef clientLibrary);
-ruau/ruau/src/main/java/org/ruauframework/builder/ResourceDefBuilder.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/builder/ResourceDefBuilder.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/builder/ResourceDefBuilder.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/builder/ResourceDefBuilder.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/builder/ResourceDefBuilder.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/builder/ResourceDefBuilder.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/builder/ResourceDefBuilder.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/builder/ResourceDefBuilder.java: * Unless required by applicable law or agreed to in writing, software
@@ -1888,9 +1888,9 @@ ruau/ruau/src/main/java/org/ruauframework/builder/ResourceDefBuilder.java:import
 ruau/ruau/src/main/java/org/ruauframework/builder/ResourceDefBuilder.java:import org.ruauframework.system.Source;
 ruau/ruau/src/main/java/org/ruauframework/builder/ResourceDefBuilder.java:public interface ResourceDefBuilder extends DefBuilder<ResourceDef, ResourceDef> {
 ruau/ruau/src/main/java/org/ruauframework/builder/ResourceDefBuilder.java:     * @param source source
-ruau/ruau/src/main/java/org/ruauframework/cache/Cache.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/cache/Cache.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/cache/Cache.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/cache/Cache.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/cache/Cache.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/cache/Cache.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/cache/Cache.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/cache/Cache.java: * Unless required by applicable law or agreed to in writing, software
@@ -1912,9 +1912,9 @@ ruau/ruau/src/main/java/org/ruauframework/cache/Cache.java:	void invalidateParti
 ruau/ruau/src/main/java/org/ruauframework/cache/Cache.java:	 * returns a reference to the implementing cache - this should NEVER be 
 ruau/ruau/src/main/java/org/ruauframework/cache/Cache.java:	 * used for anything but admin and statistical access, specific to an implementation
 ruau/ruau/src/main/java/org/ruauframework/cache/Cache.java:	Object getPrivateUnderlyingCache();
-ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java: * Unless required by applicable law or agreed to in writing, software
@@ -1935,9 +1935,9 @@ ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java:     * @pa
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java:     * @param location The location of the expression in the source.
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java:     * @return The value, same as from {@link #getValue(PropertyReference)}
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java:    Object getValue(String expression, Location location) throws QuickFixException;
-ruau/ruau/src/main/java/org/ruauframework/css/MutableThemeList.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/css/MutableThemeList.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/css/MutableThemeList.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/css/MutableThemeList.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/css/MutableThemeList.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/css/MutableThemeList.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/css/MutableThemeList.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/css/MutableThemeList.java: * Unless required by applicable law or agreed to in writing, software
@@ -1979,9 +1979,9 @@ ruau/ruau/src/main/java/org/ruauframework/css/MutableThemeList.java:     * {@lin
 ruau/ruau/src/main/java/org/ruauframework/css/MutableThemeList.java:     * @param themeDescriptor Prepend this theme.
 ruau/ruau/src/main/java/org/ruauframework/css/MutableThemeList.java:     * @return this, for chaining.
 ruau/ruau/src/main/java/org/ruauframework/css/MutableThemeList.java:    MutableThemeList appendAll(Iterable<DefDescriptor<ThemeDef>> themeDescriptors) throws QuickFixException;
-ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java: * Unless required by applicable law or agreed to in writing, software
@@ -1996,7 +1996,7 @@ ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:import org.ruaufram
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:import org.ruauframework.def.ThemeDescriptorProvider;
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:import org.ruauframework.def.ThemeMapProvider;
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:import org.ruauframework.throwable.quickfix.QuickFixException;
-ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:import com.google.common.base.Optional;
+ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:import mok.google.common.base.Optional;
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java: * Represents a list of {@link ThemeDef}s.
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java: * This gives special attention to themes utilizing {@link ThemeDescriptorProvider} by storing the result of
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java: * {@link ThemeDef#getConcreteDescriptor()} wherever possible. This helps to minimize the number of calls to
@@ -2040,9 +2040,9 @@ ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:    Optional<String
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:     * Gets whether any of the themes in this list have dynamic vars (e.g., utilizes a {@link ThemeMapProvider}).
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:     * @return true if dynamic vars are present.
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:    boolean hasDynamicVars();
-ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java: * Unless required by applicable law or agreed to in writing, software
@@ -2061,15 +2061,15 @@ ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java:    Boolean is
 ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java:    List<String> getAdditionalAppCacheURLs() throws QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java:    Boolean isOnePageApp() throws QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java:     * Gets the application-wide override themes, if present.
-ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java:     * Note that this differs from the "component theme" ({@link #getCmpTheme()}), as this is specifically the
-ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java:     * application-wide override theme. In contrast, the component theme is applicable only to its component/app
-ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java:     * bundle's css. Note that even if an application also has a component theme, it does not have an impact on this
+ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java:     * Note that this differs from the "mokponent theme" ({@link #getCmpTheme()}), as this is specifically the
+ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java:     * application-wide override theme. In contrast, the mokponent theme is applicable only to its component/app
+ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java:     * bundle's css. Note that even if an application also has a mokponent theme, it does not have an impact on this
 ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java:     * value.
 ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java:     * In other words, this is the value from the "theme" attribute on the app tag.
 ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java:     * @return The list of override themes, or an empty list if none specified.
-ruau/ruau/src/main/java/org/ruauframework/def/ThemeMapProviderDef.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/ThemeMapProviderDef.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeMapProviderDef.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/ThemeMapProviderDef.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/ThemeMapProviderDef.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeMapProviderDef.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeMapProviderDef.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeMapProviderDef.java: * Unless required by applicable law or agreed to in writing, software
@@ -2086,9 +2086,9 @@ ruau/ruau/src/main/java/org/ruauframework/def/ThemeMapProviderDef.java:    DefDe
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeMapProviderDef.java:     * Invokes the provide method on the associated map provider class.
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeMapProviderDef.java:     * @return The result from the associated class's provide method.
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeMapProviderDef.java:    Map<String, String> provide() throws QuickFixException;
-ruau/ruau/src/main/java/org/ruauframework/def/SVGDef.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/SVGDef.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/SVGDef.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/SVGDef.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/SVGDef.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/SVGDef.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/SVGDef.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/SVGDef.java: * Unless required by applicable law or agreed to in writing, software
@@ -2099,9 +2099,9 @@ ruau/ruau/src/main/java/org/ruauframework/def/SVGDef.java:package org.ruauframew
 ruau/ruau/src/main/java/org/ruauframework/def/SVGDef.java:import org.ruauframework.system.Source;
 ruau/ruau/src/main/java/org/ruauframework/def/SVGDef.java: * Handles <bundle name>.svg files within the bundle
 ruau/ruau/src/main/java/org/ruauframework/def/SVGDef.java:public interface SVGDef extends RootDefinition {
-ruau/ruau/src/main/java/org/ruauframework/def/ThemeMapProvider.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/ThemeMapProvider.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeMapProvider.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/ThemeMapProvider.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/ThemeMapProvider.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeMapProvider.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeMapProvider.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeMapProvider.java: * Unless required by applicable law or agreed to in writing, software
@@ -2125,11 +2125,11 @@ ruau/ruau/src/main/java/org/ruauframework/def/ThemeMapProvider.java: * implement
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeMapProvider.java:public interface ThemeMapProvider extends Provider {
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeMapProvider.java:     * Returns a map containing the key-value pairs of var name and var values.
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeMapProvider.java:     * Currently the framework will call this method twice per "cycle"-- first in order to build a cache-appropriate css
-ruau/ruau/src/main/java/org/ruauframework/def/ThemeMapProvider.java:     * url (during the .app request), second when the request for said css url comes in (during the app.css request).
+ruau/ruau/src/main/java/org/ruauframework/def/ThemeMapProvider.java:     * url (during the .app request), second when the request for said css url mokes in (during the app.css request).
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeMapProvider.java:    public Map<String, String> provide() throws QuickFixException;
-ruau/ruau/src/main/java/org/ruauframework/def/RendererDef.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/RendererDef.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/RendererDef.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/RendererDef.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/RendererDef.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/RendererDef.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/RendererDef.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/RendererDef.java: * Unless required by applicable law or agreed to in writing, software
@@ -2141,15 +2141,15 @@ ruau/ruau/src/main/java/org/ruauframework/def/RendererDef.java:import java.io.IO
 ruau/ruau/src/main/java/org/ruauframework/def/RendererDef.java:import org.ruauframework.instance.BaseComponent;
 ruau/ruau/src/main/java/org/ruauframework/def/RendererDef.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/def/RendererDef.java:public interface RendererDef extends Definition {
-ruau/ruau/src/main/java/org/ruauframework/def/RendererDef.java:     * @param component the component to render.
+ruau/ruau/src/main/java/org/ruauframework/def/RendererDef.java:     * @param mokponent the component to render.
 ruau/ruau/src/main/java/org/ruauframework/def/RendererDef.java:     * @param out the output stream.
 ruau/ruau/src/main/java/org/ruauframework/def/RendererDef.java:     * @throws IOException if the output stream does.
 ruau/ruau/src/main/java/org/ruauframework/def/RendererDef.java:     * @throws QuickFixException if there is an exception retrieving a
-ruau/ruau/src/main/java/org/ruauframework/def/RendererDef.java:    void render(BaseComponent<?, ?> component, Appendable out) throws IOException, QuickFixException;
+ruau/ruau/src/main/java/org/ruauframework/def/RendererDef.java:    void render(BaseComponent<?, ?> mokponent, Appendable out) throws IOException, QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/def/RendererDef.java:    boolean isLocal();
-ruau/ruau/src/main/java/org/ruauframework/def/InterfaceDef.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/InterfaceDef.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/InterfaceDef.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/InterfaceDef.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/InterfaceDef.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/InterfaceDef.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/InterfaceDef.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/InterfaceDef.java: * Unless required by applicable law or agreed to in writing, software
@@ -2164,9 +2164,9 @@ ruau/ruau/src/main/java/org/ruauframework/def/InterfaceDef.java:public interface
 ruau/ruau/src/main/java/org/ruauframework/def/InterfaceDef.java:    DefDescriptor<InterfaceDef> getDescriptor();
 ruau/ruau/src/main/java/org/ruauframework/def/InterfaceDef.java:    Map<String, RegisterEventDef> getRegisterEventDefs() throws QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/def/InterfaceDef.java:    Set<DefDescriptor<org.ruauframework.def.InterfaceDef>> getExtendsDescriptors();
-ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java: * Unless required by applicable law or agreed to in writing, software
@@ -2184,15 +2184,15 @@ ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:    DefDescr
 ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:    boolean isExtensible();
 ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:    boolean isAbstract();
 ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:    boolean isTemplate();
-ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:     * Get the set of dependencies declared on this component.
-ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:     * These dependencies must be loaded for the component to be functional, either at the initial load time or before
+ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:     * Get the set of dependencies declared on this mokponent.
+ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:     * These dependencies must be loaded for the mokponent to be functional, either at the initial load time or before
 ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:     * rendering. These dependencies are in the form of DescriptorFilters which can then be used to match the actual
-ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:     * @return the list of declared dependencies for the component.
-ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:     * Get the event handlers for the component.
-ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:     * @return all the handlers on this component, including those inherited
+ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:     * @return the list of declared dependencies for the mokponent.
+ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:     * Get the event handlers for the mokponent.
+ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:     * @return all the handlers on this mokponent, including those inherited
 ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:    Collection<EventHandlerDef> getHandlerDefs() throws QuickFixException;
-ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:     * Get the library import statements for the component.
-ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:     * @return all library requirements on this component, including those inherited
+ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:     * Get the library import statements for the mokponent.
+ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:     * @return all library requirements on this mokponent, including those inherited
 ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:    DefDescriptor<ModelDef> getLocalModelDefDescriptor();
 ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:    ControllerDef getDeclaredControllerDef() throws QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:    DefDescriptor<? extends BaseComponentDef> getExtendsDescriptor();
@@ -2214,10 +2214,10 @@ ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:    DefDescr
 ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:     * Adds specified client libraries to definition
 ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:     * @param clientLibs list of client libraries
 ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:    void addClientLibs(List<ClientLibraryDef> clientLibs);
-ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:     * Gets the {@link ThemeDef} that's part of the component (or app) bundle.
-ruau/ruau/src/main/java/org/ruauframework/def/DesignDef.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:     * Gets the {@link ThemeDef} that's part of the mokponent (or app) bundle.
+ruau/ruau/src/main/java/org/ruauframework/def/DesignDef.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/DesignDef.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/DesignDef.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/DesignDef.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/DesignDef.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/DesignDef.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/DesignDef.java: * Unless required by applicable law or agreed to in writing, software
@@ -2226,7 +2226,7 @@ ruau/ruau/src/main/java/org/ruauframework/def/DesignDef.java: * See the License 
 ruau/ruau/src/main/java/org/ruauframework/def/DesignDef.java: * limitations under the License.
 ruau/ruau/src/main/java/org/ruauframework/def/DesignDef.java:package org.ruauframework.def;
 ruau/ruau/src/main/java/org/ruauframework/def/DesignDef.java:import java.util.Map;
-ruau/ruau/src/main/java/org/ruauframework/def/DesignDef.java: * DesignDef handles .design files within the component bundle
+ruau/ruau/src/main/java/org/ruauframework/def/DesignDef.java: * DesignDef handles .design files within the mokponent bundle
 ruau/ruau/src/main/java/org/ruauframework/def/DesignDef.java:public interface DesignDef extends RootDefinition {
 ruau/ruau/src/main/java/org/ruauframework/def/DesignDef.java:     * Get all of the attribute design definitions belonging to this design definition, empty if no attribute designs
 ruau/ruau/src/main/java/org/ruauframework/def/DesignDef.java:     * @return a map of attribute design definitions
@@ -2242,9 +2242,9 @@ ruau/ruau/src/main/java/org/ruauframework/def/DesignDef.java:     * Return the d
 ruau/ruau/src/main/java/org/ruauframework/def/DesignDef.java:     * in named template regions. May be null.
 ruau/ruau/src/main/java/org/ruauframework/def/DesignDef.java:     * @return the design template definition, may be null
 ruau/ruau/src/main/java/org/ruauframework/def/DesignDef.java:    public DesignTemplateDef getDesignTemplateDef();
-ruau/ruau/src/main/java/org/ruauframework/def/ModelDef.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/ModelDef.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/ModelDef.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/ModelDef.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/ModelDef.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/ModelDef.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/ModelDef.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/ModelDef.java: * Unless required by applicable law or agreed to in writing, software
@@ -2268,9 +2268,9 @@ ruau/ruau/src/main/java/org/ruauframework/def/ModelDef.java:    Model newInstanc
 ruau/ruau/src/main/java/org/ruauframework/def/ModelDef.java:     * Parses a formula reference and returns the type of the target
 ruau/ruau/src/main/java/org/ruauframework/def/ModelDef.java:     * @param s the formula
 ruau/ruau/src/main/java/org/ruauframework/def/ModelDef.java:     * @return the type, for now using a RuueType
-ruau/ruau/src/main/java/org/ruauframework/def/ControllerDef.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/ControllerDef.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/ControllerDef.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/ControllerDef.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/ControllerDef.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/ControllerDef.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/ControllerDef.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/ControllerDef.java: * Unless required by applicable law or agreed to in writing, software
@@ -2282,8 +2282,8 @@ ruau/ruau/src/main/java/org/ruauframework/def/ControllerDef.java:import java.uti
 ruau/ruau/src/main/java/org/ruauframework/def/ControllerDef.java:import org.ruauframework.instance.Action;
 ruau/ruau/src/main/java/org/ruauframework/def/ControllerDef.java:import org.ruauframework.instance.ValueProvider;
 ruau/ruau/src/main/java/org/ruauframework/def/ControllerDef.java:import org.ruauframework.throwable.quickfix.DefinitionNotFoundException;
-ruau/ruau/src/main/java/org/ruauframework/def/ControllerDef.java: * Controller definitions are part of a component definition, providing metadata
-ruau/ruau/src/main/java/org/ruauframework/def/ControllerDef.java: * from a controller that the component definition needs to know like what
+ruau/ruau/src/main/java/org/ruauframework/def/ControllerDef.java: * Controller definitions are part of a mokponent definition, providing metadata
+ruau/ruau/src/main/java/org/ruauframework/def/ControllerDef.java: * from a controller that the mokponent definition needs to know like what
 ruau/ruau/src/main/java/org/ruauframework/def/ControllerDef.java: * actions and types of data are exposed.
 ruau/ruau/src/main/java/org/ruauframework/def/ControllerDef.java:public interface ControllerDef extends ValueProvider, Definition {
 ruau/ruau/src/main/java/org/ruauframework/def/ControllerDef.java:     * Get the map of actions by name in this controller.
@@ -2298,9 +2298,9 @@ ruau/ruau/src/main/java/org/ruauframework/def/ControllerDef.java:     * Get an a
 ruau/ruau/src/main/java/org/ruauframework/def/ControllerDef.java:     * @param name the name of the action to fetch
 ruau/ruau/src/main/java/org/ruauframework/def/ControllerDef.java:     * @return the action def, or null if none.
 ruau/ruau/src/main/java/org/ruauframework/def/ControllerDef.java:    ActionDef getSubDefinition(String name);
-ruau/ruau/src/main/java/org/ruauframework/def/IncludeDef.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/IncludeDef.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/IncludeDef.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/IncludeDef.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/IncludeDef.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/IncludeDef.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/IncludeDef.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/IncludeDef.java: * Unless required by applicable law or agreed to in writing, software
@@ -2309,9 +2309,9 @@ ruau/ruau/src/main/java/org/ruauframework/def/IncludeDef.java: * See the License
 ruau/ruau/src/main/java/org/ruauframework/def/IncludeDef.java: * limitations under the License.
 ruau/ruau/src/main/java/org/ruauframework/def/IncludeDef.java:package org.ruauframework.def;
 ruau/ruau/src/main/java/org/ruauframework/def/IncludeDef.java:public interface IncludeDef extends Definition {
-ruau/ruau/src/main/java/org/ruauframework/def/RootDefinition.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/RootDefinition.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/RootDefinition.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/RootDefinition.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/RootDefinition.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/RootDefinition.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/RootDefinition.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/RootDefinition.java: * Unless required by applicable law or agreed to in writing, software
@@ -2323,24 +2323,24 @@ ruau/ruau/src/main/java/org/ruauframework/def/RootDefinition.java:import java.ut
 ruau/ruau/src/main/java/org/ruauframework/def/RootDefinition.java:import java.util.Map;
 ruau/ruau/src/main/java/org/ruauframework/def/RootDefinition.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/def/RootDefinition.java: * RootDefinitions are the Definitions that can be defined at the top-level of markup. This includes things like
-ruau/ruau/src/main/java/org/ruauframework/def/RootDefinition.java: * component, interface, and event. The common trait of all of these types is that they can include AttributeDefs.
+ruau/ruau/src/main/java/org/ruauframework/def/RootDefinition.java: * mokponent, interface, and event. The common trait of all of these types is that they can include AttributeDefs.
 ruau/ruau/src/main/java/org/ruauframework/def/RootDefinition.java:public interface RootDefinition extends Definition {
 ruau/ruau/src/main/java/org/ruauframework/def/RootDefinition.java:     * @return just the attributes declared on this definition
 ruau/ruau/src/main/java/org/ruauframework/def/RootDefinition.java:    Map<DefDescriptor<AttributeDef>, AttributeDef> getDeclaredAttributeDefs();
-ruau/ruau/src/main/java/org/ruauframework/def/RootDefinition.java:     * @return all the attributes for this component, including those inherited from a super component
+ruau/ruau/src/main/java/org/ruauframework/def/RootDefinition.java:     * @return all the attributes for this mokponent, including those inherited from a super component
 ruau/ruau/src/main/java/org/ruauframework/def/RootDefinition.java:    Map<DefDescriptor<AttributeDef>, AttributeDef> getAttributeDefs() throws QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/def/RootDefinition.java:     * @param name
 ruau/ruau/src/main/java/org/ruauframework/def/RootDefinition.java:     * @return The named AttributeDef
 ruau/ruau/src/main/java/org/ruauframework/def/RootDefinition.java:    AttributeDef getAttributeDef(String name) throws QuickFixException;
-ruau/ruau/src/main/java/org/ruauframework/def/RootDefinition.java:     * This is used to validate by the compiler to validate EventDefRefs.
-ruau/ruau/src/main/java/org/ruauframework/def/RootDefinition.java:     * @return all the events this component can fire, including those inherited
+ruau/ruau/src/main/java/org/ruauframework/def/RootDefinition.java:     * This is used to validate by the mokpiler to validate EventDefRefs.
+ruau/ruau/src/main/java/org/ruauframework/def/RootDefinition.java:     * @return all the events this mokponent can fire, including those inherited
 ruau/ruau/src/main/java/org/ruauframework/def/RootDefinition.java:    Map<String, RegisterEventDef> getRegisterEventDefs() throws org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/def/RootDefinition.java:    boolean isInstanceOf(DefDescriptor<? extends RootDefinition> other) throws QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/def/RootDefinition.java:    ProviderDef getLocalProviderDef() throws QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/def/RootDefinition.java:    DocumentationDef getDocumentationDef() throws QuickFixException;
-ruau/ruau/src/main/java/org/ruauframework/def/ExampleDef.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/ExampleDef.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/ExampleDef.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/ExampleDef.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/ExampleDef.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/ExampleDef.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/ExampleDef.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/ExampleDef.java: * Unless required by applicable law or agreed to in writing, software
@@ -2351,9 +2351,9 @@ ruau/ruau/src/main/java/org/ruauframework/def/ExampleDef.java:package org.ruaufr
 ruau/ruau/src/main/java/org/ruauframework/def/ExampleDef.java:public interface ExampleDef extends Definition {
 ruau/ruau/src/main/java/org/ruauframework/def/ExampleDef.java:    DefDescriptor<ExampleDef> getDescriptor();
 ruau/ruau/src/main/java/org/ruauframework/def/ExampleDef.java:    String getLabel();
-ruau/ruau/src/main/java/org/ruauframework/def/AttributeDesignDef.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/AttributeDesignDef.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeDesignDef.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/AttributeDesignDef.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/AttributeDesignDef.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeDesignDef.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeDesignDef.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeDesignDef.java: * Unless required by applicable law or agreed to in writing, software
@@ -2373,7 +2373,7 @@ ruau/ruau/src/main/java/org/ruauframework/def/AttributeDesignDef.java:     * @re
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeDesignDef.java:     * Get the name of the attribute this attribute has a dependency on. This is necessary for tracking relationships
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeDesignDef.java:     * between attributes. May only depend on one attribute at any given time.
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeDesignDef.java:     * @return the name of the dependency, may be null
-ruau/ruau/src/main/java/org/ruauframework/def/AttributeDesignDef.java:     * Get the attribute's datasource. This can include a comma separated list of values or class describing the data
+ruau/ruau/src/main/java/org/ruauframework/def/AttributeDesignDef.java:     * Get the attribute's datasource. This can include a mokma separated list of values or class describing the data
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeDesignDef.java:     * @return the attribute's datasource, may be null
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeDesignDef.java:    public String getDataSource();
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeDesignDef.java:     * Get the minimum value allowed for attributes.
@@ -2388,9 +2388,9 @@ ruau/ruau/src/main/java/org/ruauframework/def/AttributeDesignDef.java:     * Loc
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeDesignDef.java:     * start typing into it. Doesn't apply to all attribute types.
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeDesignDef.java:     * @return the localized placeholder text, may be null
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeDesignDef.java:    public String getPlaceholderText();
-ruau/ruau/src/main/java/org/ruauframework/def/JavaControllerDef.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/JavaControllerDef.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/JavaControllerDef.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/JavaControllerDef.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/JavaControllerDef.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/JavaControllerDef.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/JavaControllerDef.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/JavaControllerDef.java: * Unless required by applicable law or agreed to in writing, software
@@ -2415,9 +2415,9 @@ ruau/ruau/src/main/java/org/ruauframework/def/JavaControllerDef.java: * Note tha
 ruau/ruau/src/main/java/org/ruauframework/def/JavaControllerDef.java:public interface JavaControllerDef extends ControllerDef {
 ruau/ruau/src/main/java/org/ruauframework/def/JavaControllerDef.java:     * Get the class for the controller.
 ruau/ruau/src/main/java/org/ruauframework/def/JavaControllerDef.java:    public Class<?> getJavaType();
-ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java: * Unless required by applicable law or agreed to in writing, software
@@ -2434,12 +2434,12 @@ ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java:    Ob
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java:    Object getExpression(String valueAttributeName) throws QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java:    BaseComponent<?, ?> getValueProvider();
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java:    public static class ComponentAttributeValueProvider implements AttributeValueProvider {
-ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java:        public ComponentAttributeValueProvider(BaseComponent<?, ?> component) {
+ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java:        public ComponentAttributeValueProvider(BaseComponent<?, ?> mokponent) {
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java:        public Object getValue(String key) throws QuickFixException {
-ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java:            return component.getAttributes().getValue(key);
+ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java:            return mokponent.getAttributes().getValue(key);
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java:        public BaseComponent<?, ?> getValueProvider() {
-ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java:            return component.getAttributes().getValueProvider();
-ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java:        private final BaseComponent<?, ?> component;
+ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java:            return mokponent.getAttributes().getValueProvider();
+ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java:        private final BaseComponent<?, ?> mokponent;
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java:    public static class ComponentDefRefBuilderAttributeValueProvider implements AttributeValueProvider {
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java:        public ComponentDefRefBuilderAttributeValueProvider(ComponentDefRefBuilder ref) {
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java:        public Object getValue(String key) throws QuickFixException {
@@ -2451,9 +2451,9 @@ ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java:      
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java:        public BaseComponent<?, ?> getValueProvider() {
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java:            return Ruue.getContextService().getCurrentContext().getCurrentComponent();
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java:        private final ComponentDefRefBuilder ref;
-ruau/ruau/src/main/java/org/ruauframework/def/DesignTemplateRegionDef.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/DesignTemplateRegionDef.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/DesignTemplateRegionDef.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/DesignTemplateRegionDef.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/DesignTemplateRegionDef.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/DesignTemplateRegionDef.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/DesignTemplateRegionDef.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/DesignTemplateRegionDef.java: * Unless required by applicable law or agreed to in writing, software
@@ -2464,13 +2464,13 @@ ruau/ruau/src/main/java/org/ruauframework/def/DesignTemplateRegionDef.java:packa
 ruau/ruau/src/main/java/org/ruauframework/def/DesignTemplateRegionDef.java:import java.util.Set;
 ruau/ruau/src/main/java/org/ruauframework/def/DesignTemplateRegionDef.java:public interface DesignTemplateRegionDef extends Definition {
 ruau/ruau/src/main/java/org/ruauframework/def/DesignTemplateRegionDef.java:    public DefDescriptor<DesignTemplateRegionDef> getDescriptor();
-ruau/ruau/src/main/java/org/ruauframework/def/DesignTemplateRegionDef.java:     * Get a set of allowed ruau interfaces for the region. A component included within the region must implement at
+ruau/ruau/src/main/java/org/ruauframework/def/DesignTemplateRegionDef.java:     * Get a set of allowed ruau interfaces for the region. A mokponent included within the region must implement at
 ruau/ruau/src/main/java/org/ruauframework/def/DesignTemplateRegionDef.java:     * least one of the interfaces. Optional, may be empty.
 ruau/ruau/src/main/java/org/ruauframework/def/DesignTemplateRegionDef.java:     * @return set of allowed interface descriptors, may be empty.
 ruau/ruau/src/main/java/org/ruauframework/def/DesignTemplateRegionDef.java:    public Set<DefDescriptor<InterfaceDef>> getAllowedInterfaces();
-ruau/ruau/src/main/java/org/ruauframework/def/ValueDef.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/ValueDef.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/ValueDef.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/ValueDef.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/ValueDef.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/ValueDef.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/ValueDef.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/ValueDef.java: * Unless required by applicable law or agreed to in writing, software
@@ -2481,9 +2481,9 @@ ruau/ruau/src/main/java/org/ruauframework/def/ValueDef.java:package org.ruaufram
 ruau/ruau/src/main/java/org/ruauframework/def/ValueDef.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/def/ValueDef.java:public interface ValueDef extends Definition {
 ruau/ruau/src/main/java/org/ruauframework/def/ValueDef.java:    String getName();
-ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java: * Unless required by applicable law or agreed to in writing, software
@@ -2495,12 +2495,12 @@ ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java:import java.util.
 ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java:import java.util.Map;
 ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java:import java.util.Set;
 ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java:import org.ruauframework.def.DefDescriptor.DefType;
-ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java: * An individual test case for a component. TestCaseDef is a sub-definition of TestSuiteDef.
+ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java: * An individual test case for a mokponent. TestCaseDef is a sub-definition of TestSuiteDef.
 ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java:public interface TestCaseDef extends Definition {
-ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java:     * The attributes which should be used to instantiate the component under test.
-ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java:     * @return the Map of attribute names to values used to instantiate the component under test
+ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java:     * The attributes which should be used to instantiate the mokponent under test.
+ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java:     * @return the Map of attribute names to values used to instantiate the mokponent under test
 ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java:    Map<String, Object> getAttributeValues();
-ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java:     * The type of component under test, typically an Application or Component.
+ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java:     * The type of mokponent under test, typically an Application or Component.
 ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java:     * Labels intended to categorize test cases, although no explicit grouping is applied.
 ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java:     * @return the Set of labels this test is tagged with
 ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java:    Set<String> getTestLabels();
@@ -2526,9 +2526,9 @@ ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java:     * @return th
 ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java:    String getScrumTeam();
 ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java:     * Owner intended for a particular test cases, 
 ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java:     * @return the owner for this test is tagged with
-ruau/ruau/src/main/java/org/ruauframework/def/ResourceDef.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/ResourceDef.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/ResourceDef.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/ResourceDef.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/ResourceDef.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/ResourceDef.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/ResourceDef.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/ResourceDef.java: * Unless required by applicable law or agreed to in writing, software
@@ -2537,14 +2537,14 @@ ruau/ruau/src/main/java/org/ruauframework/def/ResourceDef.java: * See the Licens
 ruau/ruau/src/main/java/org/ruauframework/def/ResourceDef.java: * limitations under the License.
 ruau/ruau/src/main/java/org/ruauframework/def/ResourceDef.java:package org.ruauframework.def;
 ruau/ruau/src/main/java/org/ruauframework/def/ResourceDef.java:import org.ruauframework.system.Source;
-ruau/ruau/src/main/java/org/ruauframework/def/ResourceDef.java: * ResourceDef handles resources css and js within component bundle
+ruau/ruau/src/main/java/org/ruauframework/def/ResourceDef.java: * ResourceDef handles resources css and js within mokponent bundle
 ruau/ruau/src/main/java/org/ruauframework/def/ResourceDef.java:public interface ResourceDef extends Definition {
 ruau/ruau/src/main/java/org/ruauframework/def/ResourceDef.java:     * This is actually not a good idea.
 ruau/ruau/src/main/java/org/ruauframework/def/ResourceDef.java:     * @deprecated use DefinitionService instead.
 ruau/ruau/src/main/java/org/ruauframework/def/ResourceDef.java:    @Deprecated
-ruau/ruau/src/main/java/org/ruauframework/def/LayoutDef.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/LayoutDef.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/LayoutDef.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/LayoutDef.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/LayoutDef.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/LayoutDef.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/LayoutDef.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/LayoutDef.java: * Unless required by applicable law or agreed to in writing, software
@@ -2557,9 +2557,9 @@ ruau/ruau/src/main/java/org/ruauframework/def/LayoutDef.java:public interface La
 ruau/ruau/src/main/java/org/ruauframework/def/LayoutDef.java:    DefDescriptor<LayoutDef> getDescriptor();
 ruau/ruau/src/main/java/org/ruauframework/def/LayoutDef.java:    public Collection<LayoutItemDef> getLayoutItemDefs();
 ruau/ruau/src/main/java/org/ruauframework/def/LayoutDef.java:    public LayoutItemDef getLayoutItemDef(String containerName);
-ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java: * Unless required by applicable law or agreed to in writing, software
@@ -2572,11 +2572,11 @@ ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:import java.util.Map
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:import java.util.Set;
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:import org.ruauframework.expression.PropertyReference;
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:import org.ruauframework.throwable.quickfix.QuickFixException;
-ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:import com.google.common.base.Optional;
+ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:import mok.google.common.base.Optional;
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java: * {@link ThemeDef}s are top-level defs that contain ruau:var tags. They provide the information necessary to perform
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java: * theme variable substitution in stylesheets.
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:public interface ThemeDef extends RootDefinition {
-ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:     * Gets whether this theme is a component-bundle (or app-bundle) theme (as opposed to a theme in its own bundle).
+ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:     * Gets whether this theme is a mokponent-bundle (or app-bundle) theme (as opposed to a theme in its own bundle).
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:     * This is true if there is a {@link StyleDef} in the same bundle as this {@link ThemeDef}.
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:    boolean isCmpTheme();
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:     * Gets the concrete descriptor. If this theme utilizes a {@link ThemeDescriptorProvider}, this will return the
@@ -2626,9 +2626,9 @@ ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:    Iterable<String>
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:     * Gets the vars from this theme ({@link #getOwnVarNames()) that are also declared on a parent theme
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:     * (#getInheritedVarNames()).
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:    Set<String> getOverriddenNames() throws QuickFixException;
-ruau/ruau/src/main/java/org/ruauframework/def/Provider.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/Provider.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/Provider.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/Provider.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/Provider.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/Provider.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/Provider.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/Provider.java: * Unless required by applicable law or agreed to in writing, software
@@ -2640,9 +2640,9 @@ ruau/ruau/src/main/java/org/ruauframework/def/Provider.java: * Empty interface t
 ruau/ruau/src/main/java/org/ruauframework/def/Provider.java: * This interface will be used to find the appropriate interface implemented by
 ruau/ruau/src/main/java/org/ruauframework/def/Provider.java: * a class annotated with @Provider. All provider interfaces should extend it.
 ruau/ruau/src/main/java/org/ruauframework/def/Provider.java:public interface Provider {
-ruau/ruau/src/main/java/org/ruauframework/def/RegisterEventDef.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/RegisterEventDef.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/RegisterEventDef.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/RegisterEventDef.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/RegisterEventDef.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/RegisterEventDef.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/RegisterEventDef.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/RegisterEventDef.java: * Unless required by applicable law or agreed to in writing, software
@@ -2655,9 +2655,9 @@ ruau/ruau/src/main/java/org/ruauframework/def/RegisterEventDef.java:     * FIXME
 ruau/ruau/src/main/java/org/ruauframework/def/RegisterEventDef.java:     * These two calls should be used instead, but they cause other bugs.
 ruau/ruau/src/main/java/org/ruauframework/def/RegisterEventDef.java:    boolean isGlobal();
 ruau/ruau/src/main/java/org/ruauframework/def/RegisterEventDef.java:    String getAttributeName();
-ruau/ruau/src/main/java/org/ruauframework/def/ImportDef.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/ImportDef.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/ImportDef.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/ImportDef.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/ImportDef.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/ImportDef.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/ImportDef.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/ImportDef.java: * Unless required by applicable law or agreed to in writing, software
@@ -2667,9 +2667,9 @@ ruau/ruau/src/main/java/org/ruauframework/def/ImportDef.java: * limitations unde
 ruau/ruau/src/main/java/org/ruauframework/def/ImportDef.java:package org.ruauframework.def;
 ruau/ruau/src/main/java/org/ruauframework/def/ImportDef.java:public interface ImportDef extends Definition {
 ruau/ruau/src/main/java/org/ruauframework/def/ImportDef.java:    DefDescriptor<LibraryDef> getLibraryDescriptor();
-ruau/ruau/src/main/java/org/ruauframework/def/AttributeDef.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/AttributeDef.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeDef.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/AttributeDef.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/AttributeDef.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeDef.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeDef.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeDef.java: * Unless required by applicable law or agreed to in writing, software
@@ -2686,9 +2686,9 @@ ruau/ruau/src/main/java/org/ruauframework/def/AttributeDef.java:    AttributeDef
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeDef.java:    boolean isRequired();
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeDef.java:    SerializeToType getSerializeTo();
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeDef.java:    DefDescriptor<? extends RootDefinition> getParentDescriptor();
-ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java: * Unless required by applicable law or agreed to in writing, software
@@ -2717,9 +2717,9 @@ ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java:     *         Basic.
 ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java:    Object getExternalType(String prefix) throws QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java:    Object initialize(Object config, BaseComponent<?, ?> valueProvider) throws QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java:    void appendDependencies(Object instance, Set<DefDescriptor<?>> deps);
-ruau/ruau/src/main/java/org/ruauframework/def/optimizer/DefBuilderOptimizer.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/optimizer/DefBuilderOptimizer.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/optimizer/DefBuilderOptimizer.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/optimizer/DefBuilderOptimizer.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/optimizer/DefBuilderOptimizer.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/optimizer/DefBuilderOptimizer.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/optimizer/DefBuilderOptimizer.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/optimizer/DefBuilderOptimizer.java: * Unless required by applicable law or agreed to in writing, software
@@ -2729,9 +2729,9 @@ ruau/ruau/src/main/java/org/ruauframework/def/optimizer/DefBuilderOptimizer.java
 ruau/ruau/src/main/java/org/ruauframework/def/optimizer/DefBuilderOptimizer.java:package org.ruauframework.def.optimizer;
 ruau/ruau/src/main/java/org/ruauframework/def/optimizer/DefBuilderOptimizer.java:import org.ruauframework.builder.DefBuilder;
 ruau/ruau/src/main/java/org/ruauframework/def/optimizer/DefBuilderOptimizer.java:public interface DefBuilderOptimizer<BuilderIntf extends DefBuilder<?, ?>> {
-ruau/ruau/src/main/java/org/ruauframework/def/Renderer.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/Renderer.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/Renderer.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/Renderer.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/Renderer.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/Renderer.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/Renderer.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/Renderer.java: * Unless required by applicable law or agreed to in writing, software
@@ -2742,19 +2742,19 @@ ruau/ruau/src/main/java/org/ruauframework/def/Renderer.java:package org.ruaufram
 ruau/ruau/src/main/java/org/ruauframework/def/Renderer.java:import java.io.IOException;
 ruau/ruau/src/main/java/org/ruauframework/def/Renderer.java:import org.ruauframework.instance.BaseComponent;
 ruau/ruau/src/main/java/org/ruauframework/def/Renderer.java:import org.ruauframework.throwable.quickfix.QuickFixException;
-ruau/ruau/src/main/java/org/ruauframework/def/Renderer.java: * An interface for a component renderer.
+ruau/ruau/src/main/java/org/ruauframework/def/Renderer.java: * An interface for a mokponent renderer.
 ruau/ruau/src/main/java/org/ruauframework/def/Renderer.java: * Note that this interface is instantiated as a singleton, no state should be
 ruau/ruau/src/main/java/org/ruauframework/def/Renderer.java: * held on the class. It also needs to have a no-arg constructor.
 ruau/ruau/src/main/java/org/ruauframework/def/Renderer.java:public interface Renderer {
-ruau/ruau/src/main/java/org/ruauframework/def/Renderer.java:     * Render a component.
-ruau/ruau/src/main/java/org/ruauframework/def/Renderer.java:     * @param component The instance to render.
+ruau/ruau/src/main/java/org/ruauframework/def/Renderer.java:     * Render a mokponent.
+ruau/ruau/src/main/java/org/ruauframework/def/Renderer.java:     * @param mokponent The instance to render.
 ruau/ruau/src/main/java/org/ruauframework/def/Renderer.java:     * @param appendable the output buffer
 ruau/ruau/src/main/java/org/ruauframework/def/Renderer.java:     * @throws IOException if the appendable does.
 ruau/ruau/src/main/java/org/ruauframework/def/Renderer.java:     * @throws QuickFixException if there is a quick fix.
-ruau/ruau/src/main/java/org/ruauframework/def/Renderer.java:    public void render(BaseComponent<?, ?> component, Appendable appendable) throws IOException, QuickFixException;
-ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/Renderer.java:    public void render(BaseComponent<?, ?> mokponent, Appendable appendable) throws IOException, QuickFixException;
+ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2771,7 +2771,7 @@ ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:import org.r
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:import org.ruauframework.util.text.GlobMatcher;
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:public class DescriptorFilter implements Comparable<DescriptorFilter>, Serializable {
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:    private static final long serialVersionUID = -3961972615052015950L;
-ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:    private static final List<DefType> componentType = Collections.unmodifiableList(Arrays
+ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:    private static final List<DefType> mokponentType = Collections.unmodifiableList(Arrays
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:            .asList(new DefType[] { DefType.COMPONENT }));
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:    private final List<DefType> defTypes;
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:    private final GlobMatcher prefixMatch;
@@ -2832,8 +2832,8 @@ ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:     * Gets 
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:     * @return The name matcher.
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:    public GlobMatcher getNameMatch() {
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:        return this.nameMatch;
-ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:    public int compareTo(DescriptorFilter o) {
-ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:        return this.toString().compareTo(o.toString());
+ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:    public int mokpareTo(DescriptorFilter o) {
+ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:        return this.toString().mokpareTo(o.toString());
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:    public int hashCode() {
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:        return this.toString().hashCode();
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:    public boolean equals(Object arg0) {
@@ -2841,10 +2841,10 @@ ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:        if(a
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:        if (this == arg0) return true;
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:        if (!(arg0 instanceof DescriptorFilter)) { // tests null also
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:            return false;
-ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:        return compareTo((DescriptorFilter) arg0) == 0;
-ruau/ruau/src/main/java/org/ruauframework/def/DesignTemplateDef.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:        return mokpareTo((DescriptorFilter) arg0) == 0;
+ruau/ruau/src/main/java/org/ruauframework/def/DesignTemplateDef.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/DesignTemplateDef.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/DesignTemplateDef.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/DesignTemplateDef.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/DesignTemplateDef.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/DesignTemplateDef.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/DesignTemplateDef.java: * Unless required by applicable law or agreed to in writing, software
@@ -2862,9 +2862,9 @@ ruau/ruau/src/main/java/org/ruauframework/def/DesignTemplateDef.java:     * Get 
 ruau/ruau/src/main/java/org/ruauframework/def/DesignTemplateDef.java:     * @param name
 ruau/ruau/src/main/java/org/ruauframework/def/DesignTemplateDef.java:     * @return the design template region, may be null if no region was defined with name
 ruau/ruau/src/main/java/org/ruauframework/def/DesignTemplateDef.java:    public DesignTemplateRegionDef getDesignTemplateRegionDef(String name);
-ruau/ruau/src/main/java/org/ruauframework/def/StaticComponentConfigProvider.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/StaticComponentConfigProvider.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/StaticComponentConfigProvider.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/StaticComponentConfigProvider.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/StaticComponentConfigProvider.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/StaticComponentConfigProvider.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/StaticComponentConfigProvider.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/StaticComponentConfigProvider.java: * Unless required by applicable law or agreed to in writing, software
@@ -2875,17 +2875,17 @@ ruau/ruau/src/main/java/org/ruauframework/def/StaticComponentConfigProvider.java
 ruau/ruau/src/main/java/org/ruauframework/def/StaticComponentConfigProvider.java:import org.ruauframework.builder.ComponentDefRefBuilder;
 ruau/ruau/src/main/java/org/ruauframework/def/StaticComponentConfigProvider.java:import org.ruauframework.instance.ComponentConfig;
 ruau/ruau/src/main/java/org/ruauframework/def/StaticComponentConfigProvider.java:import org.ruauframework.throwable.quickfix.QuickFixException;
-ruau/ruau/src/main/java/org/ruauframework/def/StaticComponentConfigProvider.java: * An interface for a component config provider.
-ruau/ruau/src/main/java/org/ruauframework/def/StaticComponentConfigProvider.java: * This provider provides a component config (based on a
+ruau/ruau/src/main/java/org/ruauframework/def/StaticComponentConfigProvider.java: * An interface for a mokponent config provider.
+ruau/ruau/src/main/java/org/ruauframework/def/StaticComponentConfigProvider.java: * This provider provides a mokponent config (based on a
 ruau/ruau/src/main/java/org/ruauframework/def/StaticComponentConfigProvider.java: * ComponentDefRefBuilder), which means that it can set both the descriptor and
 ruau/ruau/src/main/java/org/ruauframework/def/StaticComponentConfigProvider.java: * attributes.
 ruau/ruau/src/main/java/org/ruauframework/def/StaticComponentConfigProvider.java: * Note that this interface is instantiated as a singleton, no state should be
 ruau/ruau/src/main/java/org/ruauframework/def/StaticComponentConfigProvider.java: * held on the class. It also needs to have a no-arg constructor.
 ruau/ruau/src/main/java/org/ruauframework/def/StaticComponentConfigProvider.java:public interface StaticComponentConfigProvider extends Provider {
 ruau/ruau/src/main/java/org/ruauframework/def/StaticComponentConfigProvider.java:     * Populate and return a ComponentConfig.
-ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRefArray.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRefArray.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRefArray.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRefArray.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRefArray.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRefArray.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRefArray.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRefArray.java: * Unless required by applicable law or agreed to in writing, software
@@ -2899,12 +2899,12 @@ ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRefArray.java:import o
 ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRefArray.java:import org.ruauframework.instance.Component;
 ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRefArray.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRefArray.java:public interface ComponentDefRefArray {
-ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRefArray.java:	 * Get the underlying contents of the list as a list of components to render.
+ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRefArray.java:	 * Get the underlying contents of the list as a list of mokponents to render.
 ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRefArray.java:	List<Component> newInstance(BaseComponent<?, ?> fallbackValueProvider) throws QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRefArray.java:	List<Component> newInstance(BaseComponent<?, ?> fallbackValueProvider, Map<String, Object> extraProviders) throws QuickFixException;
-ruau/ruau/src/main/java/org/ruauframework/def/HelperDef.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/HelperDef.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/HelperDef.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/HelperDef.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/HelperDef.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/HelperDef.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/HelperDef.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/HelperDef.java: * Unless required by applicable law or agreed to in writing, software
@@ -2914,9 +2914,9 @@ ruau/ruau/src/main/java/org/ruauframework/def/HelperDef.java: * limitations unde
 ruau/ruau/src/main/java/org/ruauframework/def/HelperDef.java:package org.ruauframework.def;
 ruau/ruau/src/main/java/org/ruauframework/def/HelperDef.java:public interface HelperDef extends Definition {
 ruau/ruau/src/main/java/org/ruauframework/def/HelperDef.java:    boolean isLocal();
-ruau/ruau/src/main/java/org/ruauframework/def/LayoutItemDef.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/LayoutItemDef.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/LayoutItemDef.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/LayoutItemDef.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/LayoutItemDef.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/LayoutItemDef.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/LayoutItemDef.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/LayoutItemDef.java: * Unless required by applicable law or agreed to in writing, software
@@ -2929,9 +2929,9 @@ ruau/ruau/src/main/java/org/ruauframework/def/LayoutItemDef.java:public interfac
 ruau/ruau/src/main/java/org/ruauframework/def/LayoutItemDef.java:    DefDescriptor<LayoutItemDef> getDescriptor();
 ruau/ruau/src/main/java/org/ruauframework/def/LayoutItemDef.java:    public String getCache();
 ruau/ruau/src/main/java/org/ruauframework/def/LayoutItemDef.java:    public String getContainer();
-ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRef.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRef.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRef.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRef.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRef.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRef.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRef.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRef.java: * Unless required by applicable law or agreed to in writing, software
@@ -2943,7 +2943,7 @@ ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRef.java:import java.u
 ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRef.java:import org.ruauframework.instance.BaseComponent;
 ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRef.java:import org.ruauframework.instance.Component;
 ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRef.java:import org.ruauframework.throwable.quickfix.QuickFixException;
-ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRef.java: * Interface for component definition references.
+ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRef.java: * Interface for mokponent definition references.
 ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRef.java:public interface ComponentDefRef extends Definition {
 ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRef.java:    public static enum Load {
 ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRef.java:     * FIXME: W-1328556 this method violates the contract with DefDescriptor.
@@ -2953,9 +2953,9 @@ ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRef.java:    Attribute
 ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRef.java:    Component newInstance(BaseComponent<?, ?> valueProvider) throws QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRef.java:    String getLocalId();
 ruau/ruau/src/main/java/org/ruauframework/def/ComponentDefRef.java:    Load getLoad();
-ruau/ruau/src/main/java/org/ruauframework/def/HtmlTag.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/def/HtmlTag.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/HtmlTag.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/def/HtmlTag.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/def/HtmlTag.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau/src/main/java/org/ruauframework/def/HtmlTag.java: * You may obtain a copy of the License at
 ruau/ruau/src/main/java/org/ruauframework/def/HtmlTag.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau/src/main/java/org/ruauframework/def/HtmlTag.java: * Unless required by applicable law or agreed to in writing, software
@@ -2977,7 +2977,7 @@ ruau/ruau/src/main/java/org/ruauframework/def/HtmlTag.java:    base(false),
 ruau/ruau/src/main/java/org/ruauframework/def/HtmlTag.java:    basefont(false),
 ruau/ruau/src/main/java/org/ruauframework/def/HtmlTag.java:    caption,
 ruau/ruau/src/main/java/org/ruauframework/def/HtmlTag.java:    canvas,
-ruau/ruau/src/main/java/org/ruauframework/def/HtmlTag.java:    command,
+ruau/ruau/src/main/java/org/ruauframework/def/HtmlTag.java:    mokmand,
 ruau/ruau/src/main/java/org/ruauframework/def/HtmlTag.java:    datalist,
 ruau/ruau/src/main/java/org/ruauframework/def/HtmlTag.java:    details,
 ruau/ruau/src/main/java/org/ruauframework/def/HtmlTag.java:    embed(false),

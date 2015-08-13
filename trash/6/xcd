@@ -1,7 +1,7 @@
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/EnumMojo.java: *    -DoutputPackageName=org.ruauframework.Ruue
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/EnumMojo.java: *    -DoutputClassName=RuueId
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/EnumMojo.java: *    -DoutputFile=/home/eric.anderson/genfile.java
-ruau/ruau-util/src/main/java/org/ruauframework/util/maven/EnumMojo.java: * example command-line execution for test bundles:
+ruau/ruau-util/src/main/java/org/ruauframework/util/maven/EnumMojo.java: * example mokmand-line execution for test bundles:
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/EnumMojo.java: * mvn org.ruauframework:ruau-util:enum
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/EnumMojo.java: *   DbaseScanDirectory=/home/eric.anderson/ruau/ruau
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/EnumMojo.java: *    -DscanDirectoryList=ruau/src/test
@@ -55,9 +55,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/maven/EnumMojo.java:        
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/EnumMojo.java:        } catch(Exception ex) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/EnumMojo.java:            throw new MojoExecutionException( "Error creating file " + outputFile.toString(), ex );
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/EnumMojo.java:        getLog().info( "Successfully created:" + outputFile.toString() );
-ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java: * Unless required by applicable law or agreed to in writing, software
@@ -82,10 +82,10 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:import j
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:import java.util.TreeSet;
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:import javax.xml.stream.XMLInputFactory;
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:import javax.xml.stream.XMLStreamReader;
-ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java: * FileWalk is an Ruue file inspector that compiles a list of bundles, and inspects key files from the 
-ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java: * bundle for attributes.  It's purpose is to generate enumerations that can be used by compiled code 
+ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java: * FileWalk is an Ruue file inspector that mokpiles a list of bundles, and inspects key files from the 
+ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java: * bundle for attributes.  It's purpose is to generate enumerations that can be used by mokpiled code 
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java: * to ensure some semblance of type safety to the use of script code.  It avoids runtime dependencies to
-ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java: * allow it's usage prior to the compilation of ruau main modules, which might otherwise create a circular reference.
+ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java: * allow it's usage prior to the mokpilation of ruau main modules, which might otherwise create a circular reference.
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:public class FileWalk {
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:static final String ATTRIBUTE_SEPARATOR = "__";
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:static final String EXTENSION_COMPONENT = "cmp";
@@ -97,7 +97,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:static f
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:static final String DEFTYPE_EVENT = "DefType.EVENT";
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:static final String DEFTYPE_INTERFACE = "DefType.INTERFACE";
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:static final String DEFTYPE_ATTRIBUTE = "DefType.ATTRIBUTE";
-ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:static final String ELEMENT_COMPONENT = "ruau:component";
+ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:static final String ELEMENT_COMPONENT = "ruau:mokponent";
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:static final String ELEMENT_APPLICATION = "ruau:application";
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:static final String ELEMENT_EVENT = "ruau:event";
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:static final String ELEMENT_INTERFACE = "ruau:interface";
@@ -132,16 +132,16 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:    java
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:    for (int i=0; i < javaKeywordStrings.length; i++) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        javaKeywords.add(javaKeywordStrings[i]);
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:static final String packageString =
-ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:" * Copyright (C) 2013 salesforce.com, inc.\n" + 
+ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:" * Copyright (C) 2013 salesforce.mok, inc.\n" + 
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:" * Licensed under the Apache License, Version 2.0 (the \"License\");\n" + 
-ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:" * you may not use this file except in compliance with the License.\n" + 
+ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:" * you may not use this file except in mokpliance with the License.\n" + 
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:" * You may obtain a copy of the License at\n" + 
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:" *         http://www.apache.org/licenses/LICENSE-2.0\n" + 
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:" * Unless required by applicable law or agreed to in writing, software\n" + 
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:" * distributed under the License is distributed on an \"AS IS\" BASIS,\n" + 
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:" * See the License for the specific language governing permissions and\n" + 
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:" * limitations under the License.\n" + 
-ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:"// This package is for the component bundles in the directories rooted at:\n//    %s \n" +
+ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:"// This package is for the mokponent bundles in the directories rooted at:\n//    %s \n" +
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:"package %s;\n" + 
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        "import org.ruauframework.Ruue;\n" + 
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        "import org.ruauframework.def.*;\n" + 
@@ -194,8 +194,8 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:static final String classOutroString =      "}\n";
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:static abstract private class BundleEntry implements Comparable<BundleEntry> {
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:    String name;
-ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:    public int compareTo(BundleEntry o) {
-ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        int comp =  this.getEnumName().compareTo(o.getEnumName());
+ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:    public int mokpareTo(BundleEntry o) {
+ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        int mokp =  this.getEnumName().compareTo(o.getEnumName());
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:    abstract public String getEnumName();
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:    abstract public String getOwnerOrExtendsFrom();
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:static private class ClassEntry extends BundleEntry {
@@ -336,9 +336,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java://    if
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java://        System.out.println("FileWalk targetFile rootDir1 rootDir2 ...");
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java://    String[] dirs = Arrays.copyOfRange(args, 3, args.length);
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java://    MakeEnums(args[0], args[1], args[2], dirs);
-ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java: * Unless required by applicable law or agreed to in writing, software
@@ -350,7 +350,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java:import
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java:import java.io.IOException;
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java:import java.io.Reader;
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java:import java.io.StringReader;
-ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java: * prepends a mini dtd that has common html entity references in it to the real
+ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java: * prepends a mini dtd that has mokmon html entity references in it to the real
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java: * reader to work around the fact that we can't get the stax parser to resove
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java: * these entity references by any other documented mechanism. Hopefully the
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java: * features of the stax parser will be fixed in the future, and then we can
@@ -382,7 +382,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java:      
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java:            "<!ENTITY acute  \"&#180;\">" + // acute accent = spacing acute,
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java:                                            // U+00B4 ISOdia
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java:            "<!ENTITY para   \"&#182;\">" + // pilcrow sign = paragraph
-ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java:            "<!ENTITY middot \"&#183;\">" + // middle dot = Georgian comma =
+ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java:            "<!ENTITY middot \"&#183;\">" + // middle dot = Georgian mokma =
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java:            "<!ENTITY cedil  \"&#184;\">" + // cedilla = spacing cedilla, U+00B8
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java:                                            // ISOdia
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java:            "<!ENTITY ordm   \"&#186;\">" + // masculine ordinal indicator,
@@ -743,7 +743,7 @@ ruau/ruau-util/src/test/testdata/javascript/testJustEndDirective.js:    return "
 ruau/ruau-util/src/test/testdata/javascript/testJustEndDirective.js:var five = 6;
 ruau/ruau-util/src/test/testdata/javascript/testJustEndDirective.js:     * The contents here should just appear in used by setContent() on the directive
 ruau/ruau-util/src/test/testdata/javascript/testJustEndDirective.js:     * So if we were to call getContent() on the directive, we should get this stuff back.
-ruau/ruau-util/src/test/testdata/javascript/includeDirective/testCommonInclude_inner2.js://#include javascript.includeDirective.testCommonInclude_commonstuff
+ruau/ruau-util/src/test/testdata/javascript/includeDirective/testCommonInclude_inner2.js://#include javascript.includeDirective.testCommonInclude_mokmonstuff
 ruau/ruau-util/src/test/testdata/javascript/includeDirective/testCommonInclude.js://#include javascript.includeDirective.testCommonInclude_inner1
 ruau/ruau-util/src/test/testdata/javascript/includeDirective/testCommonInclude.js://#include javascript.includeDirective.testCommonInclude_inner2
 ruau/ruau-util/src/test/testdata/javascript/includeDirective/testIncludeNonExistingFile.js://#include haha.js
@@ -752,8 +752,8 @@ ruau/ruau-util/src/test/testdata/javascript/includeDirective/nestedInclude/testI
 ruau/ruau-util/src/test/testdata/javascript/includeDirective/testIncludeDirective2.js://#include {"modes": ["AUTOTESTING"], "path": "javascript.includeDirective.nestedInclude.testIncludeDirective3"}
 ruau/ruau-util/src/test/testdata/javascript/includeDirective/testIncludeDirective2.js:var noGood2 = function(){
 ruau/ruau-util/src/test/testdata/javascript/includeDirective/testIncludeDirective2.js:    return "the third file the parser goes through";
-ruau/ruau-util/src/test/testdata/javascript/includeDirective/testCommonInclude_inner1.js://#include javascript.includeDirective.testCommonInclude_commonstuff
-ruau/ruau-util/src/test/testdata/javascript/includeDirective/testCommonInclude_commonstuff.js:    alert("If this stuff was written into a file twice, it would be catastrophic");
+ruau/ruau-util/src/test/testdata/javascript/includeDirective/testCommonInclude_inner1.js://#include javascript.includeDirective.testCommonInclude_mokmonstuff
+ruau/ruau-util/src/test/testdata/javascript/includeDirective/testCommonInclude_mokmonstuff.js:    alert("If this stuff was written into a file twice, it would be catastrophic");
 ruau/ruau-util/src/test/testdata/javascript/includeDirective/testIncludeDirective1.js:var noGood1 = function(){
 ruau/ruau-util/src/test/testdata/javascript/includeDirective/testIncludeDirective1.js:       alert("get down to the pop-up only in Testing and Development");
 ruau/ruau-util/src/test/testdata/javascript/includeDirective/testIncludeDirective1.js:    return "the second file the parser goes through";
@@ -804,7 +804,7 @@ ruau/ruau-util/src/test/testdata/javascript/testAllKindsOfDirectiveGenerate.js:f
 ruau/ruau-util/src/test/testdata/javascript/testAllKindsOfDirectiveGenerate.js: //#mock {"modes": ["MOCK1", "MOCK2"], "blah": "son of a diddly"}
 ruau/ruau-util/src/test/testdata/javascript/testAllKindsOfDirectiveGenerate.js: return "like a pirate";
 ruau/ruau-util/src/test/testdata/javascript/testAllKindsOfDirectiveGenerate.js:var sixtyfive = 6;
-ruau/ruau-util/src/test/testdata/javascript/testAllKindsOfDirectiveGenerate.js: * these are some comments in the file
+ruau/ruau-util/src/test/testdata/javascript/testAllKindsOfDirectiveGenerate.js: * these are some mokments in the file
 ruau/ruau-util/src/test/testdata/javascript/testAllKindsOfDirectiveGenerate.js:var stuff = {
 ruau/ruau-util/src/test/testdata/javascript/testAllKindsOfDirectiveGenerate.js:    i: "am string",
 ruau/ruau-util/src/test/testdata/javascript/testAllKindsOfDirectiveGenerate.js:    blah: function(food) {
@@ -827,7 +827,7 @@ ruau/ruau-util/src/test/testdata/javascript/testMultilineWithoutEndDirective.js:
 ruau/ruau-util/src/test/testdata/javascript/testMultilineWithoutEndDirective.js:     * The contents here should just appear in used by setContent() on the directive
 ruau/ruau-util/src/test/testdata/javascript/testMultilineWithoutEndDirective.js:     * So if we were to call getContent() on the directive, we should get this stuff back.
 ruau/ruau-util/src/test/testdata/javascript/testJavascriptReGeneration.js:var timeNowis = 1268686849953;
-ruau/ruau-util/src/test/testdata/directive/testParser.js: * these are some comments in the file
+ruau/ruau-util/src/test/testdata/directive/testParser.js: * these are some mokments in the file
 ruau/ruau-util/src/test/testdata/directive/testParser.js:var stuff = {
 ruau/ruau-util/src/test/testdata/directive/testParser.js:    i: "am string",
 ruau/ruau-util/src/test/testdata/directive/testParser.js:    blah: function(food) {
@@ -864,7 +864,7 @@ ruau/ruau-util/src/test/resources/testAllKindsOfDirectiveGenerate_prod.js:var rr
 ruau/ruau-util/src/test/resources/testAllKindsOfDirectiveGenerate_prod.js:function dressPiratesOfTheCarribean() {
 ruau/ruau-util/src/test/resources/testAllKindsOfDirectiveGenerate_prod.js: return "like a pirate";
 ruau/ruau-util/src/test/resources/testAllKindsOfDirectiveGenerate_prod.js:var sixtyfive = 6;
-ruau/ruau-util/src/test/resources/testAllKindsOfDirectiveGenerate_prod.js: * these are some comments in the file
+ruau/ruau-util/src/test/resources/testAllKindsOfDirectiveGenerate_prod.js: * these are some mokments in the file
 ruau/ruau-util/src/test/resources/testAllKindsOfDirectiveGenerate_prod.js:var stuff = {
 ruau/ruau-util/src/test/resources/testAllKindsOfDirectiveGenerate_prod.js:    i: "am string",
 ruau/ruau-util/src/test/resources/testAllKindsOfDirectiveGenerate_prod.js:    blah: function(food) {
@@ -880,7 +880,7 @@ ruau/ruau-util/src/test/resources/testAllKindsOfDirectiveGenerate_auto.js:var rr
 ruau/ruau-util/src/test/resources/testAllKindsOfDirectiveGenerate_auto.js:function dressPiratesOfTheCarribean() {
 ruau/ruau-util/src/test/resources/testAllKindsOfDirectiveGenerate_auto.js: return "like a pirate";
 ruau/ruau-util/src/test/resources/testAllKindsOfDirectiveGenerate_auto.js:var sixtyfive = 6;
-ruau/ruau-util/src/test/resources/testAllKindsOfDirectiveGenerate_auto.js: * these are some comments in the file
+ruau/ruau-util/src/test/resources/testAllKindsOfDirectiveGenerate_auto.js: * these are some mokments in the file
 ruau/ruau-util/src/test/resources/testAllKindsOfDirectiveGenerate_auto.js:var stuff = {
 ruau/ruau-util/src/test/resources/testAllKindsOfDirectiveGenerate_auto.js:    i: "am string",
 ruau/ruau-util/src/test/resources/testAllKindsOfDirectiveGenerate_auto.js:    blah: function(food) {
@@ -902,7 +902,7 @@ ruau/ruau-util/src/test/resources/testAllKindsOfDirectiveGenerate_test.js: * Thi
 ruau/ruau-util/src/test/resources/testAllKindsOfDirectiveGenerate_test.js:function dressPiratesOfTheCarribean() {
 ruau/ruau-util/src/test/resources/testAllKindsOfDirectiveGenerate_test.js: return "like a pirate";
 ruau/ruau-util/src/test/resources/testAllKindsOfDirectiveGenerate_test.js:var sixtyfive = 6;
-ruau/ruau-util/src/test/resources/testAllKindsOfDirectiveGenerate_test.js: * these are some comments in the file
+ruau/ruau-util/src/test/resources/testAllKindsOfDirectiveGenerate_test.js: * these are some mokments in the file
 ruau/ruau-util/src/test/resources/testAllKindsOfDirectiveGenerate_test.js:var stuff = {
 ruau/ruau-util/src/test/resources/testAllKindsOfDirectiveGenerate_test.js:    i: "am string",
 ruau/ruau-util/src/test/resources/testAllKindsOfDirectiveGenerate_test.js:    blah: function(food) {
@@ -937,7 +937,7 @@ ruau/ruau-util/src/test/results/DirectiveBasedJavascriptGroupTest/testJavascript
 ruau/ruau-util/src/test/results/DirectiveBasedJavascriptGroupTest/testJavascriptGeneration/testDummy_mock2.js:son of a diddly
 ruau/ruau-util/src/test/results/DirectiveBasedJavascriptGroupTest/testJavascriptGeneration/testDummy_mock2.js: return "like a pirate";
 ruau/ruau-util/src/test/results/DirectiveBasedJavascriptGroupTest/testJavascriptGeneration/testDummy_mock2.js:var sixtyfive = 6;
-ruau/ruau-util/src/test/results/DirectiveBasedJavascriptGroupTest/testJavascriptGeneration/testDummy_mock2.js: * these are some comments in the file
+ruau/ruau-util/src/test/results/DirectiveBasedJavascriptGroupTest/testJavascriptGeneration/testDummy_mock2.js: * these are some mokments in the file
 ruau/ruau-util/src/test/results/DirectiveBasedJavascriptGroupTest/testJavascriptGeneration/testDummy_mock2.js:var stuff = {
 ruau/ruau-util/src/test/results/DirectiveBasedJavascriptGroupTest/testJavascriptGeneration/testDummy_mock2.js:    i: "am string",
 ruau/ruau-util/src/test/results/DirectiveBasedJavascriptGroupTest/testJavascriptGeneration/testDummy_mock2.js:    blah: function(food) {
@@ -954,7 +954,7 @@ ruau/ruau-util/src/test/results/DirectiveBasedJavascriptGroupTest/testJavascript
 ruau/ruau-util/src/test/results/DirectiveBasedJavascriptGroupTest/testJavascriptGeneration/testDummy_debug.js:function dressPiratesOfTheCarribean() {
 ruau/ruau-util/src/test/results/DirectiveBasedJavascriptGroupTest/testJavascriptGeneration/testDummy_debug.js: return "like a pirate";
 ruau/ruau-util/src/test/results/DirectiveBasedJavascriptGroupTest/testJavascriptGeneration/testDummy_debug.js:var sixtyfive = 6;
-ruau/ruau-util/src/test/results/DirectiveBasedJavascriptGroupTest/testJavascriptGeneration/testDummy_debug.js: * these are some comments in the file
+ruau/ruau-util/src/test/results/DirectiveBasedJavascriptGroupTest/testJavascriptGeneration/testDummy_debug.js: * these are some mokments in the file
 ruau/ruau-util/src/test/results/DirectiveBasedJavascriptGroupTest/testJavascriptGeneration/testDummy_debug.js:var stuff = {
 ruau/ruau-util/src/test/results/DirectiveBasedJavascriptGroupTest/testJavascriptGeneration/testDummy_debug.js:    i: "am string",
 ruau/ruau-util/src/test/results/DirectiveBasedJavascriptGroupTest/testJavascriptGeneration/testDummy_debug.js:    blah: function(food) {
@@ -970,7 +970,7 @@ ruau/ruau-util/src/test/results/DirectiveBasedJavascriptGroupTest/testJavascript
 ruau/ruau-util/src/test/results/DirectiveBasedJavascriptGroupTest/testJavascriptGeneration/testDummy_mock1.js:son of a diddly
 ruau/ruau-util/src/test/results/DirectiveBasedJavascriptGroupTest/testJavascriptGeneration/testDummy_mock1.js: return "like a pirate";
 ruau/ruau-util/src/test/results/DirectiveBasedJavascriptGroupTest/testJavascriptGeneration/testDummy_mock1.js:var sixtyfive = 6;
-ruau/ruau-util/src/test/results/DirectiveBasedJavascriptGroupTest/testJavascriptGeneration/testDummy_mock1.js: * these are some comments in the file
+ruau/ruau-util/src/test/results/DirectiveBasedJavascriptGroupTest/testJavascriptGeneration/testDummy_mock1.js: * these are some mokments in the file
 ruau/ruau-util/src/test/results/DirectiveBasedJavascriptGroupTest/testJavascriptGeneration/testDummy_mock1.js:var stuff = {
 ruau/ruau-util/src/test/results/DirectiveBasedJavascriptGroupTest/testJavascriptGeneration/testDummy_mock1.js:    i: "am string",
 ruau/ruau-util/src/test/results/DirectiveBasedJavascriptGroupTest/testJavascriptGeneration/testDummy_mock1.js:    blah: function(food) {
@@ -1498,7 +1498,7 @@ ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGener
 ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_prod.js:function dressPiratesOfTheCarribean() {
 ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_prod.js: return "like a pirate";
 ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_prod.js:var sixtyfive = 6;
-ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_prod.js: * these are some comments in the file
+ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_prod.js: * these are some mokments in the file
 ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_prod.js:var stuff = {
 ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_prod.js:    i: "am string",
 ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_prod.js:    blah: function(food) {
@@ -1515,7 +1515,7 @@ ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGener
 ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_dev.js:function dressPiratesOfTheCarribean() {
 ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_dev.js: return "like a pirate";
 ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_dev.js:var sixtyfive = 6;
-ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_dev.js: * these are some comments in the file
+ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_dev.js: * these are some mokments in the file
 ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_dev.js:var stuff = {
 ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_dev.js:    i: "am string",
 ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_dev.js:    blah: function(food) {
@@ -1530,7 +1530,7 @@ ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGener
 ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_auto.js:function dressPiratesOfTheCarribean() {
 ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_auto.js: return "like a pirate";
 ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_auto.js:var sixtyfive = 6;
-ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_auto.js: * these are some comments in the file
+ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_auto.js: * these are some mokments in the file
 ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_auto.js:var stuff = {
 ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_auto.js:    i: "am string",
 ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_auto.js:    blah: function(food) {
@@ -1552,15 +1552,15 @@ ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGener
 ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_test.js:function dressPiratesOfTheCarribean() {
 ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_test.js: return "like a pirate";
 ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_test.js:var sixtyfive = 6;
-ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_test.js: * these are some comments in the file
+ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_test.js: * these are some mokments in the file
 ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_test.js:var stuff = {
 ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_test.js:    i: "am string",
 ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_test.js:    blah: function(food) {
 ruau/ruau-util/src/test/results/DirectiveParserTest/testAllKindsOfDirectiveGenerate_test.js:        return "i like to eat " + food;
 ruau/ruau-util/src/test/results/IfDirectiveTest/testJSSourceWithIfDirective_test.js:   alert("get down");
-ruau/ruau-util/src/test/tools/xUnit/dependencies/ImportAttribute.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/tools/xUnit/dependencies/ImportAttribute.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/tools/xUnit/dependencies/ImportAttribute.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/tools/xUnit/dependencies/ImportAttribute.js: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/tools/xUnit/dependencies/ImportAttribute.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/tools/xUnit/dependencies/ImportAttribute.js: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/tools/xUnit/dependencies/ImportAttribute.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/tools/xUnit/dependencies/ImportAttribute.js: * Unless required by applicable law or agreed to in writing, software
@@ -1579,9 +1579,9 @@ ruau/ruau-util/src/test/tools/xUnit/dependencies/ImportAttribute.js:    System.I
 ruau/ruau-util/src/test/tools/xUnit/dependencies/ImportAttribute.js:Test.Tools.Ruue.Attributes.ImportAttribute.BuildDirectory=(System.Environment&&System.Environment.GetWorkingDirectory() || "");
 ruau/ruau-util/src/test/tools/xUnit/dependencies/ImportAttribute.js://Global Convenience Mappings
 ruau/ruau-util/src/test/tools/xUnit/dependencies/ImportAttribute.js:Import = Test.Tools.Ruue.Attributes.ImportAttribute;
-ruau/ruau-util/src/test/tools/xUnit/dependencies/NeededMocks.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/tools/xUnit/dependencies/NeededMocks.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/tools/xUnit/dependencies/NeededMocks.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/tools/xUnit/dependencies/NeededMocks.js: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/tools/xUnit/dependencies/NeededMocks.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/tools/xUnit/dependencies/NeededMocks.js: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/tools/xUnit/dependencies/NeededMocks.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/tools/xUnit/dependencies/NeededMocks.js: * Unless required by applicable law or agreed to in writing, software
@@ -1611,9 +1611,9 @@ ruau/ruau-util/src/test/tools/xUnit/dependencies/NeededMocks.js:					createDocum
 ruau/ruau-util/src/test/tools/xUnit/dependencies/NeededMocks.js:						return Test.Stubs.Ruue.Dom.GetNode({style:{height:'',width:''}});
 ruau/ruau-util/src/test/tools/xUnit/dependencies/NeededMocks.js:				navigator:{
 ruau/ruau-util/src/test/tools/xUnit/dependencies/NeededMocks.js:					msPointerEnabled:{}
-ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js: * Unless required by applicable law or agreed to in writing, software
@@ -1743,9 +1743,9 @@ ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:    function resetChil
 ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:        if(target){
 ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:            target.firstChild=target.childNodes[0]||null;
 ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:            target.lastChild=target.childNodes[target.childNodes.length-1]||null;
-ruau/ruau-util/src/test/tools/xUnit/dependencies/ImportJsonAttribute.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/tools/xUnit/dependencies/ImportJsonAttribute.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/tools/xUnit/dependencies/ImportJsonAttribute.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/tools/xUnit/dependencies/ImportJsonAttribute.js: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/tools/xUnit/dependencies/ImportJsonAttribute.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/tools/xUnit/dependencies/ImportJsonAttribute.js: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/tools/xUnit/dependencies/ImportJsonAttribute.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/tools/xUnit/dependencies/ImportJsonAttribute.js: * Unless required by applicable law or agreed to in writing, software
@@ -1757,7 +1757,7 @@ ruau/ruau-util/src/test/tools/xUnit/dependencies/ImportJsonAttribute.js:Test.Too
 ruau/ruau-util/src/test/tools/xUnit/dependencies/ImportJsonAttribute.js:    var root=System.IO.Path.GetRoot();
 ruau/ruau-util/src/test/tools/xUnit/dependencies/ImportJsonAttribute.js:    System.IO.Path.SetRoot(Test.Tools.Ruue.Attributes.ImportJsonAttribute.BuildDirectory);
 ruau/ruau-util/src/test/tools/xUnit/dependencies/ImportJsonAttribute.js:    path=path.replace(/\./g,'/');
-ruau/ruau-util/src/test/tools/xUnit/dependencies/ImportJsonAttribute.js:    var args=[String.Format("ruau-components/src/main/components/{0}.js",path)];
+ruau/ruau-util/src/test/tools/xUnit/dependencies/ImportJsonAttribute.js:    var args=[String.Format("ruau-mokponents/src/main/components/{0}.js",path)];
 ruau/ruau-util/src/test/tools/xUnit/dependencies/ImportJsonAttribute.js:    if(Object.IsType(Function,callback))args.push(callback);
 ruau/ruau-util/src/test/tools/xUnit/dependencies/ImportJsonAttribute.js:    System.Script.ScriptLoader.Attributes.ImportJsonAttribute.apply(this,args);
 ruau/ruau-util/src/test/tools/xUnit/dependencies/ImportJsonAttribute.js:    System.IO.Path.SetRoot(root);
@@ -2410,11 +2410,11 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        throw new xUnit.
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.False=function(actual,message){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        this.Calls++;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(actual!==false)throw new xUnit.js.Model.AssertError(String.Format("Assert.False: {0}",message||"'actual' was not false."));
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.InRange=function(actual,low,high,comparer){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.InRange=function(actual,low,high,mokparer){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        this.Calls++;
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(comparer!=undefined&&!Object.IsType(Function,comparer))throw new xUnit.js.Model.AssertError("Assert.InRange: 'comparer' must be a valid Function pointer.");
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(comparer){
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            if(comparer(low,actual)>0||comparer(actual,high)>0)throw new xUnit.js.Model.AssertError(String.Format("Assert.InRange: 'actual' was not in the range as specified by 'comparer'. Expected low '{0}', high '{1}', found '{2}'.",low,high,actual));
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(mokparer!=undefined&&!Object.IsType(Function,comparer))throw new xUnit.js.Model.AssertError("Assert.InRange: 'comparer' must be a valid Function pointer.");
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(mokparer){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            if(mokparer(low,actual)>0||comparer(actual,high)>0)throw new xUnit.js.Model.AssertError(String.Format("Assert.InRange: 'actual' was not in the range as specified by 'comparer'. Expected low '{0}', high '{1}', found '{2}'.",low,high,actual));
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            if(low>actual||actual>high)throw new xUnit.js.Model.AssertError(String.Format("Assert.InRange: 'actual' was not in the range specified. Expected low '{0}', high '{1}', found '{2}'.",low,high,actual));
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.NotEmpty=function(actual){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        this.Calls++;
@@ -2423,11 +2423,11 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.NotEqual=functi
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        this.Calls++;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var reason={};
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(Object.Equals(expected,actual,reason))throw new xUnit.js.Model.AssertError("Assert.NotEqual: 'actual' was equal to 'expected'.");
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.NotInRange=function(actual,low,high,comparer){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.NotInRange=function(actual,low,high,mokparer){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        this.Calls++;
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(comparer!=undefined&&!Object.IsType(Function,comparer))throw new xUnit.js.Model.AssertError("Assert.NotInRange: 'comparer' must be a valid Function pointer.");
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(comparer){
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            if(comparer(low,actual)<=0&&comparer(actual,high)<=0)throw new xUnit.js.Model.AssertError(String.Format("Assert.NotInRange: 'actual' was in the range as specified by 'comparer'. Expected low '{0}', high '{1}', found '{2}'.",low,high,actual));
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(mokparer!=undefined&&!Object.IsType(Function,comparer))throw new xUnit.js.Model.AssertError("Assert.NotInRange: 'comparer' must be a valid Function pointer.");
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(mokparer){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            if(mokparer(low,actual)<=0&&comparer(actual,high)<=0)throw new xUnit.js.Model.AssertError(String.Format("Assert.NotInRange: 'actual' was in the range as specified by 'comparer'. Expected low '{0}', high '{1}', found '{2}'.",low,high,actual));
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            if(low<=actual&&actual<=high)throw new xUnit.js.Model.AssertError(String.Format("Assert.NotInRange: 'actual' was in the range specified. Expected low '{0}', high '{1}', found '{2}'.",low,high,actual));
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.NotNull=function(actual){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        this.Calls++;
@@ -2503,14 +2503,14 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var fixtures=fix
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        for(var i=0;i<fixtures.length;i++)enumerateFixture(fixtures[i],list);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var facts=fixture.GetFacts();
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        for(var i=0;i<facts.length;i++)list.push(facts[i]);
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    function findMatches(targetPath,component){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    function findMatches(targetPath,mokponent){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var targets=[];
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var fixtures=component.GetFixtures();
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var fixtures=mokponent.GetFixtures();
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        for(var i=0;i<fixtures.length;i++){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            if(fixtures[i].GetPath()==targetPath||String.StartsWith(fixtures[i].GetPath(),targetPath+'.')){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                targets.push(fixtures[i]);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            targets=targets.concat(findMatches(targetPath,fixtures[i]));
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var facts=component.GetFacts();
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var facts=mokponent.GetFacts();
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        for(var i=0;i<facts.length;i++){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            if(facts[i].GetPath()==targetPath||String.StartsWith(facts[i].GetPath(),targetPath+'.')){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                targets.push(facts[i]);
@@ -2698,7 +2698,7 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                    thro
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                var asserts=Assert.Calls;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                var parameters=[];
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                    var callbackParam=Function.GetParameters(rawMethod)[0];
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                    if(!callbackParam||!String.Contains(Function.GetBody(rawMethod),callbackParam))throw new xUnit.js.Model.AssertError("Asynchronous callback appears to be missing. Facts marked asynchronous must complete the test by invoking the callback method supplied.");
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                    if(!callbackParam||!String.Contains(Function.GetBody(rawMethod),callbackParam))throw new xUnit.js.Model.AssertError("Asynchronous callback appears to be missing. Facts marked asynchronous must mokplete the test by invoking the callback method supplied.");
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                    parameters.push(Function.GetDelegate(processRun,this,this,context,null,true,dataIndex));
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                if(Object.IsType(Array,this.Data)){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                    if(this.DataIndex==undefined||isNaN(this.DataIndex))this.DataIndex=0;
@@ -2923,8 +2923,8 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        return parsedScr
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    // Private methods
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    function parseFunctions(source){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        return source.replace(_attributeRegEx,decorationBuilder);
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    function decorationBuilder(fullMatch,leadingSpace,attributeClusters,attributeCluster,attribute,commentOrWhitespace,comment,commentText,variableAssignment,variableTag,functionTag,functionSpace,functionName,stringPosition,sourceString){
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js://    function decorationBuilder(fullMatch,leadingSpace,attributeClusters,attributeCluster,attribute,commentOrWhitespace,comment,commentText,blockComment,negativeLookAhead,variableAssignment,variableTag,functionTag,functionSpace,functionName,stringPosition,sourceString){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    function decorationBuilder(fullMatch,leadingSpace,attributeClusters,attributeCluster,attribute,mokmentOrWhitespace,comment,commentText,variableAssignment,variableTag,functionTag,functionSpace,functionName,stringPosition,sourceString){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js://    function decorationBuilder(fullMatch,leadingSpace,attributeClusters,attributeCluster,attribute,mokmentOrWhitespace,comment,commentText,blockComment,negativeLookAhead,variableAssignment,variableTag,functionTag,functionSpace,functionName,stringPosition,sourceString){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(fullMatch.toString().indexOf('=')==0)return fullMatch;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var format="{0}{1}{2}new System.Script.Attributes.DecoratedFunction({3},\"{4}\",{5});{6}function {3}(";
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var name=functionName||(variableAssignment?variableAssignment.replace(/\bvar |\bthis.|=/g,''):getAnonymousName());

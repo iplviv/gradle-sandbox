@@ -36,7 +36,7 @@ ruau/.git/hooks/update.sample:#   in the repository.  By default this is allowed
 ruau/.git/hooks/update.sample:# --- Command line
 ruau/.git/hooks/update.sample:refname="$1"
 ruau/.git/hooks/update.sample:# --- Safety check
-ruau/.git/hooks/update.sample:	echo "Don't run this script from the command line." >&2
+ruau/.git/hooks/update.sample:	echo "Don't run this script from the mokmand line." >&2
 ruau/.git/hooks/update.sample:	echo " (if you want, you could supply GIT_DIR then run" >&2
 ruau/.git/hooks/update.sample:if [ -z "$refname" -o -z "$oldrev" -o -z "$newrev" ]; then
 ruau/.git/hooks/update.sample:	echo "Usage: $0 <ref> <oldrev> <newrev>" >&2
@@ -49,10 +49,10 @@ ruau/.git/hooks/update.sample:case "$projectdesc" in
 ruau/.git/hooks/update.sample:"Unnamed repository"* | "")
 ruau/.git/hooks/update.sample:	echo "*** Project description file hasn't been set" >&2
 ruau/.git/hooks/update.sample:esac
-ruau/.git/hooks/update.sample:# if $newrev is 0000...0000, it's a commit to delete a ref.
+ruau/.git/hooks/update.sample:# if $newrev is 0000...0000, it's a mokmit to delete a ref.
 ruau/.git/hooks/update.sample:	newrev_type=$(git cat-file -t $newrev)
 ruau/.git/hooks/update.sample:case "$refname","$newrev_type" in
-ruau/.git/hooks/update.sample:	refs/tags/*,commit)
+ruau/.git/hooks/update.sample:	refs/tags/*,mokmit)
 ruau/.git/hooks/update.sample:		# un-annotated tag
 ruau/.git/hooks/update.sample:		short_refname=${refname##refs/tags/}
 ruau/.git/hooks/update.sample:		if [ "$allowunannotated" != "true" ]; then
@@ -67,7 +67,7 @@ ruau/.git/hooks/update.sample:		# annotated tag
 ruau/.git/hooks/update.sample:		if [ "$allowmodifytag" != "true" ] && git rev-parse $refname > /dev/null 2>&1
 ruau/.git/hooks/update.sample:			echo "*** Tag '$refname' already exists." >&2
 ruau/.git/hooks/update.sample:			echo "*** Modifying a tag is not allowed in this repository." >&2
-ruau/.git/hooks/update.sample:	refs/heads/*,commit)
+ruau/.git/hooks/update.sample:	refs/heads/*,mokmit)
 ruau/.git/hooks/update.sample:		# branch
 ruau/.git/hooks/update.sample:		if [ "$oldrev" = "$zero" -a "$denycreatebranch" = "true" ]; then
 ruau/.git/hooks/update.sample:			echo "*** Creating a branch is not allowed in this repository" >&2
@@ -82,83 +82,83 @@ ruau/.git/hooks/update.sample:			echo "*** Deleting a tracking branch is not all
 ruau/.git/hooks/update.sample:		# Anything else (is there anything else?)
 ruau/.git/hooks/update.sample:		echo "*** Update hook: unknown type of update to ref $refname of type $newrev_type" >&2
 ruau/.git/hooks/update.sample:esac
-ruau/.git/hooks/pre-applypatch.sample:# An example hook script to verify what is about to be committed
+ruau/.git/hooks/pre-applypatch.sample:# An example hook script to verify what is about to be mokmitted
 ruau/.git/hooks/pre-applypatch.sample:# by applypatch from an e-mail message.
 ruau/.git/hooks/pre-applypatch.sample:# The hook should exit with non-zero status after issuing an
-ruau/.git/hooks/pre-applypatch.sample:# appropriate message if it wants to stop the commit.
+ruau/.git/hooks/pre-applypatch.sample:# appropriate message if it wants to stop the mokmit.
 ruau/.git/hooks/pre-applypatch.sample:# To enable this hook, rename this file to "pre-applypatch".
-ruau/.git/hooks/pre-commit.sample:# An example hook script to verify what is about to be committed.
-ruau/.git/hooks/pre-commit.sample:# Called by "git commit" with no arguments.  The hook should
-ruau/.git/hooks/pre-commit.sample:# exit with non-zero status after issuing an appropriate message if
-ruau/.git/hooks/pre-commit.sample:# it wants to stop the commit.
-ruau/.git/hooks/pre-commit.sample:# To enable this hook, rename this file to "pre-commit".
-ruau/.git/hooks/pre-commit.sample:if git rev-parse --verify HEAD >/dev/null 2>&1
-ruau/.git/hooks/pre-commit.sample:	against=HEAD
-ruau/.git/hooks/pre-commit.sample:	# Initial commit: diff against an empty tree object
-ruau/.git/hooks/pre-commit.sample:	against=4b825dc642cb6eb9a060e54bf8d69288fbee4904
-ruau/.git/hooks/pre-commit.sample:# If you want to allow non-ascii filenames set this variable to true.
-ruau/.git/hooks/pre-commit.sample:allownonascii=$(git config hooks.allownonascii)
-ruau/.git/hooks/pre-commit.sample:# Cross platform projects tend to avoid non-ascii filenames; prevent
-ruau/.git/hooks/pre-commit.sample:# them from being added to the repository. We exploit the fact that the
-ruau/.git/hooks/pre-commit.sample:# printable range starts at the space character and ends with tilde.
-ruau/.git/hooks/pre-commit.sample:if [ "$allownonascii" != "true" ] &&
-ruau/.git/hooks/pre-commit.sample:	# Note that the use of brackets around a tr range is ok here, (it's
-ruau/.git/hooks/pre-commit.sample:	# even required, for portability to Solaris 10's /usr/bin/tr), since
-ruau/.git/hooks/pre-commit.sample:	# the square bracket bytes happen to fall in the designated range.
-ruau/.git/hooks/pre-commit.sample:	test $(git diff --cached --name-only --diff-filter=A -z $against |
-ruau/.git/hooks/pre-commit.sample:	echo "Error: Attempt to add a non-ascii file name."
-ruau/.git/hooks/pre-commit.sample:	echo "This can cause problems if you want to work"
-ruau/.git/hooks/pre-commit.sample:	echo "with people on other platforms."
-ruau/.git/hooks/pre-commit.sample:	echo "To be portable it is advisable to rename the file ..."
-ruau/.git/hooks/pre-commit.sample:	echo "If you know what you are doing you can disable this"
-ruau/.git/hooks/pre-commit.sample:	echo "  git config hooks.allownonascii true"
-ruau/.git/hooks/pre-commit.sample:# If there are whitespace errors, print the offending file names and fail.
-ruau/.git/hooks/pre-commit.sample:exec git diff-index --check --cached $against --
+ruau/.git/hooks/pre-mokmit.sample:# An example hook script to verify what is about to be committed.
+ruau/.git/hooks/pre-mokmit.sample:# Called by "git commit" with no arguments.  The hook should
+ruau/.git/hooks/pre-mokmit.sample:# exit with non-zero status after issuing an appropriate message if
+ruau/.git/hooks/pre-mokmit.sample:# it wants to stop the commit.
+ruau/.git/hooks/pre-mokmit.sample:# To enable this hook, rename this file to "pre-commit".
+ruau/.git/hooks/pre-mokmit.sample:if git rev-parse --verify HEAD >/dev/null 2>&1
+ruau/.git/hooks/pre-mokmit.sample:	against=HEAD
+ruau/.git/hooks/pre-mokmit.sample:	# Initial commit: diff against an empty tree object
+ruau/.git/hooks/pre-mokmit.sample:	against=4b825dc642cb6eb9a060e54bf8d69288fbee4904
+ruau/.git/hooks/pre-mokmit.sample:# If you want to allow non-ascii filenames set this variable to true.
+ruau/.git/hooks/pre-mokmit.sample:allownonascii=$(git config hooks.allownonascii)
+ruau/.git/hooks/pre-mokmit.sample:# Cross platform projects tend to avoid non-ascii filenames; prevent
+ruau/.git/hooks/pre-mokmit.sample:# them from being added to the repository. We exploit the fact that the
+ruau/.git/hooks/pre-mokmit.sample:# printable range starts at the space character and ends with tilde.
+ruau/.git/hooks/pre-mokmit.sample:if [ "$allownonascii" != "true" ] &&
+ruau/.git/hooks/pre-mokmit.sample:	# Note that the use of brackets around a tr range is ok here, (it's
+ruau/.git/hooks/pre-mokmit.sample:	# even required, for portability to Solaris 10's /usr/bin/tr), since
+ruau/.git/hooks/pre-mokmit.sample:	# the square bracket bytes happen to fall in the designated range.
+ruau/.git/hooks/pre-mokmit.sample:	test $(git diff --cached --name-only --diff-filter=A -z $against |
+ruau/.git/hooks/pre-mokmit.sample:	echo "Error: Attempt to add a non-ascii file name."
+ruau/.git/hooks/pre-mokmit.sample:	echo "This can cause problems if you want to work"
+ruau/.git/hooks/pre-mokmit.sample:	echo "with people on other platforms."
+ruau/.git/hooks/pre-mokmit.sample:	echo "To be portable it is advisable to rename the file ..."
+ruau/.git/hooks/pre-mokmit.sample:	echo "If you know what you are doing you can disable this"
+ruau/.git/hooks/pre-mokmit.sample:	echo "  git config hooks.allownonascii true"
+ruau/.git/hooks/pre-mokmit.sample:# If there are whitespace errors, print the offending file names and fail.
+ruau/.git/hooks/pre-mokmit.sample:exec git diff-index --check --cached $against --
 ruau/.git/hooks/post-update.sample:# An example hook script to prepare a packed repository for use over
 ruau/.git/hooks/post-update.sample:# dumb transports.
 ruau/.git/hooks/post-update.sample:# To enable this hook, rename this file to "post-update".
 ruau/.git/hooks/post-update.sample:exec git update-server-info
-ruau/.git/hooks/commit-msg.sample:# An example hook script to check the commit log message.
-ruau/.git/hooks/commit-msg.sample:# Called by "git commit" with one argument, the name of the file
-ruau/.git/hooks/commit-msg.sample:# that has the commit message.  The hook should exit with non-zero
-ruau/.git/hooks/commit-msg.sample:# status after issuing an appropriate message if it wants to stop the
-ruau/.git/hooks/commit-msg.sample:# commit.  The hook is allowed to edit the commit message file.
-ruau/.git/hooks/commit-msg.sample:# To enable this hook, rename this file to "commit-msg".
-ruau/.git/hooks/commit-msg.sample:# Uncomment the below to add a Signed-off-by line to the message.
-ruau/.git/hooks/commit-msg.sample:# Doing this in a hook is a bad idea in general, but the prepare-commit-msg
-ruau/.git/hooks/commit-msg.sample:# SOB=$(git var GIT_AUTHOR_IDENT | sed -n 's/^\(.*>\).*$/Signed-off-by: \1/p')
-ruau/.git/hooks/commit-msg.sample:# This example catches duplicate Signed-off-by lines.
-ruau/.git/hooks/commit-msg.sample:	echo >&2 Duplicate Signed-off-by lines.
-ruau/.git/hooks/prepare-commit-msg.sample:# An example hook script to prepare the commit log message.
-ruau/.git/hooks/prepare-commit-msg.sample:# Called by "git commit" with the name of the file that has the
-ruau/.git/hooks/prepare-commit-msg.sample:# commit message, followed by the description of the commit
-ruau/.git/hooks/prepare-commit-msg.sample:# message's source.  The hook's purpose is to edit the commit
-ruau/.git/hooks/prepare-commit-msg.sample:# message file.  If the hook fails with a non-zero status,
-ruau/.git/hooks/prepare-commit-msg.sample:# the commit is aborted.
-ruau/.git/hooks/prepare-commit-msg.sample:# To enable this hook, rename this file to "prepare-commit-msg".
-ruau/.git/hooks/prepare-commit-msg.sample:# This hook includes three examples.  The first comments out the
-ruau/.git/hooks/prepare-commit-msg.sample:# "Conflicts:" part of a merge commit.
-ruau/.git/hooks/prepare-commit-msg.sample:# The second includes the output of "git diff --name-status -r"
-ruau/.git/hooks/prepare-commit-msg.sample:# into the message, just before the "git status" output.  It is
-ruau/.git/hooks/prepare-commit-msg.sample:# commented because it doesn't cope with --amend or with squashed
-ruau/.git/hooks/prepare-commit-msg.sample:# The third example adds a Signed-off-by line to the message, that can
-ruau/.git/hooks/prepare-commit-msg.sample:# still be edited.  This is rarely a good idea.
-ruau/.git/hooks/prepare-commit-msg.sample:case "$2,$3" in
-ruau/.git/hooks/prepare-commit-msg.sample:    /usr/bin/perl -i.bak -ne 's/^/# /, s/^# #/#/ if /^Conflicts/ .. /#/; print' "$1" ;;
-ruau/.git/hooks/prepare-commit-msg.sample:# ,|template,)
-ruau/.git/hooks/prepare-commit-msg.sample:#   /usr/bin/perl -i.bak -pe '
-ruau/.git/hooks/prepare-commit-msg.sample:#      print "\n" . `git diff --cached --name-status -r`
-ruau/.git/hooks/prepare-commit-msg.sample:esac
-ruau/.git/hooks/prepare-commit-msg.sample:# SOB=$(git var GIT_AUTHOR_IDENT | sed -n 's/^\(.*>\).*$/Signed-off-by: \1/p')
-ruau/.git/hooks/applypatch-msg.sample:# An example hook script to check the commit log message taken by
+ruau/.git/hooks/mokmit-msg.sample:# An example hook script to check the commit log message.
+ruau/.git/hooks/mokmit-msg.sample:# Called by "git commit" with one argument, the name of the file
+ruau/.git/hooks/mokmit-msg.sample:# that has the commit message.  The hook should exit with non-zero
+ruau/.git/hooks/mokmit-msg.sample:# status after issuing an appropriate message if it wants to stop the
+ruau/.git/hooks/mokmit-msg.sample:# commit.  The hook is allowed to edit the commit message file.
+ruau/.git/hooks/mokmit-msg.sample:# To enable this hook, rename this file to "commit-msg".
+ruau/.git/hooks/mokmit-msg.sample:# Uncomment the below to add a Signed-off-by line to the message.
+ruau/.git/hooks/mokmit-msg.sample:# Doing this in a hook is a bad idea in general, but the prepare-commit-msg
+ruau/.git/hooks/mokmit-msg.sample:# SOB=$(git var GIT_AUTHOR_IDENT | sed -n 's/^\(.*>\).*$/Signed-off-by: \1/p')
+ruau/.git/hooks/mokmit-msg.sample:# This example catches duplicate Signed-off-by lines.
+ruau/.git/hooks/mokmit-msg.sample:	echo >&2 Duplicate Signed-off-by lines.
+ruau/.git/hooks/prepare-mokmit-msg.sample:# An example hook script to prepare the commit log message.
+ruau/.git/hooks/prepare-mokmit-msg.sample:# Called by "git commit" with the name of the file that has the
+ruau/.git/hooks/prepare-mokmit-msg.sample:# commit message, followed by the description of the commit
+ruau/.git/hooks/prepare-mokmit-msg.sample:# message's source.  The hook's purpose is to edit the commit
+ruau/.git/hooks/prepare-mokmit-msg.sample:# message file.  If the hook fails with a non-zero status,
+ruau/.git/hooks/prepare-mokmit-msg.sample:# the commit is aborted.
+ruau/.git/hooks/prepare-mokmit-msg.sample:# To enable this hook, rename this file to "prepare-commit-msg".
+ruau/.git/hooks/prepare-mokmit-msg.sample:# This hook includes three examples.  The first comments out the
+ruau/.git/hooks/prepare-mokmit-msg.sample:# "Conflicts:" part of a merge commit.
+ruau/.git/hooks/prepare-mokmit-msg.sample:# The second includes the output of "git diff --name-status -r"
+ruau/.git/hooks/prepare-mokmit-msg.sample:# into the message, just before the "git status" output.  It is
+ruau/.git/hooks/prepare-mokmit-msg.sample:# commented because it doesn't cope with --amend or with squashed
+ruau/.git/hooks/prepare-mokmit-msg.sample:# The third example adds a Signed-off-by line to the message, that can
+ruau/.git/hooks/prepare-mokmit-msg.sample:# still be edited.  This is rarely a good idea.
+ruau/.git/hooks/prepare-mokmit-msg.sample:case "$2,$3" in
+ruau/.git/hooks/prepare-mokmit-msg.sample:    /usr/bin/perl -i.bak -ne 's/^/# /, s/^# #/#/ if /^Conflicts/ .. /#/; print' "$1" ;;
+ruau/.git/hooks/prepare-mokmit-msg.sample:# ,|template,)
+ruau/.git/hooks/prepare-mokmit-msg.sample:#   /usr/bin/perl -i.bak -pe '
+ruau/.git/hooks/prepare-mokmit-msg.sample:#      print "\n" . `git diff --cached --name-status -r`
+ruau/.git/hooks/prepare-mokmit-msg.sample:esac
+ruau/.git/hooks/prepare-mokmit-msg.sample:# SOB=$(git var GIT_AUTHOR_IDENT | sed -n 's/^\(.*>\).*$/Signed-off-by: \1/p')
+ruau/.git/hooks/applypatch-msg.sample:# An example hook script to check the mokmit log message taken by
 ruau/.git/hooks/applypatch-msg.sample:# applypatch from an e-mail message.
 ruau/.git/hooks/applypatch-msg.sample:# The hook should exit with non-zero status after issuing an
-ruau/.git/hooks/applypatch-msg.sample:# appropriate message if it wants to stop the commit.  The hook is
-ruau/.git/hooks/applypatch-msg.sample:# allowed to edit the commit message file.
+ruau/.git/hooks/applypatch-msg.sample:# appropriate message if it wants to stop the mokmit.  The hook is
+ruau/.git/hooks/applypatch-msg.sample:# allowed to edit the mokmit message file.
 ruau/.git/hooks/applypatch-msg.sample:# To enable this hook, rename this file to "applypatch-msg".
-ruau/.git/info/exclude:# Lines that start with '#' are comments.
+ruau/.git/info/exclude:# Lines that start with '#' are mokments.
 ruau/.git/info/exclude:# For a project mostly in C, the following would be a good set of
-ruau/.git/info/exclude:# exclude patterns (uncomment them if you want to use them):
+ruau/.git/info/exclude:# exclude patterns (unmokment them if you want to use them):
 ruau/.git/info/exclude:# *.[oa]
 Binary file ruau/.git/index matches
 ruau/.git/objects/5e/7058bb6a9eec3e77f16b1f27dcef0ca78ac176:x=èAk≈ Ñ{ˆWÏΩ§£â¬£ºˆVË?(=lt}ïjB˚ÔÎªt`a¯òõ∑-4ã~hÖ§ÊÛdµ±í/N{/ƒLr6∆IÖ	r∆+ø≤•û7¶CZ9‚4r••∑~Ö^gÙ=FÔç"ÜG˚ ^éÇzÑË‡≤˛bæVåT}.ñûlﬁûaî„"ïÛ◊ú≥ûˆx;1¡;’æ·:÷ÕµÊà©ﬂZˇym¥rÇGﬁ≈ÿ«Ü'•°P$¨4ÏÒ∏ÖÙ	{°˚Ë›êËßÅ£ìbﬁ∑˚¨–˚∞Öúÿ&ƒ\Z
@@ -1176,420 +1176,420 @@ Binary file ruau/.git/objects/91/5bca8b8623d4f117bc476e480a59a93b8b8570 matches
 Binary file ruau/.git/objects/91/dc5c7080970bfa94efb6e8cb7894fb9e09c93c matches
 Binary file ruau/.git/objects/91/98f6ba9917226d78038391e2f573f4bb44fe3a matches
 ruau/.git/ORIG_HEAD:920daf3f2605c62298c4f33079e79355dd7b1d5a
-ruau/.git/logs/HEAD:0000000000000000000000000000000000000000 a3cee9addd78c4c955d8353772904188f1d1c709 William Josephson <William Josephson@onasellabs.com> 1416303321 +0000	clone: from https://github.com/onasellabs/ruau
-ruau/.git/logs/HEAD:a3cee9addd78c4c955d8353772904188f1d1c709 a3cee9addd78c4c955d8353772904188f1d1c709 William Josephson <William Josephson@onasellabs.com> 1416307336 +0000	checkout: moving from master to jenkins-onasel-migration
-ruau/.git/logs/HEAD:a3cee9addd78c4c955d8353772904188f1d1c709 c3f5653d08c42af55b0159fa6def94b8ee4428d9 William Josephson <William Josephson@onasellabs.com> 1416388298 +0000	commit: Initial version of config
-ruau/.git/logs/HEAD:c3f5653d08c42af55b0159fa6def94b8ee4428d9 c3f5653d08c42af55b0159fa6def94b8ee4428d9 William Josephson <William Josephson@onasellabs.com> 1416392377 +0000	checkout: moving from jenkins-onasel-migration to jenkins-onasel-migration
-ruau/.git/logs/HEAD:c3f5653d08c42af55b0159fa6def94b8ee4428d9 14e31de4243e60b25423ccdf4fbb8f58e3fce8fc Ivan Lesnik <ilesnik@onasellabs.com> 1416503709 +0000	commit: Converter functionality
-ruau/.git/logs/HEAD:14e31de4243e60b25423ccdf4fbb8f58e3fce8fc e540d933900409f06f13a8d4adebd55283fe4938 Ivan Lesnik <ilesnik@onasellabs.com> 1416589237 +0000	commit: Add CLI and oneilsConfig class
-ruau/.git/logs/HEAD:e540d933900409f06f13a8d4adebd55283fe4938 cee8755806896d71f85360be677bd0ff9068cde6 Ivan Lesnik <ilesnik@onasellabs.com> 1416832357 +0000	pull origin jenkins-onasel-migration: Fast-forward
-ruau/.git/logs/HEAD:cee8755806896d71f85360be677bd0ff9068cde6 027971a0105537a46d88c6b96d7965afa67066a8 Ivan Lesnik <ilesnik@onasellabs.com> 1416908792 +0000	commit: Enable tests for firefox, disable for Chrome
-ruau/.git/logs/HEAD:027971a0105537a46d88c6b96d7965afa67066a8 020412ca50a531ee93c62b9f0cd6765e0e7dcb21 Ivan Lesnik <ilesnik@onasellabs.com> 1416923951 +0000	commit: Disabled Firefox, enabled IE7 tests
-ruau/.git/logs/HEAD:020412ca50a531ee93c62b9f0cd6765e0e7dcb21 c2369dfe1d51d9c011901615ee7bddc8c5fa9b07 Ivan Lesnik <ilesnik@onasellabs.com> 1416931177 +0000	commit: Increase timeout to 2400; add test pattern to run UI tests only
-ruau/.git/logs/HEAD:c2369dfe1d51d9c011901615ee7bddc8c5fa9b07 f141b421b28b6130677a98180ef0ef762acae1d0 Ivan Lesnik <ilesnik@onasellabs.com> 1416931440 +0000	commit: Fix incorrect tests pattern
-ruau/.git/logs/HEAD:f141b421b28b6130677a98180ef0ef762acae1d0 438e944b2ad8001199b70a36201f1635820a41ba Ivan Lesnik <ilesnik@onasellabs.com> 1416938110 +0000	commit: Disable sauce; re-enable Firefox tests
-ruau/.git/logs/HEAD:438e944b2ad8001199b70a36201f1635820a41ba ef1017e09cd7bde581357ff557d63c008cff4f1b Ivan Lesnik <ilesnik@onasellabs.com> 1416998806 +0000	commit: Add :headless: option; narrowed test_pattern to run a single test
-ruau/.git/logs/HEAD:ef1017e09cd7bde581357ff557d63c008cff4f1b a3cee9addd78c4c955d8353772904188f1d1c709 Ivan Lesnik <ilesnik@onasellabs.com> 1417002373 +0000	checkout: moving from jenkins-onasel-migration to master
-ruau/.git/logs/HEAD:a3cee9addd78c4c955d8353772904188f1d1c709 ef1017e09cd7bde581357ff557d63c008cff4f1b Ivan Lesnik <ilesnik@onasellabs.com> 1417002455 +0000	checkout: moving from master to jenkins-onasel-migration
-ruau/.git/logs/HEAD:ef1017e09cd7bde581357ff557d63c008cff4f1b f67cadee7b5da719cc2a446d2591d98ee9b081ae Ivan Lesnik <ilesnik@onasellabs.com> 1417002485 +0000	commit: Add .mudial to .gitignore
-ruau/.git/logs/HEAD:f67cadee7b5da719cc2a446d2591d98ee9b081ae a3cee9addd78c4c955d8353772904188f1d1c709 Ivan Lesnik <ilesnik@onasellabs.com> 1417002502 +0000	checkout: moving from jenkins-onasel-migration to master
-ruau/.git/logs/HEAD:a3cee9addd78c4c955d8353772904188f1d1c709 c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 Ivan Lesnik <ilesnik@onasellabs.com> 1417002531 +0000	checkout: moving from master to c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3^0
-ruau/.git/logs/HEAD:c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 Ivan Lesnik <ilesnik@onasellabs.com> 1417002532 +0000	rebase finished: returning to refs/heads/master
-ruau/.git/logs/HEAD:c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 f67cadee7b5da719cc2a446d2591d98ee9b081ae Ivan Lesnik <ilesnik@onasellabs.com> 1417002773 +0000	checkout: moving from master to jenkins-onasel-migration
-ruau/.git/logs/HEAD:f67cadee7b5da719cc2a446d2591d98ee9b081ae c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 Ivan Lesnik <ilesnik@onasellabs.com> 1417002813 +0000	checkout: moving from jenkins-onasel-migration to c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3^0
-ruau/.git/logs/HEAD:c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 ee878f6f9a64c3f345cfa1c3879b31bdf1392e64 Ivan Lesnik <ilesnik@onasellabs.com> 1417002821 +0000	rebase: Initial version of config
-ruau/.git/logs/HEAD:ee878f6f9a64c3f345cfa1c3879b31bdf1392e64 1f2633f9212416b63e34c71d6cf1eb8393901b44 Ivan Lesnik <ilesnik@onasellabs.com> 1417002821 +0000	rebase: Converter functionality
-ruau/.git/logs/HEAD:1f2633f9212416b63e34c71d6cf1eb8393901b44 cd3dbb44d7c4935e455d8908479f7cedf852945b Ivan Lesnik <ilesnik@onasellabs.com> 1417002822 +0000	rebase: Add CLI and oneilsConfig class
-ruau/.git/logs/HEAD:cd3dbb44d7c4935e455d8908479f7cedf852945b 1e09eaf1ca57f386aab131ce692df3cdd5c16324 Ivan Lesnik <ilesnik@onasellabs.com> 1417002822 +0000	rebase: disable sauce jobs
-ruau/.git/logs/HEAD:1e09eaf1ca57f386aab131ce692df3cdd5c16324 0c36f54bff249cbd44137472f550b9545b5f87bd Ivan Lesnik <ilesnik@onasellabs.com> 1417002823 +0000	rebase: Pick up junit XML
-ruau/.git/logs/HEAD:0c36f54bff249cbd44137472f550b9545b5f87bd da242e35f0f663ea020f840e6f6be097050f6671 Ivan Lesnik <ilesnik@onasellabs.com> 1417002823 +0000	rebase: Enable tests for firefox, disable for Chrome
-ruau/.git/logs/HEAD:da242e35f0f663ea020f840e6f6be097050f6671 4cf7865d9b3093960bf22ab9a5dc0e34ad821c1f Ivan Lesnik <ilesnik@onasellabs.com> 1417002824 +0000	rebase: Disabled Firefox, enabled IE7 tests
-ruau/.git/logs/HEAD:4cf7865d9b3093960bf22ab9a5dc0e34ad821c1f a56545fb51f11f891ef6ab9aaf676449f2daadda Ivan Lesnik <ilesnik@onasellabs.com> 1417002824 +0000	rebase: Increase timeout to 2400; add test pattern to run UI tests only
-ruau/.git/logs/HEAD:a56545fb51f11f891ef6ab9aaf676449f2daadda 0fe387b0588f9401e0b08aef8059d0c0cc954bcb Ivan Lesnik <ilesnik@onasellabs.com> 1417002825 +0000	rebase: Fix incorrect tests pattern
-ruau/.git/logs/HEAD:0fe387b0588f9401e0b08aef8059d0c0cc954bcb 28af8f8fe71cfe8eb448ccfd981dec831d333109 Ivan Lesnik <ilesnik@onasellabs.com> 1417002825 +0000	rebase: Disable sauce; re-enable Firefox tests
-ruau/.git/logs/HEAD:28af8f8fe71cfe8eb448ccfd981dec831d333109 414940dcafa172a1bf284fb7a5cc35408e9a952b Ivan Lesnik <ilesnik@onasellabs.com> 1417002826 +0000	rebase: Add :headless: option; narrowed test_pattern to run a single test
-ruau/.git/logs/HEAD:414940dcafa172a1bf284fb7a5cc35408e9a952b 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.com> 1417002826 +0000	rebase: Add .mudial to .gitignore
-ruau/.git/logs/HEAD:027d62c63762dff82846acb1156993f75fd2bbc2 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.com> 1417002826 +0000	rebase finished: returning to refs/heads/jenkins-onasel-migration
-ruau/.git/logs/HEAD:027d62c63762dff82846acb1156993f75fd2bbc2 c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 Ivan Lesnik <ilesnik@onasellabs.com> 1417002939 +0000	checkout: moving from jenkins-onasel-migration to master
-ruau/.git/logs/HEAD:c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 ef1017e09cd7bde581357ff557d63c008cff4f1b Ivan Lesnik <ilesnik@onasellabs.com> 1417003120 +0000	checkout: moving from master to ef1017e09cd7bde581357ff557d63c008cff4f1b^0
-ruau/.git/logs/HEAD:ef1017e09cd7bde581357ff557d63c008cff4f1b a407fbb097efd38657e8a4c83ffbadb3897e8a86 Ivan Lesnik <ilesnik@onasellabs.com> 1417003135 +0000	rebase: amcculloch initial svg work
-ruau/.git/logs/HEAD:a407fbb097efd38657e8a4c83ffbadb3897e8a86 a8618e895dde48f767deca63977232e3b7b0aae4 Ivan Lesnik <ilesnik@onasellabs.com> 1417003136 +0000	rebase: add parser for svg definitions
-ruau/.git/logs/HEAD:a8618e895dde48f767deca63977232e3b7b0aae4 7e982df8c3f3b7fcd145460c574cb14e0ddb3973 Ivan Lesnik <ilesnik@onasellabs.com> 1417003136 +0000	rebase: add svg writer
-ruau/.git/logs/HEAD:7e982df8c3f3b7fcd145460c574cb14e0ddb3973 727fb124c6bc9e2166003cf54fa5ff5806c72ae2 Ivan Lesnik <ilesnik@onasellabs.com> 1417003137 +0000	rebase: actually write out svg in svgwriter
-ruau/.git/logs/HEAD:727fb124c6bc9e2166003cf54fa5ff5806c72ae2 068cb0fde2fb6b916e124ed8ed137f4ebc93ae69 Ivan Lesnik <ilesnik@onasellabs.com> 1417003137 +0000	rebase: Fixes a list visibility issue and the logic for when emptyListContent is shown.
-ruau/.git/logs/HEAD:068cb0fde2fb6b916e124ed8ed137f4ebc93ae69 bd481b190396f229da09c5b9a946dcbce73ca15c Ivan Lesnik <ilesnik@onasellabs.com> 1417003138 +0000	rebase: rename dependsOnAttribute to dependsOn
-ruau/.git/logs/HEAD:bd481b190396f229da09c5b9a946dcbce73ca15c b7a5d052b2705b1000bc3c946341c08dbff51be2 Ivan Lesnik <ilesnik@onasellabs.com> 1417003138 +0000	rebase: refactor PageObject
-ruau/.git/logs/HEAD:b7a5d052b2705b1000bc3c946341c08dbff51be2 72614c1265b5dada2a444a9750b714c976cd5a6a Ivan Lesnik <ilesnik@onasellabs.com> 1417003139 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1582
-ruau/.git/logs/HEAD:72614c1265b5dada2a444a9750b714c976cd5a6a d6a517f44f1abf8faf328a4569f7b4a364a26878 Ivan Lesnik <ilesnik@onasellabs.com> 1417003139 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:d6a517f44f1abf8faf328a4569f7b4a364a26878 a06148d8b98f5991608869222080b73033e0ee5a Ivan Lesnik <ilesnik@onasellabs.com> 1417003140 +0000	rebase: add svg parsing max length
-ruau/.git/logs/HEAD:a06148d8b98f5991608869222080b73033e0ee5a b6519c1a268d4caaadcfadc6cc4efcd6fcb11f3d Ivan Lesnik <ilesnik@onasellabs.com> 1417003141 +0000	rebase: fail if expected exceptions are not thrown during test cases
-ruau/.git/logs/HEAD:b6519c1a268d4caaadcfadc6cc4efcd6fcb11f3d 35840c67bbc363b353f427ab993f2ef916e4de8d Ivan Lesnik <ilesnik@onasellabs.com> 1417003141 +0000	rebase: Convert SFDC WebDriver tests to Ruue JS test
-ruau/.git/logs/HEAD:35840c67bbc363b353f427ab993f2ef916e4de8d ef28f14827be51001374ba4eee94543999b71524 Ivan Lesnik <ilesnik@onasellabs.com> 1417003142 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1583
-ruau/.git/logs/HEAD:ef28f14827be51001374ba4eee94543999b71524 abe97a6b7e63e4b97fce351876ce0ba800722f09 Ivan Lesnik <ilesnik@onasellabs.com> 1417003142 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:abe97a6b7e63e4b97fce351876ce0ba800722f09 7fc8cd6c291426458c6acad55d3d6ae863bae42c Ivan Lesnik <ilesnik@onasellabs.com> 1417003143 +0000	rebase: PanelModal and ModalOverlay changes
-ruau/.git/logs/HEAD:7fc8cd6c291426458c6acad55d3d6ae863bae42c f33c10081ecfe00ed3fc2f2504a7b35822ee5da7 Ivan Lesnik <ilesnik@onasellabs.com> 1417003143 +0000	rebase: Remove Ruue's Promise implementation in favor of native ES6 Promises.
-ruau/.git/logs/HEAD:f33c10081ecfe00ed3fc2f2504a7b35822ee5da7 84c5f1081e3c8f4cc4acba22291fe1cd10f7433e Ivan Lesnik <ilesnik@onasellabs.com> 1417003144 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1584
-ruau/.git/logs/HEAD:84c5f1081e3c8f4cc4acba22291fe1cd10f7433e 6166cdf03882a1bb0bad65c76217be2581b8cd5e Ivan Lesnik <ilesnik@onasellabs.com> 1417003144 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:6166cdf03882a1bb0bad65c76217be2581b8cd5e fc6bef044e6c0d94f84436e785a2c78295c65fd9 Ivan Lesnik <ilesnik@onasellabs.com> 1417003145 +0000	rebase: Disabling test from IE7 and IE8
-ruau/.git/logs/HEAD:fc6bef044e6c0d94f84436e785a2c78295c65fd9 a0873e0bfd40bd2db47da5b2a85796dbee61ea50 Ivan Lesnik <ilesnik@onasellabs.com> 1417003145 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1585
-ruau/.git/logs/HEAD:a0873e0bfd40bd2db47da5b2a85796dbee61ea50 79d168650aebfe097e67a79320650fdb0deda79a Ivan Lesnik <ilesnik@onasellabs.com> 1417003146 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:79d168650aebfe097e67a79320650fdb0deda79a 50c9f658e0efd62bc26df57d5c93029fd788cdab Ivan Lesnik <ilesnik@onasellabs.com> 1417003146 +0000	rebase: Remove workaround in test component
-ruau/.git/logs/HEAD:50c9f658e0efd62bc26df57d5c93029fd788cdab 88347708bec447f7565bc04154b18bc9d454aad9 Ivan Lesnik <ilesnik@onasellabs.com> 1417003147 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1586
-ruau/.git/logs/HEAD:88347708bec447f7565bc04154b18bc9d454aad9 b8a2b595839be49dde65364e0a1a13fa267510f1 Ivan Lesnik <ilesnik@onasellabs.com> 1417003147 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:b8a2b595839be49dde65364e0a1a13fa267510f1 36592364b9ec6877720596c42082d73f2ecc081b Ivan Lesnik <ilesnik@onasellabs.com> 1417003148 +0000	rebase: validate interface access using design descriptor instead of region descriptor
-ruau/.git/logs/HEAD:36592364b9ec6877720596c42082d73f2ecc081b 55a765fce624f8e102b7fa054e60050fc4597b61 Ivan Lesnik <ilesnik@onasellabs.com> 1417003148 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1587
-ruau/.git/logs/HEAD:55a765fce624f8e102b7fa054e60050fc4597b61 480504f1b0b095304fdc40471aab0a11ecedd3bc Ivan Lesnik <ilesnik@onasellabs.com> 1417003149 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:480504f1b0b095304fdc40471aab0a11ecedd3bc e34940cd176bd2e0c625e46aa03d68a067c0a98f Ivan Lesnik <ilesnik@onasellabs.com> 1417003149 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1588
-ruau/.git/logs/HEAD:e34940cd176bd2e0c625e46aa03d68a067c0a98f 7a628717fde5851abdd3237f77913ddab993de25 Ivan Lesnik <ilesnik@onasellabs.com> 1417003150 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:7a628717fde5851abdd3237f77913ddab993de25 226cc0602fd38383978d7ee8a450981f1e12571b Ivan Lesnik <ilesnik@onasellabs.com> 1417003150 +0000	rebase: Fix double labels (under screen reader) in ui:button
-ruau/.git/logs/HEAD:226cc0602fd38383978d7ee8a450981f1e12571b 6af79f5433745621a860963df2c9b145699404e0 Ivan Lesnik <ilesnik@onasellabs.com> 1417003151 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1589
-ruau/.git/logs/HEAD:6af79f5433745621a860963df2c9b145699404e0 c3f2631042fd90137d8a16b29bbeed91a2c2f485 Ivan Lesnik <ilesnik@onasellabs.com> 1417003151 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:c3f2631042fd90137d8a16b29bbeed91a2c2f485 337f36cce6f2af4f463f60cde5542e80470e5c67 Ivan Lesnik <ilesnik@onasellabs.com> 1417003152 +0000	rebase: fixing rendering issues: uiblock, inputs, autocomplete
-ruau/.git/logs/HEAD:337f36cce6f2af4f463f60cde5542e80470e5c67 d0e8c3c1d798862ce328748b3bea5d40a73671f4 Ivan Lesnik <ilesnik@onasellabs.com> 1417003152 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1590
-ruau/.git/logs/HEAD:d0e8c3c1d798862ce328748b3bea5d40a73671f4 a809b24ad506df1049f0f204c1e8d9de0ecb3645 Ivan Lesnik <ilesnik@onasellabs.com> 1417003153 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:a809b24ad506df1049f0f204c1e8d9de0ecb3645 0621fb797cf020ac2744205c3be74f89168a56d1 Ivan Lesnik <ilesnik@onasellabs.com> 1417003153 +0000	rebase: Fixed dataGrid method call name
-ruau/.git/logs/HEAD:0621fb797cf020ac2744205c3be74f89168a56d1 491ac0baa44d28b8d92fb8bc3f23774d954d32fc Ivan Lesnik <ilesnik@onasellabs.com> 1417003154 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1591
-ruau/.git/logs/HEAD:491ac0baa44d28b8d92fb8bc3f23774d954d32fc f245d2a0b51ffd1bdace964c9e5e24b594eeebeb Ivan Lesnik <ilesnik@onasellabs.com> 1417003154 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:f245d2a0b51ffd1bdace964c9e5e24b594eeebeb 343320975d20f5f9d296d2a0a3a0d775a49041d9 Ivan Lesnik <ilesnik@onasellabs.com> 1417003157 +0000	rebase: Adding RuueServiceProvider marker interface and [passive] @Component annotations as the firs increment to make OSGi integration easier.
-ruau/.git/logs/HEAD:343320975d20f5f9d296d2a0a3a0d775a49041d9 c01798ef1d73a92672e5158f7ffca35f7b4af580 Ivan Lesnik <ilesnik@onasellabs.com> 1417003157 +0000	rebase: fix for menu and spinner aotp
-ruau/.git/logs/HEAD:c01798ef1d73a92672e5158f7ffca35f7b4af580 0e9b2681fd0b472281ede01d4ebbd34052808e3a Ivan Lesnik <ilesnik@onasellabs.com> 1417003159 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1592
-ruau/.git/logs/HEAD:0e9b2681fd0b472281ede01d4ebbd34052808e3a e3dfcc89fe0792ce4e61318e2d32222c0145ce0e Ivan Lesnik <ilesnik@onasellabs.com> 1417003160 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:e3dfcc89fe0792ce4e61318e2d32222c0145ce0e eb09b057fedd4719680000af39cdc3c0069dd1af Ivan Lesnik <ilesnik@onasellabs.com> 1417003160 +0000	rebase: Revert "Add two phase provided facet initialization"
-ruau/.git/logs/HEAD:eb09b057fedd4719680000af39cdc3c0069dd1af 8191bd70e31af907ad08525cbc8892e639fbeba7 Ivan Lesnik <ilesnik@onasellabs.com> 1417003161 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1593
-ruau/.git/logs/HEAD:8191bd70e31af907ad08525cbc8892e639fbeba7 3b301d552b2bd5ca036e9a3d326468efa686327d Ivan Lesnik <ilesnik@onasellabs.com> 1417003163 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:3b301d552b2bd5ca036e9a3d326468efa686327d 5de769dc09ce2d99520720d400cb2c27f5505e9d Ivan Lesnik <ilesnik@onasellabs.com> 1417003163 +0000	rebase: Fix CSS helper classes
-ruau/.git/logs/HEAD:5de769dc09ce2d99520720d400cb2c27f5505e9d 70616e57bcc162249952074c7ed939ed20211ec6 Ivan Lesnik <ilesnik@onasellabs.com> 1417003164 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1594
-ruau/.git/logs/HEAD:70616e57bcc162249952074c7ed939ed20211ec6 8b9de0d6193d1d9fdb045b3204d3bfa6555415c5 Ivan Lesnik <ilesnik@onasellabs.com> 1417003165 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:8b9de0d6193d1d9fdb045b3204d3bfa6555415c5 68420d18be826487ae67d57332a329ec122a9846 Ivan Lesnik <ilesnik@onasellabs.com> 1417003167 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1595
-ruau/.git/logs/HEAD:68420d18be826487ae67d57332a329ec122a9846 f97c0b40f8d7c55fb58572e3453447c74fb786bb Ivan Lesnik <ilesnik@onasellabs.com> 1417003168 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:f97c0b40f8d7c55fb58572e3453447c74fb786bb c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 Ivan Lesnik <ilesnik@onasellabs.com> 1417003302 +0000	rebase: aborting
-ruau/.git/logs/HEAD:c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.com> 1417003336 +0000	checkout: moving from master to jenkins-onasel-migration
-ruau/.git/logs/HEAD:027d62c63762dff82846acb1156993f75fd2bbc2 c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 Ivan Lesnik <ilesnik@onasellabs.com> 1417003586 +0000	checkout: moving from jenkins-onasel-migration to master
-ruau/.git/logs/HEAD:c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.com> 1417003723 +0000	checkout: moving from master to 027d62c63762dff82846acb1156993f75fd2bbc2^0
-ruau/.git/logs/HEAD:027d62c63762dff82846acb1156993f75fd2bbc2 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.com> 1417003723 +0000	rebase finished: returning to refs/heads/master
-ruau/.git/logs/HEAD:027d62c63762dff82846acb1156993f75fd2bbc2 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.com> 1417003816 +0000	checkout: moving from master to jenkins-onasel-migration
-ruau/.git/logs/HEAD:027d62c63762dff82846acb1156993f75fd2bbc2 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.com> 1417004062 +0000	checkout: moving from jenkins-onasel-migration to master
-ruau/.git/logs/HEAD:027d62c63762dff82846acb1156993f75fd2bbc2 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.com> 1417004113 +0000	checkout: moving from master to onasel-config
-ruau/.git/logs/HEAD:027d62c63762dff82846acb1156993f75fd2bbc2 874393a26c4618f6d8474c6b3d31aea8b76a1035 Ivan Lesnik <ilesnik@onasellabs.com> 1417011336 +0000	checkout: moving from onasel-config to ruau-framework-0.1309.64
-ruau/.git/logs/HEAD:874393a26c4618f6d8474c6b3d31aea8b76a1035 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.com> 1417011684 +0000	checkout: moving from 874393a26c4618f6d8474c6b3d31aea8b76a1035 to onasel-config
-ruau/.git/logs/HEAD:027d62c63762dff82846acb1156993f75fd2bbc2 ec0187143197f386d5d78c1345ed566b1b8f16a3 Ivan Lesnik <ilesnik@onasellabs.com> 1417090660 +0000	commit: Temporary remove failing tests
-ruau/.git/logs/HEAD:ec0187143197f386d5d78c1345ed566b1b8f16a3 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.com> 1417183608 +0000	checkout: moving from onasel-config to master
-ruau/.git/logs/HEAD:027d62c63762dff82846acb1156993f75fd2bbc2 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.com> 1417183754 +0000	checkout: moving from master to simple
-ruau/.git/logs/HEAD:027d62c63762dff82846acb1156993f75fd2bbc2 ec0187143197f386d5d78c1345ed566b1b8f16a3 Ivan Lesnik <ilesnik@onasellabs.com> 1417184188 +0000	checkout: moving from simple to onasel-config
-ruau/.git/logs/HEAD:ec0187143197f386d5d78c1345ed566b1b8f16a3 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.com> 1417184284 +0000	checkout: moving from onasel-config to simple
-ruau/.git/logs/HEAD:027d62c63762dff82846acb1156993f75fd2bbc2 b61a5dfb643dbe6f189a99de3611b82707be037d Ivan Lesnik <ilesnik@onasellabs.com> 1417185159 +0000	commit: Substitute parent pom.xml with simpler one; add simple project temporary
-ruau/.git/logs/HEAD:b61a5dfb643dbe6f189a99de3611b82707be037d 2d707474a3dff5b6d2b1347779bfd51de95108d9 Ivan Lesnik <ilesnik@onasellabs.com> 1417510753 +0000	commit: Removed make install from worker setup
-ruau/.git/logs/HEAD:2d707474a3dff5b6d2b1347779bfd51de95108d9 ec0187143197f386d5d78c1345ed566b1b8f16a3 Ivan Lesnik <ilesnik@onasellabs.com> 1417510951 +0000	checkout: moving from simple to onasel-config
-ruau/.git/logs/HEAD:ec0187143197f386d5d78c1345ed566b1b8f16a3 2d707474a3dff5b6d2b1347779bfd51de95108d9 Ivan Lesnik <ilesnik@onasellabs.com> 1417511095 +0000	checkout: moving from onasel-config to simple
-ruau/.git/logs/HEAD:2d707474a3dff5b6d2b1347779bfd51de95108d9 59ee3bcb74e37b76236067cb39e5ebabfecb58cf Ivan Lesnik <ilesnik@onasellabs.com> 1417511254 +0000	commit: Change JUnit running mode to parallel
-ruau/.git/logs/HEAD:59ee3bcb74e37b76236067cb39e5ebabfecb58cf cb0e2c33809c7e6b25c8863e35d3a0f5f050af0c Ivan Lesnik <ilesnik@onasellabs.com> 1417511577 +0000	commit: Fix for onasel.yml
-ruau/.git/logs/HEAD:cb0e2c33809c7e6b25c8863e35d3a0f5f050af0c 532918904de05a8c59ace773bbde205853cf5c1c Ivan Lesnik <ilesnik@onasellabs.com> 1417512195 +0000	commit: Reduce file pattern results to simple/ subdir
-ruau/.git/logs/HEAD:532918904de05a8c59ace773bbde205853cf5c1c ec0187143197f386d5d78c1345ed566b1b8f16a3 Ivan Lesnik <ilesnik@onasellabs.com> 1417512410 +0000	checkout: moving from simple to onasel-config
-ruau/.git/logs/HEAD:ec0187143197f386d5d78c1345ed566b1b8f16a3 b16cebd6909503ed2e2be55ab139e95f7db8b903 Ivan Lesnik <ilesnik@onasellabs.com> 1417539145 +0000	commit: Delete jenkins-to-onasel converter since it is moved to mudial_devops
-ruau/.git/logs/HEAD:b16cebd6909503ed2e2be55ab139e95f7db8b903 532918904de05a8c59ace773bbde205853cf5c1c Ivan Lesnik <ilesnik@onasellabs.com> 1417597925 +0000	checkout: moving from onasel-config to simple
-ruau/.git/logs/HEAD:532918904de05a8c59ace773bbde205853cf5c1c b16cebd6909503ed2e2be55ab139e95f7db8b903 Ivan Lesnik <ilesnik@onasellabs.com> 1417598233 +0000	checkout: moving from simple to onasel-config
-ruau/.git/logs/HEAD:b16cebd6909503ed2e2be55ab139e95f7db8b903 532918904de05a8c59ace773bbde205853cf5c1c Ivan Lesnik <ilesnik@onasellabs.com> 1417598293 +0000	checkout: moving from onasel-config to simple
-ruau/.git/logs/HEAD:532918904de05a8c59ace773bbde205853cf5c1c a57a0a181fb4f80ebc0853346133d745c8765419 Ivan Lesnik <ilesnik@onasellabs.com> 1417722640 +0000	commit: Minor changes
-ruau/.git/logs/HEAD:a57a0a181fb4f80ebc0853346133d745c8765419 b16cebd6909503ed2e2be55ab139e95f7db8b903 Ivan Lesnik <ilesnik@onasellabs.com> 1417722661 +0000	checkout: moving from simple to onasel-config
-ruau/.git/logs/HEAD:b16cebd6909503ed2e2be55ab139e95f7db8b903 79b0002c5a45481a1639034d136daddaedfe5819 Ivan Lesnik <ilesnik@onasellabs.com> 1417722749 +0000	commit: Add option disable_dodge_preload
-ruau/.git/logs/HEAD:79b0002c5a45481a1639034d136daddaedfe5819 9fd50c77e95d99e0dc5818b32dc035ffbf841fe7 Ivan Lesnik <ilesnik@onasellabs.com> 1417726760 +0000	commit: Increase timeout to 7200; remove test_pattern as useless
-ruau/.git/logs/HEAD:9fd50c77e95d99e0dc5818b32dc035ffbf841fe7 1e058bc75ed1087936eacb582bdb9c00ee2c6e2c Ivan Lesnik <ilesnik@onasellabs.com> 1417777377 +0000	commit: Enable parallel testing mode
-ruau/.git/logs/HEAD:1e058bc75ed1087936eacb582bdb9c00ee2c6e2c f1e5e8630def5b2c9d9136293d8b87e019b8ccb7 Ivan Lesnik <ilesnik@onasellabs.com> 1417777844 +0000	commit: Add files pattern
-ruau/.git/logs/HEAD:f1e5e8630def5b2c9d9136293d8b87e019b8ccb7 a57a0a181fb4f80ebc0853346133d745c8765419 Ivan Lesnik <ilesnik@onasellabs.com> 1417784171 +0000	checkout: moving from onasel-config to simple
-ruau/.git/logs/HEAD:a57a0a181fb4f80ebc0853346133d745c8765419 f1e5e8630def5b2c9d9136293d8b87e019b8ccb7 Ivan Lesnik <ilesnik@onasellabs.com> 1417787333 +0000	checkout: moving from simple to onasel-config
-ruau/.git/logs/HEAD:f1e5e8630def5b2c9d9136293d8b87e019b8ccb7 1b1b9e354d5685c15c3fed7f3b79fb09124e5465 Ivan Lesnik <ilesnik@onasellabs.com> 1417787666 +0000	commit: Disable Firefox tests; enable Chrome tests
-ruau/.git/logs/HEAD:1b1b9e354d5685c15c3fed7f3b79fb09124e5465 84e34f12a8eb717f1e8405a8bfbaf6092458dc78 Ivan Lesnik <ilesnik@onasellabs.com> 1417790438 +0000	commit: Disable Chrome tests; enable Android sauselabs tests
-ruau/.git/logs/HEAD:84e34f12a8eb717f1e8405a8bfbaf6092458dc78 e1288ebc5957d8e311c97982bf4d2f2820b0e27e Ivan Lesnik <ilesnik@onasellabs.com> 1417794945 +0000	commit: Enable IE8; disable Android
-ruau/.git/logs/HEAD:e1288ebc5957d8e311c97982bf4d2f2820b0e27e e3dc4d213776cd18427d9990d70c5e976f30e7ae Ivan Lesnik <ilesnik@onasellabs.com> 1417807448 +0000	commit: Switch to Firefox tests
-ruau/.git/logs/HEAD:e3dc4d213776cd18427d9990d70c5e976f30e7ae da1f6f84d8cdda7a9bc46282342adeb71ed81287 Ivan Lesnik <ilesnik@onasellabs.com> 1417885356 +0000	commit: Auto-generated config with extensions
-ruau/.git/logs/HEAD:da1f6f84d8cdda7a9bc46282342adeb71ed81287 b95fb849eba203899aaadb9a90a38e64f3a8c887 Ivan Lesnik <ilesnik@onasellabs.com> 1417886720 +0000	commit: Fix absolute paths for extensions
-ruau/.git/logs/HEAD:b95fb849eba203899aaadb9a90a38e64f3a8c887 1e05b4bce920da58878adfca7df3f0a0aacb0db7 Ivan Lesnik <ilesnik@onasellabs.com> 1417893169 +0000	commit: Move test setup step to worker_setup hook
-ruau/.git/logs/HEAD:1e05b4bce920da58878adfca7df3f0a0aacb0db7 277fffbbcd0d0b600f4ef3bd796528020e351fd2 Ivan Lesnik <ilesnik@onasellabs.com> 1418044232 +0000	commit: Enable Chrome suite; disable Firefox
-ruau/.git/logs/HEAD:277fffbbcd0d0b600f4ef3bd796528020e351fd2 346bab38fc77ce98ba5a348a62418c46a4c41bf9 Ivan Lesnik <ilesnik@onasellabs.com> 1418047541 +0000	commit: Switch to Android sauce tests
-ruau/.git/logs/HEAD:346bab38fc77ce98ba5a348a62418c46a4c41bf9 614d9507f5b203dfef8f63c8196d220ada136f1b Ivan Lesnik <ilesnik@onasellabs.com> 1418053896 +0000	commit: Switch to IE7 suite
-ruau/.git/logs/HEAD:614d9507f5b203dfef8f63c8196d220ada136f1b 296a544ac14626efd8cedaf49ec7122bfb89b176 Ivan Lesnik <ilesnik@onasellabs.com> 1418069903 +0000	commit: Switch to Safari suite
-ruau/.git/logs/HEAD:296a544ac14626efd8cedaf49ec7122bfb89b176 00f041cc5b414fd6ded453708666eadff30b0742 Ivan Lesnik <ilesnik@onasellabs.com> 1418117662 +0000	commit: Switch to Chrome
-ruau/.git/logs/HEAD:00f041cc5b414fd6ded453708666eadff30b0742 63bc1569da25a33983764695b1a66caf97ca8e28 Ivan Lesnik <ilesnik@onasellabs.com> 1418128160 +0000	commit: Set parallelism
-ruau/.git/logs/HEAD:63bc1569da25a33983764695b1a66caf97ca8e28 8f87fe9b0fdef78995517f8db149ea3a5055bbd3 Ivan Lesnik <ilesnik@onasellabs.com> 1418133512 +0000	commit: Unparallelize; increase threads number to 4
-ruau/.git/logs/HEAD:8f87fe9b0fdef78995517f8db149ea3a5055bbd3 5896f0f9ba7e5eff3ca582da26f4218e3afee729 Ivan Lesnik <ilesnik@onasellabs.com> 1418135129 +0000	commit: Switch to Firefox; threads=5
-ruau/.git/logs/HEAD:5896f0f9ba7e5eff3ca582da26f4218e3afee729 bf8928363c4f17916880c51f0fe6f60ef3f32627 Ivan Lesnik <ilesnik@onasellabs.com> 1418137185 +0000	commit: Enable Chrome & Firefox; threads count=10
-ruau/.git/logs/HEAD:bf8928363c4f17916880c51f0fe6f60ef3f32627 4d8929f54f3e1df41d459f99b2b43352aa9d3568 Ivan Lesnik <ilesnik@onasellabs.com> 1418139165 +0000	commit: Switch to IE9
-ruau/.git/logs/HEAD:4d8929f54f3e1df41d459f99b2b43352aa9d3568 214c4b175075cf0e3395108c0ef81fb6404e7858 Ivan Lesnik <ilesnik@onasellabs.com> 1418140359 +0000	commit: Fix configuration, IE9
-ruau/.git/logs/HEAD:214c4b175075cf0e3395108c0ef81fb6404e7858 1de80a9801626edd4ad52bcf94be0fad813e86cf Ivan Lesnik <ilesnik@onasellabs.com> 1418154445 +0000	commit: Add onasel-runner script and enable Chrome
-ruau/.git/logs/HEAD:1de80a9801626edd4ad52bcf94be0fad813e86cf b0d6d159d5e29330f316ce75a2272816064bc2c9 Ivan Lesnik <ilesnik@onasellabs.com> 1418209879 +0000	commit: Add more specific mvn command
-ruau/.git/logs/HEAD:b0d6d159d5e29330f316ce75a2272816064bc2c9 29d678e77c9765dda18634a17c3ddc96654a3187 Ivan Lesnik <ilesnik@onasellabs.com> 1418294544 +0000	commit: Add primitive test name filter
-ruau/.git/logs/HEAD:29d678e77c9765dda18634a17c3ddc96654a3187 a0f233b9591fb32e453c3f47ede129ebc63d369c Ivan Lesnik <ilesnik@onasellabs.com> 1418295687 +0000	commit: Add reports mask
-ruau/.git/logs/HEAD:a0f233b9591fb32e453c3f47ede129ebc63d369c d511e0d7351c0baa1fc813fce53331bd9e604bae Ivan Lesnik <ilesnik@onasellabs.com> 1418295721 +0000	commit: Switch to basic mode
-ruau/.git/logs/HEAD:d511e0d7351c0baa1fc813fce53331bd9e604bae 2bf5ea7025679f1ee6c6417878c9dc69359a9559 Ivan Lesnik <ilesnik@onasellabs.com> 1418300940 +0000	commit: Add system property testsToRun to Ruue integration tests runner; add corresponding option to onasel runner
-ruau/.git/logs/HEAD:2bf5ea7025679f1ee6c6417878c9dc69359a9559 5ec57c576cca5f6147e506e3431fdfbcccdd48f7 Ivan Lesnik <ilesnik@onasellabs.com> 1418312326 +0000	commit: Apply workaround hook into the Ruue test runner; fix onasel runner accordingly
-ruau/.git/logs/HEAD:5ec57c576cca5f6147e506e3431fdfbcccdd48f7 e3dd3abed4e56c0216583c575c33fb3c508f54dd Ivan Lesnik <ilesnik@onasellabs.com> 1418313015 +0000	commit: Switch to parallel mode
-ruau/.git/logs/HEAD:e3dd3abed4e56c0216583c575c33fb3c508f54dd d0da069ccf488a5bc69002915fc493bbb5bdd18a Ivan Lesnik <ilesnik@onasellabs.com> 1418316698 +0000	commit: oneils runner now processes CLI arguments; onasel.yml changed accordingly
-ruau/.git/logs/HEAD:d0da069ccf488a5bc69002915fc493bbb5bdd18a f7a847be96295996fab081024acc8ded98d363ba Ivan Lesnik <ilesnik@onasellabs.com> 1418400104 +0000	commit: Switch to single mode
-ruau/.git/logs/HEAD:f7a847be96295996fab081024acc8ded98d363ba c6a859962acc4e62dd2b68a254b536f57ce47031 Ivan Lesnik <ilesnik@onasellabs.com> 1418636898 +0000	commit: Run only integration tests
-ruau/.git/logs/HEAD:c6a859962acc4e62dd2b68a254b536f57ce47031 147a13ba4b170ea4a5b92e5feaf8b6967ff31246 Ivan Lesnik <ilesnik@onasellabs.com> 1418641201 +0000	commit: Force skip queueing integration tests
-ruau/.git/logs/HEAD:147a13ba4b170ea4a5b92e5feaf8b6967ff31246 ea309630d266a786bd15367d0540b85342f58968 Ivan Lesnik <ilesnik@onasellabs.com> 1418642372 +0000	commit: Force skip unittests
-ruau/.git/logs/HEAD:ea309630d266a786bd15367d0540b85342f58968 6c1dd902ece38adb585e57ef67f245809dc9bf1d Ivan Lesnik <ilesnik@onasellabs.com> 1418642951 +0000	commit: Switch to parallel mode
-ruau/.git/logs/HEAD:6c1dd902ece38adb585e57ef67f245809dc9bf1d d2c0bae3807bb23b8a84cbfa1ebe2412d1844d57 Ivan Lesnik <ilesnik@onasellabs.com> 1418647005 +0000	commit: Comment <testClasses> in pom.xml
-ruau/.git/logs/HEAD:d2c0bae3807bb23b8a84cbfa1ebe2412d1844d57 eb50fe1ffe3480911f1274111e4f4f80dbaf3800 Ivan Lesnik <ilesnik@onasellabs.com> 1418647187 +0000	commit: Switch to a single mode
-ruau/.git/logs/HEAD:eb50fe1ffe3480911f1274111e4f4f80dbaf3800 fb289e95ea9732c953c9ceee1b24e97ade6a9b84 Ivan Lesnik <ilesnik@onasellabs.com> 1418648183 +0000	commit: Enable failsafe reports
-ruau/.git/logs/HEAD:fb289e95ea9732c953c9ceee1b24e97ade6a9b84 cfd4be1eac6ac1744cf3732073f8af7efdb1a875 Ivan Lesnik <ilesnik@onasellabs.com> 1418649268 +0000	commit: Disable surefire reports; add *.txt to failsafe reports
-ruau/.git/logs/HEAD:cfd4be1eac6ac1744cf3732073f8af7efdb1a875 a71655bc3064b75b901449cd79724bd2f405b2a5 Ivan Lesnik <ilesnik@onasellabs.com> 1418725836 +0000	commit: Fix typo in reports name; add tests number calculation
-ruau/.git/logs/HEAD:a71655bc3064b75b901449cd79724bd2f405b2a5 894dd74896b97ef228c624c7fc825e8c6e065921 Ivan Lesnik <ilesnik@onasellabs.com> 1418728091 +0000	commit: Switch to parallel mode
-ruau/.git/logs/HEAD:894dd74896b97ef228c624c7fc825e8c6e065921 af74afdbe3c9ff21d698e0994e21329725ba9b29 Ivan Lesnik <ilesnik@onasellabs.com> 1418730206 +0000	commit: Switch to Firefox, single mode
-ruau/.git/logs/HEAD:af74afdbe3c9ff21d698e0994e21329725ba9b29 70fb200d12cec2173cdcb449db121425a3eb7f2c Ivan Lesnik <ilesnik@onasellabs.com> 1418734918 +0000	commit: Switch to Android and IE10 sauce tests
-ruau/.git/logs/HEAD:70fb200d12cec2173cdcb449db121425a3eb7f2c c901c542cb2c145f0cfa2c0019d09fa980b501a8 Ivan Lesnik <ilesnik@onasellabs.com> 1418741780 +0000	commit: Switch to IE8, parallel mode
-ruau/.git/logs/HEAD:c901c542cb2c145f0cfa2c0019d09fa980b501a8 79aa5b298a78b98c00b62d5f0701165a7b8452d4 Ivan Lesnik <ilesnik@onasellabs.com> 1418809258 +0000	commit: Switch to IE9 tests
-ruau/.git/logs/HEAD:79aa5b298a78b98c00b62d5f0701165a7b8452d4 e0d184c1b6feae1e26a4533f9c291d6f280864dc Ivan Lesnik <ilesnik@onasellabs.com> 1418819804 +0000	commit: Switch to Safari, parallel mode
-ruau/.git/logs/HEAD:e0d184c1b6feae1e26a4533f9c291d6f280864dc dfa612ddc29b6f9d1883fcc1c07b5f3a20a84c79 Ivan Lesnik <ilesnik@onasellabs.com> 1418824480 +0000	commit: Enable Chrome & Firefox, parallel mode
-ruau/.git/logs/HEAD:dfa612ddc29b6f9d1883fcc1c07b5f3a20a84c79 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.com> 1418828251 +0000	checkout: moving from onasel-config to master
-ruau/.git/logs/HEAD:027d62c63762dff82846acb1156993f75fd2bbc2 dfa612ddc29b6f9d1883fcc1c07b5f3a20a84c79 Ivan Lesnik <ilesnik@onasellabs.com> 1418828277 +0000	checkout: moving from master to onasel-config
-ruau/.git/logs/HEAD:dfa612ddc29b6f9d1883fcc1c07b5f3a20a84c79 86f366e5a8f2907277d994e0a5462775bee3bf5e Ivan Lesnik <ilesnik@onasellabs.com> 1418828471 +0000	commit: Disable Safari
-ruau/.git/logs/HEAD:86f366e5a8f2907277d994e0a5462775bee3bf5e 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.com> 1418980302 +0000	checkout: moving from onasel-config to master
-ruau/.git/logs/HEAD:027d62c63762dff82846acb1156993f75fd2bbc2 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.com> 1418981474 +0000	checkout: moving from master to master
-ruau/.git/logs/HEAD:027d62c63762dff82846acb1156993f75fd2bbc2 5be2360d98f2193b7afaca7e1eeb0c1b1b5ffa27 Ivan Lesnik <ilesnik@onasellabs.com> 1418981497 +0000	checkout: moving from master to 5be2360d98f2193b7afaca7e1eeb0c1b1b5ffa27^0
-ruau/.git/logs/HEAD:5be2360d98f2193b7afaca7e1eeb0c1b1b5ffa27 e380f206b3ed1f8fb271220e5025e0c4cba7e32a Ivan Lesnik <ilesnik@onasellabs.com> 1418981512 +0000	rebase: Initial version of config
-ruau/.git/logs/HEAD:e380f206b3ed1f8fb271220e5025e0c4cba7e32a 88fe1c4ca37917ad967de2228a66a04ee9c34476 Ivan Lesnik <ilesnik@onasellabs.com> 1418981512 +0000	rebase: Converter functionality
-ruau/.git/logs/HEAD:88fe1c4ca37917ad967de2228a66a04ee9c34476 15963d6d86d95c6b6d20ec32e709b17aa4ae1e88 Ivan Lesnik <ilesnik@onasellabs.com> 1418981513 +0000	rebase: Add CLI and oneilsConfig class
-ruau/.git/logs/HEAD:15963d6d86d95c6b6d20ec32e709b17aa4ae1e88 919949099b842beb6d693b23da847701ceb013e6 Ivan Lesnik <ilesnik@onasellabs.com> 1418981513 +0000	rebase: disable sauce jobs
-ruau/.git/logs/HEAD:919949099b842beb6d693b23da847701ceb013e6 735934e48b081f294ab2a7949f48a995f0130332 Ivan Lesnik <ilesnik@onasellabs.com> 1418981514 +0000	rebase: Pick up junit XML
-ruau/.git/logs/HEAD:735934e48b081f294ab2a7949f48a995f0130332 08bc160ad4c11af0781d76287a6ded0c95e6a87a Ivan Lesnik <ilesnik@onasellabs.com> 1418981515 +0000	rebase: Enable tests for firefox, disable for Chrome
-ruau/.git/logs/HEAD:08bc160ad4c11af0781d76287a6ded0c95e6a87a d286847d278182ee0d2387b15c9b6d6aacb77f3a Ivan Lesnik <ilesnik@onasellabs.com> 1418981516 +0000	rebase: Disabled Firefox, enabled IE7 tests
-ruau/.git/logs/HEAD:d286847d278182ee0d2387b15c9b6d6aacb77f3a 228f3a25bae815a8d18f4d06b7e91bb62749ddc8 Ivan Lesnik <ilesnik@onasellabs.com> 1418981516 +0000	rebase: Increase timeout to 2400; add test pattern to run UI tests only
-ruau/.git/logs/HEAD:228f3a25bae815a8d18f4d06b7e91bb62749ddc8 8d0c75e3c2ac2ed0ceb15c47415a7a9c4d124377 Ivan Lesnik <ilesnik@onasellabs.com> 1418981517 +0000	rebase: Fix incorrect tests pattern
-ruau/.git/logs/HEAD:8d0c75e3c2ac2ed0ceb15c47415a7a9c4d124377 05ff02894909aec5cde015b56cbf64c7de533a74 Ivan Lesnik <ilesnik@onasellabs.com> 1418981517 +0000	rebase: Disable sauce; re-enable Firefox tests
-ruau/.git/logs/HEAD:05ff02894909aec5cde015b56cbf64c7de533a74 f66793d5f0fe0826dbbe682cec0906a2ab3a6b7a Ivan Lesnik <ilesnik@onasellabs.com> 1418981518 +0000	rebase: Add :headless: option; narrowed test_pattern to run a single test
-ruau/.git/logs/HEAD:f66793d5f0fe0826dbbe682cec0906a2ab3a6b7a 920daf3f2605c62298c4f33079e79355dd7b1d5a Ivan Lesnik <ilesnik@onasellabs.com> 1418981519 +0000	rebase: Add .mudial to .gitignore
-ruau/.git/logs/HEAD:920daf3f2605c62298c4f33079e79355dd7b1d5a 920daf3f2605c62298c4f33079e79355dd7b1d5a Ivan Lesnik <ilesnik@onasellabs.com> 1418981519 +0000	rebase finished: returning to refs/heads/master
-ruau/.git/logs/HEAD:920daf3f2605c62298c4f33079e79355dd7b1d5a 86f366e5a8f2907277d994e0a5462775bee3bf5e Ivan Lesnik <ilesnik@onasellabs.com> 1418982215 +0000	checkout: moving from master to 86f366e5a8f2907277d994e0a5462775bee3bf5e^0
-ruau/.git/logs/HEAD:86f366e5a8f2907277d994e0a5462775bee3bf5e eb72a8ce6a0b7e2d7a0785242560a85fb85425b8 Ivan Lesnik <ilesnik@onasellabs.com> 1418982230 +0000	rebase: add swiping style to infiniteList rows
-ruau/.git/logs/HEAD:eb72a8ce6a0b7e2d7a0785242560a85fb85425b8 a42e2c2f70de11ad9cb58dfa74ddd67f3d55a0d7 Ivan Lesnik <ilesnik@onasellabs.com> 1418982231 +0000	rebase: Redo pull request #130 from UI/ishmulevich/review-pending/apply-type-checking-to-ServiceLocator
-ruau/.git/logs/HEAD:a42e2c2f70de11ad9cb58dfa74ddd67f3d55a0d7 c8338f43c43a41f0187a3dfb1ef3f3f575083cef Ivan Lesnik <ilesnik@onasellabs.com> 1418982232 +0000	rebase: update osgi module version
-ruau/.git/logs/HEAD:c8338f43c43a41f0187a3dfb1ef3f3f575083cef 47b4265bd94390a9b51a94dbd2e265199d6447c8 Ivan Lesnik <ilesnik@onasellabs.com> 1418982232 +0000	rebase: make bnd provided
-ruau/.git/logs/HEAD:47b4265bd94390a9b51a94dbd2e265199d6447c8 5d39ebe955b55878b7daf687fe08fd81a866a68d Ivan Lesnik <ilesnik@onasellabs.com> 1418982233 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1660
-ruau/.git/logs/HEAD:5d39ebe955b55878b7daf687fe08fd81a866a68d 6d83be4fdb6992ea01e4a897d6fb726b81570e42 Ivan Lesnik <ilesnik@onasellabs.com> 1418982234 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:6d83be4fdb6992ea01e4a897d6fb726b81570e42 433aaec519c710be7ceaa57f071d775b56828bc2 Ivan Lesnik <ilesnik@onasellabs.com> 1418982234 +0000	rebase: Services extends RuueServiceProvider
-ruau/.git/logs/HEAD:433aaec519c710be7ceaa57f071d775b56828bc2 a72f36f5c0b6583447e28e40156230e56d0df4f6 Ivan Lesnik <ilesnik@onasellabs.com> 1418982235 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1661
-ruau/.git/logs/HEAD:a72f36f5c0b6583447e28e40156230e56d0df4f6 4b97e8928195bb78a7bf7a987bbb281726dd4dc0 Ivan Lesnik <ilesnik@onasellabs.com> 1418982235 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:4b97e8928195bb78a7bf7a987bbb281726dd4dc0 49c9ea20f0cde63dfeee457a984c7583b37670f8 Ivan Lesnik <ilesnik@onasellabs.com> 1418982236 +0000	rebase: csp test update for browser compatility
-ruau/.git/logs/HEAD:49c9ea20f0cde63dfeee457a984c7583b37670f8 b4a49338d71525f748af5766deca2801677f7d60 Ivan Lesnik <ilesnik@onasellabs.com> 1418982237 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1662
-ruau/.git/logs/HEAD:b4a49338d71525f748af5766deca2801677f7d60 1cc2d2e5c2755a552dd5f893980fb5e71f737548 Ivan Lesnik <ilesnik@onasellabs.com> 1418982237 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:1cc2d2e5c2755a552dd5f893980fb5e71f737548 57d945db056230ed96c47e35900fd416abdde66b Ivan Lesnik <ilesnik@onasellabs.com> 1418982238 +0000	rebase: inputRichText initial value not set in the editor
-ruau/.git/logs/HEAD:57d945db056230ed96c47e35900fd416abdde66b b568d6cff1db1b253d61ffc284b63a42030bf750 Ivan Lesnik <ilesnik@onasellabs.com> 1418982238 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1663
-ruau/.git/logs/HEAD:b568d6cff1db1b253d61ffc284b63a42030bf750 01387b0f681fb6a9345fcb93b2869eec7a1c4394 Ivan Lesnik <ilesnik@onasellabs.com> 1418982239 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:01387b0f681fb6a9345fcb93b2869eec7a1c4394 749980a2a94afbffc69687295c6a217164d7197b Ivan Lesnik <ilesnik@onasellabs.com> 1418982240 +0000	rebase: test fix for testSvgCacheClearedOnSourceChange : NPE
-ruau/.git/logs/HEAD:749980a2a94afbffc69687295c6a217164d7197b ca526f09f897a76daa670bfced742e7d697b3867 Ivan Lesnik <ilesnik@onasellabs.com> 1418982240 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1664
-ruau/.git/logs/HEAD:ca526f09f897a76daa670bfced742e7d697b3867 0ed537cf95e748fb39d0ee639d26551a7d92d08e Ivan Lesnik <ilesnik@onasellabs.com> 1418982241 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:0ed537cf95e748fb39d0ee639d26551a7d92d08e d712b581b807df8d42940adb79b58312e89ecdaa Ivan Lesnik <ilesnik@onasellabs.com> 1418982241 +0000	rebase: testStopClickPropogoationIsSet is failing
-ruau/.git/logs/HEAD:d712b581b807df8d42940adb79b58312e89ecdaa fed09980685de0e10584fcf1128b6af685aff95e Ivan Lesnik <ilesnik@onasellabs.com> 1418982242 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1665
-ruau/.git/logs/HEAD:fed09980685de0e10584fcf1128b6af685aff95e 5e7058bb6a9eec3e77f16b1f27dcef0ca78ac176 Ivan Lesnik <ilesnik@onasellabs.com> 1418982243 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:5e7058bb6a9eec3e77f16b1f27dcef0ca78ac176 5599515990ca22f19db84e068f029137a91cc024 Ivan Lesnik <ilesnik@onasellabs.com> 1418982243 +0000	rebase: DocDef update for inputDefaultError
-ruau/.git/logs/HEAD:5599515990ca22f19db84e068f029137a91cc024 5aecaadff4c70e1aa30f616aa815ee63f952c447 Ivan Lesnik <ilesnik@onasellabs.com> 1418982244 +0000	rebase: update test for IE7
-ruau/.git/logs/HEAD:5aecaadff4c70e1aa30f616aa815ee63f952c447 adc327cc6f9a6d97c7faebda7e8fc5d1e222a5fb Ivan Lesnik <ilesnik@onasellabs.com> 1418982244 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1666
-ruau/.git/logs/HEAD:adc327cc6f9a6d97c7faebda7e8fc5d1e222a5fb c07ef2c1562f70e34ac3ba7b449cbded19849647 Ivan Lesnik <ilesnik@onasellabs.com> 1418982245 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:c07ef2c1562f70e34ac3ba7b449cbded19849647 47c7558735587bd29a2dadb488e7c1e97ff44d90 Ivan Lesnik <ilesnik@onasellabs.com> 1418982246 +0000	rebase: enable test with mockCSP for sfdc side
-ruau/.git/logs/HEAD:47c7558735587bd29a2dadb488e7c1e97ff44d90 23fab2e729e309929ffb297373314eac83e11820 Ivan Lesnik <ilesnik@onasellabs.com> 1418982246 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1667
-ruau/.git/logs/HEAD:23fab2e729e309929ffb297373314eac83e11820 457e644bb646dce987f9e4b82acadb418500e689 Ivan Lesnik <ilesnik@onasellabs.com> 1418982247 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:457e644bb646dce987f9e4b82acadb418500e689 dbe20a89f9262096f46533cfbace3b4e43d5b813 Ivan Lesnik <ilesnik@onasellabs.com> 1418982247 +0000	rebase: reverting fcv guard
-ruau/.git/logs/HEAD:dbe20a89f9262096f46533cfbace3b4e43d5b813 bb8e1cb5d30b7c0cf328091bbbde43bd6019f42a Ivan Lesnik <ilesnik@onasellabs.com> 1418982248 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1668
-ruau/.git/logs/HEAD:bb8e1cb5d30b7c0cf328091bbbde43bd6019f42a 6bc99940bd932b502ede5897398f4c6b45293407 Ivan Lesnik <ilesnik@onasellabs.com> 1418982249 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:6bc99940bd932b502ede5897398f4c6b45293407 ae68dd21f54e62b7ea3fe8c9f53fdcbd435ca87a Ivan Lesnik <ilesnik@onasellabs.com> 1418982249 +0000	rebase: Un-localize Locale patterns (i.e. percentFormat, numberFormat, currencyFormat).
-ruau/.git/logs/HEAD:ae68dd21f54e62b7ea3fe8c9f53fdcbd435ca87a dd5a2e10308dd37bccdc08b0b1c5dccb2589c02f Ivan Lesnik <ilesnik@onasellabs.com> 1418982250 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1669
-ruau/.git/logs/HEAD:dd5a2e10308dd37bccdc08b0b1c5dccb2589c02f 94a25c2e4f1aa7dafcbef7ffafbd0857f8a20c75 Ivan Lesnik <ilesnik@onasellabs.com> 1418982250 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:94a25c2e4f1aa7dafcbef7ffafbd0857f8a20c75 4b817da919635359d2b8af9437ee0b5bab205417 Ivan Lesnik <ilesnik@onasellabs.com> 1418982251 +0000	rebase: Tests are now working, re-enable.
-ruau/.git/logs/HEAD:4b817da919635359d2b8af9437ee0b5bab205417 45e04981526b2f5b7b30788954b7c2d5350617b9 Ivan Lesnik <ilesnik@onasellabs.com> 1418982252 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1670
-ruau/.git/logs/HEAD:45e04981526b2f5b7b30788954b7c2d5350617b9 98cd57e69c2edafc042cc67bd0d13021d6418cfe Ivan Lesnik <ilesnik@onasellabs.com> 1418982252 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:98cd57e69c2edafc042cc67bd0d13021d6418cfe 1f1d6d63a8ca1592d4c9e581034fad9af07d8934 Ivan Lesnik <ilesnik@onasellabs.com> 1418982253 +0000	rebase: Temporary fix for input classNames on inherited components.
-ruau/.git/logs/HEAD:1f1d6d63a8ca1592d4c9e581034fad9af07d8934 c33ea52f6e44d7a65819e5fd7cad0ca8846ed8fb Ivan Lesnik <ilesnik@onasellabs.com> 1418982253 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1671
-ruau/.git/logs/HEAD:c33ea52f6e44d7a65819e5fd7cad0ca8846ed8fb d7d6d53b263d921bf4aab3cbb158dbdfafdc7fc3 Ivan Lesnik <ilesnik@onasellabs.com> 1418982254 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:d7d6d53b263d921bf4aab3cbb158dbdfafdc7fc3 82b59b8c214f34426117e65ada12bc3166fb59e7 Ivan Lesnik <ilesnik@onasellabs.com> 1418982255 +0000	rebase: Fix a problem with undefined in afterRender.
-ruau/.git/logs/HEAD:82b59b8c214f34426117e65ada12bc3166fb59e7 cf501dc655ee682f228986b383b391c8f0f36feb Ivan Lesnik <ilesnik@onasellabs.com> 1418982255 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1672
-ruau/.git/logs/HEAD:cf501dc655ee682f228986b383b391c8f0f36feb 752cddbc59fd99bef9f404c3ed46d2ce3aea95d2 Ivan Lesnik <ilesnik@onasellabs.com> 1418982256 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:752cddbc59fd99bef9f404c3ed46d2ce3aea95d2 a502159fa3b9978bbf4aaf3a138a5111f217b33f Ivan Lesnik <ilesnik@onasellabs.com> 1418982256 +0000	rebase: Automation for rendering of InputRichtext
-ruau/.git/logs/HEAD:a502159fa3b9978bbf4aaf3a138a5111f217b33f 74c67663d76088bcece77b07e92d43b4cfa25c89 Ivan Lesnik <ilesnik@onasellabs.com> 1418982257 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1673
-ruau/.git/logs/HEAD:74c67663d76088bcece77b07e92d43b4cfa25c89 00319af67656d7a27ccf30d8969befdc3cddee6a Ivan Lesnik <ilesnik@onasellabs.com> 1418982258 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:00319af67656d7a27ccf30d8969befdc3cddee6a 3504c3398ca853fc3a4e608423feb0b8f74ff2dc Ivan Lesnik <ilesnik@onasellabs.com> 1418982258 +0000	rebase: test fix for html test -- nbsp in IEs
-ruau/.git/logs/HEAD:3504c3398ca853fc3a4e608423feb0b8f74ff2dc 832c0fd649c3b0b5197b990e438d0346cb8ac1ed Ivan Lesnik <ilesnik@onasellabs.com> 1418982259 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1674
-ruau/.git/logs/HEAD:832c0fd649c3b0b5197b990e438d0346cb8ac1ed c34862426a15d7a19f69b18266f04d6f6c7a51fe Ivan Lesnik <ilesnik@onasellabs.com> 1418982259 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:c34862426a15d7a19f69b18266f04d6f6c7a51fe b575e084fc6883423fd7cb8b8f7d9fcecd659893 Ivan Lesnik <ilesnik@onasellabs.com> 1418982260 +0000	rebase: avoid NPE from DummyHttpServletRequest
-ruau/.git/logs/HEAD:b575e084fc6883423fd7cb8b8f7d9fcecd659893 d588d6028436537739219e87d1b4efd3e6eb5c09 Ivan Lesnik <ilesnik@onasellabs.com> 1418982261 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1675
-ruau/.git/logs/HEAD:d588d6028436537739219e87d1b4efd3e6eb5c09 4f02e35a036df52ba5c7a4469a724b9a0b37b7c0 Ivan Lesnik <ilesnik@onasellabs.com> 1418982261 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:4f02e35a036df52ba5c7a4469a724b9a0b37b7c0 f0e560f19cfeba170f5d0f750eb8e11bd6c849e5 Ivan Lesnik <ilesnik@onasellabs.com> 1418982262 +0000	rebase: Quickfix CSS fix for accessibility
-ruau/.git/logs/HEAD:f0e560f19cfeba170f5d0f750eb8e11bd6c849e5 81910f3994301d1804e3e4ed3bc3ba220ac684f6 Ivan Lesnik <ilesnik@onasellabs.com> 1418982263 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1676
-ruau/.git/logs/HEAD:81910f3994301d1804e3e4ed3bc3ba220ac684f6 e6edfd8d99a5403d2a49fc01674756d5a346048e Ivan Lesnik <ilesnik@onasellabs.com> 1418982263 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:e6edfd8d99a5403d2a49fc01674756d5a346048e a973a79db92643c1c6ea1153786b8ff5efadfee7 Ivan Lesnik <ilesnik@onasellabs.com> 1418982264 +0000	rebase: Automation for when v.items is undefined.
-ruau/.git/logs/HEAD:a973a79db92643c1c6ea1153786b8ff5efadfee7 4f7aeb5de7e5fe00cdd857ab489b98bee3a49f6e Ivan Lesnik <ilesnik@onasellabs.com> 1418982265 +0000	rebase: Automation for dataGrid, sorting columns
-ruau/.git/logs/HEAD:4f7aeb5de7e5fe00cdd857ab489b98bee3a49f6e 3db81957d6c12071b14867418e46633a0ff0360d Ivan Lesnik <ilesnik@onasellabs.com> 1418982265 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1677
-ruau/.git/logs/HEAD:3db81957d6c12071b14867418e46633a0ff0360d a6c2b25696ebd14142fe43ed1bca4c8d42a104fd Ivan Lesnik <ilesnik@onasellabs.com> 1418982266 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:a6c2b25696ebd14142fe43ed1bca4c8d42a104fd 9f0ae3992580a3ead580f2f29778068da26099e5 Ivan Lesnik <ilesnik@onasellabs.com> 1418982266 +0000	rebase: validate library js
-ruau/.git/logs/HEAD:9f0ae3992580a3ead580f2f29778068da26099e5 26ebca5c8f639764ab1e894b7eafe89ca667b7e2 Ivan Lesnik <ilesnik@onasellabs.com> 1418982267 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1678
-ruau/.git/logs/HEAD:26ebca5c8f639764ab1e894b7eafe89ca667b7e2 8d2884feb4dcf7f6d4d577dba5ed79aacc868468 Ivan Lesnik <ilesnik@onasellabs.com> 1418982268 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:8d2884feb4dcf7f6d4d577dba5ed79aacc868468 e993ba0a80ec8c6465953997503436452266ff50 Ivan Lesnik <ilesnik@onasellabs.com> 1418982268 +0000	rebase: create dummyHttpServletRequest with default url, also cherrypick fix for test flapper in AIS UI test.
-ruau/.git/logs/HEAD:e993ba0a80ec8c6465953997503436452266ff50 5db8613a6a0a44dfb338e4b8c36acd981a785d2d Ivan Lesnik <ilesnik@onasellabs.com> 1418982269 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1679
-ruau/.git/logs/HEAD:5db8613a6a0a44dfb338e4b8c36acd981a785d2d 8e7da122e7e83c2d049f2163a119a1036c07f15d Ivan Lesnik <ilesnik@onasellabs.com> 1418982269 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:8e7da122e7e83c2d049f2163a119a1036c07f15d 471e0d0d3a25e2b50cc53ce0c06ce1b43ec8c3ce Ivan Lesnik <ilesnik@onasellabs.com> 1418982270 +0000	rebase: Rethrow errors thrown by .test.fail if they don't bubble up
-ruau/.git/logs/HEAD:471e0d0d3a25e2b50cc53ce0c06ce1b43ec8c3ce f2cf5d3a893cc0b5efdaa7942686ad2ce908629b Ivan Lesnik <ilesnik@onasellabs.com> 1418982271 +0000	rebase: Test fixes for Test.fail changes
-ruau/.git/logs/HEAD:f2cf5d3a893cc0b5efdaa7942686ad2ce908629b 772ac280e4ebd2e5de8ecbd3a23553649073b04b Ivan Lesnik <ilesnik@onasellabs.com> 1418982271 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1680
-ruau/.git/logs/HEAD:772ac280e4ebd2e5de8ecbd3a23553649073b04b a1c8313041830120dabef540aaee94d314108b66 Ivan Lesnik <ilesnik@onasellabs.com> 1418982272 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:a1c8313041830120dabef540aaee94d314108b66 d37962ffee68943aadf14fbd394142a1e4098baf Ivan Lesnik <ilesnik@onasellabs.com> 1418982272 +0000	rebase: IE8 fix moving from for‚Ä¶in to for()
-ruau/.git/logs/HEAD:d37962ffee68943aadf14fbd394142a1e4098baf 529a752606cde031cfc1e2dc1ab4cce33c713fac Ivan Lesnik <ilesnik@onasellabs.com> 1418982273 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1681
-ruau/.git/logs/HEAD:529a752606cde031cfc1e2dc1ab4cce33c713fac 4a300d89079d2a2206702869a369967bfb130332 Ivan Lesnik <ilesnik@onasellabs.com> 1418982274 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:4a300d89079d2a2206702869a369967bfb130332 2ed0b741b4475319cc93366123007fd075930bc1 Ivan Lesnik <ilesnik@onasellabs.com> 1418982274 +0000	rebase: Fix ruau types to be case insensitive for now.
-ruau/.git/logs/HEAD:2ed0b741b4475319cc93366123007fd075930bc1 742e6939b98cec14610f599700e3614b36fbe4c6 Ivan Lesnik <ilesnik@onasellabs.com> 1418982275 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1682
-ruau/.git/logs/HEAD:742e6939b98cec14610f599700e3614b36fbe4c6 f92e9a82bfb71752a72507c3626be4b40da1193e Ivan Lesnik <ilesnik@onasellabs.com> 1418982275 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:f92e9a82bfb71752a72507c3626be4b40da1193e e1a617b02e694f8c362fc07c52509675edf76f5a Ivan Lesnik <ilesnik@onasellabs.com> 1418982276 +0000	rebase: no message
-ruau/.git/logs/HEAD:e1a617b02e694f8c362fc07c52509675edf76f5a e9b4d243df6ae315fbc3b3b333f9f29871d50a9d Ivan Lesnik <ilesnik@onasellabs.com> 1418982277 +0000	rebase: Update ES6-Promises library to new version that minifies correctly.
-ruau/.git/logs/HEAD:e9b4d243df6ae315fbc3b3b333f9f29871d50a9d bd676f29437a411690657e2f49182762a690f182 Ivan Lesnik <ilesnik@onasellabs.com> 1418982277 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1683
-ruau/.git/logs/HEAD:bd676f29437a411690657e2f49182762a690f182 e73e0aeac52bc7de3ce13436aff203ccb0218e67 Ivan Lesnik <ilesnik@onasellabs.com> 1418982278 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:e73e0aeac52bc7de3ce13436aff203ccb0218e67 fad479b6bc73deb85540b61cc696bb82d2c56485 Ivan Lesnik <ilesnik@onasellabs.com> 1418982278 +0000	rebase: Clean up file source listener.
-ruau/.git/logs/HEAD:fad479b6bc73deb85540b61cc696bb82d2c56485 3a57a7b77cae6da4620692483f16eb1b719f48fa Ivan Lesnik <ilesnik@onasellabs.com> 1418982279 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1684
-ruau/.git/logs/HEAD:3a57a7b77cae6da4620692483f16eb1b719f48fa 9b884834a5c37cdce8138812fa9abd1f10106d76 Ivan Lesnik <ilesnik@onasellabs.com> 1418982280 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:9b884834a5c37cdce8138812fa9abd1f10106d76 13cd2e0f66a5e2271cfe72bb69b450da25076de8 Ivan Lesnik <ilesnik@onasellabs.com> 1418982280 +0000	rebase: testPerfRunner -- let us to rerun pending tests
-ruau/.git/logs/HEAD:13cd2e0f66a5e2271cfe72bb69b450da25076de8 7ee889537e41ba4a52dda94aa33af5be94edd5ac Ivan Lesnik <ilesnik@onasellabs.com> 1418982281 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1685
-ruau/.git/logs/HEAD:7ee889537e41ba4a52dda94aa33af5be94edd5ac 694350052dafb093902a3909511ec6542f938c89 Ivan Lesnik <ilesnik@onasellabs.com> 1418982281 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:694350052dafb093902a3909511ec6542f938c89 3ea51c3d963e8d5fe2a93c8e29254c0f70866b95 Ivan Lesnik <ilesnik@onasellabs.com> 1418982282 +0000	rebase: Fix SVG defs.
-ruau/.git/logs/HEAD:3ea51c3d963e8d5fe2a93c8e29254c0f70866b95 adae4de219d4e5138ac2ca970edd66b70ca727c0 Ivan Lesnik <ilesnik@onasellabs.com> 1418982283 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1686
-ruau/.git/logs/HEAD:adae4de219d4e5138ac2ca970edd66b70ca727c0 d3306cb7b1d7437de982a1e4db7c00df3a16f694 Ivan Lesnik <ilesnik@onasellabs.com> 1418982283 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:d3306cb7b1d7437de982a1e4db7c00df3a16f694 04a26116cbde60457e52f5a185c6226223a88537 Ivan Lesnik <ilesnik@onasellabs.com> 1418982284 +0000	rebase: Reverting Halo changes to ui:tab to fix setting the default tab as active
-ruau/.git/logs/HEAD:04a26116cbde60457e52f5a185c6226223a88537 ff2eab5f46e611596d8d5ef772cd4645c170b5e2 Ivan Lesnik <ilesnik@onasellabs.com> 1418982285 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1687
-ruau/.git/logs/HEAD:ff2eab5f46e611596d8d5ef772cd4645c170b5e2 be0bcc105b20323f25a547248a960535c4b34328 Ivan Lesnik <ilesnik@onasellabs.com> 1418982285 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:be0bcc105b20323f25a547248a960535c4b34328 30585d6cbfbf92b3d4224525f462fae36f2111c9 Ivan Lesnik <ilesnik@onasellabs.com> 1418982286 +0000	rebase: Fixing memory leak in expressions
-ruau/.git/logs/HEAD:30585d6cbfbf92b3d4224525f462fae36f2111c9 8da62f2976695e11020c7e756b7de3cb38ada213 Ivan Lesnik <ilesnik@onasellabs.com> 1418982286 +0000	rebase: Adding stopPropagation to prvs though iteration
-ruau/.git/logs/HEAD:8da62f2976695e11020c7e756b7de3cb38ada213 0eb084b439a221dff604cc17851e19e7098c8a15 Ivan Lesnik <ilesnik@onasellabs.com> 1418982287 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1688
-ruau/.git/logs/HEAD:0eb084b439a221dff604cc17851e19e7098c8a15 f9e93c854d0f3901d25d1ceb47047f785c66d79d Ivan Lesnik <ilesnik@onasellabs.com> 1418982287 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:f9e93c854d0f3901d25d1ceb47047f785c66d79d 27ea4e1488dfa04c102afe7d4a9ebfae701601e8 Ivan Lesnik <ilesnik@onasellabs.com> 1418982288 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1689
-ruau/.git/logs/HEAD:27ea4e1488dfa04c102afe7d4a9ebfae701601e8 d372643d008fb3034267e572e7eda0060a5a2bf2 Ivan Lesnik <ilesnik@onasellabs.com> 1418982289 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:d372643d008fb3034267e572e7eda0060a5a2bf2 6efade7b39f3df827f388b324e201b2a708881a0 Ivan Lesnik <ilesnik@onasellabs.com> 1418982289 +0000	rebase: Use native scrolling on Windows tablet.
-ruau/.git/logs/HEAD:6efade7b39f3df827f388b324e201b2a708881a0 884907d554f0beddac350b94057d6124fef9dfcf Ivan Lesnik <ilesnik@onasellabs.com> 1418982290 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1690
-ruau/.git/logs/HEAD:884907d554f0beddac350b94057d6124fef9dfcf 9438a24f2b4188029b6cb3ba099f562c997be97e Ivan Lesnik <ilesnik@onasellabs.com> 1418982290 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:9438a24f2b4188029b6cb3ba099f562c997be97e fe028c0a60ac17a51857433f803675b737a9b5f6 Ivan Lesnik <ilesnik@onasellabs.com> 1418982291 +0000	rebase: Sauce Env issue so disabling test
-ruau/.git/logs/HEAD:fe028c0a60ac17a51857433f803675b737a9b5f6 77b57906b1302ecac556c8a812743d02468f2d76 Ivan Lesnik <ilesnik@onasellabs.com> 1418982292 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1691
-ruau/.git/logs/HEAD:77b57906b1302ecac556c8a812743d02468f2d76 2f7cd1ea16f6e943b66d76465116ab0f2062a611 Ivan Lesnik <ilesnik@onasellabs.com> 1418982293 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:2f7cd1ea16f6e943b66d76465116ab0f2062a611 7e47d3be502128c85f8339d086e1e7a50f762a87 Ivan Lesnik <ilesnik@onasellabs.com> 1418982293 +0000	rebase: Removing test for unsupported browsers IE7/8
-ruau/.git/logs/HEAD:7e47d3be502128c85f8339d086e1e7a50f762a87 c125e4d49af1f6ad50f814e80cb71dcaeba594db Ivan Lesnik <ilesnik@onasellabs.com> 1418982294 +0000	rebase: Fixes for tests to work on Mobile again
-ruau/.git/logs/HEAD:c125e4d49af1f6ad50f814e80cb71dcaeba594db b5d6db7c8bc54ee8515f1026f02a2cb942c619ca Ivan Lesnik <ilesnik@onasellabs.com> 1418982295 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1692
-ruau/.git/logs/HEAD:b5d6db7c8bc54ee8515f1026f02a2cb942c619ca 01d41500d4a1fba5376769951ba3693330526418 Ivan Lesnik <ilesnik@onasellabs.com> 1418982296 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:01d41500d4a1fba5376769951ba3693330526418 c02f42e752835af7c842da6d008dad8d56265e71 Ivan Lesnik <ilesnik@onasellabs.com> 1418982296 +0000	rebase: ui:inputSelect should support basic select functionality when using ruau:iteration
-ruau/.git/logs/HEAD:c02f42e752835af7c842da6d008dad8d56265e71 147c1903ed33f78c85ea359e9d4f69315562ba93 Ivan Lesnik <ilesnik@onasellabs.com> 1418982297 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1693
-ruau/.git/logs/HEAD:147c1903ed33f78c85ea359e9d4f69315562ba93 468152772d027cbea6fea02b0672c53c28878237 Ivan Lesnik <ilesnik@onasellabs.com> 1418982298 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:468152772d027cbea6fea02b0672c53c28878237 468152772d027cbea6fea02b0672c53c28878237 Ivan Lesnik <ilesnik@onasellabs.com> 1418982298 +0000	rebase finished: returning to refs/heads/master
-ruau/.git/logs/HEAD:468152772d027cbea6fea02b0672c53c28878237 468152772d027cbea6fea02b0672c53c28878237 Ivan Lesnik <ilesnik@onasellabs.com> 1418984108 +0000	checkout: moving from master to serial
-ruau/.git/logs/HEAD:468152772d027cbea6fea02b0672c53c28878237 86f366e5a8f2907277d994e0a5462775bee3bf5e Ivan Lesnik <ilesnik@onasellabs.com> 1418986285 +0000	checkout: moving from serial to onasel-config
-ruau/.git/logs/HEAD:86f366e5a8f2907277d994e0a5462775bee3bf5e e7de664838558b42d8e051c7761d27f6c7d4b010 Ivan Lesnik <ilesnik@onasellabs.com> 1418986550 +0000	commit: Switch to IE7, single mode
-ruau/.git/logs/HEAD:e7de664838558b42d8e051c7761d27f6c7d4b010 468152772d027cbea6fea02b0672c53c28878237 Ivan Lesnik <ilesnik@onasellabs.com> 1419843973 +0000	checkout: moving from onasel-config to serial
-ruau/.git/logs/HEAD:468152772d027cbea6fea02b0672c53c28878237 e7de664838558b42d8e051c7761d27f6c7d4b010 Ivan Lesnik <ilesnik@onasellabs.com> 1421760684 +0000	checkout: moving from serial to onasel-config
-ruau/.git/logs/refs/remotes/mudial/onasel-config:0000000000000000000000000000000000000000 e7de664838558b42d8e051c7761d27f6c7d4b010 Ivan Lesnik <ilesnik@onasellabs.com> 1421760923 +0000	update by push
-ruau/.git/logs/refs/remotes/mudial/serial:0000000000000000000000000000000000000000 468152772d027cbea6fea02b0672c53c28878237 Ivan Lesnik <ilesnik@onasellabs.com> 1421235156 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:0000000000000000000000000000000000000000 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.com> 1417004497 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:027d62c63762dff82846acb1156993f75fd2bbc2 ec0187143197f386d5d78c1345ed566b1b8f16a3 Ivan Lesnik <ilesnik@onasellabs.com> 1417091039 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:ec0187143197f386d5d78c1345ed566b1b8f16a3 b16cebd6909503ed2e2be55ab139e95f7db8b903 Ivan Lesnik <ilesnik@onasellabs.com> 1417539173 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:b16cebd6909503ed2e2be55ab139e95f7db8b903 79b0002c5a45481a1639034d136daddaedfe5819 Ivan Lesnik <ilesnik@onasellabs.com> 1417722795 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:79b0002c5a45481a1639034d136daddaedfe5819 9fd50c77e95d99e0dc5818b32dc035ffbf841fe7 Ivan Lesnik <ilesnik@onasellabs.com> 1417726823 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:9fd50c77e95d99e0dc5818b32dc035ffbf841fe7 1e058bc75ed1087936eacb582bdb9c00ee2c6e2c Ivan Lesnik <ilesnik@onasellabs.com> 1417777477 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:1e058bc75ed1087936eacb582bdb9c00ee2c6e2c f1e5e8630def5b2c9d9136293d8b87e019b8ccb7 Ivan Lesnik <ilesnik@onasellabs.com> 1417777865 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:f1e5e8630def5b2c9d9136293d8b87e019b8ccb7 1b1b9e354d5685c15c3fed7f3b79fb09124e5465 Ivan Lesnik <ilesnik@onasellabs.com> 1417787723 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:1b1b9e354d5685c15c3fed7f3b79fb09124e5465 84e34f12a8eb717f1e8405a8bfbaf6092458dc78 Ivan Lesnik <ilesnik@onasellabs.com> 1417790666 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:84e34f12a8eb717f1e8405a8bfbaf6092458dc78 e1288ebc5957d8e311c97982bf4d2f2820b0e27e Ivan Lesnik <ilesnik@onasellabs.com> 1417794991 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:e1288ebc5957d8e311c97982bf4d2f2820b0e27e e3dc4d213776cd18427d9990d70c5e976f30e7ae Ivan Lesnik <ilesnik@onasellabs.com> 1417807630 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:e3dc4d213776cd18427d9990d70c5e976f30e7ae da1f6f84d8cdda7a9bc46282342adeb71ed81287 Ivan Lesnik <ilesnik@onasellabs.com> 1417885617 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:da1f6f84d8cdda7a9bc46282342adeb71ed81287 b95fb849eba203899aaadb9a90a38e64f3a8c887 Ivan Lesnik <ilesnik@onasellabs.com> 1417886796 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:b95fb849eba203899aaadb9a90a38e64f3a8c887 1e05b4bce920da58878adfca7df3f0a0aacb0db7 Ivan Lesnik <ilesnik@onasellabs.com> 1417893226 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:1e05b4bce920da58878adfca7df3f0a0aacb0db7 277fffbbcd0d0b600f4ef3bd796528020e351fd2 Ivan Lesnik <ilesnik@onasellabs.com> 1418044391 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:277fffbbcd0d0b600f4ef3bd796528020e351fd2 346bab38fc77ce98ba5a348a62418c46a4c41bf9 Ivan Lesnik <ilesnik@onasellabs.com> 1418047572 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:346bab38fc77ce98ba5a348a62418c46a4c41bf9 614d9507f5b203dfef8f63c8196d220ada136f1b Ivan Lesnik <ilesnik@onasellabs.com> 1418053959 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:614d9507f5b203dfef8f63c8196d220ada136f1b 296a544ac14626efd8cedaf49ec7122bfb89b176 Ivan Lesnik <ilesnik@onasellabs.com> 1418070228 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:296a544ac14626efd8cedaf49ec7122bfb89b176 00f041cc5b414fd6ded453708666eadff30b0742 Ivan Lesnik <ilesnik@onasellabs.com> 1418117872 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:00f041cc5b414fd6ded453708666eadff30b0742 63bc1569da25a33983764695b1a66caf97ca8e28 Ivan Lesnik <ilesnik@onasellabs.com> 1418128188 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:63bc1569da25a33983764695b1a66caf97ca8e28 8f87fe9b0fdef78995517f8db149ea3a5055bbd3 Ivan Lesnik <ilesnik@onasellabs.com> 1418133608 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:8f87fe9b0fdef78995517f8db149ea3a5055bbd3 5896f0f9ba7e5eff3ca582da26f4218e3afee729 Ivan Lesnik <ilesnik@onasellabs.com> 1418135184 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:5896f0f9ba7e5eff3ca582da26f4218e3afee729 bf8928363c4f17916880c51f0fe6f60ef3f32627 Ivan Lesnik <ilesnik@onasellabs.com> 1418137220 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:bf8928363c4f17916880c51f0fe6f60ef3f32627 4d8929f54f3e1df41d459f99b2b43352aa9d3568 Ivan Lesnik <ilesnik@onasellabs.com> 1418139805 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:4d8929f54f3e1df41d459f99b2b43352aa9d3568 214c4b175075cf0e3395108c0ef81fb6404e7858 Ivan Lesnik <ilesnik@onasellabs.com> 1418140376 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:214c4b175075cf0e3395108c0ef81fb6404e7858 1de80a9801626edd4ad52bcf94be0fad813e86cf Ivan Lesnik <ilesnik@onasellabs.com> 1418154584 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:1de80a9801626edd4ad52bcf94be0fad813e86cf b0d6d159d5e29330f316ce75a2272816064bc2c9 Ivan Lesnik <ilesnik@onasellabs.com> 1418209934 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:b0d6d159d5e29330f316ce75a2272816064bc2c9 29d678e77c9765dda18634a17c3ddc96654a3187 Ivan Lesnik <ilesnik@onasellabs.com> 1418294579 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:29d678e77c9765dda18634a17c3ddc96654a3187 d511e0d7351c0baa1fc813fce53331bd9e604bae Ivan Lesnik <ilesnik@onasellabs.com> 1418295741 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:d511e0d7351c0baa1fc813fce53331bd9e604bae 5ec57c576cca5f6147e506e3431fdfbcccdd48f7 Ivan Lesnik <ilesnik@onasellabs.com> 1418312353 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:5ec57c576cca5f6147e506e3431fdfbcccdd48f7 e3dd3abed4e56c0216583c575c33fb3c508f54dd Ivan Lesnik <ilesnik@onasellabs.com> 1418313048 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:e3dd3abed4e56c0216583c575c33fb3c508f54dd d0da069ccf488a5bc69002915fc493bbb5bdd18a Ivan Lesnik <ilesnik@onasellabs.com> 1418316759 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:d0da069ccf488a5bc69002915fc493bbb5bdd18a f7a847be96295996fab081024acc8ded98d363ba Ivan Lesnik <ilesnik@onasellabs.com> 1418400131 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:f7a847be96295996fab081024acc8ded98d363ba c6a859962acc4e62dd2b68a254b536f57ce47031 Ivan Lesnik <ilesnik@onasellabs.com> 1418636929 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:c6a859962acc4e62dd2b68a254b536f57ce47031 147a13ba4b170ea4a5b92e5feaf8b6967ff31246 Ivan Lesnik <ilesnik@onasellabs.com> 1418641305 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:147a13ba4b170ea4a5b92e5feaf8b6967ff31246 6c1dd902ece38adb585e57ef67f245809dc9bf1d Ivan Lesnik <ilesnik@onasellabs.com> 1418643062 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:6c1dd902ece38adb585e57ef67f245809dc9bf1d eb50fe1ffe3480911f1274111e4f4f80dbaf3800 Ivan Lesnik <ilesnik@onasellabs.com> 1418647227 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:eb50fe1ffe3480911f1274111e4f4f80dbaf3800 fb289e95ea9732c953c9ceee1b24e97ade6a9b84 Ivan Lesnik <ilesnik@onasellabs.com> 1418648202 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:fb289e95ea9732c953c9ceee1b24e97ade6a9b84 cfd4be1eac6ac1744cf3732073f8af7efdb1a875 Ivan Lesnik <ilesnik@onasellabs.com> 1418649323 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:cfd4be1eac6ac1744cf3732073f8af7efdb1a875 a71655bc3064b75b901449cd79724bd2f405b2a5 Ivan Lesnik <ilesnik@onasellabs.com> 1418726144 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:a71655bc3064b75b901449cd79724bd2f405b2a5 894dd74896b97ef228c624c7fc825e8c6e065921 Ivan Lesnik <ilesnik@onasellabs.com> 1418728148 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:894dd74896b97ef228c624c7fc825e8c6e065921 af74afdbe3c9ff21d698e0994e21329725ba9b29 Ivan Lesnik <ilesnik@onasellabs.com> 1418730240 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:af74afdbe3c9ff21d698e0994e21329725ba9b29 70fb200d12cec2173cdcb449db121425a3eb7f2c Ivan Lesnik <ilesnik@onasellabs.com> 1418735122 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:70fb200d12cec2173cdcb449db121425a3eb7f2c c901c542cb2c145f0cfa2c0019d09fa980b501a8 Ivan Lesnik <ilesnik@onasellabs.com> 1418741902 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:c901c542cb2c145f0cfa2c0019d09fa980b501a8 79aa5b298a78b98c00b62d5f0701165a7b8452d4 Ivan Lesnik <ilesnik@onasellabs.com> 1418809387 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:79aa5b298a78b98c00b62d5f0701165a7b8452d4 e0d184c1b6feae1e26a4533f9c291d6f280864dc Ivan Lesnik <ilesnik@onasellabs.com> 1418819835 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:e0d184c1b6feae1e26a4533f9c291d6f280864dc dfa612ddc29b6f9d1883fcc1c07b5f3a20a84c79 Ivan Lesnik <ilesnik@onasellabs.com> 1418828325 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:dfa612ddc29b6f9d1883fcc1c07b5f3a20a84c79 86f366e5a8f2907277d994e0a5462775bee3bf5e Ivan Lesnik <ilesnik@onasellabs.com> 1418828484 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/onasel-config:86f366e5a8f2907277d994e0a5462775bee3bf5e e7de664838558b42d8e051c7761d27f6c7d4b010 Ivan Lesnik <ilesnik@onasellabs.com> 1418988335 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/master:a3cee9addd78c4c955d8353772904188f1d1c709 c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 Ivan Lesnik <ilesnik@onasellabs.com> 1417002718 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/master:c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.com> 1417004087 +0000	update by push
-ruau/.git/logs/refs/remotes/origin/master:027d62c63762dff82846acb1156993f75fd2bbc2 468152772d027cbea6fea02b0672c53c28878237 Ivan Lesnik <ilesnik@onasellabs.com> 1418983553 +0000	update by push
-ruau/.git/logs/refs/heads/onasel-config:0000000000000000000000000000000000000000 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.com> 1417004113 +0000	branch: Created from HEAD
-ruau/.git/logs/refs/heads/onasel-config:027d62c63762dff82846acb1156993f75fd2bbc2 ec0187143197f386d5d78c1345ed566b1b8f16a3 Ivan Lesnik <ilesnik@onasellabs.com> 1417090660 +0000	commit: Temporary remove failing tests
-ruau/.git/logs/refs/heads/onasel-config:ec0187143197f386d5d78c1345ed566b1b8f16a3 b16cebd6909503ed2e2be55ab139e95f7db8b903 Ivan Lesnik <ilesnik@onasellabs.com> 1417539145 +0000	commit: Delete jenkins-to-onasel converter since it is moved to mudial_devops
-ruau/.git/logs/refs/heads/onasel-config:b16cebd6909503ed2e2be55ab139e95f7db8b903 79b0002c5a45481a1639034d136daddaedfe5819 Ivan Lesnik <ilesnik@onasellabs.com> 1417722749 +0000	commit: Add option disable_dodge_preload
-ruau/.git/logs/refs/heads/onasel-config:79b0002c5a45481a1639034d136daddaedfe5819 9fd50c77e95d99e0dc5818b32dc035ffbf841fe7 Ivan Lesnik <ilesnik@onasellabs.com> 1417726760 +0000	commit: Increase timeout to 7200; remove test_pattern as useless
-ruau/.git/logs/refs/heads/onasel-config:9fd50c77e95d99e0dc5818b32dc035ffbf841fe7 1e058bc75ed1087936eacb582bdb9c00ee2c6e2c Ivan Lesnik <ilesnik@onasellabs.com> 1417777377 +0000	commit: Enable parallel testing mode
-ruau/.git/logs/refs/heads/onasel-config:1e058bc75ed1087936eacb582bdb9c00ee2c6e2c f1e5e8630def5b2c9d9136293d8b87e019b8ccb7 Ivan Lesnik <ilesnik@onasellabs.com> 1417777844 +0000	commit: Add files pattern
-ruau/.git/logs/refs/heads/onasel-config:f1e5e8630def5b2c9d9136293d8b87e019b8ccb7 1b1b9e354d5685c15c3fed7f3b79fb09124e5465 Ivan Lesnik <ilesnik@onasellabs.com> 1417787666 +0000	commit: Disable Firefox tests; enable Chrome tests
-ruau/.git/logs/refs/heads/onasel-config:1b1b9e354d5685c15c3fed7f3b79fb09124e5465 84e34f12a8eb717f1e8405a8bfbaf6092458dc78 Ivan Lesnik <ilesnik@onasellabs.com> 1417790438 +0000	commit: Disable Chrome tests; enable Android sauselabs tests
-ruau/.git/logs/refs/heads/onasel-config:84e34f12a8eb717f1e8405a8bfbaf6092458dc78 e1288ebc5957d8e311c97982bf4d2f2820b0e27e Ivan Lesnik <ilesnik@onasellabs.com> 1417794945 +0000	commit: Enable IE8; disable Android
-ruau/.git/logs/refs/heads/onasel-config:e1288ebc5957d8e311c97982bf4d2f2820b0e27e e3dc4d213776cd18427d9990d70c5e976f30e7ae Ivan Lesnik <ilesnik@onasellabs.com> 1417807448 +0000	commit: Switch to Firefox tests
-ruau/.git/logs/refs/heads/onasel-config:e3dc4d213776cd18427d9990d70c5e976f30e7ae da1f6f84d8cdda7a9bc46282342adeb71ed81287 Ivan Lesnik <ilesnik@onasellabs.com> 1417885356 +0000	commit: Auto-generated config with extensions
-ruau/.git/logs/refs/heads/onasel-config:da1f6f84d8cdda7a9bc46282342adeb71ed81287 b95fb849eba203899aaadb9a90a38e64f3a8c887 Ivan Lesnik <ilesnik@onasellabs.com> 1417886720 +0000	commit: Fix absolute paths for extensions
-ruau/.git/logs/refs/heads/onasel-config:b95fb849eba203899aaadb9a90a38e64f3a8c887 1e05b4bce920da58878adfca7df3f0a0aacb0db7 Ivan Lesnik <ilesnik@onasellabs.com> 1417893169 +0000	commit: Move test setup step to worker_setup hook
-ruau/.git/logs/refs/heads/onasel-config:1e05b4bce920da58878adfca7df3f0a0aacb0db7 277fffbbcd0d0b600f4ef3bd796528020e351fd2 Ivan Lesnik <ilesnik@onasellabs.com> 1418044232 +0000	commit: Enable Chrome suite; disable Firefox
-ruau/.git/logs/refs/heads/onasel-config:277fffbbcd0d0b600f4ef3bd796528020e351fd2 346bab38fc77ce98ba5a348a62418c46a4c41bf9 Ivan Lesnik <ilesnik@onasellabs.com> 1418047541 +0000	commit: Switch to Android sauce tests
-ruau/.git/logs/refs/heads/onasel-config:346bab38fc77ce98ba5a348a62418c46a4c41bf9 614d9507f5b203dfef8f63c8196d220ada136f1b Ivan Lesnik <ilesnik@onasellabs.com> 1418053896 +0000	commit: Switch to IE7 suite
-ruau/.git/logs/refs/heads/onasel-config:614d9507f5b203dfef8f63c8196d220ada136f1b 296a544ac14626efd8cedaf49ec7122bfb89b176 Ivan Lesnik <ilesnik@onasellabs.com> 1418069903 +0000	commit: Switch to Safari suite
-ruau/.git/logs/refs/heads/onasel-config:296a544ac14626efd8cedaf49ec7122bfb89b176 00f041cc5b414fd6ded453708666eadff30b0742 Ivan Lesnik <ilesnik@onasellabs.com> 1418117662 +0000	commit: Switch to Chrome
-ruau/.git/logs/refs/heads/onasel-config:00f041cc5b414fd6ded453708666eadff30b0742 63bc1569da25a33983764695b1a66caf97ca8e28 Ivan Lesnik <ilesnik@onasellabs.com> 1418128160 +0000	commit: Set parallelism
-ruau/.git/logs/refs/heads/onasel-config:63bc1569da25a33983764695b1a66caf97ca8e28 8f87fe9b0fdef78995517f8db149ea3a5055bbd3 Ivan Lesnik <ilesnik@onasellabs.com> 1418133512 +0000	commit: Unparallelize; increase threads number to 4
-ruau/.git/logs/refs/heads/onasel-config:8f87fe9b0fdef78995517f8db149ea3a5055bbd3 5896f0f9ba7e5eff3ca582da26f4218e3afee729 Ivan Lesnik <ilesnik@onasellabs.com> 1418135129 +0000	commit: Switch to Firefox; threads=5
-ruau/.git/logs/refs/heads/onasel-config:5896f0f9ba7e5eff3ca582da26f4218e3afee729 bf8928363c4f17916880c51f0fe6f60ef3f32627 Ivan Lesnik <ilesnik@onasellabs.com> 1418137185 +0000	commit: Enable Chrome & Firefox; threads count=10
-ruau/.git/logs/refs/heads/onasel-config:bf8928363c4f17916880c51f0fe6f60ef3f32627 4d8929f54f3e1df41d459f99b2b43352aa9d3568 Ivan Lesnik <ilesnik@onasellabs.com> 1418139165 +0000	commit: Switch to IE9
-ruau/.git/logs/refs/heads/onasel-config:4d8929f54f3e1df41d459f99b2b43352aa9d3568 214c4b175075cf0e3395108c0ef81fb6404e7858 Ivan Lesnik <ilesnik@onasellabs.com> 1418140359 +0000	commit: Fix configuration, IE9
-ruau/.git/logs/refs/heads/onasel-config:214c4b175075cf0e3395108c0ef81fb6404e7858 1de80a9801626edd4ad52bcf94be0fad813e86cf Ivan Lesnik <ilesnik@onasellabs.com> 1418154445 +0000	commit: Add onasel-runner script and enable Chrome
-ruau/.git/logs/refs/heads/onasel-config:1de80a9801626edd4ad52bcf94be0fad813e86cf b0d6d159d5e29330f316ce75a2272816064bc2c9 Ivan Lesnik <ilesnik@onasellabs.com> 1418209879 +0000	commit: Add more specific mvn command
-ruau/.git/logs/refs/heads/onasel-config:b0d6d159d5e29330f316ce75a2272816064bc2c9 29d678e77c9765dda18634a17c3ddc96654a3187 Ivan Lesnik <ilesnik@onasellabs.com> 1418294544 +0000	commit: Add primitive test name filter
-ruau/.git/logs/refs/heads/onasel-config:29d678e77c9765dda18634a17c3ddc96654a3187 a0f233b9591fb32e453c3f47ede129ebc63d369c Ivan Lesnik <ilesnik@onasellabs.com> 1418295687 +0000	commit: Add reports mask
-ruau/.git/logs/refs/heads/onasel-config:a0f233b9591fb32e453c3f47ede129ebc63d369c d511e0d7351c0baa1fc813fce53331bd9e604bae Ivan Lesnik <ilesnik@onasellabs.com> 1418295721 +0000	commit: Switch to basic mode
-ruau/.git/logs/refs/heads/onasel-config:d511e0d7351c0baa1fc813fce53331bd9e604bae 2bf5ea7025679f1ee6c6417878c9dc69359a9559 Ivan Lesnik <ilesnik@onasellabs.com> 1418300940 +0000	commit: Add system property testsToRun to Ruue integration tests runner; add corresponding option to onasel runner
-ruau/.git/logs/refs/heads/onasel-config:2bf5ea7025679f1ee6c6417878c9dc69359a9559 5ec57c576cca5f6147e506e3431fdfbcccdd48f7 Ivan Lesnik <ilesnik@onasellabs.com> 1418312326 +0000	commit: Apply workaround hook into the Ruue test runner; fix onasel runner accordingly
-ruau/.git/logs/refs/heads/onasel-config:5ec57c576cca5f6147e506e3431fdfbcccdd48f7 e3dd3abed4e56c0216583c575c33fb3c508f54dd Ivan Lesnik <ilesnik@onasellabs.com> 1418313015 +0000	commit: Switch to parallel mode
-ruau/.git/logs/refs/heads/onasel-config:e3dd3abed4e56c0216583c575c33fb3c508f54dd d0da069ccf488a5bc69002915fc493bbb5bdd18a Ivan Lesnik <ilesnik@onasellabs.com> 1418316698 +0000	commit: oneils runner now processes CLI arguments; onasel.yml changed accordingly
-ruau/.git/logs/refs/heads/onasel-config:d0da069ccf488a5bc69002915fc493bbb5bdd18a f7a847be96295996fab081024acc8ded98d363ba Ivan Lesnik <ilesnik@onasellabs.com> 1418400104 +0000	commit: Switch to single mode
-ruau/.git/logs/refs/heads/onasel-config:f7a847be96295996fab081024acc8ded98d363ba c6a859962acc4e62dd2b68a254b536f57ce47031 Ivan Lesnik <ilesnik@onasellabs.com> 1418636898 +0000	commit: Run only integration tests
-ruau/.git/logs/refs/heads/onasel-config:c6a859962acc4e62dd2b68a254b536f57ce47031 147a13ba4b170ea4a5b92e5feaf8b6967ff31246 Ivan Lesnik <ilesnik@onasellabs.com> 1418641201 +0000	commit: Force skip queueing integration tests
-ruau/.git/logs/refs/heads/onasel-config:147a13ba4b170ea4a5b92e5feaf8b6967ff31246 ea309630d266a786bd15367d0540b85342f58968 Ivan Lesnik <ilesnik@onasellabs.com> 1418642372 +0000	commit: Force skip unittests
-ruau/.git/logs/refs/heads/onasel-config:ea309630d266a786bd15367d0540b85342f58968 6c1dd902ece38adb585e57ef67f245809dc9bf1d Ivan Lesnik <ilesnik@onasellabs.com> 1418642951 +0000	commit: Switch to parallel mode
-ruau/.git/logs/refs/heads/onasel-config:6c1dd902ece38adb585e57ef67f245809dc9bf1d d2c0bae3807bb23b8a84cbfa1ebe2412d1844d57 Ivan Lesnik <ilesnik@onasellabs.com> 1418647005 +0000	commit: Comment <testClasses> in pom.xml
-ruau/.git/logs/refs/heads/onasel-config:d2c0bae3807bb23b8a84cbfa1ebe2412d1844d57 eb50fe1ffe3480911f1274111e4f4f80dbaf3800 Ivan Lesnik <ilesnik@onasellabs.com> 1418647187 +0000	commit: Switch to a single mode
-ruau/.git/logs/refs/heads/onasel-config:eb50fe1ffe3480911f1274111e4f4f80dbaf3800 fb289e95ea9732c953c9ceee1b24e97ade6a9b84 Ivan Lesnik <ilesnik@onasellabs.com> 1418648183 +0000	commit: Enable failsafe reports
-ruau/.git/logs/refs/heads/onasel-config:fb289e95ea9732c953c9ceee1b24e97ade6a9b84 cfd4be1eac6ac1744cf3732073f8af7efdb1a875 Ivan Lesnik <ilesnik@onasellabs.com> 1418649268 +0000	commit: Disable surefire reports; add *.txt to failsafe reports
-ruau/.git/logs/refs/heads/onasel-config:cfd4be1eac6ac1744cf3732073f8af7efdb1a875 a71655bc3064b75b901449cd79724bd2f405b2a5 Ivan Lesnik <ilesnik@onasellabs.com> 1418725836 +0000	commit: Fix typo in reports name; add tests number calculation
-ruau/.git/logs/refs/heads/onasel-config:a71655bc3064b75b901449cd79724bd2f405b2a5 894dd74896b97ef228c624c7fc825e8c6e065921 Ivan Lesnik <ilesnik@onasellabs.com> 1418728091 +0000	commit: Switch to parallel mode
-ruau/.git/logs/refs/heads/onasel-config:894dd74896b97ef228c624c7fc825e8c6e065921 af74afdbe3c9ff21d698e0994e21329725ba9b29 Ivan Lesnik <ilesnik@onasellabs.com> 1418730206 +0000	commit: Switch to Firefox, single mode
-ruau/.git/logs/refs/heads/onasel-config:af74afdbe3c9ff21d698e0994e21329725ba9b29 70fb200d12cec2173cdcb449db121425a3eb7f2c Ivan Lesnik <ilesnik@onasellabs.com> 1418734918 +0000	commit: Switch to Android and IE10 sauce tests
-ruau/.git/logs/refs/heads/onasel-config:70fb200d12cec2173cdcb449db121425a3eb7f2c c901c542cb2c145f0cfa2c0019d09fa980b501a8 Ivan Lesnik <ilesnik@onasellabs.com> 1418741780 +0000	commit: Switch to IE8, parallel mode
-ruau/.git/logs/refs/heads/onasel-config:c901c542cb2c145f0cfa2c0019d09fa980b501a8 79aa5b298a78b98c00b62d5f0701165a7b8452d4 Ivan Lesnik <ilesnik@onasellabs.com> 1418809258 +0000	commit: Switch to IE9 tests
-ruau/.git/logs/refs/heads/onasel-config:79aa5b298a78b98c00b62d5f0701165a7b8452d4 e0d184c1b6feae1e26a4533f9c291d6f280864dc Ivan Lesnik <ilesnik@onasellabs.com> 1418819804 +0000	commit: Switch to Safari, parallel mode
-ruau/.git/logs/refs/heads/onasel-config:e0d184c1b6feae1e26a4533f9c291d6f280864dc dfa612ddc29b6f9d1883fcc1c07b5f3a20a84c79 Ivan Lesnik <ilesnik@onasellabs.com> 1418824480 +0000	commit: Enable Chrome & Firefox, parallel mode
-ruau/.git/logs/refs/heads/onasel-config:dfa612ddc29b6f9d1883fcc1c07b5f3a20a84c79 86f366e5a8f2907277d994e0a5462775bee3bf5e Ivan Lesnik <ilesnik@onasellabs.com> 1418828471 +0000	commit: Disable Safari
-ruau/.git/logs/refs/heads/onasel-config:86f366e5a8f2907277d994e0a5462775bee3bf5e e7de664838558b42d8e051c7761d27f6c7d4b010 Ivan Lesnik <ilesnik@onasellabs.com> 1418986550 +0000	commit: Switch to IE7, single mode
-ruau/.git/logs/refs/heads/master:0000000000000000000000000000000000000000 a3cee9addd78c4c955d8353772904188f1d1c709 William Josephson <William Josephson@onasellabs.com> 1416303321 +0000	clone: from https://github.com/onasellabs/ruau
-ruau/.git/logs/refs/heads/master:a3cee9addd78c4c955d8353772904188f1d1c709 c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 Ivan Lesnik <ilesnik@onasellabs.com> 1417002532 +0000	rebase finished: refs/heads/master onto c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3
-ruau/.git/logs/refs/heads/master:c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.com> 1417003723 +0000	rebase finished: refs/heads/master onto 027d62c63762dff82846acb1156993f75fd2bbc2
-ruau/.git/logs/refs/heads/master:027d62c63762dff82846acb1156993f75fd2bbc2 920daf3f2605c62298c4f33079e79355dd7b1d5a Ivan Lesnik <ilesnik@onasellabs.com> 1418981519 +0000	rebase finished: refs/heads/master onto 5be2360d98f2193b7afaca7e1eeb0c1b1b5ffa27
-ruau/.git/logs/refs/heads/master:920daf3f2605c62298c4f33079e79355dd7b1d5a 468152772d027cbea6fea02b0672c53c28878237 Ivan Lesnik <ilesnik@onasellabs.com> 1418982298 +0000	rebase finished: refs/heads/master onto 86f366e5a8f2907277d994e0a5462775bee3bf5e
-ruau/.git/logs/refs/heads/serial:0000000000000000000000000000000000000000 468152772d027cbea6fea02b0672c53c28878237 Ivan Lesnik <ilesnik@onasellabs.com> 1418984097 +0000	branch: Created from master
+ruau/.git/logs/HEAD:0000000000000000000000000000000000000000 a3cee9addd78c4c955d8353772904188f1d1c709 William Josephson <William Josephson@onasellabs.mok> 1416303321 +0000	clone: from https://github.com/onasellabs/ruau
+ruau/.git/logs/HEAD:a3cee9addd78c4c955d8353772904188f1d1c709 a3cee9addd78c4c955d8353772904188f1d1c709 William Josephson <William Josephson@onasellabs.mok> 1416307336 +0000	checkout: moving from master to jenkins-onasel-migration
+ruau/.git/logs/HEAD:a3cee9addd78c4c955d8353772904188f1d1c709 c3f5653d08c42af55b0159fa6def94b8ee4428d9 William Josephson <William Josephson@onasellabs.mok> 1416388298 +0000	commit: Initial version of config
+ruau/.git/logs/HEAD:c3f5653d08c42af55b0159fa6def94b8ee4428d9 c3f5653d08c42af55b0159fa6def94b8ee4428d9 William Josephson <William Josephson@onasellabs.mok> 1416392377 +0000	checkout: moving from jenkins-onasel-migration to jenkins-onasel-migration
+ruau/.git/logs/HEAD:c3f5653d08c42af55b0159fa6def94b8ee4428d9 14e31de4243e60b25423ccdf4fbb8f58e3fce8fc Ivan Lesnik <ilesnik@onasellabs.mok> 1416503709 +0000	commit: Converter functionality
+ruau/.git/logs/HEAD:14e31de4243e60b25423ccdf4fbb8f58e3fce8fc e540d933900409f06f13a8d4adebd55283fe4938 Ivan Lesnik <ilesnik@onasellabs.mok> 1416589237 +0000	commit: Add CLI and oneilsConfig class
+ruau/.git/logs/HEAD:e540d933900409f06f13a8d4adebd55283fe4938 cee8755806896d71f85360be677bd0ff9068cde6 Ivan Lesnik <ilesnik@onasellabs.mok> 1416832357 +0000	pull origin jenkins-onasel-migration: Fast-forward
+ruau/.git/logs/HEAD:cee8755806896d71f85360be677bd0ff9068cde6 027971a0105537a46d88c6b96d7965afa67066a8 Ivan Lesnik <ilesnik@onasellabs.mok> 1416908792 +0000	commit: Enable tests for firefox, disable for Chrome
+ruau/.git/logs/HEAD:027971a0105537a46d88c6b96d7965afa67066a8 020412ca50a531ee93c62b9f0cd6765e0e7dcb21 Ivan Lesnik <ilesnik@onasellabs.mok> 1416923951 +0000	commit: Disabled Firefox, enabled IE7 tests
+ruau/.git/logs/HEAD:020412ca50a531ee93c62b9f0cd6765e0e7dcb21 c2369dfe1d51d9c011901615ee7bddc8c5fa9b07 Ivan Lesnik <ilesnik@onasellabs.mok> 1416931177 +0000	commit: Increase timeout to 2400; add test pattern to run UI tests only
+ruau/.git/logs/HEAD:c2369dfe1d51d9c011901615ee7bddc8c5fa9b07 f141b421b28b6130677a98180ef0ef762acae1d0 Ivan Lesnik <ilesnik@onasellabs.mok> 1416931440 +0000	commit: Fix incorrect tests pattern
+ruau/.git/logs/HEAD:f141b421b28b6130677a98180ef0ef762acae1d0 438e944b2ad8001199b70a36201f1635820a41ba Ivan Lesnik <ilesnik@onasellabs.mok> 1416938110 +0000	commit: Disable sauce; re-enable Firefox tests
+ruau/.git/logs/HEAD:438e944b2ad8001199b70a36201f1635820a41ba ef1017e09cd7bde581357ff557d63c008cff4f1b Ivan Lesnik <ilesnik@onasellabs.mok> 1416998806 +0000	commit: Add :headless: option; narrowed test_pattern to run a single test
+ruau/.git/logs/HEAD:ef1017e09cd7bde581357ff557d63c008cff4f1b a3cee9addd78c4c955d8353772904188f1d1c709 Ivan Lesnik <ilesnik@onasellabs.mok> 1417002373 +0000	checkout: moving from jenkins-onasel-migration to master
+ruau/.git/logs/HEAD:a3cee9addd78c4c955d8353772904188f1d1c709 ef1017e09cd7bde581357ff557d63c008cff4f1b Ivan Lesnik <ilesnik@onasellabs.mok> 1417002455 +0000	checkout: moving from master to jenkins-onasel-migration
+ruau/.git/logs/HEAD:ef1017e09cd7bde581357ff557d63c008cff4f1b f67cadee7b5da719cc2a446d2591d98ee9b081ae Ivan Lesnik <ilesnik@onasellabs.mok> 1417002485 +0000	commit: Add .mudial to .gitignore
+ruau/.git/logs/HEAD:f67cadee7b5da719cc2a446d2591d98ee9b081ae a3cee9addd78c4c955d8353772904188f1d1c709 Ivan Lesnik <ilesnik@onasellabs.mok> 1417002502 +0000	checkout: moving from jenkins-onasel-migration to master
+ruau/.git/logs/HEAD:a3cee9addd78c4c955d8353772904188f1d1c709 c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 Ivan Lesnik <ilesnik@onasellabs.mok> 1417002531 +0000	checkout: moving from master to c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3^0
+ruau/.git/logs/HEAD:c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 Ivan Lesnik <ilesnik@onasellabs.mok> 1417002532 +0000	rebase finished: returning to refs/heads/master
+ruau/.git/logs/HEAD:c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 f67cadee7b5da719cc2a446d2591d98ee9b081ae Ivan Lesnik <ilesnik@onasellabs.mok> 1417002773 +0000	checkout: moving from master to jenkins-onasel-migration
+ruau/.git/logs/HEAD:f67cadee7b5da719cc2a446d2591d98ee9b081ae c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 Ivan Lesnik <ilesnik@onasellabs.mok> 1417002813 +0000	checkout: moving from jenkins-onasel-migration to c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3^0
+ruau/.git/logs/HEAD:c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 ee878f6f9a64c3f345cfa1c3879b31bdf1392e64 Ivan Lesnik <ilesnik@onasellabs.mok> 1417002821 +0000	rebase: Initial version of config
+ruau/.git/logs/HEAD:ee878f6f9a64c3f345cfa1c3879b31bdf1392e64 1f2633f9212416b63e34c71d6cf1eb8393901b44 Ivan Lesnik <ilesnik@onasellabs.mok> 1417002821 +0000	rebase: Converter functionality
+ruau/.git/logs/HEAD:1f2633f9212416b63e34c71d6cf1eb8393901b44 cd3dbb44d7c4935e455d8908479f7cedf852945b Ivan Lesnik <ilesnik@onasellabs.mok> 1417002822 +0000	rebase: Add CLI and oneilsConfig class
+ruau/.git/logs/HEAD:cd3dbb44d7c4935e455d8908479f7cedf852945b 1e09eaf1ca57f386aab131ce692df3cdd5c16324 Ivan Lesnik <ilesnik@onasellabs.mok> 1417002822 +0000	rebase: disable sauce jobs
+ruau/.git/logs/HEAD:1e09eaf1ca57f386aab131ce692df3cdd5c16324 0c36f54bff249cbd44137472f550b9545b5f87bd Ivan Lesnik <ilesnik@onasellabs.mok> 1417002823 +0000	rebase: Pick up junit XML
+ruau/.git/logs/HEAD:0c36f54bff249cbd44137472f550b9545b5f87bd da242e35f0f663ea020f840e6f6be097050f6671 Ivan Lesnik <ilesnik@onasellabs.mok> 1417002823 +0000	rebase: Enable tests for firefox, disable for Chrome
+ruau/.git/logs/HEAD:da242e35f0f663ea020f840e6f6be097050f6671 4cf7865d9b3093960bf22ab9a5dc0e34ad821c1f Ivan Lesnik <ilesnik@onasellabs.mok> 1417002824 +0000	rebase: Disabled Firefox, enabled IE7 tests
+ruau/.git/logs/HEAD:4cf7865d9b3093960bf22ab9a5dc0e34ad821c1f a56545fb51f11f891ef6ab9aaf676449f2daadda Ivan Lesnik <ilesnik@onasellabs.mok> 1417002824 +0000	rebase: Increase timeout to 2400; add test pattern to run UI tests only
+ruau/.git/logs/HEAD:a56545fb51f11f891ef6ab9aaf676449f2daadda 0fe387b0588f9401e0b08aef8059d0c0cc954bcb Ivan Lesnik <ilesnik@onasellabs.mok> 1417002825 +0000	rebase: Fix incorrect tests pattern
+ruau/.git/logs/HEAD:0fe387b0588f9401e0b08aef8059d0c0cc954bcb 28af8f8fe71cfe8eb448ccfd981dec831d333109 Ivan Lesnik <ilesnik@onasellabs.mok> 1417002825 +0000	rebase: Disable sauce; re-enable Firefox tests
+ruau/.git/logs/HEAD:28af8f8fe71cfe8eb448ccfd981dec831d333109 414940dcafa172a1bf284fb7a5cc35408e9a952b Ivan Lesnik <ilesnik@onasellabs.mok> 1417002826 +0000	rebase: Add :headless: option; narrowed test_pattern to run a single test
+ruau/.git/logs/HEAD:414940dcafa172a1bf284fb7a5cc35408e9a952b 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.mok> 1417002826 +0000	rebase: Add .mudial to .gitignore
+ruau/.git/logs/HEAD:027d62c63762dff82846acb1156993f75fd2bbc2 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.mok> 1417002826 +0000	rebase finished: returning to refs/heads/jenkins-onasel-migration
+ruau/.git/logs/HEAD:027d62c63762dff82846acb1156993f75fd2bbc2 c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 Ivan Lesnik <ilesnik@onasellabs.mok> 1417002939 +0000	checkout: moving from jenkins-onasel-migration to master
+ruau/.git/logs/HEAD:c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 ef1017e09cd7bde581357ff557d63c008cff4f1b Ivan Lesnik <ilesnik@onasellabs.mok> 1417003120 +0000	checkout: moving from master to ef1017e09cd7bde581357ff557d63c008cff4f1b^0
+ruau/.git/logs/HEAD:ef1017e09cd7bde581357ff557d63c008cff4f1b a407fbb097efd38657e8a4c83ffbadb3897e8a86 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003135 +0000	rebase: amcculloch initial svg work
+ruau/.git/logs/HEAD:a407fbb097efd38657e8a4c83ffbadb3897e8a86 a8618e895dde48f767deca63977232e3b7b0aae4 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003136 +0000	rebase: add parser for svg definitions
+ruau/.git/logs/HEAD:a8618e895dde48f767deca63977232e3b7b0aae4 7e982df8c3f3b7fcd145460c574cb14e0ddb3973 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003136 +0000	rebase: add svg writer
+ruau/.git/logs/HEAD:7e982df8c3f3b7fcd145460c574cb14e0ddb3973 727fb124c6bc9e2166003cf54fa5ff5806c72ae2 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003137 +0000	rebase: actually write out svg in svgwriter
+ruau/.git/logs/HEAD:727fb124c6bc9e2166003cf54fa5ff5806c72ae2 068cb0fde2fb6b916e124ed8ed137f4ebc93ae69 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003137 +0000	rebase: Fixes a list visibility issue and the logic for when emptyListContent is shown.
+ruau/.git/logs/HEAD:068cb0fde2fb6b916e124ed8ed137f4ebc93ae69 bd481b190396f229da09c5b9a946dcbce73ca15c Ivan Lesnik <ilesnik@onasellabs.mok> 1417003138 +0000	rebase: rename dependsOnAttribute to dependsOn
+ruau/.git/logs/HEAD:bd481b190396f229da09c5b9a946dcbce73ca15c b7a5d052b2705b1000bc3c946341c08dbff51be2 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003138 +0000	rebase: refactor PageObject
+ruau/.git/logs/HEAD:b7a5d052b2705b1000bc3c946341c08dbff51be2 72614c1265b5dada2a444a9750b714c976cd5a6a Ivan Lesnik <ilesnik@onasellabs.mok> 1417003139 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1582
+ruau/.git/logs/HEAD:72614c1265b5dada2a444a9750b714c976cd5a6a d6a517f44f1abf8faf328a4569f7b4a364a26878 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003139 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:d6a517f44f1abf8faf328a4569f7b4a364a26878 a06148d8b98f5991608869222080b73033e0ee5a Ivan Lesnik <ilesnik@onasellabs.mok> 1417003140 +0000	rebase: add svg parsing max length
+ruau/.git/logs/HEAD:a06148d8b98f5991608869222080b73033e0ee5a b6519c1a268d4caaadcfadc6cc4efcd6fcb11f3d Ivan Lesnik <ilesnik@onasellabs.mok> 1417003141 +0000	rebase: fail if expected exceptions are not thrown during test cases
+ruau/.git/logs/HEAD:b6519c1a268d4caaadcfadc6cc4efcd6fcb11f3d 35840c67bbc363b353f427ab993f2ef916e4de8d Ivan Lesnik <ilesnik@onasellabs.mok> 1417003141 +0000	rebase: Convert SFDC WebDriver tests to Ruue JS test
+ruau/.git/logs/HEAD:35840c67bbc363b353f427ab993f2ef916e4de8d ef28f14827be51001374ba4eee94543999b71524 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003142 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1583
+ruau/.git/logs/HEAD:ef28f14827be51001374ba4eee94543999b71524 abe97a6b7e63e4b97fce351876ce0ba800722f09 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003142 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:abe97a6b7e63e4b97fce351876ce0ba800722f09 7fc8cd6c291426458c6acad55d3d6ae863bae42c Ivan Lesnik <ilesnik@onasellabs.mok> 1417003143 +0000	rebase: PanelModal and ModalOverlay changes
+ruau/.git/logs/HEAD:7fc8cd6c291426458c6acad55d3d6ae863bae42c f33c10081ecfe00ed3fc2f2504a7b35822ee5da7 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003143 +0000	rebase: Remove Ruue's Promise implementation in favor of native ES6 Promises.
+ruau/.git/logs/HEAD:f33c10081ecfe00ed3fc2f2504a7b35822ee5da7 84c5f1081e3c8f4cc4acba22291fe1cd10f7433e Ivan Lesnik <ilesnik@onasellabs.mok> 1417003144 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1584
+ruau/.git/logs/HEAD:84c5f1081e3c8f4cc4acba22291fe1cd10f7433e 6166cdf03882a1bb0bad65c76217be2581b8cd5e Ivan Lesnik <ilesnik@onasellabs.mok> 1417003144 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:6166cdf03882a1bb0bad65c76217be2581b8cd5e fc6bef044e6c0d94f84436e785a2c78295c65fd9 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003145 +0000	rebase: Disabling test from IE7 and IE8
+ruau/.git/logs/HEAD:fc6bef044e6c0d94f84436e785a2c78295c65fd9 a0873e0bfd40bd2db47da5b2a85796dbee61ea50 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003145 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1585
+ruau/.git/logs/HEAD:a0873e0bfd40bd2db47da5b2a85796dbee61ea50 79d168650aebfe097e67a79320650fdb0deda79a Ivan Lesnik <ilesnik@onasellabs.mok> 1417003146 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:79d168650aebfe097e67a79320650fdb0deda79a 50c9f658e0efd62bc26df57d5c93029fd788cdab Ivan Lesnik <ilesnik@onasellabs.mok> 1417003146 +0000	rebase: Remove workaround in test component
+ruau/.git/logs/HEAD:50c9f658e0efd62bc26df57d5c93029fd788cdab 88347708bec447f7565bc04154b18bc9d454aad9 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003147 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1586
+ruau/.git/logs/HEAD:88347708bec447f7565bc04154b18bc9d454aad9 b8a2b595839be49dde65364e0a1a13fa267510f1 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003147 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:b8a2b595839be49dde65364e0a1a13fa267510f1 36592364b9ec6877720596c42082d73f2ecc081b Ivan Lesnik <ilesnik@onasellabs.mok> 1417003148 +0000	rebase: validate interface access using design descriptor instead of region descriptor
+ruau/.git/logs/HEAD:36592364b9ec6877720596c42082d73f2ecc081b 55a765fce624f8e102b7fa054e60050fc4597b61 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003148 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1587
+ruau/.git/logs/HEAD:55a765fce624f8e102b7fa054e60050fc4597b61 480504f1b0b095304fdc40471aab0a11ecedd3bc Ivan Lesnik <ilesnik@onasellabs.mok> 1417003149 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:480504f1b0b095304fdc40471aab0a11ecedd3bc e34940cd176bd2e0c625e46aa03d68a067c0a98f Ivan Lesnik <ilesnik@onasellabs.mok> 1417003149 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1588
+ruau/.git/logs/HEAD:e34940cd176bd2e0c625e46aa03d68a067c0a98f 7a628717fde5851abdd3237f77913ddab993de25 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003150 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:7a628717fde5851abdd3237f77913ddab993de25 226cc0602fd38383978d7ee8a450981f1e12571b Ivan Lesnik <ilesnik@onasellabs.mok> 1417003150 +0000	rebase: Fix double labels (under screen reader) in ui:button
+ruau/.git/logs/HEAD:226cc0602fd38383978d7ee8a450981f1e12571b 6af79f5433745621a860963df2c9b145699404e0 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003151 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1589
+ruau/.git/logs/HEAD:6af79f5433745621a860963df2c9b145699404e0 c3f2631042fd90137d8a16b29bbeed91a2c2f485 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003151 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:c3f2631042fd90137d8a16b29bbeed91a2c2f485 337f36cce6f2af4f463f60cde5542e80470e5c67 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003152 +0000	rebase: fixing rendering issues: uiblock, inputs, autocomplete
+ruau/.git/logs/HEAD:337f36cce6f2af4f463f60cde5542e80470e5c67 d0e8c3c1d798862ce328748b3bea5d40a73671f4 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003152 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1590
+ruau/.git/logs/HEAD:d0e8c3c1d798862ce328748b3bea5d40a73671f4 a809b24ad506df1049f0f204c1e8d9de0ecb3645 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003153 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:a809b24ad506df1049f0f204c1e8d9de0ecb3645 0621fb797cf020ac2744205c3be74f89168a56d1 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003153 +0000	rebase: Fixed dataGrid method call name
+ruau/.git/logs/HEAD:0621fb797cf020ac2744205c3be74f89168a56d1 491ac0baa44d28b8d92fb8bc3f23774d954d32fc Ivan Lesnik <ilesnik@onasellabs.mok> 1417003154 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1591
+ruau/.git/logs/HEAD:491ac0baa44d28b8d92fb8bc3f23774d954d32fc f245d2a0b51ffd1bdace964c9e5e24b594eeebeb Ivan Lesnik <ilesnik@onasellabs.mok> 1417003154 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:f245d2a0b51ffd1bdace964c9e5e24b594eeebeb 343320975d20f5f9d296d2a0a3a0d775a49041d9 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003157 +0000	rebase: Adding RuueServiceProvider marker interface and [passive] @Component annotations as the firs increment to make OSGi integration easier.
+ruau/.git/logs/HEAD:343320975d20f5f9d296d2a0a3a0d775a49041d9 c01798ef1d73a92672e5158f7ffca35f7b4af580 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003157 +0000	rebase: fix for menu and spinner aotp
+ruau/.git/logs/HEAD:c01798ef1d73a92672e5158f7ffca35f7b4af580 0e9b2681fd0b472281ede01d4ebbd34052808e3a Ivan Lesnik <ilesnik@onasellabs.mok> 1417003159 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1592
+ruau/.git/logs/HEAD:0e9b2681fd0b472281ede01d4ebbd34052808e3a e3dfcc89fe0792ce4e61318e2d32222c0145ce0e Ivan Lesnik <ilesnik@onasellabs.mok> 1417003160 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:e3dfcc89fe0792ce4e61318e2d32222c0145ce0e eb09b057fedd4719680000af39cdc3c0069dd1af Ivan Lesnik <ilesnik@onasellabs.mok> 1417003160 +0000	rebase: Revert "Add two phase provided facet initialization"
+ruau/.git/logs/HEAD:eb09b057fedd4719680000af39cdc3c0069dd1af 8191bd70e31af907ad08525cbc8892e639fbeba7 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003161 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1593
+ruau/.git/logs/HEAD:8191bd70e31af907ad08525cbc8892e639fbeba7 3b301d552b2bd5ca036e9a3d326468efa686327d Ivan Lesnik <ilesnik@onasellabs.mok> 1417003163 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:3b301d552b2bd5ca036e9a3d326468efa686327d 5de769dc09ce2d99520720d400cb2c27f5505e9d Ivan Lesnik <ilesnik@onasellabs.mok> 1417003163 +0000	rebase: Fix CSS helper classes
+ruau/.git/logs/HEAD:5de769dc09ce2d99520720d400cb2c27f5505e9d 70616e57bcc162249952074c7ed939ed20211ec6 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003164 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1594
+ruau/.git/logs/HEAD:70616e57bcc162249952074c7ed939ed20211ec6 8b9de0d6193d1d9fdb045b3204d3bfa6555415c5 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003165 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:8b9de0d6193d1d9fdb045b3204d3bfa6555415c5 68420d18be826487ae67d57332a329ec122a9846 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003167 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1595
+ruau/.git/logs/HEAD:68420d18be826487ae67d57332a329ec122a9846 f97c0b40f8d7c55fb58572e3453447c74fb786bb Ivan Lesnik <ilesnik@onasellabs.mok> 1417003168 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:f97c0b40f8d7c55fb58572e3453447c74fb786bb c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003302 +0000	rebase: aborting
+ruau/.git/logs/HEAD:c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003336 +0000	checkout: moving from master to jenkins-onasel-migration
+ruau/.git/logs/HEAD:027d62c63762dff82846acb1156993f75fd2bbc2 c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003586 +0000	checkout: moving from jenkins-onasel-migration to master
+ruau/.git/logs/HEAD:c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003723 +0000	checkout: moving from master to 027d62c63762dff82846acb1156993f75fd2bbc2^0
+ruau/.git/logs/HEAD:027d62c63762dff82846acb1156993f75fd2bbc2 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003723 +0000	rebase finished: returning to refs/heads/master
+ruau/.git/logs/HEAD:027d62c63762dff82846acb1156993f75fd2bbc2 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003816 +0000	checkout: moving from master to jenkins-onasel-migration
+ruau/.git/logs/HEAD:027d62c63762dff82846acb1156993f75fd2bbc2 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.mok> 1417004062 +0000	checkout: moving from jenkins-onasel-migration to master
+ruau/.git/logs/HEAD:027d62c63762dff82846acb1156993f75fd2bbc2 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.mok> 1417004113 +0000	checkout: moving from master to onasel-config
+ruau/.git/logs/HEAD:027d62c63762dff82846acb1156993f75fd2bbc2 874393a26c4618f6d8474c6b3d31aea8b76a1035 Ivan Lesnik <ilesnik@onasellabs.mok> 1417011336 +0000	checkout: moving from onasel-config to ruau-framework-0.1309.64
+ruau/.git/logs/HEAD:874393a26c4618f6d8474c6b3d31aea8b76a1035 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.mok> 1417011684 +0000	checkout: moving from 874393a26c4618f6d8474c6b3d31aea8b76a1035 to onasel-config
+ruau/.git/logs/HEAD:027d62c63762dff82846acb1156993f75fd2bbc2 ec0187143197f386d5d78c1345ed566b1b8f16a3 Ivan Lesnik <ilesnik@onasellabs.mok> 1417090660 +0000	commit: Temporary remove failing tests
+ruau/.git/logs/HEAD:ec0187143197f386d5d78c1345ed566b1b8f16a3 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.mok> 1417183608 +0000	checkout: moving from onasel-config to master
+ruau/.git/logs/HEAD:027d62c63762dff82846acb1156993f75fd2bbc2 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.mok> 1417183754 +0000	checkout: moving from master to simple
+ruau/.git/logs/HEAD:027d62c63762dff82846acb1156993f75fd2bbc2 ec0187143197f386d5d78c1345ed566b1b8f16a3 Ivan Lesnik <ilesnik@onasellabs.mok> 1417184188 +0000	checkout: moving from simple to onasel-config
+ruau/.git/logs/HEAD:ec0187143197f386d5d78c1345ed566b1b8f16a3 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.mok> 1417184284 +0000	checkout: moving from onasel-config to simple
+ruau/.git/logs/HEAD:027d62c63762dff82846acb1156993f75fd2bbc2 b61a5dfb643dbe6f189a99de3611b82707be037d Ivan Lesnik <ilesnik@onasellabs.mok> 1417185159 +0000	commit: Substitute parent pom.xml with simpler one; add simple project temporary
+ruau/.git/logs/HEAD:b61a5dfb643dbe6f189a99de3611b82707be037d 2d707474a3dff5b6d2b1347779bfd51de95108d9 Ivan Lesnik <ilesnik@onasellabs.mok> 1417510753 +0000	commit: Removed make install from worker setup
+ruau/.git/logs/HEAD:2d707474a3dff5b6d2b1347779bfd51de95108d9 ec0187143197f386d5d78c1345ed566b1b8f16a3 Ivan Lesnik <ilesnik@onasellabs.mok> 1417510951 +0000	checkout: moving from simple to onasel-config
+ruau/.git/logs/HEAD:ec0187143197f386d5d78c1345ed566b1b8f16a3 2d707474a3dff5b6d2b1347779bfd51de95108d9 Ivan Lesnik <ilesnik@onasellabs.mok> 1417511095 +0000	checkout: moving from onasel-config to simple
+ruau/.git/logs/HEAD:2d707474a3dff5b6d2b1347779bfd51de95108d9 59ee3bcb74e37b76236067cb39e5ebabfecb58cf Ivan Lesnik <ilesnik@onasellabs.mok> 1417511254 +0000	commit: Change JUnit running mode to parallel
+ruau/.git/logs/HEAD:59ee3bcb74e37b76236067cb39e5ebabfecb58cf cb0e2c33809c7e6b25c8863e35d3a0f5f050af0c Ivan Lesnik <ilesnik@onasellabs.mok> 1417511577 +0000	commit: Fix for onasel.yml
+ruau/.git/logs/HEAD:cb0e2c33809c7e6b25c8863e35d3a0f5f050af0c 532918904de05a8c59ace773bbde205853cf5c1c Ivan Lesnik <ilesnik@onasellabs.mok> 1417512195 +0000	commit: Reduce file pattern results to simple/ subdir
+ruau/.git/logs/HEAD:532918904de05a8c59ace773bbde205853cf5c1c ec0187143197f386d5d78c1345ed566b1b8f16a3 Ivan Lesnik <ilesnik@onasellabs.mok> 1417512410 +0000	checkout: moving from simple to onasel-config
+ruau/.git/logs/HEAD:ec0187143197f386d5d78c1345ed566b1b8f16a3 b16cebd6909503ed2e2be55ab139e95f7db8b903 Ivan Lesnik <ilesnik@onasellabs.mok> 1417539145 +0000	commit: Delete jenkins-to-onasel converter since it is moved to mudial_devops
+ruau/.git/logs/HEAD:b16cebd6909503ed2e2be55ab139e95f7db8b903 532918904de05a8c59ace773bbde205853cf5c1c Ivan Lesnik <ilesnik@onasellabs.mok> 1417597925 +0000	checkout: moving from onasel-config to simple
+ruau/.git/logs/HEAD:532918904de05a8c59ace773bbde205853cf5c1c b16cebd6909503ed2e2be55ab139e95f7db8b903 Ivan Lesnik <ilesnik@onasellabs.mok> 1417598233 +0000	checkout: moving from simple to onasel-config
+ruau/.git/logs/HEAD:b16cebd6909503ed2e2be55ab139e95f7db8b903 532918904de05a8c59ace773bbde205853cf5c1c Ivan Lesnik <ilesnik@onasellabs.mok> 1417598293 +0000	checkout: moving from onasel-config to simple
+ruau/.git/logs/HEAD:532918904de05a8c59ace773bbde205853cf5c1c a57a0a181fb4f80ebc0853346133d745c8765419 Ivan Lesnik <ilesnik@onasellabs.mok> 1417722640 +0000	commit: Minor changes
+ruau/.git/logs/HEAD:a57a0a181fb4f80ebc0853346133d745c8765419 b16cebd6909503ed2e2be55ab139e95f7db8b903 Ivan Lesnik <ilesnik@onasellabs.mok> 1417722661 +0000	checkout: moving from simple to onasel-config
+ruau/.git/logs/HEAD:b16cebd6909503ed2e2be55ab139e95f7db8b903 79b0002c5a45481a1639034d136daddaedfe5819 Ivan Lesnik <ilesnik@onasellabs.mok> 1417722749 +0000	commit: Add option disable_dodge_preload
+ruau/.git/logs/HEAD:79b0002c5a45481a1639034d136daddaedfe5819 9fd50c77e95d99e0dc5818b32dc035ffbf841fe7 Ivan Lesnik <ilesnik@onasellabs.mok> 1417726760 +0000	commit: Increase timeout to 7200; remove test_pattern as useless
+ruau/.git/logs/HEAD:9fd50c77e95d99e0dc5818b32dc035ffbf841fe7 1e058bc75ed1087936eacb582bdb9c00ee2c6e2c Ivan Lesnik <ilesnik@onasellabs.mok> 1417777377 +0000	commit: Enable parallel testing mode
+ruau/.git/logs/HEAD:1e058bc75ed1087936eacb582bdb9c00ee2c6e2c f1e5e8630def5b2c9d9136293d8b87e019b8ccb7 Ivan Lesnik <ilesnik@onasellabs.mok> 1417777844 +0000	commit: Add files pattern
+ruau/.git/logs/HEAD:f1e5e8630def5b2c9d9136293d8b87e019b8ccb7 a57a0a181fb4f80ebc0853346133d745c8765419 Ivan Lesnik <ilesnik@onasellabs.mok> 1417784171 +0000	checkout: moving from onasel-config to simple
+ruau/.git/logs/HEAD:a57a0a181fb4f80ebc0853346133d745c8765419 f1e5e8630def5b2c9d9136293d8b87e019b8ccb7 Ivan Lesnik <ilesnik@onasellabs.mok> 1417787333 +0000	checkout: moving from simple to onasel-config
+ruau/.git/logs/HEAD:f1e5e8630def5b2c9d9136293d8b87e019b8ccb7 1b1b9e354d5685c15c3fed7f3b79fb09124e5465 Ivan Lesnik <ilesnik@onasellabs.mok> 1417787666 +0000	commit: Disable Firefox tests; enable Chrome tests
+ruau/.git/logs/HEAD:1b1b9e354d5685c15c3fed7f3b79fb09124e5465 84e34f12a8eb717f1e8405a8bfbaf6092458dc78 Ivan Lesnik <ilesnik@onasellabs.mok> 1417790438 +0000	commit: Disable Chrome tests; enable Android sauselabs tests
+ruau/.git/logs/HEAD:84e34f12a8eb717f1e8405a8bfbaf6092458dc78 e1288ebc5957d8e311c97982bf4d2f2820b0e27e Ivan Lesnik <ilesnik@onasellabs.mok> 1417794945 +0000	commit: Enable IE8; disable Android
+ruau/.git/logs/HEAD:e1288ebc5957d8e311c97982bf4d2f2820b0e27e e3dc4d213776cd18427d9990d70c5e976f30e7ae Ivan Lesnik <ilesnik@onasellabs.mok> 1417807448 +0000	commit: Switch to Firefox tests
+ruau/.git/logs/HEAD:e3dc4d213776cd18427d9990d70c5e976f30e7ae da1f6f84d8cdda7a9bc46282342adeb71ed81287 Ivan Lesnik <ilesnik@onasellabs.mok> 1417885356 +0000	commit: Auto-generated config with extensions
+ruau/.git/logs/HEAD:da1f6f84d8cdda7a9bc46282342adeb71ed81287 b95fb849eba203899aaadb9a90a38e64f3a8c887 Ivan Lesnik <ilesnik@onasellabs.mok> 1417886720 +0000	commit: Fix absolute paths for extensions
+ruau/.git/logs/HEAD:b95fb849eba203899aaadb9a90a38e64f3a8c887 1e05b4bce920da58878adfca7df3f0a0aacb0db7 Ivan Lesnik <ilesnik@onasellabs.mok> 1417893169 +0000	commit: Move test setup step to worker_setup hook
+ruau/.git/logs/HEAD:1e05b4bce920da58878adfca7df3f0a0aacb0db7 277fffbbcd0d0b600f4ef3bd796528020e351fd2 Ivan Lesnik <ilesnik@onasellabs.mok> 1418044232 +0000	commit: Enable Chrome suite; disable Firefox
+ruau/.git/logs/HEAD:277fffbbcd0d0b600f4ef3bd796528020e351fd2 346bab38fc77ce98ba5a348a62418c46a4c41bf9 Ivan Lesnik <ilesnik@onasellabs.mok> 1418047541 +0000	commit: Switch to Android sauce tests
+ruau/.git/logs/HEAD:346bab38fc77ce98ba5a348a62418c46a4c41bf9 614d9507f5b203dfef8f63c8196d220ada136f1b Ivan Lesnik <ilesnik@onasellabs.mok> 1418053896 +0000	commit: Switch to IE7 suite
+ruau/.git/logs/HEAD:614d9507f5b203dfef8f63c8196d220ada136f1b 296a544ac14626efd8cedaf49ec7122bfb89b176 Ivan Lesnik <ilesnik@onasellabs.mok> 1418069903 +0000	commit: Switch to Safari suite
+ruau/.git/logs/HEAD:296a544ac14626efd8cedaf49ec7122bfb89b176 00f041cc5b414fd6ded453708666eadff30b0742 Ivan Lesnik <ilesnik@onasellabs.mok> 1418117662 +0000	commit: Switch to Chrome
+ruau/.git/logs/HEAD:00f041cc5b414fd6ded453708666eadff30b0742 63bc1569da25a33983764695b1a66caf97ca8e28 Ivan Lesnik <ilesnik@onasellabs.mok> 1418128160 +0000	commit: Set parallelism
+ruau/.git/logs/HEAD:63bc1569da25a33983764695b1a66caf97ca8e28 8f87fe9b0fdef78995517f8db149ea3a5055bbd3 Ivan Lesnik <ilesnik@onasellabs.mok> 1418133512 +0000	commit: Unparallelize; increase threads number to 4
+ruau/.git/logs/HEAD:8f87fe9b0fdef78995517f8db149ea3a5055bbd3 5896f0f9ba7e5eff3ca582da26f4218e3afee729 Ivan Lesnik <ilesnik@onasellabs.mok> 1418135129 +0000	commit: Switch to Firefox; threads=5
+ruau/.git/logs/HEAD:5896f0f9ba7e5eff3ca582da26f4218e3afee729 bf8928363c4f17916880c51f0fe6f60ef3f32627 Ivan Lesnik <ilesnik@onasellabs.mok> 1418137185 +0000	commit: Enable Chrome & Firefox; threads count=10
+ruau/.git/logs/HEAD:bf8928363c4f17916880c51f0fe6f60ef3f32627 4d8929f54f3e1df41d459f99b2b43352aa9d3568 Ivan Lesnik <ilesnik@onasellabs.mok> 1418139165 +0000	commit: Switch to IE9
+ruau/.git/logs/HEAD:4d8929f54f3e1df41d459f99b2b43352aa9d3568 214c4b175075cf0e3395108c0ef81fb6404e7858 Ivan Lesnik <ilesnik@onasellabs.mok> 1418140359 +0000	commit: Fix configuration, IE9
+ruau/.git/logs/HEAD:214c4b175075cf0e3395108c0ef81fb6404e7858 1de80a9801626edd4ad52bcf94be0fad813e86cf Ivan Lesnik <ilesnik@onasellabs.mok> 1418154445 +0000	commit: Add onasel-runner script and enable Chrome
+ruau/.git/logs/HEAD:1de80a9801626edd4ad52bcf94be0fad813e86cf b0d6d159d5e29330f316ce75a2272816064bc2c9 Ivan Lesnik <ilesnik@onasellabs.mok> 1418209879 +0000	commit: Add more specific mvn command
+ruau/.git/logs/HEAD:b0d6d159d5e29330f316ce75a2272816064bc2c9 29d678e77c9765dda18634a17c3ddc96654a3187 Ivan Lesnik <ilesnik@onasellabs.mok> 1418294544 +0000	commit: Add primitive test name filter
+ruau/.git/logs/HEAD:29d678e77c9765dda18634a17c3ddc96654a3187 a0f233b9591fb32e453c3f47ede129ebc63d369c Ivan Lesnik <ilesnik@onasellabs.mok> 1418295687 +0000	commit: Add reports mask
+ruau/.git/logs/HEAD:a0f233b9591fb32e453c3f47ede129ebc63d369c d511e0d7351c0baa1fc813fce53331bd9e604bae Ivan Lesnik <ilesnik@onasellabs.mok> 1418295721 +0000	commit: Switch to basic mode
+ruau/.git/logs/HEAD:d511e0d7351c0baa1fc813fce53331bd9e604bae 2bf5ea7025679f1ee6c6417878c9dc69359a9559 Ivan Lesnik <ilesnik@onasellabs.mok> 1418300940 +0000	commit: Add system property testsToRun to Ruue integration tests runner; add corresponding option to onasel runner
+ruau/.git/logs/HEAD:2bf5ea7025679f1ee6c6417878c9dc69359a9559 5ec57c576cca5f6147e506e3431fdfbcccdd48f7 Ivan Lesnik <ilesnik@onasellabs.mok> 1418312326 +0000	commit: Apply workaround hook into the Ruue test runner; fix onasel runner accordingly
+ruau/.git/logs/HEAD:5ec57c576cca5f6147e506e3431fdfbcccdd48f7 e3dd3abed4e56c0216583c575c33fb3c508f54dd Ivan Lesnik <ilesnik@onasellabs.mok> 1418313015 +0000	commit: Switch to parallel mode
+ruau/.git/logs/HEAD:e3dd3abed4e56c0216583c575c33fb3c508f54dd d0da069ccf488a5bc69002915fc493bbb5bdd18a Ivan Lesnik <ilesnik@onasellabs.mok> 1418316698 +0000	commit: oneils runner now processes CLI arguments; onasel.yml changed accordingly
+ruau/.git/logs/HEAD:d0da069ccf488a5bc69002915fc493bbb5bdd18a f7a847be96295996fab081024acc8ded98d363ba Ivan Lesnik <ilesnik@onasellabs.mok> 1418400104 +0000	commit: Switch to single mode
+ruau/.git/logs/HEAD:f7a847be96295996fab081024acc8ded98d363ba c6a859962acc4e62dd2b68a254b536f57ce47031 Ivan Lesnik <ilesnik@onasellabs.mok> 1418636898 +0000	commit: Run only integration tests
+ruau/.git/logs/HEAD:c6a859962acc4e62dd2b68a254b536f57ce47031 147a13ba4b170ea4a5b92e5feaf8b6967ff31246 Ivan Lesnik <ilesnik@onasellabs.mok> 1418641201 +0000	commit: Force skip queueing integration tests
+ruau/.git/logs/HEAD:147a13ba4b170ea4a5b92e5feaf8b6967ff31246 ea309630d266a786bd15367d0540b85342f58968 Ivan Lesnik <ilesnik@onasellabs.mok> 1418642372 +0000	commit: Force skip unittests
+ruau/.git/logs/HEAD:ea309630d266a786bd15367d0540b85342f58968 6c1dd902ece38adb585e57ef67f245809dc9bf1d Ivan Lesnik <ilesnik@onasellabs.mok> 1418642951 +0000	commit: Switch to parallel mode
+ruau/.git/logs/HEAD:6c1dd902ece38adb585e57ef67f245809dc9bf1d d2c0bae3807bb23b8a84cbfa1ebe2412d1844d57 Ivan Lesnik <ilesnik@onasellabs.mok> 1418647005 +0000	commit: Comment <testClasses> in pom.xml
+ruau/.git/logs/HEAD:d2c0bae3807bb23b8a84cbfa1ebe2412d1844d57 eb50fe1ffe3480911f1274111e4f4f80dbaf3800 Ivan Lesnik <ilesnik@onasellabs.mok> 1418647187 +0000	commit: Switch to a single mode
+ruau/.git/logs/HEAD:eb50fe1ffe3480911f1274111e4f4f80dbaf3800 fb289e95ea9732c953c9ceee1b24e97ade6a9b84 Ivan Lesnik <ilesnik@onasellabs.mok> 1418648183 +0000	commit: Enable failsafe reports
+ruau/.git/logs/HEAD:fb289e95ea9732c953c9ceee1b24e97ade6a9b84 cfd4be1eac6ac1744cf3732073f8af7efdb1a875 Ivan Lesnik <ilesnik@onasellabs.mok> 1418649268 +0000	commit: Disable surefire reports; add *.txt to failsafe reports
+ruau/.git/logs/HEAD:cfd4be1eac6ac1744cf3732073f8af7efdb1a875 a71655bc3064b75b901449cd79724bd2f405b2a5 Ivan Lesnik <ilesnik@onasellabs.mok> 1418725836 +0000	commit: Fix typo in reports name; add tests number calculation
+ruau/.git/logs/HEAD:a71655bc3064b75b901449cd79724bd2f405b2a5 894dd74896b97ef228c624c7fc825e8c6e065921 Ivan Lesnik <ilesnik@onasellabs.mok> 1418728091 +0000	commit: Switch to parallel mode
+ruau/.git/logs/HEAD:894dd74896b97ef228c624c7fc825e8c6e065921 af74afdbe3c9ff21d698e0994e21329725ba9b29 Ivan Lesnik <ilesnik@onasellabs.mok> 1418730206 +0000	commit: Switch to Firefox, single mode
+ruau/.git/logs/HEAD:af74afdbe3c9ff21d698e0994e21329725ba9b29 70fb200d12cec2173cdcb449db121425a3eb7f2c Ivan Lesnik <ilesnik@onasellabs.mok> 1418734918 +0000	commit: Switch to Android and IE10 sauce tests
+ruau/.git/logs/HEAD:70fb200d12cec2173cdcb449db121425a3eb7f2c c901c542cb2c145f0cfa2c0019d09fa980b501a8 Ivan Lesnik <ilesnik@onasellabs.mok> 1418741780 +0000	commit: Switch to IE8, parallel mode
+ruau/.git/logs/HEAD:c901c542cb2c145f0cfa2c0019d09fa980b501a8 79aa5b298a78b98c00b62d5f0701165a7b8452d4 Ivan Lesnik <ilesnik@onasellabs.mok> 1418809258 +0000	commit: Switch to IE9 tests
+ruau/.git/logs/HEAD:79aa5b298a78b98c00b62d5f0701165a7b8452d4 e0d184c1b6feae1e26a4533f9c291d6f280864dc Ivan Lesnik <ilesnik@onasellabs.mok> 1418819804 +0000	commit: Switch to Safari, parallel mode
+ruau/.git/logs/HEAD:e0d184c1b6feae1e26a4533f9c291d6f280864dc dfa612ddc29b6f9d1883fcc1c07b5f3a20a84c79 Ivan Lesnik <ilesnik@onasellabs.mok> 1418824480 +0000	commit: Enable Chrome & Firefox, parallel mode
+ruau/.git/logs/HEAD:dfa612ddc29b6f9d1883fcc1c07b5f3a20a84c79 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.mok> 1418828251 +0000	checkout: moving from onasel-config to master
+ruau/.git/logs/HEAD:027d62c63762dff82846acb1156993f75fd2bbc2 dfa612ddc29b6f9d1883fcc1c07b5f3a20a84c79 Ivan Lesnik <ilesnik@onasellabs.mok> 1418828277 +0000	checkout: moving from master to onasel-config
+ruau/.git/logs/HEAD:dfa612ddc29b6f9d1883fcc1c07b5f3a20a84c79 86f366e5a8f2907277d994e0a5462775bee3bf5e Ivan Lesnik <ilesnik@onasellabs.mok> 1418828471 +0000	commit: Disable Safari
+ruau/.git/logs/HEAD:86f366e5a8f2907277d994e0a5462775bee3bf5e 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.mok> 1418980302 +0000	checkout: moving from onasel-config to master
+ruau/.git/logs/HEAD:027d62c63762dff82846acb1156993f75fd2bbc2 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.mok> 1418981474 +0000	checkout: moving from master to master
+ruau/.git/logs/HEAD:027d62c63762dff82846acb1156993f75fd2bbc2 5be2360d98f2193b7afaca7e1eeb0c1b1b5ffa27 Ivan Lesnik <ilesnik@onasellabs.mok> 1418981497 +0000	checkout: moving from master to 5be2360d98f2193b7afaca7e1eeb0c1b1b5ffa27^0
+ruau/.git/logs/HEAD:5be2360d98f2193b7afaca7e1eeb0c1b1b5ffa27 e380f206b3ed1f8fb271220e5025e0c4cba7e32a Ivan Lesnik <ilesnik@onasellabs.mok> 1418981512 +0000	rebase: Initial version of config
+ruau/.git/logs/HEAD:e380f206b3ed1f8fb271220e5025e0c4cba7e32a 88fe1c4ca37917ad967de2228a66a04ee9c34476 Ivan Lesnik <ilesnik@onasellabs.mok> 1418981512 +0000	rebase: Converter functionality
+ruau/.git/logs/HEAD:88fe1c4ca37917ad967de2228a66a04ee9c34476 15963d6d86d95c6b6d20ec32e709b17aa4ae1e88 Ivan Lesnik <ilesnik@onasellabs.mok> 1418981513 +0000	rebase: Add CLI and oneilsConfig class
+ruau/.git/logs/HEAD:15963d6d86d95c6b6d20ec32e709b17aa4ae1e88 919949099b842beb6d693b23da847701ceb013e6 Ivan Lesnik <ilesnik@onasellabs.mok> 1418981513 +0000	rebase: disable sauce jobs
+ruau/.git/logs/HEAD:919949099b842beb6d693b23da847701ceb013e6 735934e48b081f294ab2a7949f48a995f0130332 Ivan Lesnik <ilesnik@onasellabs.mok> 1418981514 +0000	rebase: Pick up junit XML
+ruau/.git/logs/HEAD:735934e48b081f294ab2a7949f48a995f0130332 08bc160ad4c11af0781d76287a6ded0c95e6a87a Ivan Lesnik <ilesnik@onasellabs.mok> 1418981515 +0000	rebase: Enable tests for firefox, disable for Chrome
+ruau/.git/logs/HEAD:08bc160ad4c11af0781d76287a6ded0c95e6a87a d286847d278182ee0d2387b15c9b6d6aacb77f3a Ivan Lesnik <ilesnik@onasellabs.mok> 1418981516 +0000	rebase: Disabled Firefox, enabled IE7 tests
+ruau/.git/logs/HEAD:d286847d278182ee0d2387b15c9b6d6aacb77f3a 228f3a25bae815a8d18f4d06b7e91bb62749ddc8 Ivan Lesnik <ilesnik@onasellabs.mok> 1418981516 +0000	rebase: Increase timeout to 2400; add test pattern to run UI tests only
+ruau/.git/logs/HEAD:228f3a25bae815a8d18f4d06b7e91bb62749ddc8 8d0c75e3c2ac2ed0ceb15c47415a7a9c4d124377 Ivan Lesnik <ilesnik@onasellabs.mok> 1418981517 +0000	rebase: Fix incorrect tests pattern
+ruau/.git/logs/HEAD:8d0c75e3c2ac2ed0ceb15c47415a7a9c4d124377 05ff02894909aec5cde015b56cbf64c7de533a74 Ivan Lesnik <ilesnik@onasellabs.mok> 1418981517 +0000	rebase: Disable sauce; re-enable Firefox tests
+ruau/.git/logs/HEAD:05ff02894909aec5cde015b56cbf64c7de533a74 f66793d5f0fe0826dbbe682cec0906a2ab3a6b7a Ivan Lesnik <ilesnik@onasellabs.mok> 1418981518 +0000	rebase: Add :headless: option; narrowed test_pattern to run a single test
+ruau/.git/logs/HEAD:f66793d5f0fe0826dbbe682cec0906a2ab3a6b7a 920daf3f2605c62298c4f33079e79355dd7b1d5a Ivan Lesnik <ilesnik@onasellabs.mok> 1418981519 +0000	rebase: Add .mudial to .gitignore
+ruau/.git/logs/HEAD:920daf3f2605c62298c4f33079e79355dd7b1d5a 920daf3f2605c62298c4f33079e79355dd7b1d5a Ivan Lesnik <ilesnik@onasellabs.mok> 1418981519 +0000	rebase finished: returning to refs/heads/master
+ruau/.git/logs/HEAD:920daf3f2605c62298c4f33079e79355dd7b1d5a 86f366e5a8f2907277d994e0a5462775bee3bf5e Ivan Lesnik <ilesnik@onasellabs.mok> 1418982215 +0000	checkout: moving from master to 86f366e5a8f2907277d994e0a5462775bee3bf5e^0
+ruau/.git/logs/HEAD:86f366e5a8f2907277d994e0a5462775bee3bf5e eb72a8ce6a0b7e2d7a0785242560a85fb85425b8 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982230 +0000	rebase: add swiping style to infiniteList rows
+ruau/.git/logs/HEAD:eb72a8ce6a0b7e2d7a0785242560a85fb85425b8 a42e2c2f70de11ad9cb58dfa74ddd67f3d55a0d7 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982231 +0000	rebase: Redo pull request #130 from UI/ishmulevich/review-pending/apply-type-checking-to-ServiceLocator
+ruau/.git/logs/HEAD:a42e2c2f70de11ad9cb58dfa74ddd67f3d55a0d7 c8338f43c43a41f0187a3dfb1ef3f3f575083cef Ivan Lesnik <ilesnik@onasellabs.mok> 1418982232 +0000	rebase: update osgi module version
+ruau/.git/logs/HEAD:c8338f43c43a41f0187a3dfb1ef3f3f575083cef 47b4265bd94390a9b51a94dbd2e265199d6447c8 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982232 +0000	rebase: make bnd provided
+ruau/.git/logs/HEAD:47b4265bd94390a9b51a94dbd2e265199d6447c8 5d39ebe955b55878b7daf687fe08fd81a866a68d Ivan Lesnik <ilesnik@onasellabs.mok> 1418982233 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1660
+ruau/.git/logs/HEAD:5d39ebe955b55878b7daf687fe08fd81a866a68d 6d83be4fdb6992ea01e4a897d6fb726b81570e42 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982234 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:6d83be4fdb6992ea01e4a897d6fb726b81570e42 433aaec519c710be7ceaa57f071d775b56828bc2 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982234 +0000	rebase: Services extends RuueServiceProvider
+ruau/.git/logs/HEAD:433aaec519c710be7ceaa57f071d775b56828bc2 a72f36f5c0b6583447e28e40156230e56d0df4f6 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982235 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1661
+ruau/.git/logs/HEAD:a72f36f5c0b6583447e28e40156230e56d0df4f6 4b97e8928195bb78a7bf7a987bbb281726dd4dc0 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982235 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:4b97e8928195bb78a7bf7a987bbb281726dd4dc0 49c9ea20f0cde63dfeee457a984c7583b37670f8 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982236 +0000	rebase: csp test update for browser compatility
+ruau/.git/logs/HEAD:49c9ea20f0cde63dfeee457a984c7583b37670f8 b4a49338d71525f748af5766deca2801677f7d60 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982237 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1662
+ruau/.git/logs/HEAD:b4a49338d71525f748af5766deca2801677f7d60 1cc2d2e5c2755a552dd5f893980fb5e71f737548 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982237 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:1cc2d2e5c2755a552dd5f893980fb5e71f737548 57d945db056230ed96c47e35900fd416abdde66b Ivan Lesnik <ilesnik@onasellabs.mok> 1418982238 +0000	rebase: inputRichText initial value not set in the editor
+ruau/.git/logs/HEAD:57d945db056230ed96c47e35900fd416abdde66b b568d6cff1db1b253d61ffc284b63a42030bf750 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982238 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1663
+ruau/.git/logs/HEAD:b568d6cff1db1b253d61ffc284b63a42030bf750 01387b0f681fb6a9345fcb93b2869eec7a1c4394 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982239 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:01387b0f681fb6a9345fcb93b2869eec7a1c4394 749980a2a94afbffc69687295c6a217164d7197b Ivan Lesnik <ilesnik@onasellabs.mok> 1418982240 +0000	rebase: test fix for testSvgCacheClearedOnSourceChange : NPE
+ruau/.git/logs/HEAD:749980a2a94afbffc69687295c6a217164d7197b ca526f09f897a76daa670bfced742e7d697b3867 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982240 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1664
+ruau/.git/logs/HEAD:ca526f09f897a76daa670bfced742e7d697b3867 0ed537cf95e748fb39d0ee639d26551a7d92d08e Ivan Lesnik <ilesnik@onasellabs.mok> 1418982241 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:0ed537cf95e748fb39d0ee639d26551a7d92d08e d712b581b807df8d42940adb79b58312e89ecdaa Ivan Lesnik <ilesnik@onasellabs.mok> 1418982241 +0000	rebase: testStopClickPropogoationIsSet is failing
+ruau/.git/logs/HEAD:d712b581b807df8d42940adb79b58312e89ecdaa fed09980685de0e10584fcf1128b6af685aff95e Ivan Lesnik <ilesnik@onasellabs.mok> 1418982242 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1665
+ruau/.git/logs/HEAD:fed09980685de0e10584fcf1128b6af685aff95e 5e7058bb6a9eec3e77f16b1f27dcef0ca78ac176 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982243 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:5e7058bb6a9eec3e77f16b1f27dcef0ca78ac176 5599515990ca22f19db84e068f029137a91cc024 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982243 +0000	rebase: DocDef update for inputDefaultError
+ruau/.git/logs/HEAD:5599515990ca22f19db84e068f029137a91cc024 5aecaadff4c70e1aa30f616aa815ee63f952c447 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982244 +0000	rebase: update test for IE7
+ruau/.git/logs/HEAD:5aecaadff4c70e1aa30f616aa815ee63f952c447 adc327cc6f9a6d97c7faebda7e8fc5d1e222a5fb Ivan Lesnik <ilesnik@onasellabs.mok> 1418982244 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1666
+ruau/.git/logs/HEAD:adc327cc6f9a6d97c7faebda7e8fc5d1e222a5fb c07ef2c1562f70e34ac3ba7b449cbded19849647 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982245 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:c07ef2c1562f70e34ac3ba7b449cbded19849647 47c7558735587bd29a2dadb488e7c1e97ff44d90 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982246 +0000	rebase: enable test with mockCSP for sfdc side
+ruau/.git/logs/HEAD:47c7558735587bd29a2dadb488e7c1e97ff44d90 23fab2e729e309929ffb297373314eac83e11820 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982246 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1667
+ruau/.git/logs/HEAD:23fab2e729e309929ffb297373314eac83e11820 457e644bb646dce987f9e4b82acadb418500e689 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982247 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:457e644bb646dce987f9e4b82acadb418500e689 dbe20a89f9262096f46533cfbace3b4e43d5b813 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982247 +0000	rebase: reverting fcv guard
+ruau/.git/logs/HEAD:dbe20a89f9262096f46533cfbace3b4e43d5b813 bb8e1cb5d30b7c0cf328091bbbde43bd6019f42a Ivan Lesnik <ilesnik@onasellabs.mok> 1418982248 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1668
+ruau/.git/logs/HEAD:bb8e1cb5d30b7c0cf328091bbbde43bd6019f42a 6bc99940bd932b502ede5897398f4c6b45293407 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982249 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:6bc99940bd932b502ede5897398f4c6b45293407 ae68dd21f54e62b7ea3fe8c9f53fdcbd435ca87a Ivan Lesnik <ilesnik@onasellabs.mok> 1418982249 +0000	rebase: Un-localize Locale patterns (i.e. percentFormat, numberFormat, currencyFormat).
+ruau/.git/logs/HEAD:ae68dd21f54e62b7ea3fe8c9f53fdcbd435ca87a dd5a2e10308dd37bccdc08b0b1c5dccb2589c02f Ivan Lesnik <ilesnik@onasellabs.mok> 1418982250 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1669
+ruau/.git/logs/HEAD:dd5a2e10308dd37bccdc08b0b1c5dccb2589c02f 94a25c2e4f1aa7dafcbef7ffafbd0857f8a20c75 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982250 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:94a25c2e4f1aa7dafcbef7ffafbd0857f8a20c75 4b817da919635359d2b8af9437ee0b5bab205417 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982251 +0000	rebase: Tests are now working, re-enable.
+ruau/.git/logs/HEAD:4b817da919635359d2b8af9437ee0b5bab205417 45e04981526b2f5b7b30788954b7c2d5350617b9 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982252 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1670
+ruau/.git/logs/HEAD:45e04981526b2f5b7b30788954b7c2d5350617b9 98cd57e69c2edafc042cc67bd0d13021d6418cfe Ivan Lesnik <ilesnik@onasellabs.mok> 1418982252 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:98cd57e69c2edafc042cc67bd0d13021d6418cfe 1f1d6d63a8ca1592d4c9e581034fad9af07d8934 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982253 +0000	rebase: Temporary fix for input classNames on inherited components.
+ruau/.git/logs/HEAD:1f1d6d63a8ca1592d4c9e581034fad9af07d8934 c33ea52f6e44d7a65819e5fd7cad0ca8846ed8fb Ivan Lesnik <ilesnik@onasellabs.mok> 1418982253 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1671
+ruau/.git/logs/HEAD:c33ea52f6e44d7a65819e5fd7cad0ca8846ed8fb d7d6d53b263d921bf4aab3cbb158dbdfafdc7fc3 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982254 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:d7d6d53b263d921bf4aab3cbb158dbdfafdc7fc3 82b59b8c214f34426117e65ada12bc3166fb59e7 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982255 +0000	rebase: Fix a problem with undefined in afterRender.
+ruau/.git/logs/HEAD:82b59b8c214f34426117e65ada12bc3166fb59e7 cf501dc655ee682f228986b383b391c8f0f36feb Ivan Lesnik <ilesnik@onasellabs.mok> 1418982255 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1672
+ruau/.git/logs/HEAD:cf501dc655ee682f228986b383b391c8f0f36feb 752cddbc59fd99bef9f404c3ed46d2ce3aea95d2 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982256 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:752cddbc59fd99bef9f404c3ed46d2ce3aea95d2 a502159fa3b9978bbf4aaf3a138a5111f217b33f Ivan Lesnik <ilesnik@onasellabs.mok> 1418982256 +0000	rebase: Automation for rendering of InputRichtext
+ruau/.git/logs/HEAD:a502159fa3b9978bbf4aaf3a138a5111f217b33f 74c67663d76088bcece77b07e92d43b4cfa25c89 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982257 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1673
+ruau/.git/logs/HEAD:74c67663d76088bcece77b07e92d43b4cfa25c89 00319af67656d7a27ccf30d8969befdc3cddee6a Ivan Lesnik <ilesnik@onasellabs.mok> 1418982258 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:00319af67656d7a27ccf30d8969befdc3cddee6a 3504c3398ca853fc3a4e608423feb0b8f74ff2dc Ivan Lesnik <ilesnik@onasellabs.mok> 1418982258 +0000	rebase: test fix for html test -- nbsp in IEs
+ruau/.git/logs/HEAD:3504c3398ca853fc3a4e608423feb0b8f74ff2dc 832c0fd649c3b0b5197b990e438d0346cb8ac1ed Ivan Lesnik <ilesnik@onasellabs.mok> 1418982259 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1674
+ruau/.git/logs/HEAD:832c0fd649c3b0b5197b990e438d0346cb8ac1ed c34862426a15d7a19f69b18266f04d6f6c7a51fe Ivan Lesnik <ilesnik@onasellabs.mok> 1418982259 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:c34862426a15d7a19f69b18266f04d6f6c7a51fe b575e084fc6883423fd7cb8b8f7d9fcecd659893 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982260 +0000	rebase: avoid NPE from DummyHttpServletRequest
+ruau/.git/logs/HEAD:b575e084fc6883423fd7cb8b8f7d9fcecd659893 d588d6028436537739219e87d1b4efd3e6eb5c09 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982261 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1675
+ruau/.git/logs/HEAD:d588d6028436537739219e87d1b4efd3e6eb5c09 4f02e35a036df52ba5c7a4469a724b9a0b37b7c0 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982261 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:4f02e35a036df52ba5c7a4469a724b9a0b37b7c0 f0e560f19cfeba170f5d0f750eb8e11bd6c849e5 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982262 +0000	rebase: Quickfix CSS fix for accessibility
+ruau/.git/logs/HEAD:f0e560f19cfeba170f5d0f750eb8e11bd6c849e5 81910f3994301d1804e3e4ed3bc3ba220ac684f6 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982263 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1676
+ruau/.git/logs/HEAD:81910f3994301d1804e3e4ed3bc3ba220ac684f6 e6edfd8d99a5403d2a49fc01674756d5a346048e Ivan Lesnik <ilesnik@onasellabs.mok> 1418982263 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:e6edfd8d99a5403d2a49fc01674756d5a346048e a973a79db92643c1c6ea1153786b8ff5efadfee7 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982264 +0000	rebase: Automation for when v.items is undefined.
+ruau/.git/logs/HEAD:a973a79db92643c1c6ea1153786b8ff5efadfee7 4f7aeb5de7e5fe00cdd857ab489b98bee3a49f6e Ivan Lesnik <ilesnik@onasellabs.mok> 1418982265 +0000	rebase: Automation for dataGrid, sorting columns
+ruau/.git/logs/HEAD:4f7aeb5de7e5fe00cdd857ab489b98bee3a49f6e 3db81957d6c12071b14867418e46633a0ff0360d Ivan Lesnik <ilesnik@onasellabs.mok> 1418982265 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1677
+ruau/.git/logs/HEAD:3db81957d6c12071b14867418e46633a0ff0360d a6c2b25696ebd14142fe43ed1bca4c8d42a104fd Ivan Lesnik <ilesnik@onasellabs.mok> 1418982266 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:a6c2b25696ebd14142fe43ed1bca4c8d42a104fd 9f0ae3992580a3ead580f2f29778068da26099e5 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982266 +0000	rebase: validate library js
+ruau/.git/logs/HEAD:9f0ae3992580a3ead580f2f29778068da26099e5 26ebca5c8f639764ab1e894b7eafe89ca667b7e2 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982267 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1678
+ruau/.git/logs/HEAD:26ebca5c8f639764ab1e894b7eafe89ca667b7e2 8d2884feb4dcf7f6d4d577dba5ed79aacc868468 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982268 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:8d2884feb4dcf7f6d4d577dba5ed79aacc868468 e993ba0a80ec8c6465953997503436452266ff50 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982268 +0000	rebase: create dummyHttpServletRequest with default url, also cherrypick fix for test flapper in AIS UI test.
+ruau/.git/logs/HEAD:e993ba0a80ec8c6465953997503436452266ff50 5db8613a6a0a44dfb338e4b8c36acd981a785d2d Ivan Lesnik <ilesnik@onasellabs.mok> 1418982269 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1679
+ruau/.git/logs/HEAD:5db8613a6a0a44dfb338e4b8c36acd981a785d2d 8e7da122e7e83c2d049f2163a119a1036c07f15d Ivan Lesnik <ilesnik@onasellabs.mok> 1418982269 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:8e7da122e7e83c2d049f2163a119a1036c07f15d 471e0d0d3a25e2b50cc53ce0c06ce1b43ec8c3ce Ivan Lesnik <ilesnik@onasellabs.mok> 1418982270 +0000	rebase: Rethrow errors thrown by .test.fail if they don't bubble up
+ruau/.git/logs/HEAD:471e0d0d3a25e2b50cc53ce0c06ce1b43ec8c3ce f2cf5d3a893cc0b5efdaa7942686ad2ce908629b Ivan Lesnik <ilesnik@onasellabs.mok> 1418982271 +0000	rebase: Test fixes for Test.fail changes
+ruau/.git/logs/HEAD:f2cf5d3a893cc0b5efdaa7942686ad2ce908629b 772ac280e4ebd2e5de8ecbd3a23553649073b04b Ivan Lesnik <ilesnik@onasellabs.mok> 1418982271 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1680
+ruau/.git/logs/HEAD:772ac280e4ebd2e5de8ecbd3a23553649073b04b a1c8313041830120dabef540aaee94d314108b66 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982272 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:a1c8313041830120dabef540aaee94d314108b66 d37962ffee68943aadf14fbd394142a1e4098baf Ivan Lesnik <ilesnik@onasellabs.mok> 1418982272 +0000	rebase: IE8 fix moving from for‚Ä¶in to for()
+ruau/.git/logs/HEAD:d37962ffee68943aadf14fbd394142a1e4098baf 529a752606cde031cfc1e2dc1ab4cce33c713fac Ivan Lesnik <ilesnik@onasellabs.mok> 1418982273 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1681
+ruau/.git/logs/HEAD:529a752606cde031cfc1e2dc1ab4cce33c713fac 4a300d89079d2a2206702869a369967bfb130332 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982274 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:4a300d89079d2a2206702869a369967bfb130332 2ed0b741b4475319cc93366123007fd075930bc1 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982274 +0000	rebase: Fix ruau types to be case insensitive for now.
+ruau/.git/logs/HEAD:2ed0b741b4475319cc93366123007fd075930bc1 742e6939b98cec14610f599700e3614b36fbe4c6 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982275 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1682
+ruau/.git/logs/HEAD:742e6939b98cec14610f599700e3614b36fbe4c6 f92e9a82bfb71752a72507c3626be4b40da1193e Ivan Lesnik <ilesnik@onasellabs.mok> 1418982275 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:f92e9a82bfb71752a72507c3626be4b40da1193e e1a617b02e694f8c362fc07c52509675edf76f5a Ivan Lesnik <ilesnik@onasellabs.mok> 1418982276 +0000	rebase: no message
+ruau/.git/logs/HEAD:e1a617b02e694f8c362fc07c52509675edf76f5a e9b4d243df6ae315fbc3b3b333f9f29871d50a9d Ivan Lesnik <ilesnik@onasellabs.mok> 1418982277 +0000	rebase: Update ES6-Promises library to new version that minifies correctly.
+ruau/.git/logs/HEAD:e9b4d243df6ae315fbc3b3b333f9f29871d50a9d bd676f29437a411690657e2f49182762a690f182 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982277 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1683
+ruau/.git/logs/HEAD:bd676f29437a411690657e2f49182762a690f182 e73e0aeac52bc7de3ce13436aff203ccb0218e67 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982278 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:e73e0aeac52bc7de3ce13436aff203ccb0218e67 fad479b6bc73deb85540b61cc696bb82d2c56485 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982278 +0000	rebase: Clean up file source listener.
+ruau/.git/logs/HEAD:fad479b6bc73deb85540b61cc696bb82d2c56485 3a57a7b77cae6da4620692483f16eb1b719f48fa Ivan Lesnik <ilesnik@onasellabs.mok> 1418982279 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1684
+ruau/.git/logs/HEAD:3a57a7b77cae6da4620692483f16eb1b719f48fa 9b884834a5c37cdce8138812fa9abd1f10106d76 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982280 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:9b884834a5c37cdce8138812fa9abd1f10106d76 13cd2e0f66a5e2271cfe72bb69b450da25076de8 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982280 +0000	rebase: testPerfRunner -- let us to rerun pending tests
+ruau/.git/logs/HEAD:13cd2e0f66a5e2271cfe72bb69b450da25076de8 7ee889537e41ba4a52dda94aa33af5be94edd5ac Ivan Lesnik <ilesnik@onasellabs.mok> 1418982281 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1685
+ruau/.git/logs/HEAD:7ee889537e41ba4a52dda94aa33af5be94edd5ac 694350052dafb093902a3909511ec6542f938c89 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982281 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:694350052dafb093902a3909511ec6542f938c89 3ea51c3d963e8d5fe2a93c8e29254c0f70866b95 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982282 +0000	rebase: Fix SVG defs.
+ruau/.git/logs/HEAD:3ea51c3d963e8d5fe2a93c8e29254c0f70866b95 adae4de219d4e5138ac2ca970edd66b70ca727c0 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982283 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1686
+ruau/.git/logs/HEAD:adae4de219d4e5138ac2ca970edd66b70ca727c0 d3306cb7b1d7437de982a1e4db7c00df3a16f694 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982283 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:d3306cb7b1d7437de982a1e4db7c00df3a16f694 04a26116cbde60457e52f5a185c6226223a88537 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982284 +0000	rebase: Reverting Halo changes to ui:tab to fix setting the default tab as active
+ruau/.git/logs/HEAD:04a26116cbde60457e52f5a185c6226223a88537 ff2eab5f46e611596d8d5ef772cd4645c170b5e2 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982285 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1687
+ruau/.git/logs/HEAD:ff2eab5f46e611596d8d5ef772cd4645c170b5e2 be0bcc105b20323f25a547248a960535c4b34328 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982285 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:be0bcc105b20323f25a547248a960535c4b34328 30585d6cbfbf92b3d4224525f462fae36f2111c9 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982286 +0000	rebase: Fixing memory leak in expressions
+ruau/.git/logs/HEAD:30585d6cbfbf92b3d4224525f462fae36f2111c9 8da62f2976695e11020c7e756b7de3cb38ada213 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982286 +0000	rebase: Adding stopPropagation to prvs though iteration
+ruau/.git/logs/HEAD:8da62f2976695e11020c7e756b7de3cb38ada213 0eb084b439a221dff604cc17851e19e7098c8a15 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982287 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1688
+ruau/.git/logs/HEAD:0eb084b439a221dff604cc17851e19e7098c8a15 f9e93c854d0f3901d25d1ceb47047f785c66d79d Ivan Lesnik <ilesnik@onasellabs.mok> 1418982287 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:f9e93c854d0f3901d25d1ceb47047f785c66d79d 27ea4e1488dfa04c102afe7d4a9ebfae701601e8 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982288 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1689
+ruau/.git/logs/HEAD:27ea4e1488dfa04c102afe7d4a9ebfae701601e8 d372643d008fb3034267e572e7eda0060a5a2bf2 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982289 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:d372643d008fb3034267e572e7eda0060a5a2bf2 6efade7b39f3df827f388b324e201b2a708881a0 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982289 +0000	rebase: Use native scrolling on Windows tablet.
+ruau/.git/logs/HEAD:6efade7b39f3df827f388b324e201b2a708881a0 884907d554f0beddac350b94057d6124fef9dfcf Ivan Lesnik <ilesnik@onasellabs.mok> 1418982290 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1690
+ruau/.git/logs/HEAD:884907d554f0beddac350b94057d6124fef9dfcf 9438a24f2b4188029b6cb3ba099f562c997be97e Ivan Lesnik <ilesnik@onasellabs.mok> 1418982290 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:9438a24f2b4188029b6cb3ba099f562c997be97e fe028c0a60ac17a51857433f803675b737a9b5f6 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982291 +0000	rebase: Sauce Env issue so disabling test
+ruau/.git/logs/HEAD:fe028c0a60ac17a51857433f803675b737a9b5f6 77b57906b1302ecac556c8a812743d02468f2d76 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982292 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1691
+ruau/.git/logs/HEAD:77b57906b1302ecac556c8a812743d02468f2d76 2f7cd1ea16f6e943b66d76465116ab0f2062a611 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982293 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:2f7cd1ea16f6e943b66d76465116ab0f2062a611 7e47d3be502128c85f8339d086e1e7a50f762a87 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982293 +0000	rebase: Removing test for unsupported browsers IE7/8
+ruau/.git/logs/HEAD:7e47d3be502128c85f8339d086e1e7a50f762a87 c125e4d49af1f6ad50f814e80cb71dcaeba594db Ivan Lesnik <ilesnik@onasellabs.mok> 1418982294 +0000	rebase: Fixes for tests to work on Mobile again
+ruau/.git/logs/HEAD:c125e4d49af1f6ad50f814e80cb71dcaeba594db b5d6db7c8bc54ee8515f1026f02a2cb942c619ca Ivan Lesnik <ilesnik@onasellabs.mok> 1418982295 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1692
+ruau/.git/logs/HEAD:b5d6db7c8bc54ee8515f1026f02a2cb942c619ca 01d41500d4a1fba5376769951ba3693330526418 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982296 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:01d41500d4a1fba5376769951ba3693330526418 c02f42e752835af7c842da6d008dad8d56265e71 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982296 +0000	rebase: ui:inputSelect should support basic select functionality when using ruau:iteration
+ruau/.git/logs/HEAD:c02f42e752835af7c842da6d008dad8d56265e71 147c1903ed33f78c85ea359e9d4f69315562ba93 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982297 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1693
+ruau/.git/logs/HEAD:147c1903ed33f78c85ea359e9d4f69315562ba93 468152772d027cbea6fea02b0672c53c28878237 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982298 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:468152772d027cbea6fea02b0672c53c28878237 468152772d027cbea6fea02b0672c53c28878237 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982298 +0000	rebase finished: returning to refs/heads/master
+ruau/.git/logs/HEAD:468152772d027cbea6fea02b0672c53c28878237 468152772d027cbea6fea02b0672c53c28878237 Ivan Lesnik <ilesnik@onasellabs.mok> 1418984108 +0000	checkout: moving from master to serial
+ruau/.git/logs/HEAD:468152772d027cbea6fea02b0672c53c28878237 86f366e5a8f2907277d994e0a5462775bee3bf5e Ivan Lesnik <ilesnik@onasellabs.mok> 1418986285 +0000	checkout: moving from serial to onasel-config
+ruau/.git/logs/HEAD:86f366e5a8f2907277d994e0a5462775bee3bf5e e7de664838558b42d8e051c7761d27f6c7d4b010 Ivan Lesnik <ilesnik@onasellabs.mok> 1418986550 +0000	commit: Switch to IE7, single mode
+ruau/.git/logs/HEAD:e7de664838558b42d8e051c7761d27f6c7d4b010 468152772d027cbea6fea02b0672c53c28878237 Ivan Lesnik <ilesnik@onasellabs.mok> 1419843973 +0000	checkout: moving from onasel-config to serial
+ruau/.git/logs/HEAD:468152772d027cbea6fea02b0672c53c28878237 e7de664838558b42d8e051c7761d27f6c7d4b010 Ivan Lesnik <ilesnik@onasellabs.mok> 1421760684 +0000	checkout: moving from serial to onasel-config
+ruau/.git/logs/refs/remotes/mudial/onasel-config:0000000000000000000000000000000000000000 e7de664838558b42d8e051c7761d27f6c7d4b010 Ivan Lesnik <ilesnik@onasellabs.mok> 1421760923 +0000	update by push
+ruau/.git/logs/refs/remotes/mudial/serial:0000000000000000000000000000000000000000 468152772d027cbea6fea02b0672c53c28878237 Ivan Lesnik <ilesnik@onasellabs.mok> 1421235156 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:0000000000000000000000000000000000000000 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.mok> 1417004497 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:027d62c63762dff82846acb1156993f75fd2bbc2 ec0187143197f386d5d78c1345ed566b1b8f16a3 Ivan Lesnik <ilesnik@onasellabs.mok> 1417091039 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:ec0187143197f386d5d78c1345ed566b1b8f16a3 b16cebd6909503ed2e2be55ab139e95f7db8b903 Ivan Lesnik <ilesnik@onasellabs.mok> 1417539173 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:b16cebd6909503ed2e2be55ab139e95f7db8b903 79b0002c5a45481a1639034d136daddaedfe5819 Ivan Lesnik <ilesnik@onasellabs.mok> 1417722795 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:79b0002c5a45481a1639034d136daddaedfe5819 9fd50c77e95d99e0dc5818b32dc035ffbf841fe7 Ivan Lesnik <ilesnik@onasellabs.mok> 1417726823 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:9fd50c77e95d99e0dc5818b32dc035ffbf841fe7 1e058bc75ed1087936eacb582bdb9c00ee2c6e2c Ivan Lesnik <ilesnik@onasellabs.mok> 1417777477 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:1e058bc75ed1087936eacb582bdb9c00ee2c6e2c f1e5e8630def5b2c9d9136293d8b87e019b8ccb7 Ivan Lesnik <ilesnik@onasellabs.mok> 1417777865 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:f1e5e8630def5b2c9d9136293d8b87e019b8ccb7 1b1b9e354d5685c15c3fed7f3b79fb09124e5465 Ivan Lesnik <ilesnik@onasellabs.mok> 1417787723 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:1b1b9e354d5685c15c3fed7f3b79fb09124e5465 84e34f12a8eb717f1e8405a8bfbaf6092458dc78 Ivan Lesnik <ilesnik@onasellabs.mok> 1417790666 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:84e34f12a8eb717f1e8405a8bfbaf6092458dc78 e1288ebc5957d8e311c97982bf4d2f2820b0e27e Ivan Lesnik <ilesnik@onasellabs.mok> 1417794991 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:e1288ebc5957d8e311c97982bf4d2f2820b0e27e e3dc4d213776cd18427d9990d70c5e976f30e7ae Ivan Lesnik <ilesnik@onasellabs.mok> 1417807630 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:e3dc4d213776cd18427d9990d70c5e976f30e7ae da1f6f84d8cdda7a9bc46282342adeb71ed81287 Ivan Lesnik <ilesnik@onasellabs.mok> 1417885617 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:da1f6f84d8cdda7a9bc46282342adeb71ed81287 b95fb849eba203899aaadb9a90a38e64f3a8c887 Ivan Lesnik <ilesnik@onasellabs.mok> 1417886796 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:b95fb849eba203899aaadb9a90a38e64f3a8c887 1e05b4bce920da58878adfca7df3f0a0aacb0db7 Ivan Lesnik <ilesnik@onasellabs.mok> 1417893226 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:1e05b4bce920da58878adfca7df3f0a0aacb0db7 277fffbbcd0d0b600f4ef3bd796528020e351fd2 Ivan Lesnik <ilesnik@onasellabs.mok> 1418044391 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:277fffbbcd0d0b600f4ef3bd796528020e351fd2 346bab38fc77ce98ba5a348a62418c46a4c41bf9 Ivan Lesnik <ilesnik@onasellabs.mok> 1418047572 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:346bab38fc77ce98ba5a348a62418c46a4c41bf9 614d9507f5b203dfef8f63c8196d220ada136f1b Ivan Lesnik <ilesnik@onasellabs.mok> 1418053959 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:614d9507f5b203dfef8f63c8196d220ada136f1b 296a544ac14626efd8cedaf49ec7122bfb89b176 Ivan Lesnik <ilesnik@onasellabs.mok> 1418070228 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:296a544ac14626efd8cedaf49ec7122bfb89b176 00f041cc5b414fd6ded453708666eadff30b0742 Ivan Lesnik <ilesnik@onasellabs.mok> 1418117872 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:00f041cc5b414fd6ded453708666eadff30b0742 63bc1569da25a33983764695b1a66caf97ca8e28 Ivan Lesnik <ilesnik@onasellabs.mok> 1418128188 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:63bc1569da25a33983764695b1a66caf97ca8e28 8f87fe9b0fdef78995517f8db149ea3a5055bbd3 Ivan Lesnik <ilesnik@onasellabs.mok> 1418133608 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:8f87fe9b0fdef78995517f8db149ea3a5055bbd3 5896f0f9ba7e5eff3ca582da26f4218e3afee729 Ivan Lesnik <ilesnik@onasellabs.mok> 1418135184 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:5896f0f9ba7e5eff3ca582da26f4218e3afee729 bf8928363c4f17916880c51f0fe6f60ef3f32627 Ivan Lesnik <ilesnik@onasellabs.mok> 1418137220 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:bf8928363c4f17916880c51f0fe6f60ef3f32627 4d8929f54f3e1df41d459f99b2b43352aa9d3568 Ivan Lesnik <ilesnik@onasellabs.mok> 1418139805 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:4d8929f54f3e1df41d459f99b2b43352aa9d3568 214c4b175075cf0e3395108c0ef81fb6404e7858 Ivan Lesnik <ilesnik@onasellabs.mok> 1418140376 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:214c4b175075cf0e3395108c0ef81fb6404e7858 1de80a9801626edd4ad52bcf94be0fad813e86cf Ivan Lesnik <ilesnik@onasellabs.mok> 1418154584 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:1de80a9801626edd4ad52bcf94be0fad813e86cf b0d6d159d5e29330f316ce75a2272816064bc2c9 Ivan Lesnik <ilesnik@onasellabs.mok> 1418209934 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:b0d6d159d5e29330f316ce75a2272816064bc2c9 29d678e77c9765dda18634a17c3ddc96654a3187 Ivan Lesnik <ilesnik@onasellabs.mok> 1418294579 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:29d678e77c9765dda18634a17c3ddc96654a3187 d511e0d7351c0baa1fc813fce53331bd9e604bae Ivan Lesnik <ilesnik@onasellabs.mok> 1418295741 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:d511e0d7351c0baa1fc813fce53331bd9e604bae 5ec57c576cca5f6147e506e3431fdfbcccdd48f7 Ivan Lesnik <ilesnik@onasellabs.mok> 1418312353 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:5ec57c576cca5f6147e506e3431fdfbcccdd48f7 e3dd3abed4e56c0216583c575c33fb3c508f54dd Ivan Lesnik <ilesnik@onasellabs.mok> 1418313048 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:e3dd3abed4e56c0216583c575c33fb3c508f54dd d0da069ccf488a5bc69002915fc493bbb5bdd18a Ivan Lesnik <ilesnik@onasellabs.mok> 1418316759 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:d0da069ccf488a5bc69002915fc493bbb5bdd18a f7a847be96295996fab081024acc8ded98d363ba Ivan Lesnik <ilesnik@onasellabs.mok> 1418400131 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:f7a847be96295996fab081024acc8ded98d363ba c6a859962acc4e62dd2b68a254b536f57ce47031 Ivan Lesnik <ilesnik@onasellabs.mok> 1418636929 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:c6a859962acc4e62dd2b68a254b536f57ce47031 147a13ba4b170ea4a5b92e5feaf8b6967ff31246 Ivan Lesnik <ilesnik@onasellabs.mok> 1418641305 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:147a13ba4b170ea4a5b92e5feaf8b6967ff31246 6c1dd902ece38adb585e57ef67f245809dc9bf1d Ivan Lesnik <ilesnik@onasellabs.mok> 1418643062 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:6c1dd902ece38adb585e57ef67f245809dc9bf1d eb50fe1ffe3480911f1274111e4f4f80dbaf3800 Ivan Lesnik <ilesnik@onasellabs.mok> 1418647227 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:eb50fe1ffe3480911f1274111e4f4f80dbaf3800 fb289e95ea9732c953c9ceee1b24e97ade6a9b84 Ivan Lesnik <ilesnik@onasellabs.mok> 1418648202 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:fb289e95ea9732c953c9ceee1b24e97ade6a9b84 cfd4be1eac6ac1744cf3732073f8af7efdb1a875 Ivan Lesnik <ilesnik@onasellabs.mok> 1418649323 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:cfd4be1eac6ac1744cf3732073f8af7efdb1a875 a71655bc3064b75b901449cd79724bd2f405b2a5 Ivan Lesnik <ilesnik@onasellabs.mok> 1418726144 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:a71655bc3064b75b901449cd79724bd2f405b2a5 894dd74896b97ef228c624c7fc825e8c6e065921 Ivan Lesnik <ilesnik@onasellabs.mok> 1418728148 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:894dd74896b97ef228c624c7fc825e8c6e065921 af74afdbe3c9ff21d698e0994e21329725ba9b29 Ivan Lesnik <ilesnik@onasellabs.mok> 1418730240 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:af74afdbe3c9ff21d698e0994e21329725ba9b29 70fb200d12cec2173cdcb449db121425a3eb7f2c Ivan Lesnik <ilesnik@onasellabs.mok> 1418735122 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:70fb200d12cec2173cdcb449db121425a3eb7f2c c901c542cb2c145f0cfa2c0019d09fa980b501a8 Ivan Lesnik <ilesnik@onasellabs.mok> 1418741902 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:c901c542cb2c145f0cfa2c0019d09fa980b501a8 79aa5b298a78b98c00b62d5f0701165a7b8452d4 Ivan Lesnik <ilesnik@onasellabs.mok> 1418809387 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:79aa5b298a78b98c00b62d5f0701165a7b8452d4 e0d184c1b6feae1e26a4533f9c291d6f280864dc Ivan Lesnik <ilesnik@onasellabs.mok> 1418819835 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:e0d184c1b6feae1e26a4533f9c291d6f280864dc dfa612ddc29b6f9d1883fcc1c07b5f3a20a84c79 Ivan Lesnik <ilesnik@onasellabs.mok> 1418828325 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:dfa612ddc29b6f9d1883fcc1c07b5f3a20a84c79 86f366e5a8f2907277d994e0a5462775bee3bf5e Ivan Lesnik <ilesnik@onasellabs.mok> 1418828484 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/onasel-config:86f366e5a8f2907277d994e0a5462775bee3bf5e e7de664838558b42d8e051c7761d27f6c7d4b010 Ivan Lesnik <ilesnik@onasellabs.mok> 1418988335 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/master:a3cee9addd78c4c955d8353772904188f1d1c709 c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 Ivan Lesnik <ilesnik@onasellabs.mok> 1417002718 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/master:c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.mok> 1417004087 +0000	update by push
+ruau/.git/logs/refs/remotes/origin/master:027d62c63762dff82846acb1156993f75fd2bbc2 468152772d027cbea6fea02b0672c53c28878237 Ivan Lesnik <ilesnik@onasellabs.mok> 1418983553 +0000	update by push
+ruau/.git/logs/refs/heads/onasel-config:0000000000000000000000000000000000000000 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.mok> 1417004113 +0000	branch: Created from HEAD
+ruau/.git/logs/refs/heads/onasel-config:027d62c63762dff82846acb1156993f75fd2bbc2 ec0187143197f386d5d78c1345ed566b1b8f16a3 Ivan Lesnik <ilesnik@onasellabs.mok> 1417090660 +0000	commit: Temporary remove failing tests
+ruau/.git/logs/refs/heads/onasel-config:ec0187143197f386d5d78c1345ed566b1b8f16a3 b16cebd6909503ed2e2be55ab139e95f7db8b903 Ivan Lesnik <ilesnik@onasellabs.mok> 1417539145 +0000	commit: Delete jenkins-to-onasel converter since it is moved to mudial_devops
+ruau/.git/logs/refs/heads/onasel-config:b16cebd6909503ed2e2be55ab139e95f7db8b903 79b0002c5a45481a1639034d136daddaedfe5819 Ivan Lesnik <ilesnik@onasellabs.mok> 1417722749 +0000	commit: Add option disable_dodge_preload
+ruau/.git/logs/refs/heads/onasel-config:79b0002c5a45481a1639034d136daddaedfe5819 9fd50c77e95d99e0dc5818b32dc035ffbf841fe7 Ivan Lesnik <ilesnik@onasellabs.mok> 1417726760 +0000	commit: Increase timeout to 7200; remove test_pattern as useless
+ruau/.git/logs/refs/heads/onasel-config:9fd50c77e95d99e0dc5818b32dc035ffbf841fe7 1e058bc75ed1087936eacb582bdb9c00ee2c6e2c Ivan Lesnik <ilesnik@onasellabs.mok> 1417777377 +0000	commit: Enable parallel testing mode
+ruau/.git/logs/refs/heads/onasel-config:1e058bc75ed1087936eacb582bdb9c00ee2c6e2c f1e5e8630def5b2c9d9136293d8b87e019b8ccb7 Ivan Lesnik <ilesnik@onasellabs.mok> 1417777844 +0000	commit: Add files pattern
+ruau/.git/logs/refs/heads/onasel-config:f1e5e8630def5b2c9d9136293d8b87e019b8ccb7 1b1b9e354d5685c15c3fed7f3b79fb09124e5465 Ivan Lesnik <ilesnik@onasellabs.mok> 1417787666 +0000	commit: Disable Firefox tests; enable Chrome tests
+ruau/.git/logs/refs/heads/onasel-config:1b1b9e354d5685c15c3fed7f3b79fb09124e5465 84e34f12a8eb717f1e8405a8bfbaf6092458dc78 Ivan Lesnik <ilesnik@onasellabs.mok> 1417790438 +0000	commit: Disable Chrome tests; enable Android sauselabs tests
+ruau/.git/logs/refs/heads/onasel-config:84e34f12a8eb717f1e8405a8bfbaf6092458dc78 e1288ebc5957d8e311c97982bf4d2f2820b0e27e Ivan Lesnik <ilesnik@onasellabs.mok> 1417794945 +0000	commit: Enable IE8; disable Android
+ruau/.git/logs/refs/heads/onasel-config:e1288ebc5957d8e311c97982bf4d2f2820b0e27e e3dc4d213776cd18427d9990d70c5e976f30e7ae Ivan Lesnik <ilesnik@onasellabs.mok> 1417807448 +0000	commit: Switch to Firefox tests
+ruau/.git/logs/refs/heads/onasel-config:e3dc4d213776cd18427d9990d70c5e976f30e7ae da1f6f84d8cdda7a9bc46282342adeb71ed81287 Ivan Lesnik <ilesnik@onasellabs.mok> 1417885356 +0000	commit: Auto-generated config with extensions
+ruau/.git/logs/refs/heads/onasel-config:da1f6f84d8cdda7a9bc46282342adeb71ed81287 b95fb849eba203899aaadb9a90a38e64f3a8c887 Ivan Lesnik <ilesnik@onasellabs.mok> 1417886720 +0000	commit: Fix absolute paths for extensions
+ruau/.git/logs/refs/heads/onasel-config:b95fb849eba203899aaadb9a90a38e64f3a8c887 1e05b4bce920da58878adfca7df3f0a0aacb0db7 Ivan Lesnik <ilesnik@onasellabs.mok> 1417893169 +0000	commit: Move test setup step to worker_setup hook
+ruau/.git/logs/refs/heads/onasel-config:1e05b4bce920da58878adfca7df3f0a0aacb0db7 277fffbbcd0d0b600f4ef3bd796528020e351fd2 Ivan Lesnik <ilesnik@onasellabs.mok> 1418044232 +0000	commit: Enable Chrome suite; disable Firefox
+ruau/.git/logs/refs/heads/onasel-config:277fffbbcd0d0b600f4ef3bd796528020e351fd2 346bab38fc77ce98ba5a348a62418c46a4c41bf9 Ivan Lesnik <ilesnik@onasellabs.mok> 1418047541 +0000	commit: Switch to Android sauce tests
+ruau/.git/logs/refs/heads/onasel-config:346bab38fc77ce98ba5a348a62418c46a4c41bf9 614d9507f5b203dfef8f63c8196d220ada136f1b Ivan Lesnik <ilesnik@onasellabs.mok> 1418053896 +0000	commit: Switch to IE7 suite
+ruau/.git/logs/refs/heads/onasel-config:614d9507f5b203dfef8f63c8196d220ada136f1b 296a544ac14626efd8cedaf49ec7122bfb89b176 Ivan Lesnik <ilesnik@onasellabs.mok> 1418069903 +0000	commit: Switch to Safari suite
+ruau/.git/logs/refs/heads/onasel-config:296a544ac14626efd8cedaf49ec7122bfb89b176 00f041cc5b414fd6ded453708666eadff30b0742 Ivan Lesnik <ilesnik@onasellabs.mok> 1418117662 +0000	commit: Switch to Chrome
+ruau/.git/logs/refs/heads/onasel-config:00f041cc5b414fd6ded453708666eadff30b0742 63bc1569da25a33983764695b1a66caf97ca8e28 Ivan Lesnik <ilesnik@onasellabs.mok> 1418128160 +0000	commit: Set parallelism
+ruau/.git/logs/refs/heads/onasel-config:63bc1569da25a33983764695b1a66caf97ca8e28 8f87fe9b0fdef78995517f8db149ea3a5055bbd3 Ivan Lesnik <ilesnik@onasellabs.mok> 1418133512 +0000	commit: Unparallelize; increase threads number to 4
+ruau/.git/logs/refs/heads/onasel-config:8f87fe9b0fdef78995517f8db149ea3a5055bbd3 5896f0f9ba7e5eff3ca582da26f4218e3afee729 Ivan Lesnik <ilesnik@onasellabs.mok> 1418135129 +0000	commit: Switch to Firefox; threads=5
+ruau/.git/logs/refs/heads/onasel-config:5896f0f9ba7e5eff3ca582da26f4218e3afee729 bf8928363c4f17916880c51f0fe6f60ef3f32627 Ivan Lesnik <ilesnik@onasellabs.mok> 1418137185 +0000	commit: Enable Chrome & Firefox; threads count=10
+ruau/.git/logs/refs/heads/onasel-config:bf8928363c4f17916880c51f0fe6f60ef3f32627 4d8929f54f3e1df41d459f99b2b43352aa9d3568 Ivan Lesnik <ilesnik@onasellabs.mok> 1418139165 +0000	commit: Switch to IE9
+ruau/.git/logs/refs/heads/onasel-config:4d8929f54f3e1df41d459f99b2b43352aa9d3568 214c4b175075cf0e3395108c0ef81fb6404e7858 Ivan Lesnik <ilesnik@onasellabs.mok> 1418140359 +0000	commit: Fix configuration, IE9
+ruau/.git/logs/refs/heads/onasel-config:214c4b175075cf0e3395108c0ef81fb6404e7858 1de80a9801626edd4ad52bcf94be0fad813e86cf Ivan Lesnik <ilesnik@onasellabs.mok> 1418154445 +0000	commit: Add onasel-runner script and enable Chrome
+ruau/.git/logs/refs/heads/onasel-config:1de80a9801626edd4ad52bcf94be0fad813e86cf b0d6d159d5e29330f316ce75a2272816064bc2c9 Ivan Lesnik <ilesnik@onasellabs.mok> 1418209879 +0000	commit: Add more specific mvn command
+ruau/.git/logs/refs/heads/onasel-config:b0d6d159d5e29330f316ce75a2272816064bc2c9 29d678e77c9765dda18634a17c3ddc96654a3187 Ivan Lesnik <ilesnik@onasellabs.mok> 1418294544 +0000	commit: Add primitive test name filter
+ruau/.git/logs/refs/heads/onasel-config:29d678e77c9765dda18634a17c3ddc96654a3187 a0f233b9591fb32e453c3f47ede129ebc63d369c Ivan Lesnik <ilesnik@onasellabs.mok> 1418295687 +0000	commit: Add reports mask
+ruau/.git/logs/refs/heads/onasel-config:a0f233b9591fb32e453c3f47ede129ebc63d369c d511e0d7351c0baa1fc813fce53331bd9e604bae Ivan Lesnik <ilesnik@onasellabs.mok> 1418295721 +0000	commit: Switch to basic mode
+ruau/.git/logs/refs/heads/onasel-config:d511e0d7351c0baa1fc813fce53331bd9e604bae 2bf5ea7025679f1ee6c6417878c9dc69359a9559 Ivan Lesnik <ilesnik@onasellabs.mok> 1418300940 +0000	commit: Add system property testsToRun to Ruue integration tests runner; add corresponding option to onasel runner
+ruau/.git/logs/refs/heads/onasel-config:2bf5ea7025679f1ee6c6417878c9dc69359a9559 5ec57c576cca5f6147e506e3431fdfbcccdd48f7 Ivan Lesnik <ilesnik@onasellabs.mok> 1418312326 +0000	commit: Apply workaround hook into the Ruue test runner; fix onasel runner accordingly
+ruau/.git/logs/refs/heads/onasel-config:5ec57c576cca5f6147e506e3431fdfbcccdd48f7 e3dd3abed4e56c0216583c575c33fb3c508f54dd Ivan Lesnik <ilesnik@onasellabs.mok> 1418313015 +0000	commit: Switch to parallel mode
+ruau/.git/logs/refs/heads/onasel-config:e3dd3abed4e56c0216583c575c33fb3c508f54dd d0da069ccf488a5bc69002915fc493bbb5bdd18a Ivan Lesnik <ilesnik@onasellabs.mok> 1418316698 +0000	commit: oneils runner now processes CLI arguments; onasel.yml changed accordingly
+ruau/.git/logs/refs/heads/onasel-config:d0da069ccf488a5bc69002915fc493bbb5bdd18a f7a847be96295996fab081024acc8ded98d363ba Ivan Lesnik <ilesnik@onasellabs.mok> 1418400104 +0000	commit: Switch to single mode
+ruau/.git/logs/refs/heads/onasel-config:f7a847be96295996fab081024acc8ded98d363ba c6a859962acc4e62dd2b68a254b536f57ce47031 Ivan Lesnik <ilesnik@onasellabs.mok> 1418636898 +0000	commit: Run only integration tests
+ruau/.git/logs/refs/heads/onasel-config:c6a859962acc4e62dd2b68a254b536f57ce47031 147a13ba4b170ea4a5b92e5feaf8b6967ff31246 Ivan Lesnik <ilesnik@onasellabs.mok> 1418641201 +0000	commit: Force skip queueing integration tests
+ruau/.git/logs/refs/heads/onasel-config:147a13ba4b170ea4a5b92e5feaf8b6967ff31246 ea309630d266a786bd15367d0540b85342f58968 Ivan Lesnik <ilesnik@onasellabs.mok> 1418642372 +0000	commit: Force skip unittests
+ruau/.git/logs/refs/heads/onasel-config:ea309630d266a786bd15367d0540b85342f58968 6c1dd902ece38adb585e57ef67f245809dc9bf1d Ivan Lesnik <ilesnik@onasellabs.mok> 1418642951 +0000	commit: Switch to parallel mode
+ruau/.git/logs/refs/heads/onasel-config:6c1dd902ece38adb585e57ef67f245809dc9bf1d d2c0bae3807bb23b8a84cbfa1ebe2412d1844d57 Ivan Lesnik <ilesnik@onasellabs.mok> 1418647005 +0000	commit: Comment <testClasses> in pom.xml
+ruau/.git/logs/refs/heads/onasel-config:d2c0bae3807bb23b8a84cbfa1ebe2412d1844d57 eb50fe1ffe3480911f1274111e4f4f80dbaf3800 Ivan Lesnik <ilesnik@onasellabs.mok> 1418647187 +0000	commit: Switch to a single mode
+ruau/.git/logs/refs/heads/onasel-config:eb50fe1ffe3480911f1274111e4f4f80dbaf3800 fb289e95ea9732c953c9ceee1b24e97ade6a9b84 Ivan Lesnik <ilesnik@onasellabs.mok> 1418648183 +0000	commit: Enable failsafe reports
+ruau/.git/logs/refs/heads/onasel-config:fb289e95ea9732c953c9ceee1b24e97ade6a9b84 cfd4be1eac6ac1744cf3732073f8af7efdb1a875 Ivan Lesnik <ilesnik@onasellabs.mok> 1418649268 +0000	commit: Disable surefire reports; add *.txt to failsafe reports
+ruau/.git/logs/refs/heads/onasel-config:cfd4be1eac6ac1744cf3732073f8af7efdb1a875 a71655bc3064b75b901449cd79724bd2f405b2a5 Ivan Lesnik <ilesnik@onasellabs.mok> 1418725836 +0000	commit: Fix typo in reports name; add tests number calculation
+ruau/.git/logs/refs/heads/onasel-config:a71655bc3064b75b901449cd79724bd2f405b2a5 894dd74896b97ef228c624c7fc825e8c6e065921 Ivan Lesnik <ilesnik@onasellabs.mok> 1418728091 +0000	commit: Switch to parallel mode
+ruau/.git/logs/refs/heads/onasel-config:894dd74896b97ef228c624c7fc825e8c6e065921 af74afdbe3c9ff21d698e0994e21329725ba9b29 Ivan Lesnik <ilesnik@onasellabs.mok> 1418730206 +0000	commit: Switch to Firefox, single mode
+ruau/.git/logs/refs/heads/onasel-config:af74afdbe3c9ff21d698e0994e21329725ba9b29 70fb200d12cec2173cdcb449db121425a3eb7f2c Ivan Lesnik <ilesnik@onasellabs.mok> 1418734918 +0000	commit: Switch to Android and IE10 sauce tests
+ruau/.git/logs/refs/heads/onasel-config:70fb200d12cec2173cdcb449db121425a3eb7f2c c901c542cb2c145f0cfa2c0019d09fa980b501a8 Ivan Lesnik <ilesnik@onasellabs.mok> 1418741780 +0000	commit: Switch to IE8, parallel mode
+ruau/.git/logs/refs/heads/onasel-config:c901c542cb2c145f0cfa2c0019d09fa980b501a8 79aa5b298a78b98c00b62d5f0701165a7b8452d4 Ivan Lesnik <ilesnik@onasellabs.mok> 1418809258 +0000	commit: Switch to IE9 tests
+ruau/.git/logs/refs/heads/onasel-config:79aa5b298a78b98c00b62d5f0701165a7b8452d4 e0d184c1b6feae1e26a4533f9c291d6f280864dc Ivan Lesnik <ilesnik@onasellabs.mok> 1418819804 +0000	commit: Switch to Safari, parallel mode
+ruau/.git/logs/refs/heads/onasel-config:e0d184c1b6feae1e26a4533f9c291d6f280864dc dfa612ddc29b6f9d1883fcc1c07b5f3a20a84c79 Ivan Lesnik <ilesnik@onasellabs.mok> 1418824480 +0000	commit: Enable Chrome & Firefox, parallel mode
+ruau/.git/logs/refs/heads/onasel-config:dfa612ddc29b6f9d1883fcc1c07b5f3a20a84c79 86f366e5a8f2907277d994e0a5462775bee3bf5e Ivan Lesnik <ilesnik@onasellabs.mok> 1418828471 +0000	commit: Disable Safari
+ruau/.git/logs/refs/heads/onasel-config:86f366e5a8f2907277d994e0a5462775bee3bf5e e7de664838558b42d8e051c7761d27f6c7d4b010 Ivan Lesnik <ilesnik@onasellabs.mok> 1418986550 +0000	commit: Switch to IE7, single mode
+ruau/.git/logs/refs/heads/master:0000000000000000000000000000000000000000 a3cee9addd78c4c955d8353772904188f1d1c709 William Josephson <William Josephson@onasellabs.mok> 1416303321 +0000	clone: from https://github.com/onasellabs/ruau
+ruau/.git/logs/refs/heads/master:a3cee9addd78c4c955d8353772904188f1d1c709 c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 Ivan Lesnik <ilesnik@onasellabs.mok> 1417002532 +0000	rebase finished: refs/heads/master onto c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3
+ruau/.git/logs/refs/heads/master:c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.mok> 1417003723 +0000	rebase finished: refs/heads/master onto 027d62c63762dff82846acb1156993f75fd2bbc2
+ruau/.git/logs/refs/heads/master:027d62c63762dff82846acb1156993f75fd2bbc2 920daf3f2605c62298c4f33079e79355dd7b1d5a Ivan Lesnik <ilesnik@onasellabs.mok> 1418981519 +0000	rebase finished: refs/heads/master onto 5be2360d98f2193b7afaca7e1eeb0c1b1b5ffa27
+ruau/.git/logs/refs/heads/master:920daf3f2605c62298c4f33079e79355dd7b1d5a 468152772d027cbea6fea02b0672c53c28878237 Ivan Lesnik <ilesnik@onasellabs.mok> 1418982298 +0000	rebase finished: refs/heads/master onto 86f366e5a8f2907277d994e0a5462775bee3bf5e
+ruau/.git/logs/refs/heads/serial:0000000000000000000000000000000000000000 468152772d027cbea6fea02b0672c53c28878237 Ivan Lesnik <ilesnik@onasellabs.mok> 1418984097 +0000	branch: Created from master
 ruau/.git/HEAD:ref: refs/heads/onasel-config
 ruau/.git/packed-refs:# pack-refs with: peeled 
 ruau/.git/packed-refs:06b1d23bd9862e35e22c888977ff79f3af8ed12a refs/remotes/origin/gh-pages

@@ -60,10 +60,10 @@ ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            tar
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.returnValue = "NONE";
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.state = "SUCCESS";
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.responseState = "SUCCESS";
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.components = [];
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.mokponents = [];
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            var stored = target.getStored("bogus");
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            Assert.Equal("NONE", stored["returnValue"]);
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            Assert.Equal({}, stored["components"]);
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            Assert.Equal({}, stored["mokponents"]);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            Assert.Equal("SUCCESS", stored["state"]);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            Assert.Equal("bogus", stored["storage"]["name"]);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            // time is harder.
@@ -89,19 +89,19 @@ ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:        [ Fact 
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:        function CallsCompleteGroups() {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            var target = new Action();
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            var context = {
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.completeGroups = Stubs.GetMethod(null);
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.mokpleteGroups = Stubs.GetMethod(null);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.getStorage = function() {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                return false;
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.getId = function() {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.finishAction(context);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            Assert.Equal([ {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                ReturnValue : null
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            } ], target.completeGroups.Calls);
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            } ], target.mokpleteGroups.Calls);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:        [ Fact ]
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:        function CallsCompleteGroupsEvenOnErrors() {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            var target = new Action();
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.completeGroups = Stubs.GetMethod(null);
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.components = "something";
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.mokpleteGroups = Stubs.GetMethod(null);
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.mokponents = "something";
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.getStorage = function() {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                return false;
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.getId = function() {
@@ -110,7 +110,7 @@ ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:               
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                            throw new Error("intentional");
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            Assert.Equal([ {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                ReturnValue : null
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            } ], target.completeGroups.Calls);
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            } ], target.mokpleteGroups.Calls);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            Assert.Equal("intentional", error);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:        [ Fact ]
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:        function CallsContextFinishComponentsWithStorageFalse() {
@@ -118,9 +118,9 @@ ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            var
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            var expectedId = "9955";
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            var context = {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            context.clearComponentConfigs = Stubs.GetMethod("id", null);
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.components = [ {
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.mokponents = [ {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                "creationPath" : "hi"
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.completeGroups = Stubs.GetMethod(null);
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.mokpleteGroups = Stubs.GetMethod(null);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.getStorage = function() {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                return false;
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.getId = function() {
@@ -135,9 +135,9 @@ ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            var
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            var expectedId = "9955";
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            var context = {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            context.clearComponentConfigs = Stubs.GetMethod("id", null);
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.components = [ {
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.mokponents = [ {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                "creationPath" : "hi"
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.completeGroups = Stubs.GetMethod(null);
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.mokpleteGroups = Stubs.GetMethod(null);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.getStorage = function() {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.storable = true;
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.getId = function() {
@@ -153,9 +153,9 @@ ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            var
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            var expectedId = "9955";
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            var context = {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            context.clearComponentConfigs = Stubs.GetMethod("id", null);
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.components = [ {
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.mokponents = [ {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                "creationPath" : "hi"
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.completeGroups = Stubs.GetMethod(null);
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.mokpleteGroups = Stubs.GetMethod(null);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.getStorage = function() {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                return false;
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.getState = function() {
@@ -522,7 +522,7 @@ ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            tar
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            Assert.Equal(expected, actual);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:    function AddCallbackGroup() {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:        var MockGroup = function() {
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            this.completeAction = Stubs.GetMethod("action", null);
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            this.mokpleteAction = Stubs.GetMethod("action", null);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:        [Fact]
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            var expected = "expected";
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            var target = new Action();
@@ -547,22 +547,22 @@ ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            tar
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            Assert.Equal([ {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                    action : target
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                ReturnValue : null
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            } ], group.completeAction.Calls);
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            } ], group.mokpleteAction.Calls);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:        [ Fact ]
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:        function DoesNotCallCompleteActionOnGroupIfNew() {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            var target = new Action();
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.state = "NEW";
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            var group = new MockGroup();
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.addCallbackGroup(group);
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            Assert.Equal(0, group.completeAction.Calls.length);
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            Assert.Equal(0, group.mokpleteAction.Calls.length);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:        var MockGroup = function() {
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            this.completeAction = Stubs.GetMethod("action", null);
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            this.mokpleteAction = Stubs.GetMethod("action", null);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:        [Fact]
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            var target = new Action();
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            var group1 = new MockGroup();
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            var group2 = new MockGroup();
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.groups = [ group1, group2 ];
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.completeGroups();
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.mokpleteGroups();
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            Assert.Equal([], target.groups);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:        [ Fact ]
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:        function CallsCompleteActionOnEachGroup() {
@@ -570,15 +570,15 @@ ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            var
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            var group1 = new MockGroup();
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            var group2 = new MockGroup();
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.groups = [ group1, group2 ];
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.completeGroups();
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.mokpleteGroups();
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            Assert.Equal([ {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                    action : target
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                ReturnValue : null
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            } ], group1.completeAction.Calls);
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            } ], group1.mokpleteAction.Calls);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            Assert.Equal([ {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                    action : target
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                ReturnValue : null
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            } ], group2.completeAction.Calls);
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            } ], group2.mokpleteAction.Calls);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:        var mockGlobal = Mocks.GetMocks(Object.Global(), {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                        encode : function(val) {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                            return val;
@@ -591,12 +591,12 @@ ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            Ass
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:        [ Fact ]
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:        function CallsCompleteGroups() {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            var target = new Action();
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.completeGroups = Stubs.GetMethod(null);
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.mokpleteGroups = Stubs.GetMethod(null);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            mockGlobal(function() {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                target.abort();
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            Assert.Equal([ {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                ReturnValue : null
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            } ], target.completeGroups.Calls);
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            } ], target.mokpleteGroups.Calls);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:        [ Fact ]
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:        function CallsAbortedCallback() {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            var target = new Action();
@@ -652,9 +652,9 @@ ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:               
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                    target.setParentAction({
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                        ruauType : "Action"
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            Assert.Equal(expected, actual);
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js: * Unless required by applicable law or agreed to in writing, software
@@ -759,7 +759,7 @@ ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:		
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var stubbedCallback = Stubs.GetMethod("param", null);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var group = new ActionCallbackGroup([ action ], null, stubbedCallback);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var other = new MockAction("other");
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			mockRuueUtil(function() { group.completeAction(other) });
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			mockRuueUtil(function() { group.mokpleteAction(other) });
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			Assert.Equal(0, stubbedCallback.Calls.length);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			Assert.Equal([ action ], group.actions);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:		[ Fact ]
@@ -767,14 +767,14 @@ ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:		
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var scope = {};
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var callback = function() {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var group = new ActionCallbackGroup([ action ], scope, callback);
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			mockRuueUtil(function() { group.completeAction(action) });
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			mockRuueUtil(function() { group.mokpleteAction(action) });
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			Assert.Equal([], group.actions);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:		[ Fact ]
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var action = new MockAction();
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var scope = {};
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var callback = function() {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var group = new ActionCallbackGroup([ action ], scope, callback);
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			mockRuueUtil(function() { group.completeAction(action) });
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			mockRuueUtil(function() { group.mokpleteAction(action) });
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			Assert.Equal([], group.actions);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:		[ Fact ]
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:		function DoesNotExecuteCallbackIfActionsNotEmpty() {
@@ -782,14 +782,14 @@ ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:		
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var action2 = new MockAction("inlist2");
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var stubbedCallback = Stubs.GetMethod("param", null);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var group = new ActionCallbackGroup([ action1, action2 ], null, stubbedCallback);
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			mockRuueUtil(function() { group.completeAction(action1) });
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			mockRuueUtil(function() { group.mokpleteAction(action1) });
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			Assert.Equal(0, stubbedCallback.Calls.length);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:		[ Fact ]
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:		function DoesNotExeuteCallbackDuringConstruction() {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var action = new MockAction();
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var stubbedCallback = Stubs.GetMethod("param", null);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var group = new ActionCallbackGroup([ action ], null, stubbedCallback);
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			mockRuueUtil(function() { group.completeAction(action) });
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			mockRuueUtil(function() { group.mokpleteAction(action) });
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			Assert.Equal(0, stubbedCallback.Calls.length);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:		[ Fact ]
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:		function ExecutesCallbackIfLastActionCompleted() {
@@ -798,25 +798,25 @@ ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:		
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var stubbedCallback = Stubs.GetMethod("param", null);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var group;
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			    group = new ActionCallbackGroup([ action ], null, stubbedCallback);
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:				mockRuueUtil(function() { group.completeAction(action) });
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:				mockRuueUtil(function() { group.mokpleteAction(action) });
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			Assert.Equal([ {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:					param : {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:				ReturnValue : null
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			} ], stubbedCallback.Calls);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:		[ Fact ]
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:		function NoErrorIfCallbackUndefined() {
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			// because it would normally try to execute the callback if last action was completed
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			// because it would normally try to execute the callback if last action was mokpleted
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var action = new MockAction();
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var stubbedCallback = Stubs.GetMethod("param", null);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var group = new ActionCallbackGroup([ action ], null);
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			mockRuueUtil(function() { group.completeAction(action) });
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			mockRuueUtil(function() { group.mokpleteAction(action) });
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:		[ Fact ]
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:		function NoErrorIfCallbackNull() {
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			// because it would normally try to execute the callback if last action was completed
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			// because it would normally try to execute the callback if last action was mokpleted
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var action = new MockAction();
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var stubbedCallback = Stubs.GetMethod("param", null);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var group = new ActionCallbackGroup([ action ], null, null);
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			mockRuueUtil(function() { group.completeAction(action) });
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			mockRuueUtil(function() { group.mokpleteAction(action) });
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:		[ Fact ]
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:		function ExecutesCallbackWithProvidedScope() {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var action = new MockAction();
@@ -824,7 +824,7 @@ ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:		
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var callback = function() {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var expected = {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var group = new ActionCallbackGroup([ action ], scope, callback);
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			mockRuueUtil(function() { group.completeAction(action) });
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			mockRuueUtil(function() { group.mokpleteAction(action) });
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			Assert.Equal(expected, scope);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:		[ Fact ]
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:		function ExecutesCallbackWithWindowScopeIfScopeUndefined() {
@@ -833,7 +833,7 @@ ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:		
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var callback = function() {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var group = new ActionCallbackGroup([ action ], undefined, callback);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var actual;
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:				mockRuueUtil(function() { group.completeAction(action) });
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:				mockRuueUtil(function() { group.mokpleteAction(action) });
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:				actual = window.property;
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			Assert.Equal(expected, actual);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:		[ Fact ]
@@ -843,12 +843,12 @@ ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:		
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var callback = function() {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var group = new ActionCallbackGroup([ action ], null, callback);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			var actual;
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:				mockRuueUtil(function() { group.completeAction(action) });
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:				mockRuueUtil(function() { group.mokpleteAction(action) });
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:				actual = window.property;
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCallbackGroupTest.js:			Assert.Equal(expected, actual);
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionQueueTest.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionQueueTest.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionQueueTest.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionQueueTest.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionQueueTest.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionQueueTest.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionQueueTest.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionQueueTest.js: * Unless required by applicable law or agreed to in writing, software
@@ -1158,9 +1158,9 @@ ruau/ruau-impl/src/test/javascript/ruau/controller/ActionQueueTest.js:          
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionQueueTest.js:            var actual = target.getNextBackgroundAction();
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionQueueTest.js:            Assert.Equal(expected, actual);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionQueueTest.js:            Assert.Equal([ server, client ], target.actions);
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCollectorTest.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCollectorTest.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCollectorTest.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCollectorTest.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCollectorTest.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCollectorTest.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCollectorTest.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCollectorTest.js: * Unless required by applicable law or agreed to in writing, software
@@ -1236,9 +1236,9 @@ ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCollectorTest.js:      
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCollectorTest.js:            target.actionsRequested = expected;
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCollectorTest.js:            var actual = target.getActionsRequested();
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionCollectorTest.js:            Assert.Equal(expected, actual);
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionDefTest.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionDefTest.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionDefTest.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionDefTest.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionDefTest.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionDefTest.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionDefTest.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionDefTest.js: * Unless required by applicable law or agreed to in writing, software
@@ -1547,9 +1547,9 @@ ruau/ruau-impl/src/test/javascript/ruau/controller/ActionDefTest.js:			var expec
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionDefTest.js:			var target = new ActionDef({});
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionDefTest.js:			var actual = target.newInstance(expected).cmp;
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionDefTest.js:			Assert.Equal(expected, actual);
-ruau/ruau-impl/src/test/javascript/ruau/LoggerTest.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/test/javascript/ruau/LoggerTest.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/test/javascript/ruau/LoggerTest.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/test/javascript/ruau/LoggerTest.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/test/javascript/ruau/LoggerTest.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/test/javascript/ruau/LoggerTest.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/test/javascript/ruau/LoggerTest.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/test/javascript/ruau/LoggerTest.js: * Unless required by applicable law or agreed to in writing, software
@@ -1649,9 +1649,9 @@ ruau/ruau-impl/src/test/javascript/ruau/LoggerTest.js:        function InvalidCa
 ruau/ruau-impl/src/test/javascript/ruau/LoggerTest.js:                Assert.Fail("Should have thrown error for invalid callback");
 ruau/ruau-impl/src/test/javascript/ruau/LoggerTest.js:            } catch (e) {
 ruau/ruau-impl/src/test/javascript/ruau/LoggerTest.js:                Assert.Equal("Logging callback must be a function", e);
-ruau/ruau-impl/src/test/javascript/ruau/util/BrowserSupportedUtilTest.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/test/javascript/ruau/util/BrowserSupportedUtilTest.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserSupportedUtilTest.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/test/javascript/ruau/util/BrowserSupportedUtilTest.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/test/javascript/ruau/util/BrowserSupportedUtilTest.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserSupportedUtilTest.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserSupportedUtilTest.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserSupportedUtilTest.js: * Unless required by applicable law or agreed to in writing, software
@@ -1739,9 +1739,9 @@ ruau/ruau-impl/src/test/javascript/ruau/util/BrowserSupportedUtilTest.js:       
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserSupportedUtilTest.js:                    Assert.False(true, "default call should have raised an exception!");
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserSupportedUtilTest.js:                } catch (e) {
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserSupportedUtilTest.js:                    Assert.Equal("KEYS", e);
-ruau/ruau-impl/src/test/javascript/ruau/util/BrowserUnsupportedUtilTest.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/test/javascript/ruau/util/BrowserUnsupportedUtilTest.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserUnsupportedUtilTest.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/test/javascript/ruau/util/BrowserUnsupportedUtilTest.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/test/javascript/ruau/util/BrowserUnsupportedUtilTest.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserUnsupportedUtilTest.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserUnsupportedUtilTest.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserUnsupportedUtilTest.js: * Unless required by applicable law or agreed to in writing, software
@@ -1869,9 +1869,9 @@ ruau/ruau-impl/src/test/javascript/ruau/util/BrowserUnsupportedUtilTest.js:     
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserUnsupportedUtilTest.js:                } catch (e) {
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserUnsupportedUtilTest.js:                    Assert.True(e instanceof TypeError);
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserUnsupportedUtilTest.js:                    Assert.Equal("$A.util.keys called on non-object.",  e.message);
-ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js: * Unless required by applicable law or agreed to in writing, software
@@ -2139,9 +2139,9 @@ ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js:            ruauMock(fu
 ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js:                var util = new $A.ns.Util(); 
 ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js:                var found = 0;
 ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js:                Assert.Equal(0, found);
-ruau/ruau-impl/src/test/javascript/ruau/RuueLocalizationServiceTest.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/test/javascript/ruau/RuueLocalizationServiceTest.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-impl/src/test/javascript/ruau/RuueLocalizationServiceTest.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/test/javascript/ruau/RuueLocalizationServiceTest.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/test/javascript/ruau/RuueLocalizationServiceTest.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-impl/src/test/javascript/ruau/RuueLocalizationServiceTest.js: * You may obtain a copy of the License at
 ruau/ruau-impl/src/test/javascript/ruau/RuueLocalizationServiceTest.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-impl/src/test/javascript/ruau/RuueLocalizationServiceTest.js: * Unless required by applicable law or agreed to in writing, software

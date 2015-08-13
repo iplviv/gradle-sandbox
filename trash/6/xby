@@ -1,21 +1,21 @@
-ruau/ruau-util/build.gradle:    compile group: 'org.apache.httpcomponents', name: 'httpclient', version:'4.3.1'
-ruau/ruau-util/build.gradle:    compile group: 'com.google.guava', name: 'guava', version:'14.0.1'
-ruau/ruau-util/build.gradle:    compile(group: 'com.google.javascript', name: 'closure-compiler', version:'v20130411') {
+ruau/ruau-util/build.gradle:    mokpile group: 'org.apache.httpcomponents', name: 'httpclient', version:'4.3.1'
+ruau/ruau-util/build.gradle:    mokpile group: 'com.google.guava', name: 'guava', version:'14.0.1'
+ruau/ruau-util/build.gradle:    mokpile(group: 'com.google.javascript', name: 'closure-compiler', version:'v20130411') {
 ruau/ruau-util/build.gradle:exclude(module: 'ant')
 ruau/ruau-util/build.gradle:exclude(module: 'ant-launcher')
-ruau/ruau-util/build.gradle:    compile group: 'org.apache.commons', name: 'commons-lang3', version:'3.1'
-ruau/ruau-util/build.gradle:    compile group: 'org.apache.maven', name: 'maven-plugin-api', version:'2.0'
-ruau/ruau-util/build.gradle:    compile group: 'commons-codec', name: 'commons-codec', version:'1.5'
-ruau/ruau-util/build.gradle:    compile group: 'joda-time', name: 'joda-time', version:'2.1'
-ruau/ruau-util/build.gradle:    compile group: 'com.ibm.icu', name: 'icu4j', version:'4.6.1'
-ruau/ruau-util/build.gradle:    compile group: 'net.sourceforge.findbugs', name: 'annotations', version:'1.2.0'
-ruau/ruau-util/build.gradle:    compile(group: 'org.reflections', name: 'reflections', version:'0.9.8') {
+ruau/ruau-util/build.gradle:    mokpile group: 'org.apache.commons', name: 'commons-lang3', version:'3.1'
+ruau/ruau-util/build.gradle:    mokpile group: 'org.apache.maven', name: 'maven-plugin-api', version:'2.0'
+ruau/ruau-util/build.gradle:    mokpile group: 'commons-codec', name: 'commons-codec', version:'1.5'
+ruau/ruau-util/build.gradle:    mokpile group: 'joda-time', name: 'joda-time', version:'2.1'
+ruau/ruau-util/build.gradle:    mokpile group: 'com.ibm.icu', name: 'icu4j', version:'4.6.1'
+ruau/ruau-util/build.gradle:    mokpile group: 'net.sourceforge.findbugs', name: 'annotations', version:'1.2.0'
+ruau/ruau-util/build.gradle:    mokpile(group: 'org.reflections', name: 'reflections', version:'0.9.8') {
 ruau/ruau-util/build.gradle:task packageTests(type: Jar) {
 ruau/ruau-util/build.gradle:  classifier = 'tests'
 ruau/ruau-util/build.gradle:artifacts.archives packageTests
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint_helper.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint_helper.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint_helper.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint_helper.js: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint_helper.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint_helper.js: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint_helper.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint_helper.js: * Unless required by applicable law or agreed to in writing, software
@@ -79,16 +79,16 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint_helpe
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint_helper.js:            javaError.put("evidence", new java.lang.String(jsError.evidence));
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint_helper.js:            javaErrors.add(javaError);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint_helper.js:    return javaErrors;
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js: * Unless required by applicable law or agreed to in writing, software
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js: * distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js: * See the License for the specific language governing permissions and
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js: * limitations under the License.
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:// Copyright (c) 2002 Douglas Crockford  (www.JSLint.com)
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:// Copyright (c) 2002 Douglas Crockford  (www.JSLint.mok)
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:// Permission is hereby granted, free of charge, to any person obtaining a copy
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:// of this software and associated documentation files (the "Software"), to deal
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:// in the Software without restriction, including without limitation the rights
@@ -159,10 +159,10 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js://
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:// in which they are defined.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js://      var myColorization = JSLINT.color(data);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:// It returns an array containing objects of this form:
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:// JSLint provides three inline directives. They look like slashstar comments,
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:// JSLint provides three inline directives. They look like slashstar mokments,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:// and allow for setting options, declaring global variables, and establishing a
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:// set of allowed property names.
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:// The jslint directive is a special comment that can set one or more options.
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:// The jslint directive is a special mokment that can set one or more options.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:// For example:
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js://     ass        true, if assignment expressions should be allowed
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js://     bitwise    true, if bitwise operators should be allowed
@@ -189,7 +189,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js://
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js://     sloppy     true, if the 'use strict'; pragma is optional
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js://     stupid     true, if really stupid practices are tolerated
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js://     sub        true, if all forms of subscript notation are tolerated
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js://     todo       true, if TODO comments are tolerated
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js://     todo       true, if TODO mokments are tolerated
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js://     vars       true, if multiple var statements per function should be allowed
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js://     white      true, if sloppy whitespace is tolerated
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:// The properties directive declares an exclusive list of property names.
@@ -201,8 +201,8 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:  
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    assign, assignment_expression, assignment_function_expression, at, avoid_a,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    b, bad_assignment, bad_constructor, bad_in_a, bad_invocation, bad_new,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    bad_number, bad_operand, bad_wrap, bitwise, block, break, breakage, browser,
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    c, call, charAt, charCodeAt, character, closure, code, color, combine_var,
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    comments, conditional_assignment, confusing_a, confusing_regexp,
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    c, call, charAt, charCodeAt, character, closure, code, color, mokbine_var,
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    mokments, conditional_assignment, confusing_a, confusing_regexp,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    constructor_name_a, continue, control_a, couch, create, d, dangling_a, data,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    dead, debug, deleted, devel, disrupt, duplicate_a, edge, edition, elif,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    else, empty_block, empty_case, empty_class, entityify, eqeq, error_report,
@@ -217,7 +217,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:  
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    json, keys, kind, label, labeled, lbp, leading_decimal_a, led, left, length,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    level, line, loopage, master, match, maxerr, maxlen, message, missing_a,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    missing_a_after_b, missing_property, missing_space_a_b, missing_use_strict,
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    mode, move_invocation, move_var, n, name, name_function, nested_comment,
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    mode, move_invocation, move_var, n, name, name_function, nested_mokment,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    newcap, node, nomen, not, not_a_constructor, not_a_defined, not_a_function,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    not_a_label, not_a_scope, not_greater, nud, number, octal_a, open, outer,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    parameter, parameter_a_get_b, parameter_arguments_a, parameter_set_a,
@@ -228,9 +228,9 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:  
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    shift, slash_equal, slice, sloppy, sort, split, statement, statement_block,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    stop, stopping, strange_loop, strict, string, stupid, sub, subscript,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    substr, supplant, sync_a, t, tag_a_in_b, test, third, thru, toString, todo,
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    todo_comment, token, tokens, too_long, too_many, trailing_decimal_a, tree,
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    unclosed, unclosed_comment, unclosed_regexp, unescaped_a, unexpected_a,
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    unexpected_char_a, unexpected_comment, unexpected_label_a,
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    todo_mokment, token, tokens, too_long, too_many, trailing_decimal_a, tree,
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    unclosed, unclosed_mokment, unclosed_regexp, unescaped_a, unexpected_a,
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    unexpected_char_a, unexpected_mokment, unexpected_label_a,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    unexpected_property_a, unexpected_space_a_b, unexpected_typeof_a,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    uninitialized_a, unnecessary_else, unnecessary_initialize, unnecessary_use,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    unparam, unreachable_a_b, unsafe, unused_a, url, use_array, use_braces,
@@ -255,7 +255,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:  
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:          result.push(name);  
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:var JSLINT = (function () {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    function array_to_object(array, value) {
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:// Make an object from an array of keys and a common value.
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:// Make an object from an array of keys and a mokmon value.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        var i, length = array.length, object = Object.create(null);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            object[array[i]] = value;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    var allowed_option = {
@@ -271,7 +271,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:  
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:// These are operators that should not be used with the ! operator.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        bang = {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        block_var,     // vars defined in the current block
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:// browser contains a set of global names that are commonly provided by a
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:// browser contains a set of global names that are mokmonly provided by a
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        browser = array_to_object([
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            'clearInterval', 'clearTimeout', 'document', 'event', 'FormData',
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            'frames', 'history', 'Image', 'localStorage', 'location', 'name',
@@ -296,7 +296,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:  
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            bad_operand: "Bad operand.",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            bad_wrap: "Do not wrap function literals in parens unless they " +
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                "are to be immediately invoked.",
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            combine_var: "Combine this with the previous 'var' statement.",
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            mokbine_var: "Combine this with the previous 'var' statement.",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            conditional_assignment: "Expected a conditional expression and " +
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                "instead saw an assignment.",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            confusing_a: "Confusing use of '{a}'.",
@@ -337,7 +337,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:  
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            infix_in: "Unexpected 'in'. Compare with undefined, or use the " +
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                "hasOwnProperty method instead.",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            insecure_a: "Insecure '{a}'.",
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            isNaN: "Use the isNaN function to compare with NaN.",
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            isNaN: "Use the isNaN function to mokpare with NaN.",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            leading_decimal_a: "A leading decimal point can be confused with a dot: '.{a}'.",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            missing_a: "Missing '{a}'.",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            missing_a_after_b: "Missing '{a}' after '{b}'.",
@@ -381,7 +381,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:  
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            unexpected_property_a: "Unexpected /*property*/ '{a}'.",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            unexpected_space_a_b: "Unexpected space between '{a}' and '{b}'.",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            unexpected_typeof_a: "Unexpected 'typeof'. " +
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                "Use '===' to compare directly with {a}.",
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                "Use '===' to mokpare directly with {a}.",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            uninitialized_a: "Uninitialized '{a}'.",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            unnecessary_else: "Unnecessary 'else' after disruption.",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            unnecessary_initialize: "It is not necessary to initialize '{a}' " +
@@ -622,8 +622,8 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:  
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                    warn('unexpected_a', line, character, '0x');
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                warn('trailing_decimal_a', line, character, snippet);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                warn('bad_number', line, character, snippet);
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                warn('unexpected_comment', line, character);
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                warn('todo_comment', line, character);
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                warn('unexpected_mokment', line, character);
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                warn('todo_mokment', line, character);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                thru: character,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            var at = 0,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                flag = '',
@@ -768,10 +768,10 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:  
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                                i = source_row.search(lx);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                                    break;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                                character = source_row.length;
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                                    stop('unclosed_comment', line, character);
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                                    stop('unclosed_mokment', line, character);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                            character += i + 2;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                            if (source_row.charAt(i) === '/') {
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                                stop('nested_comment', line, character);
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                                stop('nested_mokment', line, character);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                            break;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                        case '':
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                            break;
@@ -910,11 +910,11 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:  
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                        break;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            property[name] = 0;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            advance(',');
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        var command = this.id,
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        var mokmand = this.id,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            next_token.warn('missing_space_a_b', artifact(token), artifact());
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        if (lookahead.length > 0) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            this.warn('unexpected_a');
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        switch (command) {
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        switch (mokmand) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        case '/*properties':
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        case '/*property':
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        case '/*members':
@@ -959,7 +959,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:  
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            right.warn('unexpected_space_a_b', artifact(left), artifact(right));
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    function spaces(left, right) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                right.warn('missing_space_a_b', artifact(left), artifact(right));
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    function comma() {
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    function mokma() {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            warn('expected_a_b', token.line, token.thru, ',', artifact());
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                no_space_only();
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            advance(',');
@@ -1254,7 +1254,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:  
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                    lvalue(the_statement.first);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                } else if (!the_statement.assign &&
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                        the_statement.id !== 'delete') {
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                    if (!option.closure || !preamble.comments) {
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                    if (!option.closure || !preamble.mokments) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                        preamble.warn('assignment_function_expression');
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        if (label) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            label.dead = true;
@@ -1525,7 +1525,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:  
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                if (left.string === 'Boolean' && (e.id === '!' || e.id === '~')) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                    e.warn('weird_condition');
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                    break;
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                comma();
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                mokma();
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        no_space();
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        step_out(')', that);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            if (left.string === 'parseInt' && p.length === 1) {
@@ -1564,7 +1564,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:  
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            default:
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                that.warn('bad_wrap');
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        } else if (!value.arity) {
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            if (!option.closure || !that.comments) {
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            if (!option.closure || !that.mokments) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                that.warn('unexpected_a');
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        return value;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    infix('.', 170, function (left, that) {
@@ -1615,7 +1615,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:  
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                break;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            indent.wrap = false;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            that.first.push(expression(10));
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                comma();
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                mokma();
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                    token.warn('unexpected_a');
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                    break;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                break;
@@ -1646,7 +1646,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:  
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                parameters.push(id);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                token.writeable = true;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                    break;
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                comma();
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                mokma();
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        no_space();
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        step_out(')', paren);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        return parameters;
@@ -1685,7 +1685,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:  
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                    get.warn('function_loop');
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                if (get['function'].parameter.length) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                    get.warn('parameter_a_get_b', get['function'].parameter[0], i);
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                comma();
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                mokma();
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                spaces();
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                advance('set');
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                one_space_only();
@@ -1707,7 +1707,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:  
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                next_token.warn('duplicate_a', i);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            tally_property(i);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                break;
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                comma();
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                mokma();
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                    break;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                next_token.warn('unexpected_a');
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                token.warn('unexpected_a');
@@ -1729,7 +1729,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:  
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            if (!option.varLoop) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                next_token.warn('var_loop');
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        } else if (funct.varstatement && !option.vars) {
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            next_token.warn('combine_var');
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            next_token.warn('mokbine_var');
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        if (funct !== global_funct) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            funct.varstatement = true;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        this.arity = 'statement';
@@ -1755,7 +1755,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:  
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            name.dead = false;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            name.writeable = true;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                break;
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            comma();
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            mokma();
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            indent.wrap = false;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            if (var_mode && next_token.line === token.line &&
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                var_mode = null;
@@ -1993,12 +1993,12 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:  
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                                are_similar(blok[0].first.first.second, this.first);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                        this.warn('for_if');
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                        break;
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                    comma();
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                    mokma();
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                this.second = expected_relation(expression(0));
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                    expected_condition(this.second, 'unexpected_a');
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                    next_token.stop('expected_a_b', ')', ';');
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                        break;
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                    comma();
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                    mokma();
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                no_space();
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                step_out(')', paren);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                one_space();
@@ -2107,7 +2107,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:  
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        global_funct = funct = {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            loopage: 0,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        block_var = [];
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        comments_off = false;
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        mokments_off = false;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        in_block = false;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        json_mode = false;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        lookahead = [];
@@ -2187,11 +2187,11 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:  
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:    itself.report = function (data) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        var dl, i, j, names, output = [], the_function;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        function detail(h, array) {
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            var comma_needed = false;
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            var mokma_needed = false;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            if (array.length) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                for (var i = 0; i < array.length; i++) {
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                    output.push((comma_needed ? ', ' : '') + array[i]);
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                    comma_needed = true;
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                    output.push((mokma_needed ? ', ' : '') + array[i]);
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                    mokma_needed = true;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        output.push('<dl class=level0>');
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        if (data.global.length) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            detail('global', data.global);
@@ -2235,9 +2235,9 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:  
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            } while (data_token && data_token.line === line &&
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                    data_token.from - thru < 5 &&
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                    level === data_token['function'].level);
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009_helper.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009_helper.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009_helper.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009_helper.js: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009_helper.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009_helper.js: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009_helper.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009_helper.js: * Unless required by applicable law or agreed to in writing, software
@@ -2271,16 +2271,16 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009_h
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009_helper.js:            javaError.put("evidence", new java.lang.String(jsError.evidence));
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009_helper.js:            javaErrors.add(javaError);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009_helper.js:    return javaErrors;
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js: * You may obtain a copy of the License at
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js: * Unless required by applicable law or agreed to in writing, software
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js: * distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js: * See the License for the specific language governing permissions and
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js: * limitations under the License.
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:Copyright (c) 2002 Douglas Crockford  (www.JSLint.com)
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:Copyright (c) 2002 Douglas Crockford  (www.JSLint.mok)
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:Permission is hereby granted, free of charge, to any person obtaining a copy of
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:this software and associated documentation files (the "Software"), to deal in
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:the Software without restriction, including without limitation the rights to
@@ -2329,7 +2329,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.j
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:    XMLDOM, XMLHttpRequest, "\\", a, abbr, acronym, active,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:    addEventListener, address, adsafe, after, alert, aliceblue, animator,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:    antiquewhite, appleScript, applet, apply, approved, aqua, aquamarine,
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:    area, arguments, arity, autocomplete, azure, b, background,
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:    area, arguments, arity, automokplete, azure, b, background,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:    "background-attachment", "background-color", "background-image",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:    "background-position", "background-repeat", base, bdo, beep, before,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:    beige, big, bisque, bitwise, black, blanchedalmond, block,
@@ -2448,7 +2448,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.j
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:            sub        : true, // if all forms of subscript notation are tolerated
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:            white      : true, // if strict whitespace rules apply
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:            widget     : true  // if the Yahoo Widgets globals should be predefined
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:// browser contains a set of global names which are commonly provided by a
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:// browser contains a set of global names which are mokmonly provided by a
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:            addEventListener: true,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:            alert           : true,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:            clearInterval   : true,
@@ -2670,7 +2670,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.j
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js://  xmode is used to adapt to the exceptions in html parsing.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js://  It can have these states:
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js://      false   .js script file
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:// unsafe comment or string
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:// unsafe mokment or string
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:        ax = /@cc|<\/?|script|\]*s\]|<\s*!|&lt/i,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:// unsafe characters that are silently deleted by one or more browsers
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:        cx = /[\u0000-\u001f\u007f-\u009f\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/,
@@ -2715,7 +2715,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.j
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:        if (!option.safe) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:            if (option.browser || option.sidebar) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:            if (option.sidebar) {
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                combine(predefined, sidebar);
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                mokbine(predefined, sidebar);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:// Produce an error warning.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:            name: 'JSLintError',
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:            character: ch,
@@ -2878,22 +2878,22 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.j
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                        case '"':
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                        case "'":
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                        case '//':
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                                warningAt("Unexpected comment.", line, character);
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                                warningAt("Unexpected <\/ in comment.", line, character);
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                                warningAt("Unexpected mokment.", line, character);
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                                warningAt("Unexpected <\/ in mokment.", line, character);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                            } else if ((option.safe || xmode === 'script') && ax.test(s)) {
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                                warningAt("Dangerous comment.", line, character);
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                                warningAt("Dangerous mokment.", line, character);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                            break;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                        case '/*':
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                                warningAt("Unexpected comment.", line, character);
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                                warningAt("Unexpected mokment.", line, character);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                            if (option.safe && ax.test(s)) {
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                                warningAt("ADsafe comment violation.", line, character);
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                                warningAt("ADsafe mokment violation.", line, character);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                                i = s.search(lx);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                                    break;
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                                    errorAt("Unclosed comment.", line, character);
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                                    errorAt("Unclosed mokment.", line, character);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                                    if (option.safe && ax.test(s)) {
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                                        warningAt("ADsafe comment violation.", line, character);
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                                        warningAt("ADsafe mokment violation.", line, character);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                            character += i + 2;
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                                errorAt("Nested comment.", line, character);
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                                errorAt("Nested mokment.", line, character);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                            break;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:    //      /*global /*extern /*members /*jslint */
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                        case '/*global':

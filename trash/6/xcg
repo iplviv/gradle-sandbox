@@ -79,25 +79,25 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.ja
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        List<Object> innerList = (List<Object>) innerMap.get("key2");
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        assertEquals("string1", innerList.get(0));
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        assertEquals("string2", innerList.get(1));
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * @newTestCase Verify that JSON with comments embedded can be handled by
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * @newTestCase Verify that JSON with mokments embedded can be handled by
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     *              JsonStreamReader. The first is a special case of JSON
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     *              string, because ruau javascript controllers is in this
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     *              format.
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * @newTestCase Everything after a single line comment delimiter should be
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     *              ignored Starting another multiline comment with in a
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * @newTestCase Incomplete multi line comment.
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * @newTestCase Invalid multi line comment
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * @newTestCase Everything after a single line mokment delimiter should be
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     *              ignored Starting another multiline mokment with in a
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * @newTestCase Inmokplete multi line comment.
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * @newTestCase Invalid multi line mokment
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * @hierarchy Ruue.Unit Tests.Json StreamReader
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * @userStorySyncIdOrName a07B0000000DUGn
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:    @SuppressWarnings("unchecked")
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        // Positive test Case1
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        String commentsAtStartOfObject = "/*Multiline comment \n Yeah really */ {\n"
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:                + "/** Some more multiline comments and Some speci@l character's\n * \n*/"
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        String mokmentsAtStartOfObject = "/*Multiline comment \n Yeah really */ {\n"
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:                + "/** Some more multiline mokments and Some speci@l character's\n * \n*/"
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:                + " functionName1: function(args1, args2) {" + "/*Multi line Comments\n **/\n"
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:                + "//Single line Comments\n" + "var str = 'do Nothing'; \n" + "},"
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:                + "/*Multiline comment \n Yeah really */\n" + "functionName2: function(args1, args2, args3) {"
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:                + "//Single line comments \n" + "var str = 'Still do Nothing';" + "}," + "}";
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        Object o = parseAndRetrieve(commentsAtStartOfObject);
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:                + "/*Multiline mokment \n Yeah really */\n" + "functionName2: function(args1, args2, args3) {"
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:                + "//Single line mokments \n" + "var str = 'Still do Nothing';" + "}," + "}";
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        Object o = parseAndRetrieve(mokmentsAtStartOfObject);
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        assertTrue(o instanceof Map);
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        Map<String, Object> functionMap = (Map<String, Object>) o;
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        assertEquals(2, functionMap.size());
@@ -105,10 +105,10 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.ja
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        assertTrue(function1 instanceof JsFunction);
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        Object function2 = functionMap.get("functionName2");
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        assertTrue(function2 instanceof JsFunction);
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:         * Positive test case 2: Everything after a single line comment
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:         * delimiter should be ignored, Starting another multiline comment with
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:         * in a multiline comment is ok,
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        String fakeMultiLine = "// /*Multi line comment delimiter after a single line comment delimiter \n" + "{\n"
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:         * Positive test case 2: Everything after a single line mokment
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:         * delimiter should be ignored, Starting another multiline mokment with
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:         * in a multiline mokment is ok,
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        String fakeMultiLine = "// /*Multi line mokment delimiter after a single line comment delimiter \n" + "{\n"
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:                + "/* */ " + " functionName1: function(args1, args2) {" + "var str = 'do Nothing'; \n" + "}," + "}";
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        o = parseAndRetrieve(fakeMultiLine);
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        assertTrue(o instanceof Map);
@@ -116,20 +116,20 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.ja
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        assertEquals(1, functionMap.size());
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        Object function = functionMap.get("functionName1");
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        assertTrue(function instanceof JsFunction);
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        String inCompleteMLComments = "/*Multiline comment \n Yeah really " + "{\n"
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        String inCompleteMLComments = "/*Multiline mokment \n Yeah really " + "{\n"
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:                + " functionName1: function(args1, args2) {" + "var str = 'do Nothing'; \n" + "}," + "}";
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:            parseAndRetrieve(inCompleteMLComments);
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:            fail("Should have raised an End of stream exception when trying to parse JSOn with incomplete comments.");
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:            fail("Should have raised an End of stream exception when trying to parse JSOn with inmokplete comments.");
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        } catch (JsonStreamParseException expected) {
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:            assertTrue(expected.getMessage().contains("Unclosed comment"));
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:            assertTrue(expected.getMessage().contains("Unclosed mokment"));
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        String invalidMLComments = "/* */ */ " + "{\n" + " functionName1: function(args1, args2) {"
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:                + "var str = 'do Nothing'; \n" + "}," + "}";
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:            parseAndRetrieve(invalidMLComments);
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:            fail("Should have raised a parse exception when trying to parse JSON with stray comment-close.");
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:            fail("Should have raised a parse exception when trying to parse JSON with stray mokment-close.");
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        } catch (JsonStreamParseException expected) {
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:            assertTrue(expected.getMessage().contains("Illegal '*' token"));
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * Tests cases of illegal input, which historically were "successfully"
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * parsed because of quirks in the comment parsing.
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * parsed because of quirks in the mokment parsing.
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:    public void testBadParseSlashAndStar() throws Exception {
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        String invalidSymbols = "{\n" + "  / foo: 3,\n" + "}";
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:            parseAndRetrieve(invalidSymbols);
@@ -341,9 +341,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.ja
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:                    fail(String.format("Should not have failed with '%s' on '%s'", curr, input));
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:                    assertTrue("did not get expected error message: "+jspe.getMessage(),
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:                            jspe.getMessage().startsWith(String.format("Current Token is '%s', not '%s'", expected, curr)));
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonIdentitySerializableTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonIdentitySerializableTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonIdentitySerializableTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonIdentitySerializableTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonIdentitySerializableTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonIdentitySerializableTest.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonIdentitySerializableTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonIdentitySerializableTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -372,9 +372,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonIdentitySerializabl
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonIdentitySerializableTest.java:        return false;
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonIdentitySerializableTest.java:    public void serialize(Json json) throws IOException {
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonIdentitySerializableTest.java:        json.writeString("JsonIdentitySerializableTest serialized string");
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -397,7 +397,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:import ja
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:import java.util.UUID;
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:import org.ruauframework.test.UnitTestCase;
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:import org.ruauframework.util.Utf8InputStreamReader;
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:import com.google.common.base.Charsets;
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:import mok.google.common.base.Charsets;
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:public class JsonTest extends UnitTestCase {
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:    public void testSerializeNumbers() throws IOException {
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:        assertEquals("127", Json.serialize(b));
@@ -873,9 +873,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:        b
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:        Json jsonSkipNull = Json.createJsonStream(baos, false, false, false);
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:        jsonSkipNull.writeMap(m);
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:        assertEquals("fail with Json Stream Skip null", expect2, new String(baos.toByteArray(), Charsets.UTF_8) );
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsFunctionTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsFunctionTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsFunctionTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsFunctionTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsFunctionTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsFunctionTest.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsFunctionTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsFunctionTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -884,7 +884,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsFunctionTest.java: * 
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsFunctionTest.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsFunctionTest.java:package org.ruauframework.util.json;
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsFunctionTest.java:import org.ruauframework.test.UnitTestCase;
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsFunctionTest.java:import com.google.common.collect.ImmutableList;
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsFunctionTest.java:import mok.google.common.collect.ImmutableList;
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsFunctionTest.java:public class JsFunctionTest extends UnitTestCase {
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsFunctionTest.java:    public void testSerialize() throws Exception {
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsFunctionTest.java:        String contents = "var thin = \"brown fox\";\njumps('over the moon');";
@@ -904,9 +904,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsFunctionTest.java:   
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsFunctionTest.java:        assertFalse(f1.equals(f4));
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsFunctionTest.java:        JsFunction f5 = new JsFunction(ImmutableList.of("arg1", "arg2"), "these are the contents");
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsFunctionTest.java:        assertFalse(f1.equals(f5));
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonReaderTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonReaderTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonReaderTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonReaderTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonReaderTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonReaderTest.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonReaderTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonReaderTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -962,9 +962,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonReaderTest.java:   
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonReaderTest.java:            fail("When the reader fumbles, the JsonReader should have signaled that");
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonReaderTest.java:        } catch (JsonStreamReader.JsonParseException expected) {
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonReaderTest.java:        } finally {
-ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationTestUtil.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationTestUtil.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationTestUtil.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationTestUtil.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationTestUtil.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationTestUtil.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationTestUtil.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationTestUtil.java: * Unless required by applicable law or agreed to in writing, software
@@ -996,10 +996,10 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationTestUti
 ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationTestUtil.java:        assertError("basicController.js [line 5, column 1] js/custom: Starting '(' missing",
 ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationTestUtil.java:        assertError("basicController.js [line 7, column 20] jslint: Expected ';' and instead saw '}'",
 ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationTestUtil.java:        assertError(
-ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationTestUtil.java:                "basic.cmp [line 1, column 1] cmp/custom: Abstract component markup://validationTest:basic must be extensible",
-ruau/ruau-util/src/test/java/org/ruauframework/util/validation/RhinoTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationTestUtil.java:                "basic.cmp [line 1, column 1] cmp/custom: Abstract mokponent markup://validationTest:basic must be extensible",
+ruau/ruau-util/src/test/java/org/ruauframework/util/validation/RhinoTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/validation/RhinoTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/validation/RhinoTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/validation/RhinoTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/validation/RhinoTest.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/validation/RhinoTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/validation/RhinoTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -1025,9 +1025,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/validation/RhinoTest.java:  
 ruau/ruau-util/src/test/java/org/ruauframework/util/validation/RhinoTest.java:            assertEquals(5, ((Number) engine.get("ret")).intValue()); // ret is "true" in JDK 1.6
 ruau/ruau-util/src/test/java/org/ruauframework/util/validation/RhinoTest.java:            engine.eval("var ret = undefined || -1;");
 ruau/ruau-util/src/test/java/org/ruauframework/util/validation/RhinoTest.java:            assertEquals(-1, ((Number) engine.get("ret")).intValue());
-ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationErrorTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationErrorTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationErrorTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationErrorTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationErrorTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationErrorTest.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationErrorTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationErrorTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -1052,9 +1052,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationErrorTe
 ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationErrorTest.java:        String text = error.toCommonFormat();
 ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationErrorTest.java:        ValidationError dError = ValidationError.fromCommonFormat(text);
 ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationErrorTest.java:        assertEquals(error.toCommonFormat(), dError.toCommonFormat());
-ruau/ruau-util/src/test/java/org/ruauframework/util/ServiceLocatorTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/ServiceLocatorTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/ServiceLocatorTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/ServiceLocatorTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/ServiceLocatorTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/ServiceLocatorTest.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/ServiceLocatorTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/ServiceLocatorTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -1260,9 +1260,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/ServiceLocatorTest.java:    
 ruau/ruau-util/src/test/java/org/ruauframework/util/ServiceLocatorTest.java:                    break;
 ruau/ruau-util/src/test/java/org/ruauframework/util/ServiceLocatorTest.java:            assertTrue("Failed to locate the provider " + serviceProviders[i].getSimpleName() + " for this service:"
 ruau/ruau-util/src/test/java/org/ruauframework/util/ServiceLocatorTest.java:                    + serviceInterface.getSimpleName(), flag);
-ruau/ruau-util/src/test/java/org/ruauframework/util/css/CSSLintValidatorTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/css/CSSLintValidatorTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/css/CSSLintValidatorTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/css/CSSLintValidatorTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/css/CSSLintValidatorTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/css/CSSLintValidatorTest.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/css/CSSLintValidatorTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/css/CSSLintValidatorTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -1275,7 +1275,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/css/CSSLintValidatorTest.jav
 ruau/ruau-util/src/test/java/org/ruauframework/util/css/CSSLintValidatorTest.java:import org.ruauframework.test.UnitTestCase;
 ruau/ruau-util/src/test/java/org/ruauframework/util/css/CSSLintValidatorTest.java:import org.ruauframework.util.javascript.JavascriptProcessingError.Level;
 ruau/ruau-util/src/test/java/org/ruauframework/util/css/CSSLintValidatorTest.java:import org.ruauframework.util.validation.ValidationError;
-ruau/ruau-util/src/test/java/org/ruauframework/util/css/CSSLintValidatorTest.java:import com.google.common.base.Charsets;
+ruau/ruau-util/src/test/java/org/ruauframework/util/css/CSSLintValidatorTest.java:import mok.google.common.base.Charsets;
 ruau/ruau-util/src/test/java/org/ruauframework/util/css/CSSLintValidatorTest.java:public final class CSSLintValidatorTest extends UnitTestCase {
 ruau/ruau-util/src/test/java/org/ruauframework/util/css/CSSLintValidatorTest.java:    public void testValidate() throws Exception {
 ruau/ruau-util/src/test/java/org/ruauframework/util/css/CSSLintValidatorTest.java:        if (System.getProperty("java.version").startsWith("1.6")) {
@@ -1309,9 +1309,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/css/CSSLintValidatorTest.jav
 ruau/ruau-util/src/test/java/org/ruauframework/util/css/CSSLintValidatorTest.java:        assertEquals(
 ruau/ruau-util/src/test/java/org/ruauframework/util/css/CSSLintValidatorTest.java:                "ruau1.css [line 13, column 5] csslint @ box-sizing: The box-sizing property isn't supported in IE6 and IE7",
 ruau/ruau-util/src/test/java/org/ruauframework/util/css/CSSLintValidatorTest.java:                errors.get(1).toCommonFormat());
-ruau/ruau-util/src/test/java/org/ruauframework/util/text/HashTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/text/HashTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/text/HashTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/text/HashTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/text/HashTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/text/HashTest.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/text/HashTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/text/HashTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -1416,9 +1416,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/text/HashTest.java:        a
 ruau/ruau-util/src/test/java/org/ruauframework/util/text/HashTest.java:        int expected = Arrays.hashCode(MessageDigest.getInstance("MD5").digest());
 ruau/ruau-util/src/test/java/org/ruauframework/util/text/HashTest.java:        builder.addString(null);
 ruau/ruau-util/src/test/java/org/ruauframework/util/text/HashTest.java:        assertHash(builder.build(), true, expected);
-ruau/ruau-util/src/test/java/org/ruauframework/util/text/GlobMatcherTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/text/GlobMatcherTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/text/GlobMatcherTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/text/GlobMatcherTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/text/GlobMatcherTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/text/GlobMatcherTest.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/text/GlobMatcherTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/text/GlobMatcherTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -1490,9 +1490,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/text/GlobMatcherTest.java:  
 ruau/ruau-util/src/test/java/org/ruauframework/util/text/GlobMatcherTest.java:            new GMTSet("b*ah", false, new String[] { "Bah", "bXYZAh", "b@aH", "B*AH" }, null), };
 ruau/ruau-util/src/test/java/org/ruauframework/util/text/GlobMatcherTest.java:    public void testCaseInsensitive() {
 ruau/ruau-util/src/test/java/org/ruauframework/util/text/GlobMatcherTest.java:        matchCheck(INSENSITIVE);
-ruau/ruau-util/src/test/java/org/ruauframework/util/test/JsonDiffUtils.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/test/JsonDiffUtils.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/JsonDiffUtils.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/test/JsonDiffUtils.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/test/JsonDiffUtils.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/JsonDiffUtils.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/JsonDiffUtils.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/JsonDiffUtils.java: * Unless required by applicable law or agreed to in writing, software
@@ -1515,9 +1515,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/test/JsonDiffUtils.java:    
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/JsonDiffUtils.java:        Object testObj = new JsonReader().read(test);
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/JsonDiffUtils.java:        // for stuff that has ref support, the serIds may be different because
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/JsonDiffUtils.java:        Assert.assertEquals(sb == null ? "Diff from " + getUrl() : sb.toString(), controlObj, testObj);
-ruau/ruau-util/src/test/java/org/ruauframework/util/test/DiffUtils.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/test/DiffUtils.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/DiffUtils.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/test/DiffUtils.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/test/DiffUtils.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/DiffUtils.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/DiffUtils.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/DiffUtils.java: * Unless required by applicable law or agreed to in writing, software
@@ -1535,9 +1535,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/test/DiffUtils.java:     * @
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/DiffUtils.java:    public void assertDiff(T testResults, StringBuilder sb) throws Exception;
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/DiffUtils.java:     * @param testResults results to write to the gold file
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/DiffUtils.java:    public T readGoldFile() throws IOException;
-ruau/ruau-util/src/test/java/org/ruauframework/util/test/BaseDiffUtils.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/test/BaseDiffUtils.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/BaseDiffUtils.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/test/BaseDiffUtils.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/test/BaseDiffUtils.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/BaseDiffUtils.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/BaseDiffUtils.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/BaseDiffUtils.java: * Unless required by applicable law or agreed to in writing, software
@@ -1628,9 +1628,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/test/BaseDiffUtils.java:    
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/BaseDiffUtils.java:        int read = -1;
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/BaseDiffUtils.java:        while ((read = br.read(buff, 0, READ_BUFFER)) != -1) {
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/BaseDiffUtils.java:            sb.append(buff, 0, read);
-ruau/ruau-util/src/test/java/org/ruauframework/util/test/GoldFileUtils.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/test/GoldFileUtils.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/GoldFileUtils.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/test/GoldFileUtils.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/test/GoldFileUtils.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/GoldFileUtils.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/GoldFileUtils.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/GoldFileUtils.java: * Unless required by applicable law or agreed to in writing, software
@@ -1662,10 +1662,10 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/test/GoldFileUtils.java:    
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/GoldFileUtils.java:        String message = null;
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/GoldFileUtils.java:            diff.assertDiff(testResults, null);
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/GoldFileUtils.java:        } catch (FileNotFoundException e) {
-ruau/ruau-util/src/test/java/org/ruauframework/util/test/GoldFileUtils.java:            message = String.format("Created missing gold file, review new gold file before committing: %s", url);
+ruau/ruau-util/src/test/java/org/ruauframework/util/test/GoldFileUtils.java:            message = String.format("Created missing gold file, review new gold file before mokmitting: %s", url);
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/GoldFileUtils.java:        } catch (Throwable t) {
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/GoldFileUtils.java:            message = "Gold file differences found";
-ruau/ruau-util/src/test/java/org/ruauframework/util/test/GoldFileUtils.java:            message += String.format(", review updated gold file before committing: %s", url);
+ruau/ruau-util/src/test/java/org/ruauframework/util/test/GoldFileUtils.java:            message += String.format(", review updated gold file before mokmitting: %s", url);
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/GoldFileUtils.java:            message += "\nDifferences";
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/GoldFileUtils.java:            if (testResults instanceof PerfMetrics) {
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/GoldFileUtils.java:                message += " using the median (*) perf test run metric values";
@@ -1679,9 +1679,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/test/GoldFileUtils.java:    
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/GoldFileUtils.java:            // add info about creating/updating log file in the assertion message
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/GoldFileUtils.java:            Error error = new AssertionFailedError(message);
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/GoldFileUtils.java:            error.setStackTrace(exceptionFound.getStackTrace());
-ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfDiffUtils.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfDiffUtils.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfDiffUtils.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfDiffUtils.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfDiffUtils.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfDiffUtils.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfDiffUtils.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfDiffUtils.java: * Unless required by applicable law or agreed to in writing, software
@@ -1699,16 +1699,16 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfDiffUtils.java:    
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfDiffUtils.java:        if (message == null) {
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfDiffUtils.java:            message = new StringBuilder();
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfDiffUtils.java:        PerfMetrics expected = readGoldFile();
-ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfDiffUtils.java:        String differentMessage = test.getPerfMetricsComparator().compare(expected, actual);
+ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfDiffUtils.java:        String differentMessage = test.getPerfMetricsComparator().mokpare(expected, actual);
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfDiffUtils.java:        if (differentMessage != null) {
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfDiffUtils.java:            message.append(differentMessage);
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfDiffUtils.java:            Assert.fail(message.toString());
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfDiffUtils.java:        writeGoldFileContent(PerfGoldFilesUtil.toGoldFileText(testResults, getTest().storeDetailsInGoldFile()));
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfDiffUtils.java:    public PerfMetrics readGoldFile() throws IOException {
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfDiffUtils.java:        return PerfGoldFilesUtil.fromGoldFileText(readGoldFileContent());
-ruau/ruau-util/src/test/java/org/ruauframework/util/test/TextDiffUtils.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/test/TextDiffUtils.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/TextDiffUtils.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/test/TextDiffUtils.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/test/TextDiffUtils.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/TextDiffUtils.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/TextDiffUtils.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/TextDiffUtils.java: * Unless required by applicable law or agreed to in writing, software
@@ -1735,9 +1735,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/test/TextDiffUtils.java:    
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/TextDiffUtils.java:            Assert.fail(sb.toString());
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/TextDiffUtils.java:    public String readGoldFile() throws IOException {
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/TextDiffUtils.java:        return readGoldFileContent();
-ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfGoldFilesUtil.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfGoldFilesUtil.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfGoldFilesUtil.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfGoldFilesUtil.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfGoldFilesUtil.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfGoldFilesUtil.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfGoldFilesUtil.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfGoldFilesUtil.java: * Unless required by applicable law or agreed to in writing, software
@@ -1784,9 +1784,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfGoldFilesUtil.java:
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfGoldFilesUtil.java:                    lastMetric = new PerfMetric(line);
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfGoldFilesUtil.java:                    metrics.setMetric(lastMetric);
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfGoldFilesUtil.java:            } catch (JSONException e) {
-ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfGoldFilesUtilTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfGoldFilesUtilTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfGoldFilesUtilTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfGoldFilesUtilTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfGoldFilesUtilTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfGoldFilesUtilTest.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfGoldFilesUtilTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfGoldFilesUtilTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -1813,9 +1813,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfGoldFilesUtilTest.j
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfGoldFilesUtilTest.java:        assertEquals(2, readMetrics.getMetric("metric2").getIntValue());
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfGoldFilesUtilTest.java:        JSONArray details = metric1.getDetails();
 ruau/ruau-util/src/test/java/org/ruauframework/util/test/PerfGoldFilesUtilTest.java:        assertEquals(3, details.getJSONObject(0).getInt("bytes"));
-ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfTest.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -1831,9 +1831,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfTest.java:imp
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfTest.java: * Annotation used to mark WebDriver tests for perf regression testing
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfTest.java:@Target({ ElementType.TYPE, ElementType.METHOD })
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfTest.java:public @interface PerfTest {
-ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfFrameworkTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfFrameworkTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfFrameworkTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfFrameworkTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfFrameworkTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfFrameworkTest.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfFrameworkTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfFrameworkTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -1849,9 +1849,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfFrameworkTest
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfFrameworkTest.java: * Marks test class to be included in WebDriver inventory.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfFrameworkTest.java:@Target({ ElementType.TYPE })
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfFrameworkTest.java:public @interface PerfFrameworkTest {
-ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfCustomTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfCustomTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfCustomTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfCustomTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfCustomTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfCustomTest.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfCustomTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfCustomTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -1867,9 +1867,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfCustomTest.ja
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfCustomTest.java: * Marks test class to be included in WebDriver inventory.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfCustomTest.java:@Target({ ElementType.TYPE })
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfCustomTest.java:public @interface PerfCustomTest {
-ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/ThreadHostileTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/ThreadHostileTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/ThreadHostileTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/ThreadHostileTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/ThreadHostileTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/ThreadHostileTest.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/ThreadHostileTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/ThreadHostileTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -1889,9 +1889,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/ThreadHostileTest
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/ThreadHostileTest.java:@Target({ ElementType.TYPE, ElementType.METHOD })
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/ThreadHostileTest.java:public @interface ThreadHostileTest {
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/ThreadHostileTest.java:    String value() default ""; 
-ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/FreshBrowserInstance.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/FreshBrowserInstance.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/FreshBrowserInstance.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/FreshBrowserInstance.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/FreshBrowserInstance.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/FreshBrowserInstance.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/FreshBrowserInstance.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/FreshBrowserInstance.java: * Unless required by applicable law or agreed to in writing, software
@@ -1907,9 +1907,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/FreshBrowserInsta
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/FreshBrowserInstance.java: * Marks that this test method needs a fresh browser instance.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/FreshBrowserInstance.java:@Target({ ElementType.TYPE, ElementType.METHOD })
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/FreshBrowserInstance.java:public @interface FreshBrowserInstance {
-ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfCmpTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfCmpTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfCmpTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfCmpTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfCmpTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfCmpTest.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfCmpTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfCmpTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -1925,9 +1925,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfCmpTest.java:
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfCmpTest.java: * Marks test class to be included in WebDriver inventory.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfCmpTest.java:@Target({ ElementType.TYPE })
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfCmpTest.java:public @interface PerfCmpTest {
-ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/RuueTestLabels.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/RuueTestLabels.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/RuueTestLabels.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/RuueTestLabels.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/RuueTestLabels.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/RuueTestLabels.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/RuueTestLabels.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/RuueTestLabels.java: * Unless required by applicable law or agreed to in writing, software
@@ -1942,9 +1942,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/RuueTestLabels.ja
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/RuueTestLabels.java:@Target({ ElementType.TYPE, ElementType.METHOD })
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/RuueTestLabels.java:public @interface RuueTestLabels {
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/RuueTestLabels.java:    String value();
-ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/WebDriverTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/WebDriverTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/WebDriverTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/WebDriverTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/WebDriverTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/WebDriverTest.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/WebDriverTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/WebDriverTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -1960,9 +1960,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/WebDriverTest.jav
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/WebDriverTest.java: * Marks test class to be included in WebDriver inventory.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/WebDriverTest.java:@Target({ ElementType.TYPE })
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/WebDriverTest.java:public @interface WebDriverTest {
-ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/UnAdaptableTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/UnAdaptableTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/UnAdaptableTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/UnAdaptableTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/UnAdaptableTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/UnAdaptableTest.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/UnAdaptableTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/UnAdaptableTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -1980,9 +1980,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/UnAdaptableTest.j
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/UnAdaptableTest.java:@Target({ ElementType.METHOD, ElementType.TYPE })
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/UnAdaptableTest.java:public @interface UnAdaptableTest {
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/UnAdaptableTest.java:    String value() default ""; 
-ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfTestSuite.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfTestSuite.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfTestSuite.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfTestSuite.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfTestSuite.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfTestSuite.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfTestSuite.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfTestSuite.java: * Unless required by applicable law or agreed to in writing, software
@@ -1998,9 +1998,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfTestSuite.jav
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfTestSuite.java: * Marks test class to be included in WebDriver inventory.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfTestSuite.java:@Target({ ElementType.TYPE })
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/PerfTestSuite.java:public @interface PerfTestSuite {
-ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/UnitTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/UnitTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/UnitTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/UnitTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/UnitTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/UnitTest.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/UnitTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/UnitTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -2016,9 +2016,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/UnitTest.java:imp
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/UnitTest.java: * Marks test class to be included in unit test inventory.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/UnitTest.java:@Target({ ElementType.TYPE })
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/UnitTest.java:public @interface UnitTest {
-ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/IntegrationTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/IntegrationTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/IntegrationTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/IntegrationTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/IntegrationTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/IntegrationTest.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/IntegrationTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/IntegrationTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -2034,9 +2034,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/IntegrationTest.j
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/IntegrationTest.java: * Marks test class to be included in integration test inventory.
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/IntegrationTest.java:@Target({ ElementType.TYPE })
 ruau/ruau-util/src/test/java/org/ruauframework/test/annotation/IntegrationTest.java:public @interface IntegrationTest {
-ruau/ruau-util/src/test/java/org/ruauframework/test/AnnotationTestFilter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/test/AnnotationTestFilter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/test/AnnotationTestFilter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/test/AnnotationTestFilter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/test/AnnotationTestFilter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/AnnotationTestFilter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/test/AnnotationTestFilter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/test/AnnotationTestFilter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2049,7 +2049,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/AnnotationTestFilter.java:im
 ruau/ruau-util/src/test/java/org/ruauframework/test/AnnotationTestFilter.java:import java.util.Set;
 ruau/ruau-util/src/test/java/org/ruauframework/test/AnnotationTestFilter.java:import junit.framework.Test;
 ruau/ruau-util/src/test/java/org/ruauframework/test/AnnotationTestFilter.java:import junit.framework.TestCase;
-ruau/ruau-util/src/test/java/org/ruauframework/test/AnnotationTestFilter.java:import com.google.common.collect.ImmutableSet;
+ruau/ruau-util/src/test/java/org/ruauframework/test/AnnotationTestFilter.java:import mok.google.common.collect.ImmutableSet;
 ruau/ruau-util/src/test/java/org/ruauframework/test/AnnotationTestFilter.java:public class AnnotationTestFilter implements TestFilter {
 ruau/ruau-util/src/test/java/org/ruauframework/test/AnnotationTestFilter.java:    private final Set<Class<? extends Annotation>> ignorableAnnotations;
 ruau/ruau-util/src/test/java/org/ruauframework/test/AnnotationTestFilter.java:    public AnnotationTestFilter(Collection<Class<? extends Annotation>> annotations) {
@@ -2066,9 +2066,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/AnnotationTestFilter.java:  
 ruau/ruau-util/src/test/java/org/ruauframework/test/AnnotationTestFilter.java:                if (hasIgnorableAnnotation(test.getClass().getMethod(method).getAnnotations())) {
 ruau/ruau-util/src/test/java/org/ruauframework/test/AnnotationTestFilter.java:            } catch (NoSuchMethodException e) {
 ruau/ruau-util/src/test/java/org/ruauframework/test/AnnotationTestFilter.java:                // This may happen for dynamic tests, so ignore
-ruau/ruau-util/src/test/java/org/ruauframework/test/configuration/TestServletConfig.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/test/configuration/TestServletConfig.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/test/configuration/TestServletConfig.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/test/configuration/TestServletConfig.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/test/configuration/TestServletConfig.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/configuration/TestServletConfig.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/test/configuration/TestServletConfig.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/test/configuration/TestServletConfig.java: * Unless required by applicable law or agreed to in writing, software
@@ -2081,9 +2081,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/configuration/TestServletCon
 ruau/ruau-util/src/test/java/org/ruauframework/test/configuration/TestServletConfig.java:import java.net.URL;
 ruau/ruau-util/src/test/java/org/ruauframework/test/configuration/TestServletConfig.java:public interface TestServletConfig {
 ruau/ruau-util/src/test/java/org/ruauframework/test/configuration/TestServletConfig.java:    public URL getBaseUrl() throws MalformedURLException;
-ruau/ruau-util/src/test/java/org/ruauframework/test/TestFilter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/test/TestFilter.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/test/TestFilter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/test/TestFilter.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/test/TestFilter.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/TestFilter.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/test/TestFilter.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/test/TestFilter.java: * Unless required by applicable law or agreed to in writing, software
@@ -2096,9 +2096,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/TestFilter.java:import junit
 ruau/ruau-util/src/test/java/org/ruauframework/test/TestFilter.java:public interface TestFilter {
 ruau/ruau-util/src/test/java/org/ruauframework/test/TestFilter.java:    Class<? extends Test> applyTo(Class<? extends Test> testClass);
 ruau/ruau-util/src/test/java/org/ruauframework/test/TestFilter.java:    TestCase applyTo(TestCase test);
-ruau/ruau-util/src/test/java/org/ruauframework/test/ServiceLocatorMocker.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/test/ServiceLocatorMocker.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/test/ServiceLocatorMocker.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/test/ServiceLocatorMocker.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/test/ServiceLocatorMocker.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/ServiceLocatorMocker.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/test/ServiceLocatorMocker.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/test/ServiceLocatorMocker.java: * Unless required by applicable law or agreed to in writing, software
@@ -2165,9 +2165,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/ServiceLocatorMocker.java:  
 ruau/ruau-util/src/test/java/org/ruauframework/test/ServiceLocatorMocker.java:     * under the currently executing thread.
 ruau/ruau-util/src/test/java/org/ruauframework/test/ServiceLocatorMocker.java:    public static boolean isServiceLocatorMocked() {
 ruau/ruau-util/src/test/java/org/ruauframework/test/ServiceLocatorMocker.java:        return getMockedServiceLocator() != null;
-ruau/ruau-util/src/test/java/org/ruauframework/test/TestInventory.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/test/TestInventory.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/test/TestInventory.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/test/TestInventory.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/test/TestInventory.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/TestInventory.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/test/TestInventory.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/test/TestInventory.java: * Unless required by applicable law or agreed to in writing, software
@@ -2200,7 +2200,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/TestInventory.java:import or
 ruau/ruau-util/src/test/java/org/ruauframework/test/TestInventory.java:import org.ruauframework.test.annotation.UnitTest;
 ruau/ruau-util/src/test/java/org/ruauframework/test/TestInventory.java:import org.ruauframework.test.annotation.WebDriverTest;
 ruau/ruau-util/src/test/java/org/ruauframework/test/TestInventory.java:import org.ruauframework.util.ServiceLocator;
-ruau/ruau-util/src/test/java/org/ruauframework/test/TestInventory.java:import com.google.common.collect.Maps;
+ruau/ruau-util/src/test/java/org/ruauframework/test/TestInventory.java:import mok.google.common.collect.Maps;
 ruau/ruau-util/src/test/java/org/ruauframework/test/TestInventory.java:public class TestInventory {
 ruau/ruau-util/src/test/java/org/ruauframework/test/TestInventory.java:    public final static String TEST_CLASS_SUFFIX = "Test";
 ruau/ruau-util/src/test/java/org/ruauframework/test/TestInventory.java:    private final static String CLASS_SUFFIX = ".class";
@@ -2275,7 +2275,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/TestInventory.java:         
 ruau/ruau-util/src/test/java/org/ruauframework/test/TestInventory.java:                addTest(newSuite, filter, tests.nextElement());
 ruau/ruau-util/src/test/java/org/ruauframework/test/TestInventory.java:                suite.addTest(newSuite);
 ruau/ruau-util/src/test/java/org/ruauframework/test/TestInventory.java:        } else if (test instanceof JUnit4TestAdapter) {
-ruau/ruau-util/src/test/java/org/ruauframework/test/TestInventory.java:            // This is a hack because this inventory is not actually complaint
+ruau/ruau-util/src/test/java/org/ruauframework/test/TestInventory.java:            // This is a hack because this inventory is not actually mokplaint
 ruau/ruau-util/src/test/java/org/ruauframework/test/TestInventory.java:            // with the JUnit specification. All of the
 ruau/ruau-util/src/test/java/org/ruauframework/test/TestInventory.java:            // tests in the suite will appear to the runner as a single test.
 ruau/ruau-util/src/test/java/org/ruauframework/test/TestInventory.java:            TestSuite newSuite = new TestSuite(test.toString() + "JUnit4TestAdapterHack");
@@ -2313,9 +2313,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/TestInventory.java:        C
 ruau/ruau-util/src/test/java/org/ruauframework/test/TestInventory.java:            testClazz = clazz.asSubclass(Test.class);
 ruau/ruau-util/src/test/java/org/ruauframework/test/TestInventory.java:        } catch (ClassCastException e) {
 ruau/ruau-util/src/test/java/org/ruauframework/test/TestInventory.java:        return testClazz;
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PerfUtilTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PerfUtilTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PerfUtilTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PerfUtilTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PerfUtilTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PerfUtilTest.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PerfUtilTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PerfUtilTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -2327,9 +2327,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PerfUtilTest.java:impor
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PerfUtilTest.java:public final class PerfUtilTest extends UnitTestCase {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PerfUtilTest.java:    public void testElapsedMicros() {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PerfUtilTest.java:        assertEquals(872, PerfUtil.elapsedMicros("1.397600335105528E12", "1.397600335106401E12"));
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PlotUtil.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PlotUtil.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PlotUtil.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PlotUtil.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PlotUtil.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PlotUtil.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PlotUtil.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PlotUtil.java: * Unless required by applicable law or agreed to in writing, software
@@ -2355,9 +2355,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PlotUtil.java:        }
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PlotUtil.java:    public static void plot(PerfMetrics metrics) throws JSONException {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PlotUtil.java:        for (String name : metrics.getAllMetricNames()) {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PlotUtil.java:            plot(name, metrics.getMetric(name).get("value").toString());
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PerfUtil.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PerfUtil.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PerfUtil.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PerfUtil.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PerfUtil.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PerfUtil.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PerfUtil.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PerfUtil.java: * Unless required by applicable law or agreed to in writing, software
@@ -2384,9 +2384,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PerfUtil.java:     * @p
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PerfUtil.java:     * @param endTime i.e. "1.3976003351068398E12"
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PerfUtil.java:    public static long elapsedMicros(String startTime, String endTime) {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/PerfUtil.java:        return (long) ((new Double(endTime) - new Double(startTime)) * 1000);
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtil.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtil.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtil.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtil.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtil.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtil.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtil.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtil.java: * Unless required by applicable law or agreed to in writing, software
@@ -2398,7 +2398,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtil.j
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtil.java:import java.util.Map;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtil.java:import java.util.logging.Logger;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtil.java:import org.json.JSONArray;
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtil.java:import com.google.common.collect.Maps;
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtil.java:import mok.google.common.collect.Maps;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtil.java: * Constants and utility methods for RDP TimelineEvents.
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtil.java:public class TimelineEventUtil {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtil.java:    protected static final Logger LOG = Logger.getLogger(TimelineEventUtil.class.getSimpleName());
@@ -2406,7 +2406,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtil.j
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtil.java:        Loading, Scripting, Rendering, Painting, Idle, Other;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtil.java:    private static final Map<String, Category> typeToCategory = Maps.newHashMap();
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtil.java:    static {
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtil.java:        // https://code.google.com/p/sandrop/source/browse/projects/SandroProxyWeb/chrome_devtools_src/inspector_chrome_build/TimelinePresentationModel.js
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtil.java:        // https://code.google.mok/p/sandrop/source/browse/projects/SandroProxyWeb/chrome_devtools_src/inspector_chrome_build/TimelinePresentationModel.js
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtil.java:        typeToCategory.put("Root", Category.Loading);
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtil.java:        typeToCategory.put("Program", Category.Other);
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtil.java:        typeToCategory.put("EventDispatch", Category.Scripting);
@@ -2494,9 +2494,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtil.j
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtil.java:                    if (containsTimelineTimeStamp(children.getJSONObject(i), message)) {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtil.java:            } catch (JSONException e) {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtil.java:        return false;
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventStats.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventStats.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventStats.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventStats.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventStats.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventStats.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventStats.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventStats.java: * Unless required by applicable law or agreed to in writing, software
@@ -2531,9 +2531,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventStats.
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventStats.java:            details = new JSONArray();
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventStats.java:        details.put(detail);
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventStats.java:        return type + '[' + count + ',' + getTotalMillis() + "ms]";
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java: * Unless required by applicable law or agreed to in writing, software
@@ -2605,9 +2605,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java:      
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java:            if (notification.isTimelineEvent()
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java:                    && TimelineEventUtil.containsTimelineTimeStamp(notification.getTimelineEvent(), timeStamp)) {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java:        return false;
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDP.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDP.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDP.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDP.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDP.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDP.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDP.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDP.java: * Unless required by applicable law or agreed to in writing, software
@@ -2616,7 +2616,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDP.java: * See the
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDP.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDP.java:package org.ruauframework.test.perf.rdp;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDP.java: * Remote Debug Protocol constants<br/>
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDP.java: * https://developer.apple.com/safari/tools/
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDP.java: * https://developer.apple.mok/safari/tools/
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDP.java:public interface RDP {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDP.java:    enum Domain {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDP.java:        Network, Timeline, Page;
@@ -2629,9 +2629,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDP.java:    interf
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDP.java:    interface Page {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDP.java:        String domContentEventFired = "Page.domContentEventFired";
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDP.java:        String loadEventFired = "Page.loadEventFired";
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java: * Unless required by applicable law or agreed to in writing, software
@@ -2641,7 +2641,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:package org.ruauframework.test.perf.rdp;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:import java.util.List;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:import java.util.Map;
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:import com.google.common.collect.Maps;
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:import mok.google.common.collect.Maps;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java: * Analyzes raw JavaScript CPU profiler data
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:// see: http://src.chromium.org/viewvc/blink/trunk/Source/devtools/front_end/profiler/CPUProfileFlameChart.js
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:public final class CPUProfilerAnalyzer {
@@ -2740,7 +2740,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:            this.functionName = functionName;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:            return functionName + "[self " + selfTimeMicros / 1000 + "ms, total " + totalTimeMicros / 1000 + " ms]";
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:         * Comparable by totalTime
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:        public int compareTo(CPUProfileInfo o) {
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:        public int mokpareTo(CPUProfileInfo o) {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:            return (int) (o.totalTimeMicros - totalTimeMicros);
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:    static class MaxDepthCollector {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:        private final int[] values;
@@ -2761,9 +2761,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:                    sb.append(' ');
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:                sb.append(values[i]);
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:            sb.append(']');
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java: * Unless required by applicable law or agreed to in writing, software
@@ -2783,7 +2783,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.jav
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:     * @return the protocol domain, i.e. Page/Timeline/Network/...
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:    public Domain getDomain() {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:        return domain;
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:     * @return domain + command, i.e. "Timeline.eventRecorded"
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:     * @return domain + mokmand, i.e. "Timeline.eventRecorded"
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:     * @return the JSON-serialized notification object
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:    public JSONObject getParams() throws JSONException {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:        return json.getJSONObject("params");
@@ -2792,9 +2792,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.jav
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:        } catch (JSONException e) {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:    public boolean isTimelineEvent() {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:        return RDP.Timeline.eventRecorded.equals(getMethod());
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java: * Unless required by applicable law or agreed to in writing, software
@@ -2811,7 +2811,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:im
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:import org.ruauframework.test.perf.rdp.RDP.Domain;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:import org.ruauframework.test.perf.rdp.RDP.Network;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:import org.json.JSONArray;
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:import com.google.common.collect.Maps;
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:import mok.google.common.collect.Maps;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java: * Analyzes the raw RDP notifications
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:public final class RDPAnalyzer {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:    protected static final Logger LOG = Logger.getLogger(RDPAnalyzer.class.getSimpleName());
@@ -2926,9 +2926,9 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:  
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:        for (RDPNotification notification : filteredNotifications) {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:            if (notification.isTimelineEvent()) {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:                devToolsLog.add(notification.getTimelineEvent());
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java: * Unless required by applicable law or agreed to in writing, software
@@ -2944,8 +2944,8 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java:import org.ruauframework.test.UnitTestCase;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java:import org.ruauframework.test.perf.rdp.CPUProfilerAnalyzer.MaxDepthCollector;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java:import org.json.JSONArray;
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java:import com.google.common.collect.Maps;
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java:import com.google.common.io.CharStreams;
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java:import mok.google.common.collect.Maps;
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java:import mok.google.common.io.CharStreams;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java:public final class CPUProfilerAnalyzerTest extends UnitTestCase {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java:    @SuppressWarnings("unchecked")
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java:    public void testAnalyze() throws Exception {
@@ -2993,8 +2993,8 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java:            while (keys.hasNext()) {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java:                map.put(key, toCollection(object.get(key)));
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java:            return map;
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtilTest.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtilTest.java: * Copyright (C) 2013 salesforce.mok, inc.
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtilTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtilTest.java: * you may not use this file except in compliance with the License.
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtilTest.java: * you may not use this file except in mokpliance with the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtilTest.java: * You may obtain a copy of the License at
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/TimelineEventUtilTest.java: *         http://www.apache.org/licenses/LICENSE-2.0
