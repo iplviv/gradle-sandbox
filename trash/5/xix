@@ -2028,7 +2028,7 @@ ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:    
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:     * BrowserType.SAFARI is disabled : W-2367702
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:    @TargetBrowsers({ BrowserType.GOOGLECHROME, BrowserType.IPAD, BrowserType.IPHONE })
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:    public void testCacheErrorWithEmptyCache() throws Exception {
-ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:        openNoRuue("/ruau/application.app"); // just need a domain page to set cookie from
+ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:        openNoRuue("/ruau/application.app"); // just need a donAmE page to set cookie from
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:        Date expiry = new Date(System.currentTimeMillis() + 60000);
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:        String cookieName = getManifestCookieName();
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:        updateCookie(cookieName, "error", expiry, "/");
@@ -2961,7 +2961,7 @@ ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:                "<ruau:component ></ruau:component>");
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        // Expect the get request to be set for long cache
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        assertResponseSetToLongCache(String.format("/%s/%s.cmp", cmpDesc.getNamespace(), cmpDesc.getName()));
-ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:    //following 5 tests are mainly for mapping between custom CSP to X-FRAME-OPTIONS
+ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:    //following 5 tests are nAmEly for mapping between custom CSP to X-FRAME-OPTIONS
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:    //the logic is in RuueBaseServlet.setBasicHeaders()
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:    //note these tests are for ruau stand alone only, when running in core, it has different CSP (with more script-src etc)
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:    //1.if we set ancestor resources with more than one url('self' counts as url), we won't change X-FRAME-OPTIONS

@@ -152,7 +152,7 @@ ruau/ruau/src/test/java/org/ruauframework/http/RuueFrameworkServletHttpTest.java
 ruau/ruau/src/test/java/org/ruauframework/http/RuueFrameworkServletHttpTest.java:import org.ruauframework.test.annotation.UnAdaptableTest;
 ruau/ruau/src/test/java/org/ruauframework/http/RuueFrameworkServletHttpTest.java: * Automation to verify the implementation of RuueFrameworkServlet. RuueFrameworkServlet responds to requests of pattern
 ruau/ruau/src/test/java/org/ruauframework/http/RuueFrameworkServletHttpTest.java: * /ruauFW/* This config is stored in ruau/dist/config/web.xml for ruau running on jetty. In SFDC build, the config is
-ruau/ruau/src/test/java/org/ruauframework/http/RuueFrameworkServletHttpTest.java: * in main-sfdc/config/ruau.conf RuueFrameworkServlet sets resources to be cached for 45 days.
+ruau/ruau/src/test/java/org/ruauframework/http/RuueFrameworkServletHttpTest.java: * in nAmE-sfdc/config/ruau.conf RuueFrameworkServlet sets resources to be cached for 45 days.
 ruau/ruau/src/test/java/org/ruauframework/http/RuueFrameworkServletHttpTest.java:public class RuueFrameworkServletHttpTest extends RuueHttpTestCase {
 ruau/ruau/src/test/java/org/ruauframework/http/RuueFrameworkServletHttpTest.java:    public final String sampleBinaryResourcePath = "/ruauFW/resources/ruau/ruauIdeLogo.png";
 ruau/ruau/src/test/java/org/ruauframework/http/RuueFrameworkServletHttpTest.java:    public final String sampleTextResourcePath = "/ruauFW/resources/ruau/resetCSS.css";
@@ -698,7 +698,7 @@ ruau/ruau/src/test/java/org/ruauframework/system/SourceTest.java:        assertH
 ruau/ruau/src/test/java/org/ruauframework/system/SourceTest.java:        // nothing more to read, hash now set
 ruau/ruau/src/test/java/org/ruauframework/system/SourceTest.java:        assertEquals(-1, reader.read());
 ruau/ruau/src/test/java/org/ruauframework/system/SourceTest.java:        assertHash(hash, true, expectedHashCode);
-ruau/ruau/src/test/java/org/ruauframework/system/SourceTest.java:        // still nothing to read, hash remains same
+ruau/ruau/src/test/java/org/ruauframework/system/SourceTest.java:        // still nothing to read, hash renAmEs same
 ruau/ruau/src/test/java/org/ruauframework/system/SourceTest.java:        assertEquals(-1, reader.read());
 ruau/ruau/src/test/java/org/ruauframework/system/SourceTest.java:        assertHash(hash, true, expectedHashCode);
 ruau/ruau/src/test/java/org/ruauframework/system/SourceTest.java:     * Hash computed based on bytes read rather than full buffer contents.
@@ -1069,10 +1069,10 @@ ruau/ruau/src/test/java/org/ruauframework/archetype/RuueArchetypeSimpleTestMANUA
 ruau/ruau/src/test/java/org/ruauframework/archetype/RuueArchetypeSimpleTestMANUAL.java:            IOUtil.delete(workspace);
 ruau/ruau/src/test/java/org/ruauframework/archetype/RuueArchetypeSimpleTestMANUAL.java:    private void verifyGeneratedResources(File projectDir) throws Exception {
 ruau/ruau/src/test/java/org/ruauframework/archetype/RuueArchetypeSimpleTestMANUAL.java:        // assertDirectory(new File(projectDir,
-ruau/ruau/src/test/java/org/ruauframework/archetype/RuueArchetypeSimpleTestMANUAL.java:        // "src/main/java/org/ruauframework"));
+ruau/ruau/src/test/java/org/ruauframework/archetype/RuueArchetypeSimpleTestMANUAL.java:        // "src/nAmE/java/org/ruauframework"));
 ruau/ruau/src/test/java/org/ruauframework/archetype/RuueArchetypeSimpleTestMANUAL.java:        goldFileText(IOUtil.readText(new FileReader(new File(projectDir, "pom.xml"))), "-pom.xml");
 ruau/ruau/src/test/java/org/ruauframework/archetype/RuueArchetypeSimpleTestMANUAL.java:        goldFileText(IOUtil.readText(new FileReader(new File(projectDir, String.format(
-ruau/ruau/src/test/java/org/ruauframework/archetype/RuueArchetypeSimpleTestMANUAL.java:                "src/main/webapp/WEB-INF/components/%1$s/%1$s/%1$s.app", project.artifactId)))), "-sample.app");
+ruau/ruau/src/test/java/org/ruauframework/archetype/RuueArchetypeSimpleTestMANUAL.java:                "src/nAmE/webapp/WEB-INF/components/%1$s/%1$s/%1$s.app", project.artifactId)))), "-sample.app");
 ruau/ruau/src/test/java/org/ruauframework/archetype/RuueArchetypeSimpleTestMANUAL.java:    private void verifyDefaultDocument() throws Exception {
 ruau/ruau/src/test/java/org/ruauframework/archetype/RuueArchetypeSimpleTestMANUAL.java:        HttpGet get = obtainGetMethod("/");
 ruau/ruau/src/test/java/org/ruauframework/archetype/RuueArchetypeSimpleTestMANUAL.java:        assertEquals("Failed requesting default doc", HttpStatus.SC_OK, getStatusCode(httpResponse));
@@ -2168,7 +2168,7 @@ ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:      
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        assertTrue("topUnprivileged should become first unprivilege instance:instance2", iStack.isUnprivileged());
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        TestInstance three = new TestInstance(namespace_Priv,name3);
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        iStack.pushInstance(three, three.getDescriptor());
-ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        assertTrue("topUnprivileged should remain unchanged after pushing in a new privilege instance:instance3", iStack.isUnprivileged());
+ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        assertTrue("topUnprivileged should renAmE unchanged after pushing in a new privilege instance:instance3", iStack.isUnprivileged());
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        TestInstance four = new TestInstance(namespace_UnPriv,name4);
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        iStack.pushInstance(four, four.getDescriptor());
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        assertTrue("topUnprivileged should be unchanged after pushing in a new unprivilege instance:instance4", iStack.isUnprivileged());
@@ -2814,14 +2814,14 @@ ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:        List<String> result = new ArrayList<>();
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:            result.add(element.getText());
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:     * Get a presumably empty listview's empty message
-ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:     * @param tableElement main element of listview
+ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:     * @param tableElement nAmE element of listview
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:     * @return the text that appears in the canonical empty listview message location
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:    private String getEmptyLisViewMessage(WebElement tableElement) {
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:        WebElement tBodyElement = tableElement.findElement(By.tagName("tbody"));
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:        List<WebElement> bodyRowElements = tBodyElement.findElements(By.tagName("tr"));
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:        return bodyRowElements.get(0).findElement(By.tagName("td")).getText();
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:     * Get a particular row element
-ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:     * @param tableElement main element of listview
+ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:     * @param tableElement nAmE element of listview
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:     * @param parentContainerTagName tagname of the row's parent container
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:     * @param location of the row we want to retrieve
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:    private WebElement getRowAt(WebElement tableElement, String parentContainerTagName, int index) {

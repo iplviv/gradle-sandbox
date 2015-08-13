@@ -1055,7 +1055,7 @@ ruau/ruau/src/test/java/org/ruauframework/components/ui/infiniteListRow/infinite
 ruau/ruau/src/test/java/org/ruauframework/components/ui/infiniteListRow/infiniteListRowUITest.java:        if(action.equalsIgnoreCase("showMore")){
 ruau/ruau/src/test/java/org/ruauframework/components/ui/infiniteListRow/infiniteListRowUITest.java:        	//refresh case
 ruau/ruau/src/test/java/org/ruauframework/components/ui/infiniteListRow/infiniteListRowUITest.java:        totalListRows = getAllListRows().size();
-ruau/ruau/src/test/java/org/ruauframework/components/ui/infiniteListRow/infiniteListRowUITest.java:        assertEquals("Total ListRow on the page should remain 25 after clicking on refresh button", expectedListRows, totalListRows);
+ruau/ruau/src/test/java/org/ruauframework/components/ui/infiniteListRow/infiniteListRowUITest.java:        assertEquals("Total ListRow on the page should renAmE 25 after clicking on refresh button", expectedListRows, totalListRows);
 ruau/ruau/src/test/java/org/ruauframework/components/ui/infiniteListRow/infiniteListRowUITest.java:		//Swipe body for row20 should be closed after the action is performed
 ruau/ruau/src/test/java/org/ruauframework/components/ui/infiniteListRow/infiniteListRowUITest.java:        verifyOnlyOneSwipeBodyIsOpen(null, false);
 ruau/ruau/src/test/java/org/ruauframework/components/ui/infiniteListRow/infiniteListRowUITest.java:	 * Automation for vertical swipe support to infiniteList & infiniteListRow
@@ -1277,7 +1277,7 @@ ruau/ruau/src/test/java/org/ruauframework/components/ui/menu/MenuUITest.java:   
 ruau/ruau/src/test/java/org/ruauframework/components/ui/menu/MenuUITest.java:    // Test case for W-2234265
 ruau/ruau/src/test/java/org/ruauframework/components/ui/menu/MenuUITest.java:    public void testActionMenuAttachToBodySetViaKeyboardInteraction() throws MalformedURLException, URISyntaxException {
 ruau/ruau/src/test/java/org/ruauframework/components/ui/menu/MenuUITest.java:        testActionMenuViaKeyboardInteractionForApp(MENUTEST_ATTACHTOBODY_APP);
-ruau/ruau/src/test/java/org/ruauframework/components/ui/menu/MenuUITest.java:    // TODO: W-2406307: remaining Halo test failure
+ruau/ruau/src/test/java/org/ruauframework/components/ui/menu/MenuUITest.java:    // TODO: W-2406307: renAmEing Halo test failure
 ruau/ruau/src/test/java/org/ruauframework/components/ui/menu/MenuUITest.java:    public void _testActionMenuGeneratedFromMetaDataViaKeyboardInteraction() throws MalformedURLException,
 ruau/ruau/src/test/java/org/ruauframework/components/ui/menu/MenuUITest.java:            URISyntaxException {
 ruau/ruau/src/test/java/org/ruauframework/components/ui/menu/MenuUITest.java:        testActionMenuViaKeyboardInteractionForApp(MENUTEST_METADATA_APP);
@@ -1935,7 +1935,7 @@ ruau/ruau/src/test/java/org/ruauframework/components/ui/autocomplete/Autocomplet
 ruau/ruau/src/test/java/org/ruauframework/components/ui/autocomplete/AutocompleteUITest.java:    public void testAutoCompleteSingleMatch() throws Exception {
 ruau/ruau/src/test/java/org/ruauframework/components/ui/autocomplete/AutocompleteUITest.java:        doTestMatch(AUTOCOMPLETE_COMPONENT.get("Generic"), "hello world2", "hello world2", 1,
 ruau/ruau/src/test/java/org/ruauframework/components/ui/autocomplete/AutocompleteUITest.java:     * Autocomplete list with no data renderes correctly.
-ruau/ruau/src/test/java/org/ruauframework/components/ui/autocomplete/AutocompleteUITest.java:    // TODO: W-2406307: remaining Halo test failure
+ruau/ruau/src/test/java/org/ruauframework/components/ui/autocomplete/AutocompleteUITest.java:    // TODO: W-2406307: renAmEing Halo test failure
 ruau/ruau/src/test/java/org/ruauframework/components/ui/autocomplete/AutocompleteUITest.java:        Integer autoCompleteCmpNum = AUTOCOMPLETE_COMPONENT.get("Empty");
 ruau/ruau/src/test/java/org/ruauframework/components/ui/autocomplete/AutocompleteUITest.java:        WebElement list = getAutoCompleteList(driver, autoCompleteCmpNum);
 ruau/ruau/src/test/java/org/ruauframework/components/ui/autocomplete/AutocompleteUITest.java:        assertFalse("Expected emptyListContent to be invisible", hasCssClass(list, "showEmptyContent"));
@@ -2752,7 +2752,7 @@ ruau/ruau/src/test/java/org/ruauframework/components/ui/listSorter/ListSorterUIT
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listSorter/ListSorterUITest.java:    private final String SORTER = "defaultListSorter";
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listSorter/ListSorterUITest.java:    public ListSorterUITest(String name) {
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listSorter/ListSorterUITest.java:        super(name);
-ruau/ruau/src/test/java/org/ruauframework/components/ui/listSorter/ListSorterUITest.java:     * Tab out should not close the sorter dialog The focus should remain in the Sorter Menu Test case for W-1985435
+ruau/ruau/src/test/java/org/ruauframework/components/ui/listSorter/ListSorterUITest.java:     * Tab out should not close the sorter dialog The focus should renAmE in the Sorter Menu Test case for W-1985435
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listSorter/ListSorterUITest.java:     * @throws MalformedURLException
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listSorter/ListSorterUITest.java:     * @throws URISyntaxException
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listSorter/ListSorterUITest.java:    public void testTabOutOfListSorter() throws MalformedURLException, URISyntaxException {

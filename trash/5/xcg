@@ -2549,13 +2549,13 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java:    pu
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java:        for (RDPNotification notification : notifications) {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java:            if (notification.getMethod().equals(method)) {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java:        return false;
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java:     * @return the notifications for a given domain (i.e. Network/Timeline/...)
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java:    public static List<RDPNotification> filterNotifications(List<RDPNotification> notifications, RDP.Domain domain) {
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java:        List<RDPNotification> domainNotifications = Lists.newArrayList();
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java:     * @return the notifications for a given donAmE (i.e. Network/Timeline/...)
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java:    public static List<RDPNotification> filterNotifications(List<RDPNotification> notifications, RDP.DonAmE domain) {
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java:        List<RDPNotification> donAmENotifications = Lists.newArrayList();
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java:        for (RDPNotification notification : notifications) {
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java:            if (domain.equals(notification.getDomain())) {
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java:                domainNotifications.add(notification);
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java:        return domainNotifications;
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java:            if (donAmE.equals(notification.getDomain())) {
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java:                donAmENotifications.add(notification);
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java:        return donAmENotifications;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java:     * @return flattened list of all timeline events (i.e. including children events)
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java:    public static List<JSONObject> flattenedTimelineEvents(List<RDPNotification> notifications) {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPUtil.java:        List<JSONObject> events = Lists.newArrayList();
@@ -2618,7 +2618,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDP.java:package or
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDP.java: * Remote Debug Protocol constants<br/>
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDP.java: * https://developer.apple.com/safari/tools/
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDP.java:public interface RDP {
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDP.java:    enum Domain {
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDP.java:    enum DonAmE {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDP.java:        Network, Timeline, Page;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDP.java:    interface Network {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDP.java:        String dataReceived = "Network.dataReceived";
@@ -2771,19 +2771,19 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.jav
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java: * See the License for the specific language governing permissions and
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:package org.ruauframework.test.perf.rdp;
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:import org.ruauframework.test.perf.rdp.RDP.Domain;
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:import org.ruauframework.test.perf.rdp.RDP.DonAmE;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java: * Represents a Remote Debug Protocol (RDP), raw intrumentation notification
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:public final class RDPNotification {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:    private final JSONObject json; // serialized notification JSON object
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:    private final String method; // i.e. Timeline.eventRecorded
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:    private final RDP.Domain domain; // i.e. Page/Runtime/Timeline
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:    private final RDP.DonAmE domain; // i.e. Page/Runtime/Timeline
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:    private final String webview;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:    public RDPNotification(JSONObject json, String webview) throws JSONException {
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:        domain = RDP.Domain.valueOf(method.substring(0, method.indexOf('.')));
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:     * @return the protocol domain, i.e. Page/Timeline/Network/...
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:    public Domain getDomain() {
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:        return domain;
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:     * @return domain + command, i.e. "Timeline.eventRecorded"
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:        donAmE = RDP.Domain.valueOf(method.substring(0, method.indexOf('.')));
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:     * @return the protocol donAmE, i.e. Page/Timeline/Network/...
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:    public DonAmE getDomain() {
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:        return donAmE;
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:     * @return donAmE + command, i.e. "Timeline.eventRecorded"
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:     * @return the JSON-serialized notification object
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:    public JSONObject getParams() throws JSONException {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:        return json.getJSONObject("params");
@@ -2808,7 +2808,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:im
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:import java.util.logging.Logger;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:import org.ruauframework.test.perf.PerfUtil;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:import org.ruauframework.test.perf.metrics.PerfMetric;
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:import org.ruauframework.test.perf.rdp.RDP.Domain;
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:import org.ruauframework.test.perf.rdp.RDP.DonAmE;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:import org.ruauframework.test.perf.rdp.RDP.Network;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:import org.json.JSONArray;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:import com.google.common.collect.Maps;
@@ -2832,7 +2832,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:  
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:    public List<JSONObject> getFilteredFlattenedTimelineEvents() {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:        return filteredFlattenedTimelineEvents;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:     * Collecs statistics on all the "Timeline.eventRecorded" events
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:    public synchronized Map<String, TimelineEventStats> analyzeTimelineDomain() {
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:    public synchronized Map<String, TimelineEventStats> analyzeTimelineDonAmE() {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:        if (timelineEventsStats != null) {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:            return timelineEventsStats;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:        timelineEventsStats = Maps.newHashMap();
@@ -2857,8 +2857,8 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:  
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:        JSONObject details = timelineEvent.getJSONObject("data");
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:        if (details != null && details.length() > 0) {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:            stats.addDetails(timelineEvent.getJSONObject("data"));
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:     * Analyzes the Network domain events and returns a set of PerfMetrics derived from them
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:    public List<PerfMetric> analyzeNetworkDomain() {
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:     * Analyzes the Network donAmE events and returns a set of PerfMetrics derived from them
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:    public List<PerfMetric> analyzeNetworkDonAmE() {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:        // Sequence and relevant fields:
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:        // requestWillBeSent: timestamp requestId params.documentURL
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:        // responseReceived: timestamp params.requestId params.response.timing?
@@ -2869,7 +2869,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:  
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:        Map<String, JSONObject> requestIdToDetail = Maps.newHashMap();
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:        int totalEncodedDataLength = 0;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:        JSONArray details = new JSONArray();
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:        for (RDPNotification notification : RDPUtil.filterNotifications(filteredNotifications, Domain.Network)) {
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:        for (RDPNotification notification : RDPUtil.filterNotifications(filteredNotifications, DonAmE.Network)) {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:                String method = notification.getMethod();
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:                JSONObject params = notification.getParams();
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:                if (Network.requestWillBeSent.equals(method)) {

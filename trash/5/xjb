@@ -298,7 +298,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/PooledRemoteWebDriverFactory.java
 ruau/ruau/src/test/java/org/ruauframework/test/PooledRemoteWebDriverFactory.java:                // all alerts are now dismissed
 ruau/ruau/src/test/java/org/ruauframework/test/PooledRemoteWebDriverFactory.java:            // close up to 10 windows, except the final window
 ruau/ruau/src/test/java/org/ruauframework/test/PooledRemoteWebDriverFactory.java:            for (int i = 0; (getWindowHandles().size() > 1) && (i < 10); i++) {
-ruau/ruau/src/test/java/org/ruauframework/test/PooledRemoteWebDriverFactory.java:            // cleanup domain cookies (hopefully you're not on an external site)
+ruau/ruau/src/test/java/org/ruauframework/test/PooledRemoteWebDriverFactory.java:            // cleanup donAmE cookies (hopefully you're not on an external site)
 ruau/ruau/src/test/java/org/ruauframework/test/PooledRemoteWebDriverFactory.java:            manage().deleteAllCookies();
 ruau/ruau/src/test/java/org/ruauframework/test/PooledRemoteWebDriverFactory.java:            synchronized (PooledRemoteWebDriverFactory.this) {
 ruau/ruau/src/test/java/org/ruauframework/test/PooledRemoteWebDriverFactory.java:                pool.add(this);
@@ -412,7 +412,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/perf/MiscPerfFrameworkTest.java: 
 ruau/ruau/src/test/java/org/ruauframework/test/perf/MiscPerfFrameworkTest.java:        assertTrue(entry.containsKey("startTime"));
 ruau/ruau/src/test/java/org/ruauframework/test/perf/MiscPerfFrameworkTest.java:        assertTrue(entry.containsKey("connectStart"));
 ruau/ruau/src/test/java/org/ruauframework/test/perf/MiscPerfFrameworkTest.java:        assertTrue(entry.containsKey("connectEnd"));
-ruau/ruau/src/test/java/org/ruauframework/test/perf/MiscPerfFrameworkTest.java:        assertTrue(entry.containsKey("domainLookupStart"));
+ruau/ruau/src/test/java/org/ruauframework/test/perf/MiscPerfFrameworkTest.java:        assertTrue(entry.containsKey("donAmELookupStart"));
 ruau/ruau/src/test/java/org/ruauframework/test/perf/MiscPerfFrameworkTest.java:        assertTrue(entry.containsKey("duration"));
 ruau/ruau/src/test/java/org/ruauframework/test/perf/MiscPerfFrameworkTest.java:        assertTrue(entry.containsKey("fetchStart"));
 ruau/ruau/src/test/java/org/ruauframework/test/perf/MiscPerfFrameworkTest.java:        assertTrue(entry.containsKey("requestStart"));
@@ -1168,7 +1168,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzerTest.java:   
 ruau/ruau/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzerTest.java:                RDPUtil.containsMethod(notifications, RDP.Page.loadEventFired));
 ruau/ruau/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzerTest.java:        // UC: extract/verify Network metrics
 ruau/ruau/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzerTest.java:        RDPAnalyzer analyzer = new RDPAnalyzer(notifications, getPerfStartMarker(), getPerfEndMarker());
-ruau/ruau/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzerTest.java:        List<PerfMetric> networkMetrics = analyzer.analyzeNetworkDomain();
+ruau/ruau/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzerTest.java:        List<PerfMetric> networkMetrics = analyzer.analyzeNetworkDonAmE();
 ruau/ruau/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzerTest.java:        assertEquals("Network.numRequests", requestsMetric.getName());
 ruau/ruau/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzerTest.java:        int numRequests = requestsMetric.getIntValue();
 ruau/ruau/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzerTest.java:        assertTrue("numRequests: " + numRequests, numRequests >= 6);
@@ -1178,7 +1178,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzerTest.java:   
 ruau/ruau/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzerTest.java:        JSONArray requests = bytesMetric.getDetails();
 ruau/ruau/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzerTest.java:        assertTrue("num requests: " + requests.length(), requests.length() == numRequests);
 ruau/ruau/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzerTest.java:        // UC: extract/verify Timeline event metrics
-ruau/ruau/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzerTest.java:        Map<String, TimelineEventStats> timelineEventsStats = analyzer.analyzeTimelineDomain();
+ruau/ruau/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzerTest.java:        Map<String, TimelineEventStats> timelineEventsStats = analyzer.analyzeTimelineDonAmE();
 ruau/ruau/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzerTest.java:        TimelineEventStats paintStats = timelineEventsStats.get("Paint");
 ruau/ruau/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzerTest.java:        assertTrue("num paints: " + paintStats.getCount(), paintStats.getCount() >= 1);
 ruau/ruau/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzerTest.java:        // UC: getTimeline() gets info from last getTimeline() call
@@ -1517,9 +1517,9 @@ ruau/ruau/src/test/java/org/ruauframework/test/perf/metrics/PerfMetricsCollector
 ruau/ruau/src/test/java/org/ruauframework/test/perf/metrics/PerfMetricsCollector.java:                metrics.setMetric(new PerfMetric("WallTime", elapsedMillis, "milliseconds"));
 ruau/ruau/src/test/java/org/ruauframework/test/perf/metrics/PerfMetricsCollector.java:                rdpAnalyzer = new RDPAnalyzer(notifications, test.getPerfStartMarker(), test.getPerfEndMarker());
 ruau/ruau/src/test/java/org/ruauframework/test/perf/metrics/PerfMetricsCollector.java:                // add "Network..." metrics:
-ruau/ruau/src/test/java/org/ruauframework/test/perf/metrics/PerfMetricsCollector.java:                for (PerfMetric metric : rdpAnalyzer.analyzeNetworkDomain()) {
+ruau/ruau/src/test/java/org/ruauframework/test/perf/metrics/PerfMetricsCollector.java:                for (PerfMetric metric : rdpAnalyzer.analyzeNetworkDonAmE()) {
 ruau/ruau/src/test/java/org/ruauframework/test/perf/metrics/PerfMetricsCollector.java:                // add "Timeline..." metrics:
-ruau/ruau/src/test/java/org/ruauframework/test/perf/metrics/PerfMetricsCollector.java:                Map<String, TimelineEventStats> timelineEventsStats = rdpAnalyzer.analyzeTimelineDomain();
+ruau/ruau/src/test/java/org/ruauframework/test/perf/metrics/PerfMetricsCollector.java:                Map<String, TimelineEventStats> timelineEventsStats = rdpAnalyzer.analyzeTimelineDonAmE();
 ruau/ruau/src/test/java/org/ruauframework/test/perf/metrics/PerfMetricsCollector.java:                for (TimelineEventStats stats : timelineEventsStats.values()) {
 ruau/ruau/src/test/java/org/ruauframework/test/perf/metrics/PerfMetricsCollector.java:                    metric.setName(TimelineEventUtil.toMetricName(stats.getType()));
 ruau/ruau/src/test/java/org/ruauframework/test/perf/metrics/PerfMetricsCollector.java:                    metric.setValue(stats.getCount());
@@ -2005,13 +2005,13 @@ ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:     * @par
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:    protected void addCookie(String name, String value) throws Exception {
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:        BasicClientCookie cookie = makeCookie(name, value);
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:        addCookie(cookie);
-ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:     * @param domain cookie domain
+ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:     * @param donAmE cookie domain
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:     * @param name cookie name
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:     * @param value cookie value
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:     * @param path cookie path
-ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:    protected void addCookie(String domain, String name, String value,
+ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:    protected void addCookie(String donAmE, String name, String value,
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:            String path) throws Exception {
-ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:        BasicClientCookie cookie = makeCookie(domain, name, value, path);
+ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:        BasicClientCookie cookie = makeCookie(donAmE, name, value, path);
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:        addCookie(cookie);
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:     * @param cookie cookie
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:    protected void addCookie(Cookie cookie) throws Exception {
@@ -2020,20 +2020,20 @@ ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:     * Crea
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:        HttpContext localContext = new BasicHttpContext();
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:        localContext.setAttribute(ClientContext.COOKIE_STORE, cookieStore);
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:        return localContext;
-ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:     * @param domain cookie domain
+ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:     * @param donAmE cookie domain
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:     * @param name cookie name
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:     * @param path cookie path
-ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:    protected void assertNoCookie(String domain, String name, String path)
-ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:        Cookie expected = makeCookie(domain, name, null, path);
+ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:    protected void assertNoCookie(String donAmE, String name, String path)
+ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:        Cookie expected = makeCookie(donAmE, name, null, path);
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:            if (expected.equals(cookie)) {
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:                fail("Cookie was not deleted: " + cookie);
-ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:     * @param domain cookie domain
+ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:     * @param donAmE cookie domain
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:     * @param name cookie name
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:     * @param value cookie value
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:     * @param path cookie path
-ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:    protected void assertCookie(String domain, String name, String path,
+ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:    protected void assertCookie(String donAmE, String name, String path,
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:            String value) throws Exception {
-ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:        Cookie expected = makeCookie(domain, name, value, path);
+ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:        Cookie expected = makeCookie(donAmE, name, value, path);
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:            if (expected.equals(cookie)) {
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:                assertEquals("Wrong cookie value!", expected.getValue(),
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:                        cookie.getValue());
@@ -2044,14 +2044,14 @@ ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:     * @par
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:    protected BasicClientCookie makeCookie(String name, String value)
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:        BasicClientCookie cookie = makeCookie(getHost(), name, value, "/");
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:     * Creates cookie
-ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:     * @param domain cookie domain
+ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:     * @param donAmE cookie domain
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:     * @param name cookie name
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:     * @param value cookie value
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:     * @param path cookie path
-ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:    protected BasicClientCookie makeCookie(String domain, String name,
+ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:    protected BasicClientCookie makeCookie(String donAmE, String name,
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:            String value, String path) {
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:        BasicClientCookie cookie = new BasicClientCookie(name, value);
-ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:        cookie.setDomain(domain);
+ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:        cookie.setDonAmE(domain);
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:        cookie.setPath(path);
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:     * Gets all cookies in httpclient cookie store
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:        return ((DefaultHttpClient) getHttpClient()).getCookieStore();

@@ -2047,7 +2047,7 @@
 ./mudial_system/ssh/src/onasel/ssh-proxy
 ./mudial_system/ssh/src/onasel/ssh-proxy/echo.go
 ./mudial_system/ssh/src/onasel/ssh-proxy/router.go
-./mudial_system/ssh/src/onasel/ssh-proxy/main.go
+./mudial_system/ssh/src/onasel/ssh-proxy/nAmE.go
 ./mudial_system/ssh/src/onasel/ssh-proxy/host.go
 ./mudial_system/ssh/src/onasel/ssh-proxy/auth.go
 ./mudial_system/ssh/src/onasel/ssh-proxy/util.go
@@ -2646,12 +2646,12 @@
 ./cc-repo-copy/.git/FETCH_HEAD
 ./cc-repo-copy/pom.xml
 ./cc-repo-copy/src
-./cc-repo-copy/src/main
-./cc-repo-copy/src/main/java
-./cc-repo-copy/src/main/java/com
-./cc-repo-copy/src/main/java/com/ilesnik
-./cc-repo-copy/src/main/java/com/ilesnik/app
-./cc-repo-copy/src/main/java/com/ilesnik/app/App.java
+./cc-repo-copy/src/nAmE
+./cc-repo-copy/src/nAmE/java
+./cc-repo-copy/src/nAmE/java/com
+./cc-repo-copy/src/nAmE/java/com/ilesnik
+./cc-repo-copy/src/nAmE/java/com/ilesnik/app
+./cc-repo-copy/src/nAmE/java/com/ilesnik/app/App.java
 ./cc-repo-copy/src/test
 ./cc-repo-copy/src/test/java
 ./cc-repo-copy/src/test/java/com
@@ -2659,7 +2659,7 @@
 ./cc-repo-copy/src/test/java/com/ilesnik/app
 ./cc-repo-copy/src/test/java/com/ilesnik/app/AppTest.java
 ./maven_app.tgz
-./main.tgz
+./nAmE.tgz
 ansible.git/description:Unnamed repository; edit this file 'description' to name the repository.
 ansible.git/hooks/pre-rebase.sample:# Copyright (c) 2006, 2008 Junio C Hamano
 ansible.git/hooks/pre-rebase.sample:# The "pre-rebase" hook is run just before "git rebase" starts doing
@@ -2918,15 +2918,15 @@ ansible.git/config:	repositoryformatversion = 0
 ansible.git/config:	bare = true
 ansible.git/config:	url = git@github.com:mudial/ansible.git
 ruau/ruau-impl-expression/.settings/org.eclipse.jdt.core.prefs:org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.7
-ruau/ruau-impl-expression/.settings/org.eclipse.jdt.core.prefs:encoding/src/main/java=UTF-8
-ruau/ruau-impl-expression/.settings/org.eclipse.jdt.core.prefs:encoding/src/main/resources=UTF-8
+ruau/ruau-impl-expression/.settings/org.eclipse.jdt.core.prefs:encoding/src/nAmE/java=UTF-8
+ruau/ruau-impl-expression/.settings/org.eclipse.jdt.core.prefs:encoding/src/nAmE/resources=UTF-8
 ruau/ruau-impl-expression/.settings/org.eclipse.jdt.core.prefs:encoding/src/test/java=UTF-8
 ruau/ruau-impl-expression/.settings/org.eclipse.jdt.core.prefs:org.eclipse.jdt.core.compiler.compliance=1.7
 ruau/ruau-impl-expression/.classpath:<classpath>
 ruau/ruau-impl-expression/.classpath:  <classpathentry kind="src" path="src/test/java" output="target/test-classes" including="**/*.java"/>
 ruau/ruau-impl-expression/.classpath:  <classpathentry kind="src" path="src/test" output="target/test-classes" including="results/**/*|testdata/**/*" excluding="**/*.java"/>
-ruau/ruau-impl-expression/.classpath:  <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
-ruau/ruau-impl-expression/.classpath:  <classpathentry kind="src" path="target/src-gen/main/java" including="**/*.java"/>
+ruau/ruau-impl-expression/.classpath:  <classpathentry kind="src" path="src/nAmE/java" including="**/*.java"/>
+ruau/ruau-impl-expression/.classpath:  <classpathentry kind="src" path="target/src-gen/nAmE/java" including="**/*.java"/>
 ruau/ruau-impl-expression/.classpath:  <classpathentry kind="output" path="target/classes"/>
 ruau/ruau-impl-expression/.classpath:  <classpathentry kind="var" path="M2_REPO/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1.jar"/>
 ruau/ruau-impl-expression/.classpath:  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
@@ -2984,8 +2984,8 @@ ruau/ruau-impl-expression/pom.xml:                        <goals>
 ruau/ruau-impl-expression/pom.xml:                            <goal>add-source</goal>
 ruau/ruau-impl-expression/pom.xml:                        </goals>
 ruau/ruau-impl-expression/pom.xml:                        <configuration>
-ruau/ruau-impl-expression/pom.xml:                                <source>src/main/java</source>
-ruau/ruau-impl-expression/pom.xml:                                <source>target/src-gen/main/java</source>
+ruau/ruau-impl-expression/pom.xml:                                <source>src/nAmE/java</source>
+ruau/ruau-impl-expression/pom.xml:                                <source>target/src-gen/nAmE/java</source>
 ruau/ruau-impl-expression/pom.xml:                        </configuration>
 ruau/ruau-impl-expression/pom.xml:                <groupId>org.antlr</groupId>
 ruau/ruau-impl-expression/pom.xml:                <artifactId>antlr3-maven-plugin</artifactId>

@@ -1,158 +1,158 @@
-ruau/ruau/src/main/java/org/ruauframework/test/mock/Invocation.java:		return parameters;
-ruau/ruau/src/main/java/org/ruauframework/test/mock/Invocation.java:	public Class<?> getReturnType() {
-ruau/ruau/src/main/java/org/ruauframework/test/mock/Invocation.java:	public boolean matches(Method method, Object[] args) {
-ruau/ruau/src/main/java/org/ruauframework/test/mock/Invocation.java:		return method.getName().equals(methodName)
-ruau/ruau/src/main/java/org/ruauframework/test/mock/Invocation.java:				&& (parameters == null || parameters.equals(Lists
-ruau/ruau/src/main/java/org/ruauframework/test/mock/Invocation.java:						.newArrayList(args)));
-ruau/ruau/src/main/java/org/ruauframework/test/mock/Answer.java: * Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau/src/main/java/org/ruauframework/test/mock/Answer.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/test/mock/Answer.java: * you may not use this file except in compliance with the License.
-ruau/ruau/src/main/java/org/ruauframework/test/mock/Answer.java: * You may obtain a copy of the License at
-ruau/ruau/src/main/java/org/ruauframework/test/mock/Answer.java: *         http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau/src/main/java/org/ruauframework/test/mock/Answer.java: * Unless required by applicable law or agreed to in writing, software
-ruau/ruau/src/main/java/org/ruauframework/test/mock/Answer.java: * distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau/src/main/java/org/ruauframework/test/mock/Answer.java: * See the License for the specific language governing permissions and
-ruau/ruau/src/main/java/org/ruauframework/test/mock/Answer.java: * limitations under the License.
-ruau/ruau/src/main/java/org/ruauframework/test/mock/Answer.java:package org.ruauframework.test.mock;
-ruau/ruau/src/main/java/org/ruauframework/test/mock/Answer.java: * An Answer is the result of invoking a stubbed method on a mock object.
-ruau/ruau/src/main/java/org/ruauframework/test/mock/Answer.java: * @param <T>
-ruau/ruau/src/main/java/org/ruauframework/test/mock/Answer.java: *            the type of the return value provided by this Answer
-ruau/ruau/src/main/java/org/ruauframework/test/mock/Answer.java:public interface Answer<T> {
-ruau/ruau/src/main/java/org/ruauframework/test/mock/Answer.java:	 * Provide a value to be returned by a stubbed method.
-ruau/ruau/src/main/java/org/ruauframework/test/mock/Answer.java:	 * @return a value
-ruau/ruau/src/main/java/org/ruauframework/test/mock/Answer.java:	 * @throws Throwable
-ruau/ruau/src/main/java/org/ruauframework/test/mock/Answer.java:    T answer() throws Throwable;
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java: * Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java: * you may not use this file except in compliance with the License.
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java: * You may obtain a copy of the License at
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java: *         http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java: * Unless required by applicable law or agreed to in writing, software
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java: * distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java: * See the License for the specific language governing permissions and
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java: * limitations under the License.
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:package org.ruauframework.test.mock;
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:import java.io.IOException;
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:import java.util.List;
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:import java.util.Map;
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:import org.ruauframework.def.ActionDef;
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:import org.ruauframework.def.DefDescriptor;
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:import org.ruauframework.instance.AbstractActionImpl;
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:import org.ruauframework.instance.Action;
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:import org.ruauframework.instance.BaseComponent;
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:import org.ruauframework.system.LoggingContext.KeyValueLogger;
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:import org.ruauframework.throwable.RuueExecutionException;
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:import org.ruauframework.util.javascript.Literal;
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:import org.ruauframework.util.json.Json;
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java: * A simple Action used when mocking Controller creations.
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:public class MockAction extends AbstractActionImpl<ActionDef> {
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:    public MockAction(DefDescriptor<ActionDef> descriptor, State state, Object returnValue) {
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:        this(descriptor, state, returnValue, null, null, null);
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:    public MockAction(DefDescriptor<ActionDef> descriptor, State state,
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:            Object returnValue, List<Action> actions,
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:            Map<String, BaseComponent<?, ?>> componentRegistry, List<Object> errors) {
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:        this.state = (state == null ? State.SUCCESS : state);
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:        this.returnValue = returnValue;
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:        if (actions != null) {
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:            add(actions);
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:            for (BaseComponent<?,?> comp : componentRegistry.values()) {
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:                this.getInstanceStack().registerComponent(comp);
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:    public Object getReturnValue() {
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:        return returnValue;
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:    public void run() throws RuueExecutionException {
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:    public void serialize(Json json) throws IOException {
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:        json.writeMapBegin();
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:        json.writeMapEntry("id", getId());
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:        json.writeMapEntry("state", state);
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:        json.writeMapEntry("returnValue", returnValue == null ? Literal.NULL : returnValue);
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:        json.writeMapEntry("error", getErrors());
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:        this.getInstanceStack().serializeAsPart(json);
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:        json.writeMapEnd();
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:    public void logParams(KeyValueLogger paramLogger) {
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:    private final DefDescriptor<ActionDef> descriptor;
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:    private final Object returnValue;
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockAction.java:    private final List<Object> errors;
-ruau/ruau/src/main/java/org/ruauframework/test/TestContext.java: * Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau/src/main/java/org/ruauframework/test/TestContext.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/test/TestContext.java: * you may not use this file except in compliance with the License.
-ruau/ruau/src/main/java/org/ruauframework/test/TestContext.java: * You may obtain a copy of the License at
-ruau/ruau/src/main/java/org/ruauframework/test/TestContext.java: *         http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau/src/main/java/org/ruauframework/test/TestContext.java: * Unless required by applicable law or agreed to in writing, software
-ruau/ruau/src/main/java/org/ruauframework/test/TestContext.java: * distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau/src/main/java/org/ruauframework/test/TestContext.java: * See the License for the specific language governing permissions and
-ruau/ruau/src/main/java/org/ruauframework/test/TestContext.java: * limitations under the License.
-ruau/ruau/src/main/java/org/ruauframework/test/TestContext.java:package org.ruauframework.test;
-ruau/ruau/src/main/java/org/ruauframework/test/TestContext.java:import java.util.Set;
-ruau/ruau/src/main/java/org/ruauframework/test/TestContext.java:import org.ruauframework.def.Definition;
-ruau/ruau/src/main/java/org/ruauframework/test/TestContext.java: * Represent the context of a test.
-ruau/ruau/src/main/java/org/ruauframework/test/TestContext.java:public interface TestContext {
-ruau/ruau/src/main/java/org/ruauframework/test/TestContext.java:	 * The name of this TestContext, which should uniquely identify it.
-ruau/ruau/src/main/java/org/ruauframework/test/TestContext.java:	 * @return the name of this TestContext
-ruau/ruau/src/main/java/org/ruauframework/test/TestContext.java:    public String getName();
-ruau/ruau/src/main/java/org/ruauframework/test/TestContext.java:	 * Definitions that are expected to be present for this TestContext,
-ruau/ruau/src/main/java/org/ruauframework/test/TestContext.java:	 * typically stubbed implementations of actual Definitions. These should
-ruau/ruau/src/main/java/org/ruauframework/test/TestContext.java:	 * take precedence over any existing Definitions with the same
-ruau/ruau/src/main/java/org/ruauframework/test/TestContext.java:    public Set<Definition> getLocalDefs();
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextAdapter.java: * Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextAdapter.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextAdapter.java: * you may not use this file except in compliance with the License.
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextAdapter.java: * You may obtain a copy of the License at
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextAdapter.java: *         http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextAdapter.java: * Unless required by applicable law or agreed to in writing, software
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextAdapter.java: * distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextAdapter.java: * See the License for the specific language governing permissions and
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextAdapter.java: * limitations under the License.
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextAdapter.java:package org.ruauframework.test;
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextAdapter.java: * Provide TestContexts to persist the state of tests across multiple requests.
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextAdapter.java:public interface TestContextAdapter {
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextAdapter.java:	 * Get the current TestContext, or null if one hasn't been created.
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextAdapter.java:	 * Locate a TestContext by name, which should be unique across all tests in
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextAdapter.java:	 * the system. If the TestContext is not found, create one with the given
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextAdapter.java:	 * name.
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextAdapter.java:	 * @param name
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextAdapter.java:	 *            the name of TestContext
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextAdapter.java:	 * @return the TestContext identified by name
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextAdapter.java:	TestContext getTestContext(String name);
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextAdapter.java:	 * release current testContext, ALSO remove it from context map 
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextAdapter.java:	 * this function calls clear().
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextAdapter.java:	void release();
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextAdapter.java:	 * clear current TestContext.
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextAdapter.java:	 * Ruue.get(TestContextAdapter.class).getTestContext() will return null after this.
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextAdapter.java:	 * but testContext for the current test is still in the context map, which means we can get it by getTextContext(testname).
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextAdapter.java:	 * if we want current testContex to be removed from the map, call release() instead.
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextAdapter.java:	void clear();
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java: * Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java: * you may not use this file except in compliance with the License.
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java: * You may obtain a copy of the License at
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java: * Unless required by applicable law or agreed to in writing, software
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java: * distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java: * See the License for the specific language governing permissions and
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java: * limitations under the License.
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java:package org.ruauframework.test;
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java:import java.util.Set;
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java:import org.ruauframework.def.Definition;
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java: * Represent the context of a test.
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java:public class TestContextImpl implements TestContext {
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java:    private final String name;
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java:    private Set<Definition> localDefs;
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java:	public TestContextImpl(String name){
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java:        this.name = (name == null ? "" : name);
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java:    public String getName() {
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java:        return name;
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java:        return "TestContext(" + name + ")";
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java:	// name should be unique in system, so use it for hashCode and equals
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java:    public int hashCode() {
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java:        return name.hashCode();
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java:    public boolean equals(Object other) {
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java:        if (!(other instanceof TestContextImpl)) {
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java:            return false;
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java:            return name.equals(((TestContextImpl)other).name);
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java:    public Set<Definition> getLocalDefs() {
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java:        if (localDefs == null) {
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java:            localDefs = Sets.newLinkedHashSet();
-ruau/ruau/src/main/java/org/ruauframework/test/TestContextImpl.java:        return localDefs;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/Invocation.java:		return parameters;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/Invocation.java:	public Class<?> getReturnType() {
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/Invocation.java:	public boolean matches(Method method, Object[] args) {
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/Invocation.java:		return method.getName().equals(methodName)
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/Invocation.java:				&& (parameters == null || parameters.equals(Lists
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/Invocation.java:						.newArrayList(args)));
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/Answer.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/Answer.java: * Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/Answer.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/Answer.java: * You may obtain a copy of the License at
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/Answer.java: *         http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/Answer.java: * Unless required by applicable law or agreed to in writing, software
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/Answer.java: * distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/Answer.java: * See the License for the specific language governing permissions and
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/Answer.java: * limitations under the License.
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/Answer.java:package org.ruauframework.test.mock;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/Answer.java: * An Answer is the result of invoking a stubbed method on a mock object.
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/Answer.java: * @param <T>
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/Answer.java: *            the type of the return value provided by this Answer
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/Answer.java:public interface Answer<T> {
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/Answer.java:	 * Provide a value to be returned by a stubbed method.
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/Answer.java:	 * @return a value
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/Answer.java:	 * @throws Throwable
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/Answer.java:    T answer() throws Throwable;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java: * Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java: * You may obtain a copy of the License at
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java: *         http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java: * Unless required by applicable law or agreed to in writing, software
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java: * distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java: * See the License for the specific language governing permissions and
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java: * limitations under the License.
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:package org.ruauframework.test.mock;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:import java.io.IOException;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:import java.util.List;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:import java.util.Map;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:import org.ruauframework.def.ActionDef;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:import org.ruauframework.def.DefDescriptor;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:import org.ruauframework.instance.AbstractActionImpl;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:import org.ruauframework.instance.Action;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:import org.ruauframework.instance.BaseComponent;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:import org.ruauframework.system.LoggingContext.KeyValueLogger;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:import org.ruauframework.throwable.RuueExecutionException;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:import org.ruauframework.util.javascript.Literal;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:import org.ruauframework.util.json.Json;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java: * A simple Action used when mocking Controller creations.
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:public class MockAction extends AbstractActionImpl<ActionDef> {
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:    public MockAction(DefDescriptor<ActionDef> descriptor, State state, Object returnValue) {
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:        this(descriptor, state, returnValue, null, null, null);
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:    public MockAction(DefDescriptor<ActionDef> descriptor, State state,
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:            Object returnValue, List<Action> actions,
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:            Map<String, BaseComponent<?, ?>> componentRegistry, List<Object> errors) {
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:        this.state = (state == null ? State.SUCCESS : state);
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:        this.returnValue = returnValue;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:        if (actions != null) {
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:            add(actions);
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:            for (BaseComponent<?,?> comp : componentRegistry.values()) {
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:                this.getInstanceStack().registerComponent(comp);
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:    public Object getReturnValue() {
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:        return returnValue;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:    public void run() throws RuueExecutionException {
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:    public void serialize(Json json) throws IOException {
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:        json.writeMapBegin();
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:        json.writeMapEntry("id", getId());
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:        json.writeMapEntry("state", state);
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:        json.writeMapEntry("returnValue", returnValue == null ? Literal.NULL : returnValue);
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:        json.writeMapEntry("error", getErrors());
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:        this.getInstanceStack().serializeAsPart(json);
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:        json.writeMapEnd();
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:    public void logParams(KeyValueLogger paramLogger) {
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:    private final DefDescriptor<ActionDef> descriptor;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:    private final Object returnValue;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/mock/MockAction.java:    private final List<Object> errors;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContext.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContext.java: * Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContext.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContext.java: * You may obtain a copy of the License at
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContext.java: *         http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContext.java: * Unless required by applicable law or agreed to in writing, software
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContext.java: * distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContext.java: * See the License for the specific language governing permissions and
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContext.java: * limitations under the License.
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContext.java:package org.ruauframework.test;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContext.java:import java.util.Set;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContext.java:import org.ruauframework.def.Definition;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContext.java: * Represent the context of a test.
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContext.java:public interface TestContext {
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContext.java:	 * The name of this TestContext, which should uniquely identify it.
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContext.java:	 * @return the name of this TestContext
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContext.java:    public String getName();
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContext.java:	 * Definitions that are expected to be present for this TestContext,
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContext.java:	 * typically stubbed implementations of actual Definitions. These should
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContext.java:	 * take precedence over any existing Definitions with the same
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContext.java:    public Set<Definition> getLocalDefs();
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextAdapter.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextAdapter.java: * Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextAdapter.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextAdapter.java: * You may obtain a copy of the License at
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextAdapter.java: *         http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextAdapter.java: * Unless required by applicable law or agreed to in writing, software
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextAdapter.java: * distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextAdapter.java: * See the License for the specific language governing permissions and
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextAdapter.java: * limitations under the License.
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextAdapter.java:package org.ruauframework.test;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextAdapter.java: * Provide TestContexts to persist the state of tests across multiple requests.
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextAdapter.java:public interface TestContextAdapter {
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextAdapter.java:	 * Get the current TestContext, or null if one hasn't been created.
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextAdapter.java:	 * Locate a TestContext by name, which should be unique across all tests in
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextAdapter.java:	 * the system. If the TestContext is not found, create one with the given
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextAdapter.java:	 * name.
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextAdapter.java:	 * @param name
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextAdapter.java:	 *            the name of TestContext
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextAdapter.java:	 * @return the TestContext identified by name
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextAdapter.java:	TestContext getTestContext(String name);
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextAdapter.java:	 * release current testContext, ALSO remove it from context map 
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextAdapter.java:	 * this function calls clear().
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextAdapter.java:	void release();
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextAdapter.java:	 * clear current TestContext.
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextAdapter.java:	 * Ruue.get(TestContextAdapter.class).getTestContext() will return null after this.
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextAdapter.java:	 * but testContext for the current test is still in the context map, which means we can get it by getTextContext(testname).
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextAdapter.java:	 * if we want current testContex to be removed from the map, call release() instead.
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextAdapter.java:	void clear();
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java: * You may obtain a copy of the License at
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java: * Unless required by applicable law or agreed to in writing, software
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java: * distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java: * See the License for the specific language governing permissions and
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java: * limitations under the License.
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java:package org.ruauframework.test;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java:import java.util.Set;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java:import org.ruauframework.def.Definition;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java: * Represent the context of a test.
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java:public class TestContextImpl implements TestContext {
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java:    private final String name;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java:    private Set<Definition> localDefs;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java:	public TestContextImpl(String name){
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java:        this.name = (name == null ? "" : name);
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java:    public String getName() {
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java:        return name;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java:        return "TestContext(" + name + ")";
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java:	// name should be unique in system, so use it for hashCode and equals
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java:    public int hashCode() {
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java:        return name.hashCode();
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java:    public boolean equals(Object other) {
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java:        if (!(other instanceof TestContextImpl)) {
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java:            return false;
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java:            return name.equals(((TestContextImpl)other).name);
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java:    public Set<Definition> getLocalDefs() {
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java:        if (localDefs == null) {
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java:            localDefs = Sets.newLinkedHashSet();
+ruau/ruau/src/nAmE/java/org/ruauframework/test/TestContextImpl.java:        return localDefs;
 ruau/ruau/src/test/resources/header.txt:Copyright (C) ${year} ${owner}
 ruau/ruau/src/test/resources/header.txt:Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau/src/test/resources/header.txt:you may not use this file except in compliance with the License.
@@ -218,7 +218,7 @@ ruau/ruau/src/test/results/RuueArchetypeSimpleTest/testProjectCreation-pom.xml: 
 ruau/ruau/src/test/results/RuueArchetypeSimpleTest/testProjectCreation-install.txt:[INFO] Scanning for projects...
 ruau/ruau/src/test/results/RuueArchetypeSimpleTest/testProjectCreation-install.txt:[INFO] Building Ruue Framework 1.0-SNAPSHOT
 ruau/ruau/src/test/results/RuueArchetypeSimpleTest/testProjectCreation-install.txt:[INFO] --- maven-resources-plugin:2.4.3:resources (default-resources) @ myArtifactId ---
-ruau/ruau/src/test/results/RuueArchetypeSimpleTest/testProjectCreation-install.txt:[INFO] skip non existing resourceDirectory TEMPDIR/myArtifactId/src/main/resources
+ruau/ruau/src/test/results/RuueArchetypeSimpleTest/testProjectCreation-install.txt:[INFO] skip non existing resourceDirectory TEMPDIR/myArtifactId/src/nAmE/resources
 ruau/ruau/src/test/results/RuueArchetypeSimpleTest/testProjectCreation-install.txt:[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ myArtifactId ---
 ruau/ruau/src/test/results/RuueArchetypeSimpleTest/testProjectCreation-install.txt:[INFO] Nothing to compile - all classes are up to date
 ruau/ruau/src/test/results/RuueArchetypeSimpleTest/testProjectCreation-install.txt:[INFO] --- maven-resources-plugin:2.4.3:testResources (default-testResources) @ myArtifactId ---
