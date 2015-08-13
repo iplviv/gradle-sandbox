@@ -1075,19 +1075,19 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:impo
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:import org.ruauframework.def.ComponentDef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:import org.ruauframework.def.ComponentDefRef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:import org.ruauframework.def.DefDescriptor;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:import org.ruauframework.expression.Expression;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:import org.ruauframework.exPrEssion.Expression;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:import org.ruauframework.exPrEssion.PropertyReference;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:import org.ruauframework.impl.RuueImpl;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:import org.ruauframework.impl.expression.PropertyReferenceImpl;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:import org.ruauframework.impl.exPrEssion.PropertyReferenceImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:import org.ruauframework.impl.root.AttributeDefRefImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:import org.ruauframework.impl.root.component.ComponentDefRefImpl;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:import org.ruauframework.impl.root.parser.handler.ExpressionContainerHandler;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:import org.ruauframework.impl.root.parser.handler.ExPrEssionContainerHandler;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:import org.ruauframework.impl.system.DefDescriptorImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:import org.ruauframework.system.Location;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:import org.ruauframework.throwable.quickfix.RuueValidationException;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:import org.ruauframework.throwable.quickfix.InvalidExpressionException;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:import org.ruauframework.throwable.quickfix.InvalidExPrEssionException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:import org.ruauframework.util.RuueTextUtil;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java: * Parses expressions and literal text. Those tokens can then be converted into
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java: * Parses exPrEssions and literal text. Those tokens can then be converted into
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java: * the appropriate types of ComponentDefRefs or Strings
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:public class TextTokenizer implements Iterable<TextTokenizer.Token> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:    public static final String BEGIN = "{!";
@@ -1104,7 +1104,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:    
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:            Pattern.DOTALL | Pattern.CASE_INSENSITIVE | Pattern.MULTILINE);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:    public static enum TokenType {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:        PLAINTEXT(DefDescriptorImpl.getInstance("ruau:text", ComponentDef.class)), EXPRESSION(DefDescriptorImpl
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:                .getInstance("ruau:expression", ComponentDef.class));
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:                .getInstance("ruau:exPrEssion", ComponentDef.class));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:        private final DefDescriptor<ComponentDef> componentDefDescriptor;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:        private TokenType(DefDescriptor<ComponentDef> componentDefDescriptor) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:    private final List<Token> tokens = new ArrayList<Token>();
@@ -1121,8 +1121,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:    
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:            if (trimmedValue.isEmpty()) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:        this.location = location;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:        this.whitespaceBehavior = whitespaceBehavior;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:     * Parse the input text and represent it locally as a list of tokens. If a
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:     * {@link TokenType#PLAINTEXT} token looks like a malformed expression, then
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:     * Parse the input text and rePrEsent it locally as a list of tokens. If a
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:     * {@link TokenType#PLAINTEXT} token looks like a malformed exPrEssion, then
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:     * throw a {@link org.ruauframework.throwable.quickfix.QuickFixException}
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:     * @throws RuueValidationException
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:    private void doTokenize() throws RuueValidationException {
@@ -1136,39 +1136,39 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:    
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:                    maybeAddPlainText(lastMatch, start);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:                tokens.add(new Token(TokenType.EXPRESSION, start, end));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:                lastMatch = end;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:            // The remainder text after the last expression
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:            // The remainder text after the last exPrEssion
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:            if (lastMatch < length) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:                maybeAddPlainText(lastMatch, length);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:            // Allow creation of whitespace or empty text components.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:            // If the caller doesn't want this behavior, it should make that
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:            // decision externally before calling parse
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:            maybeAddPlainText(0, text.length());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:     * This token is not a valid expression. If it looks like it wanted to be an
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:     * expression rather than real plain-text, then throw a validation error.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:     * This token is not a valid exPrEssion. If it looks like it wanted to be an
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:     * exPrEssion rather than real plain-text, then throw a validation error.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:     * @throws RuueValidationException if the plain text token looks like a
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:     *             malformed expression.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:     *             malformed exPrEssion.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:    private void maybeAddPlainText(int begin, int end) throws RuueValidationException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:        Matcher unterminated = UNTERMINATED_EXPRESSION_PATTERN.matcher(substring);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:        if (unterminated.matches()) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:            throw new InvalidExpressionException("Unterminated expression", location);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:            throw new InvalidExPrEssionException("Unterminated expression", location);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:        Matcher curlyBangInversion = CURLY_BANG_INVERSION_PATTERN.matcher(substring);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:        if (curlyBangInversion.matches()) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:            throw new InvalidExpressionException("Found an expression starting with '!{' but it should be '{!'",
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:            throw new InvalidExPrEssionException("Found an expression starting with '!{' but it should be '{!'",
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:                    location);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:		tokens.add(token);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:    public void addExpressionRefs(ExpressionContainerHandler handler) throws RuueValidationException {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:    public void addExPrEssionRefs(ExpressionContainerHandler handler) throws RuueValidationException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:            token.createValue(handler);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:    public List<ComponentDefRef> asComponentDefRefs(ExpressionContainerHandler cmpHandler)
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:    public List<ComponentDefRef> asComponentDefRefs(ExPrEssionContainerHandler cmpHandler)
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:            throws RuueValidationException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:        List<ComponentDefRef> ret = new ArrayList<ComponentDefRef>();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:            ComponentDefRef cdr = token.createComponentDefRef(cmpHandler);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:                ret.add(cdr);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:     * turns the tokens into raw strings or expressions, not componentdefrefs.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:     * turns the tokens into raw strings or exPrEssions, not componentdefrefs.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:     * if there is only one, it returns that literal instead of a list. this is
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:     * used by various system tags
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:    public Object asValue(ExpressionContainerHandler cmpHandler) throws RuueValidationException {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:            throw new InvalidExpressionException(
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:                    "Cannot mix expression and literal string in attribute value, try rewriting like {!'foo' + v.bar}",
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:    public Object asValue(ExPrEssionContainerHandler cmpHandler) throws RuueValidationException {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:            throw new InvalidExPrEssionException(
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:                    "Cannot mix exPrEssion and literal string in attribute value, try rewriting like {!'foo' + v.bar}",
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:                    location);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:        return tokens.get(0).createValue(cmpHandler);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:     * convenience method for removing curlybang.
@@ -1179,18 +1179,18 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:    
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:            return value;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:    public Iterator<Token> iterator() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:        return RuueUtil.immutableList(tokens).iterator();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:     * inner class representing each token
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:     * inner class rePrEsenting each token
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:    public final class Token {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:        private final TokenType type;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:        private final int begin;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:        private final int end;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:        private Token(TokenType type, int begin, int end) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:         * creates either a string or expression object out of this token,
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:         * notifying the parent componentdef whenever an expression is found
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:        private Object createValue(ExpressionContainerHandler cmpHandler) throws RuueValidationException {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:         * creates either a string or exPrEssion object out of this token,
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:         * notifying the parent componentdef whenever an exPrEssion is found
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:        private Object createValue(ExPrEssionContainerHandler cmpHandler) throws RuueValidationException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:            String raw = getRawValue();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:            	propRefs = Sets.newHashSetWithExpectedSize(2);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:                Expression e = RuueImpl.getExpressionAdapter().buildExpression(unwrap(raw), location);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:                ExPrEssion e = RuueImpl.getExpressionAdapter().buildExpression(unwrap(raw), location);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:                e.gatherPropertyReferences(propRefs);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:                // Let's see if we can find any "naked" $Label.section.name references in the plain text
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:                Matcher matcher = LABEL_GVP_PATTERN.matcher(raw);
@@ -1199,10 +1199,10 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:    
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:                    	propRefs = Sets.newHashSet();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:					propRefs.add(new PropertyReferenceImpl(labelRef, location));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:                result = raw;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:            	cmpHandler.addExpressionReferences(propRefs);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:            	cmpHandler.addExPrEssionReferences(propRefs);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:         * creates a component def ref for this token, either a text or
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:         * @return - null if undesirable whitespace, else a ComponentDefRef for
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:        private ComponentDefRef createComponentDefRef(ExpressionContainerHandler cmpHandler)
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:        private ComponentDefRef createComponentDefRef(ExPrEssionContainerHandler cmpHandler)
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:                throws RuueValidationException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:            Object value = createValue(cmpHandler);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/TextTokenizer.java:            boolean IsUndesiredWhitespace = (whitespaceBehavior == WhitespaceBehavior.OPTIMIZE)
@@ -1356,10 +1356,10 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/json/RuueJsonContext.ja
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/json/RuueJsonContext.java:        mappyFasty = b.build();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/json/RuueJsonContext.java:        mappySlowly = b2.build();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/json/RuueJsonContext.java:    public static RuueJsonContext createContext(Mode mode, boolean refSupport) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/json/RuueJsonContext.java:        return new RuueJsonContext(mode.prettyPrint(), refSupport);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/json/RuueJsonContext.java:        return new RuueJsonContext(mode.PrEttyPrint(), refSupport);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/json/RuueJsonContext.java:    private RuueJsonContext(boolean format, boolean refSupport) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/json/RuueJsonContext.java:        super(mappyFasty, mappySlowly, cache, format, refSupport, -1, -1);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/json/RuueJsonContext.java:    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/json/RuueJsonContext.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/json/RuueJsonContext.java:    public <T> JsonSerializer<T> getSerializer(T o) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/json/RuueJsonContext.java:        JsonSerializer<T> s = super.getSerializer(o);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/json/RuueJsonContext.java:        // try the old way until we stop using it
@@ -1479,7 +1479,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:    pr
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:    private boolean isBrowserIE7() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:    private boolean isBrowserIE6() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:    private boolean isBrowserFirefox() {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:     * See if this user agent String is for a known mobile client. This is a comprehensive check for hundreds of
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:     * See if this user agent String is for a known mobile client. This is a comPrEhensive check for hundreds of
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:     * @see BrowserInfo#isBrowserMobile() if a quicker test of all supported and many common unsupported clients is
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:     * @param userAgent the string to test
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:    private static boolean isMobileClient(String userAgent) {
@@ -1495,7 +1495,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:      
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:                String shortUserAgent = ua.substring(0, 4);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:                if (BrowserUserAgent.getUncommonMobileUserAgentPattern().matcher(shortUserAgent).matches()) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:        return false;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:     * Browser checks The pre-182 checks (isBrowserXXX()) match against both the old 4 digit browserTypes and the new 8
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:     * Browser checks The PrE-182 checks (isBrowserXXX()) match against both the old 4 digit browserTypes and the new 8
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:     * digit ones too. The parseBrowser() method will always return the new type from 182 onward, but 4 digit ones may
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:     * be in the DB or a cookie, or be hard-coded in various places. The 182+ checks (isBrowser(XXX)) will check and
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:     * match against only new 8 digit browserTypes. Please use these for any new functionality, as they require much
@@ -1567,7 +1567,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:     *
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:     * @return true if a match, false otherwise
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:    public boolean isPlatformAndroid22OrGreater() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:        // 2 found uses as of 182
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:        // TODO: deprecate and merge with isPlatformAndroid() -
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:        // TODO: dePrEcate and merge with isPlatformAndroid() -
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:        return (platformType >= PLATFORM_ANDROID_2_2 && platformType <= PLATFORM_ANDROID_MAX);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:     * Checks if this is an iPhone, iPad, Android or other mobile client running Webkit.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:     * @return true if a match, false otherwise
@@ -1591,24 +1591,24 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:     *
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:     * @return true if NT or later, false if earlier or if not Windows
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:    public boolean isPlatformModernWin() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:        // 1 found use as of 182
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:        // TODO: deprecate and merge with isPlatformWin() - we don't have many
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:        // TODO: dePrEcate and merge with isPlatformWin() - we don't have many
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:        return platformType >= PLATFORM_WIN_NT && platformType <= PLATFORM_WIN_MAX;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:    /* Mobile related checks */
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:     * Identifies if a browser is advertising itself as being mobile in its user agent String. This will return true if
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:     * keywords such as mobile, phone, tablet, or touch are present, of it the browser is one that is only available as
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:     * keywords such as mobile, phone, tablet, or touch are PrEsent, of it the browser is one that is only available as
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:     * a mobile version, such as Blackberry.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:     * This will detect all supported mobile clients and many common unsupported ones.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:     * This does not necessarily indicate that the user should get our mobile or Touch UI, as some mobile browsers are
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:     * very limited in compatibility or resolution so they should get nothing or plain text; and others are netbooks or
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:     * tablets with keyboards that may as well be laptops for all they can do.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:     * @see BrowserInfo#isMobileClient(String) for a more comprehensive but slower check of known user agents
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:     * @see BrowserInfo#isMobileClient(String) for a more comPrEhensive but slower check of known user agents
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:     * @return true if we think this is a mobile browser, false if desktop browser
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:    public boolean isBrowserMobile() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:        // in the 182+ code, it's a simple check
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:            // last digit = 0 means desktop/notebook; anything else is mobile of some sort
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:            // pre 182 we itemize across known mobile stuff
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:            // PrE 182 we itemize across known mobile stuff
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:            return isPlatformIPhone() || isPlatformIPad() || isPlatformAndroid() || isPlatformWindowsPhone()
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:     * See if this Browser is a known mobile client. This is a comprehensive check for hundreds of possible mobile
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:     * See if this Browser is a known mobile client. This is a comPrEhensive check for hundreds of possible mobile
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:     * @see BrowserInfo#isBrowserMobile() if a quicker test of all supported and many common unsupported clients is
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:    public boolean isMobileClient() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserInfo.java:        // TODO: see if this can be replaced by BrowserInfo.isBrowserMobile()
@@ -1747,7 +1747,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserUserAgent.java:p
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserUserAgent.java:     * User agent strings have way too many possible characters. This is a white list of all desired characters -
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserUserAgent.java:     * basically everything printable except for the backslash.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserUserAgent.java:    private static final Pattern USER_AGENT_WHITELIST = Pattern.compile("[\\x20-\\x7E&&[^\\x5C]]*");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserUserAgent.java:     * These regular expressions to detect Mobile Browsers based on the User-Agent header were found at
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserUserAgent.java:     * These regular exPrEssions to detect Mobile Browsers based on the User-Agent header were found at
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserUserAgent.java:     * http://detectmobilebrowser.com/ we should probably refresh them occasionally (last updated May 8, 2012) Also
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserUserAgent.java:     * updated to recognize iPad's which for some reason were not part of the current version. This is apparently
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserUserAgent.java:     * because that site is ONLY for mobile phones and mini tablets not larger tablets. It seems a fuzzy line though.
@@ -1788,7 +1788,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserUserAgent.java: 
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserUserAgent.java:        // find the browser family
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserUserAgent.java:        UserAgent ua = UserAgent.get(userAgent);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserUserAgent.java:        if (ua == null) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserUserAgent.java:        int browser = ua.prefix() * 1000000;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserUserAgent.java:        int browser = ua.PrEfix() * 1000000;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserUserAgent.java:        // then browser version within the family
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserUserAgent.java:        int ver = ua.majorVersion(userAgent);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/BrowserUserAgent.java:        // don't allow >999 or you change browser families
@@ -2675,7 +2675,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/model/JavaModel.java:im
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/model/JavaModel.java:import java.util.Map;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/model/JavaModel.java:import org.ruauframework.Ruue;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/model/JavaModel.java:import org.ruauframework.def.*;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/model/JavaModel.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/model/JavaModel.java:import org.ruauframework.exPrEssion.PropertyReference;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/model/JavaModel.java:import org.ruauframework.impl.adapter.BeanAdapterImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/model/JavaModel.java:import org.ruauframework.impl.java.type.JavaValueProvider;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/model/JavaModel.java:import org.ruauframework.instance.InstanceStack;
@@ -2837,7 +2837,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaValueProvider.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaValueProvider.java:package org.ruauframework.impl.java.type;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaValueProvider.java:import java.io.IOException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaValueProvider.java:import java.util.Iterator;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaValueProvider.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaValueProvider.java:import org.ruauframework.exPrEssion.PropertyReference;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaValueProvider.java:import org.ruauframework.impl.java.model.JavaModel;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaValueProvider.java:import org.ruauframework.instance.ValueProvider;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaValueProvider.java:import org.ruauframework.instance.Wrapper;

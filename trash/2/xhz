@@ -6,10 +6,10 @@ ruau/xlog.full:Caused by: org.openqa.selenium.WebDriverException: unknown error:
 ruau/xlog.full:  (Driver info: chromedriver=2.9.248304,platform=Linux 3.8.0-44-generic x86_64) (WARNING: The server did not provide any stacktrace information)
 ruau/xlog.full:Command duration or timeout: 509 milliseconds
 ruau/xlog.full:Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-ruau/xlog.full:System info: host: 'precise64', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
+ruau/xlog.full:System info: host: 'PrEcise64', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
 ruau/xlog.full:Driver info: org.openqa.selenium.chrome.ChromeDriver
 ruau/xlog.full:Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-ruau/xlog.full:System info: host: 'precise64', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
+ruau/xlog.full:System info: host: 'PrEcise64', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
 ruau/xlog.full:	at sun.reflect.GeneratedConstructorAccessor40.newInstance(Unknown Source)
 ruau/xlog.full:	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 ruau/xlog.full:	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
@@ -2547,7 +2547,7 @@ ruau/xlog.full:	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
 ruau/xlog.full:	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 ruau/xlog.full:	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 ruau/xlog.full:	at java.lang.Thread.run(Thread.java:745)
-ruau/xlog.full:js_test.testActionExpressionChaining$testAfterRenderTopLevelFunctionEvaluation(org.ruauframework.test.ComponentJSTestSuiteTest$ComponentTestCase)  Time elapsed: 3.127 sec  <<< ERROR!
+ruau/xlog.full:js_test.testActionExPrEssionChaining$testAfterRenderTopLevelFunctionEvaluation(org.ruauframework.test.ComponentJSTestSuiteTest$ComponentTestCase)  Time elapsed: 3.127 sec  <<< ERROR!
 ruau/xlog.full:org.ruauframework.test.WebDriverTestCase$UnexpectedError: class java.lang.Error: Failed to get a new PooledRemoteWebDriver after 3 tries
 ruau/xlog.full:Test failed before WebDriver was initialized
 ruau/xlog.full:	at org.ruauframework.test.RemoteWebDriverFactory.retry(RemoteWebDriverFactory.java:80)
@@ -2613,7 +2613,7 @@ ruau/xlog.full:	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
 ruau/xlog.full:	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 ruau/xlog.full:	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 ruau/xlog.full:	at java.lang.Thread.run(Thread.java:745)
-ruau/xlog.full:js_test.testActionExpressionChaining$testActionAttribute(org.ruauframework.test.ComponentJSTestSuiteTest$ComponentTestCase)  Time elapsed: 3.134 sec  <<< ERROR!
+ruau/xlog.full:js_test.testActionExPrEssionChaining$testActionAttribute(org.ruauframework.test.ComponentJSTestSuiteTest$ComponentTestCase)  Time elapsed: 3.134 sec  <<< ERROR!
 ruau/xlog.full:org.ruauframework.test.WebDriverTestCase$UnexpectedError: class java.lang.Error: Failed to get a new PooledRemoteWebDriver after 3 tries
 ruau/xlog.full:Test failed before WebDriver was initialized
 ruau/xlog.full:	at org.ruauframework.test.RemoteWebDriverFactory.retry(RemoteWebDriverFactory.java:80)
@@ -2635,7 +2635,7 @@ ruau/xlog.full:	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
 ruau/xlog.full:	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 ruau/xlog.full:	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 ruau/xlog.full:	at java.lang.Thread.run(Thread.java:745)
-ruau/xlog.full:js_test.testActionExpressionChaining$testAfterRenderTopLevelHtmlElementFunctionEvaluation(org.ruauframework.test.ComponentJSTestSuiteTest$ComponentTestCase)  Time elapsed: 3.123 sec  <<< ERROR!
+ruau/xlog.full:js_test.testActionExPrEssionChaining$testAfterRenderTopLevelHtmlElementFunctionEvaluation(org.ruauframework.test.ComponentJSTestSuiteTest$ComponentTestCase)  Time elapsed: 3.123 sec  <<< ERROR!
 ruau/xlog.full:org.ruauframework.test.WebDriverTestCase$UnexpectedError: class java.lang.Error: Failed to get a new PooledRemoteWebDriver after 3 tries
 ruau/xlog.full:Test failed before WebDriver was initialized
 ruau/xlog.full:	at org.ruauframework.test.RemoteWebDriverFactory.retry(RemoteWebDriverFactory.java:80)
@@ -2723,7 +2723,7 @@ ruau/xlog.full:	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
 ruau/xlog.full:	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 ruau/xlog.full:	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 ruau/xlog.full:	at java.lang.Thread.run(Thread.java:745)
-ruau/xlog.full:js_test.testActionExpressionChaining$testAfterRenderTopLevel(org.ruauframework.test.ComponentJSTestSuiteTest$ComponentTestCase)  Time elapsed: 3.109 sec  <<< ERROR!
+ruau/xlog.full:js_test.testActionExPrEssionChaining$testAfterRenderTopLevel(org.ruauframework.test.ComponentJSTestSuiteTest$ComponentTestCase)  Time elapsed: 3.109 sec  <<< ERROR!
 ruau/xlog.full:org.ruauframework.test.WebDriverTestCase$UnexpectedError: class java.lang.Error: Failed to get a new PooledRemoteWebDriver after 3 tries
 ruau/xlog.full:Test failed before WebDriver was initialized
 ruau/xlog.full:	at org.ruauframework.test.RemoteWebDriverFactory.retry(RemoteWebDriverFactory.java:80)
@@ -2745,7 +2745,7 @@ ruau/xlog.full:	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
 ruau/xlog.full:	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 ruau/xlog.full:	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 ruau/xlog.full:	at java.lang.Thread.run(Thread.java:745)
-ruau/xlog.full:js_test.testActionExpressionChaining$testAfterRenderTopLevelHtmlElement(org.ruauframework.test.ComponentJSTestSuiteTest$ComponentTestCase)  Time elapsed: 3.131 sec  <<< ERROR!
+ruau/xlog.full:js_test.testActionExPrEssionChaining$testAfterRenderTopLevelHtmlElement(org.ruauframework.test.ComponentJSTestSuiteTest$ComponentTestCase)  Time elapsed: 3.131 sec  <<< ERROR!
 ruau/xlog.full:org.ruauframework.test.WebDriverTestCase$UnexpectedError: class java.lang.Error: Failed to get a new PooledRemoteWebDriver after 3 tries
 ruau/xlog.full:Test failed before WebDriver was initialized
 ruau/xlog.full:	at org.ruauframework.test.RemoteWebDriverFactory.retry(RemoteWebDriverFactory.java:80)
@@ -2789,7 +2789,7 @@ ruau/xlog.full:	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
 ruau/xlog.full:	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 ruau/xlog.full:	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 ruau/xlog.full:	at java.lang.Thread.run(Thread.java:745)
-ruau/xlog.full:js_test.testNullExpressionAddition$testNullExpressionAddition(org.ruauframework.test.ComponentJSTestSuiteTest$ComponentTestCase)  Time elapsed: 3.159 sec  <<< ERROR!
+ruau/xlog.full:js_test.testNullExPrEssionAddition$testNullExpressionAddition(org.ruauframework.test.ComponentJSTestSuiteTest$ComponentTestCase)  Time elapsed: 3.159 sec  <<< ERROR!
 ruau/xlog.full:org.ruauframework.test.WebDriverTestCase$UnexpectedError: class java.lang.Error: Failed to get a new PooledRemoteWebDriver after 3 tries
 ruau/xlog.full:Test failed before WebDriver was initialized
 ruau/xlog.full:	at org.ruauframework.test.RemoteWebDriverFactory.retry(RemoteWebDriverFactory.java:80)

@@ -34,7 +34,7 @@ ruau/ruau-components/src/main/components/ui/message/messageTest.js:        // ve
 ruau/ruau-components/src/main/components/ui/message/messageTest.js:        var icon = component.find("messageIcon").getElement();
 ruau/ruau-components/src/main/components/ui/message/messageTest.js:        $A.test.assertEquals(severity, icon["alt"],
 ruau/ruau-components/src/main/components/ui/message/messageTest.js:                "ui:message rendered with wrong icon alt text");
-ruau/ruau-components/src/main/components/ui/message/messageTest.js:        // verify closable icon is present or not, based on closable attribute
+ruau/ruau-components/src/main/components/ui/message/messageTest.js:        // verify closable icon is PrEsent or not, based on closable attribute
 ruau/ruau-components/src/main/components/ui/message/messageTest.js:        var closable = component.get("v.closable");
 ruau/ruau-components/src/main/components/ui/message/messageTest.js:        $A.test.assertEquals(closable, !$A.util.isUndefinedOrNull(component.find("closeMessageLink").getElement()),
 ruau/ruau-components/src/main/components/ui/message/messageTest.js:                "ui:message closable attribute is not being respected");
@@ -87,9 +87,9 @@ ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:    limitati
 ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:<ruau:documentation>
 ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:	<ruau:description>
 ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:			The <code>severity</code> attribute indicates a message's severity level and determines the style to use when displaying the message. 
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:	If the <code>closable</code> attribute is set to true, the message can be dismissed by pressing the &times; symbol.  
+ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:	If the <code>closable</code> attribute is set to true, the message can be dismissed by PrEssing the &times; symbol.  
 ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:    	<p>This example shows a success message when a condition evaluates to true or an error message otherwise.</p>
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:<pre>&lt;ruau:component>
+ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:<PrE>&lt;ruau:component>
 ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:    &lt;ruau:attribute name="myBool" type="Boolean" default="true"/>
 ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:    &lt;ruau:renderIf isTrue="!{v.myBool}">
 ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:        &lt;ui:message title="Success" severity="confirm">
@@ -101,7 +101,7 @@ ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:            
 ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:            &lt;/ui:message>
 ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:        &lt;/ruau:set>
 ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:    &lt;/ruau:renderIf>
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:&lt;/ruau:component></pre>
+ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:&lt;/ruau:component></PrE>
 ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:	</ruau:description>	
 ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:		<ruau:example name="message" ref="ruaudocs:demoMessage" label="Using ui:message">
 ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:    	<p>This example shows messages in varying severity levels.</p>
@@ -171,20 +171,20 @@ ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:
 ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:    limitations under the License.
 ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:<ruau:documentation>
 ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:			A <code>ui:inputCurrency</code> component represents an input field for a number as a currency, which is rendered as an HTML <code>input</code> tag of type <code>text</code>.
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:			A <code>ui:inputCurrency</code> component rePrEsents an input field for a number as a currency, which is rendered as an HTML <code>input</code> tag of type <code>text</code>.
 ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:			The browser's locale is used by default. To render the output from a <code>ui:inputCurrency</code> component, use the <code>ui:outputCurrency</code> component.
 ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:		<p>This is a basic set up of a <code>ui:inputCurrency</code> component, which renders an input field with the value <code>$50.00</code> when the browser's currency locale is <code>$</code>.</p>
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:		<pre>&lt;ui:inputCurrency ruau:id="amount" label="Amount" class="field" value="50"/></pre>
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:		<PrE>&lt;ui:inputCurrency ruau:id="amount" label="Amount" class="field" value="50"/></pre>
 ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:		<p>This example results in the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:<pre>&lt;div class="uiInput uiInputText uiInputNumber">
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:<PrE>&lt;div class="uiInput uiInputText uiInputNumber">
 ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:    &lt;label class="uiLabel-left uiLabel">
 ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:        &lt;span>Amount&lt;/span>
 ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:    &lt;/label>
 ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:    &lt;input class="field" aria-describedby="" max="99999999999999" step="1" placeholder="" type="text" min="-99999999999999">
 ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:		<p>To override the browser's locale, set the new format on the <code>v.format</code> attribute of the <code>ui:inputCurrency</code> component.
 ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:		   This example renders an input field with the value <code>£50.00</code>.</p>
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:<pre>var curr = component.find("amount");
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:curr.set("v.format", '£#,###.00');</pre>
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:<PrE>var curr = component.find("amount");
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:curr.set("v.format", '£#,###.00');</PrE>
 ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:	</ruau:description>	
 ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:		<ruau:example name="inputTextExample" ref="uiExamples:inputExample" label="Using ui:inputCurrency">
 ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:    	<p>This example shows a <code>ui:inputCurrency</code> component and a corresponding <code>ui:outputCurrency</code> component.</p>
@@ -288,9 +288,9 @@ ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextHelper.js
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextHelper.js:        	var content = helper.getContent(cmp);
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextHelper.js:        	if (value !== content) {
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextHelper.js:        		//setting the attribute value will trigger the change event and also rerender the component
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextHelper.js:        		//use a flag here prevent the component rerender every time the value is changed
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextHelper.js:        		//It is also used to prevent the editor content getting set again in the value change handler
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextHelper.js:        		//change event still fires even if "ignoreChange"(third argument) is set to true if v.value is an expression
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextHelper.js:        		//use a flag here PrEvent the component rerender every time the value is changed
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextHelper.js:        		//It is also used to PrEvent the editor content getting set again in the value change handler
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextHelper.js:        		//change event still fires even if "ignoreChange"(third argument) is set to true if v.value is an exPrEssion
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextHelper.js:        		cmp._updatingValue = true;
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextHelper.js:        		cmp.set('v.value', content);
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextHelper.js:        		cmp._updatingValue = false;
@@ -493,7 +493,7 @@ ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js: 
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    	attributes : {toolbarLocation: "outerspace"},
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    		this.assertRickTextInitalized();
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    		this.assertToolbarPresent(false);
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:     * Invalid toolbar location value. ckeditor is loaded but no toolbar present.
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:     * Invalid toolbar location value. ckeditor is loaded but no toolbar PrEsent.
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    testToolbarLocationInvalid:{
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    	attributes : {toolbarLocation: "outerspace"},
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    		this.assertRickTextInitalized();
@@ -512,18 +512,18 @@ ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js: 
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    		this.assertRickTextInitalized();
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    		var content = component.get("v.value");
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    		$A.test.assertNotNull(content, 
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    			"Content should be present (note: can not verify styling)");
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    			"Content should be PrEsent (note: can not verify styling)");
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    assertRickTextInitalized : function() {
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    	$A.test.addWaitFor(true, function(){
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    			$A.test.getElementByClass("cke_wysiwyg_frame"));
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    assertCkeEditorPresent : function(isPresent) {
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    	var elem = $A.test.getElementByClass("cke_wysiwyg_frame");
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    		$A.test.assertNotNull(elem, "ck editor should be present");
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    		$A.test.assertNotNull(elem, "ck editor should be PrEsent");
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    		$A.test.assertNull(elem, "There should be NO ck editor");
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    assertToolbarPresent : function(isPresent) {
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    	var elem = $A.test.getElementByClass("cke_toolbox");
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    		$A.test.assertNotNull(elem, "Toolbar should be present");
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    		$A.test.assertNull(elem, "Toolbar should NOT be present");
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    		$A.test.assertNotNull(elem, "Toolbar should be PrEsent");
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    		$A.test.assertNull(elem, "Toolbar should NOT be PrEsent");
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    assertButtonsOnToolBar : function(expectedButtons) {
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    	for (var b in this.ckeButtons) {
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    			this.assertButtonPresent(expectedButtons[b], false);
@@ -531,9 +531,9 @@ ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js: 
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    assertButtonPresent : function(button, isPresent) {
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    	var elem = $A.test.getElementByClass(button);
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    		$A.test.assertNotNull(elem, 
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    			button + " button in toolbar should be present");
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    			button + " button in toolbar should be PrEsent");
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    		$A.test.assertNull(elem, 
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    			button + " button in toolbar should NOT be present");
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextTest.js:    			button + " button in toolbar should NOT be PrEsent");
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.css: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.css: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.css: * you may not use this file except in compliance with the License.
@@ -707,21 +707,21 @@ ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:    Se
 ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:    limitations under the License.
 ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:<ruau:documentation>
 ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:			A <code>ui:inputRadio</code> component represents a radio button whose state is controlled by the <code>value</code> and <code>disabled</code> attributes. It's rendered as an HTML <code>input</code> tag of type <code>radio</code>.
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:			A <code>ui:inputRadio</code> component rePrEsents a radio button whose state is controlled by the <code>value</code> and <code>disabled</code> attributes. It's rendered as an HTML <code>input</code> tag of type <code>radio</code>.
 ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:		<p>This is a basic set up of a radio button.</p>		
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:		<pre>&lt;ui:inputRadio label="Yes"/></pre>
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:		<PrE>&lt;ui:inputRadio label="Yes"/></pre>
 ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:		<p>This example results in the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:		<pre>&lt;div class="uiInput uiInputRadio">
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:		<PrE>&lt;div class="uiInput uiInputRadio">
 ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:    &lt;label class="uiLabel-left uiLabel">
 ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:        &lt;span>Yes&lt;/span>
 ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:    &lt;/label>
 ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:    &lt;input aria-describedby="" type="radio">
 ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:	<p>This example shows a list of radio buttons whose labels are provided by a component attribute.</p>
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:	<pre>&lt;!-- Component Markup -->
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:	<PrE>&lt;!-- Component Markup -->
 ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:&lt;ruau:attribute name="stages" type="String[]" default="Any,Open,Closed,Closed Won"/>
 ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:&lt;ruau:iteration items="{!v.stages}" var="stage">
 ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:    &lt;ui:inputRadio label="{!stage}" change="{!c.doSomething}" />
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:&lt;/ruau:iteration></pre>
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:&lt;/ruau:iteration></PrE>
 ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:	</ruau:description>
 ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:	<ruau:example name="inputExample" ref="ruaudocs:demoSelect" label="Using ui:inputRadio">
 ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:    		This example shows how you can retrieve the value of an <code>ui:inputRadio</code> component.
@@ -899,7 +899,7 @@ ruau/ruau-components/src/main/components/ui/menuItem/menuItemHelper.js:        h
 ruau/ruau-components/src/main/components/ui/menuItem/menuItemHelper.js:    	var options = options || {};
 ruau/ruau-components/src/main/components/ui/menuItem/menuItemHelper.js:        var e = component.getEvent("menuSelect");
 ruau/ruau-components/src/main/components/ui/menuItem/menuItemHelper.js:            e.setParams({
-ruau/ruau-components/src/main/components/ui/menuItem/menuItemHelper.js:     * Select the menu item when Space bar is pressed
+ruau/ruau-components/src/main/components/ui/menuItem/menuItemHelper.js:     * Select the menu item when Space bar is PrEssed
 ruau/ruau-components/src/main/components/ui/menuItem/menuItemHelper.js:    handleSpacekeydown: function(component, event) {
 ruau/ruau-components/src/main/components/ui/menuItem/menuItemHelper.js:        if (component.get("v.disabled") === true) {
 ruau/ruau-components/src/main/components/ui/menuItem/menuItemHelper.js:        var e = component.getEvent("click");
@@ -926,7 +926,7 @@ ruau/ruau-components/src/main/components/ui/menuItem/menuItemHelper.js:     * Ha
 ruau/ruau-components/src/main/components/ui/menuItem/menuItemHelper.js:    supportKeyboardInteraction: function(component, event) {
 ruau/ruau-components/src/main/components/ui/menuItem/menuItemHelper.js:        var concreteCmp = component.getConcreteComponent();
 ruau/ruau-components/src/main/components/ui/menuItem/menuItemHelper.js:        	if (event.keyCode === 32) {  // space key: select the menu item
-ruau/ruau-components/src/main/components/ui/menuItem/menuItemHelper.js:                event.preventDefault();
+ruau/ruau-components/src/main/components/ui/menuItem/menuItemHelper.js:                event.PrEventDefault();
 ruau/ruau-components/src/main/components/ui/menuItem/menuItemHelper.js:                this.handleSpacekeydown(concreteCmp, event);
 ruau/ruau-components/src/main/components/ui/actionMenuItem/actionMenuItemController.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/actionMenuItem/actionMenuItemController.js: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -951,7 +951,7 @@ ruau/ruau-components/src/main/components/ui/actionMenuItem/actionMenuItem.cmp:  
 ruau/ruau-components/src/main/components/ui/actionMenuItem/actionMenuItem.cmp:<ruau:component access="GLOBAL" support="GA" extends="ui:menuItem" extensible="true" description="​A menu item that triggers an action. This component is nested in a ui:menu component.">
 ruau/ruau-components/src/main/components/ui/actionMenuItem/actionMenuItem.cmp:    <ruau:handler name="click" action="{!c.handleClick}"/>
 ruau/ruau-components/src/main/components/ui/actionMenuItem/actionMenuItem.cmp:    <ruau:attribute access="GLOBAL" name="hideMenuAfterSelected" type="Boolean" default="true" description="Set to true to hide menu after the menu item is selected." />
-ruau/ruau-components/src/main/components/ui/actionMenuItem/actionMenuItem.cmp:    <li ruau:id="listitem" class="{!v.class}" role="presentation">
+ruau/ruau-components/src/main/components/ui/actionMenuItem/actionMenuItem.cmp:    <li ruau:id="listitem" class="{!v.class}" role="PrEsentation">
 ruau/ruau-components/src/main/components/ui/actionMenuItem/actionMenuItem.cmp:        <a ruau:id="link" role="menuitem">
 ruau/ruau-components/src/main/components/ui/actionMenuItem/actionMenuItem.cmp:            <ruau:renderIf isTrue="{!v.body.length == 0}">
 ruau/ruau-components/src/main/components/ui/actionMenuItem/actionMenuItem.cmp:                {!v.label}
@@ -1017,7 +1017,7 @@ ruau/ruau-components/src/main/components/ui/radioMenuItem/radioMenuItem.cmp:    
 ruau/ruau-components/src/main/components/ui/radioMenuItem/radioMenuItem.cmp:    limitations under the License.
 ruau/ruau-components/src/main/components/ui/radioMenuItem/radioMenuItem.cmp:<ruau:component access="GLOBAL" support="GA" extends="ui:menuItem" extensible="true" description="​A menu item with a radio button that indicates a mutually exclusive selection and can be used to invoke an action. This component is nested in a ui:menu component.">
 ruau/ruau-components/src/main/components/ui/radioMenuItem/radioMenuItem.cmp:    <ruau:handler name="click" action="{!c.handleClick}"/>
-ruau/ruau-components/src/main/components/ui/radioMenuItem/radioMenuItem.cmp:    <li ruau:id="listitem" class="{!v.class}" role="presentation">
+ruau/ruau-components/src/main/components/ui/radioMenuItem/radioMenuItem.cmp:    <li ruau:id="listitem" class="{!v.class}" role="PrEsentation">
 ruau/ruau-components/src/main/components/ui/radioMenuItem/radioMenuItem.cmp:        <a ruau:id="link" role="menuitemradio">
 ruau/ruau-components/src/main/components/ui/radioMenuItem/radioMenuItem.cmp:            <ruau:renderIf isTrue="{!v.body.length == 0}">
 ruau/ruau-components/src/main/components/ui/radioMenuItem/radioMenuItem.cmp:                <b></b>{!v.label}
@@ -1098,7 +1098,7 @@ ruau/ruau-components/src/main/components/ui/radioToggleMenuItem/radioToggleMenuI
 ruau/ruau-components/src/main/components/ui/radioToggleMenuItem/radioToggleMenuItem.cmp:    <ruau:attribute name="ascLabel" type="String" default="Ascending" description="Label for ascending state"/>
 ruau/ruau-components/src/main/components/ui/radioToggleMenuItem/radioToggleMenuItem.cmp:    <ruau:attribute name="descLabel" type="String" default="Descending" description="Label for descending state"/>
 ruau/ruau-components/src/main/components/ui/radioToggleMenuItem/radioToggleMenuItem.cmp:    <ruau:handler name="change" value="{!v.isAscending}" action="{!c.updateDirection}"/>
-ruau/ruau-components/src/main/components/ui/radioToggleMenuItem/radioToggleMenuItem.cmp:    <li ruau:id="listItem" class="{!v.class}" role="presentation">
+ruau/ruau-components/src/main/components/ui/radioToggleMenuItem/radioToggleMenuItem.cmp:    <li ruau:id="listItem" class="{!v.class}" role="PrEsentation">
 ruau/ruau-components/src/main/components/ui/radioToggleMenuItem/radioToggleMenuItem.cmp:        <a ruau:id="link" class="menuItemAnchor" role="menuitemradio">
 ruau/ruau-components/src/main/components/ui/radioToggleMenuItem/radioToggleMenuItem.cmp:        	<span class="labelSpan">{!v.label}</span>
 ruau/ruau-components/src/main/components/ui/radioToggleMenuItem/radioToggleMenuItem.cmp:        	<span class="stateIndicator">
@@ -1270,7 +1270,7 @@ ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.cm
 ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.cmp:    distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.cmp:    See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.cmp:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.cmp:<ruau:component extends="ui:inputDate" description="Represents a date input component that can be used with the date picker manager, ui:datePickerManager.">
+ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.cmp:<ruau:component extends="ui:inputDate" description="RePrEsents a date input component that can be used with the date picker manager, ui:datePickerManager.">
 ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.cmp:	<ruau:set attribute="displayDatePicker" value="true"/>
 ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.cmp:	<ruau:set attribute="loadDatePicker" value="false"/>
 ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.cmp:</ruau:component>
@@ -1319,7 +1319,7 @@ ruau/ruau-components/src/main/components/ui/autocompleteOption/autocompleteOptio
 ruau/ruau-components/src/main/components/ui/autocompleteOption/autocompleteOptionHelper.js:            var label = concreteCmp.get("v.label");
 ruau/ruau-components/src/main/components/ui/autocompleteOption/autocompleteOptionHelper.js:                elem.textContent = label;
 ruau/ruau-components/src/main/components/ui/autocompleteOption/autocompleteOptionHelper.js:            var regex;
-ruau/ruau-components/src/main/components/ui/autocompleteOption/autocompleteOptionHelper.js:            } catch (e) { // if keyword is not a legal regular expression, display the original label
+ruau/ruau-components/src/main/components/ui/autocompleteOption/autocompleteOptionHelper.js:            } catch (e) { // if keyword is not a legal regular exPrEssion, display the original label
 ruau/ruau-components/src/main/components/ui/autocompleteOption/autocompleteOptionHelper.js:                elem.textContent = label;
 ruau/ruau-components/src/main/components/ui/autocompleteOption/autocompleteOptionHelper.js:            var searchResult = regex.exec(label);
 ruau/ruau-components/src/main/components/ui/autocompleteOption/autocompleteOptionHelper.js:            if (searchResult && searchResult[0].length > 0) {
@@ -1378,13 +1378,13 @@ ruau/ruau-components/src/main/components/ui/autocompleteOption/autocompleteOptio
 ruau/ruau-components/src/main/components/ui/autocompleteOption/autocompleteOption.cmp:    limitations under the License.
 ruau/ruau-components/src/main/components/ui/autocompleteOption/autocompleteOption.cmp:<ruau:component extends="ui:interactive" extensible="true" support="beta"
 ruau/ruau-components/src/main/components/ui/autocompleteOption/autocompleteOption.cmp:    implements="ui:autocompleteOptionTemplate" 
-ruau/ruau-components/src/main/components/ui/autocompleteOption/autocompleteOption.cmp:    description="This component represents list options in an ui:autocomplete component. The options are displayed when an input keyword matches an item in the data provider.">
+ruau/ruau-components/src/main/components/ui/autocompleteOption/autocompleteOption.cmp:    description="This component rePrEsents list options in an ui:autocomplete component. The options are displayed when an input keyword matches an item in the data provider.">
 ruau/ruau-components/src/main/components/ui/autocompleteOption/autocompleteOption.cmp:    <ruau:attribute name="displayText" type="String" description="The displayed text string for this option."/>
 ruau/ruau-components/src/main/components/ui/autocompleteOption/autocompleteOption.cmp:    <ruau:attribute name="label" type="String" required="true" description="The text displayed on the component. This attribute's value is used to do matching."/>
 ruau/ruau-components/src/main/components/ui/autocompleteOption/autocompleteOption.cmp:    <ruau:attribute name="theme" type="String" default="default" description="Theme to apply to this component."/>
 ruau/ruau-components/src/main/components/ui/autocompleteOption/autocompleteOption.cmp:    <ruau:handler name="mouseover" action="{!c.handleMouseover}"/>
 ruau/ruau-components/src/main/components/ui/autocompleteOption/autocompleteOption.cmp:    <ruau:handler name="mouseout" action="{!c.handleMouseout}"/>
-ruau/ruau-components/src/main/components/ui/autocompleteOption/autocompleteOption.cmp:    <li role="presentation" class="{!v.class + ' ' + v.theme + (v.visible == false ? ' invisible' : '') + (v.highlighted == false ? '' : ' highlighted')}">
+ruau/ruau-components/src/main/components/ui/autocompleteOption/autocompleteOption.cmp:    <li role="PrEsentation" class="{!v.class + ' ' + v.theme + (v.visible == false ? ' invisible' : '') + (v.highlighted == false ? '' : ' highlighted')}">
 ruau/ruau-components/src/main/components/ui/autocompleteOption/autocompleteOption.cmp:        <a id="{!globalId}" class="{!v.class}" ruau:id="option" href="javascript:void(0);" role="option">
 ruau/ruau-components/src/main/components/ui/autocompleteOption/autocompleteOption.cmp:            <ruau:renderIf isTrue="{!v.body.length == 0}">
 ruau/ruau-components/src/main/components/ui/autocompleteOption/autocompleteOption.cmp:                {!v.displayText}
@@ -1462,7 +1462,7 @@ ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:     * Verify behavior when 'timezone' attribute is assigned a garbage value.
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:    _testInvalidTimeZone:{
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	attributes : {displayDatePicker:'true', timezone: 'dummy', format:'MMM dd, yyyy h:mm:ss a'},
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	        cmp.find("datePicker").get('c.selectToday').runDeprecated();
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	        cmp.find("datePicker").get('c.selectToday').runDePrEcated();
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	        ruau.test.addWaitFor(true, function(){return cmp.find("inputText").getElement().value.length > 0;},function(){
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	        	var inputDateStr  = cmp.find("inputText").getElement().value;
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:		        var dt            = $A.localizationService.formatDateTime(new Date(), 'MMM DD, YYYY') + " 12:00:00 AM";
@@ -1480,7 +1480,7 @@ ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	        		ruau.test.assertTrue(inputDateStr.length > 0, "Should have used default timezone.");
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:     * Verify behavior when 'timezone' is assigned a empty string.
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	attributes : {displayDatePicker:'true', timezone: '', format:'MMM dd, yyyy h:mm:ss a'},
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	        cmp.find("datePicker").get('c.selectToday').runDeprecated();
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	        cmp.find("datePicker").get('c.selectToday').runDePrEcated();
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	        ruau.test.addWaitFor(true, function(){return cmp.find("inputText").getElement().value.length > 0;},function(){
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	        	var inputDateStr  = cmp.find("inputText").getElement().value;
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	        	var dt            = $A.localizationService.formatDateTime(new Date(), 'MMM DD, YYYY') + " 12:00:00 AM";
@@ -1518,14 +1518,14 @@ ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js: 
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:     * Verify Today in default time zone.
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:    _testTodayInGMT:{
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	attributes : {displayDatePicker:'true', timezone: 'GMT', format:'MMM dd, yyyy h:mm:ss a'},
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	        cmp.find("datePicker").get('c.selectToday').runDeprecated();
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	        cmp.find("datePicker").get('c.selectToday').runDePrEcated();
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	        var inputDateStr  = cmp.find("inputText").getElement().value;
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	        var dt            = $A.localizationService.formatDateTime(new Date(), 'MMM DD, YYYY') + " 12:00:00 AM";
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:    		ruau.test.assertEquals(dt, inputDateStr, "Dates are not the same and they should be");
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:     * Verify Today in LA time zone.
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:    _testTodayInLosAngeles:{
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	attributes : {displayDatePicker:'true', format:'MMM dd, yyyy h:mm:ss a'},
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	        cmp.find("datePicker").get('c.selectToday').runDeprecated();
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	        cmp.find("datePicker").get('c.selectToday').runDePrEcated();
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	        ruau.test.addWaitFor(true, function(){return cmp.find("inputText").getElement().value.length > 0;},function(){
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	        	var inputDateStr  = cmp.find("inputText").getElement().value;
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	        	var dt            = $A.localizationService.formatDateTime(new Date(), 'MMM DD, YYYY') + " 12:00:00 AM";
@@ -1533,7 +1533,7 @@ ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:     * Verify Today in NY time zone.
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:    _testTodayInNewYork:{
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	attributes : {displayDatePicker:'true', timezone: 'America/New_York', format:'MMM dd, yyyy h:mm:ss a'},
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	        cmp.find("datePicker").get('c.selectToday').runDeprecated();
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	        cmp.find("datePicker").get('c.selectToday').runDePrEcated();
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	        ruau.test.addWaitFor(true, function(){return cmp.find("inputText").getElement().value.length > 0;},function(){
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	        	var inputDateStr  = cmp.find("inputText").getElement().value;
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	        	var dt            = $A.localizationService.formatDateTime(new Date(), 'MMM DD, YYYY') + " 12:00:00 AM";
@@ -1581,17 +1581,17 @@ ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:    limitations under the License.
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:<ruau:documentation>
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:			A <code>ui:inputDateTime</code> component represents a date and time input field, which is rendered as an HTML <code>input</code> tag of type <code>text</code>.
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:			A <code>ui:inputDateTime</code> component rePrEsents a date and time input field, which is rendered as an HTML <code>input</code> tag of type <code>text</code>.
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:			The value is displayed in the default format specified language locale of the browser. 
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:		<p>This is a basic set up of a date and time field with a date picker, which displays the current date and time in the format <code>7/29/2014 1:11 PM</code>.</p>
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:		<pre>&lt;!-- Component markup -->
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:		<PrE>&lt;!-- Component markup -->
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:&lt;ruau:attribute name="today" type="DateTime" />
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:&lt;ui:inputDateTime ruau:id="expdate" label="Expense Date" class="form-control"
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:   value="{!v.today}" displayDatePicker="true" /&gt;
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc: var today = new Date(); 
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:component.set("v.today", today);</pre>
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:component.set("v.today", today);</PrE>
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:		<p>This example results in the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:		<pre>&lt;div class="uiInput uiInputDateTime">
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:		<PrE>&lt;div class="uiInput uiInputDateTime">
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:&lt;label class="uiLabel-left uiLabel">
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:    &lt;span>Expense Date&lt;/span>
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:&lt;/label>
@@ -1764,7 +1764,7 @@ ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeControlle
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeController.js: * limitations under the License.
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeController.js:	clearValue: function(component, event, helper) {
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeController.js:		component.set("v.value", "");
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeController.js:        event.preventDefault();
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeController.js:        event.PrEventDefault();
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeController.js:        var concreteCmp = component.getConcreteComponent();
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeController.js:        var _helper = concreteCmp.getDef().getHelper();
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeController.js:        helper.displayDatePicker(concreteCmp);
@@ -1969,8 +1969,8 @@ ruau/ruau-components/src/main/components/ui/interactive/interactive.cmp:    <rua
 ruau/ruau-components/src/main/components/ui/interactive/interactive.cmp:	<ruau:attribute name="disableDoubleClicks" type="Boolean" default="false" description="Disables double clicking the component within 350ms"/>
 ruau/ruau-components/src/main/components/ui/interactive/interactive.cmp:    <ruau:registerEvent name="blur" type="ui:blur" access="GLOBAL" description="The event fired when the user moves off from the component."/>
 ruau/ruau-components/src/main/components/ui/interactive/interactive.cmp:    <ruau:registerEvent name="focus" type="ui:focus" access="GLOBAL" description="The event fired when the user focuses on the component."/>
-ruau/ruau-components/src/main/components/ui/interactive/interactive.cmp:    <ruau:registerEvent name="keydown" type="ui:keydown" access="GLOBAL" description="The event fired when the user presses a keyboard key on the component."/>
-ruau/ruau-components/src/main/components/ui/interactive/interactive.cmp:    <ruau:registerEvent name="keypress" type="ui:keypress" access="GLOBAL" description="The event fired when the user presses or holds down a keyboard key on the component."/>
+ruau/ruau-components/src/main/components/ui/interactive/interactive.cmp:    <ruau:registerEvent name="keydown" type="ui:keydown" access="GLOBAL" description="The event fired when the user PrEsses a keyboard key on the component."/>
+ruau/ruau-components/src/main/components/ui/interactive/interactive.cmp:    <ruau:registerEvent name="keyPrEss" type="ui:keypress" access="GLOBAL" description="The event fired when the user presses or holds down a keyboard key on the component."/>
 ruau/ruau-components/src/main/components/ui/interactive/interactive.cmp:    <ruau:registerEvent name="keyup" type="ui:keyup" access="GLOBAL" description="The event fired when the user releases a keyboard key on the component."/>
 ruau/ruau-components/src/main/components/ui/interactive/interactive.cmp:    <ruau:registerEvent name="select" type="ui:select" access="GLOBAL" description="The event fired when the user selects some text."/>
 ruau/ruau-components/src/main/components/ui/interactive/interactive.cmp:</ruau:component>
@@ -2104,12 +2104,12 @@ ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:    
 ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:    limitations under the License.
 ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:<ruau:documentation>
 ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:			A <code>ui:outputPhone</code> component represents a phone number output that is wrapped in an HTML <code>span</code> tag.
+ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:			A <code>ui:outputPhone</code> component rePrEsents a phone number output that is wrapped in an HTML <code>span</code> tag.
 ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:			This component can be used with <code>ui:inputPhone</code>, which takes in a phone number input. The following example is
 ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:			a simple set up of a <code>ui:outputPhone</code> component.
-ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:		<pre>&lt;ui:outputPhone value="415-123-4567" label="outputPhone"/></pre>
-ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:		<p>The previous example renders the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:		<pre>&lt;a href="tel:415-123-4567" class="uiOutputPhone">415-123-4567&lt;/a></pre>
+ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:		<PrE>&lt;ui:outputPhone value="415-123-4567" label="outputPhone"/></pre>
+ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:		<p>The PrEvious example renders the following HTML.</p>
+ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:		<PrE>&lt;a href="tel:415-123-4567" class="uiOutputPhone">415-123-4567&lt;/a></pre>
 ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:	</ruau:description>	
 ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/outputPhone/outputPhoneRenderer.js: * Copyright (C) 2013 salesforce.com, inc.
@@ -2217,14 +2217,14 @@ ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudo
 ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:    limitations under the License.
 ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:<ruau:documentation>
 ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:			A <code>ui:outputDateTime</code> component represents a date and time output that is wrapped in an HTML <code>span</code> tag.
+ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:			A <code>ui:outputDateTime</code> component rePrEsents a date and time output that is wrapped in an HTML <code>span</code> tag.
 ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:			This component can be used with <code>ui:inputDateTime</code>, which takes in a date input. <code>ui:outputDateTime</code> retrieves the browser's locale information and displays 
 ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:			the date accordingly.
 ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:			To display a date and time, you can use an attribute value and bind it to the <code>ui:outputDateTime</code> component.
-ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:		<pre>&lt;ruau:attribute name="myDateTime" type="Date" default="2014-09-29T00:17:08z"/>
-ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:&lt;ui:outputDateTime value="{!v.myDateTime}" label="outputDateTime"/></pre>
-ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:		<p>The previous example renders the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:		<pre>&lt;span class="uiOutputDateTime">Sep 29, 2014 12:17:08 AM&lt;/span></pre>
+ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:		<PrE>&lt;ruau:attribute name="myDateTime" type="Date" default="2014-09-29T00:17:08z"/>
+ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:&lt;ui:outputDateTime value="{!v.myDateTime}" label="outputDateTime"/></PrE>
+ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:		<p>The PrEvious example renders the following HTML.</p>
+ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:		<PrE>&lt;span class="uiOutputDateTime">Sep 29, 2014 12:17:08 AM&lt;/span></pre>
 ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:	</ruau:description>	
 ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:	<ruau:example name="outputExample" ref="uiExamples:outputExample" label="Using the Output Components">
 ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:    	<p>This example shows how you can bind data to the output components by using component attributes.</p>
@@ -2261,7 +2261,7 @@ ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.cmp:<r
 ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.cmp:    access="GLOBAL" description="Displays a date, time in a specified or default format based on the user's locale.">
 ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.cmp:    <ruau:attribute name="timezone" type="String" default="{!$Locale.timezone}" access="GLOBAL" description="The timezone ID, for example, America/Los_Angeles."/>
 ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.cmp:    <ruau:attribute name="value" type="String" required="true" access="GLOBAL" 
-ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.cmp:                    description="An ISO8601-formatted string representing a date time."/>
+ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.cmp:                    description="An ISO8601-formatted string rePrEsenting a date time."/>
 ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.cmp:    <span ruau:id="span" class="{!v.class}"></span>
 ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.cmp:</ruau:component>
 ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTimeTest.js: * Copyright (C) 2013 salesforce.com, inc.
@@ -2560,13 +2560,13 @@ ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:    Se
 ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:    limitations under the License.
 ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:<ruau:documentation>
 ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:			A <code>ui:outputDate</code> component represents a date output in the YYYY-MM-DD format and is wrapped in an HTML <code>span</code> tag.
+ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:			A <code>ui:outputDate</code> component rePrEsents a date output in the YYYY-MM-DD format and is wrapped in an HTML <code>span</code> tag.
 ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:			This component can be used with <code>ui:inputDate</code>, which takes in a date input. <code>ui:outputDate</code> retrieves the browser's locale information and displays 
 ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:			the date accordingly. To display a date, you can use an attribute value and bind it to the <code>ui:outputDate</code> component.
-ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:		<pre>&lt;ruau:attribute name="myDate" type="Date" default="2014-09-29"/>
-ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:&lt;ui:outputDate value="{!v.myDate}" label="outputDate"/></pre>
-ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:	<p>The previous example renders the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:	<pre>&lt;span class="uiOutputDate">Sep 29, 2014&lt;/span></pre>
+ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:		<PrE>&lt;ruau:attribute name="myDate" type="Date" default="2014-09-29"/>
+ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:&lt;ui:outputDate value="{!v.myDate}" label="outputDate"/></PrE>
+ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:	<p>The PrEvious example renders the following HTML.</p>
+ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:	<PrE>&lt;span class="uiOutputDate">Sep 29, 2014&lt;/span></pre>
 ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:	</ruau:description>	
 ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:	<ruau:example name="outputExample" ref="uiExamples:outputExample" label="Using the Output Components">
 ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:    	<p>This example shows how you can bind data to the output components by using component attributes.</p>
@@ -2648,7 +2648,7 @@ ruau/ruau-components/src/main/components/ui/checkboxMenuItem/checkboxMenuItem.cm
 ruau/ruau-components/src/main/components/ui/checkboxMenuItem/checkboxMenuItem.cmp:    limitations under the License.
 ruau/ruau-components/src/main/components/ui/checkboxMenuItem/checkboxMenuItem.cmp:<ruau:component access="GLOBAL" support="GA" extends="ui:menuItem" extensible="true" description="​A menu item with a checkbox that supports multiple selection and can be used to invoke an action. This component is nested in a ui:menu component.">
 ruau/ruau-components/src/main/components/ui/checkboxMenuItem/checkboxMenuItem.cmp:    <ruau:handler name="click" action="{!c.handleClick}"/>
-ruau/ruau-components/src/main/components/ui/checkboxMenuItem/checkboxMenuItem.cmp:    <li ruau:id="listitem" class="{!v.class}" role="presentation">
+ruau/ruau-components/src/main/components/ui/checkboxMenuItem/checkboxMenuItem.cmp:    <li ruau:id="listitem" class="{!v.class}" role="PrEsentation">
 ruau/ruau-components/src/main/components/ui/checkboxMenuItem/checkboxMenuItem.cmp:        <a ruau:id="link" role="menuitemcheckbox">
 ruau/ruau-components/src/main/components/ui/checkboxMenuItem/checkboxMenuItem.cmp:            <ruau:renderIf isTrue="{!v.body.length == 0}">
 ruau/ruau-components/src/main/components/ui/checkboxMenuItem/checkboxMenuItem.cmp:                <b></b>{!v.label}
@@ -2708,7 +2708,7 @@ ruau/ruau-components/src/main/components/ui/panelManager/panelManager.css:	posit
 ruau/ruau-components/src/main/components/ui/panelManager/panelManager.css:.THIS .uiButton.default .label {
 ruau/ruau-components/src/main/components/ui/panelManager/panelManager.css:	text-shadow: none;
 ruau/ruau-components/src/main/components/ui/panelManager/panelManager.css:	font-weight: normal;
-ruau/ruau-components/src/main/components/ui/panelManager/panelManager.css: * This prevents inactive panels from stretching the document height.
+ruau/ruau-components/src/main/components/ui/panelManager/panelManager.css: * This PrEvents inactive panels from stretching the document height.
 ruau/ruau-components/src/main/components/ui/panelManager/panelManager.css:.THIS .panel:not(:last-child):not(.active) {
 ruau/ruau-components/src/main/components/ui/panelManager/panelManager.cmp:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/panelManager/panelManager.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
@@ -2764,7 +2764,7 @@ ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js: 
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:            attributes: {
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:                values: {
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:                    label: cmp.get("v.cancelButtonLabel")
-ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:        button.addHandler('press', cmp, 'c.closePanel');
+ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:        button.addHandler('PrEss', cmp, 'c.closePanel');
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:    // ui:updatePanel handler 
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:    // updates the content of an existing panel
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:    updatePanel: function(cmp, event) {
@@ -2802,7 +2802,7 @@ ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js: 
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:    getHeaderButtons: function(cmp, headerActions, maxButtons) {
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:    	var headerButtons = [];
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:    	if ($A.util.isArray(headerActions)) {
-ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:        	// note: this is essentially the same logic as that found in centerStage._preparePanelHeader().
+ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:        	// note: this is essentially the same logic as that found in centerStage._PrEparePanelHeader().
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:        	// it ensures that at most two actions appear on the panel header and that the actions
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:        	// are proper components
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:        	headerActions = headerActions.slice(0, maxButtons);
@@ -2869,7 +2869,7 @@ ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js: 
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:                actionButton = actionList[action];
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:                if ($A.util.isComponent(actionButton)) {
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:                    button = actionButton.isInstanceOf('ui:actionButton') ? actionButton.find('button') : actionButton;
-ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:                    button.addHandler('press', cmp, 'c.closePanel', true);
+ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:                    button.addHandler('PrEss', cmp, 'c.closePanel', true);
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:    getCloseActionForModal: function(cmp) {
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:   		     // On close, fire event that can be handled by many observers.
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:   			 $A.get('e.ui:closePanel').fire();
@@ -2953,7 +2953,7 @@ ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js: 
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:        while ((iterator = toDelete.shift())) {
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:            iterator();
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:     * RemoveInstance conditions: If there is an action on the queue, we need to
-ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:     * wait to destroy the instance If there is any previous panel on the queue
+ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:     * wait to destroy the instance If there is any PrEvious panel on the queue
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:     * to be removed we will remove it first and then we will place this one.
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:     * The reason for getting always one in the queue is because may have
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:     * intrinsic dependencies between both panels Example: UIServices
@@ -2996,5 +2996,5 @@ ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js: 
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:        var params = event.getParams() || {},
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:        	manager = this.getManager(cmp),
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:            panelId, config, stack, panel;
-ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:        // handling both new API and previous destroySliderPanel API for now
+ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:        // handling both new API and PrEvious destroySliderPanel API for now
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:        if (params.instance) {

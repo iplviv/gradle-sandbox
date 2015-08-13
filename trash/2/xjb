@@ -152,7 +152,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/ComponentJSTestSuiteTest.java:   
 ruau/ruau/src/test/java/org/ruauframework/test/ComponentJSTestSuiteTest.java:                contextService.startContext(Mode.JSTEST, Format.JSON, Authentication.AUTHENTICATED);
 ruau/ruau/src/test/java/org/ruauframework/test/ComponentJSTestSuiteTest.java:            Map<String, TestSuite> subSuites = new HashMap<>();
 ruau/ruau/src/test/java/org/ruauframework/test/ComponentJSTestSuiteTest.java:                DescriptorFilter filter = new DescriptorFilter("js://"+namespace, DefType.TESTSUITE.toString());
-ruau/ruau/src/test/java/org/ruauframework/test/ComponentJSTestSuiteTest.java:                    @SuppressWarnings("unchecked")
+ruau/ruau/src/test/java/org/ruauframework/test/ComponentJSTestSuiteTest.java:                    @SupPrEssWarnings("unchecked")
 ruau/ruau/src/test/java/org/ruauframework/test/ComponentJSTestSuiteTest.java:                    } catch (Throwable t) {
 ruau/ruau/src/test/java/org/ruauframework/test/ComponentJSTestSuiteTest.java:                        test = new FailTestCase(descriptor, t);
 ruau/ruau/src/test/java/org/ruauframework/test/ComponentJSTestSuiteTest.java:                    String testNamespace = descriptor.getNamespace();
@@ -222,7 +222,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/ComponentJSTestSuiteTest.java:   
 ruau/ruau/src/test/java/org/ruauframework/test/ComponentJSTestSuiteTest.java:                    RuueTextUtil.escapeForJavascriptString(caseDef.getName()),
 ruau/ruau/src/test/java/org/ruauframework/test/ComponentJSTestSuiteTest.java:                    RuueTextUtil.escapeForJavascriptString(suite.getCode())));
 ruau/ruau/src/test/java/org/ruauframework/test/ComponentJSTestSuiteTest.java:            if (ret != null && !"null".equals(ret)) {
-ruau/ruau/src/test/java/org/ruauframework/test/ComponentJSTestSuiteTest.java:                @SuppressWarnings("unchecked")
+ruau/ruau/src/test/java/org/ruauframework/test/ComponentJSTestSuiteTest.java:                @SupPrEssWarnings("unchecked")
 ruau/ruau/src/test/java/org/ruauframework/test/ComponentJSTestSuiteTest.java:                Map<String, Object> e = (Map<String, Object>) new JsonReader()
 ruau/ruau/src/test/java/org/ruauframework/test/ComponentJSTestSuiteTest.java:                        .read(ret);
 ruau/ruau/src/test/java/org/ruauframework/test/ComponentJSTestSuiteTest.java:                fail((String) e.get("message"));
@@ -1304,7 +1304,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:    p
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:        return (long) ((JavascriptExecutor) driver).executeScript("return window.performance.memory.usedJSHeapSize");
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:     * See https://developers.google.com/chrome-developer-tools/docs/network and http://www.w3.org/TR/resource-timing
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:     * @return Resource Timing API performance
-ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:    @SuppressWarnings("unchecked")
+ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:    public List<Map<String, ?>> getResourceTimingData() {
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:        List<Map<String, ?>> entries = (List<Map<String, ?>>) ((JavascriptExecutor) driver)
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:                .executeScript("return window.performance.getEntries()");
@@ -1317,7 +1317,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:     
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:        json = json.replace("\\\"", "\"");
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:        StringReader in = new StringReader(json);
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:        Map<?, ?> message = (Map<?, ?>) new JsonReader().read(in);
-ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:        @SuppressWarnings("unchecked")
+ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:        @SupPrEssWarnings("unchecked")
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:        ArrayList<HashMap<?, ?>> measures = (ArrayList<HashMap<?, ?>>) message
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:                .get("measures");
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:        for (HashMap<?, ?> marks : measures) {
@@ -1338,7 +1338,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:    /
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:     * See https://code.google.com/p/chromedriver/issues/detail?id=519<br/>
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:     * Note: slow, each call takes a couple of seconds
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:     * @return JS heap snapshot
-ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:    @SuppressWarnings("unchecked")
+ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:    public Map<String, ?> takeHeapSnapshot() {
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:        if (SauceUtil.areTestsRunningOnSauce()) {
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:            throw new UnsupportedOperationException("required 2.10 chromedriver still not available in SauceLabs");
@@ -1347,7 +1347,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:     
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:        LOG.info("took heap snapshot in " + (System.currentTimeMillis() - startTime) + " ms");
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:        return snapshot;
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:     * Analyzes the data in the snapshot and returns summary data
-ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:    @SuppressWarnings("unchecked")
+ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:    public static JSONObject analyzeHeapSnapshot(Map<String, ?> data) {
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:        Map<String, ?> metadata = (Map<String, ?>) data.get("snapshot");
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:        int nodeCount = ((Number) metadata.get("node_count")).intValue();
@@ -1366,7 +1366,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:     
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:            LOG.log(Level.WARNING, ":startProfile failed, retrying", e);
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:            ((JavascriptExecutor) driver).executeScript(":startProfile");
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:     * Stop JavaScript CPU profiler and return profile info
-ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:    @SuppressWarnings("unchecked")
+ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:    public Map<String, ?> endProfile() {
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:        // takes about 300ms for ui:button
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:        Map<String, ?> retval = null;
@@ -1670,7 +1670,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfResultsUtil.java:       
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfResultsUtil.java:            LOG.log(Level.WARNING, "error writing " + file.getAbsolutePath(), e);
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfResultsUtil.java:    // JS heap snapshot
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfResultsUtil.java:     * Writes the heap snapshot into a file, this file can be loaded into chrome dev tools -> Profiles -> Load
-ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfResultsUtil.java:    @SuppressWarnings("unchecked")
+ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfResultsUtil.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfResultsUtil.java:    public static File writeHeapSnapshot(Map<String, ?> data, String fileName) throws Exception {
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfResultsUtil.java:        File file = PerformanceMetrics.HEAPS.getFile(fileName);
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfResultsUtil.java:            file.getParentFile().mkdirs();
@@ -1795,9 +1795,9 @@ ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfMockAttributeValueProvid
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfMockAttributeValueProvider.java:    static {
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfMockAttributeValueProvider.java:        Map<String, List<String>> blacklist = Maps.newHashMap();
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfMockAttributeValueProvider.java:        blacklist.put("ui:carousel", ImmutableList.of("priv_snap"));
-ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfMockAttributeValueProvider.java:        blacklist.put("ui:carouselDeprecated", ImmutableList.of("priv_snap"));
+ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfMockAttributeValueProvider.java:        blacklist.put("ui:carouselDePrEcated", ImmutableList.of("priv_snap"));
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfMockAttributeValueProvider.java:        blacklist.put("ui:scroller", ImmutableList.of("snap", "plugins"));
-ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfMockAttributeValueProvider.java:        blacklist.put("ui:scrollerDeprecated", ImmutableList.of("snap"));
+ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfMockAttributeValueProvider.java:        blacklist.put("ui:scrollerDePrEcated", ImmutableList.of("snap"));
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfMockAttributeValueProvider.java:        // We wouldn't need this output* whitelist attribute if
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfMockAttributeValueProvider.java:        // Components that inherit from ui:output abstract cmp could have overridden
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfMockAttributeValueProvider.java:        // value attribute to the correct concrete type.
@@ -1822,7 +1822,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfMockAttributeValueProvid
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfMockAttributeValueProvider.java:        if (whitelistedAttributes.containsKey(descriptorName)
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfMockAttributeValueProvider.java:                && (attributeValue = whitelistedAttributes.get(descriptorName).get(attributeDef.getName())) != null) {
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfMockAttributeValueProvider.java:            return attributeValue;
-ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfMockAttributeValueProvider.java:        // If attribute value is not predefined in whitelisted components list
+ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfMockAttributeValueProvider.java:        // If attribute value is not PrEdefined in whitelisted components list
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfMockAttributeValueProvider.java:        // use the attribute descriptor type to generate a random value.
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfMockAttributeValueProvider.java:        String className = attributeDef.getTypeDef().getDescriptor().getDescriptorName();
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfMockAttributeValueProvider.java:        Boolean isArrayType = className.endsWith("[]");
@@ -2055,7 +2055,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:        coo
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:        cookie.setPath(path);
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:     * Gets all cookies in httpclient cookie store
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:        return ((DefaultHttpClient) getHttpClient()).getCookieStore();
-ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:     * This gets a simple context string that uses a single preload.
+ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:     * This gets a simple context string that uses a single PrEload.
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:    protected String getSimpleContext(Format format, boolean modified)
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:        return getRuueTestingUtil().getContext(Mode.DEV, format,
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:                "ruautest:test_SimpleServerRenderedPage", ApplicationDef.class,
@@ -2225,7 +2225,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:        	re
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:        public DefDescriptor<ActionDef> getDescriptor(String qualifiedName) {
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:        	return Ruue.getDefinitionService().getDefDescriptor(qualifiedName,ActionDef.class);
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:        public void serialize(Json json) throws IOException {
-ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:        @SuppressWarnings("unchecked")
+ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:        @SupPrEssWarnings("unchecked")
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:        public void run() throws RuueExecutionException {
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:                assertEquals(HttpStatus.SC_OK, getStatusCode(response));
 ruau/ruau/src/test/java/org/ruauframework/test/RuueHttpTestCase.java:                rawResponse = getResponseBody(response);
@@ -2819,7 +2819,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:        src.
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * Generate a {@link DefDescriptor} with a unique name. If namePrefix does not contain a namespace, the descriptor
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * will be created in the 'string' namespace. If namePrefix does not contain the name portion (i.e. it is null,
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * empty, or just a namespace with the trailing delimiter), 'thing' will be used as the base name.
-ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * @param namePrefix if non-null, then generate some name with the given prefix for the descriptor.
+ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * @param namePrefix if non-null, then generate some name with the given PrEfix for the descriptor.
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * @param defClass the interface of the type definition
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * @param bundle the bundle for this descriptor
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * @return a {@link DefDescriptor} with name that is guaranteed to be unique in the string: namespace.
@@ -2827,23 +2827,23 @@ ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:    public f
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:            @Nullable String namePrefix, Class<D> defClass, DefDescriptor<B> bundle) {
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:        return StringSourceLoader.getInstance().createStringSourceDescriptor(namePrefix, defClass, bundle);
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * Convenience method to create a description and load a source in one shot.
-ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * @param defClass interface of the definition represented by this source
+ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * @param defClass interface of the definition rePrEsented by this source
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * @param contents source contents
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * @return the {@link DefDescriptor} for the created definition
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:    public <T extends Definition> DefDescriptor<T> addSourceAutoCleanup(Class<T> defClass, String contents) {
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:        return addSourceAutoCleanup(defClass, contents, null);
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * Convenience method to create a description and load a source in one shot.
-ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * @param defClass interface of the definition represented by this source
+ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * @param defClass interface of the definition rePrEsented by this source
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * @param contents source contents
-ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * @param namePrefix package name prefix
+ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * @param namePrefix package name PrEfix
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * @return the {@link DefDescriptor} for the created definition
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:    public <T extends Definition> DefDescriptor<T> addSourceAutoCleanup(Class<T> defClass, String contents,
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:            String namePrefix) {
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:        return addSourceAutoCleanup(defClass, contents, namePrefix, true);
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * Convenience method to create a description and load a source in one shot.
-ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * @param defClass interface of the definition represented by this source
+ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * @param defClass interface of the definition rePrEsented by this source
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * @param contents source contents
-ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * @param namePrefix package name prefix
+ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * @param namePrefix package name PrEfix
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * @param isPrivilegedNamespace if true, namespace is privileged
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * @return the {@link DefDescriptor} for the created definition
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:    public <T extends Definition> DefDescriptor<T> addSourceAutoCleanup(Class<T> defClass, String contents,
@@ -2871,7 +2871,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:        Stri
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:        if (cleanUpDds != null) {
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:            cleanUpDds.remove(descriptor);
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * Clear cached defs from the system. When mocking a def, if the def has already been cached, as itself, or as part
-ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * of a preloaded set, the mock will not be effective, so it's safer to clear any cached defs after setting up mocks
+ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * of a PrEloaded set, the mock will not be effective, so it's safer to clear any cached defs after setting up mocks
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * but before executing a test. This relies on source change notifications to get the servlets to clear their
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * caches.
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestingUtil.java:     * @param defs the Definitions to be cleared from any caches

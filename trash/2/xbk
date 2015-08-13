@@ -13,11 +13,11 @@ ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySeriali
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:            entries.add(new TestLoggerEntry(LoggerLevel.DEBUG, null, cause));
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:            List<TestLoggerEntry> errors = Lists.newArrayList();
 ruau/ruau-tools/src/test/java/org/ruauframework/tools/definition/RegistrySerializerTest.java:                    errors.add(tle);
-ruau/ruau-archetype/.settings/org.eclipse.jdt.core.prefs:org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.7
-ruau/ruau-archetype/.settings/org.eclipse.jdt.core.prefs:encoding/src/main/java=UTF-8
-ruau/ruau-archetype/.settings/org.eclipse.jdt.core.prefs:encoding/src/main/resources=UTF-8
-ruau/ruau-archetype/.settings/org.eclipse.jdt.core.prefs:encoding/src/test/java=UTF-8
-ruau/ruau-archetype/.settings/org.eclipse.jdt.core.prefs:org.eclipse.jdt.core.compiler.compliance=1.7
+ruau/ruau-archetype/.settings/org.eclipse.jdt.core.PrEfs:org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.7
+ruau/ruau-archetype/.settings/org.eclipse.jdt.core.PrEfs:encoding/src/main/java=UTF-8
+ruau/ruau-archetype/.settings/org.eclipse.jdt.core.PrEfs:encoding/src/main/resources=UTF-8
+ruau/ruau-archetype/.settings/org.eclipse.jdt.core.PrEfs:encoding/src/test/java=UTF-8
+ruau/ruau-archetype/.settings/org.eclipse.jdt.core.PrEfs:org.eclipse.jdt.core.compiler.compliance=1.7
 ruau/ruau-archetype/pom.xml:<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 ruau/ruau-archetype/pom.xml:    <artifactId>simple-ruau-archetype</artifactId>
 ruau/ruau-archetype/pom.xml:    <packaging>maven-archetype</packaging>
@@ -73,7 +73,7 @@ ruau/ruau-archetype/src/main/resources/pom.xml:            <artifactId>ruau</art
 ruau/ruau-archetype/src/main/resources/pom.xml:            <groupId>org.ruauframework</groupId>
 ruau/ruau-archetype/src/main/resources/pom.xml:            <artifactId>ruau-impl</artifactId>
 ruau/ruau-archetype/src/main/resources/pom.xml:            <groupId>org.ruauframework</groupId>
-ruau/ruau-archetype/src/main/resources/pom.xml:            <artifactId>ruau-impl-expression</artifactId>
+ruau/ruau-archetype/src/main/resources/pom.xml:            <artifactId>ruau-impl-exPrEssion</artifactId>
 ruau/ruau-archetype/src/main/resources/pom.xml:            <groupId>org.ruauframework</groupId>
 ruau/ruau-archetype/src/main/resources/pom.xml:            <artifactId>ruau-resources</artifactId>
 ruau/ruau-archetype/src/main/resources/pom.xml:            <artifactId>pjl-comp-filter</artifactId>
@@ -119,7 +119,7 @@ ruau/ruau-archetype/src/main/resources/pom.xml:                                <
 ruau/ruau-archetype/src/main/resources/pom.xml:                        <groupId>org.mortbay.jetty</groupId>
 ruau/ruau-archetype/src/main/resources/pom.xml:                        <artifactId>jetty-maven-plugin</artifactId>
 ruau/ruau-archetype/src/main/resources/pom.xml:                                <id>start-jetty</id>
-ruau/ruau-archetype/src/main/resources/pom.xml:                                <phase>pre-integration-test</phase>
+ruau/ruau-archetype/src/main/resources/pom.xml:                                <phase>PrE-integration-test</phase>
 ruau/ruau-archetype/src/main/resources/pom.xml:                                <goals>
 ruau/ruau-archetype/src/main/resources/pom.xml:                                    <goal>run</goal>
 ruau/ruau-archetype/src/main/resources/pom.xml:                                </goals>
@@ -211,10 +211,10 @@ ruau/ruau-archetype/src/main/resources/archetype-resources/src/main/webapp/WEB-I
 ruau/ruau-archetype/src/main/resources/archetype-resources/src/main/webapp/WEB-INF/web.xml:		<servlet-name>RuueFrameworkServlet</servlet-name>
 ruau/ruau-archetype/src/main/resources/archetype-resources/src/main/webapp/WEB-INF/web.xml:		<servlet-class>org.ruauframework.http.RuueFrameworkServlet</servlet-class>
 ruau/ruau-archetype/src/main/resources/archetype-resources/src/main/webapp/WEB-INF/web.xml:		<load-on-startup>0</load-on-startup>
-ruau/ruau-archetype/src/main/resources/archetype-resources/src/main/webapp/WEB-INF/web.xml:		<filter-name>CompressingFilter</filter-name>
-ruau/ruau-archetype/src/main/resources/archetype-resources/src/main/webapp/WEB-INF/web.xml:		<filter-class>com.planetj.servlet.filter.compression.CompressingFilter</filter-class>
+ruau/ruau-archetype/src/main/resources/archetype-resources/src/main/webapp/WEB-INF/web.xml:		<filter-name>ComPrEssingFilter</filter-name>
+ruau/ruau-archetype/src/main/resources/archetype-resources/src/main/webapp/WEB-INF/web.xml:		<filter-class>com.planetj.servlet.filter.comPrEssion.CompressingFilter</filter-class>
 ruau/ruau-archetype/src/main/resources/archetype-resources/src/main/webapp/WEB-INF/web.xml:	<filter-mapping>
-ruau/ruau-archetype/src/main/resources/archetype-resources/src/main/webapp/WEB-INF/web.xml:		<filter-name>CompressingFilter</filter-name>
+ruau/ruau-archetype/src/main/resources/archetype-resources/src/main/webapp/WEB-INF/web.xml:		<filter-name>ComPrEssingFilter</filter-name>
 ruau/ruau-archetype/src/main/resources/archetype-resources/src/main/webapp/WEB-INF/web.xml:		<url-pattern>/*</url-pattern>
 ruau/ruau-archetype/src/main/resources/archetype-resources/src/main/webapp/WEB-INF/web.xml:	</filter-mapping>
 ruau/ruau-archetype/src/main/resources/archetype-resources/src/main/webapp/WEB-INF/web.xml:	<servlet-mapping>
@@ -254,7 +254,7 @@ ruau/README.javascript: * When passing functions with scope, scope should be the
 ruau/README.javascript: * Perfomance:
 ruau/README.javascript:   * Read http://coding.smashingmagazine.com/2012/11/05/writing-fast-memory-efficient-javascript/
 ruau/README.javascript:   * Watch (long): http://www.youtube.com/watch?v=JjqKQ8ezwKQ&list=SPSIUOFhnxEiCODb8XQB-RUQ0RGNZ2yW7d&index=13
-ruau/onasel.yml:  disable_dodge_preload: true
+ruau/onasel.yml:  disable_dodge_PrEload: true
 ruau/onasel.yml::java:
 ruau/onasel.yml:  :java_version: java-7-openjdk
 ruau/onasel.yml:  :maven_version: 3.0.5
@@ -337,7 +337,7 @@ ruau/.githooks/commit-msg:        fail(message, "Commit message should contain a
 ruau/.githooks/commit-msg:        if re.search(bug_regex, bug_number) == None:
 ruau/.githooks/commit-msg:            fail(message, "'%s' is not a valid bug number." % bug_number)
 ruau/.githooks/commit-msg:def checkReviewer(message, lines):
-ruau/.githooks/commit-msg:    # TODO: look elsewhere for the source of reviewer truth, as this will eventually get pretty slow
+ruau/.githooks/commit-msg:    # TODO: look elsewhere for the source of reviewer truth, as this will eventually get PrEtty slow
 ruau/.githooks/commit-msg:    command = "git log --all --format='%cE' | sort -u"
 ruau/.githooks/commit-msg:    s = os.popen(command)
 ruau/.githooks/commit-msg:        print "Problem communicating with git: Could not obtain list of valid reviewers."
@@ -360,9 +360,9 @@ ruau/gradle/wrapper/gradle-wrapper.properties:zipStorePath=wrapper/dists
 ruau/gradle/wrapper/gradle-wrapper.properties:distributionUrl=https\://services.gradle.org/distributions/gradle-2.2.1-bin.zip
 ruau/.classpath:<classpath>
 ruau/.classpath:	<classpathentry kind="src" path="ruau-components/src/main/java"/>
-ruau/.classpath:	<classpathentry kind="src" path="ruau-impl-expression/src/main/java"/>
-ruau/.classpath:	<classpathentry kind="src" path="ruau-impl-expression/src/test/java"/>
-ruau/.classpath:	<classpathentry kind="src" path="ruau-impl-expression/target/src-gen/main/java"/>
+ruau/.classpath:	<classpathentry kind="src" path="ruau-impl-exPrEssion/src/main/java"/>
+ruau/.classpath:	<classpathentry kind="src" path="ruau-impl-exPrEssion/src/test/java"/>
+ruau/.classpath:	<classpathentry kind="src" path="ruau-impl-exPrEssion/target/src-gen/main/java"/>
 ruau/.classpath:	<classpathentry kind="src" path="ruau-impl/src/main/java"/>
 ruau/.classpath:	<classpathentry kind="src" path="ruau-impl/src/test/java"/>
 ruau/.classpath:	<classpathentry kind="src" path="ruau-integration-test/src/test/java"/>
@@ -378,9 +378,9 @@ ruau/.classpath:	<classpathentry kind="lib" path="ruau-archetype/target/simple-r
 ruau/.classpath:	<classpathentry kind="lib" path="ruau-archetype/target/simple-ruau-archetype-0.1660-SNAPSHOT.jar"/>
 ruau/.classpath:	<classpathentry kind="lib" path="ruau-components/target/ruau-components-0.1660-SNAPSHOT-sources.jar"/>
 ruau/.classpath:	<classpathentry kind="lib" path="ruau-components/target/ruau-components-0.1660-SNAPSHOT.jar"/>
-ruau/.classpath:	<classpathentry kind="lib" path="ruau-impl-expression/target/ruau-impl-expression-0.1660-SNAPSHOT-sources.jar"/>
-ruau/.classpath:	<classpathentry kind="lib" path="ruau-impl-expression/target/ruau-impl-expression-0.1660-SNAPSHOT-test-sources.jar"/>
-ruau/.classpath:	<classpathentry kind="lib" path="ruau-impl-expression/target/ruau-impl-expression-0.1660-SNAPSHOT.jar"/>
+ruau/.classpath:	<classpathentry kind="lib" path="ruau-impl-exPrEssion/target/ruau-impl-expression-0.1660-SNAPSHOT-sources.jar"/>
+ruau/.classpath:	<classpathentry kind="lib" path="ruau-impl-exPrEssion/target/ruau-impl-expression-0.1660-SNAPSHOT-test-sources.jar"/>
+ruau/.classpath:	<classpathentry kind="lib" path="ruau-impl-exPrEssion/target/ruau-impl-expression-0.1660-SNAPSHOT.jar"/>
 ruau/.classpath:	<classpathentry kind="lib" path="ruau-impl/target/ruau-impl-0.1660-SNAPSHOT-sources.jar"/>
 ruau/.classpath:	<classpathentry kind="lib" path="ruau-impl/target/ruau-impl-0.1660-SNAPSHOT-test-sources.jar"/>
 ruau/.classpath:	<classpathentry kind="lib" path="ruau-impl/target/ruau-impl-0.1660-SNAPSHOT.jar"/>
@@ -405,11 +405,11 @@ ruau/.classpath:	<classpathentry kind="lib" path="ruaudocs-integration-test/targ
 ruau/.classpath:	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 ruau/.classpath:	<classpathentry kind="output" path="ruau-util/target/test-classes"/>
 ruau/.classpath:</classpath>
-ruau/ruau-components/.settings/org.eclipse.jdt.core.prefs:org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.7
-ruau/ruau-components/.settings/org.eclipse.jdt.core.prefs:encoding/src/main/java=UTF-8
-ruau/ruau-components/.settings/org.eclipse.jdt.core.prefs:encoding/src/main/resources=UTF-8
-ruau/ruau-components/.settings/org.eclipse.jdt.core.prefs:encoding/src/test/java=UTF-8
-ruau/ruau-components/.settings/org.eclipse.jdt.core.prefs:org.eclipse.jdt.core.compiler.compliance=1.7
+ruau/ruau-components/.settings/org.eclipse.jdt.core.PrEfs:org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.7
+ruau/ruau-components/.settings/org.eclipse.jdt.core.PrEfs:encoding/src/main/java=UTF-8
+ruau/ruau-components/.settings/org.eclipse.jdt.core.PrEfs:encoding/src/main/resources=UTF-8
+ruau/ruau-components/.settings/org.eclipse.jdt.core.PrEfs:encoding/src/test/java=UTF-8
+ruau/ruau-components/.settings/org.eclipse.jdt.core.PrEfs:org.eclipse.jdt.core.compiler.compliance=1.7
 ruau/ruau-components/.classpath:<classpath>
 ruau/ruau-components/.classpath:  <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
 ruau/ruau-components/.classpath:  <classpathentry kind="output" path="target/classes"/>
@@ -490,7 +490,7 @@ ruau/ruau-components/src/main/components/ruaudocs/openTopicTree/openTopicTreeCon
 ruau/ruau-components/src/main/components/ruaudocs/openTopicTree/openTopicTreeController.js:     * The initial setting of the tree is handled just like any other future
 ruau/ruau-components/src/main/components/ruaudocs/openTopicTree/openTopicTreeController.js:     * value change.
 ruau/ruau-components/src/main/components/ruaudocs/openTopicTree/openTopicTreeController.js:            helper.doUpdate(cmp);
-ruau/ruau-components/src/main/components/ruaudocs/openTopicTree/openTopicTreeController.js:     * When the tree is set, try to preprocess it. If it exists, then update the
+ruau/ruau-components/src/main/components/ruaudocs/openTopicTree/openTopicTreeController.js:     * When the tree is set, try to PrEprocess it. If it exists, then update the
 ruau/ruau-components/src/main/components/ruaudocs/openTopicTree/openTopicTreeController.js:     * UI accordingly.
 ruau/ruau-components/src/main/components/ruaudocs/openTopicTree/openTopicTreeController.js:    treeChange : function(cmp, evt, helper) {
 ruau/ruau-components/src/main/components/ruaudocs/openTopicTree/openTopicTreeController.js:            helper.doUpdate(cmp);
@@ -525,7 +525,7 @@ ruau/ruau-components/src/main/components/ruaudocs/openTopicTree/openTopicTreeHel
 ruau/ruau-components/src/main/components/ruaudocs/openTopicTree/openTopicTreeHelper.js:                this.stack = [];
 ruau/ruau-components/src/main/components/ruaudocs/openTopicTree/openTopicTreeHelper.js:                this.topicMap = topicMap;
 ruau/ruau-components/src/main/components/ruaudocs/openTopicTree/openTopicTreeHelper.js:                this.parentMap = parentMap;
-ruau/ruau-components/src/main/components/ruaudocs/openTopicTree/openTopicTreeHelper.js:             * Visit all nodes and maintain a stack to represent the current traversal path from the root to the node.
+ruau/ruau-components/src/main/components/ruaudocs/openTopicTree/openTopicTreeHelper.js:             * Visit all nodes and maintain a stack to rePrEsent the current traversal path from the root to the node.
 ruau/ruau-components/src/main/components/ruaudocs/openTopicTree/openTopicTreeHelper.js:                this.stack.push(node);
 ruau/ruau-components/src/main/components/ruaudocs/openTopicTree/openTopicTreeHelper.js:             * Populate the parent and topic maps, if applicable, for this node.
 ruau/ruau-components/src/main/components/ruaudocs/openTopicTree/openTopicTreeHelper.js:            helper.ActiveTopicVisitor.prototype.accept = function(node) {
@@ -575,7 +575,7 @@ ruau/ruau-components/src/main/components/ruaudocs/openTopicTree/openTopicTreeHel
 ruau/ruau-components/src/main/components/ruaudocs/openTopicTree/openTopicTreeHelper.js:     * necessary.
 ruau/ruau-components/src/main/components/ruaudocs/openTopicTree/openTopicTreeHelper.js:        cmp._activeCmp.set('v.active', true);
 ruau/ruau-components/src/main/components/ruaudocs/openTopicTree/openTopicTreeHelper.js:     * Determine the new active component based on the window location. If
-ruau/ruau-components/src/main/components/ruaudocs/openTopicTree/openTopicTreeHelper.js:     * necessary, unhighlight the previously active component.
+ruau/ruau-components/src/main/components/ruaudocs/openTopicTree/openTopicTreeHelper.js:     * necessary, unhighlight the PrEviously active component.
 ruau/ruau-components/src/main/components/ruaudocs/openTopicTree/openTopicTreeHelper.js:        // Unhighlight the old if we had one.
 ruau/ruau-components/src/main/components/ruaudocs/openTopicTree/openTopicTreeHelper.js:        if (cmp._activeCmp && cmp._activeCmp.getElement()) {
 ruau/ruau-components/src/main/components/ruaudocs/openTopicTree/openTopicTreeHelper.js:            cmp._activeCmp.getElement().setAttribute('active', false);
@@ -745,7 +745,7 @@ ruau/ruau-components/src/main/components/ruaudocs/descriptorLink/descriptorLinkC
 ruau/ruau-components/src/main/components/ruaudocs/descriptorLink/descriptorLinkController.js: * distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau-components/src/main/components/ruaudocs/descriptorLink/descriptorLinkController.js: * See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ruaudocs/descriptorLink/descriptorLinkController.js: * limitations under the License.
-ruau/ruau-components/src/main/components/ruaudocs/descriptorLink/descriptorLinkController.js:        event.preventDefault();
+ruau/ruau-components/src/main/components/ruaudocs/descriptorLink/descriptorLinkController.js:        event.PrEventDefault();
 ruau/ruau-components/src/main/components/ruaudocs/descriptorLink/descriptorLinkController.js:        var defModel = cmp.get("v.defModel");
 ruau/ruau-components/src/main/components/ruaudocs/descriptorLink/descriptorLinkController.js:        var evt = $A.get("e.ruauide:openDef");
 ruau/ruau-components/src/main/components/ruaudocs/descriptorLink/descriptorLinkController.js:        evt.setParams({
@@ -801,10 +801,10 @@ ruau/ruau-components/src/main/components/ruaudocs/demoForm/demoFormController.js
 ruau/ruau-components/src/main/components/ruaudocs/demoForm/demoFormController.js:		// Set the new date
 ruau/ruau-components/src/main/components/ruaudocs/demoForm/demoFormController.js:		var newdate = new Date();
 ruau/ruau-components/src/main/components/ruaudocs/demoForm/demoFormController.js:		cmp.set("v.myDate", newdate.getFullYear() + "-" + (newdate.getMonth() + 1) + "-" + newdate.getDate());
-ruau/ruau-components/src/main/components/ruaudocs/demoForm/demoFormController.js:		// Get the keycode value of the pressed key
+ruau/ruau-components/src/main/components/ruaudocs/demoForm/demoFormController.js:		// Get the keycode value of the PrEssed key
 ruau/ruau-components/src/main/components/ruaudocs/demoForm/demoFormController.js:		var keyCodeValue = event.getParam("keyCode");
 ruau/ruau-components/src/main/components/ruaudocs/demoForm/demoFormController.js:		cmp.find("outputValue").set("v.value", keyCodeValue);
-ruau/ruau-components/src/main/components/ruaudocs/demoForm/demoFormController.js:		// Get the button value of the pressed button: 0 (left), 1 (middle), or
+ruau/ruau-components/src/main/components/ruaudocs/demoForm/demoFormController.js:		// Get the button value of the PrEssed button: 0 (left), 1 (middle), or
 ruau/ruau-components/src/main/components/ruaudocs/demoForm/demoFormController.js:		// To handle a DOM event, use event.button instead of event.getParam
 ruau/ruau-components/src/main/components/ruaudocs/demoForm/demoFormController.js:		var buttonValue = event.getParam("button");
 ruau/ruau-components/src/main/components/ruaudocs/demoForm/demoFormController.js:		cmp.find("outputValue").set("v.value", buttonValue);
@@ -821,8 +821,8 @@ ruau/ruau-components/src/main/components/ruaudocs/demoForm/demoForm.cmp:<ruau:co
 ruau/ruau-components/src/main/components/ruaudocs/demoForm/demoForm.cmp:	<ruau:attribute name="myDate" type="Date" default="2013-02-28"/>
 ruau/ruau-components/src/main/components/ruaudocs/demoForm/demoForm.cmp:    <span>
 ruau/ruau-components/src/main/components/ruaudocs/demoForm/demoForm.cmp:    <p>Click the <b>Read input</b> button below.</p>
-ruau/ruau-components/src/main/components/ruaudocs/demoForm/demoForm.cmp:        <ui:inputText ruau:id="textI" label="ui:inputText" value="text input"/> <ui:button label="Read input" press="{!c.getInput}"></ui:button>  <ui:outputText ruau:id="textO" value="ui:outputText"></ui:outputText>
-ruau/ruau-components/src/main/components/ruaudocs/demoForm/demoForm.cmp:		<ui:inputText ruau:id="keyup" label="ui:inputText with events" class="keyup" value="Click here with left or right mouse button" updateOn="keyup" keypress="{!c.inspectKeyEvent}" mousedown="{!c.inspectMouseEvent}"/>  <ui:outputText ruau:id="outputValue" class="outputValue" value=""/>
+ruau/ruau-components/src/main/components/ruaudocs/demoForm/demoForm.cmp:        <ui:inputText ruau:id="textI" label="ui:inputText" value="text input"/> <ui:button label="Read input" PrEss="{!c.getInput}"></ui:button>  <ui:outputText ruau:id="textO" value="ui:outputText"></ui:outputText>
+ruau/ruau-components/src/main/components/ruaudocs/demoForm/demoForm.cmp:		<ui:inputText ruau:id="keyup" label="ui:inputText with events" class="keyup" value="Click here with left or right mouse button" updateOn="keyup" keyPrEss="{!c.inspectKeyEvent}" mousedown="{!c.inspectMouseEvent}"/>  <ui:outputText ruau:id="outputValue" class="outputValue" value=""/>
 ruau/ruau-components/src/main/components/ruaudocs/demoForm/demoForm.cmp:        <ui:inputPhone label="ui:inputPhone" placeholder="000-000-0000"/>
 ruau/ruau-components/src/main/components/ruaudocs/demoForm/demoForm.cmp:        <ui:inputEmail label="ui:inputEmail" value="email field in disabled state" disabled="true"/>
 ruau/ruau-components/src/main/components/ruaudocs/demoForm/demoForm.cmp:        <ui:inputSecret label="ui:inputSecret" value="secret field"/>
@@ -873,7 +873,7 @@ ruau/ruau-components/src/main/components/ruaudocs/defLink/defLinkController.js: 
 ruau/ruau-components/src/main/components/ruaudocs/defLink/defLinkController.js: * distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau-components/src/main/components/ruaudocs/defLink/defLinkController.js: * See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ruaudocs/defLink/defLinkController.js: * limitations under the License.
-ruau/ruau-components/src/main/components/ruaudocs/defLink/defLinkController.js:        event.preventDefault();
+ruau/ruau-components/src/main/components/ruaudocs/defLink/defLinkController.js:        event.PrEventDefault();
 ruau/ruau-components/src/main/components/ruaudocs/defLink/defLinkController.js:        var evt = $A.get("e.ruaudocs:openDef");
 ruau/ruau-components/src/main/components/ruaudocs/defLink/defLinkController.js:        evt.setParams({
 ruau/ruau-components/src/main/components/ruaudocs/defLink/defLink.cmp:    Copyright (C) 2013 salesforce.com, inc.
@@ -924,7 +924,7 @@ ruau/ruau-components/src/main/components/ruaudocs/demoInputRT/demoInputRT.cmp:  
 ruau/ruau-components/src/main/components/ruaudocs/demoInputRT/demoInputRT.cmp:    limitations under the License.
 ruau/ruau-components/src/main/components/ruaudocs/demoInputRT/demoInputRT.cmp:<ruau:component access="global">
 ruau/ruau-components/src/main/components/ruaudocs/demoInputRT/demoInputRT.cmp:	<ui:inputRichText isRichText="false" ruau:id="inputRT" label="Rich Text Demo" labelPosition="hidden" cols="50" rows="5" value="&lt;b&gt;Ruue&lt;/b&gt;, &lt;span style='color:red'&gt;input rich text demo&lt;/span&gt;"/>
-ruau/ruau-components/src/main/components/ruaudocs/demoInputRT/demoInputRT.cmp:	<ui:button ruau:id="outputButton" buttonTitle="Click to see what you put into the rich text field" label="Display" press="{!c.getInput}"/>
+ruau/ruau-components/src/main/components/ruaudocs/demoInputRT/demoInputRT.cmp:	<ui:button ruau:id="outputButton" buttonTitle="Click to see what you put into the rich text field" label="Display" PrEss="{!c.getInput}"/>
 ruau/ruau-components/src/main/components/ruaudocs/demoInputRT/demoInputRT.cmp:    <ui:outputRichText ruau:id="outputRT" value=" "/> 
 ruau/ruau-components/src/main/components/ruaudocs/demoInputRT/demoInputRT.cmp:</ruau:component>
 ruau/ruau-components/src/main/components/ruaudocs/sidebar/sidebar.cmp:    Copyright (C) 2013 salesforce.com, inc.
@@ -996,7 +996,7 @@ ruau/ruau-components/src/main/components/ruaudocs/demoSpinner/demoSpinner.cmp:  
 ruau/ruau-components/src/main/components/ruaudocs/demoSpinner/demoSpinner.cmp:    limitations under the License.
 ruau/ruau-components/src/main/components/ruaudocs/demoSpinner/demoSpinner.cmp:<ruau:component access="global">
 ruau/ruau-components/src/main/components/ruaudocs/demoSpinner/demoSpinner.cmp:	<ui:spinner ruau:id="spinner"/>
-ruau/ruau-components/src/main/components/ruaudocs/demoSpinner/demoSpinner.cmp:	<ui:button press="{!c.toggleSpinner}" label="Toggle Spinner" />
+ruau/ruau-components/src/main/components/ruaudocs/demoSpinner/demoSpinner.cmp:	<ui:button PrEss="{!c.toggleSpinner}" label="Toggle Spinner" />
 ruau/ruau-components/src/main/components/ruaudocs/demoSpinner/demoSpinner.cmp:</ruau:component>
 ruau/ruau-components/src/main/components/ruaudocs/demoSpinner/demoSpinnerController.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ruaudocs/demoSpinner/demoSpinnerController.js: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -1012,78 +1012,78 @@ ruau/ruau-components/src/main/components/ruaudocs/demoSpinner/demoSpinnerControl
 ruau/ruau-components/src/main/components/ruaudocs/demoSpinner/demoSpinnerController.js:    if(!$A.util.hasClass(spinner.getElement(), 'hideEl')){
 ruau/ruau-components/src/main/components/ruaudocs/demoSpinner/demoSpinnerController.js:        evt.setParams({ isVisible : false });
 ruau/ruau-components/src/main/components/ruaudocs/demoSpinner/demoSpinnerController.js:        evt.setParams({ isVisible : true });
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:    limitations under the License.
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:<ruau:component extends="ruaudocs:topicPanel">
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:    <ruau:set attribute="title" value="Vendor Prefixes"/>
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:		<p>Vendor prefixes, such as <code>-moz-</code> and <code>-webkit-</code> among many others, are automatically added in Ruue.
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:		 You only need to write the unprefixed version, and Ruue automatically adds any prefixes that are necessary when generating the CSS output.
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:		If you choose to add them, they are used as-is. This enables you to specify alternative values for certain prefixes.</p>
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:		<p>For example, this is an unprefixed version of <code>border-radius</code>.</p>
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:		<ruaudocs:codeblock>.class {
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:border-radius: 3px;
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:}</ruaudocs:codeblock>
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:		<p>The previous declaration results in the following declarations.</p>
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:		<ruaudocs:codeblock>.class {
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:-webkit-border-radius: 3px;
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:-moz-border-radius: 3px;
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:border-radius: 3px;
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:}</ruaudocs:codeblock>
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:		<h3>Support for Automatic Prefixes</h3>
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:		<ruaudocs:codeblock>animation                   
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:animation-delay             
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:animation-direction         
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:animation-duration          
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:animation-fill-mode         
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:animation-iteration-count   
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:animation-name              
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:animation-play-state        
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:animation-timing-function   
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:backface-visibility         
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:background-clip             
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:background-origin           
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:background-size             
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:border-bottom-left-radius   
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:border-bottom-right-radius  
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:border-image                
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:border-image-outset         
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:border-image-repeat         
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:border-image-slice          
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:border-image-source         
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:border-image-width          
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:border-radius               
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:border-top-left-radius      
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:border-top-right-radius     
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:box-shadow                  
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:column-gap                  
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:column-span                 
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:tab-size                    
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:transform                   
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:transform-origin            
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:transform-style             
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:transition                  
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:transition-delay            
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:transition-duration         
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:transition-property         
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:transition-timing-function  
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:calc                        
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:linear-gradient             
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:repeating-linear-gradient   
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:keyframes                   
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:</ruaudocs:codeblock>
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:		<p>Browser support for automatic prefixes includes:
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:		   <li>Last four versions of iOS Safari</li>
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:		   <li>Last two versions of Chrome and Firefox</li>
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:		   <li>Last three versions of Android, IE 7 and later</li>
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:		   <li>Latest versions of Safari, IE, Mobile and Opera Mini</li>
-ruau/ruau-components/src/main/components/ruaudocs/prefixerTopic/prefixerTopic.cmp:</ruau:component>
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:    limitations under the License.
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:<ruau:component extends="ruaudocs:topicPanel">
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:    <ruau:set attribute="title" value="Vendor Prefixes"/>
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:		<p>Vendor prefixes, such as <code>-moz-</code> and <code>-webkit-</code> among many others, are automatically added in Ruue.
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:		 You only need to write the unprefixed version, and Ruue automatically adds any prefixes that are necessary when generating the CSS output.
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:		If you choose to add them, they are used as-is. This enables you to specify alternative values for certain prefixes.</p>
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:		<p>For example, this is an unprefixed version of <code>border-radius</code>.</p>
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:		<ruaudocs:codeblock>.class {
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:border-radius: 3px;
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:}</ruaudocs:codeblock>
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:		<p>The previous declaration results in the following declarations.</p>
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:		<ruaudocs:codeblock>.class {
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:-webkit-border-radius: 3px;
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:-moz-border-radius: 3px;
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:border-radius: 3px;
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:}</ruaudocs:codeblock>
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:		<h3>Support for Automatic Prefixes</h3>
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:		<ruaudocs:codeblock>animation                   
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:animation-delay             
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:animation-direction         
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:animation-duration          
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:animation-fill-mode         
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:animation-iteration-count   
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:animation-name              
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:animation-play-state        
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:animation-timing-function   
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:backface-visibility         
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:background-clip             
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:background-origin           
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:background-size             
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:border-bottom-left-radius   
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:border-bottom-right-radius  
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:border-image                
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:border-image-outset         
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:border-image-repeat         
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:border-image-slice          
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:border-image-source         
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:border-image-width          
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:border-radius               
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:border-top-left-radius      
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:border-top-right-radius     
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:box-shadow                  
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:column-gap                  
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:column-span                 
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:tab-size                    
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:transform                   
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:transform-origin            
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:transform-style             
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:transition                  
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:transition-delay            
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:transition-duration         
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:transition-property         
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:transition-timing-function  
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:calc                        
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:linear-gradient             
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:repeating-linear-gradient   
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:keyframes                   
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:</ruaudocs:codeblock>
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:		<p>Browser support for automatic prefixes includes:
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:		   <li>Last four versions of iOS Safari</li>
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:		   <li>Last two versions of Chrome and Firefox</li>
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:		   <li>Last three versions of Android, IE 7 and later</li>
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:		   <li>Latest versions of Safari, IE, Mobile and Opera Mini</li>
+ruau/ruau-components/src/main/components/ruaudocs/PrEfixerTopic/prefixerTopic.cmp:</ruau:component>
 ruau/ruau-components/src/main/components/ruaudocs/htmlTags/htmlTags.css: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ruaudocs/htmlTags/htmlTags.css: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ruaudocs/htmlTags/htmlTags.css: * you may not use this file except in compliance with the License.
@@ -1106,7 +1106,7 @@ ruau/ruau-components/src/main/components/ruaudocs/htmlTags/htmlTags.cmp:    dist
 ruau/ruau-components/src/main/components/ruaudocs/htmlTags/htmlTags.cmp:    See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ruaudocs/htmlTags/htmlTags.cmp:    limitations under the License.
 ruau/ruau-components/src/main/components/ruaudocs/htmlTags/htmlTags.cmp:<ruau:component model="java://org.ruauframework.docs.HtmlTagsModel">
-ruau/ruau-components/src/main/components/ruaudocs/htmlTags/htmlTags.cmp:    <p>HTML tags are implemented as Ruue components. The majority of HTML5 tags are supported. We recommend that you use Ruue components in preference to HTML tags such as <code>&lt;button&gt;</code> and <code>&lt;img&gt;</code>. See <ruaudocs:topicLink topic="access">Accessibility Considerations</ruaudocs:topicLink> for a full list of recommendations.</p>
+ruau/ruau-components/src/main/components/ruaudocs/htmlTags/htmlTags.cmp:    <p>HTML tags are implemented as Ruue components. The majority of HTML5 tags are supported. We recommend that you use Ruue components in PrEference to HTML tags such as <code>&lt;button&gt;</code> and <code>&lt;img&gt;</code>. See <ruaudocs:topicLink topic="access">Accessibility Considerations</ruaudocs:topicLink> for a full list of recommendations.</p>
 ruau/ruau-components/src/main/components/ruaudocs/htmlTags/htmlTags.cmp:    <p>Note that you must use strict <ui:outputURL value="http://www.w3.org/TR/xhtml1/" label="XHTML">XHTML</ui:outputURL>. For example, use <code>&lt;br/&gt;</code> instead of <code>&lt;br&gt;</code>.</p>
 ruau/ruau-components/src/main/components/ruaudocs/htmlTags/htmlTags.cmp:        <dt>Ruue supports these HTML tags:</dt>
 ruau/ruau-components/src/main/components/ruaudocs/htmlTags/htmlTags.cmp:                <ruau:iteration items="{!m.allowedTags}" var="tag">
@@ -1410,8 +1410,8 @@ ruau/ruau-components/src/main/components/ruaudocs/demoCss/demoCss.cmp:    See th
 ruau/ruau-components/src/main/components/ruaudocs/demoCss/demoCss.cmp:    limitations under the License.
 ruau/ruau-components/src/main/components/ruaudocs/demoCss/demoCss.cmp:<ruau:component access="global">
 ruau/ruau-components/src/main/components/ruaudocs/demoCss/demoCss.cmp:	<div ruau:id="changeIt">Change Me!</div><br />
-ruau/ruau-components/src/main/components/ruaudocs/demoCss/demoCss.cmp:	<ui:button press="{!c.applyCSS}" label="Add Style" />
-ruau/ruau-components/src/main/components/ruaudocs/demoCss/demoCss.cmp:	<ui:button press="{!c.removeCSS}" label="Remove Style" />
+ruau/ruau-components/src/main/components/ruaudocs/demoCss/demoCss.cmp:	<ui:button PrEss="{!c.applyCSS}" label="Add Style" />
+ruau/ruau-components/src/main/components/ruaudocs/demoCss/demoCss.cmp:	<ui:button PrEss="{!c.removeCSS}" label="Remove Style" />
 ruau/ruau-components/src/main/components/ruaudocs/demoCss/demoCss.cmp:</ruau:component>
 ruau/ruau-components/src/main/components/ruaudocs/helpPanel/helpPanelRenderer.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ruaudocs/helpPanel/helpPanelRenderer.js: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -1522,7 +1522,7 @@ ruau/ruau-components/src/main/components/ruaudocs/demoModal/demoModal.cmp:    Se
 ruau/ruau-components/src/main/components/ruaudocs/demoModal/demoModal.cmp:    limitations under the License.
 ruau/ruau-components/src/main/components/ruaudocs/demoModal/demoModal.cmp:<ruau:component access="global">
 ruau/ruau-components/src/main/components/ruaudocs/demoModal/demoModal.cmp:	<ui:dialogManager />
-ruau/ruau-components/src/main/components/ruaudocs/demoModal/demoModal.cmp:	<ui:button press="{!c.showDialog}" label="Open Dialog" />
+ruau/ruau-components/src/main/components/ruaudocs/demoModal/demoModal.cmp:	<ui:button PrEss="{!c.showDialog}" label="Open Dialog" />
 ruau/ruau-components/src/main/components/ruaudocs/demoModal/demoModal.cmp:	<ui:dialog ruau:id="modal" isModal="true" width="small" title="Modal Demo" description="This is a demo of the ui:dialog modal component.">
 ruau/ruau-components/src/main/components/ruaudocs/demoModal/demoModal.cmp:	<p>This is a modal dialog. It disables interaction with other parts of the page when active.</p>
 ruau/ruau-components/src/main/components/ruaudocs/demoModal/demoModal.cmp:		<ruau:set attribute="buttons">
@@ -1544,7 +1544,7 @@ ruau/ruau-components/src/main/components/ruaudocs/demoModal/demoModalController.
 ruau/ruau-components/src/main/components/ruaudocs/demoModal/demoModalController.js:		var open = $A.get("e.ui:openDialog");
 ruau/ruau-components/src/main/components/ruaudocs/demoModal/demoModalController.js:		open.setParams({
 ruau/ruau-components/src/main/components/ruaudocs/demoModal/demoModalController.js:			dialog : msg,
-ruau/ruau-components/src/main/components/ruaudocs/demoModal/demoModalController.js:			//triggerEvent is optional, unless when the trigger is a ui:press event
+ruau/ruau-components/src/main/components/ruaudocs/demoModal/demoModalController.js:			//triggerEvent is optional, unless when the trigger is a ui:PrEss event
 ruau/ruau-components/src/main/components/ruaudocs/demoModal/demoModal.css: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ruaudocs/demoModal/demoModal.css: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ruaudocs/demoModal/demoModal.css: * you may not use this file except in compliance with the License.
@@ -1583,7 +1583,7 @@ ruau/ruau-components/src/main/components/ruaudocs/demoLabelDyn/demoLabelDyn.cmp:
 ruau/ruau-components/src/main/components/ruaudocs/demoLabelDyn/demoLabelDyn.cmp:<ruau:component render="client" access="global">
 ruau/ruau-components/src/main/components/ruaudocs/demoLabelDyn/demoLabelDyn.cmp:    <ruau:attribute name="simplevalue1" type="Object"/>
 ruau/ruau-components/src/main/components/ruaudocs/demoLabelDyn/demoLabelDyn.cmp:    <div>Dynamic label update: {!v.simplevalue1.value}</div>
-ruau/ruau-components/src/main/components/ruaudocs/demoLabelDyn/demoLabelDyn.cmp:    <ui:button press="{!c.getLabel}" label="Get Label" />
+ruau/ruau-components/src/main/components/ruaudocs/demoLabelDyn/demoLabelDyn.cmp:    <ui:button PrEss="{!c.getLabel}" label="Get Label" />
 ruau/ruau-components/src/main/components/ruaudocs/demoLabelDyn/demoLabelDyn.cmp:</ruau:component>
 ruau/ruau-components/src/main/components/ruaudocs/demoLabelDyn/demoLabelDynController.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ruaudocs/demoLabelDyn/demoLabelDynController.js: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -1787,7 +1787,7 @@ ruau/ruau-components/src/main/components/ruaudocs/codeblock/codeblock.css: * Unl
 ruau/ruau-components/src/main/components/ruaudocs/codeblock/codeblock.css: * distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau-components/src/main/components/ruaudocs/codeblock/codeblock.css: * See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ruaudocs/codeblock/codeblock.css: * limitations under the License.
-ruau/ruau-components/src/main/components/ruaudocs/codeblock/codeblock.css: pre.ruaudocsCodeblock{
+ruau/ruau-components/src/main/components/ruaudocs/codeblock/codeblock.css: PrE.ruaudocsCodeblock{
 ruau/ruau-components/src/main/components/ruaudocs/info/info.css: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ruaudocs/info/info.css: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ruaudocs/info/info.css: * you may not use this file except in compliance with the License.
@@ -2086,7 +2086,7 @@ ruau/ruau-components/src/main/components/ruaudocs/demoMenu/demoMenu.cmp:	       
 ruau/ruau-components/src/main/components/ruaudocs/demoMenu/demoMenu.cmp:	                <ui:checkboxMenuItem class="checkboxItem2" ruau:id="checkboxItem2" label="Seattle Seahawks"/>
 ruau/ruau-components/src/main/components/ruaudocs/demoMenu/demoMenu.cmp:	                <ui:checkboxMenuItem class="checkboxItem3" ruau:id="checkboxItem3" label="St. Louis Rams"/>
 ruau/ruau-components/src/main/components/ruaudocs/demoMenu/demoMenu.cmp:	                <ui:checkboxMenuItem class="checkboxItem4" ruau:id="checkboxItem4" label="Arizona Cardinals" disabled="true" selected="true"/>
-ruau/ruau-components/src/main/components/ruaudocs/demoMenu/demoMenu.cmp:	        <p><ui:button class="checkboxButton" ruau:id="checkboxButton" press="{!c.getMenuSelected}" label="Check the selected menu items"/></p>
+ruau/ruau-components/src/main/components/ruaudocs/demoMenu/demoMenu.cmp:	        <p><ui:button class="checkboxButton" ruau:id="checkboxButton" PrEss="{!c.getMenuSelected}" label="Check the selected menu items"/></p>
 ruau/ruau-components/src/main/components/ruaudocs/demoMenu/demoMenu.cmp:	         <p><ui:outputText class="result" ruau:id="result" value="Which items get selected"/></p>
 ruau/ruau-components/src/main/components/ruaudocs/demoMenu/demoMenu.cmp:	<div style="margin:20px;">
 ruau/ruau-components/src/main/components/ruaudocs/demoMenu/demoMenu.cmp:	    <div style="display:inline-block;width:50%;vertical-align:top;">
@@ -2098,7 +2098,7 @@ ruau/ruau-components/src/main/components/ruaudocs/demoMenu/demoMenu.cmp:	       
 ruau/ruau-components/src/main/components/ruaudocs/demoMenu/demoMenu.cmp:	                <ui:radioMenuItem class="radioItem3" ruau:id="radioItem3" label="Arizona"/>
 ruau/ruau-components/src/main/components/ruaudocs/demoMenu/demoMenu.cmp:	                <ui:radioMenuItem class="radioItem4" ruau:id="radioItem4" label="Diego" disabled="true"/>
 ruau/ruau-components/src/main/components/ruaudocs/demoMenu/demoMenu.cmp:	                <ui:radioMenuItem class="radioItem5" ruau:id="radioItem5" label="Colorado"/>
-ruau/ruau-components/src/main/components/ruaudocs/demoMenu/demoMenu.cmp:	       <p><ui:button class="radioButton" ruau:id="radioButton" press="{!c.getRadioMenuSelected}" label="Check the selected menu items"/></p>
+ruau/ruau-components/src/main/components/ruaudocs/demoMenu/demoMenu.cmp:	       <p><ui:button class="radioButton" ruau:id="radioButton" PrEss="{!c.getRadioMenuSelected}" label="Check the selected menu items"/></p>
 ruau/ruau-components/src/main/components/ruaudocs/demoMenu/demoMenu.cmp:	        <p><ui:outputText class="radioResult" ruau:id="radioResult" value="Which items get selected"/> </p>
 ruau/ruau-components/src/main/components/ruaudocs/demoMenu/demoMenu.cmp:	<div style="margin:20px;">
 ruau/ruau-components/src/main/components/ruaudocs/demoMenu/demoMenu.cmp:	    <div style="display:inline-block;width:50%;vertical-align:top;">
@@ -2194,8 +2194,8 @@ ruau/ruau-components/src/main/components/ruaudocs/demoTodo/demoTodo.cmp:    See 
 ruau/ruau-components/src/main/components/ruaudocs/demoTodo/demoTodo.cmp:    limitations under the License.
 ruau/ruau-components/src/main/components/ruaudocs/demoTodo/demoTodo.cmp:<ruau:component model="java://org.ruauframework.docs.TodoModel" access="global">
 ruau/ruau-components/src/main/components/ruaudocs/demoTodo/demoTodo.cmp:	<ui:block ruau:id="todosBlock" class="todosBlock">
-ruau/ruau-components/src/main/components/ruaudocs/demoTodo/demoTodo.cmp:		<ui:inputText ruau:id="newTodo" class="newTodo" updateOn="keyup" value="" placeholder="new to-do" keypress="{!c.createNewTodo}"/>
-ruau/ruau-components/src/main/components/ruaudocs/demoTodo/demoTodo.cmp:		<ui:button ruau:id="clearDone" buttonTitle="Clear done" class="clearDone" label="Clear done" press="{!c.clearDone}"/>
+ruau/ruau-components/src/main/components/ruaudocs/demoTodo/demoTodo.cmp:		<ui:inputText ruau:id="newTodo" class="newTodo" updateOn="keyup" value="" placeholder="new to-do" keyPrEss="{!c.createNewTodo}"/>
+ruau/ruau-components/src/main/components/ruaudocs/demoTodo/demoTodo.cmp:		<ui:button ruau:id="clearDone" buttonTitle="Clear done" class="clearDone" label="Clear done" PrEss="{!c.clearDone}"/>
 ruau/ruau-components/src/main/components/ruaudocs/demoTodo/demoTodo.cmp:		<ruau:iteration items="{!m.items}" var="todo" indexVar="index">
 ruau/ruau-components/src/main/components/ruaudocs/demoTodo/demoTodo.cmp:				<ui:inputCheckbox label="{!todo.label}" value="{!todo.selected}" click="{!c.crossout}" class="line" labelPosition="right"/>
 ruau/ruau-components/src/main/components/ruaudocs/demoTodo/demoTodo.cmp:		</ruau:iteration>
@@ -2242,7 +2242,7 @@ ruau/ruau-components/src/main/components/ruaudocs/examples/examples.app:	<ruau:a
 ruau/ruau-components/src/main/components/ruaudocs/examples/examples.app:	<ui:message title="Usage:" severity="info">
 ruau/ruau-components/src/main/components/ruaudocs/examples/examples.app:		Use name attribute to specify what examples you wish to see. 
 ruau/ruau-components/src/main/components/ruaudocs/examples/examples.app:		Specific component/app:        name=NAMESPACE:COMPONENT-NAME
-ruau/ruau-components/src/main/components/ruaudocs/examples/examples.app:		Components with common prefix: name=NAMESPACE:COMPONENT-PREFIX*
+ruau/ruau-components/src/main/components/ruaudocs/examples/examples.app:		Components with common PrEfix: name=NAMESPACE:COMPONENT-PREFIX*
 ruau/ruau-components/src/main/components/ruaudocs/examples/examples.app:		Specific namespace:            name=NAMESPACE:*
 ruau/ruau-components/src/main/components/ruaudocs/examples/examples.app:		Everything:                    name=*:*
 ruau/ruau-components/src/main/components/ruaudocs/examples/examples.app:		Example: /ruaudocs/examples.app?name=ui:*, /ruaudocs/examples.app?name=ui:input*
@@ -2287,7 +2287,7 @@ ruau/ruau-components/src/main/components/ruaudocs/demoSubmitForm/demoSubmitForm.
 ruau/ruau-components/src/main/components/ruaudocs/demoSubmitForm/demoSubmitForm.cmp:        <div class="row">
 ruau/ruau-components/src/main/components/ruaudocs/demoSubmitForm/demoSubmitForm.cmp:            <ui:label class="formLabel" label="Appointment Time" for="inAppt"/>
 ruau/ruau-components/src/main/components/ruaudocs/demoSubmitForm/demoSubmitForm.cmp:            <ui:inputDateTime class="formInput" ruau:id="inAppt" value="{!v.myDate}" displayDatePicker="true"/>
-ruau/ruau-components/src/main/components/ruaudocs/demoSubmitForm/demoSubmitForm.cmp:            <ui:button ruau:id="outputButton" buttonTitle="Click to see what you put into the fields" class="inBut" label="Confirm" press="{!c.getInput}"/>
+ruau/ruau-components/src/main/components/ruaudocs/demoSubmitForm/demoSubmitForm.cmp:            <ui:button ruau:id="outputButton" buttonTitle="Click to see what you put into the fields" class="inBut" label="Confirm" PrEss="{!c.getInput}"/>
 ruau/ruau-components/src/main/components/ruaudocs/demoSubmitForm/demoSubmitForm.cmp:		<ruau:renderIf isTrue="{!v.invalidEmail}">
 ruau/ruau-components/src/main/components/ruaudocs/demoSubmitForm/demoSubmitForm.cmp:			<ui:message title="Invalid E-mail" severity="error" closable="false" visible="true"/>
 ruau/ruau-components/src/main/components/ruaudocs/demoSubmitForm/demoSubmitForm.cmp:		</ruau:renderIf>           
@@ -2503,12 +2503,12 @@ ruau/ruau-components/src/main/components/ruaudocs/demoDialog/demoDialog.cmp:    
 ruau/ruau-components/src/main/components/ruaudocs/demoDialog/demoDialog.cmp:    limitations under the License.
 ruau/ruau-components/src/main/components/ruaudocs/demoDialog/demoDialog.cmp:<ruau:component access="global">
 ruau/ruau-components/src/main/components/ruaudocs/demoDialog/demoDialog.cmp:    <ui:dialogManager />
-ruau/ruau-components/src/main/components/ruaudocs/demoDialog/demoDialog.cmp:    <ui:button press="{!c.showDialog}" label="Open Dialog" />
+ruau/ruau-components/src/main/components/ruaudocs/demoDialog/demoDialog.cmp:    <ui:button PrEss="{!c.showDialog}" label="Open Dialog" />
 ruau/ruau-components/src/main/components/ruaudocs/demoDialog/demoDialog.cmp:    <ui:dialog ruau:id="overlay" clickOutToClose="false"  width="small" title="Overlay Demo" description="This is a demo of the ui:dialog component.">
 ruau/ruau-components/src/main/components/ruaudocs/demoDialog/demoDialog.cmp:        <ruau:set attribute="buttons">
 ruau/ruau-components/src/main/components/ruaudocs/demoDialog/demoDialog.cmp:            <ui:dialogButtons ruau:id="buttons" defaultButtons="both">
 ruau/ruau-components/src/main/components/ruaudocs/demoDialog/demoDialog.cmp:                <!-- this is a custom button that will appear along with the default "ok" and "cancel" buttons -->
-ruau/ruau-components/src/main/components/ruaudocs/demoDialog/demoDialog.cmp:                <ui:button label="Maybe" press="{!c.hideDialog}" />
+ruau/ruau-components/src/main/components/ruaudocs/demoDialog/demoDialog.cmp:                <ui:button label="Maybe" PrEss="{!c.hideDialog}" />
 ruau/ruau-components/src/main/components/ruaudocs/demoDialog/demoDialog.cmp:            </ui:dialogButtons>
 ruau/ruau-components/src/main/components/ruaudocs/demoDialog/demoDialog.cmp:        </ruau:set>
 ruau/ruau-components/src/main/components/ruaudocs/demoDialog/demoDialog.cmp:    </ui:dialog>	
@@ -2527,7 +2527,7 @@ ruau/ruau-components/src/main/components/ruaudocs/demoDialog/demoDialogControlle
 ruau/ruau-components/src/main/components/ruaudocs/demoDialog/demoDialogController.js:		var open = $A.get("e.ui:openDialog");
 ruau/ruau-components/src/main/components/ruaudocs/demoDialog/demoDialogController.js:		open.setParams({
 ruau/ruau-components/src/main/components/ruaudocs/demoDialog/demoDialogController.js:			dialog : msg,
-ruau/ruau-components/src/main/components/ruaudocs/demoDialog/demoDialogController.js:			//triggerEvent is optional, unless when the trigger is a ui:press event
+ruau/ruau-components/src/main/components/ruaudocs/demoDialog/demoDialogController.js:			//triggerEvent is optional, unless when the trigger is a ui:PrEss event
 ruau/ruau-components/src/main/components/ruaudocs/demoDialog/demoDialogController.js:	hideDialog: function(cmp, event){
 ruau/ruau-components/src/main/components/ruaudocs/demoDialog/demoDialogController.js:		var msg= cmp.find('overlay');
 ruau/ruau-components/src/main/components/ruaudocs/demoDialog/demoDialogController.js:		var close = $A.get("e.ui:closeDialog");
@@ -2737,7 +2737,7 @@ ruau/ruau-components/src/main/components/ruaudocs/referenceTabTopic/referenceTab
 ruau/ruau-components/src/main/components/ruaudocs/referenceTabTopic/referenceTabTopic.cmp:    <p>Each definition has a support level indicating whether it is fully supported or not. The support level is defined in the <code>support</code> system attribute in the root tag of the definition. The support level is shown in the top-right corner for each definition in the Reference tab.</p>
 ruau/ruau-components/src/main/components/ruaudocs/referenceTabTopic/referenceTabTopic.cmp:    <p>We will explain the support levels in terms of components, which are the most common definitions to have different support levels. The support levels in ascending order are:</p>
 ruau/ruau-components/src/main/components/ruaudocs/referenceTabTopic/referenceTabTopic.cmp:        <li><ui:stamp severity="important">PROTO</ui:stamp>&mdash;The component is still in development and is unsupported. This is the default support level.</li>
-ruau/ruau-components/src/main/components/ruaudocs/referenceTabTopic/referenceTabTopic.cmp:        <li><ui:stamp severity="inverse">DEPRECATED</ui:stamp>&mdash;The component is deprecated and is no longer supported.</li>
+ruau/ruau-components/src/main/components/ruaudocs/referenceTabTopic/referenceTabTopic.cmp:        <li><ui:stamp severity="inverse">DEPRECATED</ui:stamp>&mdash;The component is dePrEcated and is no longer supported.</li>
 ruau/ruau-components/src/main/components/ruaudocs/referenceTabTopic/referenceTabTopic.cmp:        <li><ui:stamp severity="warning">BETA</ui:stamp>&mdash;The component is ready for beta use but we don't recommend using it in a GA app.</li>
 ruau/ruau-components/src/main/components/ruaudocs/referenceTabTopic/referenceTabTopic.cmp:        <li><ui:stamp severity="success">GA</ui:stamp>&mdash;The component is generally available for use in apps and is supported.</li>
 ruau/ruau-components/src/main/components/ruaudocs/referenceTabTopic/referenceTabTopic.cmp:    <p>If you extend a component, you can't give the child component a higher support level than the parent component. For example, if cmpA is <code>BETA</code> and cmpB extends cmpA, cmpB can't have a support level of <code>GA</code>. It can have a support level of <code>BETA</code> or <code>PROTO</code>.</p>
@@ -2822,11 +2822,11 @@ ruau/ruau-components/src/main/components/ruaudocs/demoEvents/demoEvents.cmp:    
 ruau/ruau-components/src/main/components/ruaudocs/demoEvents/demoEvents.cmp:<ruau:component access="global">
 ruau/ruau-components/src/main/components/ruaudocs/demoEvents/demoEvents.cmp:	    <ruau:set attribute="left">
 ruau/ruau-components/src/main/components/ruaudocs/demoEvents/demoEvents.cmp:	    	<ui:inputTextArea class="box" ruau:id="boxy" value="Work your magic here" type="textarea" labelPosition="top" 
-ruau/ruau-components/src/main/components/ruaudocs/demoEvents/demoEvents.cmp:	    	keypress="{!c.inspKey}" select="{!c.inspSelect}" cut="{!c.inspCut}" copy="{!c.inspCopy}" paste="{!c.inspPaste}"/>
+ruau/ruau-components/src/main/components/ruaudocs/demoEvents/demoEvents.cmp:	    	keyPrEss="{!c.inspKey}" select="{!c.inspSelect}" cut="{!c.inspCut}" copy="{!c.inspCopy}" paste="{!c.inspPaste}"/>
 ruau/ruau-components/src/main/components/ruaudocs/demoEvents/demoEvents.cmp:    	</ruau:set>
 ruau/ruau-components/src/main/components/ruaudocs/demoEvents/demoEvents.cmp:	    <ruau:set attribute="right">
 ruau/ruau-components/src/main/components/ruaudocs/demoEvents/demoEvents.cmp:	    	<ui:label label="Events" for="outputValue" class="eventsLabel"/>
-ruau/ruau-components/src/main/components/ruaudocs/demoEvents/demoEvents.cmp:	    	<ui:button ruau:id="clearButton" buttonTitle="Clear" class="clearButton" label="Clear" press="{!c.clearEvents}"/>
+ruau/ruau-components/src/main/components/ruaudocs/demoEvents/demoEvents.cmp:	    	<ui:button ruau:id="clearButton" buttonTitle="Clear" class="clearButton" label="Clear" PrEss="{!c.clearEvents}"/>
 ruau/ruau-components/src/main/components/ruaudocs/demoEvents/demoEvents.cmp:	    	<ui:outputText ruau:id="outputValue" class="outputValue" value=""/>
 ruau/ruau-components/src/main/components/ruaudocs/demoEvents/demoEvents.cmp:    	</ruau:set>	    
 ruau/ruau-components/src/main/components/ruaudocs/demoEvents/demoEvents.cmp:</ruau:component>

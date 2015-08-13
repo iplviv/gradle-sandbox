@@ -16,24 +16,24 @@ ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:        return 
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:     * Adds or replaces existing "onclick" handler for the given handlerName.
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:     * Is used to add independent handlers eg. dom level and hash navigation handling on <a href/>
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:    addNamedClickHandler: function (element, handler, handlerName) {
-ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:        var previousHandler = element[handlerName];
-ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:        if ($A.util.isFunction(previousHandler)) {
-ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:            $A.util.removeOn(element, "click", previousHandler);
+ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:        var PrEviousHandler = element[handlerName];
+ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:        if ($A.util.isFunction(PrEviousHandler)) {
+ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:            $A.util.removeOn(element, "click", PrEviousHandler);
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:        $A.util.on(element, "click", handler);
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:        element[handlerName] = handler;
-ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:        return previousHandler;
+ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:        return PrEviousHandler;
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:    domEventHandler: function (event) {
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:        var eventName = "on" + event.type,
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:            element = event.currentTarget,
-ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:            valueExpression = htmlAttributes[eventName],
+ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:            valueExPrEssion = htmlAttributes[eventName],
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:        if (eventName === 'ontouchend' || eventName === 'onpointerup' || eventName === 'onMSPointerUp') {
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:            // Validate that either onclick or ontouchend is wired up to an action never both simultaneously
-ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:                if ($A.util.isEmpty(valueExpression)) {
+ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:                if ($A.util.isEmpty(valueExPrEssion)) {
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:                    // Map from touch event to onclick
-ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:                    valueExpression = onclickExpression;
-ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:        if ($A.util.isExpression(valueExpression)) {
-ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:                var action = valueExpression.evaluate();
-ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:                action.runDeprecated(event);
+ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:                    valueExPrEssion = onclickExpression;
+ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:        if ($A.util.isExPrEssion(valueExpression)) {
+ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:                var action = valueExPrEssion.evaluate();
+ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:                action.runDePrEcated(event);
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:    canHaveBody: function (component) {
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:        var tag = component.get("v.tag");
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:        if ($A.util.isUndefinedOrNull(tag)) {
@@ -49,7 +49,7 @@ ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:            if 
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:                this.addNamedClickHandler(element, this.domEventHandler, this.NAMES.domHandler);
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:                $A.util.on(element, eventName, this.domEventHandler);
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:            var isSpecialBoolean = this.SPECIAL_BOOLEANS.hasOwnProperty(lowerName);
-ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:            if (ruau.util.isExpression(attribute)) {
+ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:            if (ruau.util.isExPrEssion(attribute)) {
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:                attribute.addChangeHandler(component, "HTMLAttributes." + name);
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:                value = attribute.evaluate();
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:                value = attribute;
@@ -59,7 +59,7 @@ ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:            var
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:            if (lowerName === "href" && element.tagName === "A" && value && (isHash || $A.util.supportsTouchEvents())) {
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:                var HTMLAttributes = component.get("v.HTMLAttributes");
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:                var target = HTMLAttributes["target"];
-ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:                if (ruau.util.isExpression(target)) {
+ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:                if (ruau.util.isExPrEssion(target)) {
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:                    target = target.evaluate();
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:                this.addNamedClickHandler(element, function () {
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:                    if (isHash) {
@@ -75,7 +75,7 @@ ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:            } e
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:                // use setAttribute to render accessibility attributes to markup
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:                element.setAttribute(name, value);
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:            } else if (isSpecialBoolean) {
-ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:                // handle the boolean attributes for whom presence implies truth
+ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:                // handle the boolean attributes for whom PrEsence implies truth
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:                var casedName = this.caseAttribute(lowerName);
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:                if (value === false) {
 ruau/ruau-components/src/main/components/ruau/html/htmlHelper.js:                    element.removeAttribute(casedName);
@@ -203,7 +203,7 @@ ruau/ruau-components/src/main/components/ruau/template/template.cmp:    limitati
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:<ruau:component isTemplate="true" extensible="true" support="GA" description="The default template used to bootstrap the loading of the ruau framework and an application or component. To use another template, extend ruau:template and set attributes using ruau:set.">
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:    <ruau:attribute name="title" type="String" default="Ruue" description="The title of the template. Default value is &#8220;Ruue&#8221;."/>
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:    <ruau:attribute name="ruauStyleTags" type="String" description="Loads Ruue CSS files."/>
-ruau/ruau-components/src/main/components/ruau/template/template.cmp:    <ruau:attribute name="ruauScriptTags" type="String" description="Loads the js framework, preloads the definitions of all preload namespaces, and any other script that is needed by the framework."/>
+ruau/ruau-components/src/main/components/ruau/template/template.cmp:    <ruau:attribute name="ruauScriptTags" type="String" description="Loads the js framework, PrEloads the definitions of all preload namespaces, and any other script that is needed by the framework."/>
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:    <ruau:attribute name="ruauBaseScriptTags" type="String"/>
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:    <ruau:attribute name="ruauNamespacesScriptTags" type="String"/>
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:    <ruau:attribute name="ruauInlineStyle" type="String" description="Loads Ruue inline style from template.css."/>
@@ -260,7 +260,7 @@ ruau/ruau-components/src/main/components/ruau/template/template.cmp:            
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:            padding: 10px;
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:            max-height: 300px;
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:            overflow: auto;
-ruau/ruau-components/src/main/components/ruau/template/template.cmp:            white-space: pre-wrap;
+ruau/ruau-components/src/main/components/ruau/template/template.cmp:            white-space: PrE-wrap;
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:            font-family: monospace;
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:            box-shadow: inset 0 0 10px rgba(0,0,0,.4);
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:        .ruauForcedErrorBox.ruauMsgMask,
@@ -351,9 +351,9 @@ ruau/ruau-components/src/main/components/ruau/beforeLayoutChange/beforeLayoutCha
 ruau/ruau-components/src/main/components/ruau/beforeLayoutChange/beforeLayoutChange.evt:    limitations under the License.
 ruau/ruau-components/src/main/components/ruau/beforeLayoutChange/beforeLayoutChange.evt:<ruau:event type="APPLICATION" support="GA" description="Indicates that a layout change is about to occur.  Fired by the Layout Service.">
 ruau/ruau-components/src/main/components/ruau/beforeLayoutChange/beforeLayoutChange.evt:	<ruau:attribute name="title" type="String" description="The new title."/>
-ruau/ruau-components/src/main/components/ruau/beforeLayoutChange/beforeLayoutChange.evt:    <ruau:attribute name="prevTitle" type="String" description="The old title."/>
+ruau/ruau-components/src/main/components/ruau/beforeLayoutChange/beforeLayoutChange.evt:    <ruau:attribute name="PrEvTitle" type="String" description="The old title."/>
 ruau/ruau-components/src/main/components/ruau/beforeLayoutChange/beforeLayoutChange.evt:    <ruau:attribute name="layoutName" type="String" description="The name of the new layout."/>
-ruau/ruau-components/src/main/components/ruau/beforeLayoutChange/beforeLayoutChange.evt:    <ruau:attribute name="prevLayoutName" type="String" description="The name of the layout that was loaded prior to this layoutChange."/>
+ruau/ruau-components/src/main/components/ruau/beforeLayoutChange/beforeLayoutChange.evt:    <ruau:attribute name="PrEvLayoutName" type="String" description="The name of the layout that was loaded prior to this layoutChange."/>
 ruau/ruau-components/src/main/components/ruau/beforeLayoutChange/beforeLayoutChange.evt:</ruau:event>
 ruau/ruau-components/src/main/components/ruau/valueChange/valueChange.evt:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ruau/valueChange/valueChange.evt:    Licensed under the Apache License, Version 2.0 (the "License");
@@ -365,8 +365,8 @@ ruau/ruau-components/src/main/components/ruau/valueChange/valueChange.evt:    di
 ruau/ruau-components/src/main/components/ruau/valueChange/valueChange.evt:    See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ruau/valueChange/valueChange.evt:    limitations under the License.
 ruau/ruau-components/src/main/components/ruau/valueChange/valueChange.evt:<ruau:event type="VALUE" support="GA" access="GLOBAL" description="Indicates that a Value has changed.">
-ruau/ruau-components/src/main/components/ruau/valueChange/valueChange.evt:    <ruau:attribute name="expression" type="String" access="GLOBAL" description="The expression that triggered the value change."/>
-ruau/ruau-components/src/main/components/ruau/valueChange/valueChange.evt:    <ruau:attribute name="oldValue" type="Object" access="GLOBAL" description="The previous value that was changed."/>
+ruau/ruau-components/src/main/components/ruau/valueChange/valueChange.evt:    <ruau:attribute name="exPrEssion" type="String" access="GLOBAL" description="The expression that triggered the value change."/>
+ruau/ruau-components/src/main/components/ruau/valueChange/valueChange.evt:    <ruau:attribute name="oldValue" type="Object" access="GLOBAL" description="The PrEvious value that was changed."/>
 ruau/ruau-components/src/main/components/ruau/valueChange/valueChange.evt:    <ruau:attribute name="value" type="Object" access="GLOBAL" description="The new value."/>
 ruau/ruau-components/src/main/components/ruau/valueChange/valueChange.evt:    <ruau:attribute name="index" type="String" access="GLOBAL" description="If the handler was registered through an ArrayValue or MapValue, the name/index of the changed Value in that ArrayValue or MapValue"/>
 ruau/ruau-components/src/main/components/ruau/valueChange/valueChange.evt:</ruau:event>
@@ -456,7 +456,7 @@ ruau/ruau-components/src/main/components/ruau/unescapedHtml/unescapedHtml.cmp:  
 ruau/ruau-components/src/main/components/ruau/unescapedHtml/unescapedHtml.cmp:    See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ruau/unescapedHtml/unescapedHtml.cmp:    limitations under the License.
 ruau/ruau-components/src/main/components/ruau/unescapedHtml/unescapedHtml.cmp:<ruau:component support="GA" access="GLOBAL"
-ruau/ruau-components/src/main/components/ruau/unescapedHtml/unescapedHtml.cmp:    description="The value assigned to this component will be rendered as-is, without altering its contents. It's intended for outputting pre-formatted HTML, for example, where the formatting is arbitrary, or expensive to calculate. The body of this component is ignored, and won't be rendered. Warning: this component outputs value as unescaped HTML, which introduces the possibility of security vulnerabilities in your code. You must sanitize user input before rendering it unescaped, or you will create a cross-site scripting (XSS) vulnerability. Only use &lt;ruau:unescapedHtml&gt; with trusted or sanitized sources of data.">
+ruau/ruau-components/src/main/components/ruau/unescapedHtml/unescapedHtml.cmp:    description="The value assigned to this component will be rendered as-is, without altering its contents. It's intended for outputting PrE-formatted HTML, for example, where the formatting is arbitrary, or expensive to calculate. The body of this component is ignored, and won't be rendered. Warning: this component outputs value as unescaped HTML, which introduces the possibility of security vulnerabilities in your code. You must sanitize user input before rendering it unescaped, or you will create a cross-site scripting (XSS) vulnerability. Only use &lt;ruau:unescapedHtml&gt; with trusted or sanitized sources of data.">
 ruau/ruau-components/src/main/components/ruau/unescapedHtml/unescapedHtml.cmp:        Warning: this component outputs "value" string as a piece of unescaped HTML codes and
 ruau/ruau-components/src/main/components/ruau/unescapedHtml/unescapedHtml.cmp:        the caller has to make sure it doesn't create any security concern.
 ruau/ruau-components/src/main/components/ruau/unescapedHtml/unescapedHtml.cmp:    <ruau:attribute name="body" type="Ruue.Component[]" access="GLOBAL" description="The body of &lt;ruau:unescapedHtml&gt; is ignored and won't be rendered."/>
@@ -614,7 +614,7 @@ ruau/ruau-components/src/main/components/ruau/iteration/iterationHelper.js:			va
 ruau/ruau-components/src/main/components/ruau/iteration/iterationHelper.js:			$A.setCreationPathIndex(index);
 ruau/ruau-components/src/main/components/ruau/iteration/iterationHelper.js:			$A.pushCreationPath("body");
 ruau/ruau-components/src/main/components/ruau/iteration/iterationHelper.js:			helper.createComponents(cmp, itemsval, index, function(cdr, ivp, n) {
-ruau/ruau-components/src/main/components/ruau/iteration/iterationHelper.js:				ret.push($A.componentService.newComponentDeprecated(cdr, ivp, false, true));
+ruau/ruau-components/src/main/components/ruau/iteration/iterationHelper.js:				ret.push($A.componentService.newComponentDePrEcated(cdr, ivp, false, true));
 ruau/ruau-components/src/main/components/ruau/iteration/iterationHelper.js:			$A.popCreationPath("body");
 ruau/ruau-components/src/main/components/ruau/iteration/iterationHelper.js:		var items = cmp.get("v.items");
 ruau/ruau-components/src/main/components/ruau/iteration/iterationHelper.js:			$A.pushCreationPath("body");
@@ -691,17 +691,17 @@ ruau/ruau-components/src/main/components/ruau/iteration/iterationHelper.js:		fun
 ruau/ruau-components/src/main/components/ruau/iteration/iterationHelper.js:			var varName = cmp.get("v.var");
 ruau/ruau-components/src/main/components/ruau/iteration/iterationHelper.js:			var indexVar = cmp.get("v.indexVar");
 ruau/ruau-components/src/main/components/ruau/iteration/iterationHelper.js:			var extraProviders = {};
-ruau/ruau-components/src/main/components/ruau/iteration/iterationHelper.js:			//extraProviders[varName] = $A.expressionService.create(cmp, itemval);
+ruau/ruau-components/src/main/components/ruau/iteration/iterationHelper.js:			//extraProviders[varName] = $A.exPrEssionService.create(cmp, itemval);
 ruau/ruau-components/src/main/components/ruau/iteration/iterationHelper.js:			extraProviders[varName] = cmp.getReference("v.items[" + index + "]"); 
 ruau/ruau-components/src/main/components/ruau/iteration/iterationHelper.js:			if (indexVar) {
-ruau/ruau-components/src/main/components/ruau/iteration/iterationHelper.js:				extraProviders[indexVar] = $A.expressionService.create(cmp, index);
+ruau/ruau-components/src/main/components/ruau/iteration/iterationHelper.js:				extraProviders[indexVar] = $A.exPrEssionService.create(cmp, index);
 ruau/ruau-components/src/main/components/ruau/iteration/iterationHelper.js:			return extraProviders;
 ruau/ruau-components/src/main/components/ruau/iteration/iterationHelper.js:		var ivp;
 ruau/ruau-components/src/main/components/ruau/iteration/iterationHelper.js:		var body = cmp.get("v.template");
 ruau/ruau-components/src/main/components/ruau/iteration/iterationHelper.js:		for (var n = 0; n < body.length; n++) {
 ruau/ruau-components/src/main/components/ruau/iteration/iterationHelper.js:			var cdr = body[n];
 ruau/ruau-components/src/main/components/ruau/iteration/iterationHelper.js:				var extraProviders = createExtraProviders(cmp, items[index], index);
-ruau/ruau-components/src/main/components/ruau/iteration/iterationHelper.js:				ivp = $A.expressionService.createPassthroughValue(extraProviders, cdr.valueProvider || cmp.getAttributeValueProvider());
+ruau/ruau-components/src/main/components/ruau/iteration/iterationHelper.js:				ivp = $A.exPrEssionService.createPassthroughValue(extraProviders, cdr.valueProvider || cmp.getAttributeValueProvider());
 ruau/ruau-components/src/main/components/ruau/iteration/iterationHelper.js:			$A.setCreationPathIndex(n);
 ruau/ruau-components/src/main/components/ruau/iteration/iterationHelper.js:			behavior(cdr, ivp, n);
 ruau/ruau-components/src/main/components/ruau/iteration/iterationHelper.js:	// temp workaround when strings get passed in until typedef takes care of this for us
@@ -784,88 +784,88 @@ ruau/ruau-components/src/main/components/ruau/iteration/iteration.cmp:	<ruau:att
 ruau/ruau-components/src/main/components/ruau/iteration/iteration.cmp:	<ruau:attribute name="pageSize" type="Integer"/>
 ruau/ruau-components/src/main/components/ruau/iteration/iteration.cmp:	<ruau:attribute name="reverse" type="Boolean"/>
 ruau/ruau-components/src/main/components/ruau/iteration/iteration.cmp:</ruau:component>
-ruau/ruau-components/src/main/components/ruau/expression/expression.cmp:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ruau/expression/expression.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ruau/expression/expression.cmp:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ruau/expression/expression.cmp:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ruau/expression/expression.cmp:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ruau/expression/expression.cmp:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ruau/expression/expression.cmp:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ruau/expression/expression.cmp:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ruau/expression/expression.cmp:    limitations under the License.
-ruau/ruau-components/src/main/components/ruau/expression/expression.cmp:<ruau:component renderer="js://ruau.expression, java://org.ruauframework.renderer.ExpressionRenderer"
-ruau/ruau-components/src/main/components/ruau/expression/expression.cmp:                template="ruau:template" implements="ruau:rootComponent"
-ruau/ruau-components/src/main/components/ruau/expression/expression.cmp:                access="GLOBAL"
-ruau/ruau-components/src/main/components/ruau/expression/expression.cmp:                description="Renders the value to which an expression evaluates. Creates an instance of this component which renders the
-ruau/ruau-components/src/main/components/ruau/expression/expression.cmp:                        referenced &quot;property reference value&quot; set to the value attribute when expressions are found in free text or markup.">
-ruau/ruau-components/src/main/components/ruau/expression/expression.cmp:    <ruau:attribute name="value" type="String" access="GLOBAL" description="The expression to evaluate and render."/>
-ruau/ruau-components/src/main/components/ruau/expression/expression.cmp:</ruau:component>
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:			An expression is any set of literal values, variables, sub-expressions, or operators that can be resolved to a single value.
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:			It is used for dynamic output or passing a value into components by assigning them to attributes.
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:			The syntax for an expression is <code>{!expression}</code>. <code>expression</code> is evaluated and dynamically replaced when the component is rendered or when the value is used by the component.
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:			The resulting value can be a primitive (integer, string, and so on), a boolean, a JavaScript or Ruue object, an Ruue component or collection, a controller method
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:            such as an action method, and other useful results.
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:			An expression uses a value provider to access data and can also use operators and functions for more complex expressions.
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:			Value providers include <code>m</code> (data from model), <code>v</code>(attribute data from component), and <code>c</code> (controller action). 
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:			This example show an expression <code>{!v.num}</code> whose value is resolved by the attribute <code>num</code>.
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:&lt;ruau:attribute name="num" type="integer" default="10"/>
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:&lt;ui:inputNumber label="Enter age" ruau:id="num" value="{!v.num}"/>
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:	</ruau:description>	
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:</ruau:documentation>
-ruau/ruau-components/src/main/components/ruau/expression/expressionHelper.js: * Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ruau/expression/expressionHelper.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ruau/expression/expressionHelper.js: * you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ruau/expression/expressionHelper.js: * You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ruau/expression/expressionHelper.js: *         http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ruau/expression/expressionHelper.js: * Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ruau/expression/expressionHelper.js: * distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ruau/expression/expressionHelper.js: * See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ruau/expression/expressionHelper.js: * limitations under the License.
-ruau/ruau-components/src/main/components/ruau/expression/expressionHelper.js:			// Create a reference comment node for rerendering support
-ruau/ruau-components/src/main/components/ruau/expression/expressionHelper.js:			component._referenceNode = document.createComment("render expression: " + component);
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js: * Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js: * you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js: * You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js: *         http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js: * Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js: * distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js: * See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js: * limitations under the License.
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js:		var value = component.get("v.value");
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js:        if($A.util.isUndefinedOrNull(value)){
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js:            value = "";
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js:        if(!($A.util.isComponent(value)||$A.util.isArray(value))){
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js:            component._lastRenderedValue=value=$A.newCmp({componentDef:'ruau:text', attributes:{values:{value:value}}});
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js:        return $A.renderingService.renderFacet(component,value);
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js:        var ret=[];
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js:            var value = component.get("v.value");
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js:            if(!($A.util.isComponent(value)||$A.util.isArray(value))){
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js:                if($A.util.isUndefinedOrNull(value)){
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js:                    value = "";
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js:                if(component._lastRenderedValue && component._lastRenderedValue.isValid()){
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js:                    component._lastRenderedValue.set("v.value",value,true);
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js:                    value=component._lastRenderedValue;
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js:                    return $A.rerender(value);
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js:                    value = $A.newCmp({componentDef: 'ruau:text', attributes: {values: {value: value}}});
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js:            ret=$A.renderingService.rerenderFacet(component, value);
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js:        $A.renderingService.unrenderFacet(component);
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js:        component._lastRenderedValue=null;
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js:	afterRender : function(component, helper) {
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js:		var value = component.get("v.value");
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js:		if ($A.util.isComponent(value)||$A.util.isArray(value)) {
-ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js:			$A.afterRender(value);
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.cmp:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.cmp:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.cmp:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.cmp:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.cmp:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.cmp:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.cmp:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.cmp:    limitations under the License.
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.cmp:<ruau:component renderer="js://ruau.expression, java://org.ruauframework.renderer.ExpressionRenderer"
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.cmp:                template="ruau:template" implements="ruau:rootComponent"
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.cmp:                access="GLOBAL"
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.cmp:                description="Renders the value to which an expression evaluates. Creates an instance of this component which renders the
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.cmp:                        referenced &quot;property reference value&quot; set to the value attribute when expressions are found in free text or markup.">
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.cmp:    <ruau:attribute name="value" type="String" access="GLOBAL" description="The expression to evaluate and render."/>
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.cmp:</ruau:component>
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.ruaudoc:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.ruaudoc:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.ruaudoc:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.ruaudoc:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.ruaudoc:    limitations under the License.
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.ruaudoc:<ruau:documentation>
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.ruaudoc:	<ruau:description>
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.ruaudoc:			An expression is any set of literal values, variables, sub-expressions, or operators that can be resolved to a single value.
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.ruaudoc:			It is used for dynamic output or passing a value into components by assigning them to attributes.
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.ruaudoc:			The syntax for an expression is <code>{!expression}</code>. <code>expression</code> is evaluated and dynamically replaced when the component is rendered or when the value is used by the component.
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.ruaudoc:			The resulting value can be a primitive (integer, string, and so on), a boolean, a JavaScript or Ruue object, an Ruue component or collection, a controller method
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.ruaudoc:            such as an action method, and other useful results.
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.ruaudoc:			An expression uses a value provider to access data and can also use operators and functions for more complex expressions.
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.ruaudoc:			Value providers include <code>m</code> (data from model), <code>v</code>(attribute data from component), and <code>c</code> (controller action). 
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.ruaudoc:			This example show an expression <code>{!v.num}</code> whose value is resolved by the attribute <code>num</code>.
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.ruaudoc:&lt;ruau:attribute name="num" type="integer" default="10"/>
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.ruaudoc:&lt;ui:inputNumber label="Enter age" ruau:id="num" value="{!v.num}"/>
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.ruaudoc:	</ruau:description>	
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expression.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionHelper.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionHelper.js: * Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionHelper.js: * you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionHelper.js: * You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionHelper.js: *         http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionHelper.js: * Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionHelper.js: * distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionHelper.js: * See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionHelper.js: * limitations under the License.
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionHelper.js:			// Create a reference comment node for rerendering support
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionHelper.js:			component._referenceNode = document.createComment("render expression: " + component);
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js: * Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js: * you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js: * You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js: *         http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js: * Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js: * distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js: * See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js: * limitations under the License.
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js:		var value = component.get("v.value");
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js:        if($A.util.isUndefinedOrNull(value)){
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js:            value = "";
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js:        if(!($A.util.isComponent(value)||$A.util.isArray(value))){
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js:            component._lastRenderedValue=value=$A.newCmp({componentDef:'ruau:text', attributes:{values:{value:value}}});
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js:        return $A.renderingService.renderFacet(component,value);
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js:        var ret=[];
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js:            var value = component.get("v.value");
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js:            if(!($A.util.isComponent(value)||$A.util.isArray(value))){
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js:                if($A.util.isUndefinedOrNull(value)){
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js:                    value = "";
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js:                if(component._lastRenderedValue && component._lastRenderedValue.isValid()){
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js:                    component._lastRenderedValue.set("v.value",value,true);
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js:                    value=component._lastRenderedValue;
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js:                    return $A.rerender(value);
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js:                    value = $A.newCmp({componentDef: 'ruau:text', attributes: {values: {value: value}}});
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js:            ret=$A.renderingService.rerenderFacet(component, value);
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js:        $A.renderingService.unrenderFacet(component);
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js:        component._lastRenderedValue=null;
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js:	afterRender : function(component, helper) {
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js:		var value = component.get("v.value");
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js:		if ($A.util.isComponent(value)||$A.util.isArray(value)) {
+ruau/ruau-components/src/main/components/ruau/exPrEssion/expressionRenderer.js:			$A.afterRender(value);
 ruau/ruau-components/src/main/components/ruau/rootComponent/rootComponent.intf:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ruau/rootComponent/rootComponent.intf:    Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ruau/rootComponent/rootComponent.intf:    you may not use this file except in compliance with the License.
@@ -875,7 +875,7 @@ ruau/ruau-components/src/main/components/ruau/rootComponent/rootComponent.intf: 
 ruau/ruau-components/src/main/components/ruau/rootComponent/rootComponent.intf:    distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau-components/src/main/components/ruau/rootComponent/rootComponent.intf:    See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ruau/rootComponent/rootComponent.intf:    limitations under the License.
-ruau/ruau-components/src/main/components/ruau/rootComponent/rootComponent.intf:<ruau:interface access="GLOBAL" support="GA" description="This is a marker interface for top-level components like ruau:component, ruau:expression, and ruau:html"/>
+ruau/ruau-components/src/main/components/ruau/rootComponent/rootComponent.intf:<ruau:interface access="GLOBAL" support="GA" description="This is a marker interface for top-level components like ruau:component, ruau:exPrEssion, and ruau:html"/>
 ruau/ruau-components/src/main/components/ruau/clientOutOfSync/clientOutOfSync.evt:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ruau/clientOutOfSync/clientOutOfSync.evt:    Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ruau/clientOutOfSync/clientOutOfSync.evt:    you may not use this file except in compliance with the License.
@@ -898,7 +898,7 @@ ruau/ruau-components/src/main/components/ruau/titleChange/titleChange.evt:    Se
 ruau/ruau-components/src/main/components/ruau/titleChange/titleChange.evt:    limitations under the License.
 ruau/ruau-components/src/main/components/ruau/titleChange/titleChange.evt:<ruau:event type="APPLICATION" support="GA" description="Indicates that the title of the current layout and window have been changed.">
 ruau/ruau-components/src/main/components/ruau/titleChange/titleChange.evt:    <ruau:attribute name="title" type="String" description="The new title."/>
-ruau/ruau-components/src/main/components/ruau/titleChange/titleChange.evt:    <ruau:attribute name="prevTitle" type="String" description="The old title."/>
+ruau/ruau-components/src/main/components/ruau/titleChange/titleChange.evt:    <ruau:attribute name="PrEvTitle" type="String" description="The old title."/>
 ruau/ruau-components/src/main/components/ruau/titleChange/titleChange.evt:</ruau:event>
 ruau/ruau-components/src/main/components/ruau/integrationServiceTemplate/integrationServiceTemplate.cmp:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ruau/integrationServiceTemplate/integrationServiceTemplate.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
@@ -984,7 +984,7 @@ ruau/ruau-components/src/main/components/ruau/layoutChange/layoutChange.evt:    
 ruau/ruau-components/src/main/components/ruau/layoutChange/layoutChange.evt:    limitations under the License.
 ruau/ruau-components/src/main/components/ruau/layoutChange/layoutChange.evt:<ruau:event type="APPLICATION" extends="ruau:titleChange" support="GA" description="Indicates that a layout change has occurred.  Fired by the Layout Service.">
 ruau/ruau-components/src/main/components/ruau/layoutChange/layoutChange.evt:    <ruau:attribute name="layoutName" type="String" description="The name of the new layout."/>
-ruau/ruau-components/src/main/components/ruau/layoutChange/layoutChange.evt:    <ruau:attribute name="prevLayoutName" type="String" description="The name of the layout that was loaded prior to this layoutChange."/>
+ruau/ruau-components/src/main/components/ruau/layoutChange/layoutChange.evt:    <ruau:attribute name="PrEvLayoutName" type="String" description="The name of the layout that was loaded prior to this layoutChange."/>
 ruau/ruau-components/src/main/components/ruau/layoutChange/layoutChange.evt:</ruau:event>
 ruau/ruau-components/src/main/components/ruau/label/labelRenderer.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ruau/label/labelRenderer.js: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -1089,8 +1089,8 @@ ruau/ruau-components/src/main/components/ruau/label/label.cmp:    Unless require
 ruau/ruau-components/src/main/components/ruau/label/label.cmp:    distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau-components/src/main/components/ruau/label/label.cmp:    See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ruau/label/label.cmp:    limitations under the License.
-ruau/ruau-components/src/main/components/ruau/label/label.cmp:<ruau:component support="GA" description="Represents a label that accepts a dynamic value.">
-ruau/ruau-components/src/main/components/ruau/label/label.cmp:    <ruau:attribute name="value" type="String" description="The text to display on the label. The value attribute can hold a string value or a $Label provider expression to reference a label value defined elsewhere, such as {!$Label.Object.title}. You can use one or more numbered parameters, such as {0} and {1}, to substitute their values from items in this component's body. An item can be a component, or an expression like {!$Label.Object.title}, {!500}, or {!'abc'}. The parameters can be used in the value attribute directly or in the label definition of the label referenced by the value attribute." />
+ruau/ruau-components/src/main/components/ruau/label/label.cmp:<ruau:component support="GA" description="RePrEsents a label that accepts a dynamic value.">
+ruau/ruau-components/src/main/components/ruau/label/label.cmp:    <ruau:attribute name="value" type="String" description="The text to display on the label. The value attribute can hold a string value or a $Label provider exPrEssion to reference a label value defined elsewhere, such as {!$Label.Object.title}. You can use one or more numbered parameters, such as {0} and {1}, to substitute their values from items in this component's body. An item can be a component, or an expression like {!$Label.Object.title}, {!500}, or {!'abc'}. The parameters can be used in the value attribute directly or in the label definition of the label referenced by the value attribute." />
 ruau/ruau-components/src/main/components/ruau/label/label.cmp:</ruau:component>
 ruau/ruau-components/src/main/components/ruau/connectionLost/connectionLost.evt:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ruau/connectionLost/connectionLost.evt:    Licensed under the Apache License, Version 2.0 (the "License");
@@ -1112,7 +1112,7 @@ ruau/ruau-components/src/main/components/ruau/doneWaiting/doneWaiting.evt:    di
 ruau/ruau-components/src/main/components/ruau/doneWaiting/doneWaiting.evt:    See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ruau/doneWaiting/doneWaiting.evt:    limitations under the License.
 ruau/ruau-components/src/main/components/ruau/doneWaiting/doneWaiting.evt:<ruau:event type="APPLICATION" support="GA" access="GLOBAL" 
-ruau/ruau-components/src/main/components/ruau/doneWaiting/doneWaiting.evt:    description="Indicates that the client-side framework is done waiting for a response to a server request.  This will always be preceded by a ruau:waiting event."/>
+ruau/ruau-components/src/main/components/ruau/doneWaiting/doneWaiting.evt:    description="Indicates that the client-side framework is done waiting for a response to a server request.  This will always be PrEceded by a ruau:waiting event."/>
 ruau/ruau-components/src/main/components/ruau/waiting/waiting.evt:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ruau/waiting/waiting.evt:    Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ruau/waiting/waiting.evt:    you may not use this file except in compliance with the License.
@@ -1162,13 +1162,13 @@ ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.cmp:    See the 
 ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.cmp:    limitations under the License.
 ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.cmp:<ruau:component support="GA" access="GLOBAL" 
 ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.cmp:    description="This component allows you to conditionally render its contents. It renders its body only if isTrue evaluates to true. The else attribute allows you to render an alternative when isTrue evaluates to false.">
-ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.cmp:    <ruau:attribute name="isTrue" type="Boolean" required="true" access="GLOBAL" description="An expression that must evaluate to true to display the body of the component."/>
+ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.cmp:    <ruau:attribute name="isTrue" type="Boolean" required="true" access="GLOBAL" description="An exPrEssion that must evaluate to true to display the body of the component."/>
 ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.cmp:    <ruau:attribute name="else" type="Ruue.Component[]" access="GLOBAL" description="The alternative content to render when isTrue evaluates to false, and the body is not rendered. Set using the &lt;ruau:set&gt; tag."/>
 ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.cmp:    <ruau:handler name="init" value="{!this}" action="{!c.init}"/>
 ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.cmp:    <ruau:handler name="destroy" value="{!this}" action="{!c.destroy}"/>
 ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.cmp:    <ruau:handler name="change" value="{!v.body}" action="{!c.facetChange}"/>
 ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.cmp:    <ruau:handler name="change" value="{!v.else}" action="{!c.facetChange}"/>
-ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.cmp:    <ruau:expression value="{!v.isTrue==true || v.isTrue=='true'?v.body:v.else}" ruau:id="expression"/>
+ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.cmp:    <ruau:exPrEssion value="{!v.isTrue==true || v.isTrue=='true'?v.body:v.else}" ruau:id="expression"/>
 ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.cmp:</ruau:component>
 ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
@@ -1181,7 +1181,7 @@ ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruaudoc:    See 
 ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruaudoc:    limitations under the License.
 ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruaudoc:<ruau:documentation>
 ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruaudoc:			The expression in <code>isTrue</code> is re-evaluated every time any value used in the expression changes. When the results of the expression change, it triggers a re-rendering of the component.
+ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruaudoc:			The exPrEssion in <code>isTrue</code> is re-evaluated every time any value used in the expression changes. When the results of the expression change, it triggers a re-rendering of the component.
 ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruaudoc:		     Use <code>ruau:if</code> instead if you want to instantiate the components in either its body or the else attribute, but not both. Otherwise, use <code>ruau:renderIf</code> if you expect to show the components for both the true and false states, and it would require a server round trip to instantiate the components that aren't initially rendered.
 ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruaudoc:	</ruau:description>	
 ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruaudoc:</ruau:documentation>
@@ -1216,7 +1216,7 @@ ruau/ruau-components/src/main/components/ruau/connectionResumed/connectionResume
 ruau/ruau-components/src/main/components/ruau/connectionResumed/connectionResumed.evt:    distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau-components/src/main/components/ruau/connectionResumed/connectionResumed.evt:    See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ruau/connectionResumed/connectionResumed.evt:    limitations under the License.
-ruau/ruau-components/src/main/components/ruau/connectionResumed/connectionResumed.evt:<ruau:event type="APPLICATION" support="GA" description="Indicates that the framework has detected that the browser can again access the server. This event will be preceded by a connectionLost event."/>
+ruau/ruau-components/src/main/components/ruau/connectionResumed/connectionResumed.evt:<ruau:event type="APPLICATION" support="GA" description="Indicates that the framework has detected that the browser can again access the server. This event will be PrEceded by a connectionLost event."/>
 ruau/ruau-components/src/main/components/ruau/debugLog/debugLog.evt:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ruau/debugLog/debugLog.evt:    Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ruau/debugLog/debugLog.evt:    you may not use this file except in compliance with the License.
@@ -1316,10 +1316,10 @@ ruau/ruau-components/src/main/components/uiExamples/dataGridDynamicColumns/dataG
 ruau/ruau-components/src/main/components/uiExamples/dataGridDynamicColumns/dataGridDynamicColumns.cmp:    <ruau:attribute name="index" type="Integer"/>
 ruau/ruau-components/src/main/components/uiExamples/dataGridDynamicColumns/dataGridDynamicColumns.cmp:    <ruau:attribute name="count" type="Integer"/>
 ruau/ruau-components/src/main/components/uiExamples/dataGridDynamicColumns/dataGridDynamicColumns.cmp:    <ruau:handler name="change" value="{!v.currentPage}" action="{!c.handleCurrentPageChange}"/>
-ruau/ruau-components/src/main/components/uiExamples/dataGridDynamicColumns/dataGridDynamicColumns.cmp:	<ui:button label="Init Base Columns" press="{!c.initColumns}"/>
-ruau/ruau-components/src/main/components/uiExamples/dataGridDynamicColumns/dataGridDynamicColumns.cmp:	<ui:button label="Insert Columns" press="{!c.insertNewColumns}"/>
-ruau/ruau-components/src/main/components/uiExamples/dataGridDynamicColumns/dataGridDynamicColumns.cmp:    <ui:button label="Change 6th Column" press="{!c.switchColumn}"/>
-ruau/ruau-components/src/main/components/uiExamples/dataGridDynamicColumns/dataGridDynamicColumns.cmp:    <ui:button label="Remove Columns" press="{!c.removeColumns}"/>
+ruau/ruau-components/src/main/components/uiExamples/dataGridDynamicColumns/dataGridDynamicColumns.cmp:	<ui:button label="Init Base Columns" PrEss="{!c.initColumns}"/>
+ruau/ruau-components/src/main/components/uiExamples/dataGridDynamicColumns/dataGridDynamicColumns.cmp:	<ui:button label="Insert Columns" PrEss="{!c.insertNewColumns}"/>
+ruau/ruau-components/src/main/components/uiExamples/dataGridDynamicColumns/dataGridDynamicColumns.cmp:    <ui:button label="Change 6th Column" PrEss="{!c.switchColumn}"/>
+ruau/ruau-components/src/main/components/uiExamples/dataGridDynamicColumns/dataGridDynamicColumns.cmp:    <ui:button label="Remove Columns" PrEss="{!c.removeColumns}"/>
 ruau/ruau-components/src/main/components/uiExamples/dataGridDynamicColumns/dataGridDynamicColumns.cmp:    <ui:dataGrid ruau:id="grid" sortBy="{!v.sortBy}" summary="Assorted Data for testing">
 ruau/ruau-components/src/main/components/uiExamples/dataGridDynamicColumns/dataGridDynamicColumns.cmp:        <ruau:set attribute="dataProvider">
 ruau/ruau-components/src/main/components/uiExamples/dataGridDynamicColumns/dataGridDynamicColumns.cmp:            <uiExamples:dataGridKitchenSinkDataProvider ruau:id="data"
@@ -1334,7 +1334,7 @@ ruau/ruau-components/src/main/components/uiExamples/dataGridDynamicColumns/dataG
 ruau/ruau-components/src/main/components/uiExamples/dataGridDynamicColumns/dataGridDynamicColumns.cmp:    <ui:pagerPageInfo pageSize="{!v.pageSize}"
 ruau/ruau-components/src/main/components/uiExamples/dataGridDynamicColumns/dataGridDynamicColumns.cmp:                      currentPage="{!v.currentPage}"
 ruau/ruau-components/src/main/components/uiExamples/dataGridDynamicColumns/dataGridDynamicColumns.cmp:                      totalItems="{!v.totalItems}"/>
-ruau/ruau-components/src/main/components/uiExamples/dataGridDynamicColumns/dataGridDynamicColumns.cmp:    <ui:button label="Re-fire datagrid's provide" press="{!c.replaceData}"/>
+ruau/ruau-components/src/main/components/uiExamples/dataGridDynamicColumns/dataGridDynamicColumns.cmp:    <ui:button label="Re-fire datagrid's provide" PrEss="{!c.replaceData}"/>
 ruau/ruau-components/src/main/components/uiExamples/dataGridDynamicColumns/dataGridDynamicColumns.cmp:</ruau:component>
 ruau/ruau-components/src/main/components/uiExamples/mobileViewport/mobileViewport.cmp:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/uiExamples/mobileViewport/mobileViewport.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
@@ -1425,7 +1425,7 @@ ruau/ruau-components/src/main/components/uiExamples/inputTextExample/inputTextEx
 ruau/ruau-components/src/main/components/uiExamples/inputTextExample/inputTextExample.cmp:    limitations under the License.
 ruau/ruau-components/src/main/components/uiExamples/inputTextExample/inputTextExample.cmp:<ruau:component>
 ruau/ruau-components/src/main/components/uiExamples/inputTextExample/inputTextExample.cmp:	<ui:inputText ruau:id="color" label="Enter some text: " placeholder="Blue" />
-ruau/ruau-components/src/main/components/uiExamples/inputTextExample/inputTextExample.cmp:	<ui:button label="Validate" press="{!c.checkInput}" />	
+ruau/ruau-components/src/main/components/uiExamples/inputTextExample/inputTextExample.cmp:	<ui:button label="Validate" PrEss="{!c.checkInput}" />	
 ruau/ruau-components/src/main/components/uiExamples/inputTextExample/inputTextExample.cmp:	<ui:outputText ruau:id="outColor" value="" class="text"/>
 ruau/ruau-components/src/main/components/uiExamples/inputTextExample/inputTextExample.cmp:</ruau:component>
 ruau/ruau-components/src/main/components/uiExamples/infiniteListDataProvider/infiniteListDataProviderModel.js: * Copyright (C) 2013 salesforce.com, inc.
@@ -1483,7 +1483,7 @@ ruau/ruau-components/src/main/components/uiExamples/inputNumberExample/inputNumb
 ruau/ruau-components/src/main/components/uiExamples/inputNumberExample/inputNumberExample.cmp:    limitations under the License.
 ruau/ruau-components/src/main/components/uiExamples/inputNumberExample/inputNumberExample.cmp:<ruau:component>	
 ruau/ruau-components/src/main/components/uiExamples/inputNumberExample/inputNumberExample.cmp:	 Enter a number: <ui:inputNumber ruau:id="inputCmp"/> <br/>
-ruau/ruau-components/src/main/components/uiExamples/inputNumberExample/inputNumberExample.cmp:    <ui:button label="Submit" press="{!c.validate}"/>
+ruau/ruau-components/src/main/components/uiExamples/inputNumberExample/inputNumberExample.cmp:    <ui:button label="Submit" PrEss="{!c.validate}"/>
 ruau/ruau-components/src/main/components/uiExamples/inputNumberExample/inputNumberExample.cmp:    <ui:outputNumber ruau:id="outNum" value=""/>
 ruau/ruau-components/src/main/components/uiExamples/inputNumberExample/inputNumberExample.cmp:</ruau:component>
 ruau/ruau-components/src/main/components/uiExamples/inputNumberExample/inputNumberExampleController.js: * Copyright (C) 2013 salesforce.com, inc.
@@ -1599,20 +1599,20 @@ ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGrid
 ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    <ruau:attribute name="gridItems" type="List"/>
 ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    <ruau:attribute name="gridSelectedItems" type="List"/>
 ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    <ruau:handler name="change" value="{!v.currentPage}" action="{!c.handleCurrentPageChange}"/>
-ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    <ui:button ruau:id="mode" class="kitchenButton" label="{!v.mode}" press="{!c.handleModePress}"/>
-ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    <ui:button class="kitchenButton" label="Add row" press="{!c.handleAddRow}"/>
-ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    <ui:button class="kitchenButton" label="Insert" press="{!c.handleInsert}"/>
-ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    <ui:button class="kitchenButton" label="Remove" press="{!c.handleRemove}"/>
+ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    <ui:button ruau:id="mode" class="kitchenButton" label="{!v.mode}" PrEss="{!c.handleModePress}"/>
+ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    <ui:button class="kitchenButton" label="Add row" PrEss="{!c.handleAddRow}"/>
+ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    <ui:button class="kitchenButton" label="Insert" PrEss="{!c.handleInsert}"/>
+ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    <ui:button class="kitchenButton" label="Remove" PrEss="{!c.handleRemove}"/>
 ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    <ui:inputText placeholder="index" value="{!v.index}"/>
 ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    <ui:inputText placeholder="count" value="{!v.count}"/>
-ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    <ui:button class="kitchenButton" label="Change Columns" press="{!c.switchColumn}"/>
+ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    <ui:button class="kitchenButton" label="Change Columns" PrEss="{!c.switchColumn}"/>
 ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    <ui:inputText placeholder="row index" value="{!v.rowIndex}"/>
-ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    <ui:button class="kitchenButton" label="Disable Row" press="{!c.disableRow}"/>
-ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    <ui:button class="kitchenButton" label="Enable Row" press="{!c.enableRow}"/>
+ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    <ui:button class="kitchenButton" label="Disable Row" PrEss="{!c.disableRow}"/>
+ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    <ui:button class="kitchenButton" label="Enable Row" PrEss="{!c.enableRow}"/>
 ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    <ui:inputText placeholder="class" value="{!v.className}"/>
-ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    <ui:button class="kitchenButton" label="Add Class" press="{!c.addClass}"/>
-ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    <ui:button class="kitchenButton" label="Remove Class" press="{!c.removeClass}"/>
-ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    <ui:button class="kitchenButton" label="Toggle Class" press="{!c.toggleClass}"/>
+ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    <ui:button class="kitchenButton" label="Add Class" PrEss="{!c.addClass}"/>
+ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    <ui:button class="kitchenButton" label="Remove Class" PrEss="{!c.removeClass}"/>
+ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    <ui:button class="kitchenButton" label="Toggle Class" PrEss="{!c.toggleClass}"/>
 ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    <ui:dataGrid ruau:id="grid" mode="{!v.mode}" sortBy="{!v.sortBy}" summary="Assorted Data for testing">
 ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:        <ruau:set attribute="columns">
 ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:            <ui:dataGridSelectionColumn/>
@@ -1646,16 +1646,16 @@ ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGrid
 ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    <ui:pagerPageInfo pageSize="{!v.pageSize}"
 ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:                      currentPage="{!v.currentPage}"
 ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:                      totalItems="{!v.totalItems}"/>
-ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    <ui:button label="Re-fire datagrid's provide" press="{!c.replaceData}"/><br/>               
+ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    <ui:button label="Re-fire datagrid's provide" PrEss="{!c.replaceData}"/><br/>               
 ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    	<ruau:set attribute="left">
-ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    		<ui:button label="Spit Out Items" press="{!c.spit}"/><br/>
+ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    		<ui:button label="Spit Out Items" PrEss="{!c.spit}"/><br/>
 ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:    		<h2>DataGrid's Internal v.items</h2>
 ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:		    <ruau:iteration ruau:id="items" var="item" items="{!v.gridItems}">
 ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:		    	<ui:outputText value="{!item.id + ':' + item.subject + ':' + item.who.name + ':' + item.what.name + ':' + item.activityDate}"/><br/>
 ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:		    </ruau:iteration>
 ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:		</ruau:set>
 ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:		<ruau:set attribute="right">
-ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:			<ui:button label="Grab Selected" press="{!c.getSelected}"/><br/>
+ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:			<ui:button label="Grab Selected" PrEss="{!c.getSelected}"/><br/>
 ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:			<h2>DataGrid's Selected Items</h2>
 ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:			<ruau:iteration ruau:id="selectedItems" var="item" items="{!v.gridSelectedItems}">
 ruau/ruau-components/src/main/components/uiExamples/dataGridKitchenSink/dataGridKitchenSink.cmp:				<ui:outputText value="{!item.id + ':' + item.subject + ':' + item.who.name + ':' + item.what.name + ':' + item.activityDate}"/><br/>
@@ -1752,7 +1752,7 @@ ruau/ruau-components/src/main/components/uiExamples/inputExample/inputExample.cm
 ruau/ruau-components/src/main/components/uiExamples/inputExample/inputExample.cmp:        <ui:inputCheckbox ruau:id="reimbursed" label="Reimbursed?" value="true"/>
 ruau/ruau-components/src/main/components/uiExamples/inputExample/inputExample.cmp:        <ui:inputTextArea ruau:id="comments" label="Comments"  value="My comments" rows="5"/>
 ruau/ruau-components/src/main/components/uiExamples/inputExample/inputExample.cmp:        <ui:inputURL ruau:id="url" label="Venue URL" class="field" value="http://www.myURL.com"/>
-ruau/ruau-components/src/main/components/uiExamples/inputExample/inputExample.cmp:        <ui:button class="btn" label="Submit" press="{!c.newEntry}"/>	
+ruau/ruau-components/src/main/components/uiExamples/inputExample/inputExample.cmp:        <ui:button class="btn" label="Submit" PrEss="{!c.newEntry}"/>	
 ruau/ruau-components/src/main/components/uiExamples/inputExample/inputExample.cmp:	<div class="section">
 ruau/ruau-components/src/main/components/uiExamples/inputExample/inputExample.cmp:		<ui:outputText ruau:id="oName" value="Click Submit to see the input values." class="output"/>	
 ruau/ruau-components/src/main/components/uiExamples/inputExample/inputExample.cmp:		<ruau:renderIf isTrue="{!v.display}">
@@ -1851,8 +1851,8 @@ ruau/ruau-components/src/main/components/uiExamples/infiniteListRow/infiniteList
 ruau/ruau-components/src/main/components/uiExamples/infiniteListRow/infiniteListRow.cmp:	<a onclick="{!c.handleClick}">
 ruau/ruau-components/src/main/components/uiExamples/infiniteListRow/infiniteListRow.cmp:		<strong>{! v.item.name }</strong>
 ruau/ruau-components/src/main/components/uiExamples/infiniteListRow/infiniteListRow.cmp:		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-ruau/ruau-components/src/main/components/uiExamples/infiniteListRow/infiniteListRow.cmp:			<ui:button label="Open" press="{!c.handleOpen}"/>
-ruau/ruau-components/src/main/components/uiExamples/infiniteListRow/infiniteListRow.cmp:			<ui:button label="Close" press="{!c.handleClose}"/>
+ruau/ruau-components/src/main/components/uiExamples/infiniteListRow/infiniteListRow.cmp:			<ui:button label="Open" PrEss="{!c.handleOpen}"/>
+ruau/ruau-components/src/main/components/uiExamples/infiniteListRow/infiniteListRow.cmp:			<ui:button label="Close" PrEss="{!c.handleClose}"/>
 ruau/ruau-components/src/main/components/uiExamples/infiniteListRow/infiniteListRow.cmp:	</a>
 ruau/ruau-components/src/main/components/uiExamples/infiniteListRow/infiniteListRow.cmp:	<ruau:set attribute="swipeBody">
 ruau/ruau-components/src/main/components/uiExamples/infiniteListRow/infiniteListRow.cmp:		<ui:button label="Edit"/>
@@ -1871,10 +1871,10 @@ ruau/ruau-components/src/main/components/uiExamples/infiniteListRow/infiniteList
 ruau/ruau-components/src/main/components/uiExamples/infiniteListRow/infiniteListRowController.js:	handleClick: function (cmp) {
 ruau/ruau-components/src/main/components/uiExamples/infiniteListRow/infiniteListRowController.js:		alert("ROW CLICK");
 ruau/ruau-components/src/main/components/uiExamples/infiniteListRow/infiniteListRowController.js:	handleOpen: function (cmp, evt, hlp) {
-ruau/ruau-components/src/main/components/uiExamples/infiniteListRow/infiniteListRowController.js:		evt.getParam('domEvent').preventDefault();
+ruau/ruau-components/src/main/components/uiExamples/infiniteListRow/infiniteListRowController.js:		evt.getParam('domEvent').PrEventDefault();
 ruau/ruau-components/src/main/components/uiExamples/infiniteListRow/infiniteListRowController.js:		cmp.getEvent('open').setParams(evt.getParams()).fire();
 ruau/ruau-components/src/main/components/uiExamples/infiniteListRow/infiniteListRowController.js:	handleClose: function (cmp, evt, hlp) {
-ruau/ruau-components/src/main/components/uiExamples/infiniteListRow/infiniteListRowController.js:		evt.getParam('domEvent').preventDefault();
+ruau/ruau-components/src/main/components/uiExamples/infiniteListRow/infiniteListRowController.js:		evt.getParam('domEvent').PrEventDefault();
 ruau/ruau-components/src/main/components/uiExamples/infiniteListRow/infiniteListRowController.js:		cmp.getEvent('close').setParams(evt.getParams()).fire();
 ruau/ruau-components/src/main/components/uiExamples/infiniteListRow/infiniteListRow.css: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/uiExamples/infiniteListRow/infiniteListRow.css: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -1917,7 +1917,7 @@ ruau/ruau-components/src/main/components/uiExamples/buttonExample/buttonExample.
 ruau/ruau-components/src/main/components/uiExamples/buttonExample/buttonExample.cmp:    limitations under the License.
 ruau/ruau-components/src/main/components/uiExamples/buttonExample/buttonExample.cmp:<ruau:component access="global">
 ruau/ruau-components/src/main/components/uiExamples/buttonExample/buttonExample.cmp:	<ui:inputText ruau:id="name" label="Enter Name:" placeholder="Your Name" />
-ruau/ruau-components/src/main/components/uiExamples/buttonExample/buttonExample.cmp:	<ui:button ruau:id="button" buttonTitle="Click to see what you put into the field" class="button" label="Click me" press="{!c.getInput}"/>
+ruau/ruau-components/src/main/components/uiExamples/buttonExample/buttonExample.cmp:	<ui:button ruau:id="button" buttonTitle="Click to see what you put into the field" class="button" label="Click me" PrEss="{!c.getInput}"/>
 ruau/ruau-components/src/main/components/uiExamples/buttonExample/buttonExample.cmp:	<ui:outputText ruau:id="outName" value="" class="text"/>
 ruau/ruau-components/src/main/components/uiExamples/buttonExample/buttonExample.cmp:</ruau:component>
 ruau/ruau-components/src/main/components/uiExamples/buttonExample/buttonExampleController.js: * Copyright (C) 2013 salesforce.com, inc.
@@ -2176,10 +2176,10 @@ ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                <a href="http://salesforce.com">Salesforce.com</a>
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                <ui:inputText label="My Input Text" value="" placeholder="input text here" />
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed metus nibh, sodales a, porta at, vulputate eget, dui. Pellentesque ut nisl. Maecenas tortor turpis, interdum non, sodales non, iaculis ac, lacus. 
-ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                Vestibulum auctor, tortor quis iaculis malesuada, libero lectus bibendum purus, sit amet tincidunt quam turpis vel lacus. In pellentesque nisl non sem. Suspendisse nunc sem, pretium eget, cursus a, fringilla vel, urna.
+ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                Vestibulum auctor, tortor quis iaculis malesuada, libero lectus bibendum purus, sit amet tincidunt quam turpis vel lacus. In pellentesque nisl non sem. Suspendisse nunc sem, PrEtium eget, cursus a, fringilla vel, urna.
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            </ui:tab>
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            <ui:tab title="Long Text">
-ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed metus nibh, sodales a, porta at, vulputate eget, dui. Pellentesque ut nisl. Maecenas tortor turpis, interdum non, sodales non, iaculis ac, lacus. Vestibulum auctor, tortor quis iaculis malesuada, libero lectus bibendum purus, sit amet tincidunt quam turpis vel lacus. In pellentesque nisl non sem. Suspendisse nunc sem, pretium eget, cursus a, fringilla vel, urna. 
+ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed metus nibh, sodales a, porta at, vulputate eget, dui. Pellentesque ut nisl. Maecenas tortor turpis, interdum non, sodales non, iaculis ac, lacus. Vestibulum auctor, tortor quis iaculis malesuada, libero lectus bibendum purus, sit amet tincidunt quam turpis vel lacus. In pellentesque nisl non sem. Suspendisse nunc sem, PrEtium eget, cursus a, fringilla vel, urna. 
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                Aliquam commodo ullamcorper erat. Nullam vel justo in neque porttitor laoreet. Aenean lacus dui, consequat eu, adipiscing eget, nonummy non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa. Vivamus eget quam. Vivamus tincidunt diam nec urna. Curabitur velit.
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            </ui:tab>
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            <ui:tab title="tab with input text">
@@ -2195,22 +2195,22 @@ ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            <ui:tab title="Side Tab 1">
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            Tab 1
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            <ui:inputText value="" label="Name" placeholder="input text" />
-ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed metus nibh, sodales a, porta at, vulputate eget, dui. Pellentesque ut nisl. Maecenas tortor turpis, interdum non, sodales non, iaculis ac, lacus. Vestibulum auctor, tortor quis iaculis malesuada, libero lectus bibendum purus, sit amet tincidunt quam turpis vel lacus. In pellentesque nisl non sem. Suspendisse nunc sem, pretium eget, cursus a, fringilla vel, urna. 
+ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed metus nibh, sodales a, porta at, vulputate eget, dui. Pellentesque ut nisl. Maecenas tortor turpis, interdum non, sodales non, iaculis ac, lacus. Vestibulum auctor, tortor quis iaculis malesuada, libero lectus bibendum purus, sit amet tincidunt quam turpis vel lacus. In pellentesque nisl non sem. Suspendisse nunc sem, PrEtium eget, cursus a, fringilla vel, urna. 
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                Aliquam commodo ullamcorper erat. Nullam vel justo in neque porttitor laoreet. Aenean lacus dui, consequat eu, adipiscing eget, nonummy non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa. Vivamus eget quam. Vivamus tincidunt diam nec urna. Curabitur velit.
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            </ui:tab>
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            <ui:tab title="Side Tab 2" >
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            Tab 2
-ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed metus nibh, sodales a, porta at, vulputate eget, dui. Pellentesque ut nisl. Maecenas tortor turpis, interdum non, sodales non, iaculis ac, lacus. Vestibulum auctor, tortor quis iaculis malesuada, libero lectus bibendum purus, sit amet tincidunt quam turpis vel lacus. In pellentesque nisl non sem. Suspendisse nunc sem, pretium eget, cursus a, fringilla vel, urna. 
+ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed metus nibh, sodales a, porta at, vulputate eget, dui. Pellentesque ut nisl. Maecenas tortor turpis, interdum non, sodales non, iaculis ac, lacus. Vestibulum auctor, tortor quis iaculis malesuada, libero lectus bibendum purus, sit amet tincidunt quam turpis vel lacus. In pellentesque nisl non sem. Suspendisse nunc sem, PrEtium eget, cursus a, fringilla vel, urna. 
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                Aliquam commodo ullamcorper erat. Nullam vel justo in neque porttitor laoreet. Aenean lacus dui, consequat eu, adipiscing eget, nonummy non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa. Vivamus eget quam. Vivamus tincidunt diam nec urna. Curabitur velit.
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            </ui:tab>
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            <ui:tab title="Side Tab 3" >
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            Tab 3
-ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed metus nibh, sodales a, porta at, vulputate eget, dui. Pellentesque ut nisl. Maecenas tortor turpis, interdum non, sodales non, iaculis ac, lacus. Vestibulum auctor, tortor quis iaculis malesuada, libero lectus bibendum purus, sit amet tincidunt quam turpis vel lacus. In pellentesque nisl non sem. Suspendisse nunc sem, pretium eget, cursus a, fringilla vel, urna. 
+ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed metus nibh, sodales a, porta at, vulputate eget, dui. Pellentesque ut nisl. Maecenas tortor turpis, interdum non, sodales non, iaculis ac, lacus. Vestibulum auctor, tortor quis iaculis malesuada, libero lectus bibendum purus, sit amet tincidunt quam turpis vel lacus. In pellentesque nisl non sem. Suspendisse nunc sem, PrEtium eget, cursus a, fringilla vel, urna. 
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                Aliquam commodo ullamcorper erat. Nullam vel justo in neque porttitor laoreet. Aenean lacus dui, consequat eu, adipiscing eget, nonummy non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa. Vivamus eget quam. Vivamus tincidunt diam nec urna. Curabitur velit.
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            </ui:tab>
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            <ui:tab title="Side Tab 4" >
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            Tab 4
-ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed metus nibh, sodales a, porta at, vulputate eget, dui. Pellentesque ut nisl. Maecenas tortor turpis, interdum non, sodales non, iaculis ac, lacus. Vestibulum auctor, tortor quis iaculis malesuada, libero lectus bibendum purus, sit amet tincidunt quam turpis vel lacus. In pellentesque nisl non sem. Suspendisse nunc sem, pretium eget, cursus a, fringilla vel, urna. 
+ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed metus nibh, sodales a, porta at, vulputate eget, dui. Pellentesque ut nisl. Maecenas tortor turpis, interdum non, sodales non, iaculis ac, lacus. Vestibulum auctor, tortor quis iaculis malesuada, libero lectus bibendum purus, sit amet tincidunt quam turpis vel lacus. In pellentesque nisl non sem. Suspendisse nunc sem, PrEtium eget, cursus a, fringilla vel, urna. 
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                Aliquam commodo ullamcorper erat. Nullam vel justo in neque porttitor laoreet. Aenean lacus dui, consequat eu, adipiscing eget, nonummy non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa. Vivamus eget quam. Vivamus tincidunt diam nec urna. Curabitur velit.
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            </ui:tab>
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:        </ui:tabset>
@@ -2219,22 +2219,22 @@ ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            <ui:tab title="Tab 1">
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                <p>Tab 1</p>
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            <ui:inputText value="" label="Name" placeholder="input text" />
-ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed metus nibh, sodales a, porta at, vulputate eget, dui. Pellentesque ut nisl. Maecenas tortor turpis, interdum non, sodales non, iaculis ac, lacus. Vestibulum auctor, tortor quis iaculis malesuada, libero lectus bibendum purus, sit amet tincidunt quam turpis vel lacus. In pellentesque nisl non sem. Suspendisse nunc sem, pretium eget, cursus a, fringilla vel, urna. 
+ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed metus nibh, sodales a, porta at, vulputate eget, dui. Pellentesque ut nisl. Maecenas tortor turpis, interdum non, sodales non, iaculis ac, lacus. Vestibulum auctor, tortor quis iaculis malesuada, libero lectus bibendum purus, sit amet tincidunt quam turpis vel lacus. In pellentesque nisl non sem. Suspendisse nunc sem, PrEtium eget, cursus a, fringilla vel, urna. 
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                Aliquam commodo ullamcorper erat. Nullam vel justo in neque porttitor laoreet. Aenean lacus dui, consequat eu, adipiscing eget, nonummy non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa. Vivamus eget quam. Vivamus tincidunt diam nec urna. Curabitur velit.
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            </ui:tab>
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            <ui:tab title="Tab 2" >
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                <p>Tab 2</p>
-ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed metus nibh, sodales a, porta at, vulputate eget, dui. Pellentesque ut nisl. Maecenas tortor turpis, interdum non, sodales non, iaculis ac, lacus. Vestibulum auctor, tortor quis iaculis malesuada, libero lectus bibendum purus, sit amet tincidunt quam turpis vel lacus. In pellentesque nisl non sem. Suspendisse nunc sem, pretium eget, cursus a, fringilla vel, urna. 
+ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed metus nibh, sodales a, porta at, vulputate eget, dui. Pellentesque ut nisl. Maecenas tortor turpis, interdum non, sodales non, iaculis ac, lacus. Vestibulum auctor, tortor quis iaculis malesuada, libero lectus bibendum purus, sit amet tincidunt quam turpis vel lacus. In pellentesque nisl non sem. Suspendisse nunc sem, PrEtium eget, cursus a, fringilla vel, urna. 
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                Aliquam commodo ullamcorper erat. Nullam vel justo in neque porttitor laoreet. Aenean lacus dui, consequat eu, adipiscing eget, nonummy non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa. Vivamus eget quam. Vivamus tincidunt diam nec urna. Curabitur velit.
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            </ui:tab>
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            <ui:tab title="Tab 3" active="{!true}" >
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                <p>Tab 3</p>
-ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed metus nibh, sodales a, porta at, vulputate eget, dui. Pellentesque ut nisl. Maecenas tortor turpis, interdum non, sodales non, iaculis ac, lacus. Vestibulum auctor, tortor quis iaculis malesuada, libero lectus bibendum purus, sit amet tincidunt quam turpis vel lacus. In pellentesque nisl non sem. Suspendisse nunc sem, pretium eget, cursus a, fringilla vel, urna. 
+ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed metus nibh, sodales a, porta at, vulputate eget, dui. Pellentesque ut nisl. Maecenas tortor turpis, interdum non, sodales non, iaculis ac, lacus. Vestibulum auctor, tortor quis iaculis malesuada, libero lectus bibendum purus, sit amet tincidunt quam turpis vel lacus. In pellentesque nisl non sem. Suspendisse nunc sem, PrEtium eget, cursus a, fringilla vel, urna. 
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                Aliquam commodo ullamcorper erat. Nullam vel justo in neque porttitor laoreet. Aenean lacus dui, consequat eu, adipiscing eget, nonummy non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa. Vivamus eget quam. Vivamus tincidunt diam nec urna. Curabitur velit.
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            </ui:tab>
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            <ui:tab title="Tab 4" >
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                <p>Tab 4</p>
-ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed metus nibh, sodales a, porta at, vulputate eget, dui. Pellentesque ut nisl. Maecenas tortor turpis, interdum non, sodales non, iaculis ac, lacus. Vestibulum auctor, tortor quis iaculis malesuada, libero lectus bibendum purus, sit amet tincidunt quam turpis vel lacus. In pellentesque nisl non sem. Suspendisse nunc sem, pretium eget, cursus a, fringilla vel, urna. 
+ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed metus nibh, sodales a, porta at, vulputate eget, dui. Pellentesque ut nisl. Maecenas tortor turpis, interdum non, sodales non, iaculis ac, lacus. Vestibulum auctor, tortor quis iaculis malesuada, libero lectus bibendum purus, sit amet tincidunt quam turpis vel lacus. In pellentesque nisl non sem. Suspendisse nunc sem, PrEtium eget, cursus a, fringilla vel, urna. 
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                Aliquam commodo ullamcorper erat. Nullam vel justo in neque porttitor laoreet. Aenean lacus dui, consequat eu, adipiscing eget, nonummy non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa. Vivamus eget quam. Vivamus tincidunt diam nec urna. Curabitur velit.
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            </ui:tab>
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:        </ui:tabset>
@@ -2242,28 +2242,28 @@ ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:        <ui:tabset ruau:id="navigationTabset" class="tabset">
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            <ui:tab title="Tab 1" closable="true">
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:               <p>Tab 1</p>
-ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed metus nibh, sodales a, porta at, vulputate eget, dui. Pellentesque ut nisl. Maecenas tortor turpis, interdum non, sodales non, iaculis ac, lacus. Vestibulum auctor, tortor quis iaculis malesuada, libero lectus bibendum purus, sit amet tincidunt quam turpis vel lacus. In pellentesque nisl non sem. Suspendisse nunc sem, pretium eget, cursus a, fringilla vel, urna. 
+ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed metus nibh, sodales a, porta at, vulputate eget, dui. Pellentesque ut nisl. Maecenas tortor turpis, interdum non, sodales non, iaculis ac, lacus. Vestibulum auctor, tortor quis iaculis malesuada, libero lectus bibendum purus, sit amet tincidunt quam turpis vel lacus. In pellentesque nisl non sem. Suspendisse nunc sem, PrEtium eget, cursus a, fringilla vel, urna. 
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                Aliquam commodo ullamcorper erat. Nullam vel justo in neque porttitor laoreet. Aenean lacus dui, consequat eu, adipiscing eget, nonummy non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa. Vivamus eget quam. Vivamus tincidunt diam nec urna. Curabitur velit.
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            </ui:tab>
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            <ui:tab title="Tab 2" closable="true">
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                <p>Tab 2</p>
-ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed metus nibh, sodales a, porta at, vulputate eget, dui. Pellentesque ut nisl. Maecenas tortor turpis, interdum non, sodales non, iaculis ac, lacus. Vestibulum auctor, tortor quis iaculis malesuada, libero lectus bibendum purus, sit amet tincidunt quam turpis vel lacus. In pellentesque nisl non sem. Suspendisse nunc sem, pretium eget, cursus a, fringilla vel, urna. 
+ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed metus nibh, sodales a, porta at, vulputate eget, dui. Pellentesque ut nisl. Maecenas tortor turpis, interdum non, sodales non, iaculis ac, lacus. Vestibulum auctor, tortor quis iaculis malesuada, libero lectus bibendum purus, sit amet tincidunt quam turpis vel lacus. In pellentesque nisl non sem. Suspendisse nunc sem, PrEtium eget, cursus a, fringilla vel, urna. 
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                Aliquam commodo ullamcorper erat. Nullam vel justo in neque porttitor laoreet. Aenean lacus dui, consequat eu, adipiscing eget, nonummy non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa. Vivamus eget quam. Vivamus tincidunt diam nec urna. Curabitur velit.
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            </ui:tab>
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            <ui:tab title="Tab 3" closable="true">
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                <p>Tab 3</p>
-ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed metus nibh, sodales a, porta at, vulputate eget, dui. Pellentesque ut nisl. Maecenas tortor turpis, interdum non, sodales non, iaculis ac, lacus. Vestibulum auctor, tortor quis iaculis malesuada, libero lectus bibendum purus, sit amet tincidunt quam turpis vel lacus. In pellentesque nisl non sem. Suspendisse nunc sem, pretium eget, cursus a, fringilla vel, urna. 
+ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed metus nibh, sodales a, porta at, vulputate eget, dui. Pellentesque ut nisl. Maecenas tortor turpis, interdum non, sodales non, iaculis ac, lacus. Vestibulum auctor, tortor quis iaculis malesuada, libero lectus bibendum purus, sit amet tincidunt quam turpis vel lacus. In pellentesque nisl non sem. Suspendisse nunc sem, PrEtium eget, cursus a, fringilla vel, urna. 
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                Aliquam commodo ullamcorper erat. Nullam vel justo in neque porttitor laoreet. Aenean lacus dui, consequat eu, adipiscing eget, nonummy non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa. Vivamus eget quam. Vivamus tincidunt diam nec urna. Curabitur velit.
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            </ui:tab>
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            <ui:tab title="Tab 4" closable="true">
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                <p>Tab 4</p>
-ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed metus nibh, sodales a, porta at, vulputate eget, dui. Pellentesque ut nisl. Maecenas tortor turpis, interdum non, sodales non, iaculis ac, lacus. Vestibulum auctor, tortor quis iaculis malesuada, libero lectus bibendum purus, sit amet tincidunt quam turpis vel lacus. In pellentesque nisl non sem. Suspendisse nunc sem, pretium eget, cursus a, fringilla vel, urna. 
+ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed metus nibh, sodales a, porta at, vulputate eget, dui. Pellentesque ut nisl. Maecenas tortor turpis, interdum non, sodales non, iaculis ac, lacus. Vestibulum auctor, tortor quis iaculis malesuada, libero lectus bibendum purus, sit amet tincidunt quam turpis vel lacus. In pellentesque nisl non sem. Suspendisse nunc sem, PrEtium eget, cursus a, fringilla vel, urna. 
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                Aliquam commodo ullamcorper erat. Nullam vel justo in neque porttitor laoreet. Aenean lacus dui, consequat eu, adipiscing eget, nonummy non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa. Vivamus eget quam. Vivamus tincidunt diam nec urna. Curabitur velit.
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            </ui:tab>
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:         </ui:tabset>
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:         <div class="tabset">
-ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            <ui:button class="previous" press="{!c.onPrevious}" label="Previous Tab" />
-ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            <ui:button class="next" press="{!c.onNext}" label="Next Tab"  />
+ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            <ui:button class="PrEvious" press="{!c.onPrevious}" label="Previous Tab" />
+ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            <ui:button class="next" PrEss="{!c.onNext}" label="Next Tab"  />
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:         <h1>Cancel tab activation</h1>
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:          <ui:tabset class="tabset">
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            <ui:tab title="Tab 1" >
@@ -2282,8 +2282,8 @@ ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            </ui:tab>
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:         </ui:tabset>
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:         <div class="tabset">
-ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            <ui:button label="Mark Event Tab Dirty" press="{!c.markDirty}" />
-ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            <ui:button label="Clear Event Tab" press="{!c.clearDirty}" />
+ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            <ui:button label="Mark Event Tab Dirty" PrEss="{!c.markDirty}" />
+ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            <ui:button label="Clear Event Tab" PrEss="{!c.clearDirty}" />
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:         <h1>Add tabs dynamically</h1>
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:          <ui:tabset ruau:id="addableTabset" class="tabset">
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            <ui:tab title="Tab 1" >
@@ -2304,7 +2304,7 @@ ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                Closable: <ui:inputCheckbox class="tabsetInput" ruau:id="inputTabClosable" value="closable" />
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            <div class="clear">
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:                Active: <ui:inputCheckbox class="tabsetInput" ruau:id="inputTabActive" value="active" />
-ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            <ui:button label="Add Tab" press="{!c.addTab}" />
+ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:            <ui:button label="Add Tab" PrEss="{!c.addTab}" />
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:        <h1>Construct tabs from model</h1>
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:        <ui:tabset class="tabset" tabs="{!m.tabs}"></ui:tabset>
 ruau/ruau-components/src/main/components/uiExamples/tabsetExample/tabsetExample.cmp:</ruau:component>
@@ -2340,7 +2340,7 @@ ruau/ruau-components/src/main/components/uiExamples/outputExample/outputExample.
 ruau/ruau-components/src/main/components/uiExamples/outputExample/outputExample.cmp:	<ruau:attribute name="myDateTime" type="Date" default="2014-09-29T00:17:08z"/>
 ruau/ruau-components/src/main/components/uiExamples/outputExample/outputExample.cmp:	<ruau:attribute name="myTextArea" type="String" default="This is a string"/>
 ruau/ruau-components/src/main/components/uiExamples/outputExample/outputExample.cmp:	<ruau:attribute name="myURL" type="String" default="http://www.google.com"/>
-ruau/ruau-components/src/main/components/uiExamples/outputExample/outputExample.cmp:	<ui:button label="Change" press="{!c.change}" />
+ruau/ruau-components/src/main/components/uiExamples/outputExample/outputExample.cmp:	<ui:button label="Change" PrEss="{!c.change}" />
 ruau/ruau-components/src/main/components/uiExamples/outputExample/outputExample.cmp:	<div class="row"><ui:outputText value="{!v.myText}" label="outputText"/> </div>  
 ruau/ruau-components/src/main/components/uiExamples/outputExample/outputExample.cmp:	<div class="row"><ui:outputNumber value="{!v.myNum}" label="outputNumber" format=".00"/></div>
 ruau/ruau-components/src/main/components/uiExamples/outputExample/outputExample.cmp:	<div class="row"><ui:outputCurrency ruau:id="curr" value="{!v.myCurr}" label="outputCurrency" /></div>
@@ -2665,8 +2665,8 @@ ruau/ruau-components/src/main/components/ruaudev/dependencies/dependencies.app: 
 ruau/ruau-components/src/main/components/ruaudev/dependencies/dependencies.app:    <ruau:attribute type="Boolean" name="clearPreloads" default="true"/>
 ruau/ruau-components/src/main/components/ruaudev/dependencies/dependencies.app:    To use this application, please specify the app/cmp on the request (?component=&lt;namespace&gt;:&lt;name&gt;)
 ruau/ruau-components/src/main/components/ruaudev/dependencies/dependencies.app:    The descriptor must be for either an application or a component. You can also turn on or off the 'clearPreloads'
-ruau/ruau-components/src/main/components/ruaudev/dependencies/dependencies.app:    flag, which controls whether the full set of preloads appears in the dependencies. By default, it is on, meaning
-ruau/ruau-components/src/main/components/ruaudev/dependencies/dependencies.app:    that no preloads are shown.
+ruau/ruau-components/src/main/components/ruaudev/dependencies/dependencies.app:    flag, which controls whether the full set of PrEloads appears in the dependencies. By default, it is on, meaning
+ruau/ruau-components/src/main/components/ruaudev/dependencies/dependencies.app:    that no PrEloads are shown.
 ruau/ruau-components/src/main/components/ruaudev/dependencies/dependencies.app:    This application will show the full set of dependencies for any definition given. If there is an error processing
 ruau/ruau-components/src/main/components/ruaudev/dependencies/dependencies.app:    the definition, then the top line will be highlighted as pink, and any definitions that could not be retrieved
 ruau/ruau-components/src/main/components/ruaudev/dependencies/dependencies.app:    may also show up in the list.
@@ -2797,7 +2797,7 @@ ruau/ruau-components/src/main/components/ruaudev/quickFix/quickFix.cmp:    limit
 ruau/ruau-components/src/main/components/ruaudev/quickFix/quickFix.cmp:<ruau:component abstract="true" controller="java://org.ruauframework.throwable.quickfix.RuueQuickFixController">
 ruau/ruau-components/src/main/components/ruaudev/quickFix/quickFix.cmp:    <ruau:attribute name="quickFix" type="java://org.ruauframework.throwable.quickfix.RuueQuickFix"/>
 ruau/ruau-components/src/main/components/ruaudev/quickFix/quickFix.cmp:    <form onsubmit="{!c.fix}" ruau:id="form">
-ruau/ruau-components/src/main/components/ruaudev/quickFix/quickFix.cmp:    <ui:button ruau:id="fixButton" label="Fix!" press="{!c.fix}" />
+ruau/ruau-components/src/main/components/ruaudev/quickFix/quickFix.cmp:    <ui:button ruau:id="fixButton" label="Fix!" PrEss="{!c.fix}" />
 ruau/ruau-components/src/main/components/ruaudev/quickFix/quickFix.cmp:</ruau:component>
 ruau/ruau-components/src/main/components/ruaudev/dependencyItem/dependencyItem.css: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ruaudev/dependencyItem/dependencyItem.css: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -2874,7 +2874,7 @@ ruau/ruau-components/src/main/components/ruaudev/quickFixButton/quickFixButton.c
 ruau/ruau-components/src/main/components/ruaudev/quickFixButton/quickFixButton.cmp:<ruau:component controller="java://org.ruauframework.throwable.quickfix.RuueQuickFixController">
 ruau/ruau-components/src/main/components/ruaudev/quickFixButton/quickFixButton.cmp:    <ruau:attribute name="quickFix" type="java://org.ruauframework.throwable.quickfix.RuueQuickFix"/>
 ruau/ruau-components/src/main/components/ruaudev/quickFixButton/quickFixButton.cmp:    <ruau:registerevent name="showUI" type="ruaudev:showQuickFixUI"/>
-ruau/ruau-components/src/main/components/ruaudev/quickFixButton/quickFixButton.cmp:    <ui:button ruau:id="createButton" press="{!c.fix}" label="{!v.quickFix.description}" />
+ruau/ruau-components/src/main/components/ruaudev/quickFixButton/quickFixButton.cmp:    <ui:button ruau:id="createButton" PrEss="{!c.fix}" label="{!v.quickFix.description}" />
 ruau/ruau-components/src/main/components/ruaudev/quickFixButton/quickFixButton.cmp:</ruau:component>
 ruau/ruau-components/src/main/components/ruaudev/quickFixButton/quickFixButton.css: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ruaudev/quickFixButton/quickFixButton.css: * Licensed under the Apache License, Version 2.0 (the "License");

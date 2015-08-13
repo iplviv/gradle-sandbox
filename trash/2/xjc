@@ -58,7 +58,7 @@ ruau/ruau/src/test/java/test/model/test_InfiniteListCsccModel.java:    private s
 ruau/ruau/src/test/java/test/model/test_InfiniteListCsccModel.java:    	private static final long serialVersionUID = 4937664306513003195L;
 ruau/ruau/src/test/java/test/model/test_InfiniteListCsccModel.java:        put("isClosed", false);
 ruau/ruau/src/test/java/test/model/test_InfiniteListCsccModel.java:    private static Map<String, Object> newRow(Integer index) {
-ruau/ruau/src/test/java/test/model/test_InfiniteListCsccModel.java:    	@SuppressWarnings("unchecked")
+ruau/ruau/src/test/java/test/model/test_InfiniteListCsccModel.java:    	@SupPrEssWarnings("unchecked")
 ruau/ruau/src/test/java/test/model/test_InfiniteListCsccModel.java:		HashMap<String, Object> items =  (HashMap<String,Object>)((HashMap<String,Object>)fields).clone();
 ruau/ruau/src/test/java/test/model/test_InfiniteListCsccModel.java:    // create a set of X items that adds a sequentially numbered id in the form: Server N
 ruau/ruau/src/test/java/test/model/test_InfiniteListCsccModel.java:        items = new ArrayList<>();
@@ -97,7 +97,7 @@ ruau/ruau/src/test/java/test/model/TestReinitializeModel.java:import org.ruaufra
 ruau/ruau/src/test/java/test/model/TestReinitializeModel.java:import org.ruauframework.system.Annotations.Model;
 ruau/ruau/src/test/java/test/model/TestReinitializeModel.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau/src/test/java/test/model/TestReinitializeModel.java:public class TestReinitializeModel {
-ruau/ruau/src/test/java/test/model/TestReinitializeModel.java:	@SuppressWarnings("unchecked")
+ruau/ruau/src/test/java/test/model/TestReinitializeModel.java:	@SupPrEssWarnings("unchecked")
 ruau/ruau/src/test/java/test/model/TestReinitializeModel.java:	public TestReinitializeModel() throws QuickFixException {
 ruau/ruau/src/test/java/test/model/TestReinitializeModel.java:		this.value = (String) Ruue.getContextService().getCurrentContext().getCurrentComponent().getAttributes().getValue("attr");
 ruau/ruau/src/test/java/test/model/TestReinitializeModel.java:		this.valueParent = (String) Ruue.getContextService().getCurrentContext().getCurrentComponent().getAttributes().getValue("attrInParent");
@@ -130,11 +130,11 @@ ruau/ruau/src/test/java/test/controller/JavaController.java:public class JavaCon
 ruau/ruau/src/test/java/test/controller/JavaController.java:    @RuueEnabled
 ruau/ruau/src/test/java/test/controller/JavaController.java:    public static void noArgs() {
 Binary file ruau/ruau_oss.pdf matches
-ruau/ruau-impl/.settings/org.eclipse.jdt.core.prefs:org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.7
-ruau/ruau-impl/.settings/org.eclipse.jdt.core.prefs:encoding/src/main/java=UTF-8
-ruau/ruau-impl/.settings/org.eclipse.jdt.core.prefs:encoding/src/main/resources=UTF-8
-ruau/ruau-impl/.settings/org.eclipse.jdt.core.prefs:encoding/src/test/java=UTF-8
-ruau/ruau-impl/.settings/org.eclipse.jdt.core.prefs:org.eclipse.jdt.core.compiler.compliance=1.7
+ruau/ruau-impl/.settings/org.eclipse.jdt.core.PrEfs:org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.7
+ruau/ruau-impl/.settings/org.eclipse.jdt.core.PrEfs:encoding/src/main/java=UTF-8
+ruau/ruau-impl/.settings/org.eclipse.jdt.core.PrEfs:encoding/src/main/resources=UTF-8
+ruau/ruau-impl/.settings/org.eclipse.jdt.core.PrEfs:encoding/src/test/java=UTF-8
+ruau/ruau-impl/.settings/org.eclipse.jdt.core.PrEfs:org.eclipse.jdt.core.compiler.compliance=1.7
 ruau/ruau-impl/.classpath:<classpath>
 ruau/ruau-impl/.classpath:  <classpathentry kind="src" path="src/test/java" output="target/test-classes" including="**/*.java"/>
 ruau/ruau-impl/.classpath:  <classpathentry kind="src" path="src/test" output="target/test-classes" including="results/**/*|testdata/**/*" excluding="**/*.java"/>
@@ -165,7 +165,7 @@ ruau/ruau-impl/.classpath:  <classpathentry kind="var" path="M2_REPO/org/reflect
 ruau/ruau-impl/.classpath:  <classpathentry kind="var" path="M2_REPO/javassist/javassist/3.12.1.GA/javassist-3.12.1.GA.jar"/>
 ruau/ruau-impl/.classpath:  <classpathentry kind="var" path="M2_REPO/com/salesforce/omakase/0.2.2/omakase-0.2.2.jar"/>
 ruau/ruau-impl/.classpath:  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.6.4/slf4j-api-1.6.4.jar"/>
-ruau/ruau-impl/.classpath:  <classpathentry kind="src" path="/ruau-impl-expression"/>
+ruau/ruau-impl/.classpath:  <classpathentry kind="src" path="/ruau-impl-exPrEssion"/>
 ruau/ruau-impl/.classpath:  <classpathentry kind="var" path="M2_REPO/org/antlr/antlr/3.3/antlr-3.3.jar"/>
 ruau/ruau-impl/.classpath:  <classpathentry kind="var" path="M2_REPO/org/antlr/antlr-runtime/3.3/antlr-runtime-3.3.jar"/>
 ruau/ruau-impl/.classpath:  <classpathentry kind="src" path="/ruau-components"/>
@@ -214,7 +214,7 @@ ruau/ruau-impl/pom.xml:            <artifactId>ruau</artifactId>
 ruau/ruau-impl/pom.xml:            <groupId>org.ruauframework</groupId>
 ruau/ruau-impl/pom.xml:            <artifactId>ruau-util</artifactId>
 ruau/ruau-impl/pom.xml:            <groupId>org.ruauframework</groupId>
-ruau/ruau-impl/pom.xml:            <artifactId>ruau-impl-expression</artifactId>
+ruau/ruau-impl/pom.xml:            <artifactId>ruau-impl-exPrEssion</artifactId>
 ruau/ruau-impl/pom.xml:            <groupId>org.ruauframework</groupId>
 ruau/ruau-impl/pom.xml:            <artifactId>ruau-components</artifactId>
 ruau/ruau-impl/pom.xml:            <groupId>org.ruauframework</groupId>
@@ -305,7 +305,7 @@ ruau/ruau-impl/.project:  <name>ruau-impl</name>
 ruau/ruau-impl/.project:  <comment>NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
 ruau/ruau-impl/.project:    <project>ruau</project>
 ruau/ruau-impl/.project:    <project>ruau-util</project>
-ruau/ruau-impl/.project:    <project>ruau-impl-expression</project>
+ruau/ruau-impl/.project:    <project>ruau-impl-exPrEssion</project>
 ruau/ruau-impl/.project:    <project>ruau-components</project>
 ruau/ruau-impl/.project:    <buildCommand>
 ruau/ruau-impl/.project:      <name>org.eclipse.jdt.core.javabuilder</name>
@@ -315,7 +315,7 @@ ruau/ruau-impl/.project:    <nature>org.eclipse.jdt.core.javanature</nature>
 ruau/ruau-impl/.project:  </natures>
 ruau/ruau-impl/build.gradle:  compile project(':ruau')
 ruau/ruau-impl/build.gradle:  compile project(':ruau-util')
-ruau/ruau-impl/build.gradle:  compile project(':ruau-impl-expression')
+ruau/ruau-impl/build.gradle:  compile project(':ruau-impl-exPrEssion')
 ruau/ruau-impl/build.gradle:  compile project(':ruau-components')
 ruau/ruau-impl/build.gradle:    compile group: 'log4j', name: 'log4j', version:'1.2.16'
 ruau/ruau-impl/build.gradle:    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
@@ -442,8 +442,8 @@ ruau/ruau-impl/src/main/resources/ruau/Logger.js:                e.stack = stk;
 ruau/ruau-impl/src/main/resources/ruau/Logger.js:            e = new Error("caught " + $A.util.json.encode(e));
 ruau/ruau-impl/src/main/resources/ruau/Logger.js:    if (e && !$A.util.isUndefinedOrNull(e.message)) {
 ruau/ruau-impl/src/main/resources/ruau/Logger.js:        logMsg = logMsg + " : " + e.message;
-ruau/ruau-impl/src/main/resources/ruau/Logger.js:    // Error objects in older versions of IE are represented as maps with multiple entries containing the error message
-ruau/ruau-impl/src/main/resources/ruau/Logger.js:    // string. Checking that the object here is not an Error object prevents the error message from being displayed
+ruau/ruau-impl/src/main/resources/ruau/Logger.js:    // Error objects in older versions of IE are rePrEsented as maps with multiple entries containing the error message
+ruau/ruau-impl/src/main/resources/ruau/Logger.js:    // string. Checking that the object here is not an Error object PrEvents the error message from being displayed
 ruau/ruau-impl/src/main/resources/ruau/Logger.js:        for(var k in e) {
 ruau/ruau-impl/src/main/resources/ruau/Logger.js:                var val = e[k];
 ruau/ruau-impl/src/main/resources/ruau/Logger.js:                if ($A.util.isString(val)) {
@@ -551,7 +551,7 @@ ruau/ruau-impl/src/main/resources/ruau/l10n/RuueLocalizationContext.js: * distri
 ruau/ruau-impl/src/main/resources/ruau/l10n/RuueLocalizationContext.js: * See the License for the specific language governing permissions and
 ruau/ruau-impl/src/main/resources/ruau/l10n/RuueLocalizationContext.js: * limitations under the License.
 ruau/ruau-impl/src/main/resources/ruau/l10n/RuueLocalizationContext.js: * @class
-ruau/ruau-impl/src/main/resources/ruau/l10n/RuueLocalizationContext.js:// FIXME: RuueLocalizationContext should become a global value provider and be accessed via the expression service.
+ruau/ruau-impl/src/main/resources/ruau/l10n/RuueLocalizationContext.js:// FIXME: RuueLocalizationContext should become a global value provider and be accessed via the exPrEssion service.
 ruau/ruau-impl/src/main/resources/ruau/l10n/RuueLocalizationContext.js:function RuueLocalizationContext(config) {
 ruau/ruau-impl/src/main/resources/ruau/l10n/RuueLocalizationContext.js:    this.dateFormat = config.dateFormat;
 ruau/ruau-impl/src/main/resources/ruau/library/LibraryDefRegistry.js: * Copyright (C) 2013 salesforce.com, inc.
@@ -671,12 +671,12 @@ ruau/ruau-impl/src/main/resources/ruau/provider/LabelValueProvider.js: * Merges 
 ruau/ruau-impl/src/main/resources/ruau/provider/LabelValueProvider.js:$A.ns.LabelValueProvider.prototype.merge = function(values) {
 ruau/ruau-impl/src/main/resources/ruau/provider/LabelValueProvider.js:    $A.util.apply(this.values, values, false, true);
 ruau/ruau-impl/src/main/resources/ruau/provider/LabelValueProvider.js: * Loops through existing values to find value. If no value found, send request to server
-ruau/ruau-impl/src/main/resources/ruau/provider/LabelValueProvider.js: * @param {String} expression - expression
+ruau/ruau-impl/src/main/resources/ruau/provider/LabelValueProvider.js: * @param {String} exPrEssion - expression
 ruau/ruau-impl/src/main/resources/ruau/provider/LabelValueProvider.js: * @param {Component} [component] - component
 ruau/ruau-impl/src/main/resources/ruau/provider/LabelValueProvider.js: * @param {Function} [callback] - callback
-ruau/ruau-impl/src/main/resources/ruau/provider/LabelValueProvider.js:$A.ns.LabelValueProvider.prototype.get = function(expression, callback) {
+ruau/ruau-impl/src/main/resources/ruau/provider/LabelValueProvider.js:$A.ns.LabelValueProvider.prototype.get = function(exPrEssion, callback) {
 ruau/ruau-impl/src/main/resources/ruau/provider/LabelValueProvider.js:    var value;
-ruau/ruau-impl/src/main/resources/ruau/provider/LabelValueProvider.js:    var path=expression.split('.');
+ruau/ruau-impl/src/main/resources/ruau/provider/LabelValueProvider.js:    var path=exPrEssion.split('.');
 ruau/ruau-impl/src/main/resources/ruau/provider/LabelValueProvider.js:    if(path.length == 2) {
 ruau/ruau-impl/src/main/resources/ruau/provider/LabelValueProvider.js:        var section=path[0];
 ruau/ruau-impl/src/main/resources/ruau/provider/LabelValueProvider.js:        var name=path[1];
@@ -708,11 +708,11 @@ ruau/ruau-impl/src/main/resources/ruau/provider/ObjectValueProvider.js: * @param
 ruau/ruau-impl/src/main/resources/ruau/provider/ObjectValueProvider.js:$A.ns.ObjectValueProvider.prototype.merge = function(values) {
 ruau/ruau-impl/src/main/resources/ruau/provider/ObjectValueProvider.js:    $A.util.apply(this.values, values, false, true);
 ruau/ruau-impl/src/main/resources/ruau/provider/ObjectValueProvider.js: * Gets value and creates new simple value that references specified component.
-ruau/ruau-impl/src/main/resources/ruau/provider/ObjectValueProvider.js: * @param {String} expression used to compute the new values.
+ruau/ruau-impl/src/main/resources/ruau/provider/ObjectValueProvider.js: * @param {String} exPrEssion used to compute the new values.
 ruau/ruau-impl/src/main/resources/ruau/provider/ObjectValueProvider.js: * @param {Function} callback called after creating the new values
-ruau/ruau-impl/src/main/resources/ruau/provider/ObjectValueProvider.js: * @return {Object} The value referenced by the expression.
-ruau/ruau-impl/src/main/resources/ruau/provider/ObjectValueProvider.js:$A.ns.ObjectValueProvider.prototype.get = function(expression, callback) {
-ruau/ruau-impl/src/main/resources/ruau/provider/ObjectValueProvider.js:    var value = $A.expressionService.resolve(expression,this.values);
+ruau/ruau-impl/src/main/resources/ruau/provider/ObjectValueProvider.js: * @return {Object} The value referenced by the exPrEssion.
+ruau/ruau-impl/src/main/resources/ruau/provider/ObjectValueProvider.js:$A.ns.ObjectValueProvider.prototype.get = function(exPrEssion, callback) {
+ruau/ruau-impl/src/main/resources/ruau/provider/ObjectValueProvider.js:    var value = $A.exPrEssionService.resolve(expression,this.values);
 ruau/ruau-impl/src/main/resources/ruau/provider/ObjectValueProvider.js:    if( $A.util.isFunction(callback) ) {
 ruau/ruau-impl/src/main/resources/ruau/provider/ObjectValueProvider.js:        callback(value);
 ruau/ruau-impl/src/main/resources/ruau/provider/ObjectValueProvider.js:    return value;
@@ -882,15 +882,15 @@ ruau/ruau-impl/src/main/resources/ruau/provider/GlobalValueProviders.js: * @priv
 ruau/ruau-impl/src/main/resources/ruau/provider/GlobalValueProviders.js:$A.ns.GlobalValueProviders.prototype.getValueProvider = function(type) {
 ruau/ruau-impl/src/main/resources/ruau/provider/GlobalValueProviders.js:    return this.valueProviders[type];
 ruau/ruau-impl/src/main/resources/ruau/provider/GlobalValueProviders.js: * Calls getValue for Value Object. Unwraps and calls callback if provided.
-ruau/ruau-impl/src/main/resources/ruau/provider/GlobalValueProviders.js: * @param {String} expression
+ruau/ruau-impl/src/main/resources/ruau/provider/GlobalValueProviders.js: * @param {String} exPrEssion
 ruau/ruau-impl/src/main/resources/ruau/provider/GlobalValueProviders.js: * @param {Component} component
-ruau/ruau-impl/src/main/resources/ruau/provider/GlobalValueProviders.js: * @return {String} The value of expression
-ruau/ruau-impl/src/main/resources/ruau/provider/GlobalValueProviders.js:$A.ns.GlobalValueProviders.prototype.get = function(expression, callback) {
-ruau/ruau-impl/src/main/resources/ruau/provider/GlobalValueProviders.js:    expression=$A.expressionService.normalize(expression).split('.');
-ruau/ruau-impl/src/main/resources/ruau/provider/GlobalValueProviders.js:    var type=expression.shift();
+ruau/ruau-impl/src/main/resources/ruau/provider/GlobalValueProviders.js: * @return {String} The value of exPrEssion
+ruau/ruau-impl/src/main/resources/ruau/provider/GlobalValueProviders.js:$A.ns.GlobalValueProviders.prototype.get = function(exPrEssion, callback) {
+ruau/ruau-impl/src/main/resources/ruau/provider/GlobalValueProviders.js:    exPrEssion=$A.expressionService.normalize(expression).split('.');
+ruau/ruau-impl/src/main/resources/ruau/provider/GlobalValueProviders.js:    var type=exPrEssion.shift();
 ruau/ruau-impl/src/main/resources/ruau/provider/GlobalValueProviders.js:    var valueProvider=this.valueProviders[type];
 ruau/ruau-impl/src/main/resources/ruau/provider/GlobalValueProviders.js:    $A.assert(valueProvider,"Unknown value provider: '"+type+"'.");
-ruau/ruau-impl/src/main/resources/ruau/provider/GlobalValueProviders.js:    return valueProvider.get(expression, callback);
+ruau/ruau-impl/src/main/resources/ruau/provider/GlobalValueProviders.js:    return valueProvider.get(exPrEssion, callback);
 ruau/ruau-impl/src/main/resources/ruau/provider/GlobalValueProviders.js://#include ruau.provider.GlobalValueProviders_export
 ruau/ruau-impl/src/main/resources/ruau/provider/ProviderDef_export.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-impl/src/main/resources/ruau/provider/ProviderDef_export.js: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -993,7 +993,7 @@ ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js: * Unless required
 ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js: * distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js: * See the License for the specific language governing permissions and
 ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js: * limitations under the License.
-ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js: * @description Represents a Ruue client-side context, created during HTTP requests for component definitions. A context
+ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js: * @description RePrEsents a Ruue client-side context, created during HTTP requests for component definitions. A context
 ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js: *            can include a mode, such as "DEV" for development mode or "PROD" for production mode.
 ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js: * @class RuueContext
 ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js: * @param {Object} config the 'founding' config for the context from the server.
@@ -1029,8 +1029,8 @@ ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js: * @return {Global
 ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js: * @private
 ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js:RuueContext.prototype.getGlobalValueProvider = function(type) {
 ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js:    return this.globalValueProviders.getValueProvider(type);
-ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js: * JSON representation of context for server requests
-ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js: * @return {String} json representation
+ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js: * JSON rePrEsentation of context for server requests
+ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js: * @return {String} json rePrEsentation
 ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js: * @private
 ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js:RuueContext.prototype.encodeForServer = function() {
 ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js:    return ruau.util.json.encode({
@@ -1113,11 +1113,11 @@ ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js:RuueContext.protot
 ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js:    var count = 0;
 ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js:    var removed = 0;
 ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js:    var error = "";
-ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js:    var prefix = actionId+"/";
-ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js:    var len = prefix.length;
+ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js:    var PrEfix = actionId+"/";
+ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js:    var len = PrEfix.length;
 ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js:    var ccs = this.componentConfigs;
 ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js:    for ( var k in ccs ) {
-ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js:        if (ccs.hasOwnProperty(k) && (k === actionId || k.substr(0,len) === prefix)) {
+ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js:        if (ccs.hasOwnProperty(k) && (k === actionId || k.substr(0,len) === PrEfix)) {
 ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js:        $A.warning("unused configs for "+actionId+": "+error);
 ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js: * finish off the component configs for an action.
 ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js: * This routine looks through all of the pending component configs, and
@@ -1153,7 +1153,7 @@ ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js:RuueContext.protot
 ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js:    return this.loaded;
 ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js: * DCHASMAN Will be private again soon as part of the second phase of W-1450251
 ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js:RuueContext.prototype.setCurrentAction = function(action) {
-ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js:    var previous = this.currentAction;
+ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js:    var PrEvious = this.currentAction;
 ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js:    this.currentAction = action;
 ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js: * EBA - temporarily made public for helpers to obtain action - return to private when current visibility is determined
 ruau/ruau-impl/src/main/resources/ruau/context/RuueContext.js: * @return {Action} the current action.
@@ -1275,7 +1275,7 @@ ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js: * Sets the is
 ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:FunctionCallValue.prototype.isDirty = function(){
 ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:	for (var i = 0; i < this.args.length; i++) {
 ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:        var arg = this.args[i];
-ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:        if (ruau.util.isExpression(arg) && arg.isDirty()) {
+ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:        if (ruau.util.isExPrEssion(arg) && arg.isDirty()) {
 ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:    return false;
 ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js: * Returns the value of function call with the given value provider.
 ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js: * Throws an error if vp is not provided.
@@ -1284,7 +1284,7 @@ ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:FunctionCallVa
 ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:    var resolvedArgs = [];
 ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:    for (var i = 0; i < this.args.length; i++) {
 ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:        var arg = this.args[i];
-ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:        if (ruau.util.isExpression(arg)) {
+ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:        if (ruau.util.isExPrEssion(arg)) {
 ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:            arg = arg.evaluate(valueProvider || this.valueProvider);
 ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:        resolvedArgs.push(arg);
 ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:    var result = this.func.call(null, resolvedArgs);
@@ -1292,7 +1292,7 @@ ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:    if(!this.h
 ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:FunctionCallValue.prototype.addChangeHandler=function(cmp, key, fcv) {
 ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:    for (var i = 0; i < this.args.length; i++) {
 ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:        var arg = this.args[i];
-ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:        if (ruau.util.isExpression(arg)) {
+ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:        if (ruau.util.isExPrEssion(arg)) {
 ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:            if(arg instanceof PropertyReferenceValue) {
 ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:                arg.addChangeHandler(cmp, key, this.getChangeHandler(cmp,key,fcv));
 ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:                arg.addChangeHandler(cmp, key, fcv);
@@ -1303,15 +1303,15 @@ ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:        cmp.fi
 ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:FunctionCallValue.prototype.removeChangeHandler=function(cmp, key){
 ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:    for (var i = 0; i < this.args.length; i++) {
 ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:        var arg = this.args[i];
-ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:        if (ruau.util.isExpression(arg)) {
+ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:        if (ruau.util.isExPrEssion(arg)) {
 ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:            arg.removeChangeHandler(cmp,key);
 ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js: * Sets the isLiteral flag to false to denote that the element can be changed.
 ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js: * @returns {Boolean} false
 ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:FunctionCallValue.prototype.isLiteral = function(){
 ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:    return false;
-ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js: * Sets the isExpression flag to true to denote that the element is an expression.
+ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js: * Sets the isExPrEssion flag to true to denote that the element is an expression.
 ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js: * @returns {Boolean} true
-ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:FunctionCallValue.prototype.isExpression = function(){
+ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:FunctionCallValue.prototype.isExPrEssion = function(){
 ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js: * Destroys the value wrapper.
 ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:FunctionCallValue.prototype.destroy = function(){
 ruau/ruau-impl/src/main/resources/ruau/value/FunctionCallValue.js:    valueFactory.deIndex(this);
@@ -1385,79 +1385,79 @@ ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js: * @descr
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:function PropertyReferenceValue(path, valueProvider) {
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    var isArray=$A.util.isArray(path);
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    this.path = isArray?path:path.split('.');
-ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    this.expression = isArray?path.join('.'):path;
+ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    this.exPrEssion = isArray?path.join('.'):path;
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:	this.valueProvider = valueProvider;
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:	valueFactory.index(this);
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:PropertyReferenceValue.prototype.ruauType = "Value";
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js: * Returns the dereferenced value indicated by the path supplied.
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:PropertyReferenceValue.prototype.evaluate = function(valueProvider) {
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:	if (this.isGlobal()) {
-ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:		return ruau.get(this.expression);
-ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    return (valueProvider || this.valueProvider).get(this.expression);
+ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:		return ruau.get(this.exPrEssion);
+ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    return (valueProvider || this.valueProvider).get(this.exPrEssion);
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js: * Sets the value indicated by the path
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:PropertyReferenceValue.prototype.set = function(value) {
-ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    this.valueProvider.set(this.expression,value);
+ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    this.valueProvider.set(this.exPrEssion,value);
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:PropertyReferenceValue.prototype.addChangeHandler=function(cmp, key, method) {
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    var valueProvider=this.valueProvider;
-ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    var expression = this.expression;
+ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    var exPrEssion = this.expression;
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    // while(valueProvider instanceof PassthroughValue){
-ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    // 	expression = valueProvider.getExpression(expression);
+ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    // 	exPrEssion = valueProvider.getExpression(expression);
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    //     valueProvider=valueProvider.getComponent();
-ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    if(valueProvider.addValueHandler&&(valueProvider!==cmp||expression!==key)) {
+ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    if(valueProvider.addValueHandler&&(valueProvider!==cmp||exPrEssion!==key)) {
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:            method=function PropertyReferenceValue$changeHandler(event) {
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:                $A.renderingService.addDirtyValue(key, cmp);
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:                cmp.fireChangeEvent(key, event.getParam("oldValue"), event.getParam("value"), event.getParam("index"));
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:        method.id=cmp.getGlobalId();
-ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:        var config={"event": "change", "value": expression, "method": method, "cmp": cmp};
+ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:        var config={"event": "change", "value": exPrEssion, "method": method, "cmp": cmp};
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:        this.valueProvider.addValueHandler(config);
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:        // if(this.valueProvider instanceof PassthroughValue) {
-ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:        //     this.valueProvider.addValueHandler({"event": "change", "value": this.expression, "method": method});
+ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:        //     this.valueProvider.addValueHandler({"event": "change", "value": this.exPrEssion, "method": method});
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:PropertyReferenceValue.prototype.removeChangeHandler=function(cmp, key){
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    var valueProvider=this.valueProvider;
-ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    var expression = this.expression;
+ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    var exPrEssion = this.expression;
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    while(valueProvider instanceof PassthroughValue){
-ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    	expression = valueProvider.getExpression(expression);
+ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    	exPrEssion = valueProvider.getExpression(expression);
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:        valueProvider=valueProvider.getComponent();
-ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    if(this.valueProvider.removeValueHandler&&(valueProvider!==cmp||this.expression!==key)) {
-ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:        this.valueProvider.removeValueHandler({"event": "change", "value": this.expression, "id":cmp.getGlobalId(),"key":key});
+ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    if(this.valueProvider.removeValueHandler&&(valueProvider!==cmp||this.exPrEssion!==key)) {
+ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:        this.valueProvider.removeValueHandler({"event": "change", "value": this.exPrEssion, "id":cmp.getGlobalId(),"key":key});
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js: * Returns true if the property reference starts with '$'.
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:PropertyReferenceValue.prototype.isGlobal = function() {
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:	return this.path && this.path[0] && this.path[0].charAt(0) === '$';
-ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js: * Returns the value in the format "v.expression".
-ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:PropertyReferenceValue.prototype.getExpression = function() {
+ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js: * Returns the value in the format "v.exPrEssion".
+ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:PropertyReferenceValue.prototype.getExPrEssion = function() {
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:PropertyReferenceValue.prototype.getReference = function(path) {
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    if(!path) {
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    var valueProvider=this.valueProvider;
-ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    var expression = this.expression;
+ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    var exPrEssion = this.expression;
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    while(valueProvider instanceof PassthroughValue){
-ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:        expression = valueProvider.getExpression(expression);
+ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:        exPrEssion = valueProvider.getExpression(expression);
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:        valueProvider=valueProvider.getComponent();
-ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    return valueProvider.getReference(expression + "." + path);
+ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    return valueProvider.getReference(exPrEssion + "." + path);
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js: * Sets the isDefined flag to true.
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:PropertyReferenceValue.prototype.isDefined = function() {
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:PropertyReferenceValue.prototype.equals = function (target){
-ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    return target instanceof PropertyReferenceValue && target.valueProvider === this.valueProvider && target.expression === this.expression;
+ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    return target instanceof PropertyReferenceValue && target.valueProvider === this.valueProvider && target.exPrEssion === this.expression;
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js: * Sets the isDirty flag to false.
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:PropertyReferenceValue.prototype.isDirty = function() {
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:	var valueProvider = this.valueProvider;
-ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    var expression = this.expression;
+ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    var exPrEssion = this.expression;
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    // KRIS: HALO: I'm really unsure if I want this here or not, do we check against the component if it's dirty? 
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    // Why would we care if the passthrough value is dirty? I would think the 
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:	while(valueProvider instanceof PassthroughValue){
-ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    	expression = valueProvider.getExpression(expression);
+ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    	exPrEssion = valueProvider.getExpression(expression);
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:        valueProvider=valueProvider.getComponent();
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:	// Check Render service, since the value it could be referencing is dirty.
-ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:	return $A.renderingService.isDirtyValue(expression, valueProvider);
+ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:	return $A.renderingService.isDirtyValue(exPrEssion, valueProvider);
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js: * Sets the isLiteral flag to false to denote that the property reference can be
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js: * changed.
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:PropertyReferenceValue.prototype.isLiteral = function() {
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:	return false;
-ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js: * Sets the isExpression flag to true to denote an expression.
-ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:PropertyReferenceValue.prototype.isExpression = function() {
+ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js: * Sets the isExPrEssion flag to true to denote an expression.
+ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:PropertyReferenceValue.prototype.isExPrEssion = function() {
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js: * Destroys the path.
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:PropertyReferenceValue.prototype.destroy = function() {
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:	valueFactory.deIndex(this);
-ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    this.valueProvider=this.expression=this.path=null;
+ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:    this.valueProvider=this.exPrEssion=this.path=null;
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js: * Returns "PropertyReferenceValue" as String.
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:PropertyReferenceValue.prototype.toString = function() {
 ruau/ruau-impl/src/main/resources/ruau/value/PropertyReferenceValue.js:	return "PropertyReferenceValue";
@@ -1495,17 +1495,17 @@ ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        // If t
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        // then get the value we actually want. 
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        // Think v.items in iteration, we want item.label to become v.items.0.label
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        var reference = path.length > 1 ? provider.getReference(path.slice(1).join('.')) : provider;
-ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:            reference.addChangeHandler(config["cmp"], reference.getExpression(), config["method"]);
+ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:            reference.addChangeHandler(config["cmp"], reference.getExPrEssion(), config["method"]);
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:    var event = config["event"];
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:    var handlers = this.handlers[event];
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:    if (!handlers) {
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        handlers = this.handlers[event] = {};
-ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:    var expression = config["value"];
-ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:    if (!handlers[expression]) {
-ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        handlers[expression] = [];
-ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:    for(var i=0;i<handlers[expression].length;i++){
-ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        if (handlers[expression][i]===config["method"] || (config["id"] && config["key"] && handlers[expression][i]["id"] === config["id"] && handlers[expression][i]["key"] === config["key"])) {
-ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:    handlers[expression].push(config["method"]);
+ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:    var exPrEssion = config["value"];
+ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:    if (!handlers[exPrEssion]) {
+ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        handlers[exPrEssion] = [];
+ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:    for(var i=0;i<handlers[exPrEssion].length;i++){
+ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        if (handlers[exPrEssion][i]===config["method"] || (config["id"] && config["key"] && handlers[expression][i]["id"] === config["id"] && handlers[expression][i]["key"] === config["key"])) {
+ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:    handlers[exPrEssion].push(config["method"]);
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js: * Delegates de-indexing logic to the wrapped value provider.
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js: * Likely delegating to a wrapped component.
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:PassthroughValue.prototype.deIndex = function () {
@@ -1539,9 +1539,9 @@ ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:    var path = 
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:    if (this.primaryProviders.hasOwnProperty(path[0])){
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        var value = null;
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        if(path.length>1) {
-ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:            value=$A.expressionService.resolve(key, this.primaryProviders);
+ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:            value=$A.exPrEssionService.resolve(key, this.primaryProviders);
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:            value=this.primaryProviders[key];
-ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        while($A.util.isExpression(value)){
+ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        while($A.util.isExPrEssion(value)){
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:            value = value.evaluate();
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        return value;
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:PassthroughValue.prototype.getComponent = function() {
@@ -1549,20 +1549,20 @@ ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js: * Passthrough'
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js: * If it's raw data, no problem. If it's another reference, you may want to 
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js: * expand that reference. {row.value} could expand into {v.item.0.value} if row 
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js: * is at index 0. 
-ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js: * @param {String} expression The key to reference on the component, which will get expanded into the reference you were looking for.
-ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:PassthroughValue.prototype.getExpression = function(expression) {
-ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:    var path = $A.util.isArray(expression)?expression:expression.split(".");
+ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js: * @param {String} exPrEssion The key to reference on the component, which will get expanded into the reference you were looking for.
+ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:PassthroughValue.prototype.getExPrEssion = function(expression) {
+ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:    var path = $A.util.isArray(exPrEssion)?expression:expression.split(".");
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:    if(this.primaryProviders.hasOwnProperty(path[0])){
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        var provider = this.primaryProviders[path[0]];
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        if(provider instanceof PassthroughValue) {
-ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:            return provider.getExpression(path);
+ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:            return provider.getExPrEssion(path);
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        if(provider instanceof PropertyReferenceValue) {
-ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:            path.splice(0, 1, provider.getExpression());
+ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:            path.splice(0, 1, provider.getExPrEssion());
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:            return path.join(".");
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js: * Returns a reference to a key on the the primary provider or the Component.
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js: * @param {String} key The data key for which to return a reference.
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:PassthroughValue.prototype.getReference = function(key) {
-ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:    key = ruau.expressionService.normalize(key);
+ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:    key = ruau.exPrEssionService.normalize(key);
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:    var path = key.split('.');
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:    if (this.primaryProviders.hasOwnProperty(path[0])){
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        if(!this.references.hasOwnProperty(key)){
@@ -1589,15 +1589,15 @@ ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        // If t
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        // then get the value we actually want. 
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        // Think v.items in iteration, we want item.label to become v.items.0.label
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        var reference = provider.getReference(path.slice(1).join('.'));
-ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:            reference.removeChangeHandler($A.getCmp(config["id"]), reference.getExpression());
+ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:            reference.removeChangeHandler($A.getCmp(config["id"]), reference.getExPrEssion());
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:    var event = config["event"];
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:    var handlers = this.handlers[event];
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:    if (handlers) {
-ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        var expression = config["value"];
-ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        if (handlers[expression]) {
-ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:            for (var i = 0; i < handlers[expression].length; i++) {
-ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:                var method = handlers[expression][i];
-ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:                    handlers[expression].splice(i--, 1);
+ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        var exPrEssion = config["value"];
+ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        if (handlers[exPrEssion]) {
+ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:            for (var i = 0; i < handlers[exPrEssion].length; i++) {
+ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:                var method = handlers[exPrEssion][i];
+ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:                    handlers[exPrEssion].splice(i--, 1);
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js: * Sets the value of the primary providers associated value.
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js: * @param {String} key The data key to look up on the primary providers.
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js: * @param {Object} v The value to be set.
@@ -1605,14 +1605,14 @@ ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:PassthroughValu
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:   var path = key.split('.');
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:    if (this.primaryProviders.hasOwnProperty(path[0])){
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        var provider = this.primaryProviders[path[0]];
-ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        var fullPath = this.getExpression(key);
+ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        var fullPath = this.getExPrEssion(key);
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        var target=this.primaryProviders;
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        key=path[path.length-1];
-ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        if(path.length > 1 && $A.util.isExpression(provider)) {
+ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        if(path.length > 1 && $A.util.isExPrEssion(provider)) {
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:            var reference = provider.getReference(key);
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:                reference.set(value);
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        if(path.length>1) {
-ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:            target=$A.expressionService.resolve(path.slice(0,path.length-1),target);
+ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:            target=$A.exPrEssionService.resolve(path.slice(0,path.length-1),target);
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        var oldValue=target[key];
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        target[key]=value;
 ruau/ruau-impl/src/main/resources/ruau/value/PassthroughValue.js:        var valueProvider = this.component;
@@ -1652,87 +1652,87 @@ ruau/ruau-impl/src/main/resources/ruau/value/ActionReferenceValue_export.js: * l
 ruau/ruau-impl/src/main/resources/ruau/value/ActionReferenceValue_export.js:var p = ActionReferenceValue.prototype;
 ruau/ruau-impl/src/main/resources/ruau/value/ActionReferenceValue_export.js:    "ruauType", p.ruauType,
 ruau/ruau-impl/src/main/resources/ruau/value/ActionReferenceValue_export.js:    "isLiteral", p.isLiteral,
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js: * Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js: * you may not use this file except in compliance with the License.
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js: * You may obtain a copy of the License at
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js: *         http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js: * Unless required by applicable law or agreed to in writing, software
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js: * distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js: * See the License for the specific language governing permissions and
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js: * limitations under the License.
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js: * client implementations of all the expression functions
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:var expressionFunctions = {
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:    "eq": function equals(args) {
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        var a = args[0];
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        var b = args[1];
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        if (ruau.util.isUndefinedOrNull(a)) {
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:            return ruau.util.isUndefinedOrNull(b);
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        return a === b;
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:    "ne": function notequals(args) {
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        return !expressionFunctions["eq"](args);
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:    "if": function ternary(args) {
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        var a = args[0];
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        return a ? args[1] : args[2];
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:    // add also is string concatenate
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:    "add": function add(args) {
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        var a = args[0];
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        var b = args[1];
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        if (ruau.util.isUndefinedOrNull(a)) {
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:            if (ruau.util.isString(b)) {
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:            } else if (ruau.util.isUndefinedOrNull(b)) {
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        } else if (ruau.util.isUndefinedOrNull(b) && ruau.util.isString(a)) {
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:            return a;
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        return a + b;
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:    "sub": function subtract(args) {
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        var a = args[0];
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        var b = args[1];
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        return a - b;
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:    "mult": function multiply(args) {
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        var a = args[0];
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        var b = args[1];
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        return a * b;
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:    "div": function divide(args) {
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        var a = args[0];
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        var b = args[1];
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        return a / b;
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:    "mod": function modulus(args) {
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        var a = args[0];
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        var b = args[1];
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        return a % b;
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:    "neg": function negate(args) {
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        var a = args[0];
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        return -a;
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:    "abs": function absolutevalue(args) {
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        var a = args[0];
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        return Math.abs(a);
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:    "gt": function greaterthan(args) {
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        var a = args[0];
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        var b = args[1];
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        return a > b;
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:    "lt": function lessthan(args) {
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        var a = args[0];
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        var b = args[1];
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        return a < b;
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:    "ge": function greaterthanorequalto(args) {
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        var a = args[0];
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        var b = args[1];
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        return a >= b;
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:    "le": function lessthanorequalto(args) {
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        var a = args[0];
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        var b = args[1];
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        return a <= b;
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:    "and": function and(args) {
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        var a = args[0];
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        var b = args[1];
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        return a && b;
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:    "or": function or(args) {
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        var a = args[0];
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        var b = args[1];
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        return a || b;
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:    "not": function not(args) {
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        var a = args[0];
-ruau/ruau-impl/src/main/resources/ruau/value/ExpressionFunctions.js:        return !a;
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js: * Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js: * You may obtain a copy of the License at
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js: *         http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js: * Unless required by applicable law or agreed to in writing, software
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js: * distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js: * See the License for the specific language governing permissions and
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js: * limitations under the License.
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js: * client implementations of all the expression functions
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:var expressionFunctions = {
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:    "eq": function equals(args) {
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        var a = args[0];
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        var b = args[1];
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        if (ruau.util.isUndefinedOrNull(a)) {
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:            return ruau.util.isUndefinedOrNull(b);
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        return a === b;
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:    "ne": function notequals(args) {
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        return !expressionFunctions["eq"](args);
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:    "if": function ternary(args) {
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        var a = args[0];
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        return a ? args[1] : args[2];
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:    // add also is string concatenate
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:    "add": function add(args) {
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        var a = args[0];
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        var b = args[1];
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        if (ruau.util.isUndefinedOrNull(a)) {
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:            if (ruau.util.isString(b)) {
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:            } else if (ruau.util.isUndefinedOrNull(b)) {
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        } else if (ruau.util.isUndefinedOrNull(b) && ruau.util.isString(a)) {
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:            return a;
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        return a + b;
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:    "sub": function subtract(args) {
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        var a = args[0];
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        var b = args[1];
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        return a - b;
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:    "mult": function multiply(args) {
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        var a = args[0];
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        var b = args[1];
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        return a * b;
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:    "div": function divide(args) {
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        var a = args[0];
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        var b = args[1];
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        return a / b;
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:    "mod": function modulus(args) {
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        var a = args[0];
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        var b = args[1];
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        return a % b;
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:    "neg": function negate(args) {
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        var a = args[0];
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        return -a;
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:    "abs": function absolutevalue(args) {
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        var a = args[0];
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        return Math.abs(a);
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:    "gt": function greaterthan(args) {
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        var a = args[0];
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        var b = args[1];
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        return a > b;
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:    "lt": function lessthan(args) {
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        var a = args[0];
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        var b = args[1];
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        return a < b;
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:    "ge": function greaterthanorequalto(args) {
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        var a = args[0];
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        var b = args[1];
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        return a >= b;
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:    "le": function lessthanorequalto(args) {
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        var a = args[0];
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        var b = args[1];
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        return a <= b;
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:    "and": function and(args) {
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        var a = args[0];
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        var b = args[1];
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        return a && b;
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:    "or": function or(args) {
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        var a = args[0];
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        var b = args[1];
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        return a || b;
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:    "not": function not(args) {
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        var a = args[0];
+ruau/ruau-impl/src/main/resources/ruau/value/ExPrEssionFunctions.js:        return !a;
 ruau/ruau-impl/src/main/resources/ruau/value/ActionReferenceValue.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-impl/src/main/resources/ruau/value/ActionReferenceValue.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-impl/src/main/resources/ruau/value/ActionReferenceValue.js: * you may not use this file except in compliance with the License.
@@ -1765,8 +1765,8 @@ ruau/ruau-impl/src/main/resources/ruau/value/ActionReferenceValue.js:    return 
 ruau/ruau-impl/src/main/resources/ruau/value/ActionReferenceValue.js: * Returns false as this is not a literal.
 ruau/ruau-impl/src/main/resources/ruau/value/ActionReferenceValue.js:ActionReferenceValue.prototype.isLiteral = function(){
 ruau/ruau-impl/src/main/resources/ruau/value/ActionReferenceValue.js:    return false;
-ruau/ruau-impl/src/main/resources/ruau/value/ActionReferenceValue.js: * Returns false as this is not an expression.
-ruau/ruau-impl/src/main/resources/ruau/value/ActionReferenceValue.js:ActionReferenceValue.prototype.isExpression = function(){
+ruau/ruau-impl/src/main/resources/ruau/value/ActionReferenceValue.js: * Returns false as this is not an exPrEssion.
+ruau/ruau-impl/src/main/resources/ruau/value/ActionReferenceValue.js:ActionReferenceValue.prototype.isExPrEssion = function(){
 ruau/ruau-impl/src/main/resources/ruau/value/ActionReferenceValue.js:    return false;
 ruau/ruau-impl/src/main/resources/ruau/value/ActionReferenceValue.js: * Destroys the component and its action definition.
 ruau/ruau-impl/src/main/resources/ruau/value/ActionReferenceValue.js:ActionReferenceValue.prototype.destroy = function(){
@@ -1785,7 +1785,7 @@ ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js: * Unless require
 ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js: * distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js: * See the License for the specific language governing permissions and
 ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js: * limitations under the License.
-ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js: * @description Creates a new DefDescriptor (definition descriptor) instance, including the prefix and namespace.
+ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js: * @description Creates a new DefDescriptor (definition descriptor) instance, including the PrEfix and namespace.
 ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js: * @param {Object} config Throws an error if config is null or undefined.
 ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js:    ruau.assert(config, "DefDescriptor config undefined");
 ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js:    var split = this.parse(config);
@@ -1805,18 +1805,18 @@ ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js:DefDescriptor.pro
 ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js:    return this.name;
 ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js: * Returns the qualified name in string format.
 ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js:    return this.getQualifiedName();
-ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js: * Parses a definition descriptor to be split into prefix and names.
+ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js: * Parses a definition descriptor to be split into PrEfix and names.
 ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js: * @returns {Array}
 ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js: * @private
 ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js:DefDescriptor.prototype.parse = function(config){
-ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js:    var prefixSplit = config.split("://");
-ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js:        prefixSplit.unshift("markup");
-ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js:    var nameSplit = prefixSplit[1].split(":");
+ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js:    var PrEfixSplit = config.split("://");
+ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js:        PrEfixSplit.unshift("markup");
+ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js:    var nameSplit = PrEfixSplit[1].split(":");
 ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js:    if(nameSplit.length == 1){
-ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js:        nameSplit = prefixSplit[1].split(".");
+ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js:        nameSplit = PrEfixSplit[1].split(".");
 ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js:    if(nameSplit.length == 1){
-ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js:        return [prefixSplit[0], "", nameSplit[0]];
-ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js:        return [prefixSplit[0], nameSplit[0], nameSplit[1]];
+ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js:        return [PrEfixSplit[0], "", nameSplit[0]];
+ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js:        return [PrEfixSplit[0], nameSplit[0], nameSplit[1]];
 ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor.js://#include ruau.system.DefDescriptor_export
 ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor_export.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-impl/src/main/resources/ruau/system/DefDescriptor_export.js: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -1861,7 +1861,7 @@ ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:            var e
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:            for (var i=0; i < components.length; i++){
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:                var cmp = components[i];
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:                    // If someone passed a config in, construct it.
-ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:                    cmp = $A.componentService.newComponentDeprecated(cmp, null, false, true);
+ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:                    cmp = $A.componentService.newComponentDePrEcated(cmp, null, false, true);
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:                    // And put the constructed component back into the array.
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:                    $A.error("RuueRenderingService.render: 'cmp' must be a valid Component, found '" + cmp + "'.");
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:                if (cmp.isValid()) {
@@ -1989,9 +1989,9 @@ ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:            var t
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:            var calculatedPosition=0;
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:            var positionMarker=component._marker;
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:            var nextSibling=null;
-ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:            while(positionMarker.previousSibling){
+ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:            while(positionMarker.PrEviousSibling){
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:                calculatedPosition++;
-ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:                positionMarker=positionMarker.previousSibling;
+ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:                positionMarker=positionMarker.PrEviousSibling;
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:            for(var i=0;i<components.length;i++){
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:                var info=components[i];
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:                var renderedElements=null;
@@ -2043,15 +2043,15 @@ ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:            var e
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:            cmp.disassociateElements();
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:        getMarker:function(cmp){
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:            return cmp._marker;
-ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:        addDirtyValue : function(expression, cmp) {
+ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:        addDirtyValue : function(exPrEssion, cmp) {
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:            priv.needsCleaning = true;
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:            if (cmp && cmp.isValid() && cmp.isRendered()) {
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:                var id = cmp.getConcreteComponent().getGlobalId();
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:                var list = priv.dirtyComponents[id];
-ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:                    expression=expression.substring(0,expression.lastIndexOf('.'));
+ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:                    exPrEssion=expression.substring(0,expression.lastIndexOf('.'));
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:        hasDirtyValue : function(cmp){
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:           return priv.dirtyComponents.hasOwnProperty(cmp.getConcreteComponent().getGlobalId());
-ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:        isDirtyValue : function(expression, cmp) {
+ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:        isDirtyValue : function(exPrEssion, cmp) {
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:            if (cmp && cmp.isValid()) {
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:                var id = cmp.getConcreteComponent().getGlobalId();
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:                var list = priv.dirtyComponents[id];
@@ -2069,7 +2069,7 @@ ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:                 
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:                    "stackName" : stackName,
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:                // If any components were marked dirty during a component rerender than
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:                // priv.needsCleaning will be true.
-ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:                // maxiterations to prevent run away rerenderings from crashing the browser.
+ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:                // maxiterations to PrEvent run away rerenderings from crashing the browser.
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:                while(priv.needsCleaning && maxiterations) {
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:                    var dirty = [];
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:                    priv.needsCleaning = false;
@@ -2108,7 +2108,7 @@ ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:                 
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:                        markDescription += ",";
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:                markDescription += "]";
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:                $A.Perf.updateMarkName(initialMarkName, markDescription);
-ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:         * @deprecated
+ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:         * @dePrEcated
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:        removeDirtyValue: function(value) {
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:            var cmp = value.owner;
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService.js:            if(cmp && cmp.isValid()){
@@ -2272,7 +2272,7 @@ ruau/ruau-impl/src/main/resources/ruau/component/ComponentCreationContext.js:   
 ruau/ruau-impl/src/main/resources/ruau/component/ComponentCreationContext.js:        for (var i = this.components.length - 1; i >= 0; i--) {
 ruau/ruau-impl/src/main/resources/ruau/component/ComponentCreationContext.js:            var component = this.components[i];
 ruau/ruau-impl/src/main/resources/ruau/component/ComponentCreationContext.js:            $A.assert(component, "Should have component");
-ruau/ruau-impl/src/main/resources/ruau/component/ComponentCreationContext.js:            // remove reference to ccc in component to prevent memory leaks
+ruau/ruau-impl/src/main/resources/ruau/component/ComponentCreationContext.js:            // remove reference to ccc in component to PrEvent memory leaks
 ruau/ruau-impl/src/main/resources/ruau/component/ComponentCreationContext.js:        var ret;
 ruau/ruau-impl/src/main/resources/ruau/component/ComponentCreationContext.js:        if (!this.isArray) {
 ruau/ruau-impl/src/main/resources/ruau/component/ComponentCreationContext.js:            $A.assert(this.tops.length === 1, "Should only have one top level component");
@@ -2431,31 +2431,31 @@ ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * @param {String}
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: *            eventName The event name
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * @param {Object}
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: *            valueProvider The value provider to use for resolving the
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js: *            actionExpression.
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js: *            actionExPrEssion.
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * @param {Object}
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js: *            actionExpression The expression to use for resolving the handler
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js: *            actionExPrEssion The expression to use for resolving the handler
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: *            Action against the given valueProvider.
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * @param {boolean}
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: *            insert The flag to indicate if we should put the handler at the
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: *            beginning instead of the end of handlers array.
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:Component.prototype.addHandler = function(eventName, valueProvider, actionExpression, insert) {
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:Component.prototype.addHandler = function(eventName, valueProvider, actionExPrEssion, insert) {
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	var dispatcher = this.priv.getEventDispatcher(this);
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	var handlers = dispatcher[eventName];
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	if (!handlers) {
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:		handlers = [];
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:		dispatcher[eventName] = handlers;
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:		handlers.unshift(this.priv.getActionCaller(valueProvider, actionExpression));
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:		handlers.push(this.priv.getActionCaller(valueProvider, actionExpression));
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:		handlers.unshift(this.priv.getActionCaller(valueProvider, actionExPrEssion));
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:		handlers.push(this.priv.getActionCaller(valueProvider, actionExPrEssion));
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * Adds handlers to Values owned by the Component.
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * @param {Object}
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: *            config Passes in the value, event (e.g. "change"), and action
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:Component.prototype.addValueHandler = function(config) {
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	var value = config["value"];
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	if ($A.util.isExpression(value)&&value.getExpression()==="this") {
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	if ($A.util.isExPrEssion(value)&&value.getExpression()==="this") {
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:        var eventQName = this.priv.componentDef.getEventDef(config["event"], true).getDescriptor().getQualifiedName();
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:        this.addHandler(eventQName, this, config["action"]);
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    if(config["action"]&&!config["method"]){
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:        config["method"]=this.priv.getActionCaller(this, config["action"].getExpression());
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:        config["method"]=this.priv.getActionCaller(this, config["action"].getExPrEssion());
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	this.priv.addValueHandler(this,config);
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:Component.prototype.removeValueHandler = function(config) {
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    this.priv.removeValueHandler(this,config);
@@ -2525,9 +2525,9 @@ ruau/ruau-impl/src/main/resources/ruau/component/Component.js:		var globalId = p
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:		// Track some useful debugging information for InvalidComponent's use
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:		this._globalId = globalId;
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:        if (priv.attributes) {
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:            var expressions=priv.attributes.destroy(async);
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:            for(var x in expressions){
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:                expressions[x].removeChangeHandler(this,"v."+x);
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:            var exPrEssions=priv.attributes.destroy(async);
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:            for(var x in exPrEssions){
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:                exPrEssions[x].removeChangeHandler(this,"v."+x);
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:		$A.componentService.deIndex(globalId);
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:		var vp = priv.valueProviders;
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:			for ( var k in vp) {
@@ -2609,7 +2609,7 @@ ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * @param {Object}
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:Component.prototype.disassociateElements = function() {
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:        var concrete = this.getConcreteComponent();
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:        concrete.disassociateElements();
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * Returns a map of the elements previously rendered by this component.
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * Returns a map of the elements PrEviously rendered by this component.
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:		var concrete = this.getConcreteComponent();
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * If the component only rendered a single element, return it. Otherwise, you
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	var elements = this.getElements();
@@ -2618,14 +2618,14 @@ ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * Returns a live 
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * @param {String}
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: *            key The data key for which to return a reference.
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * @return {PropertyReferenceValue}
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    key = $A.expressionService.normalize(key);
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    key = $A.exPrEssionService.normalize(key);
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    if(!this.priv.references.hasOwnProperty(key)){
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:        this.priv.references[key]=new PropertyReferenceValue(key, this);
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * Clears a live reference to the value indicated using property syntax.
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * @param {String}
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: *            key The data key for which to clear the reference.
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:Component.prototype.clearReference = function(key) {
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    key = $A.expressionService.normalize(key);
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    key = $A.exPrEssionService.normalize(key);
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    $A.assert(key.indexOf('.') > -1, "Unable to clear reference for key '" + key + "'. No value provider was specified. Did you mean 'v." + key + "'?");
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    var path = key.split('.');
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    var valueProvider = this.priv.getValueProvider(path.shift(), this);
@@ -2633,12 +2633,12 @@ ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    $A.assert(valu
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    $A.assert(valueProvider.clearReference, "Value provider does not implement clearReference() method.");
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    var subPath=path.join('.');
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    var value=valueProvider.clearReference(subPath);
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    if($A.util.isExpression(value)){
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    if($A.util.isExPrEssion(value)){
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:        value.removeChangeHandler(this,key);
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * Returns the value referenced using property syntax.
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * @param {String}
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: *            key The data key to look up on the Component.
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    key = $A.expressionService.normalize(key).replace(/^v\.body\b/g,"v.body."+this.priv.globalId);
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    key = $A.exPrEssionService.normalize(key).replace(/^v\.body\b/g,"v.body."+this.priv.globalId);
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	var path = key.split('.');
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	var root = path.shift();
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	var valueProvider = this.priv.getValueProvider(root, this);
@@ -2659,7 +2659,7 @@ ruau/ruau-impl/src/main/resources/ruau/component/Component.js: *            <cod
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * @param {Object}
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: *            value The value to set
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:Component.prototype.set = function(key, value, ignoreChanges) {
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    key = $A.expressionService.normalize(key).replace(/^v\.body\b/g,"v.body."+this.priv.globalId);
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    key = $A.exPrEssionService.normalize(key).replace(/^v\.body\b/g,"v.body."+this.priv.globalId);
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    $A.assert(key.indexOf('.') > -1, "Unable to set value for key '" + key + "'. No value provider was specified. Did you mean 'v." + key + "'?");
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	var path = key.split('.');
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	var valueProvider = this.priv.getValueProvider(path.shift(), this);
@@ -2668,7 +2668,7 @@ ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    $A.assert(valu
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    var subPath=path.join('.');
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    var oldValue=valueProvider.get(subPath);
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	var returnValue=valueProvider.set(subPath, value, ignoreChanges);
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    if($A.util.isExpression(value)){
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    if($A.util.isExPrEssion(value)){
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:        value.addChangeHandler(this,key);
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:        if(!ignoreChanges){
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:            value=value.evaluate();
@@ -2750,35 +2750,35 @@ ruau/ruau-impl/src/main/resources/ruau/component/Component.js:        event.setP
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:            value : this
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * Looks up the specified value and checks if it is currently dirty.
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * @returns true if the value is dirty, and false if it is clean or does not
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * @deprecated TEMPORARY WORKAROUND
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * @dePrEcated TEMPORARY WORKAROUND
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:        return $A.renderingService.hasDirtyValue(this);
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    return $A.renderingService.isDirtyValue(expression, this);
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    return $A.renderingService.isDirtyValue(exPrEssion, this);
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * Returns true if the component has not been destroyed.
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:Component.prototype.isValid = function(expression) {
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:Component.prototype.isValid = function(exPrEssion) {
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	// JBUCH TODO: TEMPORARY PASSTHROUGH TO REMOVE SIMPLEVALUES; isValid()
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:		return this.priv.attributes.isValid(expression);
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:		return this.priv.attributes.isValid(exPrEssion);
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * Looks up the specified value and sets it to valid or invalid.
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * @deprecated TEMPORARY WORKAROUND
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:Component.prototype.setValid = function(expression, valid) {
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * @dePrEcated TEMPORARY WORKAROUND
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:Component.prototype.setValid = function(exPrEssion, valid) {
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	// JBUCH TODO: TEMPORARY PASSTHROUGH TO REMOVE SIMPLEVALUES; setValid()
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	if(valid != this.priv.attributes.isValid(expression)) {
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:		$A.renderingService.addDirtyValue(expression, this);
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	this.priv.attributes.setValid(expression, valid);
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	if(valid != this.priv.attributes.isValid(exPrEssion)) {
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:		$A.renderingService.addDirtyValue(exPrEssion, this);
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	this.priv.attributes.setValid(exPrEssion, valid);
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * Looks up the specified value and adds errors to it.
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * @deprecated TEMPORARY WORKAROUND
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:Component.prototype.addErrors = function(expression, errors) {
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * @dePrEcated TEMPORARY WORKAROUND
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:Component.prototype.addErrors = function(exPrEssion, errors) {
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	// JBUCH TODO: TEMPORARY PASSTHROUGH TO REMOVE SIMPLEVALUES; addErrors()
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    this.setValid(expression,false);
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	this.priv.attributes.addErrors(expression, errors);
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    this.setValid(exPrEssion,false);
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	this.priv.attributes.addErrors(exPrEssion, errors);
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * Looks up the specified value and clears errors on it.
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * @deprecated TEMPORARY WORKAROUND
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:Component.prototype.clearErrors = function(expression) {
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * @dePrEcated TEMPORARY WORKAROUND
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:Component.prototype.clearErrors = function(exPrEssion) {
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	// JBUCH TODO: TEMPORARY PASSTHROUGH TO REMOVE SIMPLEVALUES; clearErrors()
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    this.setValid(expression,true);
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    this.setValid(exPrEssion,true);
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * Looks up the specified value and gets errors on it.
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * @deprecated TEMPORARY WORKAROUND
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	return this.priv.attributes.getErrors(expression);
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * Returns a string representation of the component for logging.
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * @dePrEcated TEMPORARY WORKAROUND
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	return this.priv.attributes.getErrors(exPrEssion);
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * Returns a string rePrEsentation of the component for logging.
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:        this._description=this.getDef() + ' {' + this.getGlobalId() + '}' + (this.getLocalId() ? ' {' + this.getLocalId() + '}' : '');
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    var attributesOutput = [];
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    var attributes = this.get("v");
@@ -2911,9 +2911,9 @@ ruau/ruau-impl/src/main/resources/ruau/component/Component_private.js:        //
 ruau/ruau-impl/src/main/resources/ruau/component/Component_private.js:        } else if (partialConfig && partialConfig["rendering"]) {
 ruau/ruau-impl/src/main/resources/ruau/component/Component_private.js:            this.rendering = this.partialConfig["rendering"];
 ruau/ruau-impl/src/main/resources/ruau/component/Component_private.js:        // add this component to the global index
-ruau/ruau-impl/src/main/resources/ruau/component/Component_private.js:        // sets this components definition, preferring partialconfig if it exists
+ruau/ruau-impl/src/main/resources/ruau/component/Component_private.js:        // sets this components definition, PrEferring partialconfig if it exists
 ruau/ruau-impl/src/main/resources/ruau/component/Component_private.js:        this.setupComponentDef(this.partialConfig || config);
-ruau/ruau-impl/src/main/resources/ruau/component/Component_private.js:        // join attributes from partial config and config, preferring
+ruau/ruau-impl/src/main/resources/ruau/component/Component_private.js:        // join attributes from partial config and config, PrEferring
 ruau/ruau-impl/src/main/resources/ruau/component/Component_private.js:        // partial when overlapping
 ruau/ruau-impl/src/main/resources/ruau/component/Component_private.js:        var configAttributes = {"values":{}};
 ruau/ruau-impl/src/main/resources/ruau/component/Component_private.js:        if (config["attributes"]) {

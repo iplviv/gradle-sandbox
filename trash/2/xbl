@@ -471,7 +471,7 @@ ruau/ruau-components/src/main/components/ruaudocs/demoList/demoList.cmp:		<ruau:
 ruau/ruau-components/src/main/components/ruaudocs/demoList/demoList.cmp:			<ruaudocs:demoDataProvider />
 ruau/ruau-components/src/main/components/ruaudocs/demoList/demoList.cmp:		</ruau:set>
 ruau/ruau-components/src/main/components/ruaudocs/demoList/demoList.cmp:		<ruau:set attribute="footer">
-ruau/ruau-components/src/main/components/ruaudocs/demoList/demoList.cmp:		 <ui:button label="Show More" press="{!c.show}"/>
+ruau/ruau-components/src/main/components/ruaudocs/demoList/demoList.cmp:		 <ui:button label="Show More" PrEss="{!c.show}"/>
 ruau/ruau-components/src/main/components/ruaudocs/demoList/demoList.cmp:		</ruau:set>
 ruau/ruau-components/src/main/components/ruaudocs/demoList/demoList.cmp:		<ruau:set attribute="itemTemplate">
 ruau/ruau-components/src/main/components/ruaudocs/demoList/demoList.cmp:			<ruaudocs:demoListTemplate label="{!item.label}" />
@@ -686,7 +686,7 @@ ruau/ruau-components/src/main/components/ruaudocs/searchFilterTree/searchFilterT
 ruau/ruau-components/src/main/components/ruaudocs/searchFilterTree/searchFilterTreeController.js: * limitations under the License.
 ruau/ruau-components/src/main/components/ruaudocs/searchFilterTree/searchFilterTreeController.js:     * Perform a search on the tree.
 ruau/ruau-components/src/main/components/ruaudocs/searchFilterTree/searchFilterTreeController.js:     * The user's query is matched case-insensitvely as a javascript regular
-ruau/ruau-components/src/main/components/ruaudocs/searchFilterTree/searchFilterTreeController.js:     * expression against the nodes' titles.
+ruau/ruau-components/src/main/components/ruaudocs/searchFilterTree/searchFilterTreeController.js:     * exPrEssion against the nodes' titles.
 ruau/ruau-components/src/main/components/ruaudocs/searchFilterTree/searchFilterTreeController.js:     * For all nodes with matching titles, show them and expand their ancestry.
 ruau/ruau-components/src/main/components/ruaudocs/searchFilterTree/searchFilterTreeController.js:     * FIXME: The intention is to hide at least the non-matching leaf nodes (if
 ruau/ruau-components/src/main/components/ruaudocs/searchFilterTree/searchFilterTreeController.js:     * not all non-matching nodes). However, this is not currently possible
@@ -1203,7 +1203,7 @@ ruau/ruau-components/src/main/components/ruaudocs/demoMenuMeta/demoMenuMeta.cmp:
 ruau/ruau-components/src/main/components/ruaudocs/demoMenuMeta/demoMenuMeta.cmp:        <h2>Retrieving selected values from the menu</h2>
 ruau/ruau-components/src/main/components/ruaudocs/demoMenuMeta/demoMenuMeta.cmp:            <ui:menuTriggerLink class="checkboxMenuLabel" ruau:id="checkboxMenuLabel" label="NFC West Teams"/>
 ruau/ruau-components/src/main/components/ruaudocs/demoMenuMeta/demoMenuMeta.cmp:            <ui:menuList class="checkboxMenu" ruau:id="checkboxMenu" menuItems="{!m.data}"/>
-ruau/ruau-components/src/main/components/ruaudocs/demoMenuMeta/demoMenuMeta.cmp:        <p><ui:button class="checkboxButton" ruau:id="checkboxButton" press="{!c.getMenuSelected}" label="Check the selected menu items"/></p>
+ruau/ruau-components/src/main/components/ruaudocs/demoMenuMeta/demoMenuMeta.cmp:        <p><ui:button class="checkboxButton" ruau:id="checkboxButton" PrEss="{!c.getMenuSelected}" label="Check the selected menu items"/></p>
 ruau/ruau-components/src/main/components/ruaudocs/demoMenuMeta/demoMenuMeta.cmp:        <p><ui:outputText class="result" ruau:id="result" value="Which items get selected"/></p>
 ruau/ruau-components/src/main/components/ruaudocs/demoMenuMeta/demoMenuMeta.cmp:<div style="margin:20px;">
 ruau/ruau-components/src/main/components/ruaudocs/demoMenuMeta/demoMenuMeta.cmp:    <div style="display:inline-block;width:50%;vertical-align:top;">
@@ -1447,7 +1447,7 @@ ruau/ruau-components/src/main/components/ruaudocs/editorPanel/editorPanelHelper.
 ruau/ruau-components/src/main/components/ruaudocs/editorPanel/editorPanelHelper.js:					var s = element.style;
 ruau/ruau-components/src/main/components/ruaudocs/editorPanel/editorPanelHelper.js:					var on = ruau.util.on;
 ruau/ruau-components/src/main/components/ruaudocs/editorPanel/editorPanelHelper.js:						if (e.ctrlKey || e.metaKey) {
-ruau/ruau-components/src/main/components/ruaudocs/editorPanel/editorPanelHelper.js:							cmp.get('c.open').runDeprecated(name);
+ruau/ruau-components/src/main/components/ruaudocs/editorPanel/editorPanelHelper.js:							cmp.get('c.open').runDePrEcated(name);
 ruau/ruau-components/src/main/components/ruaudocs/editorPanel/editorPanelHelper.js:							s.textDecoration = 'none';
 ruau/ruau-components/src/main/components/ruaudocs/editorPanel/editorPanelHelper.js:							s.fontWeight = 'normal';
 ruau/ruau-components/src/main/components/ruaudocs/editorPanel/editorPanelHelper.js:						if (e.ctrlKey || e.metaKey) {
@@ -1869,7 +1869,7 @@ ruau/ruau-components/src/main/components/ruaujstest/jstestCase/jstestCase.css: *
 ruau/ruau-components/src/main/components/ruaujstest/jstestCase/jstestCase.css: * limitations under the License.
 ruau/ruau-components/src/main/components/ruaujstest/jstestCase/jstestCase.css:.THIS.myclass {
 ruau/ruau-components/src/main/components/ruaujstest/jstestCase/jstestCase.css:.ruaujstestJstestCase h1{
-ruau/ruau-components/src/main/components/ruaujstest/jstestCase/jstestCase.css:.ruaujstestJstestCase section p pre {
+ruau/ruau-components/src/main/components/ruaujstest/jstestCase/jstestCase.css:.ruaujstestJstestCase section p PrE {
 ruau/ruau-components/src/main/components/ruaujstest/jstestCase/jstestCase.css:    display: block;
 ruau/ruau-components/src/main/components/ruaujstest/jstestCase/jstestCaseController.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ruaujstest/jstestCase/jstestCaseController.js: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -1954,7 +1954,7 @@ ruau/ruau-components/src/main/components/ruaujstest/jstestCase/jstestCaseHelper.
 ruau/ruau-components/src/main/components/ruaujstest/jstestCase/jstestCaseHelper.js:                error = errorsInCallbackFunc[i];
 ruau/ruau-components/src/main/components/ruaujstest/jstestCase/jstestCaseHelper.js:                msg += error.message;
 ruau/ruau-components/src/main/components/ruaujstest/jstestCase/jstestCaseHelper.js:                if(error["lastStage"]) {
-ruau/ruau-components/src/main/components/ruaujstest/jstestCase/jstestCaseHelper.js:                    msg += "<br/>Failing Test: "+cmp.get("v.title")+"<br/><pre>" + error["lastStage"] + "</pre>";
+ruau/ruau-components/src/main/components/ruaujstest/jstestCase/jstestCaseHelper.js:                    msg += "<br/>Failing Test: "+cmp.get("v.title")+"<br/><PrE>" + error["lastStage"] + "</pre>";
 ruau/ruau-components/src/main/components/ruaujstest/jstestCase/jstestCaseHelper.js:            cmp.find("results").getElement().innerHTML = "Failed.<br/>"+msg;
 ruau/ruau-components/src/main/components/ruaujstest/jstestCase/jstestCaseHelper.js:            cmp.set("v.status", "pass");
 ruau/ruau-components/src/main/components/ruaujstest/jstestCase/jstestCaseHelper.js:            cmp.find("results").getElement().innerHTML = "Passed.";
@@ -1989,7 +1989,7 @@ ruau/ruau-components/src/main/components/ruaujstest/jstest/jstest.app:        </
 ruau/ruau-components/src/main/components/ruaujstest/jstest/jstest.app:    </ui:tabset>
 ruau/ruau-components/src/main/components/ruaujstest/jstest/jstest.app:    <section class="suiteCode">
 ruau/ruau-components/src/main/components/ruaujstest/jstest/jstest.app:        <h1>JS Test Suite <span onclick="{!c.toggleCode}">Display</span></h1>
-ruau/ruau-components/src/main/components/ruaujstest/jstest/jstest.app:        <pre ruau:id="test-suite-code" class="hidden">{!m.testSuite.code}</pre>
+ruau/ruau-components/src/main/components/ruaujstest/jstest/jstest.app:        <PrE ruau:id="test-suite-code" class="hidden">{!m.testSuite.code}</pre>
 ruau/ruau-components/src/main/components/ruaujstest/jstest/jstest.app:</ruau:application>
 ruau/ruau-components/src/main/components/ruaujstest/jstest/jstestController.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ruaujstest/jstest/jstestController.js: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -2130,7 +2130,7 @@ ruau/ruau-components/src/main/components/ruaujstest/jstest/jstest.css:    text-s
 ruau/ruau-components/src/main/components/ruaujstest/jstest/jstest.css:    background: #2173a1;
 ruau/ruau-components/src/main/components/ruaujstest/jstest/jstest.css:.ruaujstestJstest section.results div {
 ruau/ruau-components/src/main/components/ruaujstest/jstest/jstest.css:    display: block;
-ruau/ruau-components/src/main/components/ruaujstest/jstest/jstest.css:.ruaujstestJstest pre {
+ruau/ruau-components/src/main/components/ruaujstest/jstest/jstest.css:.ruaujstestJstest PrE {
 ruau/ruau-components/src/main/components/ruaujstest/jstest/jstest.css:    font-family: "Courier New", Courier, monospace, sans-serif;
 ruau/ruau-components/src/main/components/ruaujstest/jstest/jstest.css:    text-align: left;
 ruau/ruau-components/src/main/components/ruaujstest/jstest/jstest.css:    background: #EFEFEF;
@@ -2138,9 +2138,9 @@ ruau/ruau-components/src/main/components/ruaujstest/jstest/jstest.css:    paddin
 ruau/ruau-components/src/main/components/ruaujstest/jstest/jstest.css:    margin: 0 0 1.7em 0.3em;
 ruau/ruau-components/src/main/components/ruaujstest/jstest/jstest.css:    overflow: auto;
 ruau/ruau-components/src/main/components/ruaujstest/jstest/jstest.css:    display: block;
-ruau/ruau-components/src/main/components/ruaujstest/jstest/jstest.css:.ruaujstestJstest pre.hidden {
+ruau/ruau-components/src/main/components/ruaujstest/jstest/jstest.css:.ruaujstestJstest PrE.hidden {
 ruau/ruau-components/src/main/components/ruaujstest/jstest/jstest.css:    display: none;
-ruau/ruau-components/src/main/components/ruaujstest/jstest/jstest.css:.ruaujstestJstest pre.show {
+ruau/ruau-components/src/main/components/ruaujstest/jstest/jstest.css:.ruaujstestJstest PrE.show {
 ruau/ruau-components/src/main/components/ruaujstest/jstest/jstest.css:    display: block;
 ruau/ruau-components/src/main/components/ruaujstest/jstest/jstestHelper.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ruaujstest/jstest/jstestHelper.js: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -2190,7 +2190,7 @@ ruau/ruau-components/src/main/components/ruaujstest/jstestAis/jstestAis.app:    
 ruau/ruau-components/src/main/components/ruaujstest/jstestAis/jstestAis.app:    </ui:tabset>
 ruau/ruau-components/src/main/components/ruaujstest/jstestAis/jstestAis.app:    <section class="suiteCode">
 ruau/ruau-components/src/main/components/ruaujstest/jstestAis/jstestAis.app:        <h1>JS Test Suite <span onclick="{!c.toggleCode}">Display</span></h1>
-ruau/ruau-components/src/main/components/ruaujstest/jstestAis/jstestAis.app:        <pre ruau:id="test-suite-code" class="hidden">{!m.testSuite.code}</pre>
+ruau/ruau-components/src/main/components/ruaujstest/jstestAis/jstestAis.app:        <PrE ruau:id="test-suite-code" class="hidden">{!m.testSuite.code}</pre>
 ruau/ruau-components/src/main/components/ruaujstest/jstestAis/jstestAis.app:</ruau:application>
 ruau/ruau-components/src/main/components/ruaujstest/jstestAis/jstestAisHelper.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ruaujstest/jstestAis/jstestAisHelper.js: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -2366,7 +2366,7 @@ ruau/ruau-components/src/main/components/ruauStorage/init/initHelper.js:			var u
 ruau/ruau-components/src/main/components/ruauStorage/init/initHelper.js:					"ruau.usestorage=true") > 0;
 ruau/ruau-components/src/main/components/ruauStorage/init/initHelper.js:			if (!useStorage) {
 ruau/ruau-components/src/main/components/ruauStorage/init/initHelper.js:				if (debugLoggingEnabled) {
-ruau/ruau-components/src/main/components/ruauStorage/init/initHelper.js:					$A.log("Not enabling Ruue Storage because the requireUseStorageQueryParam was specified and ruau.useStorage=true was not present in the initial app url request");
+ruau/ruau-components/src/main/components/ruauStorage/init/initHelper.js:					$A.log("Not enabling Ruue Storage because the requireUseStorageQueryParam was specified and ruau.useStorage=true was not PrEsent in the initial app url request");
 ruau/ruau-components/src/main/components/ruauStorage/init/initHelper.js:		var name = cmp.get("v.name");
 ruau/ruau-components/src/main/components/ruauStorage/init/initHelper.js:		var defaultExpiration = parseInt(cmp.get("v.defaultExpiration"),10);
 ruau/ruau-components/src/main/components/ruauStorage/init/initHelper.js:		var defaultAutoRefreshInterval = parseInt(cmp.get("v.defaultAutoRefreshInterval"),10);
@@ -2388,7 +2388,7 @@ ruau/ruau-components/src/main/components/ruauStorage/init/init.cmp:<ruau:compone
 ruau/ruau-components/src/main/components/ruauStorage/init/init.cmp:    <ruau:attribute name="name" type="String" required="true" description="The programmatic name for the storage instance."/>
 ruau/ruau-components/src/main/components/ruauStorage/init/init.cmp:    <ruau:attribute name="persistent" type="Boolean" default="false" description="Set to true if this storage requires persistent storage support."/>
 ruau/ruau-components/src/main/components/ruauStorage/init/init.cmp:    <ruau:attribute name="secure" type="Boolean" default="false" description="Set to true if this storage requires secure storage support."/>
-ruau/ruau-components/src/main/components/ruauStorage/init/init.cmp:    <ruau:attribute name="clearStorageOnInit" type="Boolean" default="true" description="Set to true to delete all previous data on initialization for persistent storage."/>
+ruau/ruau-components/src/main/components/ruauStorage/init/init.cmp:    <ruau:attribute name="clearStorageOnInit" type="Boolean" default="true" description="Set to true to delete all PrEvious data on initialization for persistent storage."/>
 ruau/ruau-components/src/main/components/ruauStorage/init/init.cmp:    <ruau:attribute name="defaultExpiration" type="Integer" default="10" description="The default number of seconds that an object will be retained in storage if a request specific expiration has not been specified in the call to Action.setStorable()."/>
 ruau/ruau-components/src/main/components/ruauStorage/init/init.cmp:    <ruau:attribute name="defaultAutoRefreshInterval" type="Integer" default="30" description="The default number of seconds before an auto refresh request will be initiated if a request specific interval has not been specified in the call to Action.setStorable()."/>
 ruau/ruau-components/src/main/components/ruauStorage/init/init.cmp:    <ruau:attribute name="maxSize" type="Integer" default="1000" description="Maximum size in kilobytes that will be used in the memory adapter's storage. Existing items will be evicted to make room for new items using LRU and expiry strategies. Value is multiplied by 1024 bytes for storage initialization."/>
@@ -2566,18 +2566,18 @@ ruau/ruau-components/src/main/components/ruau/debug/debug.cmp:	<ruau:handler eve
 ruau/ruau-components/src/main/components/ruau/debug/debug.cmp:	<ruau:handler event="ruauStorage:modified" action="{!c.storageEventListener}"/>
 ruau/ruau-components/src/main/components/ruau/debug/debug.cmp:	<div id="__ruau_debug_tool" ruau:id="ruaudebugtool" class="debugWindow">
 ruau/ruau-components/src/main/components/ruau/debug/debug.cmp:		<ui:tabset>
-ruau/ruau-components/src/main/components/ruau/debug/debug.cmp:	    	<ui:tab ruau:id="errorsTab" title="Errors"><pre>{!v.errorsData}</pre></ui:tab>
-ruau/ruau-components/src/main/components/ruau/debug/debug.cmp:	    	<ui:tab ruau:id="warningsTab" title="Warnings"><pre>{!v.warningsData}</pre></ui:tab>
+ruau/ruau-components/src/main/components/ruau/debug/debug.cmp:	    	<ui:tab ruau:id="errorsTab" title="Errors"><PrE>{!v.errorsData}</pre></ui:tab>
+ruau/ruau-components/src/main/components/ruau/debug/debug.cmp:	    	<ui:tab ruau:id="warningsTab" title="Warnings"><PrE>{!v.warningsData}</pre></ui:tab>
 ruau/ruau-components/src/main/components/ruau/debug/debug.cmp:        	<ui:tab ruau:id="cmpTab" title="Components" onActivated="{!c.cmpStats}">
 ruau/ruau-components/src/main/components/ruau/debug/debug.cmp:        		<a onclick="{!c.cmpStats}"><ui:image src="/ruauFW/resources/ruau/images/refresh.png" imageType="decorative"/></a>
-ruau/ruau-components/src/main/components/ruau/debug/debug.cmp:        		<pre>{!v.cmpData}</pre>
+ruau/ruau-components/src/main/components/ruau/debug/debug.cmp:        		<PrE>{!v.cmpData}</pre>
 ruau/ruau-components/src/main/components/ruau/debug/debug.cmp:        	</ui:tab>
-ruau/ruau-components/src/main/components/ruau/debug/debug.cmp:        	<ui:tab ruau:id="eventTab" title="Events"><pre>{!v.eventData}</pre></ui:tab>
-ruau/ruau-components/src/main/components/ruau/debug/debug.cmp:        	<ui:tab ruau:id="storageTab" title="Storage"><div ruau:id="storageInfo"><pre>{!v.storageData}</pre></div></ui:tab>
+ruau/ruau-components/src/main/components/ruau/debug/debug.cmp:        	<ui:tab ruau:id="eventTab" title="Events"><PrE>{!v.eventData}</pre></ui:tab>
+ruau/ruau-components/src/main/components/ruau/debug/debug.cmp:        	<ui:tab ruau:id="storageTab" title="Storage"><div ruau:id="storageInfo"><PrE>{!v.storageData}</pre></div></ui:tab>
 ruau/ruau-components/src/main/components/ruau/debug/debug.cmp:        	<ui:tab ruau:id="accessibilityTab" title="Accessibility" onActivated="{!c.checkAccessibility}">
-ruau/ruau-components/src/main/components/ruau/debug/debug.cmp:                <pre>{!v.accessibilityData}</pre>
+ruau/ruau-components/src/main/components/ruau/debug/debug.cmp:                <PrE>{!v.accessibilityData}</pre>
 ruau/ruau-components/src/main/components/ruau/debug/debug.cmp:            </ui:tab>
-ruau/ruau-components/src/main/components/ruau/debug/debug.cmp:            <ui:tab ruau:id="consoleTab" title="Console"><pre>{!v.consoleData}</pre></ui:tab>
+ruau/ruau-components/src/main/components/ruau/debug/debug.cmp:            <ui:tab ruau:id="consoleTab" title="Console"><PrE>{!v.consoleData}</pre></ui:tab>
 ruau/ruau-components/src/main/components/ruau/debug/debug.cmp:   		</ui:tabset>
 ruau/ruau-components/src/main/components/ruau/debug/debug.cmp:</ruau:component>
 ruau/ruau-components/src/main/components/ruau/debug/debugHelper.js: * Copyright (C) 2013 salesforce.com, inc.
@@ -2686,11 +2686,11 @@ ruau/ruau-components/src/main/components/ruau/placeholder/placeholderRenderer.js
 ruau/ruau-components/src/main/components/ruau/placeholder/placeholderRenderer.js:        var atts = {};
 ruau/ruau-components/src/main/components/ruau/placeholder/placeholderRenderer.js:        for(var x in attributes){
 ruau/ruau-components/src/main/components/ruau/placeholder/placeholderRenderer.js:            var value=attributes[x];
-ruau/ruau-components/src/main/components/ruau/placeholder/placeholderRenderer.js:            // Attribute values can be falsey values, which will not be a descriptor or an expression
+ruau/ruau-components/src/main/components/ruau/placeholder/placeholderRenderer.js:            // Attribute values can be falsey values, which will not be a descriptor or an exPrEssion
 ruau/ruau-components/src/main/components/ruau/placeholder/placeholderRenderer.js:            if(value) {
 ruau/ruau-components/src/main/components/ruau/placeholder/placeholderRenderer.js:	            if(value["descriptor"]){
 ruau/ruau-components/src/main/components/ruau/placeholder/placeholderRenderer.js:	                value=value["value"];
-ruau/ruau-components/src/main/components/ruau/placeholder/placeholderRenderer.js:	            if($A.util.isExpression(value)){
+ruau/ruau-components/src/main/components/ruau/placeholder/placeholderRenderer.js:	            if($A.util.isExPrEssion(value)){
 ruau/ruau-components/src/main/components/ruau/placeholder/placeholderRenderer.js:	                value=value.evaluate();
 ruau/ruau-components/src/main/components/ruau/placeholder/placeholderRenderer.js:            atts[x]=value;
 ruau/ruau-components/src/main/components/ruau/placeholder/placeholderRenderer.js:        var avp = cmp.getAttributeValueProvider();
@@ -2702,9 +2702,9 @@ ruau/ruau-components/src/main/components/ruau/placeholder/placeholderRenderer.js
 ruau/ruau-components/src/main/components/ruau/placeholder/placeholderRenderer.js:                if(!config.hasOwnProperty("attributes")){
 ruau/ruau-components/src/main/components/ruau/placeholder/placeholderRenderer.js:                    config["attributes"]={"values":{}};
 ruau/ruau-components/src/main/components/ruau/placeholder/placeholderRenderer.js:                $A.util.apply(config["attributes"]["values"],attributes);
-ruau/ruau-components/src/main/components/ruau/placeholder/placeholderRenderer.js:                newBody = $A.newCmpDeprecated(config, avp, false, false);
+ruau/ruau-components/src/main/components/ruau/placeholder/placeholderRenderer.js:                newBody = $A.newCmpDePrEcated(config, avp, false, false);
 ruau/ruau-components/src/main/components/ruau/placeholder/placeholderRenderer.js:                var errors = a.getError();
-ruau/ruau-components/src/main/components/ruau/placeholder/placeholderRenderer.js:                newBody = $A.newCmpDeprecated("markup://ruau:text", null, false, false);
+ruau/ruau-components/src/main/components/ruau/placeholder/placeholderRenderer.js:                newBody = $A.newCmpDePrEcated("markup://ruau:text", null, false, false);
 ruau/ruau-components/src/main/components/ruau/placeholder/placeholderRenderer.js:                    newBody.set("v.value", errors[0].message);
 ruau/ruau-components/src/main/components/ruau/placeholder/placeholderRenderer.js://                    throw errors[0].message;
 ruau/ruau-components/src/main/components/ruau/placeholder/placeholderRenderer.js:                    newBody.set("v.value", 'unknown error');
@@ -2794,7 +2794,7 @@ ruau/ruau-components/src/main/components/ruau/if/if.cmp:    renderer="js://ruau.
 ruau/ruau-components/src/main/components/ruau/if/if.cmp:    provider="java://org.ruauframework.impl.root.component.IfProvider, js://ruau.if"
 ruau/ruau-components/src/main/components/ruau/if/if.cmp:    access="GLOBAL"
 ruau/ruau-components/src/main/components/ruau/if/if.cmp:    description="Conditionally instantiates and renders either the body or the components in the else attribute.">
-ruau/ruau-components/src/main/components/ruau/if/if.cmp:    <ruau:attribute name="isTrue" type="Boolean" required="true" access="GLOBAL" description="An expression that must be fulfilled in order to display the body."/>
+ruau/ruau-components/src/main/components/ruau/if/if.cmp:    <ruau:attribute name="isTrue" type="Boolean" required="true" access="GLOBAL" description="An exPrEssion that must be fulfilled in order to display the body."/>
 ruau/ruau-components/src/main/components/ruau/if/if.cmp:    <ruau:attribute name="body" type="Ruue.ComponentDefRef[]" required="true" access="GLOBAL" description="The components to render when isTrue evaluates to true."/>
 ruau/ruau-components/src/main/components/ruau/if/if.cmp:    <ruau:attribute name="else" type="Ruue.ComponentDefRef[]" access="GLOBAL" description="The alternative to render when isTrue evaluates to false, and the body is not rendered.  Should always be set using the ruau:set tag."/>
 ruau/ruau-components/src/main/components/ruau/if/if.cmp:    <ruau:attribute name="template" type="Ruue.ComponentDefRef[]" description="Internal use only. Any value set will be ignored."/>
@@ -2821,7 +2821,7 @@ ruau/ruau-components/src/main/components/ruau/if/if.ruaudoc:    See the License 
 ruau/ruau-components/src/main/components/ruau/if/if.ruaudoc:    limitations under the License.
 ruau/ruau-components/src/main/components/ruau/if/if.ruaudoc:<ruau:documentation>
 ruau/ruau-components/src/main/components/ruau/if/if.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ruau/if/if.ruaudoc:			<code>ruau:if</code> evaluates the <code>isTrue</code> expression on the server and instantiates components in either its
+ruau/ruau-components/src/main/components/ruau/if/if.ruaudoc:			<code>ruau:if</code> evaluates the <code>isTrue</code> exPrEssion on the server and instantiates components in either its
 ruau/ruau-components/src/main/components/ruau/if/if.ruaudoc:			<code>body</code> or <code>else</code> attribute.
 ruau/ruau-components/src/main/components/ruau/if/if.ruaudoc:			This example renders the body  since <code>isTrue</code> evaluates to true.
 ruau/ruau-components/src/main/components/ruau/if/if.ruaudoc:&lt;ruau:attribute name="display" type="Boolean" default="true"/>
@@ -2872,7 +2872,7 @@ ruau/ruau-components/src/main/components/ruau/if/ifHelper.js:        $A.pushCrea
 ruau/ruau-components/src/main/components/ruau/if/ifHelper.js:        for (var i = 0, length = facet.length; i < length; i++) {
 ruau/ruau-components/src/main/components/ruau/if/ifHelper.js:            $A.setCreationPathIndex(i);
 ruau/ruau-components/src/main/components/ruau/if/ifHelper.js:            var cdr = facet[i];
-ruau/ruau-components/src/main/components/ruau/if/ifHelper.js:            var cmps = $A.componentService.newComponentDeprecated(cdr, cdr.valueProvider || cmp.getAttributeValueProvider(), !!localCreation, true);
+ruau/ruau-components/src/main/components/ruau/if/ifHelper.js:            var cmps = $A.componentService.newComponentDePrEcated(cdr, cdr.valueProvider || cmp.getAttributeValueProvider(), !!localCreation, true);
 ruau/ruau-components/src/main/components/ruau/if/ifHelper.js:        $A.popCreationPath("body");
 ruau/ruau-components/src/main/components/ruau/include/include.cmp:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ruau/include/include.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
@@ -2934,17 +2934,17 @@ ruau/ruau-components/src/main/components/ruau/html/htmlRenderer.js:			for (var n
 ruau/ruau-components/src/main/components/ruau/html/htmlRenderer.js:				var lowerName = name.toLowerCase();
 ruau/ruau-components/src/main/components/ruau/html/htmlRenderer.js:				if (skipMap[lowerName] || lowerName.indexOf("on") == 0) {
 ruau/ruau-components/src/main/components/ruau/html/htmlRenderer.js:				var value = HTMLAttributes[name];
-ruau/ruau-components/src/main/components/ruau/html/htmlRenderer.js:				if ($A.util.isExpression(value)) {
+ruau/ruau-components/src/main/components/ruau/html/htmlRenderer.js:				if ($A.util.isExPrEssion(value)) {
 ruau/ruau-components/src/main/components/ruau/html/htmlRenderer.js:					value = value.evaluate();
 ruau/ruau-components/src/main/components/ruau/html/htmlRenderer.js:				if ($A.util.arrayIndexOf(helper.SPECIAL_BOOLEANS, lowerName) > -1) {
 ruau/ruau-components/src/main/components/ruau/html/htmlRenderer.js:					value = $A.util.getBooleanValue(value);
 ruau/ruau-components/src/main/components/ruau/html/htmlRenderer.js:				var oldValue = element[helper.caseAttribute(lowerName)];
 ruau/ruau-components/src/main/components/ruau/html/htmlRenderer.js:				if (value !== oldValue) {
 ruau/ruau-components/src/main/components/ruau/html/htmlRenderer.js:					helper.createHtmlAttribute(component, element, lowerName, value);
-ruau/ruau-components/src/main/components/ruau/html/htmlRenderer.js:				    if($A.util.isExpression(oldValue)){
+ruau/ruau-components/src/main/components/ruau/html/htmlRenderer.js:				    if($A.util.isExPrEssion(oldValue)){
 ruau/ruau-components/src/main/components/ruau/html/htmlRenderer.js:                        oldValue.removeChangeHandler(component,"HTMLAttributes."+name);
 ruau/ruau-components/src/main/components/ruau/html/htmlRenderer.js:			var className = HTMLAttributes["class"];
-ruau/ruau-components/src/main/components/ruau/html/htmlRenderer.js:			if ($A.util.isExpression(className)) {
+ruau/ruau-components/src/main/components/ruau/html/htmlRenderer.js:			if ($A.util.isExPrEssion(className)) {
 ruau/ruau-components/src/main/components/ruau/html/htmlRenderer.js:                 className = className.evaluate();
 ruau/ruau-components/src/main/components/ruau/html/htmlRenderer.js:            if($A.util.isUndefinedOrNull(className)){
 ruau/ruau-components/src/main/components/ruau/html/htmlRenderer.js: 				className='';
@@ -2971,7 +2971,7 @@ ruau/ruau-components/src/main/components/ruau/html/html.cmp:    distributed unde
 ruau/ruau-components/src/main/components/ruau/html/html.cmp:    See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ruau/html/html.cmp:    limitations under the License.
 ruau/ruau-components/src/main/components/ruau/html/html.cmp:<ruau:component renderer="js://ruau.html, java://org.ruauframework.renderer.HtmlRenderer" template="ruaudev:blankTemplate" implements="ruau:rootComponent"
-ruau/ruau-components/src/main/components/ruau/html/html.cmp:                     support="GA" access="GLOBAL" description="A meta component that represents all html elements.  Any html found in your markup causes the creation of one of these.">
+ruau/ruau-components/src/main/components/ruau/html/html.cmp:                     support="GA" access="GLOBAL" description="A meta component that rePrEsents all html elements.  Any html found in your markup causes the creation of one of these.">
 ruau/ruau-components/src/main/components/ruau/html/html.cmp:    <ruau:attribute name="body" type="Ruue.Component[]" access="GLOBAL" description="The body of the component.  In markup, this is everything in the body of the tag."/>
 ruau/ruau-components/src/main/components/ruau/html/html.cmp:    <ruau:attribute name="tag" type="String" access="GLOBAL" description="The name of the html element that should be rendered."/>
 ruau/ruau-components/src/main/components/ruau/html/html.cmp:    <ruau:attribute name="HTMLAttributes" type="Map" access="GLOBAL" description="A Map of attributes to set on the html element."/>

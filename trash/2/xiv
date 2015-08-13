@@ -49,10 +49,10 @@ ruau/ruau/src/test/components/uitest/scroller_Test/scroller_Test.cmp:    <!--Man
 ruau/ruau/src/test/components/uitest/scroller_Test/scroller_Test.cmp:     <div class="test">
 ruau/ruau/src/test/components/uitest/scroller_Test/scroller_Test.cmp:            <ui:inputTextArea ruau:id="inTextArea" value="{!m.textAreaText}">
 ruau/ruau/src/test/components/uitest/scroller_Test/scroller_Test.cmp:            </ui:inputTextArea>
-ruau/ruau/src/test/components/uitest/scroller_Test/scroller_Test.cmp:    <ui:button ruau:id="toTopButton" label="ScrollToTop" press="{!c.scrollToTop}" />
-ruau/ruau/src/test/components/uitest/scroller_Test/scroller_Test.cmp:    <ui:button ruau:id="toBotButton" label="ScrollToBottom" press="{!c.scrollToBottom}" />
-ruau/ruau/src/test/components/uitest/scroller_Test/scroller_Test.cmp:    <ui:button ruau:id="toStepButton" label="ScrollRelative" press="{!c.scrollDown}" />
-ruau/ruau/src/test/components/uitest/scroller_Test/scroller_Test.cmp:    <ui:button ruau:id="toStepUpButton" label="ScrollRelative" press="{!c.scrollUp}" />
+ruau/ruau/src/test/components/uitest/scroller_Test/scroller_Test.cmp:    <ui:button ruau:id="toTopButton" label="ScrollToTop" PrEss="{!c.scrollToTop}" />
+ruau/ruau/src/test/components/uitest/scroller_Test/scroller_Test.cmp:    <ui:button ruau:id="toBotButton" label="ScrollToBottom" PrEss="{!c.scrollToBottom}" />
+ruau/ruau/src/test/components/uitest/scroller_Test/scroller_Test.cmp:    <ui:button ruau:id="toStepButton" label="ScrollRelative" PrEss="{!c.scrollDown}" />
+ruau/ruau/src/test/components/uitest/scroller_Test/scroller_Test.cmp:    <ui:button ruau:id="toStepUpButton" label="ScrollRelative" PrEss="{!c.scrollUp}" />
 ruau/ruau/src/test/components/uitest/scroller_Test/scroller_Test.cmp:    <div class="test">
 ruau/ruau/src/test/components/uitest/scroller_Test/scroller_Test.cmp:        <ui:scroller ruau:id="scrollToYTest" canShowMore="true" onPullToRefresh="{!c.replaceBodyContent}" onPullToShowMore="{!c.replaceBodyContent}">
 ruau/ruau/src/test/components/uitest/scroller_Test/scroller_Test.cmp:            I let it fall, my heart
@@ -74,7 +74,7 @@ ruau/ruau/src/test/components/uitest/scroller_Test/scroller_Test.cmp:           
 ruau/ruau/src/test/components/uitest/scroller_Test/scroller_Test.cmp:            And the games you's play, you would always win, always win
 ruau/ruau/src/test/components/uitest/scroller_Test/scroller_Test.cmp:            But I set fire to the rain
 ruau/ruau/src/test/components/uitest/scroller_Test/scroller_Test.cmp:            Watched it pour as I touched your face
-ruau/ruau/src/test/components/uitest/scroller_Test/scroller_Test.cmp:            <ui:button label="ScrollToTop" press="{!c.scrollToTop}"/>
+ruau/ruau/src/test/components/uitest/scroller_Test/scroller_Test.cmp:            <ui:button label="ScrollToTop" PrEss="{!c.scrollToTop}"/>
 ruau/ruau/src/test/components/uitest/scroller_Test/scroller_Test.cmp:</ruau:component>
 ruau/ruau/src/test/components/uitest/scroller_Test/scroller_TestController.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/test/components/uitest/scroller_Test/scroller_TestController.js: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -118,7 +118,7 @@ ruau/ruau/src/test/components/uitest/scroller_Test/scroller_TestTest.js:        
 ruau/ruau/src/test/components/uitest/scroller_Test/scroller_TestTest.js:                $A.test.assertTrue(displayNone, "There should NOT be a 'pullUp' div");
 ruau/ruau/src/test/components/uitest/scroller_Test/scroller_TestTest.js:                // Toggle canShowMore again
 ruau/ruau/src/test/components/uitest/scroller_Test/scroller_TestTest.js:                scrollerCmp.set("v.canShowMore", true);
-ruau/ruau/src/test/components/uitest/scroller_Test/scroller_TestTest.js:                // "pull to show more" div should be present again
+ruau/ruau/src/test/components/uitest/scroller_Test/scroller_TestTest.js:                // "pull to show more" div should be PrEsent again
 ruau/ruau/src/test/components/uitest/scroller_Test/scroller_TestTest.js:                var scrollerCmp = component.find("scrollToYTest"),
 ruau/ruau/src/test/components/uitest/scroller_Test/scroller_TestTest.js:                    pullUpDiv   = scroller.getElementsByClassName('pullToLoadMore')[0],
 ruau/ruau/src/test/components/uitest/scroller_Test/scroller_TestTest.js:                    displayNone = pullUpDiv.style.display === 'none';
@@ -254,7 +254,7 @@ ruau/ruau/src/test/components/uitest/inputLocalizedNumber_Test/inputLocalizedNum
 ruau/ruau/src/test/components/uitest/inputLocalizedNumber_Test/inputLocalizedNumber_Test.cmp:    <ruau:attribute name="cmpType" type="string" default="Decimal" />
 ruau/ruau/src/test/components/uitest/inputLocalizedNumber_Test/inputLocalizedNumber_Test.cmp:    <ruau:attribute name="ref" type="Object" />
 ruau/ruau/src/test/components/uitest/inputLocalizedNumber_Test/inputLocalizedNumber_Test.cmp:    <ui:inputNumber ruau:id="inputValue" value="{!m.decimal}" step="0.001" updateOn="keyup"/> <!-- updateOn=keyup necessary for ipad automation. Webdriver does not handle updateOn=change well. -->
-ruau/ruau/src/test/components/uitest/inputLocalizedNumber_Test/inputLocalizedNumber_Test.cmp:    <ui:button label="submit" press="{!c.submit}"/>
+ruau/ruau/src/test/components/uitest/inputLocalizedNumber_Test/inputLocalizedNumber_Test.cmp:    <ui:button label="submit" PrEss="{!c.submit}"/>
 ruau/ruau/src/test/components/uitest/inputLocalizedNumber_Test/inputLocalizedNumber_Test.cmp:    Submitted Value is: <ui:outputText ruau:id="outputValue" value=""/>
 ruau/ruau/src/test/components/uitest/inputLocalizedNumber_Test/inputLocalizedNumber_Test.cmp:</ruau:component>
 ruau/ruau/src/test/components/uitest/outputText_JavaModel/outputText_JavaModelTest.js: * Copyright (C) 2013 salesforce.com, inc.
@@ -347,7 +347,7 @@ ruau/ruau/src/test/components/uitest/outputURL_LocationChange/outputURL_Location
 ruau/ruau/src/test/components/uitest/outputURL_LocationChange/outputURL_LocationChangeTest.js:     * Only applies to anchors with href starting with "#"
 ruau/ruau/src/test/components/uitest/outputURL_LocationChange/outputURL_LocationChangeTest.js:     * This is really testing htmlHelper.js when it sets up FastClick handling
 ruau/ruau/src/test/components/uitest/outputURL_LocationChange/outputURL_LocationChangeTest.js:    testHashValueChangeInLocationChangeHandler:{
-ruau/ruau/src/test/components/uitest/outputURL_LocationChange/outputURL_LocationChangeTest.js:                    //re-render won't trigger locationChange, previously, we didn't clean up old handler attached to 
+ruau/ruau/src/test/components/uitest/outputURL_LocationChange/outputURL_LocationChangeTest.js:                    //re-render won't trigger locationChange, PrEviously, we didn't clean up old handler attached to 
 ruau/ruau/src/test/components/uitest/outputURL_LocationChange/outputURL_LocationChangeTest.js:                    //fastClick event, reRender would make several duplicate handler and attach them all.
 ruau/ruau/src/test/components/uitest/outputURL_LocationChange/outputURL_LocationChangeTest.js:                    var urlCmpPeach = cmp.find('hashLinkP'),
 ruau/ruau/src/test/components/uitest/outputURL_LocationChange/outputURL_LocationChangeTest.js:                    urlElPeach = urlCmpPeach.getElement();
@@ -613,7 +613,7 @@ ruau/ruau/src/test/components/uitest/scroller_basic/scroller_BasicTest.js:      
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_BasicTest.js:            	 	cmp.set("v.enabled", false);
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_BasicTest.js:            	   this.verifyScrollerPresentAndEnabled(cmp, false);
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_BasicTest.js:           	 	   cmp.set("v.enabled", true);
-ruau/ruau/src/test/components/uitest/scroller_basic/scroller_BasicTest.js:           	  	//scroller instance should be present
+ruau/ruau/src/test/components/uitest/scroller_basic/scroller_BasicTest.js:           	  	//scroller instance should be PrEsent
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_BasicTest.js:            	   this.verifyScrollerPresentAndEnabled(cmp, true);
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_BasicTest.js:    verifyScrollerPresentAndEnabled : function(cmp, isEnabled)	{
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_BasicTest.js:    	var scrollerCmp = cmp.find("test-scroller"),
@@ -761,7 +761,7 @@ ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicHelper.js:			d
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicHelper.js:			divItem.textContent = resultSet[i].label;
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicHelper.js:			divItem.id = resultSet[i].value + cssClassName;
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicHelper.js:			divItem.className = "item " + cssClassName;
-ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:		document.addEventListener('touchmove', function (e) { e.PrEventDefault(); }, false);
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:    fetchDataPTR : function(component, callback, helper) {
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:        var result,
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:        	act = component.get("c.getItemsPTR"),
@@ -894,15 +894,15 @@ ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:				
 ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:	 * Get value for cmp attribute
 ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:    getValue: function(cmp, attribute){
 ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:    	var exp = "v.myValue" + attribute;
-ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:     * Toggle radio button by firing press event
+ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:     * Toggle radio button by firing PrEss event
 ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:    toggleRadio: function(cmp, booleanValue){
 ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:    	if(booleanValue){
 ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:    		var nopeButton = cmp.find("nope");
-ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:    		this.pressButtonAndVerify(cmp, nopeButton, booleanValue)
+ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:    		this.PrEssButtonAndVerify(cmp, nopeButton, booleanValue)
 ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:    		var yupButton = cmp.find("yup");
 ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:     * Firing the event and verify the attribute is set correctly
-ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:    pressButtonAndVerify: function(cmp, buttonToPress, booleanValue){
-ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:	    $A.test.addWaitForWithFailureMessage(!booleanValue, function(){return cmp.get("v.myValueBoolean");}, "Boolean value should be changed to false after button was pressed");
+ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:    PrEssButtonAndVerify: function(cmp, buttonToPress, booleanValue){
+ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:	    $A.test.addWaitForWithFailureMessage(!booleanValue, function(){return cmp.get("v.myValueBoolean");}, "Boolean value should be changed to false after button was PrEssed");
 ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:	 * Verify inputRadio button are set correctly
 ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:	verifyInputRadioButton: function(cmp, booleanValue){
 ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:		var inputRadioYupWithStringExp = this.getRadioButtonElement(cmp, "expYup");
@@ -910,14 +910,14 @@ ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:    
 ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:    	var inputRadioNopeWithStringExp = this.getRadioButtonElement(cmp, "expNope");
 ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:    	var inputRadioNopeWithBooleanExp = this.getRadioButtonElement(cmp, "booleanNope");
 ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:    	if(booleanValue){
-ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:        	ruau.test.assertTrue(inputRadioYupWithStringExp.checked, "Yup Radio Element with value Expression should be checked");
-ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:	        ruau.test.assertTrue(inputRadioYupWithBooleanExp.checked, "Yup Radio Element with boolean Expression should be checked");
-ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:	        ruau.test.assertFalse(inputRadioNopeWithStringExp.checked, "Nope Radio Element with value Expression should be un-checked");
-ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:	        ruau.test.assertFalse(inputRadioNopeWithBooleanExp.checked, "Nope Radio Element with boolean Expression should be un-checked");
-ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:    		ruau.test.assertFalse(inputRadioYupWithStringExp.checked, "Yup Radio Element with value Expression should be un-checked");
-ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:	        ruau.test.assertFalse(inputRadioYupWithBooleanExp.checked, "Yup Radio Element with boolean Expression should be un-checked");
-ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:	        ruau.test.assertTrue(inputRadioNopeWithStringExp.checked, "Nope Radio Element with value Expression should be checked");
-ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:	        ruau.test.assertTrue(inputRadioNopeWithBooleanExp.checked, "Nope Radio Element with boolean Expression should be checked");
+ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:        	ruau.test.assertTrue(inputRadioYupWithStringExp.checked, "Yup Radio Element with value ExPrEssion should be checked");
+ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:	        ruau.test.assertTrue(inputRadioYupWithBooleanExp.checked, "Yup Radio Element with boolean ExPrEssion should be checked");
+ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:	        ruau.test.assertFalse(inputRadioNopeWithStringExp.checked, "Nope Radio Element with value ExPrEssion should be un-checked");
+ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:	        ruau.test.assertFalse(inputRadioNopeWithBooleanExp.checked, "Nope Radio Element with boolean ExPrEssion should be un-checked");
+ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:    		ruau.test.assertFalse(inputRadioYupWithStringExp.checked, "Yup Radio Element with value ExPrEssion should be un-checked");
+ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:	        ruau.test.assertFalse(inputRadioYupWithBooleanExp.checked, "Yup Radio Element with boolean ExPrEssion should be un-checked");
+ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:	        ruau.test.assertTrue(inputRadioNopeWithStringExp.checked, "Nope Radio Element with value ExPrEssion should be checked");
+ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:	        ruau.test.assertTrue(inputRadioNopeWithBooleanExp.checked, "Nope Radio Element with boolean ExPrEssion should be checked");
 ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:     * get inputRadio button given localId
 ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:    getRadioButtonElement: function(cmp, cmpLocalId){
 ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_TestTest.js:    	return cmp.find(cmpLocalId).find("radio").getElement();
@@ -934,8 +934,8 @@ ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_Test.cmp: <ruau:
 ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_Test.cmp:    <ruau:handler name="init" value="{!this}" action="{!c.onInit}"/>
 ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_Test.cmp:    <ruau:attribute name="myValueString" type="String" />
 ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_Test.cmp:    <ruau:attribute name="myValueBoolean" type="Boolean" />
-ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_Test.cmp:    <ui:button ruau:id="yup" press="{!c.onYup}" label="Yup"/>
-ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_Test.cmp:    <ui:button ruau:id="nope" press="{!c.onNope}" label="Nope"/>
+ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_Test.cmp:    <ui:button ruau:id="yup" PrEss="{!c.onYup}" label="Yup"/>
+ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_Test.cmp:    <ui:button ruau:id="nope" PrEss="{!c.onNope}" label="Nope"/>
 ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_Test.cmp:    <ui:inputRadio ruau:id="expYup" name="myValueStringGroup" text="yup" value="{!equals(v.myValueString, 'yup')}"
 ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_Test.cmp:                                   label="Yup (String)" labelPosition="right"/>
 ruau/ruau/src/test/components/uitest/inputRadio_Test/inputRadio_Test.cmp:    <ui:inputRadio ruau:id="expNope" name="myValueStringGroup" text="nope" value="{!equals(v.myValueString, 'nope')}"
@@ -1002,7 +1002,7 @@ ruau/ruau/src/test/components/uitest/carousel_Test/carousel_Test.cmp:	 		</ui:ca
 ruau/ruau/src/test/components/uitest/carousel_Test/carousel_Test.cmp:	 		<ui:carouselPage ruau:id="c1-empty">
 ruau/ruau/src/test/components/uitest/carousel_Test/carousel_Test.cmp:	 		</ui:carouselPage>
 ruau/ruau/src/test/components/uitest/carousel_Test/carousel_Test.cmp:	 		<ui:carouselPage ruau:id="c1-updateOutput">
-ruau/ruau/src/test/components/uitest/carousel_Test/carousel_Test.cmp:	 			<ui:button ruau:id="btnUpdateOutput" press="{!c.updateOutput}" label="update output"/><br/>
+ruau/ruau/src/test/components/uitest/carousel_Test/carousel_Test.cmp:	 			<ui:button ruau:id="btnUpdateOutput" PrEss="{!c.updateOutput}" label="update output"/><br/>
 ruau/ruau/src/test/components/uitest/carousel_Test/carousel_Test.cmp:	 			<ui:outputText ruau:id="output" value="i have something to say..."/>
 ruau/ruau/src/test/components/uitest/carousel_Test/carousel_Test.cmp:	 		</ui:carouselPage>
 ruau/ruau/src/test/components/uitest/carousel_Test/carousel_Test.cmp: 		</ruau:set>
@@ -1015,7 +1015,7 @@ ruau/ruau/src/test/components/uitest/carousel_Test/carousel_Test.cmp: 			<p>Pres
 ruau/ruau/src/test/components/uitest/carousel_Test/carousel_Test.cmp: 					<li>One tab carousel</li>
 ruau/ruau/src/test/components/uitest/carousel_Test/carousel_Test.cmp: 					<li>Carousel rerendering</li>
 ruau/ruau/src/test/components/uitest/carousel_Test/carousel_Test.cmp: 					<li>Dynamic tab rendering</li>
-ruau/ruau/src/test/components/uitest/carousel_Test/carousel_Test.cmp: 			<ui:button ruau:id="btnCreatePages" press="{!c.addManyPgCarousel}" label="create pages"/>
+ruau/ruau/src/test/components/uitest/carousel_Test/carousel_Test.cmp: 			<ui:button ruau:id="btnCreatePages" PrEss="{!c.addManyPgCarousel}" label="create pages"/>
 ruau/ruau/src/test/components/uitest/carousel_Test/carousel_Test.cmp: 		</ui:carouselPage>
 ruau/ruau/src/test/components/uitest/carousel_Test/carousel_Test.cmp:	</ruau:set>
 ruau/ruau/src/test/components/uitest/carousel_Test/carousel_Test.cmp:</ui:carousel>
@@ -1170,7 +1170,7 @@ ruau/ruau/src/test/components/uitest/carousel_Test/carousel_Test.cmp:<ui:carouse
 ruau/ruau/src/test/components/uitest/carousel_Test/carousel_Test.cmp:	<ruau:set attribute="pageComponents">
 ruau/ruau/src/test/components/uitest/carousel_Test/carousel_Test.cmp: 		<ui:carouselPage ruau:id="cpca-p1">
 ruau/ruau/src/test/components/uitest/carousel_Test/carousel_Test.cmp: 			<ui:outputText ruau:id="cpca-p1-output" value="page 1"/><br/>
-ruau/ruau/src/test/components/uitest/carousel_Test/carousel_Test.cmp: 			<ui:button ruau:id="btnForceRefresh" press="{!c.forceRefresh}" label="refresh"/>
+ruau/ruau/src/test/components/uitest/carousel_Test/carousel_Test.cmp: 			<ui:button ruau:id="btnForceRefresh" PrEss="{!c.forceRefresh}" label="refresh"/>
 ruau/ruau/src/test/components/uitest/carousel_Test/carousel_Test.cmp: 		</ui:carouselPage>
 ruau/ruau/src/test/components/uitest/carousel_Test/carousel_Test.cmp: 		<ui:carouselPage ruau:id="cpca-p2">
 ruau/ruau/src/test/components/uitest/carousel_Test/carousel_Test.cmp: 			<ui:outputText ruau:id="cpca-p2-output" value="page 2"/>
@@ -1582,7 +1582,7 @@ ruau/ruau/src/test/components/uitest/carousel_Test/carousel_TestController.js: 	
 ruau/ruau/src/test/components/uitest/carousel_Test/carousel_TestController.js: 		var carousel = cmp.find("carousel2");
 ruau/ruau/src/test/components/uitest/carousel_Test/carousel_TestController.js: 		var pages = [];
 ruau/ruau/src/test/components/uitest/carousel_Test/carousel_TestController.js: 		for (var i=1; i<=10; i++){
-ruau/ruau/src/test/components/uitest/carousel_Test/carousel_TestController.js: 			var page = $A.componentService.newComponentDeprecated({
+ruau/ruau/src/test/components/uitest/carousel_Test/carousel_TestController.js: 			var page = $A.componentService.newComponentDePrEcated({
 ruau/ruau/src/test/components/uitest/carousel_Test/carousel_TestController.js:			            	"descriptor" : "markup://ui:carouselPage"
 ruau/ruau/src/test/components/uitest/carousel_Test/carousel_TestController.js:			            "attributes" : {
 ruau/ruau/src/test/components/uitest/carousel_Test/carousel_TestController.js:			            	"values" : {
@@ -1825,7 +1825,7 @@ ruau/ruau/src/test/components/uitest/asyncImage_Test/asyncImage_Test.cmp:     <r
 ruau/ruau/src/test/components/uitest/asyncImage_Test/asyncImage_Test.cmp:     <ruau:dependency resource="ui:asyncComponentLoaded" type="EVENT" />
 ruau/ruau/src/test/components/uitest/asyncImage_Test/asyncImage_Test.cmp:     <ruau:dependency resource="ui:asyncComponentRegister" type="EVENT" />
 ruau/ruau/src/test/components/uitest/asyncImage_Test/asyncImage_Test.cmp:     <ui:asyncImage ruau:id="asyncImage" actualImageSrc="{!v.defaultSrc}" alt="hello"/>
-ruau/ruau/src/test/components/uitest/asyncImage_Test/asyncImage_Test.cmp:     <ui:button ruau:id="loadButton" label="Fire Load Event" press="{!c.load}"/>
+ruau/ruau/src/test/components/uitest/asyncImage_Test/asyncImage_Test.cmp:     <ui:button ruau:id="loadButton" label="Fire Load Event" PrEss="{!c.load}"/>
 ruau/ruau/src/test/components/uitest/asyncImage_Test/asyncImage_Test.cmp:</ruau:component>
 ruau/ruau/src/test/components/uitest/outputDateTime_OverriddenGetFormat/outputDateTime_OverriddenGetFormat.cmp:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/test/components/uitest/outputDateTime_OverriddenGetFormat/outputDateTime_OverriddenGetFormat.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
@@ -1879,20 +1879,20 @@ ruau/ruau/src/test/components/uitest/localization_Test/localization_Test.app:   
 ruau/ruau/src/test/components/uitest/localization_Test/localization_Test.app:        Submit count: <ui:outputText ruau:id="outSubmitCount" value="0"/>
 ruau/ruau/src/test/components/uitest/localization_Test/localization_Test.app:    <div>Input Date</div>
 ruau/ruau/src/test/components/uitest/localization_Test/localization_Test.app:    enter Date: <ui:inputDate ruau:id="inDate" value="{!m.dateOnly}"/> <br/>
-ruau/ruau/src/test/components/uitest/localization_Test/localization_Test.app:    <ui:button buttonTitle="Date" label="submit" press="{!c.submit}"/> <br/>
+ruau/ruau/src/test/components/uitest/localization_Test/localization_Test.app:    <ui:button buttonTitle="Date" label="submit" PrEss="{!c.submit}"/> <br/>
 ruau/ruau/src/test/components/uitest/localization_Test/localization_Test.app:    your Date value is: <ui:outputDate ruau:id="outDate" value="{!m.dateOnly}"/> <br/>
 ruau/ruau/src/test/components/uitest/localization_Test/localization_Test.app:    <div>Input DateTime</div>
 ruau/ruau/src/test/components/uitest/localization_Test/localization_Test.app:    enter DateTime: <ui:inputDateTime ruau:id="inDateTime" value="{!m.dateTimeISOString}" timezone="GMT"/> <br/>
-ruau/ruau/src/test/components/uitest/localization_Test/localization_Test.app:    <ui:button buttonTitle="DateTime" label="submit" press="{!c.submit}"/> <br/>
+ruau/ruau/src/test/components/uitest/localization_Test/localization_Test.app:    <ui:button buttonTitle="DateTime" label="submit" PrEss="{!c.submit}"/> <br/>
 ruau/ruau/src/test/components/uitest/localization_Test/localization_Test.app:    your DateTime value is: <ui:outputDateTime ruau:id="outDateTime" value="{!m.dateTimeISOString}" timezone="GMT"/> <br/>
 ruau/ruau/src/test/components/uitest/localization_Test/localization_Test.app:    enter Number: <ui:inputNumber ruau:id="inNumber" value="{!m.integer}"/> <br/>
-ruau/ruau/src/test/components/uitest/localization_Test/localization_Test.app:    <ui:button buttonTitle="Number" label="submit" press="{!c.submit}"/> <br/>
+ruau/ruau/src/test/components/uitest/localization_Test/localization_Test.app:    <ui:button buttonTitle="Number" label="submit" PrEss="{!c.submit}"/> <br/>
 ruau/ruau/src/test/components/uitest/localization_Test/localization_Test.app:    your Number value is: <ui:outputNumber ruau:id="outNumber" value="{!m.integer}"/> <br/>
 ruau/ruau/src/test/components/uitest/localization_Test/localization_Test.app:    enter Percent: <ui:inputPercent ruau:id="inPercent" value="{!m.percent}"/> <br/>
-ruau/ruau/src/test/components/uitest/localization_Test/localization_Test.app:    <ui:button buttonTitle="Percent" label="submit" press="{!c.submit}"/> <br/>
+ruau/ruau/src/test/components/uitest/localization_Test/localization_Test.app:    <ui:button buttonTitle="Percent" label="submit" PrEss="{!c.submit}"/> <br/>
 ruau/ruau/src/test/components/uitest/localization_Test/localization_Test.app:    your Percent value is: <ui:outputPercent ruau:id="outPercent" value="{!m.percent}"/> <br/>
 ruau/ruau/src/test/components/uitest/localization_Test/localization_Test.app:    enter Currency: <span id="MyCurrency"><ui:inputCurrency ruau:id="inCurrency" value="{!m.currency}"/></span> <br/>
-ruau/ruau/src/test/components/uitest/localization_Test/localization_Test.app:    <ui:button buttonTitle="Currency" label="submit" press="{!c.submit}"/> <br/>
+ruau/ruau/src/test/components/uitest/localization_Test/localization_Test.app:    <ui:button buttonTitle="Currency" label="submit" PrEss="{!c.submit}"/> <br/>
 ruau/ruau/src/test/components/uitest/localization_Test/localization_Test.app:    your Currency value is: <ui:outputCurrency ruau:id="outCurrency" value="{!m.currency}"/> <br/>
 ruau/ruau/src/test/components/uitest/localization_Test/localization_Test.app:</ruau:application>
 ruau/ruau/src/test/components/uitest/localization_Test/localization_TestHelper.js: * Copyright (C) 2013 salesforce.com, inc.
@@ -1960,10 +1960,10 @@ ruau/ruau/src/test/components/uitest/localization_Test/localization_Test.css:.ui
 ruau/ruau/src/test/components/uitest/localization_Test/localization_Test.css:	background-color: #99CCFF;
 ruau/ruau/src/test/components/uitest/popupTestFrame/popupTestFrame.cmp:<ruau:component>
 ruau/ruau/src/test/components/uitest/popupTestFrame/popupTestFrame.cmp:    <ruau:attribute name="frameId" type="String"/>
-ruau/ruau/src/test/components/uitest/popupTestFrame/popupTestFrame.cmp:    <ui:button press="{!c.handlePress}" label="{!v.frameId + ': press me'}"/>
+ruau/ruau/src/test/components/uitest/popupTestFrame/popupTestFrame.cmp:    <ui:button PrEss="{!c.handlePress}" label="{!v.frameId + ': press me'}"/>
 ruau/ruau/src/test/components/uitest/popupTestFrame/popupTestFrame.cmp:</ruau:component>
 ruau/ruau/src/test/components/uitest/popupTestFrame/popupTestFrameController.js:    handlePress: function(component, event, helper) {
-ruau/ruau/src/test/components/uitest/popupTestFrame/popupTestFrameController.js:    	alert('You pressed the button from ' + component.get("v.frameId") + '!');
+ruau/ruau/src/test/components/uitest/popupTestFrame/popupTestFrameController.js:    	alert('You PrEssed the button from ' + component.get("v.frameId") + '!');
 ruau/ruau/src/test/components/uitest/inputSelect_OptionsInBody/inputSelect_OptionsInBodyTest.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/test/components/uitest/inputSelect_OptionsInBody/inputSelect_OptionsInBodyTest.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau/src/test/components/uitest/inputSelect_OptionsInBody/inputSelect_OptionsInBodyTest.js: * you may not use this file except in compliance with the License.
@@ -2115,10 +2115,10 @@ ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_Test.cmp:    <ruau:a
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_Test.cmp:    <ruau:attribute name="index" type="Integer"/>
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_Test.cmp:    <ruau:attribute name="count" type="Integer"/>
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_Test.cmp:    <ruau:handler name="change" value="{!v.currentPage}" action="{!c.handleCurrentPageChange}"/>
-ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_Test.cmp:    <ui:button ruau:id="refireDP" label="Re-fire datagrid's provide" press="{!c.replaceData}"/><br/> 
-ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_Test.cmp:    <ui:button ruau:id="addRow" label="Add row" press="{!c.handleAddRow}"/>
-ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_Test.cmp:    <ui:button ruau:id="insert" label="Insert" press="{!c.handleInsert}"/>
-ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_Test.cmp:    <ui:button ruau:id="remove" label="Remove" press="{!c.handleRemove}"/>
+ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_Test.cmp:    <ui:button ruau:id="refireDP" label="Re-fire datagrid's provide" PrEss="{!c.replaceData}"/><br/> 
+ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_Test.cmp:    <ui:button ruau:id="addRow" label="Add row" PrEss="{!c.handleAddRow}"/>
+ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_Test.cmp:    <ui:button ruau:id="insert" label="Insert" PrEss="{!c.handleInsert}"/>
+ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_Test.cmp:    <ui:button ruau:id="remove" label="Remove" PrEss="{!c.handleRemove}"/>
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_Test.cmp:    <ui:inputText placeholder="index" label="index" labelPosition="hidden" ruau:id="index" value="{!v.index}"/>
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_Test.cmp:    <ui:inputText placeholder="count" label="count" labelPosition="hidden" ruau:id="count" value="{!v.count}"/>
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_Test.cmp:    <ui:dataGrid ruau:id="grid" mode="{!v.mode}" sortBy="{!v.sortBy}">      
@@ -2198,7 +2198,7 @@ ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestController.js:  
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:    ADD_ROW_ARRAY    : ["Spidey", "Peter Parker", "Media Inc", "2020-10-12"],
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:    INSERT_ROW_ARRAY : ["Bar", "New John", "SFDC", "2014-11-11"],
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:    doNotWrapInRuueRun : true,
-ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:     * Test verifying that when there is no data present dataGrid does not fail
+ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:     * Test verifying that when there is no data PrEsent dataGrid does not fail
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:     * bug tracking: 2327176
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:    _testNoDataPresent : {
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:        attributes : {"pageSize" : 0},
@@ -2219,7 +2219,7 @@ ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:     * B
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:    testWithPagerEnd : {
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:        attributes : {"pageSize" : 10,"currentPage" : 5},
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            this.verifyDataGridUsingPager(cmp, [false, false, true, true], 10, "41 - 50 of 50");
-ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:     * Making sure that we are able to page to the next page and that we are able to page to previous and next pages
+ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:     * Making sure that we are able to page to the next page and that we are able to page to PrEvious and next pages
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:    testStartingOnDifferentPage : {
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:        attributes : {"pageSize" : 10, "currentPage" : 2},
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            this.verifyDataGridUsingPager(cmp, [false, false, false, false], 10, "11 - 20 of 50");
@@ -2249,8 +2249,8 @@ ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:        
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:        	var elements = this.getRowElements(cmp, 0);
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            var trs = elements[0];
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            $A.test.assertEquals(0, trs.length, "there should be no rows on the page")
-ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            	//Add rows in and wait for them to be present
-ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:        		this.pressButton(cmp, "addRow");
+ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            	//Add rows in and wait for them to be PrEsent
+ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:        		this.PrEssButton(cmp, "addRow");
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:	        	 $A.test.addWaitFor(true, function() {
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:	     			return document.getElementsByTagName("tbody")[0].children.length > 0;
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:        		//verify that the row is correct 
@@ -2368,7 +2368,7 @@ ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:        
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:        this.actAndVerifyRowIsCorrect(cmp, "remove", startRow, oldExpectedRows, colCountOrig);
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:     * Perform an action (insert or remove), verify that everything is as expected
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:     actAndVerifyRowIsCorrect : function(cmp, actionId, index, expectedRow, expectColCount){
-ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:    	 this.pressButton(cmp, actionId);
+ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:    	 this.PrEssButton(cmp, actionId);
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:         var elements = this.getRowElements(cmp, expectColCount);
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:         var trs = elements[0];
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:         var itemsInBody = elements[1];
@@ -2377,7 +2377,7 @@ ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:        
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:     * Extracing out set value code 
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:    setValue : function(cmp, id, value){
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:         cmp.find(id).set("v.value", value);
-ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:     * extracting out the press function
+ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:     * extracting out the PrEss function
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:     * Verify that each row element is correct and does what we want it to
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:        var keys = ["id", "subject", "name", "relatedTo", "date"];
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:        // TODO: Clean up this assertion to check for selection checkbox inside wrapper div (due to accessibility changes from W-2330954)
@@ -2408,7 +2408,7 @@ ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:        
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:    	    var pager = cmp.find("pagerNextPrev");
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            this.verifyPageInfoSaysCorrectNumber(cmp.find("pageInfo"), pagerMessage);
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            this.verifyElementDisabled(pager, 
-ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:                ["pager:first","pager:previous", "pager:next","pager:last"], 
+ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:                ["pager:first","pager:PrEvious", "pager:next","pager:last"], 
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:                pagerState);
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:     * Check to make sure that the pager says the correct page and element we are on
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:    verifyPageInfoSaysCorrectNumber : function (cmp, expectedText){
@@ -2471,7 +2471,7 @@ ruau/ruau/src/test/components/uitest/inputText_updateOnTest/inputText_updateOnTe
 ruau/ruau/src/test/components/uitest/inputText_updateOnTest/inputText_updateOnTest.cmp:<ui:inputText ruau:id="mouseover" class="mouseover" value="{!m.string}" updateOn="mouseover" mouseover="{!c.checkDomEventSet}"/>
 ruau/ruau/src/test/components/uitest/inputText_updateOnTest/inputText_updateOnTest.cmp:<ui:inputText ruau:id="mouseup" class="mouseup" value="{!m.string}" updateOn="mouseup" mouseup="{!c.checkDomEventSet}"/>
 ruau/ruau/src/test/components/uitest/inputText_updateOnTest/inputText_updateOnTest.cmp:<ui:inputText ruau:id="keydown" class="keydown" value="{!m.string}" updateOn="keydown" keydown="{!c.checkDomEventSet}"/>
-ruau/ruau/src/test/components/uitest/inputText_updateOnTest/inputText_updateOnTest.cmp:<ui:inputText ruau:id="keypress" class="keypress" value="{!m.string}" updateOn="keypress" keypress="{!c.checkDomEventSet}"/>
+ruau/ruau/src/test/components/uitest/inputText_updateOnTest/inputText_updateOnTest.cmp:<ui:inputText ruau:id="keyPrEss" class="keypress" value="{!m.string}" updateOn="keypress" keypress="{!c.checkDomEventSet}"/>
 ruau/ruau/src/test/components/uitest/inputText_updateOnTest/inputText_updateOnTest.cmp:<ui:inputText ruau:id="keyup" class="keyup" value="{!m.string}" updateOn="keyup" keyup="{!c.checkDomEventSet}"/>
 ruau/ruau/src/test/components/uitest/inputText_updateOnTest/inputText_updateOnTest.cmp:<ui:inputText ruau:id="select" class="select" value="{!m.string}" updateOn="select"/>
 ruau/ruau/src/test/components/uitest/inputText_updateOnTest/inputText_updateOnTest.cmp:<div id="invalid">
@@ -2480,7 +2480,7 @@ ruau/ruau/src/test/components/uitest/inputText_updateOnTest/inputText_updateOnTe
 ruau/ruau/src/test/components/uitest/inputText_updateOnTest/inputText_updateOnTest.cmp:output: <ui:outputText value="{!m.string}"/>
 ruau/ruau/src/test/components/uitest/inputText_updateOnTest/inputText_updateOnTest.cmp:<div id="inspectBaseEvent"> 
 ruau/ruau/src/test/components/uitest/inputText_updateOnTest/inputText_updateOnTest.cmp:inspectBaseEvent: 
-ruau/ruau/src/test/components/uitest/inputText_updateOnTest/inputText_updateOnTest.cmp:<ui:inputText ruau:id="keyup2" class="keyup2" value="{!m.string}" updateOn="keyup" keypress="{!c.inspectKeyEvent}" mousedown="{!c.inspectMouseEvent}"/><br/> 
+ruau/ruau/src/test/components/uitest/inputText_updateOnTest/inputText_updateOnTest.cmp:<ui:inputText ruau:id="keyup2" class="keyup2" value="{!m.string}" updateOn="keyup" keyPrEss="{!c.inspectKeyEvent}" mousedown="{!c.inspectMouseEvent}"/><br/> 
 ruau/ruau/src/test/components/uitest/inputText_updateOnTest/inputText_updateOnTest.cmp:outputValue: <ui:outputText ruau:id="outputValue" class="outputValue" value=""/> <br/><br/>
 ruau/ruau/src/test/components/uitest/inputText_updateOnTest/inputText_updateOnTest.cmp:<div id="inputwithLabel">
 ruau/ruau/src/test/components/uitest/inputText_updateOnTest/inputText_updateOnTest.cmp:<ui:inputText ruau:id="inputwithLabel" label="inputwithLabel" value="inputwithLabel" updateOn="keyup"/>
@@ -2506,7 +2506,7 @@ ruau/ruau/src/test/components/uitest/infiniteList_Test/infiniteList_TestTest.js:
 ruau/ruau/src/test/components/uitest/infiniteList_Test/infiniteList_TestTest.js:			this.waitForItems(cmp, 25);
 ruau/ruau/src/test/components/uitest/infiniteList_Test/infiniteList_TestTest.js:			// more items should be fetched and displayed.
 ruau/ruau/src/test/components/uitest/infiniteList_Test/infiniteList_TestTest.js:			$A.test.assertFalse(cmp.get("v.showMoreCallback"),"callback for showMore should not be invoked");
-ruau/ruau/src/test/components/uitest/infiniteList_Test/infiniteList_TestTest.js:	        $A.test.addWaitForWithFailureMessage(true, function(){return cmp.get("v.showMoreCallback");}, "callback should be invoked after pressing showMore");
+ruau/ruau/src/test/components/uitest/infiniteList_Test/infiniteList_TestTest.js:	        $A.test.addWaitForWithFailureMessage(true, function(){return cmp.get("v.showMoreCallback");}, "callback should be invoked after PrEssing showMore");
 ruau/ruau/src/test/components/uitest/infiniteList_Test/infiniteList_TestTest.js:			// waiting for intial items of list to load.
 ruau/ruau/src/test/components/uitest/infiniteList_Test/infiniteList_TestTest.js:			this.waitForItems(cmp, 25);
 ruau/ruau/src/test/components/uitest/infiniteList_Test/infiniteList_TestTest.js:			// more items should be fetched and displayed.
@@ -2519,7 +2519,7 @@ ruau/ruau/src/test/components/uitest/infiniteList_Test/infiniteList_TestTest.js:
 ruau/ruau/src/test/components/uitest/infiniteList_Test/infiniteList_TestTest.js:			// more items should be fetched and displayed.
 ruau/ruau/src/test/components/uitest/infiniteList_Test/infiniteList_TestTest.js:			// clicking refresh bring list back to initial items.
 ruau/ruau/src/test/components/uitest/infiniteList_Test/infiniteList_TestTest.js:			$A.test.assertFalse(cmp.get("v.refreshCallBack"),"Callback for Refresh should not be invoked");
-ruau/ruau/src/test/components/uitest/infiniteList_Test/infiniteList_TestTest.js:	        $A.test.addWaitForWithFailureMessage(true, function(){return cmp.get("v.refreshCallBack");}, "callback should be invoked after pressing refresh");
+ruau/ruau/src/test/components/uitest/infiniteList_Test/infiniteList_TestTest.js:	        $A.test.addWaitForWithFailureMessage(true, function(){return cmp.get("v.refreshCallBack");}, "callback should be invoked after PrEssing refresh");
 ruau/ruau/src/test/components/uitest/infiniteList_Test/infiniteList_TestTest.js:	 * Test when a negative page size is given 
 ruau/ruau/src/test/components/uitest/infiniteList_Test/infiniteList_TestTest.js:	testNegativePageSize : {
 ruau/ruau/src/test/components/uitest/infiniteList_Test/infiniteList_TestTest.js:		attributes : {pageSize : -5},
@@ -2567,8 +2567,8 @@ ruau/ruau/src/test/components/uitest/infiniteList_Test/infiniteList_Test.cmp:		<
 ruau/ruau/src/test/components/uitest/infiniteList_Test/infiniteList_Test.cmp:		<ruau:set attribute="itemTemplate">
 ruau/ruau/src/test/components/uitest/infiniteList_Test/infiniteList_Test.cmp:			<div style="border: 1px solid black">{!row.index} : {!row.char}</div>
 ruau/ruau/src/test/components/uitest/infiniteList_Test/infiniteList_Test.cmp:		</ruau:set>
-ruau/ruau/src/test/components/uitest/infiniteList_Test/infiniteList_Test.cmp:	<ui:button ruau:id="btnShowMore" label="show more" press="{!c.showMore}"/><br/>
-ruau/ruau/src/test/components/uitest/infiniteList_Test/infiniteList_Test.cmp:	<ui:button ruau:id="btnRefresh" label="refresh" press="{!c.refresh}"/>
+ruau/ruau/src/test/components/uitest/infiniteList_Test/infiniteList_Test.cmp:	<ui:button ruau:id="btnShowMore" label="show more" PrEss="{!c.showMore}"/><br/>
+ruau/ruau/src/test/components/uitest/infiniteList_Test/infiniteList_Test.cmp:	<ui:button ruau:id="btnRefresh" label="refresh" PrEss="{!c.refresh}"/>
 ruau/ruau/src/test/components/uitest/infiniteList_Test/infiniteList_Test.cmp:</ruau:component>
 ruau/ruau/src/test/components/uitest/infiniteList_Test/infiniteList_TestController.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/test/components/uitest/infiniteList_Test/infiniteList_TestController.js: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -2604,7 +2604,7 @@ ruau/ruau/src/test/components/uitest/dialog_NonModalWCheckboxesTest/dialog_NonMo
 ruau/ruau/src/test/components/uitest/dialog_NonModalWCheckboxesTest/dialog_NonModalWCheckboxesTest.cmp:    <ui:dialogManager/>
 ruau/ruau/src/test/components/uitest/dialog_NonModalWCheckboxesTest/dialog_NonModalWCheckboxesTest.cmp:    <ruau:handler event="ui:closeDialog" action="{!c.closeDialog}"/>
 ruau/ruau/src/test/components/uitest/dialog_NonModalWCheckboxesTest/dialog_NonModalWCheckboxesTest.cmp:    <ui:inputText ruau:id="resultLabel" class="resultLabel" value=""/>
-ruau/ruau/src/test/components/uitest/dialog_NonModalWCheckboxesTest/dialog_NonModalWCheckboxesTest.cmp:    <ui:button ruau:id="1" class="launchDialogButton" label="Click for Non-Modal!" press="{!c.openDialog}" />
+ruau/ruau/src/test/components/uitest/dialog_NonModalWCheckboxesTest/dialog_NonModalWCheckboxesTest.cmp:    <ui:button ruau:id="1" class="launchDialogButton" label="Click for Non-Modal!" PrEss="{!c.openDialog}" />
 ruau/ruau/src/test/components/uitest/dialog_NonModalWCheckboxesTest/dialog_NonModalWCheckboxesTest.cmp:    <ui:dialog ruau:id="dialogBoxId" title="BOOM!" description="Testing Non ModalDialog Box">
 ruau/ruau/src/test/components/uitest/dialog_NonModalWCheckboxesTest/dialog_NonModalWCheckboxesTest.cmp:        <ruau:set attribute="buttons">
 ruau/ruau/src/test/components/uitest/dialog_NonModalWCheckboxesTest/dialog_NonModalWCheckboxesTest.cmp:           <ui:dialogButtons defaultButtons="both"/>
@@ -2677,7 +2677,7 @@ ruau/ruau/src/test/components/uitest/inputRichText_DisableTest/inputRichText_Dis
 ruau/ruau/src/test/components/uitest/inputRichText_DisableTest/inputRichText_DisableTestTest.js:	 * toggles richText between enable/disable.
 ruau/ruau/src/test/components/uitest/inputRichText_DisableTest/inputRichText_DisableTestTest.js:	 * @return boolean - new state of richText (false=disabled, true=enabled).
 ruau/ruau/src/test/components/uitest/inputRichText_DisableTest/inputRichText_DisableTestTest.js:		var isRichTextEnabled = cmp.find("rt").get("v.isRichText");
-ruau/ruau/src/test/components/uitest/inputRichText_DisableTest/inputRichText_DisableTestTest.js:		cmp.find("disableBtn").get("e.press").fire();
+ruau/ruau/src/test/components/uitest/inputRichText_DisableTest/inputRichText_DisableTestTest.js:		cmp.find("disableBtn").get("e.PrEss").fire();
 ruau/ruau/src/test/components/uitest/inputRichText_DisableTest/inputRichText_DisableTestTest.js:		this.waitForToggle(cmp.find("rt"), !isRichTextEnabled);
 ruau/ruau/src/test/components/uitest/inputRichText_DisableTest/inputRichText_DisableTestTest.js:		return !isRichTextEnabled;
 ruau/ruau/src/test/components/uitest/inputRichText_DisableTest/inputRichText_DisableTestTest.js:	waitForToggle : function(rtCmp, state) {
@@ -2685,7 +2685,7 @@ ruau/ruau/src/test/components/uitest/inputRichText_DisableTest/inputRichText_Dis
 ruau/ruau/src/test/components/uitest/inputRichText_DisableTest/inputRichText_DisableTestTest.js:	assertRichTextState : function(isEnabled) {
 ruau/ruau/src/test/components/uitest/inputRichText_DisableTest/inputRichText_DisableTestTest.js:		var elem = $A.test.getElementByClass("cke_wysiwyg_frame");
 ruau/ruau/src/test/components/uitest/inputRichText_DisableTest/inputRichText_DisableTestTest.js:		if (isEnabled) {
-ruau/ruau/src/test/components/uitest/inputRichText_DisableTest/inputRichText_DisableTestTest.js:    		$A.test.assertNotNull(elem, "ck editor should be present");
+ruau/ruau/src/test/components/uitest/inputRichText_DisableTest/inputRichText_DisableTestTest.js:    		$A.test.assertNotNull(elem, "ck editor should be PrEsent");
 ruau/ruau/src/test/components/uitest/inputRichText_DisableTest/inputRichText_DisableTestTest.js:			$A.test.assertNull(elem, "There should be NO ck editor");
 ruau/ruau/src/test/components/uitest/inputRichText_DisableTest/inputRichText_DisableTestTest.js:	assertInputTextAreaVisible : function(isVisible) {
 ruau/ruau/src/test/components/uitest/inputRichText_DisableTest/inputRichText_DisableTestTest.js:		var elem = $A.test.getElementByClass("uiInputRichText");
@@ -2721,7 +2721,7 @@ ruau/ruau/src/test/components/uitest/inputRichText_DisableTest/inputRichText_Dis
 ruau/ruau/src/test/components/uitest/inputRichText_DisableTest/inputRichText_DisableTest.cmp:    See the License for the specific language governing permissions and
 ruau/ruau/src/test/components/uitest/inputRichText_DisableTest/inputRichText_DisableTest.cmp:    limitations under the License.
 ruau/ruau/src/test/components/uitest/inputRichText_DisableTest/inputRichText_DisableTest.cmp:<ruau:component>
-ruau/ruau/src/test/components/uitest/inputRichText_DisableTest/inputRichText_DisableTest.cmp:    <ui:button ruau:id="disableBtn" label="disable" press="{!c.toggle}"/><br/>
+ruau/ruau/src/test/components/uitest/inputRichText_DisableTest/inputRichText_DisableTest.cmp:    <ui:button ruau:id="disableBtn" label="disable" PrEss="{!c.toggle}"/><br/>
 ruau/ruau/src/test/components/uitest/inputRichText_DisableTest/inputRichText_DisableTest.cmp:    <ui:inputRichText ruau:id="rt" value="abc"/><br/>
 ruau/ruau/src/test/components/uitest/inputRichText_DisableTest/inputRichText_DisableTest.cmp:</ruau:component>
 ruau/ruau/src/test/components/uitest/outputText_SettingBody/outputText_SettingBody.cmp:    Copyright (C) 2013 salesforce.com, inc.
@@ -2869,63 +2869,63 @@ ruau/ruau/src/test/components/uitest/testApp/testApp.app:<ruau:application acces
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ruau:attribute name="submitCount" type="integer"/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:        Submit count: <ui:outputText ruau:id="outSubmitCount" value="0"/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    click Checkbox: <ui:inputCheckbox ruau:id="inCheckbox" value="{!m.checked}"/> <br/>
-ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="Checkbox" label="submit" press="{!c.submit}"/> <br/>
+ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="Checkbox" label="submit" PrEss="{!c.submit}"/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    your Checkbox value is: <ui:outputText ruau:id="outCheckbox" value=""/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    enter Currency: <ui:inputCurrency ruau:id="inCurrency" value="{!m.currency}"/> <br/>
-ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="Currency" label="submit" press="{!c.submit}"/> <br/>
+ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="Currency" label="submit" PrEss="{!c.submit}"/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    your Currency value is: <ui:outputText ruau:id="outCurrency" value=""/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <div>Input Date</div>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    enter Date: <ui:inputDate ruau:id="inDate" value="{!m.dateOnly}"/> <br/>
-ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="Date" label="submit" press="{!c.submit}"/> <br/>
+ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="Date" label="submit" PrEss="{!c.submit}"/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    your Date value is: <ui:outputText ruau:id="outDate" value=""/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <div>Input DateTime</div>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    enter DateTime: <ui:inputDateTime ruau:id="inDateTime" value="{!m.dateTime}"/> <br/>
-ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="DateTime" label="submit" press="{!c.submit}"/> <br/>
+ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="DateTime" label="submit" PrEss="{!c.submit}"/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    your DateTime value is: <ui:outputText ruau:id="outDateTime" value=""/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <div>Input Email</div>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    enter Email: <ui:inputEmail ruau:id="inEmail" value="{!m.email}"/> <br/>
-ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="Email" label="submit" press="{!c.submit}"/> <br/>
+ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="Email" label="submit" PrEss="{!c.submit}"/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    your Email value is: <ui:outputText ruau:id="outEmail" value=""/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    enter Number: <ui:inputNumber ruau:id="inNumber" value="{!m.number}"/> <br/>
-ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="Number" label="submit" press="{!c.submit}"/> <br/>
+ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="Number" label="submit" PrEss="{!c.submit}"/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    your Number value is: <ui:outputText ruau:id="outNumber" value=""/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    check Option: <ui:inputOption ruau:id="inOption" value="{!m.option}"/> <br/>
-ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="Option" label="submit" press="{!c.submit}"/> <br/>
+ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="Option" label="submit" PrEss="{!c.submit}"/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    your Option value is: <ui:outputText ruau:id="outOption" value=""/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    enter Percent: <ui:inputPercent ruau:id="inPercent" value="{!m.percent}"/> <br/>
-ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="Percent" label="submit" press="{!c.submit}"/> <br/>
+ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="Percent" label="submit" PrEss="{!c.submit}"/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    your Percent value is: <ui:outputText ruau:id="outPercent" value=""/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    enter Phone: <ui:inputPhone ruau:id="inPhone" value="{!m.phone}"/> <br/>
-ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="Phone" label="submit" press="{!c.submit}"/> <br/>
+ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="Phone" label="submit" PrEss="{!c.submit}"/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    your Phone value is: <ui:outputText ruau:id="outPhone" value=""/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    select Picklist: <ui:inputPicklist ruau:id="inPicklist"/> <br/>
-ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="Picklist" label="submit" press="{!c.submit}"/> <br/>
+ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="Picklist" label="submit" PrEss="{!c.submit}"/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    your Picklist value is: <ui:outputText ruau:id="outPicklist" value=""/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <div>Input Search</div>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    enter Search: <ui:inputSearch ruau:id="inSearch" value="{!m.search}"/> <br/>
-ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="Search" label="submit" press="{!c.submit}"/> <br/>
+ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="Search" label="submit" PrEss="{!c.submit}"/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    your Search value is: <ui:outputText ruau:id="outSearch" value=""/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    enter Secret: <ui:inputSecret ruau:id="inSecret" value="{!m.secret}"/> <br/>
-ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="Secret" label="submit" press="{!c.submit}"/> <br/>
+ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="Secret" label="submit" PrEss="{!c.submit}"/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    your Secret value is: <ui:outputText ruau:id="outSecret" value=""/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    choose Select: <ui:inputSelect ruau:id="inSelect" options="{!m.select}"/> <br/>
-ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="Select" label="submit" press="{!c.submit}"/> <br/>
+ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="Select" label="submit" PrEss="{!c.submit}"/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    your Select value is: <ui:outputText ruau:id="outSelect" value=""/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    check SelectOption: <ui:inputSelectOption ruau:id="inSelectOption" value="{!m.selectOption}"/> <br/>
-ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="SelectOption" label="submit" press="{!c.submit}"/> <br/>
+ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="SelectOption" label="submit" PrEss="{!c.submit}"/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    your SelectOption value is: <ui:outputText ruau:id="outSelectOption" value=""/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    enter Text: <ui:inputText ruau:id="inText" value="{!m.text}" maxlength="10"/> <br/>
-ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="Text" label="submit" press="{!c.submit}"/> <br/>
+ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="Text" label="submit" PrEss="{!c.submit}"/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    your Text is: <ui:outputText ruau:id="outText" value=""/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <div>Input TextArea</div>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    enter Text: <ui:inputTextArea ruau:id="inTextArea" value="{!m.textAreaText}"/> <br/>
-ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="TextArea" label="submit" press="{!c.submit}"/> <br/>
+ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="TextArea" label="submit" PrEss="{!c.submit}"/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    your Text value is: <ui:outputText ruau:id="outTextArea" value=""/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    enter Url: <ui:inputURL ruau:id="inUrl" value="{!m.url}"/> <br/>
-ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="Url" label="submit" press="{!c.submit}"/> <br/>
+ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="Url" label="submit" PrEss="{!c.submit}"/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    your Url value is: <ui:outputText ruau:id="outUrl" value=""/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    enter Selection (multiple):<ui:inputSelect size="{!m.selectOptions.length}" value="option1" multiple="true" ruau:id="inSelectMulti" options="{!m.selectOptions}"/> <br/>
-ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="SelectMulti" label="submit" press="{!c.submit}"/> <br/>
+ruau/ruau/src/test/components/uitest/testApp/testApp.app:    <ui:button buttonTitle="SelectMulti" label="submit" PrEss="{!c.submit}"/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:    your Secltion value is: <ui:outputText ruau:id="outSelectMulti" value=""/> <br/>
 ruau/ruau/src/test/components/uitest/testApp/testApp.app:</ruau:application>
 ruau/ruau/src/test/components/uitest/testApp/testAppController.js: * Copyright (C) 2013 salesforce.com, inc.

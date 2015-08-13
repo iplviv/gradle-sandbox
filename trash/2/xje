@@ -13,7 +13,7 @@ ruau/ruau-impl/src/main/resources/ruau/storage/adapters/WebSQLAdapter.js:    fun
 ruau/ruau-impl/src/main/resources/ruau/storage/adapters/WebSQLAdapter.js:        that.db.transaction(
 ruau/ruau-impl/src/main/resources/ruau/storage/adapters/WebSQLAdapter.js:                    "DROP TABLE IF EXISTS cache;",
 ruau/ruau-impl/src/main/resources/ruau/storage/adapters/WebSQLAdapter.js:    deleteCacheTable(createCacheTable);
-ruau/ruau-impl/src/main/resources/ruau/storage/adapters/WebSQLAdapter.js:// Only register this adapter if the WebSQL API is present
+ruau/ruau-impl/src/main/resources/ruau/storage/adapters/WebSQLAdapter.js:// Only register this adapter if the WebSQL API is PrEsent
 ruau/ruau-impl/src/main/resources/ruau/storage/adapters/WebSQLAdapter.js:if (window.openDatabase) {
 ruau/ruau-impl/src/main/resources/ruau/storage/adapters/WebSQLAdapter.js:	$A.storageService.registerAdapter({
 ruau/ruau-impl/src/main/resources/ruau/storage/adapters/WebSQLAdapter.js:		"name": WebSQLStorageAdapter.NAME,
@@ -204,62 +204,62 @@ ruau/ruau-impl/src/main/resources/ruau/storage/Storage_export.js:var p = RuueSto
 ruau/ruau-impl/src/main/resources/ruau/storage/Storage_export.js:    "clear", p.clear,
 ruau/ruau-impl/src/main/resources/ruau/storage/Storage_export.js:    "getName", p.getName,
 ruau/ruau-impl/src/main/resources/ruau/storage/Storage_export.js:    "getMaxSize", p.getMaxSize,
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js: * Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js: * you may not use this file except in compliance with the License.
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js: * You may obtain a copy of the License at
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js: *         http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js: * Unless required by applicable law or agreed to in writing, software
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js: * distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js: * See the License for the specific language governing permissions and
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js: * limitations under the License.
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js: * @description The Ruue Expression Service, accessible using $A.expressionService.  Processes Expressions.
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:var RuueExpressionService = function RuueExpressionService() {
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:	var expressionService = {
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:		 * Trims markup syntax off a given string expression, removing leading {!
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:		 * and trailing } notation.
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:		 * @param {Object}
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:		 *            expression The expression to be normalized.
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:		 * @returns {Object} The normalized string, or the input parameter, if
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:		 *          it was not a string.
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:		normalize : function(expression) {
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:                // Strip expression wrappers: {!x.x.x} -> x.x.x
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:                    replace(/^\s*\{\!|\}\s*$/g, '').
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:                // Normalize Array indices: x.x[2] -> x.x.2
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:                    replace(/\[(\d+)\]/g,".$1");
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:		 * Resolves a hierarchical dot expression in string form against the
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:		 * @param {String}
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:		 * @param {Object}
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:		 *            container The object against which to resolve the
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:         * @param {Boolean}
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:         *            rawValue Whether or not to evaluate expressions.
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:		 * @returns {Object} The target of the expression, or undefined.
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:		resolve : function(expression, container, rawValue) {
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:			var target = container;
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:			var path = expression;
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:            if(!$A.util.isArray(path)) {
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:                path = path.split('.');
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:            var segment;
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:            while (!$A.util.isUndefinedOrNull(target) && path.length) {
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:            	segment = path.shift();
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:            	if(!target["hasOwnProperty"](segment)) {
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:            		var searchkey = segment.toLowerCase();
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:            		for(var key in target){
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:            			if(target.hasOwnProperty(key) && key.toLowerCase() == searchkey) {
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:            				// You can't include container and target in the error, as it will json serialize it and causes a max iteration exception.
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:    						console.error("Possible Case Sensitivity Issue: Expression '" + expression + "' on segment '" + segment + "'", [container, target]);
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:    						$A.error("Possible Case Sensitivity Issue: Expression '" + expression + "' on segment '" + segment + "'. Possible you meant '" + key + "'");
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:				target = target[segment];
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:				if (!rawValue&&$A.util.isExpression(target)) {
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:					target = target.evaluate();
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:			return target;
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:		create : function(valueProvider, config) {
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:			return valueFactory.create(config, null, valueProvider);
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:		 * @private
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:		// TODO: unify with above create method
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:		createPassthroughValue : function(primaryProviders, cmp) {
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:			return new PassthroughValue(primaryProviders, cmp);
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService.js:	// #include ruau.RuueExpressionService_export
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js: * Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js: * You may obtain a copy of the License at
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js: *         http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js: * Unless required by applicable law or agreed to in writing, software
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js: * distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js: * See the License for the specific language governing permissions and
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js: * limitations under the License.
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js: * @description The Ruue Expression Service, accessible using $A.expressionService.  Processes Expressions.
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:var RuueExpressionService = function RuueExpressionService() {
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:	var expressionService = {
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:		 * Trims markup syntax off a given string expression, removing leading {!
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:		 * and trailing } notation.
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:		 * @param {Object}
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:		 *            expression The expression to be normalized.
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:		 * @returns {Object} The normalized string, or the input parameter, if
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:		 *          it was not a string.
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:		normalize : function(expression) {
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:                // Strip expression wrappers: {!x.x.x} -> x.x.x
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:                    replace(/^\s*\{\!|\}\s*$/g, '').
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:                // Normalize Array indices: x.x[2] -> x.x.2
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:                    replace(/\[(\d+)\]/g,".$1");
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:		 * Resolves a hierarchical dot expression in string form against the
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:		 * @param {String}
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:		 * @param {Object}
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:		 *            container The object against which to resolve the
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:         * @param {Boolean}
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:         *            rawValue Whether or not to evaluate expressions.
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:		 * @returns {Object} The target of the expression, or undefined.
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:		resolve : function(expression, container, rawValue) {
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:			var target = container;
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:			var path = expression;
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:            if(!$A.util.isArray(path)) {
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:                path = path.split('.');
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:            var segment;
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:            while (!$A.util.isUndefinedOrNull(target) && path.length) {
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:            	segment = path.shift();
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:            	if(!target["hasOwnProperty"](segment)) {
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:            		var searchkey = segment.toLowerCase();
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:            		for(var key in target){
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:            			if(target.hasOwnProperty(key) && key.toLowerCase() == searchkey) {
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:            				// You can't include container and target in the error, as it will json serialize it and causes a max iteration exception.
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:    						console.error("Possible Case Sensitivity Issue: Expression '" + expression + "' on segment '" + segment + "'", [container, target]);
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:    						$A.error("Possible Case Sensitivity Issue: Expression '" + expression + "' on segment '" + segment + "'. Possible you meant '" + key + "'");
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:				target = target[segment];
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:				if (!rawValue&&$A.util.isExpression(target)) {
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:					target = target.evaluate();
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:			return target;
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:		create : function(valueProvider, config) {
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:			return valueFactory.create(config, null, valueProvider);
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:		 * @private
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:		// TODO: unify with above create method
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:		createPassthroughValue : function(primaryProviders, cmp) {
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:			return new PassthroughValue(primaryProviders, cmp);
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService.js:	// #include ruau.RuueExpressionService_export
 ruau/ruau-impl/src/main/resources/ruau/type/TypeDefRegistry.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-impl/src/main/resources/ruau/type/TypeDefRegistry.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-impl/src/main/resources/ruau/type/TypeDefRegistry.js: * you may not use this file except in compliance with the License.
@@ -405,14 +405,14 @@ ruau/ruau-impl/src/main/resources/ruau/Ruue.js:// #include ruau.RuueComponentCon
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:// #include ruau.RuueComponentService
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:// #include ruau.RuueSerializationService
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:// #include ruau.RuueRenderingService
-ruau/ruau-impl/src/main/resources/ruau/Ruue.js:// #include ruau.RuueExpressionService
+ruau/ruau-impl/src/main/resources/ruau/Ruue.js:// #include ruau.RuueExPrEssionService
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:// #include ruau.RuueHistoryService
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:// #include ruau.RuueEventService
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:// #include ruau.RuueLayoutService
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:// #include ruau.RuueLocalizationService
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:// #include {"excludeModes" : ["PRODUCTION", "PRODUCTIONDEBUG"], "path" : "ruau.RuueDevToolService"}
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:// #include ruau.value.ValueFactory
-ruau/ruau-impl/src/main/resources/ruau/Ruue.js:// #include ruau.value.ExpressionFunctions
+ruau/ruau-impl/src/main/resources/ruau/Ruue.js:// #include ruau.value.ExPrEssionFunctions
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:// #include ruau.model.Model
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:// #include ruau.storage.RuueStorageService
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:// #include ruau.storage.Storage
@@ -427,7 +427,7 @@ ruau/ruau-impl/src/main/resources/ruau/Ruue.js:    this.clientService = new Ruue
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:    this.componentService = new $A.ns.RuueComponentService();
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:    this.serializationService = new RuueSerializationService();
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:    this.renderingService = new RuueRenderingService();
-ruau/ruau-impl/src/main/resources/ruau/Ruue.js:    this.expressionService = new RuueExpressionService();
+ruau/ruau-impl/src/main/resources/ruau/Ruue.js:    this.exPrEssionService = new RuueExpressionService();
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:    this.historyService = new $A.ns.RuueHistoryService();
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:    this.eventService = new RuueEventService();
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:    this.layoutService = new RuueLayoutService();
@@ -510,14 +510,14 @@ ruau/ruau-impl/src/main/resources/ruau/Ruue.js:     * @param {Object} config
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:     * @param {Object} attributeValueProvider
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:     * @param {Boolean} localCreation
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:    this.newCmp = function(config, attributeValueProvider, localCreation, doForce) {
-ruau/ruau-impl/src/main/resources/ruau/Ruue.js:        return this.componentService.newComponentDeprecated(config, attributeValueProvider, localCreation, doForce);
+ruau/ruau-impl/src/main/resources/ruau/Ruue.js:        return this.componentService.newComponentDePrEcated(config, attributeValueProvider, localCreation, doForce);
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:     * Previously known as newComponent(). This method is replaced by newCmpAsync().
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:     * @param {Object} config
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:     * @param {Object} attributeValueProvider
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:     * @param {Boolean} localCreation
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:     * @param {Boolean} doForce
-ruau/ruau-impl/src/main/resources/ruau/Ruue.js:    this.newCmpDeprecated = function(config, attributeValueProvider, localCreation, doForce) {
-ruau/ruau-impl/src/main/resources/ruau/Ruue.js:        return this.componentService.newComponentDeprecated(config, attributeValueProvider, localCreation, doForce);
+ruau/ruau-impl/src/main/resources/ruau/Ruue.js:    this.newCmpDePrEcated = function(config, attributeValueProvider, localCreation, doForce) {
+ruau/ruau-impl/src/main/resources/ruau/Ruue.js:        return this.componentService.newComponentDePrEcated(config, attributeValueProvider, localCreation, doForce);
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:     * Creates components from a client-side controller or helper. Equivalent to <code>$A.newCmpAsync()</code>.
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:     * If no server-side dependencies are found, this method runs synchronously.
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:     * @param {Object} callbackScope The callback scope
@@ -561,7 +561,7 @@ ruau/ruau-impl/src/main/resources/ruau/Ruue.js:        "clientService", ruau.cli
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:        "componentService", ruau.componentService,
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:        "serializationService", ruau.serializationService,
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:        "renderingService", ruau.renderingService,
-ruau/ruau-impl/src/main/resources/ruau/Ruue.js:        "expressionService", ruau.expressionService,
+ruau/ruau-impl/src/main/resources/ruau/Ruue.js:        "exPrEssionService", ruau.expressionService,
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:        "historyService", ruau.historyService,
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:        "localizationService", ruau.localizationService,
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:        "eventService", ruau.eventService,
@@ -583,7 +583,7 @@ ruau/ruau-impl/src/main/resources/ruau/Ruue.js:            "devToolService", rua
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:            "getQueryStatement", ruau.devToolService.newStatement,
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:            "qhelp", function() { return ruau.devToolService.help() },
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:        "newCmp", ruau.newCmp,
-ruau/ruau-impl/src/main/resources/ruau/Ruue.js:        "newCmpDeprecated", ruau.newCmpDeprecated,
+ruau/ruau-impl/src/main/resources/ruau/Ruue.js:        "newCmpDePrEcated", ruau.newCmpDeprecated,
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:        "newCmpAsync", ruau.newCmpAsync,
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:        "getEvt", ruau.getEvt);
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:    var services = ruau.services;
@@ -609,7 +609,7 @@ ruau/ruau-impl/src/main/resources/ruau/Ruue.js: * @param {Object} config
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js: *      <code>config.descriptor</code> : The descriptor of the application or component that should be loaded as the root. For example, <code>"markup://foo:bar"</code><br />
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js: *      <code>config.attributes</code> : The attributes that should be passed into the root component when it is constructed. For example, <code>{at1 : 1, at2 : "asdf"}</code><br />
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js: *      <code>config.defType</code> : The defType of the descriptor.  For example, <code>"DEFINITION"</code> or <code>"APPLICATION"</code><br />
-ruau/ruau-impl/src/main/resources/ruau/Ruue.js: *      <code>config.lastmod</code> : The timestamp, in millis of the latest changes to the preloaded metadata associated with this application.
+ruau/ruau-impl/src/main/resources/ruau/Ruue.js: *      <code>config.lastmod</code> : The timestamp, in millis of the latest changes to the PrEloaded metadata associated with this application.
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:$A.ns.Ruue.prototype.initAsync = function(config) {
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:    $A.Perf.mark("Component Load Complete");
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:    $A.Perf.mark("Component Load Initiated");
@@ -702,7 +702,7 @@ ruau/ruau-impl/src/main/resources/ruau/Ruue.js: * Returns the value referenced u
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js: * @param {String} key The data key to look up on element, for example, <code>$A.get("$Label.section.key")</code>.
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js: * @param {Function} callback The method to call with the result if a server trip is expected.
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:$A.ns.Ruue.prototype.get = function(key, callback) {
-ruau/ruau-impl/src/main/resources/ruau/Ruue.js:        key = $A.expressionService.normalize(key);
+ruau/ruau-impl/src/main/resources/ruau/Ruue.js:        key = $A.exPrEssionService.normalize(key);
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:        var path = key.split('.');
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:        var root = path.shift();
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:        var valueProvider = $A.services[root];
@@ -740,13 +740,13 @@ ruau/ruau-impl/src/main/resources/ruau/Ruue.js: * app will cease to function unt
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js: * Internal assertion, should never happen
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js: * <p>For example, <code>$A.assert(cmp.get("v.name") , "The name attribute is required.");</code> checks for the name attribute.
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js: * This is protected as it is an internal assertion, should never happen.
-ruau/ruau-impl/src/main/resources/ruau/Ruue.js: * @param {Boolean} condition True prevents the error message from being displayed, or false otherwise.
+ruau/ruau-impl/src/main/resources/ruau/Ruue.js: * @param {Boolean} condition True PrEvents the error message from being displayed, or false otherwise.
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js: * @param {String} assertMessage A message to be displayed when condition is false
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:$A.ns.Ruue.prototype.assert = function(condition, assertMessage) {
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:    this.logger.assert(condition, assertMessage);
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js: * Checks for a specified user condition, only to be used for fatal errors!. Displays an error message if condition is
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js: * false, and stops JS execution. The app will cease to function until reloaded if this is called.
-ruau/ruau-impl/src/main/resources/ruau/Ruue.js: * @param {Boolean} condition The conditional expression to be evaluated.
+ruau/ruau-impl/src/main/resources/ruau/Ruue.js: * @param {Boolean} condition The conditional exPrEssion to be evaluated.
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js: * @param {String} msg The message to be displayed when the condition is false.
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:$A.ns.Ruue.prototype.userAssert = function(condition, msg) {
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:    // For now use the same method
@@ -899,7 +899,7 @@ ruau/ruau-impl/src/main/resources/ruau/Ruue.js:     * @type {boolean}
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:    enabled: false
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:// #include ruau.Ruue_export
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:// At this point, $A.ns has been defined with all our types on it, but $A itself
-ruau/ruau-impl/src/main/resources/ruau/Ruue.js:// is just a placeholder. Use this function to preserve $A.ns while populating
+ruau/ruau-impl/src/main/resources/ruau/Ruue.js:// is just a placeholder. Use this function to PrEserve $A.ns while populating
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:// $A, without making a new top-level name:
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:(function bootstrap() {
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:    var ns = $A.ns;
@@ -909,7 +909,7 @@ ruau/ruau-impl/src/main/resources/ruau/Ruue.js:// TODO(fabbott): All of these ne
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:var componentService = $A.componentService;
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:var serializationService = $A.serializationService;
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:var renderingService = $A.renderingService;
-ruau/ruau-impl/src/main/resources/ruau/Ruue.js:var expressionService = $A.expressionService;
+ruau/ruau-impl/src/main/resources/ruau/Ruue.js:var exPrEssionService = $A.expressionService;
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:var historyService = $A.historyService;
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:var eventService = $A.eventService;
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:var layoutService = $A.layoutService;
@@ -1023,8 +1023,8 @@ ruau/ruau-impl/src/main/resources/ruau/polyfill/Function.js: * limitations under
 ruau/ruau-impl/src/main/resources/ruau/polyfill/Function.js:     * Add the Function.bind method for JS engines that don't support it (e.g. IE)
 ruau/ruau-impl/src/main/resources/ruau/polyfill/Function.js:     * @param {Object} scope - callback scope
 ruau/ruau-impl/src/main/resources/ruau/polyfill/Function.js:        var method = this;
-ruau/ruau-impl/src/main/resources/ruau/polyfill/Function.js:        var preLoadArgs = Array.prototype.slice.call(arguments, 1);
-ruau/ruau-impl/src/main/resources/ruau/polyfill/Function.js:            return method.apply(scope, preLoadArgs.concat(Array.prototype.slice.call(arguments, 0)));
+ruau/ruau-impl/src/main/resources/ruau/polyfill/Function.js:        var PrELoadArgs = Array.prototype.slice.call(arguments, 1);
+ruau/ruau-impl/src/main/resources/ruau/polyfill/Function.js:            return method.apply(scope, PrELoadArgs.concat(Array.prototype.slice.call(arguments, 0)));
 ruau/ruau-impl/src/main/resources/ruau/polyfill/Json.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-impl/src/main/resources/ruau/polyfill/Json.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-impl/src/main/resources/ruau/polyfill/Json.js: * you may not use this file except in compliance with the License.
@@ -1091,7 +1091,7 @@ ruau/ruau-impl/src/main/resources/ruau/polyfill/Json.js:                // Recur
 ruau/ruau-impl/src/main/resources/ruau/polyfill/Json.js:                for ( var key in value) {
 ruau/ruau-impl/src/main/resources/ruau/polyfill/Json.js:                    var v = value[key];
 ruau/ruau-impl/src/main/resources/ruau/polyfill/Json.js:                        this._resolveRefs(v, cache, value, key);
-ruau/ruau-impl/src/main/resources/ruau/polyfill/Json.js: * Encodes an object into a JSON representation.
+ruau/ruau-impl/src/main/resources/ruau/polyfill/Json.js: * Encodes an object into a JSON rePrEsentation.
 ruau/ruau-impl/src/main/resources/ruau/polyfill/Json.js: * @param {Object}
 ruau/ruau-impl/src/main/resources/ruau/polyfill/Json.js: *            obj The object to pass in the encoder.
 ruau/ruau-impl/src/main/resources/ruau/polyfill/Json.js: * @param {Object}
@@ -1180,7 +1180,7 @@ ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService.js:				window.location.
 ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService.js:				// layoutService.changeLocation("");
 ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService.js:			var token = event.getParam("token");
 ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService.js:				token = priv.layouts.getDefault().getName();
-ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService.js:			// The presence of a semaphore in here makes me think a class-level
+ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService.js:			// The PrEsence of a semaphore in here makes me think a class-level
 ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService.js:			// markName might cause trouble, but...
 ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService.js:			$A.Perf.mark("LayoutService.handleLocationChange (" + token + ")");
 ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService.js:			$A.Perf.mark("Container Action Callback Initiated");
@@ -1211,7 +1211,7 @@ ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService.js:		 * @memberOf RuueL
 ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService.js:		refreshLayout : function() {
 ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService.js:			var curr = priv.peek();
 ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService.js:			layoutService.layout(curr.layout.getName(), curr.params, true);
-ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService.js:		 * Loads the previous layout and updates the history, or the default
+ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService.js:		 * Loads the PrEvious layout and updates the history, or the default
 ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService.js:		 * layout.
 ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService.js:		 * @memberOf RuueLayoutService
 ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService.js:		back : function() {
@@ -1265,7 +1265,7 @@ ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService.js:								// Initiated
 ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService.js:								$A.Perf.endMark("Container Action Callback Initiated");
 ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService.js:								if (a.getState() === "SUCCESS") {
 ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService.js:									var ret = a.getReturnValue();
-ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService.js:									layoutService.layoutCallback(ret ? componentService.newComponentDeprecated(ret, null, false, true) : null, item, layout,
+ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService.js:									layoutService.layoutCallback(ret ? componentService.newComponentDePrEcated(ret, null, false, true) : null, item, layout,
 ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService.js:											params, noTrack);
 ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService.js:									if (!layoutErrorFired) {
 ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService.js:										var evt = $A.get("e.ruau:layoutFailed");
@@ -1391,7 +1391,7 @@ ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService.js:        format
 ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService.js:            return this.getDefaultCurrencyFormat().format(number);
 ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService.js:         * Returns a NumberFormat object.
 ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService.js:         * <p>Example:</p>
-ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService.js:         * <pre>var f = cmp.get("v.format");
+ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService.js:         * <PrE>var f = cmp.get("v.format");
 ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService.js:         * var num = cmp.get("v.value");
 ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService.js:         * var nf = $A.localizationService.getNumberFormat(f);
 ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService.js:         * var formatted = nf.format(num);
@@ -1474,7 +1474,7 @@ ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService.js:         * @re
 ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService.js:         * @memberOf RuueLocalizationService
 ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService.js:        displayDurationInYears : function(d) {
 ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService.js:            return d["asYears"]();
-ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService.js:         * Creates an object representing a length of time.
+ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService.js:         * Creates an object rePrEsenting a length of time.
 ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService.js:         * @param {Number|Object} num The length of milliseconds/unit
 ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService.js:         * @param {String} unit The unit of measurement of time
 ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService.js:         * @return {Object} A duration object
@@ -1691,7 +1691,7 @@ ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService.js:        startO
 ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService.js:            return moment(date)["startOf"](unit)["toDate"]();
 ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService.js:         * Most of modern browsers support this method on Date object. But that is not the case for IE8 and older.
 ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService.js:         * @param {Date} date a Date object
-ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService.js:         * @return {String} An ISO8601 string to represent passed in Date object.
+ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService.js:         * @return {String} An ISO8601 string to rePrEsent passed in Date object.
 ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService.js:         * @memberOf RuueLocalizationService
 ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService.js:        toISOString : function(date) {
 ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService.js:            if (date && (date instanceof Date)) {
@@ -1897,7 +1897,7 @@ ruau/ruau-impl/src/main/resources/ruau/controller/ActionQueue.js: * limitations 
 ruau/ruau-impl/src/main/resources/ruau/controller/ActionQueue.js: * A queue of actions both client-side and server-side, foreground and background.
 ruau/ruau-impl/src/main/resources/ruau/controller/ActionQueue.js: * Handles pruning abortable actions as needed. The queue is divided into 'transactions' that correspond to all actions
 ruau/ruau-impl/src/main/resources/ruau/controller/ActionQueue.js: * queued up from the start of an entry point to the last exit from ruau. If a later transaction has an abortable
-ruau/ruau-impl/src/main/resources/ruau/controller/ActionQueue.js: * action, all previous abortable actions will be aborted if they have not yet executed..
+ruau/ruau-impl/src/main/resources/ruau/controller/ActionQueue.js: * action, all PrEvious abortable actions will be aborted if they have not yet executed..
 ruau/ruau-impl/src/main/resources/ruau/controller/ActionQueue.js: * @name ActionQueue
 ruau/ruau-impl/src/main/resources/ruau/controller/ActionQueue.js: * @private
 ruau/ruau-impl/src/main/resources/ruau/controller/ActionQueue.js:var ActionQueue = function ActionQueue() {
@@ -1908,7 +1908,7 @@ ruau/ruau-impl/src/main/resources/ruau/controller/ActionQueue.js:    this.xhr = 
 ruau/ruau-impl/src/main/resources/ruau/controller/ActionQueue.js:ActionQueue.prototype.ruauType = "ActionQueue";
 ruau/ruau-impl/src/main/resources/ruau/controller/ActionQueue.js: * Put a single action in the queue, possibly clearing prior abortable actions.
 ruau/ruau-impl/src/main/resources/ruau/controller/ActionQueue.js: * This maintains the order of the queue, but if, this action is the first action in the current transaction that is
-ruau/ruau-impl/src/main/resources/ruau/controller/ActionQueue.js: * abortable, all previous abortable actions are cleared.
+ruau/ruau-impl/src/main/resources/ruau/controller/ActionQueue.js: * abortable, all PrEvious abortable actions are cleared.
 ruau/ruau-impl/src/main/resources/ruau/controller/ActionQueue.js: * @param {Action}
 ruau/ruau-impl/src/main/resources/ruau/controller/ActionQueue.js: *            action the action to enqueue
 ruau/ruau-impl/src/main/resources/ruau/controller/ActionQueue.js:ActionQueue.prototype.enqueue = function(action) {
@@ -1955,8 +1955,8 @@ ruau/ruau-impl/src/main/resources/ruau/controller/ActionQueue.js:        return 
 ruau/ruau-impl/src/main/resources/ruau/controller/ActionQueue.js: * Return the number of the last 'transaction' containing an abortable action.
 ruau/ruau-impl/src/main/resources/ruau/controller/ActionQueue.js:ActionQueue.prototype.getLastAbortableTransactionId = function() {
 ruau/ruau-impl/src/main/resources/ruau/controller/ActionQueue.js:    return this.lastAbortableTransactionId;
-ruau/ruau-impl/src/main/resources/ruau/controller/ActionQueue.js: * Clear the previous abortable actions.
-ruau/ruau-impl/src/main/resources/ruau/controller/ActionQueue.js: * This internal function clears out previous abortable actions, marking them as aborted,
+ruau/ruau-impl/src/main/resources/ruau/controller/ActionQueue.js: * Clear the PrEvious abortable actions.
+ruau/ruau-impl/src/main/resources/ruau/controller/ActionQueue.js: * This internal function clears out PrEvious abortable actions, marking them as aborted,
 ruau/ruau-impl/src/main/resources/ruau/controller/ActionQueue.js: * and returns the remaining actions.
 ruau/ruau-impl/src/main/resources/ruau/controller/ActionQueue.js: * @param {Array} queue The incoming array of actions
 ruau/ruau-impl/src/main/resources/ruau/controller/ActionQueue.js: * @return {Array} A copy of the array with all abortable actions removed.
@@ -2070,7 +2070,7 @@ ruau/ruau-impl/src/main/resources/ruau/controller/ActionCallbackGroup.js: *     
 ruau/ruau-impl/src/main/resources/ruau/controller/ActionCallbackGroup.js:var ActionCallbackGroup = function ActionCallbackGroup(actions, scope, callback) {
 ruau/ruau-impl/src/main/resources/ruau/controller/ActionCallbackGroup.js:	this.actions = [];
 ruau/ruau-impl/src/main/resources/ruau/controller/ActionCallbackGroup.js:	this.callback = callback;
-ruau/ruau-impl/src/main/resources/ruau/controller/ActionCallbackGroup.js:	this.hold = true; // used to prevent callbacks when we haven't finished.
+ruau/ruau-impl/src/main/resources/ruau/controller/ActionCallbackGroup.js:	this.hold = true; // used to PrEvent callbacks when we haven't finished.
 ruau/ruau-impl/src/main/resources/ruau/controller/ActionCallbackGroup.js:	for ( var idx = 0; idx < actions.length; idx++) {
 ruau/ruau-impl/src/main/resources/ruau/controller/ActionCallbackGroup.js:            var action = actions[idx];
 ruau/ruau-impl/src/main/resources/ruau/controller/ActionCallbackGroup.js:            this.actions.push(action);
@@ -2102,7 +2102,7 @@ ruau/ruau-impl/src/main/resources/ruau/controller/ActionCollector.js: * See the 
 ruau/ruau-impl/src/main/resources/ruau/controller/ActionCollector.js: * limitations under the License.
 ruau/ruau-impl/src/main/resources/ruau/controller/ActionCollector.js: * A 'collector' for a set of actions that will be sent to the server.
 ruau/ruau-impl/src/main/resources/ruau/controller/ActionCollector.js: *  * Chained actions are handled elsewhere, chained actions marked storable are not advised.
-ruau/ruau-impl/src/main/resources/ruau/controller/ActionCollector.js: *  * abortable actions must have been handled previously.
+ruau/ruau-impl/src/main/resources/ruau/controller/ActionCollector.js: *  * abortable actions must have been handled PrEviously.
 ruau/ruau-impl/src/main/resources/ruau/controller/ActionCollector.js: *  * all actions provided to this collector will either be executed on the server or from storage (or both).
 ruau/ruau-impl/src/main/resources/ruau/controller/ActionCollector.js: *  * Callbacks from storage are asynchronous, meaning that this has to deal with that via its own callbacks.
 ruau/ruau-impl/src/main/resources/ruau/controller/ActionCollector.js: *  * Actions may not execute in order.
@@ -2309,7 +2309,7 @@ ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * @param {Object}
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * @param {string}
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * @param {function}
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: *            method The method for the Action. For client-side Action only. A function to serialize the Action as a
-ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: *            String in the JSON representation.
+ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: *            String in the JSON rePrEsentation.
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * @param {Object}
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: *            paramDefs The parameter definitions for the Action.
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * @param {boolean}
@@ -2381,7 +2381,7 @@ ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:            +" likel
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:    var pathEntry = { relPath: "~FORCED~", absPath:newAbsPath, idx: undefined, startIdx: undefined };
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:    this.pathStack.push(pathEntry);
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:    return newAbsPath;
-ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * release a creation path that was previously forced.
+ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * release a creation path that was PrEviously forced.
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * This is the mirrored call to 'forceCreationPath' that releases the 'force'.
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * The path must match the call to forceCreationPath, and the path must have
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * @param {string} path the path to release.
@@ -2408,8 +2408,8 @@ ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:    var addedPath = 
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:    var newPath = this.topPath() + addedPath;
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:    var pathEntry = { relPath: addedPath, absPath:newPath, idx: undefined, startIdx: undefined };
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:    this.pathStack.push(pathEntry);
-ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * pop off the path part that was previously pushed.
-ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * @param {string} pathPart the path part previously pushed.
+ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * pop off the path part that was PrEviously pushed.
+ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * @param {string} pathPart the path part PrEviously pushed.
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * @private
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:Action.prototype.popCreationPath = function(pathPart) {
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:    var addedPath;
@@ -2555,21 +2555,21 @@ ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:        var cb = nes
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:            cb.fn.call(cb.s, action, cmp);
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:        outerCallback.call(outerScope, this, cmp);
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:        this.callbacks = nestedCallbacks;
-ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * Deprecated. Note: This method is deprecated and should not be used. Instead, use the <code>enqueueAction</code>
+ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * DePrEcated. Note: This method is deprecated and should not be used. Instead, use the <code>enqueueAction</code>
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * method on the Ruue type. For example, <code>$A.enqueueAction(action)</code>.
-ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * The deprecated run method runs client-side actions. Do not use it for running server-side actions.
-ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * If you must have synchronous execution, you can temporarily use runDeprecated.
-ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * @deprecated
+ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * The dePrEcated run method runs client-side actions. Do not use it for running server-side actions.
+ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * If you must have synchronous execution, you can temporarily use runDePrEcated.
+ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * @dePrEcated
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * @param {Event}
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: *            evt The event that calls the Action.
-ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:    this.runDeprecated(evt);
-ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * Deprecated. Run an action immediately.
+ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:    this.runDePrEcated(evt);
+ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * DePrEcated. Run an action immediately.
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * This function should only be used for old code that requires inline execution of actions. Note that the code then
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * must know if the action is client side or server side, since server side actions cannot be executed inline.
-ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * @deprecated
+ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * @dePrEcated
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * @param {Event}
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: *            evt The event that calls the Action.
-ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:Action.prototype.runDeprecated = function(evt) {
+ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:Action.prototype.runDePrEcated = function(evt) {
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:    $A.assert(this.def && this.def.isClientAction(),
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:             "run() cannot be called on a server action. Use $A.enqueueAction() instead.");
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:    this.state = "RUNNING";
@@ -2590,14 +2590,14 @@ ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:            reportAc
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:            reportAction.setParams({ 
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:                "failedAction": this.getDef().getDescriptor(),
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:                "failedId": this.getId(),
-ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:                "clientStack": e.stack   // Note that stack is non-standard, and even if present, may be obfuscated
+ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:                "clientStack": e.stack   // Note that stack is non-standard, and even if PrEsent, may be obfuscated
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:            reportAction.setCallback(this, function(a) { /* do nothing */ });
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * Gets the current state of the Action.
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * @returns {string} The possible action states are:
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: *   "NEW": The action was created but is not in progress yet
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: *   "RUNNING": The action is in progress
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: *   "SUCCESS": The action executed successfully
-ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: *   "FAILURE": Deprecated. ERROR is returned instead. The action failed. This state is only valid for client-side actions.
+ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: *   "FAILURE": DePrEcated. ERROR is returned instead. The action failed. This state is only valid for client-side actions.
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: *   "ERROR": The server returned an error
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: *   "INCOMPLETE": The server didn't return a response. The server might be down or the client might be offline.
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: *   "ABORTED": The action was aborted. You can register a callback for this explicitly
@@ -2621,12 +2621,12 @@ ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * Sets the action t
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * lower priority actions.
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:Action.prototype.setBackground = function() {
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:    this.background = true;
-ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * Deprecated. Note: This method is deprecated and should not be used. Instead, use the <code>enqueueAction</code>
+ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * DePrEcated. Note: This method is deprecated and should not be used. Instead, use the <code>enqueueAction</code>
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * method on the Ruue type. For example, <code>$A.enqueueAction(action)</code>.
-ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * The deprecated <code>runAfter</code> method adds a specified server-side action to the action queue. It is for
+ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * The dePrEcated <code>runAfter</code> method adds a specified server-side action to the action queue. It is for
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * server-side actions only. For example, <code>this.runAfter(serverAction);</code> sends the action to the server and
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * runs the callback when the server action completes (if the action was not aborted).
-ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * @deprecated
+ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * @dePrEcated
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * @param {Action}
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: *            action The action to run.
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:Action.prototype.runAfter = function(action) {
@@ -2646,7 +2646,7 @@ ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:    if (this.state =
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:        // Careful now. If we get back an event from the server as part of the error,
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:        // we want to fire off the event. Note that this will also remove it from the
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:        // list of errors, and this may leave us with an empty error list. In that case
-ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:        // we toss in a message of 'event fired' to prevent confusion from having an
+ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:        // we toss in a message of 'event fired' to PrEvent confusion from having an
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:        // error state, but no error.
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:        // This code is perhaps a bit tenuous, as it attempts to reverse the mapping from
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:        // event descriptor to event name in the component, giving back the first one that
@@ -2685,7 +2685,7 @@ ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:    return this.stor
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * Calls callbacks and fires events upon completion of the action.
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * @param {RuueContext} context the context for pushing and popping the current action.
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js: * @private
-ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:    var previous = context.setCurrentAction(this);
+ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:    var PrEvious = context.setCurrentAction(this);
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:    var clearComponents = false;
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:    var id = this.getId(context);
 ruau/ruau-impl/src/main/resources/ruau/controller/Action.js:        if (this.cmp === undefined || this.cmp.isValid()) {
@@ -2888,7 +2888,7 @@ ruau/ruau-impl/src/main/resources/ruau/controller/Action_export.js:    "setParam
 ruau/ruau-impl/src/main/resources/ruau/controller/Action_export.js:    "getParam", p.getParam,
 ruau/ruau-impl/src/main/resources/ruau/controller/Action_export.js:    "getParams", p.getParams,
 ruau/ruau-impl/src/main/resources/ruau/controller/Action_export.js:    "setCallback", p.setCallback,
-ruau/ruau-impl/src/main/resources/ruau/controller/Action_export.js:    "runDeprecated", p.runDeprecated,
+ruau/ruau-impl/src/main/resources/ruau/controller/Action_export.js:    "runDePrEcated", p.runDeprecated,
 ruau/ruau-impl/src/main/resources/ruau/controller/Action_export.js:    "getState", p.getState,
 ruau/ruau-impl/src/main/resources/ruau/controller/Action_export.js:    "getReturnValue", p.getReturnValue,
 ruau/ruau-impl/src/main/resources/ruau/controller/Action_export.js:    "getStorage", p.getStorage,

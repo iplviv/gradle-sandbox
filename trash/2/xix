@@ -77,7 +77,7 @@ ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComp
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_TestController.js:        $A.log("Calling server side api:"+"c.getOutput"+cmpName+"Cmp");
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_TestController.js:        a.setCallback(component, function(action){
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_TestController.js:            if (action.getState() === "SUCCESS") {
-ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_TestController.js:                var is = $A.services.component.newComponentDeprecated(action.getReturnValue());
+ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_TestController.js:                var is = $A.services.component.newComponentDePrEcated(action.getReturnValue());
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_TestController.js:                if (!is.get("v.value")) {
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_TestController.js:        $A.enqueueAction(a);
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_TestController.js:        helper.goToServer(this, component, event, cmpName, inputCmpValue);
@@ -93,9 +93,9 @@ ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComp
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:<ruau:application access="unauthenticated" controller="java://org.ruauframework.impl.java.controller.TestControllerLocalization" model="java://org.ruauframework.impl.java.model.TestModelLocalization">
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:    <ruau:attribute name="hardCoded" type="String" default="Values hard coded on server.." description="Description"/>
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:    <ruau:attribute name="submitCount" type="number"/>
-ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:    <ruau:registerevent name="press" type="ui:press"/>
+ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:    <ruau:registerevent name="PrEss" type="ui:press"/>
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:    <script type="text/javascript">
-ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        document.addEventListener('touchmove', function (e) { e.PrEventDefault(); }, false);
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:    <div id="outSubmitCountDiv" class="banner top">
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        Submit count: <ui:outputText ruau:id="outSubmitCount" value="0"/>
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:    <div id="localeDataDiv" class="banner down">
@@ -106,7 +106,7 @@ ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComp
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:    <div class="container">
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <div class="title">Input Number</div>
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <span class="bText">Enter Number in System Locale: <ui:inputNumber ruau:id="inNumber" value="{!m.numberBigDecimal}"/></span>
-ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <ui:button buttonTitle="Number" label="Submit" class="custom" press="{!c.submitCmp}"/> <br/>
+ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <ui:button buttonTitle="Number" label="Submit" class="custom" PrEss="{!c.submitCmp}"/> <br/>
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <div class="bText">Your Localized Number value:
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:            <div ruau:id="cmpCtrNumber" class="bText opt">- -</div>
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <div class="bText">Your Non-Localized Number value: <ui:outputText ruau:id="outNumber" value=""/></div>
@@ -120,7 +120,7 @@ ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComp
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:    <div class="container">
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <div class="title">Input Date</div>
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <span class="bText">Enter Date: <ui:inputDate ruau:id="inDate" value="{!m.date}"/></span>
-ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <ui:button buttonTitle="Date" label="Submit" class="custom" press="{!c.submitCmp}"/><br/>
+ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <ui:button buttonTitle="Date" label="Submit" class="custom" PrEss="{!c.submitCmp}"/><br/>
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <div class="bText">Your Localized Date value:
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:            <div ruau:id="cmpCtrDate" class="bText opt">- -</div>
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <div class="bText">Your Non-Localized Date value: <ui:outputText ruau:id="outDate" value=""/></div>
@@ -134,7 +134,7 @@ ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComp
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:    <div class="container">
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <div class="title">Input Time</div>
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <span class="bText">Enter Time: <ui:inputTime ruau:id="inTime" value="{!m.time}"/></span>
-ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <ui:button buttonTitle="Time" label="Submit" class="custom" press="{!c.submitCmp}"/><br/>
+ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <ui:button buttonTitle="Time" label="Submit" class="custom" PrEss="{!c.submitCmp}"/><br/>
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <div class="bText">Your Localized Time value:
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:            <div ruau:id="cmpCtrTime" class="bText opt">- -</div>
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <div class="bText">Your Non-Localized Time value: <ui:outputText ruau:id="outTime" value=""/></div>
@@ -149,14 +149,14 @@ ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComp
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:    <div class="container">
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <div class="title">Input Date Time</div>
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <span class="bText">Enter Date Time: <ui:inputDateTime ruau:id="inDateTime" value="{!m.dateTime}"/></span>
-ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <ui:button buttonTitle="DateTime" label="Submit" class="custom" press="{!c.submitCmp}"/><br/>
+ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <ui:button buttonTitle="DateTime" label="Submit" class="custom" PrEss="{!c.submitCmp}"/><br/>
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <div class="bText">Your Localized Date Time value:
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:            <div ruau:id="cmpCtrDateTime" class="bText opt">- -</div>
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <div class="bText">Your Non-Localized Date Time value: <ui:outputText ruau:id="outDateTime" value=""/></div>
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:    <div class="container">
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <div class="title">Input Percent</div>
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <span class="bText">Enter Percent: <ui:inputPercent ruau:id="inPercent" value="{!m.percent}"/></span>
-ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <ui:button buttonTitle="Percent" label="Submit" class="custom" press="{!c.submitCmp}"/><br/>
+ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <ui:button buttonTitle="Percent" label="Submit" class="custom" PrEss="{!c.submitCmp}"/><br/>
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <div class="bText">Your Localized Percent value:
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:            <div ruau:id="cmpCtrPercent" class="bText opt">- -</div>
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <div class="bText">Your Non-Localized Percent value: <ui:outputText ruau:id="outPercent" value=""/></div>
@@ -169,7 +169,7 @@ ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComp
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:    <div class="container">
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <div class="title">Input Currency</div>
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <span class="bText">Enter Currency: <ui:inputCurrency ruau:id="inCurrency" value="{!m.currency}"/></span>
-ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <ui:button buttonTitle="Currency" label="Submit" class="custom" press="{!c.submitCmp}"/><br/>
+ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <ui:button buttonTitle="Currency" label="Submit" class="custom" PrEss="{!c.submitCmp}"/><br/>
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <div class="bText">Your Localized Currency value:
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:            <div ruau:id="cmpCtrCurrency" class="bText opt">- -</div>
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <div class="bText">Your Non-Localized Currency value: <ui:outputText ruau:id="outCurrency" value=""/></div>
@@ -183,7 +183,7 @@ ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComp
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:    <div class="container">
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <div class="title">Input Text</div>
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <span class="bText">Enter Text: <ui:inputText ruau:id="inText" value="{!m.text}" maxlength="10"/></span>
-ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <ui:button buttonTitle="Text" label="Submit" class="custom" press="{!c.submit}"/><br/>
+ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <ui:button buttonTitle="Text" label="Submit" class="custom" PrEss="{!c.submit}"/><br/>
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        <div class="bText">Your Text: <ui:outputText ruau:id="outText" value=""/></div>
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:    <ui:message severity="info">{!v.hardCoded}</ui:message>
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:    <ruau:iteration items="{!m.strings}" var="i">
@@ -289,7 +289,7 @@ ruau/ruau/src/test/components/uitest/menu_EventBubbling/menu_EventBubbling.app: 
 ruau/ruau/src/test/components/uitest/menu_EventBubbling/menu_EventBubbling.app:                <ui:actionMenuItem class="actionItem3" ruau:id="actionItem3" label="Inter Milan" click="{!c.updateTriggerLabel}" hideMenuAfterSelected="{!v.hideMenuAfterSelected}"/>
 ruau/ruau/src/test/components/uitest/menu_EventBubbling/menu_EventBubbling.app:                <ui:actionMenuItem class="actionItem4" ruau:id="actionItem4" label="Manchester United" click="{!c.updateTriggerLabel}"/>
 ruau/ruau/src/test/components/uitest/menu_EventBubbling/menu_EventBubbling.app:<ui:outputText ruau:id="outputStatus" value="Event Propogation To Parent Div did not happen"/> <br/><br/>
-ruau/ruau/src/test/components/uitest/menu_EventBubbling/menu_EventBubbling.app:<ui:button label="Toggle stopClickPropagation" press="{!c.toggle}"/>
+ruau/ruau/src/test/components/uitest/menu_EventBubbling/menu_EventBubbling.app:<ui:button label="Toggle stopClickPropagation" PrEss="{!c.toggle}"/>
 ruau/ruau/src/test/components/uitest/menu_EventBubbling/menu_EventBubbling.app:</ruau:application>
 ruau/ruau/src/test/components/uitest/outputNumber_FormattingWithNullOrEmptyStringTest/outputNumber_FormattingWithNullOrEmptyStringTestTest.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/test/components/uitest/outputNumber_FormattingWithNullOrEmptyStringTest/outputNumber_FormattingWithNullOrEmptyStringTestTest.js: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -504,7 +504,7 @@ ruau/ruau/src/test/components/uitest/inputNumber_FormattingWithNullOrEmptyString
 ruau/ruau/src/test/components/uitest/inputNumber_FormattingWithNullOrEmptyStringTest/inputNumber_FormattingWithNullOrEmptyStringTestTest.js:            ruau.test.assertEquals('', testCmp.getElement().value, "Should have displayed a blank value.");
 ruau/ruau/src/test/components/uitest/autoComplete_Test/autoComplete_TestTest.js:     * Test case created for W-2089843. Where anchor tags were not clickable on mobile. Running on all platforms that AutoComplete works on
 ruau/ruau/src/test/components/uitest/autoComplete_Test/autoComplete_TestTest.js:	        //Fire change event for autocomplete
-ruau/ruau/src/test/components/uitest/autoComplete_Test/autoComplete_TestTest.js:	        cmp.get('c.handleInputChangeAutoComplete').runDeprecated({"getParam":function(value){return "h";}});
+ruau/ruau/src/test/components/uitest/autoComplete_Test/autoComplete_TestTest.js:	        cmp.get('c.handleInputChangeAutoComplete').runDePrEcated({"getParam":function(value){return "h";}});
 ruau/ruau/src/test/components/uitest/autoComplete_Test/autoComplete_TestTest.js:	    	//Grab Autocomplete List
 ruau/ruau/src/test/components/uitest/autoComplete_Test/autoComplete_TestTest.js:		    var autoList = cmp.find("autoComplete").find("list");
 ruau/ruau/src/test/components/uitest/autoComplete_Test/autoComplete_TestTest.js:	        //Get the anchor in the list to click as the user would
@@ -771,7 +771,7 @@ ruau/ruau/src/test/components/uitest/autoComplete_Test/autoComplete_Test.cmp:   
 ruau/ruau/src/test/components/uitest/autoComplete_Test/autoComplete_Test.cmp:            <ui:autocompleteOption label="{!row.label}" keyword="{!row.keyword}" value="{!row.value}" visible="{!row.visible}"/>
 ruau/ruau/src/test/components/uitest/autoComplete_Test/autoComplete_Test.cmp:        </ruau:set>
 ruau/ruau/src/test/components/uitest/autoComplete_Test/autoComplete_Test.cmp:        <ruau:set attribute="autocompleteButton">
-ruau/ruau/src/test/components/uitest/autoComplete_Test/autoComplete_Test.cmp:            <ui:button label="Toggle" press="{!c.handleToggleActionToggle}"/>
+ruau/ruau/src/test/components/uitest/autoComplete_Test/autoComplete_Test.cmp:            <ui:button label="Toggle" PrEss="{!c.handleToggleActionToggle}"/>
 ruau/ruau/src/test/components/uitest/autoComplete_Test/autoComplete_Test.cmp:        </ruau:set>
 ruau/ruau/src/test/components/uitest/autoComplete_Test/autoComplete_Test.cmp:    </ui:autocomplete>
 ruau/ruau/src/test/components/uitest/autoComplete_Test/autoComplete_Test.cmp:    Match Count: <ui:outputText ruau:id="autoCompleteToggleMatchSize" value=""/> <br/><br/>
@@ -797,8 +797,8 @@ ruau/ruau/src/test/components/uitest/infiniteListRow_Test/infiniteListRow_Test.c
 ruau/ruau/src/test/components/uitest/infiniteListRow_Test/infiniteListRow_Test.cmp:					<ruau:set attribute="swipeBody">
 ruau/ruau/src/test/components/uitest/infiniteListRow_Test/infiniteListRow_Test.cmp:					</ruau:set>
 ruau/ruau/src/test/components/uitest/infiniteListRow_Test/infiniteListRow_Test.cmp:		</ruau:set>
-ruau/ruau/src/test/components/uitest/infiniteListRow_Test/infiniteListRow_Test.cmp:	<ui:button ruau:id="btnShowMore" class="btnShowMore" label="show more" press="{!c.showMore}"/><br/>
-ruau/ruau/src/test/components/uitest/infiniteListRow_Test/infiniteListRow_Test.cmp:	<ui:button ruau:id="btnRefresh" class="btnRefresh" label="refresh" press="{!c.refresh}"/>
+ruau/ruau/src/test/components/uitest/infiniteListRow_Test/infiniteListRow_Test.cmp:	<ui:button ruau:id="btnShowMore" class="btnShowMore" label="show more" PrEss="{!c.showMore}"/><br/>
+ruau/ruau/src/test/components/uitest/infiniteListRow_Test/infiniteListRow_Test.cmp:	<ui:button ruau:id="btnRefresh" class="btnRefresh" label="refresh" PrEss="{!c.refresh}"/>
 ruau/ruau/src/test/components/uitest/infiniteListRow_Test/infiniteListRow_Test.cmp:</ruau:component>
 ruau/ruau/src/test/components/uitest/infiniteListRow_Test/infiniteListRow_TestController.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/test/components/uitest/infiniteListRow_Test/infiniteListRow_TestController.js: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -834,11 +834,11 @@ ruau/ruau/src/test/components/uitest/inputError_Test/inputError_Test.cmp:    lim
 ruau/ruau/src/test/components/uitest/inputError_Test/inputError_Test.cmp:<ruau:component controller="java://org.ruauframework.impl.java.controller.JavaTestController">
 ruau/ruau/src/test/components/uitest/inputError_Test/inputError_Test.cmp:	<ui:inputText ruau:id="inputCmp" value=""/> <br/>
 ruau/ruau/src/test/components/uitest/inputError_Test/inputError_Test.cmp:	Error Status: <ui:outputText ruau:id="outputStatus" value=""/> <br/><br/>
-ruau/ruau/src/test/components/uitest/inputError_Test/inputError_Test.cmp:	<div id="ErrorServer"><ui:button label="Error - From server" press="{!c.doServerError}"/></div>
-ruau/ruau/src/test/components/uitest/inputError_Test/inputError_Test.cmp:    <div id="ErrorNoEvent"><ui:button label="Error - No event fire" press="{!c.doErrorNoEventFire}"/></div>
-ruau/ruau/src/test/components/uitest/inputError_Test/inputError_Test.cmp:    <div id="ClearNoEvent"><ui:button label="Clear error - No event fire" press="{!c.clearErrorNoEventFire}"/></div>
-ruau/ruau/src/test/components/uitest/inputError_Test/inputError_Test.cmp:    <div id="ErrorNoErrMsg"><ui:button label="Error - No error message" press="{!c.doErrorNoErrorMsg}"/></div>
-ruau/ruau/src/test/components/uitest/inputError_Test/inputError_Test.cmp:    <div id="ClearNullErrMsg"><ui:button label="Clear error - Null errors message" press="{!c.clearErrorNullErrorMsg}"/></div>
+ruau/ruau/src/test/components/uitest/inputError_Test/inputError_Test.cmp:	<div id="ErrorServer"><ui:button label="Error - From server" PrEss="{!c.doServerError}"/></div>
+ruau/ruau/src/test/components/uitest/inputError_Test/inputError_Test.cmp:    <div id="ErrorNoEvent"><ui:button label="Error - No event fire" PrEss="{!c.doErrorNoEventFire}"/></div>
+ruau/ruau/src/test/components/uitest/inputError_Test/inputError_Test.cmp:    <div id="ClearNoEvent"><ui:button label="Clear error - No event fire" PrEss="{!c.clearErrorNoEventFire}"/></div>
+ruau/ruau/src/test/components/uitest/inputError_Test/inputError_Test.cmp:    <div id="ErrorNoErrMsg"><ui:button label="Error - No error message" PrEss="{!c.doErrorNoErrorMsg}"/></div>
+ruau/ruau/src/test/components/uitest/inputError_Test/inputError_Test.cmp:    <div id="ClearNullErrMsg"><ui:button label="Clear error - Null errors message" PrEss="{!c.clearErrorNullErrorMsg}"/></div>
 ruau/ruau/src/test/components/uitest/inputError_Test/inputError_Test.cmp:</ruau:component>
 ruau/ruau/src/test/components/uitest/inputError_Test/inputError_TestController.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/test/components/uitest/inputError_Test/inputError_TestController.js: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -956,10 +956,10 @@ ruau/ruau/src/test/components/uitest/tabset_Test/tabset_Test.cmp:	              
 ruau/ruau/src/test/components/uitest/tabset_Test/tabset_Test.cmp:	                <ui:inputTextArea ruau:id="inputTabContent" placeholder="content" />
 ruau/ruau/src/test/components/uitest/tabset_Test/tabset_Test.cmp:	                Closable: <ui:inputCheckbox ruau:id="inputTabClosable" value="closable" />
 ruau/ruau/src/test/components/uitest/tabset_Test/tabset_Test.cmp:	                setActive: <ui:inputCheckbox ruau:id="setActive" value="isActive" />
-ruau/ruau/src/test/components/uitest/tabset_Test/tabset_Test.cmp:	                <ui:button label="add tab" class="addTab" press="{!c.addTab}" />
-ruau/ruau/src/test/components/uitest/tabset_Test/tabset_Test.cmp:	            <ui:button label="Update Tab Title"  press="{!c.updateTab}"/>
-ruau/ruau/src/test/components/uitest/tabset_Test/tabset_Test.cmp:	            <ui:button label="Activate By Index" press="{!c.activateTabByIndex}" ruau:id="activateByIndex"/>
-ruau/ruau/src/test/components/uitest/tabset_Test/tabset_Test.cmp:	            <ui:button label="Active By Title"   press="{!c.activateTabByName}" ruau:id="activateByName"/>
+ruau/ruau/src/test/components/uitest/tabset_Test/tabset_Test.cmp:	                <ui:button label="add tab" class="addTab" PrEss="{!c.addTab}" />
+ruau/ruau/src/test/components/uitest/tabset_Test/tabset_Test.cmp:	            <ui:button label="Update Tab Title"  PrEss="{!c.updateTab}"/>
+ruau/ruau/src/test/components/uitest/tabset_Test/tabset_Test.cmp:	            <ui:button label="Activate By Index" PrEss="{!c.activateTabByIndex}" ruau:id="activateByIndex"/>
+ruau/ruau/src/test/components/uitest/tabset_Test/tabset_Test.cmp:	            <ui:button label="Active By Title"   PrEss="{!c.activateTabByName}" ruau:id="activateByName"/>
 ruau/ruau/src/test/components/uitest/tabset_Test/tabset_Test.cmp:    </ruau:if>
 ruau/ruau/src/test/components/uitest/tabset_Test/tabset_Test.cmp:    <ruau:if isTrue="{! v.renderItem == 'nestedTabs' || v.renderItem == 'all'}">
 ruau/ruau/src/test/components/uitest/tabset_Test/tabset_Test.cmp:	    <div class="block">
@@ -1055,7 +1055,7 @@ ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:	testEmptyTa
 ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:		attributes : {"renderItem" : "noTabs"},
 ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:        	 var ulElem = cmp.find("noTabsTabSet").getElement().getElementsByTagName("ul")[0];
 ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:        	 var ulChldrn = this.ignoreComments(ulElem.children);
-ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:        	 $A.test.assertEquals(0, ulChldrn.length, "There should not be any tabs or errors present");
+ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:        	 $A.test.assertEquals(0, ulChldrn.length, "There should not be any tabs or errors PrEsent");
 ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:	 * Verifying lazy rendering works as expected, With Lazy rendering we should only have a new section 
 ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:	 * when we click on a tab and activate
 ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:	testLazyRendering : {
@@ -1078,8 +1078,8 @@ ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:		        	e
 ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:	    	return elementArray;		 
 ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:	  * Code extracted to be used to activate tab by name and by index
 ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:	 activateElement : function(cmp, activateBy){
-ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:     		//Pressing button to activate predetermined tab
-ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:	    	cmp.find("activateBy"+activateBy).get("e.press").fire({});
+ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:     		//Pressing button to activate PrEdetermined tab
+ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:	    	cmp.find("activateBy"+activateBy).get("e.PrEss").fire({});
 ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:	    	var tmpFunc = this.getElement;
 ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:	    	$A.test.addWaitFor(true, function(){
 ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:	    		return ($A.util.getText(tmpFunc("li", "tabItem uiTabItem active")[0]).indexOf("Chatter") < 0);
@@ -1328,8 +1328,8 @@ ruau/ruau/src/test/components/updateTest/updateWithoutHandling/updateWithoutHand
 ruau/ruau/src/test/components/updateTest/updateWithoutHandling/updateWithoutHandling.cmp:<ruau:component controller="java://org.ruauframework.impl.java.controller.JavaTestController" extensible="true">
 ruau/ruau/src/test/components/updateTest/updateWithoutHandling/updateWithoutHandling.cmp:    <ruau:attribute name="text" type="string"/>
 ruau/ruau/src/test/components/updateTest/updateWithoutHandling/updateWithoutHandling.cmp:    <ui:outputText value="{!v.text}"/>
-ruau/ruau/src/test/components/updateTest/updateWithoutHandling/updateWithoutHandling.cmp:    <ui:button ruau:id="update" class="update" press="{!c.updateText}" label="update text"/>
-ruau/ruau/src/test/components/updateTest/updateWithoutHandling/updateWithoutHandling.cmp:    <ui:button ruau:id="trigger" class="trigger" press="{!c.sendOutdatedRequest}" label="call action"/>
+ruau/ruau/src/test/components/updateTest/updateWithoutHandling/updateWithoutHandling.cmp:    <ui:button ruau:id="update" class="update" PrEss="{!c.updateText}" label="update text"/>
+ruau/ruau/src/test/components/updateTest/updateWithoutHandling/updateWithoutHandling.cmp:    <ui:button ruau:id="trigger" class="trigger" PrEss="{!c.sendOutdatedRequest}" label="call action"/>
 ruau/ruau/src/test/components/updateTest/updateWithoutHandling/updateWithoutHandling.cmp:</ruau:component>
 ruau/ruau/src/test/components/updateTest/updateWithoutHandling/updateWithoutHandlingController.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/test/components/updateTest/updateWithoutHandling/updateWithoutHandlingController.js: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -1375,7 +1375,7 @@ ruau/ruau/src/test/components/updateTest/updateWithPreload/updateWithPreload.app
 ruau/ruau/src/test/components/updateTest/updateWithPreload/updateWithPreload.app:    distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau/src/test/components/updateTest/updateWithPreload/updateWithPreload.app:    See the License for the specific language governing permissions and
 ruau/ruau/src/test/components/updateTest/updateWithPreload/updateWithPreload.app:    limitations under the License.
-ruau/ruau/src/test/components/updateTest/updateWithPreload/updateWithPreload.app:<ruau:application preload="updateTest" extends="updateTest:updateWithoutPreload"/>
+ruau/ruau/src/test/components/updateTest/updateWithPreload/updateWithPreload.app:<ruau:application PrEload="updateTest" extends="updateTest:updateWithoutPreload"/>
 ruau/ruau/src/test/components/updateTest/updateable/updateableController.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/test/components/updateTest/updateable/updateableController.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau/src/test/components/updateTest/updateable/updateableController.js: * you may not use this file except in compliance with the License.
@@ -1654,21 +1654,21 @@ ruau/ruau/src/test/java/org/ruauframework/http/RuueServletIntegrationTest.java: 
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletIntegrationTest.java:     * URL with query and hash with query will have buster appended to query (before the hash).
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletIntegrationTest.java:    public void testAddCacheBusterWithQueryAndHashQuery() throws Exception {
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletIntegrationTest.java:        assertBustedUrl("/something?is=fishy&ruau.cb=%s#inside?where=fridge", "/something?is=fishy#inside?where=fridge");
-ruau/ruau/src/test/java/org/ruauframework/http/RuueServletIntegrationTest.java:     * No manifest URL when context has no preloads.
+ruau/ruau/src/test/java/org/ruauframework/http/RuueServletIntegrationTest.java:     * No manifest URL when context has no PrEloads.
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletIntegrationTest.java:    public void testGetManifestWithoutPreloads() throws Exception {
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletIntegrationTest.java:        DefDescriptor<ApplicationDef> desc = Ruue.getDefinitionService().getDefDescriptor(
-ruau/ruau/src/test/java/org/ruauframework/http/RuueServletIntegrationTest.java:                "appCache:nopreload", ApplicationDef.class);
+ruau/ruau/src/test/java/org/ruauframework/http/RuueServletIntegrationTest.java:                "appCache:noPrEload", ApplicationDef.class);
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletIntegrationTest.java:        Ruue.getContextService().startContext(Mode.PROD, Format.HTML, Authentication.AUTHENTICATED, desc);
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletIntegrationTest.java:        assertTrue(ManifestUtil.isManifestEnabled());
-ruau/ruau/src/test/java/org/ruauframework/http/RuueServletIntegrationTest.java:     * Get a URL when context has preloads.
-ruau/ruau/src/test/java/org/ruauframework/http/RuueServletIntegrationTest.java:    @ThreadHostileTest("preload sensitive")
+ruau/ruau/src/test/java/org/ruauframework/http/RuueServletIntegrationTest.java:     * Get a URL when context has PrEloads.
+ruau/ruau/src/test/java/org/ruauframework/http/RuueServletIntegrationTest.java:    @ThreadHostileTest("PrEload sensitive")
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletIntegrationTest.java:    public void testGetManifestWithPreloads() throws Exception {
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletIntegrationTest.java:        DefDescriptor<ApplicationDef> desc = Ruue.getDefinitionService().getDefDescriptor(
-ruau/ruau/src/test/java/org/ruauframework/http/RuueServletIntegrationTest.java:                "appCache:nopreload", ApplicationDef.class);
+ruau/ruau/src/test/java/org/ruauframework/http/RuueServletIntegrationTest.java:                "appCache:noPrEload", ApplicationDef.class);
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletIntegrationTest.java:        Ruue.getContextService().startContext(Mode.PROD, Format.HTML, Authentication.AUTHENTICATED, desc);
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletIntegrationTest.java:        String url = ManifestUtil.getManifestUrl();
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletIntegrationTest.java:        assertEquals(
-ruau/ruau/src/test/java/org/ruauframework/http/RuueServletIntegrationTest.java:                "/l/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22appCache%3Anopreload%22" +
+ruau/ruau/src/test/java/org/ruauframework/http/RuueServletIntegrationTest.java:                "/l/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22appCache%3AnoPrEload%22" +
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletIntegrationTest.java:                        "%2C%22test%22%3A%22org.ruauframework.http.RuueServletIntegrationTest." +
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletIntegrationTest.java:                        "testGetManifestWithPreloads%22%7D/app.manifest",
 ruau/ruau/src/test/java/org/ruauframework/http/ManifestUtilTest.java: * Copyright (C) 2013 salesforce.com, inc.
@@ -1766,7 +1766,7 @@ ruau/ruau/src/test/java/org/ruauframework/http/RuueResourceServletHttpTest.java:
 ruau/ruau/src/test/java/org/ruauframework/http/RuueResourceServletHttpTest.java:import org.ruauframework.test.annotation.RuueTestLabels;
 ruau/ruau/src/test/java/org/ruauframework/http/RuueResourceServletHttpTest.java:import org.ruauframework.test.annotation.UnAdaptableTest;
 ruau/ruau/src/test/java/org/ruauframework/http/RuueResourceServletHttpTest.java:import org.ruauframework.util.RuueTextUtil;
-ruau/ruau/src/test/java/org/ruauframework/http/RuueResourceServletHttpTest.java: * Automation to verify the functioning of RuueResourceServlet. RuueResourceServlet is used to preload definitions of
+ruau/ruau/src/test/java/org/ruauframework/http/RuueResourceServletHttpTest.java: * Automation to verify the functioning of RuueResourceServlet. RuueResourceServlet is used to PrEload definitions of
 ruau/ruau/src/test/java/org/ruauframework/http/RuueResourceServletHttpTest.java: * components in a given namespace. It is also used to load CSS
 ruau/ruau/src/test/java/org/ruauframework/http/RuueResourceServletHttpTest.java:public class RuueResourceServletHttpTest extends RuueHttpTestCase {
 ruau/ruau/src/test/java/org/ruauframework/http/RuueResourceServletHttpTest.java:    public RuueResourceServletHttpTest(String name) {
@@ -2046,7 +2046,7 @@ ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:    
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:        assertAppCacheStatus(Status.UNCACHED);
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:        // There may be a varying number of requests, depending on when the initial manifest response is received.
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:        Cookie cookie = getDriver().manage().getCookieNamed(cookieName);
-ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:        assertNull("No manifest cookie should be present", cookie);
+ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:        assertNull("No manifest cookie should be PrEsent", cookie);
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:     * Manifest request limit exceeded for the time period should result in reset.
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:     * BrowserType.SAFARI is disabled : W-2367702
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:    @TargetBrowsers({ BrowserType.GOOGLECHROME, BrowserType.IPAD, BrowserType.IPHONE })
@@ -2442,7 +2442,7 @@ ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:   
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        fail("Did not find expected content type header: " + Arrays.asList(contentTypeHeaders));
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:     * GET app cache manifest without a supported user agent returns 404.
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:    public void testGetManifestWithUnsupportedUserAgent() throws Exception {
-ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        String manifest = getManifestURL("/appCache/withpreload.app");
+ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        String manifest = getManifestURL("/appCache/withPrEload.app");
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        HttpGet get = obtainGetMethod(manifest);
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        get.releaseConnection();
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:            fail("manifest should be empty: *" + manifest);
@@ -2450,25 +2450,25 @@ ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:   
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:    @ThreadHostileTest("disables AppCache")
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:    public void testGetManifestWithAppCacheDisabled() throws Exception {
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        ServletConfigController.setAppCacheDisabled(true);
-ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        String manifest = getManifestURL("/appCache/withpreload.app");
+ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        String manifest = getManifestURL("/appCache/withPrEload.app");
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        if (manifest != null) {
-ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:            fail("no manifest url should be present, but got: " + manifest);
-ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:     * Manifest url is given even when app has no explicit preloads.
+ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:            fail("no manifest url should be PrEsent, but got: " + manifest);
+ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:     * Manifest url is given even when app has no explicit PrEloads.
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:    public void testGetManifestForAppWithoutPreloads() throws Exception {
-ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        String manifest = getManifestURL("/appCache/nopreload.app");
+ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        String manifest = getManifestURL("/appCache/noPrEload.app");
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        if (manifest == null) {
-ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:            fail("manifest url should be present, but got: " + manifest);
-ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:     * GET app cache manifest for app with preloads returns a full manifest containing preloading resources.
+ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:            fail("manifest url should be PrEsent, but got: " + manifest);
+ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:     * GET app cache manifest for app with PrEloads returns a full manifest containing preloading resources.
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:     * note that invalid and absolute css urls are not included
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:    public void testGetManifestForAppWithPreloads() throws Exception {
-ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        String manifest = getManifestURL("/appCache/withpreload.app");
+ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        String manifest = getManifestURL("/appCache/withPrEload.app");
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        HttpGet get = obtainGetMethod(manifest);
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        get.releaseConnection();
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        assertManifest(response, Lists.newArrayList(".*/app\\.css", ".*/app\\.js"));
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:     * GET app cache manifest with ruau.error query param returns empty response and error-valued manifest cookie.
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:    @UnAdaptableTest
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:    public void testGetManifestWithRuueErrorParam() throws Exception {
-ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        String manifest = getManifestURL("/appCache/withpreload.app");
+ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        String manifest = getManifestURL("/appCache/withPrEload.app");
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        HttpGet get = obtainGetMethod(getManifestErrorUrl(manifest));
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        assertEquals(HttpStatus.SC_NO_CONTENT, getStatusCode(httpResponse));
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        assertManifestHeaders(httpResponse);
@@ -2476,17 +2476,17 @@ ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:   
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:            fail("Expected empty response, but got:\n" + response);
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:     * GET app cache manifest with manifest cookie with error value, returns 404 and deletes the manifest cookie.
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:    public void testGetManifestWithErrorManifestCookie() throws Exception {
-ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        String manifest = getManifestURL("/appCache/withpreload.app");
+ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        String manifest = getManifestURL("/appCache/withPrEload.app");
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        // HttpClient Cookie Example
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        // 2. Create HttpContext which has default CookieStore
-ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        addCookie(getHost(), "appCache_withpreload_lm", "error", "/");
+ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        addCookie(getHost(), "appCache_withPrEload_lm", "error", "/");
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        HttpGet get = obtainGetMethod(manifest);
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        int statusCode = getStatusCode(httpResponse);
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        get.releaseConnection();
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        assertEquals(HttpStatus.SC_NOT_FOUND, statusCode);
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        assertManifestHeaders(httpResponse);
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        assertEquals("", response);
-ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        assertNoCookie(getHost(), "appCache_withpreload_lm", "/");
+ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        assertNoCookie(getHost(), "appCache_withPrEload_lm", "/");
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        get = obtainGetMethod(manifest);
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        HttpResponse clean = perform(get);
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        String cleanResponse = getResponseBody(clean);
@@ -2509,7 +2509,7 @@ ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:   
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:    public void _testGetManifestWhenAdditionalAppCacheUrlsActionBarfs() throws Exception {
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        String values[] = { "{!c.throwException}", // Action throws exception
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:                "{!c.getString}", // Action returns literal instead of List<String>
-ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:                "{!v.attr}", // A expression that refers to attribute instead of action
+ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:                "{!v.attr}", // A exPrEssion that refers to attribute instead of action
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:                "/ruauFW/resources/ruau/resetCSS.css" };
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:        String appMarkup = String.format(baseApplicationTag,
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java:                "useAppcache=\"true\" render=\"client\" " +
@@ -2585,7 +2585,7 @@ ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:       
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        String uri = String.format("/%s/%s.cmp", cmpDesc.getNamespace(), cmpDesc.getName());
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        String externalUri = "http://www2.sfdcstatic.com";
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        List<Map<String, Object>> logs = getCspReportLogs(1);
-ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        @SuppressWarnings("unchecked")
+ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        @SupPrEssWarnings("unchecked")
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        Map<String, Object> cspReport = (Map<String, Object>) logs.get(0).get(CSPReporterServlet.JSON_NAME);
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        assertNotNull("No CSP report found", cspReport);
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        assertEquals("Unexpected blocked resource", externalUri, cspReport.get(CSPReporterServlet.BLOCKED_URI));
@@ -2601,7 +2601,7 @@ ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:       
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        String externalUri = "http://www2.sfdcstatic.com";
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        openNoRuue(uri);
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        List<Map<String, Object>> logs = getCspReportLogs(1);
-ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        @SuppressWarnings("unchecked")
+ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        @SupPrEssWarnings("unchecked")
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        Map<String, Object> cspReport = (Map<String, Object>) logs.get(0).get(CSPReporterServlet.JSON_NAME);
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        assertNotNull("No CSP report found", cspReport);
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        assertEquals("Unexpected blocked resource", externalUri, cspReport.get(CSPReporterServlet.BLOCKED_URI));
@@ -2618,7 +2618,7 @@ ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:       
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        String uri = String.format("/%s/%s.cmp", cmpDesc.getNamespace(), cmpDesc.getName());
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        String frameUri = "http://www.salesforce.com";
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        List<Map<String, Object>> logs = getCspReportLogs(1);
-ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        @SuppressWarnings("unchecked")
+ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        @SupPrEssWarnings("unchecked")
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        Map<String, Object> cspReport = (Map<String, Object>) logs.get(0).get(CSPReporterServlet.JSON_NAME);
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        assertNotNull("No CSP report found", cspReport);
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        assertEquals("Unexpected blocked resource", frameUri, cspReport.get(CSPReporterServlet.BLOCKED_URI));
@@ -2636,7 +2636,7 @@ ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:       
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        String frameUri = "http://www.salesforce.com";
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        openNoRuue(uri);
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        List<Map<String, Object>> logs = getCspReportLogs(1);
-ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        @SuppressWarnings("unchecked")
+ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        @SupPrEssWarnings("unchecked")
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        Map<String, Object> cspReport = (Map<String, Object>) logs.get(0).get(CSPReporterServlet.JSON_NAME);
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        assertNotNull("No CSP report found", cspReport);
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        assertEquals("Unexpected blocked resource", frameUri, cspReport.get(CSPReporterServlet.BLOCKED_URI));
@@ -2658,7 +2658,7 @@ ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:       
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        ruauUITestingUtil
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:                .getRawEval("var s=document.createElement('script');s.type='text/javascript';s.async=true;s.src='http://expectedreport.salesforce.com/';document.getElementsByTagName('head')[0].appendChild(s);");
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        List<Map<String, Object>> logs = getCspReportLogs(1);
-ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        @SuppressWarnings("unchecked")
+ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        @SupPrEssWarnings("unchecked")
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        Map<String, Object> cspReport = (Map<String, Object>) logs.get(0).get(CSPReporterServlet.JSON_NAME);
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        assertNotNull("Intentional CSP report not found", cspReport);
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        assertEquals("Not getting the intentional report URI, probably font wasn't allowed (but should have been)",
@@ -2682,7 +2682,7 @@ ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:       
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        String uri = String.format("/%s/%s.cmp", cmpDesc.getNamespace(), cmpDesc.getName());
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        String externalUri = "http://www2.sfdcstatic.com";
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        List<Map<String, Object>> logs = getCspReportLogs(1);
-ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        @SuppressWarnings("unchecked")
+ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        @SupPrEssWarnings("unchecked")
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        Map<String, Object> cspReport = (Map<String, Object>) logs.get(0).get(CSPReporterServlet.JSON_NAME);
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        assertNotNull("No CSP report found", cspReport);
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        assertEquals("Unexpected blocked resource", externalUri, cspReport.get(CSPReporterServlet.BLOCKED_URI));
@@ -2701,7 +2701,7 @@ ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:    pub
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        DefDescriptor<ComponentDef> cmpDesc = addSourceAutoCleanup(
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:                ComponentDef.class,
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:                String.format(baseComponentTag, "",
-ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:                        "<ui:button press='{!c.post}' label='Send XHR' class='button'/>"));
+ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:                        "<ui:button PrEss='{!c.post}' label='Send XHR' class='button'/>"));
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        DefDescriptor<?> helperDesc = Ruue.getDefinitionService()
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:                        HelperDef.class);
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        addSourceAutoCleanup(
@@ -2720,7 +2720,7 @@ ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:       
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        List<Map<String, Object>> logs = getCspReportLogs(expectedLogs);
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        //only check log contect if there is csp violation
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        //when expectedLogs is 0, getCspReportLogs(int) above verify we didn't get any logs.
-ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:	        @SuppressWarnings("unchecked")
+ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:	        @SupPrEssWarnings("unchecked")
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:	        Map<String, Object> cspReport = (Map<String, Object>) logs.get(0).get(
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:	        assertNotNull("No CSP report found", cspReport);
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:	        assertEquals("Unexpected blocked resource", externalUri,
@@ -2863,7 +2863,7 @@ ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        Map<String, Object> actionParams = new HashMap<>();
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        actionParams.put("param", "some string");
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        actionInstance.put("params", actionParams);
-ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        @SuppressWarnings("rawtypes")
+ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        @SupPrEssWarnings("rawtypes")
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        Map[] actions = { actionInstance };
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        message.put("actions", actions);
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        String jsonMessage = Json.serialize(message);
@@ -2888,7 +2888,7 @@ ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        Map<String, Object> actionParams = new HashMap<>();
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        actionParams.put("param", "some string");
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        actionInstance.put("params", actionParams);
-ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        @SuppressWarnings("rawtypes")
+ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        @SupPrEssWarnings("rawtypes")
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        Map[] actions = { actionInstance };
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        message.put("actions", actions);
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        String jsonMessage = Json.serialize(message);
@@ -2905,10 +2905,10 @@ ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        assertTrue("response not wrapped with ERROR marker",
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:                response.startsWith(RuueBaseServlet.CSRF_PROTECT + "*/") && response.endsWith("/*ERROR*/"));
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        response = response.substring(RuueBaseServlet.CSRF_PROTECT.length() + 2,
-ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        @SuppressWarnings("unchecked")
+ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        @SupPrEssWarnings("unchecked")
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        Map<String, Object> json = (Map<String, Object>) new JsonReader().read(response);
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        assertEquals(true, json.get("exceptionEvent"));
-ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        @SuppressWarnings("unchecked")
+ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        @SupPrEssWarnings("unchecked")
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        Map<String, Object> eventJson = (Map<String, Object>) json.get("event");
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        assertEquals("markup://ruau:clientOutOfSync", eventJson.get("descriptor"));
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        Object f = json.get("defaultHandler");

@@ -309,7 +309,7 @@ ruau/ruau-components/src/main/components/ui/listView/listViewController.js: * li
 ruau/ruau-components/src/main/components/ui/listView/listViewController.js:    clickHandler:function (component, domEvent, helper) {
 ruau/ruau-components/src/main/components/ui/listView/listViewController.js:    dblclickHandler:function (component, domEvent, helper) {
 ruau/ruau-components/src/main/components/ui/listView/listViewController.js:    keydownHandler:function(component,domEvent,helper){
-ruau/ruau-components/src/main/components/ui/listView/listViewController.js:    keypressHandler:function (component, domEvent, helper) {
+ruau/ruau-components/src/main/components/ui/listView/listViewController.js:    keyPrEssHandler:function (component, domEvent, helper) {
 ruau/ruau-components/src/main/components/ui/listView/listViewController.js:    keyupHandler:function (component, domEvent, helper) {
 ruau/ruau-components/src/main/components/ui/listView/listViewController.js:    mousedownHandler:function(component,domEvent,helper){
 ruau/ruau-components/src/main/components/ui/listView/listViewController.js:    mouseoutHandler:function (component, domEvent, helper) {
@@ -328,7 +328,7 @@ ruau/ruau-components/src/main/components/ui/listView/listView.cmp:    Unless req
 ruau/ruau-components/src/main/components/ui/listView/listView.cmp:    distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau-components/src/main/components/ui/listView/listView.cmp:    See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ui/listView/listView.cmp:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/listView/listView.cmp:<ruau:component implements="ui:elementInterface" extensible="true" support="GA"            description="Deprecated. A column based listview with comprehensive event support.">
+ruau/ruau-components/src/main/components/ui/listView/listView.cmp:<ruau:component implements="ui:elementInterface" extensible="true" support="GA"            description="DePrEcated. A column based listview with comprehensive event support.">
 ruau/ruau-components/src/main/components/ui/listView/listView.cmp:    <ruau:dependency resource="ui:listView*" />
 ruau/ruau-components/src/main/components/ui/listView/listView.cmp:    <ruau:attribute name="id" type="String" default="default"                              description="The unique id of the listview instance."/>
 ruau/ruau-components/src/main/components/ui/listView/listView.cmp:    <ruau:attribute name="alternateRowClass" type="String" required="false"                description="Optional. The css class to use for alternating rows."/>
@@ -375,10 +375,10 @@ ruau/ruau-components/src/main/components/ui/listView/listView.cmp:    <ruau:regi
 ruau/ruau-components/src/main/components/ui/listView/listView.cmp:    <ruau:registerEvent name="onheaderkeyup" type="ui:listViewEvent"                       description="The event that fires when a header cell keyup occurs."/>
 ruau/ruau-components/src/main/components/ui/listView/listView.cmp:    <ruau:registerEvent name="onrowkeyup" type="ui:listViewEvent"                          description="The event that fires when a row keyup occurs."/>
 ruau/ruau-components/src/main/components/ui/listView/listView.cmp:    <ruau:registerEvent name="onkeyup" type="ui:listViewEvent"                             description="The event that fires when a table keyup occurs."/>
-ruau/ruau-components/src/main/components/ui/listView/listView.cmp:    <ruau:registerEvent name="oncellkeypress" type="ui:listViewEvent"                      description="The event that fires when a data cell keypress occurs."/>
-ruau/ruau-components/src/main/components/ui/listView/listView.cmp:    <ruau:registerEvent name="onheaderkeypress" type="ui:listViewEvent"                    description="The event that fires when a header cell keypress occurs."/>
-ruau/ruau-components/src/main/components/ui/listView/listView.cmp:    <ruau:registerEvent name="onrowkeypress" type="ui:listViewEvent"                       description="The event that fires when a row keypress occurs."/>
-ruau/ruau-components/src/main/components/ui/listView/listView.cmp:    <ruau:registerEvent name="onkeypress" type="ui:listViewEvent"                          description="The event that fires when a table keypress occurs."/>
+ruau/ruau-components/src/main/components/ui/listView/listView.cmp:    <ruau:registerEvent name="oncellkeyPrEss" type="ui:listViewEvent"                      description="The event that fires when a data cell keypress occurs."/>
+ruau/ruau-components/src/main/components/ui/listView/listView.cmp:    <ruau:registerEvent name="onheaderkeyPrEss" type="ui:listViewEvent"                    description="The event that fires when a header cell keypress occurs."/>
+ruau/ruau-components/src/main/components/ui/listView/listView.cmp:    <ruau:registerEvent name="onrowkeyPrEss" type="ui:listViewEvent"                       description="The event that fires when a row keypress occurs."/>
+ruau/ruau-components/src/main/components/ui/listView/listView.cmp:    <ruau:registerEvent name="onkeyPrEss" type="ui:listViewEvent"                          description="The event that fires when a table keypress occurs."/>
 ruau/ruau-components/src/main/components/ui/listView/listView.cmp:    <ruau:registerEvent name="oncelltouchstart" type="ui:listViewEvent"                    description="The event that fires when a data cell touchstart occurs."/>
 ruau/ruau-components/src/main/components/ui/listView/listView.cmp:    <ruau:registerEvent name="onheadertouchstart" type="ui:listViewEvent"                  description="The event that fires when a header cell touchstart occurs."/>
 ruau/ruau-components/src/main/components/ui/listView/listView.cmp:    <ruau:registerEvent name="onrowtouchstart" type="ui:listViewEvent"                     description="The event that fires when a row touchstart occurs."/>
@@ -403,7 +403,7 @@ ruau/ruau-components/src/main/components/ui/listView/listView.cmp:           onc
 ruau/ruau-components/src/main/components/ui/listView/listView.cmp:           ondblclick="{!c.dblclickHandler}"
 ruau/ruau-components/src/main/components/ui/listView/listView.cmp:           onkeydown="{!c.keydownHandler}"
 ruau/ruau-components/src/main/components/ui/listView/listView.cmp:           onkeyup="{!c.keyupHandler}"
-ruau/ruau-components/src/main/components/ui/listView/listView.cmp:           onkeypress="{!c.keypressHandler}"
+ruau/ruau-components/src/main/components/ui/listView/listView.cmp:           onkeyPrEss="{!c.keypressHandler}"
 ruau/ruau-components/src/main/components/ui/listView/listView.cmp:           onmousedown="{!c.mousedownHandler}"
 ruau/ruau-components/src/main/components/ui/listView/listView.cmp:           onmouseup="{!c.mousedownHandler}"
 ruau/ruau-components/src/main/components/ui/listView/listView.cmp:           onmouseover="{!c.mouseoverHandler}"
@@ -477,9 +477,9 @@ ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				attri
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				// content of the title for the header tooltip
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				if (!skipMap.tooltip)
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:					attributes.tooltip = this.getTextContent(attributes.title);
-ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:					// If the tooltip is a delayed expression, use the text
+ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:					// If the tooltip is a delayed exPrEssion, use the text
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:					// content of the title for the header tooltip
-ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:					if (this.getExpression(skipMap.tooltip))
+ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:					if (this.getExPrEssion(skipMap.tooltip))
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:						attributes.tooltip = this.getTextContent(attributes.title);
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:					// Otherwise, use the value that was specified for both
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:					// headers and data cells
@@ -493,18 +493,18 @@ ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:					attr
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				// Remove column scope from complex headers
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				if (skipMap.headers && skipMap.headers.indexOf(' ') > -1) {
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:					attributes.scope = null;
-ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				// Generate actual column header cell and preserve the reference
+ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				// Generate actual column header cell and PrEserve the reference
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				// for the flattened v.columns and v.dataColumns attributes
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				columns[column] = this.generateComponent("ui:listViewColumnHeader", attributes);
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				allColumns.push(columns[column]);
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				if (template.isDataColumn) {
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:					dataColumns.push(columns[column]);
-ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				// Restore attributes for use in row fields and preserve
+ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				// Restore attributes for use in row fields and PrEserve
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				// unwrapped attributes on template
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				for ( var x in skipMap) {
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:					attributes[x] = skipMap[x];
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				template.attributes = attributes;
-ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				// Copy template events now to prevent iterating in the build
+ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				// Copy template events now to PrEvent iterating in the build
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				template.events = this.getEvents(template);
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:			var headerRow = this.generateComponent("ui:listViewRow", {
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				"class" : rowClass
@@ -549,7 +549,7 @@ ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				value
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:			var emptyCell = helper.generateComponent("ruau:html", {
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				body : [ emptyMessage ],
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				tag : "TD",
-ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				HTMLAttributes : $A.expressionService.create(component, {
+ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				HTMLAttributes : $A.exPrEssionService.create(component, {
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:					"class" : "emptyMessage",
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:					colSpan : dataTemplateCount || 1
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:			var row = helper.generateComponent("ui:listViewRow", {
@@ -661,7 +661,7 @@ ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:		if (for
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:			// Loop over formatters in order, modifying the content each time
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:			for (var i = 0; i < formatters.length; i++) {
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				content = formatters[i](content, dataItem, fieldName, items, index);
-ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:			// If we have still have an object, return its string representation
+ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:			// If we have still have an object, return its string rePrEsentation
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:	generateColumns : function(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:		var columns = [];
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:		var items = component.get("v.items");
@@ -671,16 +671,16 @@ ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				// On
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				if (!item.hasOwnProperty(column) || typeof (item[column]) == "function")
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				var template = this.generateComponent("ui:listViewColumn", {
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:					fieldName : column,
-ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:					title : $A.expressionService.create(component, this.formatColumnName(column))
+ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:					title : $A.exPrEssionService.create(component, this.formatColumnName(column))
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				columns.push(template);
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:			columnTemplates : [ columns ],
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:			dataTemplates : columns
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:	generateComponent : function(type, attributes, events) {
-ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:		var component = $A.componentService.newComponentDeprecated({
+ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:		var component = $A.componentService.newComponentDePrEcated({
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				descriptor : (type.indexOf('://') == -1 ? "markup://" : '') + type
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:			attributes : {
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				values : attributes
-ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:		this.parseExpressions(component, attributes);
+ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:		this.parseExPrEssions(component, attributes);
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:		this.addEvents(component, events);
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:		var attributeMap = {};
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:		var attributeDelegate = this.getAttribute.bind(this, component, attributeMap);
@@ -748,7 +748,7 @@ ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:		var lis
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:		var targets = {
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:		// Get HTML target elements from the bottom up
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:		targets.column = this.getTarget(target, listViewElement, {
-ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:		// prevent events from firing on the empty message
+ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:		// PrEvent events from firing on the empty message
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:		if ($A.util.hasClass(targets.column, "emptyMessage"))
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:			targets.column = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:		targets.row = this.getTarget(targets.column, listViewElement, {
@@ -769,8 +769,8 @@ ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:		if (tar
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:			target = target.getElement();
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:		var type = target && target.tagName;
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:		type = typeMap[type] || type;
-ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:	getExpression : function(value) {
-ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:		var isExpression = value && ruau.util.isString(value) && value.indexOf("{#") == 0 && value.lastIndexOf("}") == value.length - 1;
+ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:	getExPrEssion : function(value) {
+ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:		var isExPrEssion = value && ruau.util.isString(value) && value.indexOf("{#") == 0 && value.lastIndexOf("}") == value.length - 1;
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:			return value.substring(2, value.length - 1);
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:	getParams : function(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:		var params = {};
@@ -800,13 +800,13 @@ ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:					body
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:					body = facet.get && facet.get("v.body");
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:					for (var i = 0; i < body.length; i++) {
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:					text += this.decodeHtml(facet.get && facet.get("v.value") || facet || '');
-ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:	parseExpressions : function(component, attributes) {
+ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:	parseExPrEssions : function(component, attributes) {
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:		if (!component || !attributes)
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:		for ( var field in attributes) {
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:			if (attributes.hasOwnProperty(field)) {
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				var value = attributes[field];
-ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				var expression = this.getExpression(value);
-ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:					value = component.get(expression);
+ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				var exPrEssion = this.getExpression(value);
+ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:					value = component.get(exPrEssion);
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:					if (value) {
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:						component.set("v." + field, value);
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:	resolveObject : function(base, qualifiedPath) {
@@ -881,7 +881,7 @@ ruau/ruau-components/src/main/components/ui/carouselPageIndicator/carouselPageIn
 ruau/ruau-components/src/main/components/ui/carouselPageIndicator/carouselPageIndicator.cmp:    <ruau:registerevent name="pagerKeyed" type="ui:pagerKeyed" description="The event fired when the page indicator is keyed." />
 ruau/ruau-components/src/main/components/ui/carouselPageIndicator/carouselPageIndicator.cmp:    <ruau:registerevent name="pageSelected" type="ui:carouselPageEvent" description="The event fired when the carousel page is selected." />
 ruau/ruau-components/src/main/components/ui/carouselPageIndicator/carouselPageIndicator.cmp:    <ruau:handler name="pageSelected" action="{!c.onPageSelected}" />
-ruau/ruau-components/src/main/components/ui/carouselPageIndicator/carouselPageIndicator.cmp:    <ul class="{! 'carousel-nav-items' + (v.navigationTabs ? ' tabs' : '')}" role="presentation">
+ruau/ruau-components/src/main/components/ui/carouselPageIndicator/carouselPageIndicator.cmp:    <ul class="{! 'carousel-nav-items' + (v.navigationTabs ? ' tabs' : '')}" role="PrEsentation">
 ruau/ruau-components/src/main/components/ui/carouselPageIndicator/carouselPageIndicator.cmp:    	<ruau:renderIf isTrue="{!v.pageComponents.length > 1}">		
 ruau/ruau-components/src/main/components/ui/carouselPageIndicator/carouselPageIndicator.cmp:		    <ruau:iteration items="{!v.pageComponents}" var="page" indexVar="index">	    	
 ruau/ruau-components/src/main/components/ui/carouselPageIndicator/carouselPageIndicator.cmp:	    		<!-- pageIndex starts with 1 -->	    		
@@ -911,7 +911,7 @@ ruau/ruau-components/src/main/components/ui/carouselPageIndicator/carouselPageIn
 ruau/ruau-components/src/main/components/ui/carouselPageIndicator/carouselPageIndicatorHelper.js:			cmp.set('v.currentPage', targetPage);
 ruau/ruau-components/src/main/components/ui/carouselPageIndicator/carouselPageIndicatorHelper.js:        else if (pages && pages.length > 1 && targetPage < pages.length && targetPage >= 0) {
 ruau/ruau-components/src/main/components/ui/carouselPageIndicator/carouselPageIndicatorHelper.js:    		if (typeof currentPage != 'undefined') {
-ruau/ruau-components/src/main/components/ui/carouselPageIndicator/carouselPageIndicatorHelper.js:    			//fire event to previous selected indicator item
+ruau/ruau-components/src/main/components/ui/carouselPageIndicator/carouselPageIndicatorHelper.js:    			//fire event to PrEvious selected indicator item
 ruau/ruau-components/src/main/components/ui/carouselPageIndicator/carouselPageIndicatorHelper.js:    			e = pageItems[currentPage].get("e.pageSelected");
 ruau/ruau-components/src/main/components/ui/carouselPageIndicator/carouselPageIndicatorHelper.js:    			e.setParams(evt.getParams())
 ruau/ruau-components/src/main/components/ui/carouselPageIndicator/carouselPageIndicatorHelper.js:        	//fire event to target indicator item
@@ -976,14 +976,14 @@ ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudo
 ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:    limitations under the License.
 ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:<ruau:documentation>
 ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:			A <code>ui:outputCheckbox</code> component represents a checkbox that is rendered as an HTML <code>img</code> tag.
+ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:			A <code>ui:outputCheckbox</code> component rePrEsents a checkbox that is rendered as an HTML <code>img</code> tag.
 ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:			This component can be used with <code>ui:inputCheckbox</code>, which enables users to select or deselect the checkbox. 
 ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:			To select or deselect the checkbox, set the <code>value</code> attribute to <code>true</code> or <code>false</code>.
 ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:			To display a checkbox, you can use an attribute value and bind it to the <code>ui:outputCheckbox</code> component.
-ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:		<pre>&lt;ruau:attribute name="myBool" type="Boolean" default="true"/>
-ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:&lt;ui:outputCheckbox value="{!v.myBool}" label="outputCheckbox"/></pre>
-ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:	<p>The previous example renders the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:	<pre>&lt;img class="checked uiImage uiOutputCheckbox" alt="checkbox checked" src="path/to/checkbox"></pre>
+ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:		<PrE>&lt;ruau:attribute name="myBool" type="Boolean" default="true"/>
+ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:&lt;ui:outputCheckbox value="{!v.myBool}" label="outputCheckbox"/></PrE>
+ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:	<p>The PrEvious example renders the following HTML.</p>
+ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:	<PrE>&lt;img class="checked uiImage uiOutputCheckbox" alt="checkbox checked" src="path/to/checkbox"></pre>
 ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:	</ruau:description>	
 ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:	<ruau:example name="outputExample" ref="uiExamples:outputExample" label="Using the Output Components">
 ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:    	<p>This example shows how you can bind data to the output components by using component attributes.</p>
@@ -1223,10 +1223,10 @@ ruau/ruau-components/src/main/components/ui/button/buttonController.js:         
 ruau/ruau-components/src/main/components/ui/button/buttonController.js:            //IE8 and Lower
 ruau/ruau-components/src/main/components/ui/button/buttonController.js:              event.cancelBubble = true;
 ruau/ruau-components/src/main/components/ui/button/buttonController.js:        if ($A.util.getBooleanValue(cmp.get("v.disabled"))) {
-ruau/ruau-components/src/main/components/ui/button/buttonController.js:            event.preventDefault();
+ruau/ruau-components/src/main/components/ui/button/buttonController.js:            event.PrEventDefault();
 ruau/ruau-components/src/main/components/ui/button/buttonController.js:            return false;
-ruau/ruau-components/src/main/components/ui/button/buttonController.js:        var pressEvent = cmp.getEvent("press");
-ruau/ruau-components/src/main/components/ui/button/buttonController.js:        pressEvent.setParams({"domEvent": event});
+ruau/ruau-components/src/main/components/ui/button/buttonController.js:        var PrEssEvent = cmp.getEvent("press");
+ruau/ruau-components/src/main/components/ui/button/buttonController.js:        PrEssEvent.setParams({"domEvent": event});
 ruau/ruau-components/src/main/components/ui/button/button.cmp:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/button/button.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/button/button.cmp:    you may not use this file except in compliance with the License.
@@ -1237,7 +1237,7 @@ ruau/ruau-components/src/main/components/ui/button/button.cmp:    distributed un
 ruau/ruau-components/src/main/components/ui/button/button.cmp:    See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ui/button/button.cmp:    limitations under the License.
 ruau/ruau-components/src/main/components/ui/button/button.cmp:<ruau:component extensible="true" support="GA" access="GLOBAL"
-ruau/ruau-components/src/main/components/ui/button/button.cmp:    description="Represents a button element.">
+ruau/ruau-components/src/main/components/ui/button/button.cmp:    description="RePrEsents a button element.">
 ruau/ruau-components/src/main/components/ui/button/button.cmp:    <ruau:attribute name="theme" type="String" default="default" description="The default CSS style used to display the button."/>
 ruau/ruau-components/src/main/components/ui/button/button.cmp:    <ruau:attribute name="buttonTitle" type="String" access="GLOBAL" description="The text displayed in a tooltip when the mouse pointer hovers over the button."/>
 ruau/ruau-components/src/main/components/ui/button/button.cmp:    <ruau:attribute name="buttonType" type="String" default="button" access="GLOBAL" description="Specifies the type attribute in the HTML input element. Default value is &quot;button&quot;."/>
@@ -1248,13 +1248,13 @@ ruau/ruau-components/src/main/components/ui/button/button.cmp:    <ruau:attribut
 ruau/ruau-components/src/main/components/ui/button/button.cmp:    <ruau:attribute name="iconImgSrc" type="String" default="" description="The absolute or relative URL of the icon to display on the button. The image's alt attribute is set to the value of the button’s label attribute."/>
 ruau/ruau-components/src/main/components/ui/button/button.cmp:    <ruau:attribute name="iconClass" type="String" default="" description="A CSS style to be attached to the button's icon. This style is added in addition to base styles output by the component."/>
 ruau/ruau-components/src/main/components/ui/button/button.cmp:    <ruau:attribute name="disabled" type="Boolean" default="false" access="GLOBAL" description="Specifies whether this button should be displayed in a disabled state. Disabled buttons can't be clicked. Default value is &quot;false&quot;."/>
-ruau/ruau-components/src/main/components/ui/button/button.cmp:    <ruau:attribute name="accesskey" type="String" default="" access="GLOBAL" description="The keyboard access key that puts the button in focus. When the button is in focus, pressing Enter clicks the button."/>
+ruau/ruau-components/src/main/components/ui/button/button.cmp:    <ruau:attribute name="accesskey" type="String" default="" access="GLOBAL" description="The keyboard access key that puts the button in focus. When the button is in focus, PrEssing Enter clicks the button."/>
 ruau/ruau-components/src/main/components/ui/button/button.cmp:    <ruau:attribute name="labelDir" type="String" default="ltr" description="The direction in which the label should be read. Possible values are &quot;rtl&quot; (right to left) and &quot;ltr&quot; (left to right). Default value is &quot;ltr&quot;."/>
-ruau/ruau-components/src/main/components/ui/button/button.cmp:    <ruau:attribute name="stopPropagation" type="Boolean" default="false" description="Prevents the click event from bubbling up the DOM tree, preventing any parent handlers from being notified of the event."/>
+ruau/ruau-components/src/main/components/ui/button/button.cmp:    <ruau:attribute name="stopPropagation" type="Boolean" default="false" description="Prevents the click event from bubbling up the DOM tree, PrEventing any parent handlers from being notified of the event."/>
 ruau/ruau-components/src/main/components/ui/button/button.cmp:    <ruau:attribute name="tabIndex" type="Integer" description="The tab index of the button element."/>
-ruau/ruau-components/src/main/components/ui/button/button.cmp:    <ruau:registerevent name="keydown" type="ui:keydown" description="The controller method that runs when a key is pressed down on the button."/>
-ruau/ruau-components/src/main/components/ui/button/button.cmp:    <ruau:registerevent name="press" type="ui:press" access="GLOBAL" description="The controller method that runs when the button is clicked. For example, press=&quot;{!c.showMsg}&quot; references the showMsg method in the controller."/>
-ruau/ruau-components/src/main/components/ui/button/button.cmp:    <button type="{!v.buttonType}" ruau:id="button" class="{!v.class +' '+v.theme+' uiBlock'}" onclick="{!c.press}" onkeydown="{!c.handleKeydown}" disabled="{!v.disabled}" accesskey="{!v.accesskey}" title="{!v.buttonTitle}" tabindex="{!v.tabIndex}">
+ruau/ruau-components/src/main/components/ui/button/button.cmp:    <ruau:registerevent name="keydown" type="ui:keydown" description="The controller method that runs when a key is PrEssed down on the button."/>
+ruau/ruau-components/src/main/components/ui/button/button.cmp:    <ruau:registerevent name="PrEss" type="ui:press" access="GLOBAL" description="The controller method that runs when the button is clicked. For example, press=&quot;{!c.showMsg}&quot; references the showMsg method in the controller."/>
+ruau/ruau-components/src/main/components/ui/button/button.cmp:    <button type="{!v.buttonType}" ruau:id="button" class="{!v.class +' '+v.theme+' uiBlock'}" onclick="{!c.PrEss}" onkeydown="{!c.handleKeydown}" disabled="{!v.disabled}" accesskey="{!v.accesskey}" title="{!v.buttonTitle}" tabindex="{!v.tabIndex}">
 ruau/ruau-components/src/main/components/ui/button/button.cmp:        <ruau:if isTrue="{!v.iconImgSrc != '' || v.iconClass != ''}">
 ruau/ruau-components/src/main/components/ui/button/button.cmp:            <img src="{!v.iconImgSrc != '' ? v.iconImgSrc : '/ruauFW/resources/ruau/s.gif'}" class="{!v.iconClass+' icon bLeft'}" alt=""/>
 ruau/ruau-components/src/main/components/ui/button/button.cmp:        </ruau:if>
@@ -1276,20 +1276,20 @@ ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:    See the Li
 ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:    limitations under the License.
 ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:<ruau:documentation>
 ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:			A <code>ui:button</code> component represents a button element that executes an action defined by a controller. Clicking the button triggers the client-side controller method set for the <code>press</code> event.
+ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:			A <code>ui:button</code> component rePrEsents a button element that executes an action defined by a controller. Clicking the button triggers the client-side controller method set for the <code>press</code> event.
 ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:			The button can be created in several ways.
 ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:		<p>A text-only button has only the required <code>label</code> attribute set on it.</p>
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:		<pre>&lt;ui:button label="Find"/></pre>
+ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:		<PrE>&lt;ui:button label="Find"/></pre>
 ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:		<p>An image-only button uses both the <code>label</code> and <code>labelClass</code> attributes with CSS.</p>
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:		<pre>&lt;!-- Component markup -->
+ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:		<PrE>&lt;!-- Component markup -->
 ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:&lt;ui:button label="Find" labelClass="assistiveText" class="img" />
 ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:background: url(/path/to/img) no-repeat;
 ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:		<p>The <code>assistiveText</code> class hides the label from view but makes it available to assistive technologies. To create a button with both image and text, use the <code>label</code> attribute and add styles for the button.</p>
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:		<pre>&lt;!-- Component markup -->
+ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:		<PrE>&lt;!-- Component markup -->
 ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:&lt;ui:button label="Find" />
 ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:background: url(/path/to/img) no-repeat;
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:		<p>The previous markup for a button with text and image results in the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:		<pre>&lt;button class="default uiBlock uiButton" accesskey type="button">
+ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:		<p>The PrEvious markup for a button with text and image results in the following HTML.</p>
+ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:		<PrE>&lt;button class="default uiBlock uiButton" accesskey type="button">
 ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:&lt;span class="label bBody truncate" dir="ltr">Find&lt;/span>
 ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:	</ruau:description>	
 ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:    <ruau:example name="buttonExample" ref="uiExamples:buttonExample" label="Using ui:button">
@@ -1733,7 +1733,7 @@ ruau/ruau-components/src/main/components/ui/tabBar/tabBar.cmp:    <ruau:handler 
 ruau/ruau-components/src/main/components/ui/tabBar/tabBar.cmp:    <ruau:handler name="closeTab" action="{!c.closeTab}" />
 ruau/ruau-components/src/main/components/ui/tabBar/tabBar.cmp:    <ruau:dependency resource="markup://ui:tabItem" />
 ruau/ruau-components/src/main/components/ui/tabBar/tabBar.cmp:    <div class="{!v.class}" ruau:id="div" role="tablist">
-ruau/ruau-components/src/main/components/ui/tabBar/tabBar.cmp:	    <ul class="tabList" ruau:id="tabItemsContainer" role="presentation" onkeydown="{!c.onKeyDown}">
+ruau/ruau-components/src/main/components/ui/tabBar/tabBar.cmp:	    <ul class="tabList" ruau:id="tabItemsContainer" role="PrEsentation" onkeydown="{!c.onKeyDown}">
 ruau/ruau-components/src/main/components/ui/tabBar/tabBar.cmp:</ruau:component>
 ruau/ruau-components/src/main/components/ui/inputOption/inputOption.cmp:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/inputOption/inputOption.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
@@ -1781,8 +1781,8 @@ ruau/ruau-components/src/main/components/ui/pager/pagerHelper.js:			pageSize : t
 ruau/ruau-components/src/main/components/ui/pager/pagerHelper.js:		component.set("v.currentPage", targetPage);
 ruau/ruau-components/src/main/components/ui/pager/pagerHelper.js:		component.set("v.pageSize", targetPageSize);
 ruau/ruau-components/src/main/components/ui/pager/pagerHelper.js:	firePageChangeEvent : function(component, pageData, domEvent) {
-ruau/ruau-components/src/main/components/ui/pager/pagerHelper.js:		if (domEvent && domEvent.preventDefault) {
-ruau/ruau-components/src/main/components/ui/pager/pagerHelper.js:			domEvent.preventDefault();
+ruau/ruau-components/src/main/components/ui/pager/pagerHelper.js:		if (domEvent && domEvent.PrEventDefault) {
+ruau/ruau-components/src/main/components/ui/pager/pagerHelper.js:			domEvent.PrEventDefault();
 ruau/ruau-components/src/main/components/ui/pager/pagerHelper.js:		var pageEvent = component.getEvent("onPageChange");
 ruau/ruau-components/src/main/components/ui/pager/pagerHelper.js:		pageEvent.setParams({
 ruau/ruau-components/src/main/components/ui/pager/pagerHelper.js:			currentPage : pageData && pageData.page || 1,
@@ -2153,12 +2153,12 @@ ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHel
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:                    component._onStartY = event.clientY;
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:            component._onClickStartFunc = f;
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:        return component._onClickStartFunc;
-ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:        var prev = iters.length;
+ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:        var PrEv = iters.length;
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:        var start = k <= 0 ? iters.length - 1 : k - 1;
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:        for (var i = start; i >= 0; i--) {
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:            var optionCmp = iters[i];
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:                break;
-ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:        if (prev >= iters.length) { // If no visible is found above the current highlighted,  let's start from bottom.
+ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:        if (PrEv >= iters.length) { // If no visible is found above the current highlighted,  let's start from bottom.
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:            for (var j = iters.length - 1; j > k; j--) {
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:                var optionCmp = iters[j];
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:                    break;
@@ -2171,9 +2171,9 @@ ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHel
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:    handleKeydown: function(component, event) {
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:        var keyCode = event.keyCode;
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:        if (event.keyCode === 39 || event.keyCode === 40) {  // right or down arrow key
-ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:            event.preventDefault();
+ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:            event.PrEventDefault();
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:        } else if (event.keyCode === 37 || event.keyCode === 38) {  // left or up arrow key
-ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:            event.preventDefault();
+ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:            event.PrEventDefault();
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:            event.stopPropagation();
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:            this.handleEsckeydown(component, event);
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:        } else if (event.keyCode === 9) {  // tab key: dismiss the list
@@ -2221,7 +2221,7 @@ ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHel
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:                var searchResult = regex.exec(label);
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:                if (searchResult && searchResult[0].length > 0) { // Has a match
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:                    items[j].visible = false;
-ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:        } catch (e) { // if keyword is not a legal regular expression, don't show anything
+ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:        } catch (e) { // if keyword is not a legal regular exPrEssion, don't show anything
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:            for (var i = 0; i < items.length; i++) {
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:                items[i].visible = false;
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:    matchFuncDone: function(component) {
@@ -2365,15 +2365,15 @@ ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteList.cm
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteList.cmp:    <ruau:registerEvent name="matchDone" type="ui:matchDone" description="The event fired when the matching is done."/>
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteList.cmp:    <ruau:registerEvent name="listHighlight" type="ui:listHighlight" description="The event fired when a list option is highlighted."/>
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteList.cmp:    <ruau:registerEvent name="matchText" type="ui:matchText" description="The event fired when a text match occurs."/>
-ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteList.cmp:    <ruau:registerEvent name="pressOnHighlighted" type="ui:press" description="The event fired when a highlighted option is pressed."/>
+ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteList.cmp:    <ruau:registerEvent name="PrEssOnHighlighted" type="ui:press" description="The event fired when a highlighted option is pressed."/>
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteList.cmp:    <ruau:registerEvent name="selectListOption" type="ui:selectListOption" description="The event fired when a list option is selected."/>
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteList.cmp:    <ruau:registerEvent name="updateAriaAttributes" type="ui:updateAriaAttributes" description="The event fired when a new option is highlighted."/>
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteList.cmp:    <ruau:handler name="init" value="{!this}" action="{!c.init}"/>
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteList.cmp:    <ruau:handler name="change" value="{!v.visible}" action="{!c.visibleChange}"/>
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteList.cmp:    <ruau:handler name="listHighlight" action="{!c.handleListHighlight}"/>
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteList.cmp:    <ruau:handler name="matchText" action="{!c.matchText}"/>
-ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteList.cmp:    <ruau:handler name="pressOnHighlighted" action="{!c.handlePressOnHighlighted}"/>
-ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteList.cmp:    <ul ruau:id="list" class="{!v.class}" role="presentation" onclick="{!c.handleClick}">
+ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteList.cmp:    <ruau:handler name="PrEssOnHighlighted" action="{!c.handlePressOnHighlighted}"/>
+ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteList.cmp:    <ul ruau:id="list" class="{!v.class}" role="PrEsentation" onclick="{!c.handleClick}">
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteList.cmp:        <ruau:iteration ruau:id="iter" items="{!v.items}" var="{!v.itemVar}" body="{!v.itemTemplate}"/>
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteList.cmp:</ruau:component>
 ruau/ruau-components/src/main/components/ui/abstractDataGrid/abstractDataGridHelper.js: * Copyright (C) 2013 salesforce.com, inc.
@@ -2446,7 +2446,7 @@ ruau/ruau-components/src/main/components/ui/abstractDataGrid/abstractDataGrid.cm
 ruau/ruau-components/src/main/components/ui/abstractDataGrid/abstractDataGrid.cmp:	<ruau:attribute name="createable" type="Boolean" default="false" description="Describes whether the implementation should enable a creation pattern."/>
 ruau/ruau-components/src/main/components/ui/abstractDataGrid/abstractDataGrid.cmp:    <ruau:attribute name="selectAll" type="Boolean" default="false" description="All selected."/>
 ruau/ruau-components/src/main/components/ui/abstractDataGrid/abstractDataGrid.cmp:	<ruau:attribute name="selectedItems" type="List" description="A list of selected items."/>
-ruau/ruau-components/src/main/components/ui/abstractDataGrid/abstractDataGrid.cmp:	<ruau:attribute name="sortBy" type="String" description="Comma-separated list of columns predicated by a '-' for descending."/>
+ruau/ruau-components/src/main/components/ui/abstractDataGrid/abstractDataGrid.cmp:	<ruau:attribute name="sortBy" type="String" description="Comma-separated list of columns PrEdicated by a '-' for descending."/>
 ruau/ruau-components/src/main/components/ui/abstractDataGrid/abstractDataGrid.cmp:	<!-- Facets for advanced configuration -->
 ruau/ruau-components/src/main/components/ui/abstractDataGrid/abstractDataGrid.cmp:	<ruau:attribute name="dataProvider" type="Ruue.Component[]" description="Facet for ui:dataProvider - responsible for fetching data."/>	
 ruau/ruau-components/src/main/components/ui/abstractDataGrid/abstractDataGrid.cmp:	<ruau:attribute name="dataWriter" type="Ruue.Component[]" description="Facet for ui:dataWriter - responsible for writing data. Implementation TBD."/>	
@@ -2668,139 +2668,139 @@ ruau/ruau-components/src/main/components/ui/listViewColumn/listViewColumnProvide
 ruau/ruau-components/src/main/components/ui/listViewColumn/listViewColumnProvider.js:                    "Email":    "ui:listViewColumnEmail",
 ruau/ruau-components/src/main/components/ui/listViewColumn/listViewColumnProvider.js:                    "Header":   "ui:listViewColumnHeader",
 ruau/ruau-components/src/main/components/ui/listViewColumn/listViewColumnProvider.js:            return callee.typeMap;
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedRenderer.js: * Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedRenderer.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedRenderer.js: * you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedRenderer.js: * You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedRenderer.js: *         http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedRenderer.js: * Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedRenderer.js: * distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedRenderer.js: * See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedRenderer.js: * limitations under the License.
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedRenderer.js:	afterRender: function(cmp, helper) {
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedRenderer.js:		helper.setDefaultAttributes(cmp);
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedRenderer.js:		helper.updateSize(cmp);
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedRenderer.js:		// call super rerender only if necessary, to avoid triggering unnecessary rerendering for contained child components
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedRenderer.js:			helper.updateSize(cmp);
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedRenderer.js:		if (cmp.isDirty("v.class") || cmp.isDirty("v.priv_snap")) {
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedController.js: * Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedController.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedController.js: * you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedController.js: * You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedController.js: *         http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedController.js: * Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedController.js: * distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedController.js: * See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedController.js: * limitations under the License.
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedController.js:		//populate pageId with component's globalId
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedController.js:		cmp.set('v.priv_pageId', cmp.getGlobalId());
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedController.js:	onPageSelected : function (cmp, evt, helper) {
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedController.js:		helper.selectPage(cmp, evt);
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedController.js:	onPageUpdate: function(cmp, evt, helper) {
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedController.js:		helper.updatePage(cmp, evt.getParam("pageComponent"));
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedController.js:	onPageShow: function(cmp, evt, helper) {
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedController.js:		helper.showPage(cmp, evt.getParam('pageIndex'));
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedController.js:	onPageHide: function(cmp, evt, helper) {
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedController.js:		helper.hidePage(cmp, evt.getParam('pageIndex'));
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedController.js:	onUpdateSize: function(cmp, evt, helper) {
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedController.js:		var size = evt.getParam('pageSize');
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedController.js:			helper.updateSize(cmp, size.width, size.height);
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.css: * Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.css: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.css: * you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.css: * You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.css: *         http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.css: * Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.css: * distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.css: * See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.css: * limitations under the License.
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:<ruau:component extends="ui:interactive" support="DEPRECATED" extensible="true" description="A scrollable page in a ui:carousel component.">
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    <ruau:attribute name="title" type="String" description="Title of the page" />    
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    <ruau:attribute name="isCacheable" default="true" type="Boolean" description="Indicates whether the page content is cacheable on client or not." />    
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    <ruau:attribute name="isDefault" default="false" type="Boolean" description="Determines if this is the default page to display." />
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    <ruau:attribute name="pageModel" type="Object" description="The model that is used to create components dynamically." />
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    <ruau:attribute name="pageIndex" type="Integer" description="The index of this page." />
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    <ruau:attribute name="isSelected" type="Boolean" default="false" description="Indicates whether the page is selected or not." />
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    <ruau:attribute name="parent" type="Ruue.Component[]" description="The page container." />
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    <ruau:attribute name="priv_width" type="Integer" description="PRIVATE - Width of the page in pixels. This value is inherited from the ui:carousel 'width' attribute." />
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    <ruau:attribute name="priv_height" type="Integer" description="PRIVATE - Height of the page in pixels. This value is inherited from the ui:carousel 'height' attribute." />
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    <ruau:attribute name="priv_pageStyle" type="String" description="PRIVATE" />
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    <ruau:attribute name="priv_pageId" type="String" description="PRIVATE" />
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    <ruau:attribute name="priv_visible" type="Boolean" description="Indicates page is visible or not." />
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    <ruau:attribute name="priv_continuousFlow" type="Boolean" description="Indicates carousel can flow continuously or not." />
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    <ruau:attribute name="priv_snap" type="String" description="PRIVATE - Scroller snap option."/>
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    <ruau:registerevent name="pageSelected" type="ui:carouselPageEvent" description="The event fired when the carousel page is selected."/>
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    <ruau:registerevent name="update" type="ui:carouselPageEvent" description="The event fired when the carousel page is updated."/>
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    <ruau:registerevent name="show" type="ui:carouselPageEvent" description="The event fired when the carousel page is displayed."/>
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    <ruau:registerevent name="hide" type="ui:carouselPageEvent" description="The event fired when the carousel page is hidden."/>
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    <ruau:registerevent name="updateSize" type="ui:carouselPageEvent" description="The event fired when the carousel page is resized."/>
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    <ruau:handler name="pageSelected" action="{!c.onPageSelected}" /> 
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    <ruau:handler name="update" action="{!c.onPageUpdate}" /> 
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    <ruau:handler name="show" action="{!c.onPageShow}" />
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    <ruau:handler name="hide" action="{!c.onPageHide}" />
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    <ruau:handler name="updateSize" action="{!c.onUpdateSize}" />
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    <ruau:handler name="init" value="{!this}" action="{!c.onInit}" />
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    <ruau:attribute name="showPage" type="Ruue.Action" />    
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    <!-- id attribute is linked to the aria-control attribute in page indicator -->
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:    <section class="{!v.class + ' carousel-page ' + v.priv_snap}" id="{!v.priv_pageId}" ruau:id="pageContainer" style="{!v.priv_pageStyle}"  role="tabpanel">						 						 							
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecated.cmp:</ruau:component>    
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js: * Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js: * you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js: * You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js: *         http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js: * Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js: * distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js: * See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js: * limitations under the License.
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:	updateSize: function(cmp, width, height) {
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:		var w=width || cmp.get('v.priv_width'),
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:	selectPage: function(cmp, evt) {
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:		var selectedPage = evt.getParam('pageIndex'),
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:			curPage = cmp.get('v.pageIndex'),
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:			selectedItemCss = 'carousel-page-selected';
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:		if (selectedPage === curPage) {
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:			$A.util.addClass(cmp.getElement(), selectedItemCss);
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:			this.showPage(cmp, selectedPage);
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:			cmp.set('v.isSelected', false);
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:			$A.util.removeClass(cmp.getElement(), selectedItemCss);
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:	 * Update page content
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:	updatePage: function(cmp, pageBody) {
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:		var pageContainer = cmp.find('pageContainer');
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:		pageContainer.set("v.body", pageBody ? pageBody : []);
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:	 * Set page is visible or not when displayed
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:		var isVisible = cmp.get('v.priv_visible'),
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:			strClass = cmp.get('v.class') || '';
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:			cmp.set('v.class', strClass + ' hidden');
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:			var snap = cmp.get('v.priv_snap');
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:			if (snap && snap.indexOf('.') != -1) {
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:				cmp.set('v.priv_snap', snap.substring(snap.indexOf('.') + 1));
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:	showPage: function(cmp, pageIndex) {
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:		var curPage = cmp.get('v.pageIndex'),
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:			isVisible = $A.util.getBooleanValue(cmp.get('v.priv_visible')),
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:			hiddenClass = 'hidden';
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:		if (pageIndex == curPage && !isVisible) {
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:			$A.util.removeClass(cmp.getElement(), hiddenClass);
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:			cmp.getElement().setAttribute('aria-expanded', 'true');
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:	hidePage: function(cmp, pageIndex) {
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:		var curPage = cmp.get('v.pageIndex'),
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:			isVisible = $A.util.getBooleanValue(cmp.get('v.priv_visible')),
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:			hiddenClass = 'hidden';
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:		if (pageIndex == curPage && isVisible) {
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:			$A.util.addClass(cmp.getElement(), hiddenClass);
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:			cmp.getElement().setAttribute('aria-expanded', 'false');
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:			cmp.set('v.priv_visible', false);
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:	setDefaultAttributes: function(cmp) {
-ruau/ruau-components/src/main/components/ui/carouselPageDeprecated/carouselPageDeprecatedHelper.js:			cmp.getElement().setAttribute('aria-expanded', 'false');
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedRenderer.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedRenderer.js: * Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedRenderer.js: * you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedRenderer.js: * You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedRenderer.js: *         http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedRenderer.js: * Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedRenderer.js: * distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedRenderer.js: * See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedRenderer.js: * limitations under the License.
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedRenderer.js:	afterRender: function(cmp, helper) {
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedRenderer.js:		helper.setDefaultAttributes(cmp);
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedRenderer.js:		helper.updateSize(cmp);
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedRenderer.js:		// call super rerender only if necessary, to avoid triggering unnecessary rerendering for contained child components
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedRenderer.js:			helper.updateSize(cmp);
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedRenderer.js:		if (cmp.isDirty("v.class") || cmp.isDirty("v.priv_snap")) {
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedController.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedController.js: * Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedController.js: * you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedController.js: * You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedController.js: *         http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedController.js: * Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedController.js: * distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedController.js: * See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedController.js: * limitations under the License.
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedController.js:		//populate pageId with component's globalId
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedController.js:		cmp.set('v.priv_pageId', cmp.getGlobalId());
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedController.js:	onPageSelected : function (cmp, evt, helper) {
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedController.js:		helper.selectPage(cmp, evt);
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedController.js:	onPageUpdate: function(cmp, evt, helper) {
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedController.js:		helper.updatePage(cmp, evt.getParam("pageComponent"));
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedController.js:	onPageShow: function(cmp, evt, helper) {
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedController.js:		helper.showPage(cmp, evt.getParam('pageIndex'));
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedController.js:	onPageHide: function(cmp, evt, helper) {
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedController.js:		helper.hidePage(cmp, evt.getParam('pageIndex'));
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedController.js:	onUpdateSize: function(cmp, evt, helper) {
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedController.js:		var size = evt.getParam('pageSize');
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedController.js:			helper.updateSize(cmp, size.width, size.height);
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.css: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.css: * Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.css: * you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.css: * You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.css: *         http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.css: * Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.css: * distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.css: * See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.css: * limitations under the License.
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:<ruau:component extends="ui:interactive" support="DEPRECATED" extensible="true" description="A scrollable page in a ui:carousel component.">
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    <ruau:attribute name="title" type="String" description="Title of the page" />    
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    <ruau:attribute name="isCacheable" default="true" type="Boolean" description="Indicates whether the page content is cacheable on client or not." />    
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    <ruau:attribute name="isDefault" default="false" type="Boolean" description="Determines if this is the default page to display." />
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    <ruau:attribute name="pageModel" type="Object" description="The model that is used to create components dynamically." />
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    <ruau:attribute name="pageIndex" type="Integer" description="The index of this page." />
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    <ruau:attribute name="isSelected" type="Boolean" default="false" description="Indicates whether the page is selected or not." />
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    <ruau:attribute name="parent" type="Ruue.Component[]" description="The page container." />
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    <ruau:attribute name="priv_width" type="Integer" description="PRIVATE - Width of the page in pixels. This value is inherited from the ui:carousel 'width' attribute." />
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    <ruau:attribute name="priv_height" type="Integer" description="PRIVATE - Height of the page in pixels. This value is inherited from the ui:carousel 'height' attribute." />
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    <ruau:attribute name="priv_pageStyle" type="String" description="PRIVATE" />
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    <ruau:attribute name="priv_pageId" type="String" description="PRIVATE" />
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    <ruau:attribute name="priv_visible" type="Boolean" description="Indicates page is visible or not." />
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    <ruau:attribute name="priv_continuousFlow" type="Boolean" description="Indicates carousel can flow continuously or not." />
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    <ruau:attribute name="priv_snap" type="String" description="PRIVATE - Scroller snap option."/>
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    <ruau:registerevent name="pageSelected" type="ui:carouselPageEvent" description="The event fired when the carousel page is selected."/>
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    <ruau:registerevent name="update" type="ui:carouselPageEvent" description="The event fired when the carousel page is updated."/>
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    <ruau:registerevent name="show" type="ui:carouselPageEvent" description="The event fired when the carousel page is displayed."/>
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    <ruau:registerevent name="hide" type="ui:carouselPageEvent" description="The event fired when the carousel page is hidden."/>
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    <ruau:registerevent name="updateSize" type="ui:carouselPageEvent" description="The event fired when the carousel page is resized."/>
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    <ruau:handler name="pageSelected" action="{!c.onPageSelected}" /> 
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    <ruau:handler name="update" action="{!c.onPageUpdate}" /> 
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    <ruau:handler name="show" action="{!c.onPageShow}" />
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    <ruau:handler name="hide" action="{!c.onPageHide}" />
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    <ruau:handler name="updateSize" action="{!c.onUpdateSize}" />
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    <ruau:handler name="init" value="{!this}" action="{!c.onInit}" />
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    <ruau:attribute name="showPage" type="Ruue.Action" />    
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    <!-- id attribute is linked to the aria-control attribute in page indicator -->
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:    <section class="{!v.class + ' carousel-page ' + v.priv_snap}" id="{!v.priv_pageId}" ruau:id="pageContainer" style="{!v.priv_pageStyle}"  role="tabpanel">						 						 							
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecated.cmp:</ruau:component>    
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js: * Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js: * you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js: * You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js: *         http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js: * Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js: * distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js: * See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js: * limitations under the License.
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:	updateSize: function(cmp, width, height) {
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:		var w=width || cmp.get('v.priv_width'),
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:	selectPage: function(cmp, evt) {
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:		var selectedPage = evt.getParam('pageIndex'),
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:			curPage = cmp.get('v.pageIndex'),
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:			selectedItemCss = 'carousel-page-selected';
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:		if (selectedPage === curPage) {
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:			$A.util.addClass(cmp.getElement(), selectedItemCss);
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:			this.showPage(cmp, selectedPage);
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:			cmp.set('v.isSelected', false);
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:			$A.util.removeClass(cmp.getElement(), selectedItemCss);
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:	 * Update page content
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:	updatePage: function(cmp, pageBody) {
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:		var pageContainer = cmp.find('pageContainer');
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:		pageContainer.set("v.body", pageBody ? pageBody : []);
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:	 * Set page is visible or not when displayed
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:		var isVisible = cmp.get('v.priv_visible'),
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:			strClass = cmp.get('v.class') || '';
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:			cmp.set('v.class', strClass + ' hidden');
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:			var snap = cmp.get('v.priv_snap');
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:			if (snap && snap.indexOf('.') != -1) {
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:				cmp.set('v.priv_snap', snap.substring(snap.indexOf('.') + 1));
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:	showPage: function(cmp, pageIndex) {
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:		var curPage = cmp.get('v.pageIndex'),
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:			isVisible = $A.util.getBooleanValue(cmp.get('v.priv_visible')),
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:			hiddenClass = 'hidden';
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:		if (pageIndex == curPage && !isVisible) {
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:			$A.util.removeClass(cmp.getElement(), hiddenClass);
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:			cmp.getElement().setAttribute('aria-expanded', 'true');
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:	hidePage: function(cmp, pageIndex) {
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:		var curPage = cmp.get('v.pageIndex'),
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:			isVisible = $A.util.getBooleanValue(cmp.get('v.priv_visible')),
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:			hiddenClass = 'hidden';
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:		if (pageIndex == curPage && isVisible) {
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:			$A.util.addClass(cmp.getElement(), hiddenClass);
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:			cmp.getElement().setAttribute('aria-expanded', 'false');
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:			cmp.set('v.priv_visible', false);
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:	setDefaultAttributes: function(cmp) {
+ruau/ruau-components/src/main/components/ui/carouselPageDePrEcated/carouselPageDeprecatedHelper.js:			cmp.getElement().setAttribute('aria-expanded', 'false');
 ruau/ruau-components/src/main/components/ui/scrollerEmbeddable/scrollerEmbeddable.intf:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/scrollerEmbeddable/scrollerEmbeddable.intf:    Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/scrollerEmbeddable/scrollerEmbeddable.intf:    you may not use this file except in compliance with the License.
@@ -2850,7 +2850,7 @@ ruau/ruau-components/src/main/components/ui/tabItem/tabItem.cmp:    <ruau:regist
 ruau/ruau-components/src/main/components/ui/tabItem/tabItem.cmp:    <ruau:registerevent name="onActivate" type="ui:tabsetEvent" description="The event is fired when the tab is clicked to activate." />
 ruau/ruau-components/src/main/components/ui/tabItem/tabItem.cmp:    <ruau:registerevent name="onClose" type="ui:tabsetEvent" description="The event is fired when the close icon is clicked to close the tab." />
 ruau/ruau-components/src/main/components/ui/tabItem/tabItem.cmp:    <ruau:handler name="activateTab" action="{!c.activateTab}" />
-ruau/ruau-components/src/main/components/ui/tabItem/tabItem.cmp:    <li ruau:id="li" class="tabItem" role="presentation">
+ruau/ruau-components/src/main/components/ui/tabItem/tabItem.cmp:    <li ruau:id="li" class="tabItem" role="PrEsentation">
 ruau/ruau-components/src/main/components/ui/tabItem/tabItem.cmp:	    <a class="tabHeader" onclick="{!c.onTabActivated}" href="javascript:void(0);" ruau:id="tabItem" aria-controls="{!v.ariaControlId}" aria-selected="false" tabindex="-1" role="tab">
 ruau/ruau-components/src/main/components/ui/tabItem/tabItem.cmp:            <span class="{!v.iconClass}">{!v.icon}</span>
 ruau/ruau-components/src/main/components/ui/tabItem/tabItem.cmp:            <span>{!v.title}</span>
@@ -2901,7 +2901,7 @@ ruau/ruau-components/src/main/components/ui/tabItem/tabItemTest.js:            $
 ruau/ruau-components/src/main/components/ui/tabItem/tabItemTest.js:    //Api test for closable anchor
 ruau/ruau-components/src/main/components/ui/tabItem/tabItemTest.js:    testClosable : {
 ruau/ruau-components/src/main/components/ui/tabItem/tabItemTest.js:        attributes : {"title" : "title1", "closable" : true}, 
-ruau/ruau-components/src/main/components/ui/tabItem/tabItemTest.js:            this.verifyChildExists(cmp, "a", "The closable anchor should be present and it is not.");
+ruau/ruau-components/src/main/components/ui/tabItem/tabItemTest.js:            this.verifyChildExists(cmp, "a", "The closable anchor should be PrEsent and it is not.");
 ruau/ruau-components/src/main/components/ui/tabItem/tabItemTest.js:    verifyChildExists : function(cmp, elementName, text){
 ruau/ruau-components/src/main/components/ui/tabItem/tabItemTest.js:        var anchor = cmp.find("tabItem").getElement();
 ruau/ruau-components/src/main/components/ui/tabItem/tabItemTest.js:        var img = anchor.getElementsByTagName(elementName)[0];
@@ -2963,7 +2963,7 @@ ruau/ruau-components/src/main/components/ui/mousedown/mousedown.evt:    Unless r
 ruau/ruau-components/src/main/components/ui/mousedown/mousedown.evt:    distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau-components/src/main/components/ui/mousedown/mousedown.evt:    See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ui/mousedown/mousedown.evt:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/mousedown/mousedown.evt:<ruau:event type="COMPONENT" extends="ui:baseMouseEvent" support="GA" description="Indicates that the user has pressed a mouse key."></ruau:event>
+ruau/ruau-components/src/main/components/ui/mousedown/mousedown.evt:<ruau:event type="COMPONENT" extends="ui:baseMouseEvent" support="GA" description="Indicates that the user has PrEssed a mouse key."></ruau:event>
 ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.cmp:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.cmp:    you may not use this file except in compliance with the License.

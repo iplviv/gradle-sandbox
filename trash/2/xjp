@@ -1791,7 +1791,7 @@ ruau/ruau-impl/src/test/javascript/ruau/util/BrowserUnsupportedUtilTest.js:     
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserUnsupportedUtilTest.js:                } catch (e) {
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserUnsupportedUtilTest.js:                    Assert.True(e instanceof TypeError);
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserUnsupportedUtilTest.js:                    Assert.Equal(
-ruau/ruau-impl/src/test/javascript/ruau/util/BrowserUnsupportedUtilTest.js:                        "$A.util." + methodName + " called with non-function " + (isPredicate ? "predicate." : "callback."),
+ruau/ruau-impl/src/test/javascript/ruau/util/BrowserUnsupportedUtilTest.js:                        "$A.util." + methodName + " called with non-function " + (isPredicate ? "PrEdicate." : "callback."),
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserUnsupportedUtilTest.js:                        e.message
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserUnsupportedUtilTest.js:        [Fact]
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserUnsupportedUtilTest.js:        function testForEach() {
@@ -2952,7 +2952,7 @@ ruau/ruau-impl/src/test/javascript/ruau/RuueLocalizationServiceTest.js:        	
 ruau/ruau-impl/src/test/javascript/ruau/RuueLocalizationServiceTest.js:				setCallback:function(service, callback){
 ruau/ruau-impl/src/test/javascript/ruau/RuueLocalizationServiceTest.js:					callback(mockEnqueuedAction);
 ruau/ruau-impl/src/test/javascript/ruau/RuueLocalizationServiceTest.js:			var mockUtil = Mocks.GetMock(Object.Global(), "$A", {
-ruau/ruau-impl/src/test/javascript/ruau/RuueLocalizationServiceTest.js:					if(expression=="c.ruau://TimeZoneInfoController.getTimeZoneInfo") return mockAction;
+ruau/ruau-impl/src/test/javascript/ruau/RuueLocalizationServiceTest.js:					if(exPrEssion=="c.ruau://TimeZoneInfoController.getTimeZoneInfo") return mockAction;
 ruau/ruau-impl/src/test/javascript/ruau/RuueLocalizationServiceTest.js:                enqueueAction: function(a) { if(a != mockAction) throw new Error("Wrong Action enqueued"); }
 ruau/ruau-impl/src/test/javascript/ruau/RuueLocalizationServiceTest.js:				targetService.getTimeZoneInfo(targetTimezone, targetCallback);
 ruau/ruau-impl/src/test/javascript/ruau/RuueLocalizationServiceTest.js:            Assert.Equal(expected, actual);
@@ -2973,7 +2973,7 @@ ruau/ruau-impl/src/test/javascript/ruau/RuueLocalizationServiceTest.js:        	
 ruau/ruau-impl/src/test/javascript/ruau/RuueLocalizationServiceTest.js:				setCallback:function(service, callback){
 ruau/ruau-impl/src/test/javascript/ruau/RuueLocalizationServiceTest.js:					callback(mockEnqueuedAction);
 ruau/ruau-impl/src/test/javascript/ruau/RuueLocalizationServiceTest.js:			var mockUtil = Mocks.GetMock(Object.Global(), "$A", {
-ruau/ruau-impl/src/test/javascript/ruau/RuueLocalizationServiceTest.js:					if(expression=="c.ruau://TimeZoneInfoController.getTimeZoneInfo") return mockAction;
+ruau/ruau-impl/src/test/javascript/ruau/RuueLocalizationServiceTest.js:					if(exPrEssion=="c.ruau://TimeZoneInfoController.getTimeZoneInfo") return mockAction;
 ruau/ruau-impl/src/test/javascript/ruau/RuueLocalizationServiceTest.js:                enqueueAction: function(a) { if(a != mockAction) throw new Error("Wrong Action enqueued"); }
 ruau/ruau-impl/src/test/javascript/ruau/RuueLocalizationServiceTest.js:			var mockWallTime = Mocks.GetMock(Object.Global(), "WallTime",{
 ruau/ruau-impl/src/test/javascript/ruau/RuueLocalizationServiceTest.js:		    	data: '',

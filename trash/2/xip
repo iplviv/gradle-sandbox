@@ -47,7 +47,7 @@ ruau/ruau/src/main/java/org/ruauframework/def/VarDef.java:package org.ruauframew
 ruau/ruau/src/main/java/org/ruauframework/def/VarDef.java: * <ruau:var name="xxx" value="xxx"/>
 ruau/ruau/src/main/java/org/ruauframework/def/VarDef.java:public interface VarDef extends Definition {
 ruau/ruau/src/main/java/org/ruauframework/def/VarDef.java:    DefDescriptor<VarDef> getDescriptor();
-ruau/ruau/src/main/java/org/ruauframework/def/VarDef.java:     * Gets the value of the var. This may be a String, Integer, etc... but it might also be an expression.
+ruau/ruau/src/main/java/org/ruauframework/def/VarDef.java:     * Gets the value of the var. This may be a String, Integer, etc... but it might also be an exPrEssion.
 ruau/ruau/src/main/java/org/ruauframework/def/VarDef.java:    Object getValue();
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeDescriptorProvider.java: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeDescriptorProvider.java: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -221,7 +221,7 @@ ruau/ruau/src/main/java/org/ruauframework/def/AttributeDefRef.java:     * @retur
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeDefRef.java:    Object getValue();
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeDefRef.java:     * Parses the value stored in this defref using the passed in type
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeDefRef.java:     * definition. This MUST be called during the validateReferences compilation
-ruau/ruau/src/main/java/org/ruauframework/def/AttributeDefRef.java:     * phase or this defref may represent a literal value that is not of the
+ruau/ruau/src/main/java/org/ruauframework/def/AttributeDefRef.java:     * phase or this defref may rePrEsent a literal value that is not of the
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeDefRef.java:     * expected type (i.e. string instead of number)
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeDefRef.java:     * needed anymore
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeDefRef.java:     * @param typeDef type of the attribute to try to parse to
@@ -461,7 +461,7 @@ ruau/ruau/src/main/java/org/ruauframework/def/DefDescriptor.java:     * @return 
 ruau/ruau/src/main/java/org/ruauframework/def/DefDescriptor.java:    String getName();
 ruau/ruau/src/main/java/org/ruauframework/def/DefDescriptor.java:     * @return The pseudo-protocol, namespace, and name of this descriptor
 ruau/ruau/src/main/java/org/ruauframework/def/DefDescriptor.java:    String getQualifiedName();
-ruau/ruau/src/main/java/org/ruauframework/def/DefDescriptor.java:     * @return the namespace and name portion of this descriptor for cases where the prefix/protocol is already known.
+ruau/ruau/src/main/java/org/ruauframework/def/DefDescriptor.java:     * @return the namespace and name portion of this descriptor for cases where the PrEfix/protocol is already known.
 ruau/ruau/src/main/java/org/ruauframework/def/DefDescriptor.java:    String getDescriptorName();
 ruau/ruau/src/main/java/org/ruauframework/def/DefDescriptor.java:     * @return the namespace, if this descriptor has one
 ruau/ruau/src/main/java/org/ruauframework/def/DefDescriptor.java:    String getNamespace();
@@ -469,13 +469,13 @@ ruau/ruau/src/main/java/org/ruauframework/def/DefDescriptor.java:     * @return 
 ruau/ruau/src/main/java/org/ruauframework/def/DefDescriptor.java:    String getNameParameters();
 ruau/ruau/src/main/java/org/ruauframework/def/DefDescriptor.java:     * @return isParameterized - identifies if additional processing is warranted to consider generic collections should
 ruau/ruau/src/main/java/org/ruauframework/def/DefDescriptor.java:    boolean isParameterized();
-ruau/ruau/src/main/java/org/ruauframework/def/DefDescriptor.java:     * @return The type of this definition, which can be used to branch and parse serialized representations
+ruau/ruau/src/main/java/org/ruauframework/def/DefDescriptor.java:     * @return The type of this definition, which can be used to branch and parse serialized rePrEsentations
 ruau/ruau/src/main/java/org/ruauframework/def/DefDescriptor.java:     * If we have a bundle for the descriptor, then the descriptor is for a file within the bundle, and it is fully
 ruau/ruau/src/main/java/org/ruauframework/def/DefDescriptor.java:     * specified by the bundle descriptor plus the name from this descriptor.
 ruau/ruau/src/main/java/org/ruauframework/def/DefDescriptor.java:     * @return the bundle associated with this descriptor.
 ruau/ruau/src/main/java/org/ruauframework/def/DefDescriptor.java:     * Gets the actual definition described by this descriptor, compiling it if necessary, from Ruue's definition
 ruau/ruau/src/main/java/org/ruauframework/def/DefDescriptor.java:     * @return the definition (compiles it if necessary)
-ruau/ruau/src/main/java/org/ruauframework/def/DefDescriptor.java:     * @return true if the definition represented by this descriptor exists at all. does not compile the definition
+ruau/ruau/src/main/java/org/ruauframework/def/DefDescriptor.java:     * @return true if the definition rePrEsented by this descriptor exists at all. does not compile the definition
 ruau/ruau/src/main/java/org/ruauframework/def/DefDescriptor.java:    boolean exists();
 ruau/ruau/src/main/java/org/ruauframework/def/Definition.java: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/Definition.java: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -534,8 +534,8 @@ ruau/ruau/src/main/java/org/ruauframework/def/Definition.java:     * @return the
 ruau/ruau/src/main/java/org/ruauframework/def/Definition.java:    String getName();
 ruau/ruau/src/main/java/org/ruauframework/def/Definition.java:     * @return the location where this definition was defined
 ruau/ruau/src/main/java/org/ruauframework/def/Definition.java:    Location getLocation();
-ruau/ruau/src/main/java/org/ruauframework/def/Definition.java:    // Visibility is deprecated: replaced by ACCESS=global/public/private
-ruau/ruau/src/main/java/org/ruauframework/def/Definition.java:    @Deprecated
+ruau/ruau/src/main/java/org/ruauframework/def/Definition.java:    // Visibility is dePrEcated: replaced by ACCESS=global/public/private
+ruau/ruau/src/main/java/org/ruauframework/def/Definition.java:    @DePrEcated
 ruau/ruau/src/main/java/org/ruauframework/def/Definition.java:     * Get the descriptor. Note that this _should_ be non-null, but it is not,
 ruau/ruau/src/main/java/org/ruauframework/def/Definition.java:     * because there are definitions that cannot be described (references and
 ruau/ruau/src/main/java/org/ruauframework/def/Definition.java:     * event handlers are example cases). This could be handled by having yet
@@ -623,12 +623,12 @@ ruau/ruau/src/main/java/org/ruauframework/def/StyleDef.java: * limitations under
 ruau/ruau/src/main/java/org/ruauframework/def/StyleDef.java:package org.ruauframework.def;
 ruau/ruau/src/main/java/org/ruauframework/def/StyleDef.java:import java.util.List;
 ruau/ruau/src/main/java/org/ruauframework/def/StyleDef.java:import com.salesforce.omakase.plugin.Plugin;
-ruau/ruau/src/main/java/org/ruauframework/def/StyleDef.java: * Represents a CSS file.
+ruau/ruau/src/main/java/org/ruauframework/def/StyleDef.java: * RePrEsents a CSS file.
 ruau/ruau/src/main/java/org/ruauframework/def/StyleDef.java:public interface StyleDef extends Definition {
-ruau/ruau/src/main/java/org/ruauframework/def/StyleDef.java:     * The initially preprocessed code may be processed again during this method call for dynamic or contextual
+ruau/ruau/src/main/java/org/ruauframework/def/StyleDef.java:     * The initially PrEprocessed code may be processed again during this method call for dynamic or contextual
 ruau/ruau/src/main/java/org/ruauframework/def/StyleDef.java:     * substitutions, changes, and validation (e.g., applying theme tokens or browser conditionals).
 ruau/ruau/src/main/java/org/ruauframework/def/StyleDef.java:     * Gets the CSS markup for this {@link StyleDef}, using the specified CSS plugins.
-ruau/ruau/src/main/java/org/ruauframework/def/StyleDef.java:     * The initially preprocessed code may be processed again during this method call for dynamic or contextual
+ruau/ruau/src/main/java/org/ruauframework/def/StyleDef.java:     * The initially PrEprocessed code may be processed again during this method call for dynamic or contextual
 ruau/ruau/src/main/java/org/ruauframework/def/StyleDef.java:     * substitutions, changes, and validation (e.g., applying theme tokens or browser conditionals), in addition to the
 ruau/ruau/src/main/java/org/ruauframework/def/StyleDef.java:     * @param plugins The list of {@link Plugin}s to run against the CSS code.
 ruau/ruau/src/main/java/org/ruauframework/def/StyleDef.java:     * Gets the CSS class name associated with this {@link StyleDef} (i.e., the class name used for .THIS replacement).
@@ -667,97 +667,97 @@ ruau/ruau/src/main/java/org/ruauframework/def/EventHandlerDef.java:public interf
 ruau/ruau/src/main/java/org/ruauframework/def/EventHandlerDef.java:     * FIXME: W-1328552 this method violates the contract with DefDescriptor.
 ruau/ruau/src/main/java/org/ruauframework/def/EventHandlerDef.java:     * These two calls should be used instead, but they cause other bugs.
 ruau/ruau/src/main/java/org/ruauframework/def/EventHandlerDef.java:     * DefDescriptor<EventHandlerDef> getDescriptor(); DefDescriptor<EventDef>
-ruau/ruau/src/main/java/org/ruauframework/expression/ExpressionType.java: * Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau/src/main/java/org/ruauframework/expression/ExpressionType.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/expression/ExpressionType.java: * you may not use this file except in compliance with the License.
-ruau/ruau/src/main/java/org/ruauframework/expression/ExpressionType.java: * You may obtain a copy of the License at
-ruau/ruau/src/main/java/org/ruauframework/expression/ExpressionType.java: *         http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau/src/main/java/org/ruauframework/expression/ExpressionType.java: * Unless required by applicable law or agreed to in writing, software
-ruau/ruau/src/main/java/org/ruauframework/expression/ExpressionType.java: * distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau/src/main/java/org/ruauframework/expression/ExpressionType.java: * See the License for the specific language governing permissions and
-ruau/ruau/src/main/java/org/ruauframework/expression/ExpressionType.java: * limitations under the License.
-ruau/ruau/src/main/java/org/ruauframework/expression/ExpressionType.java:package org.ruauframework.expression;
-ruau/ruau/src/main/java/org/ruauframework/expression/ExpressionType.java:    PROPERTY, FUNCTION, // operators are just functions
-ruau/ruau/src/main/java/org/ruauframework/expression/Expression.java: * Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau/src/main/java/org/ruauframework/expression/Expression.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/expression/Expression.java: * you may not use this file except in compliance with the License.
-ruau/ruau/src/main/java/org/ruauframework/expression/Expression.java: * You may obtain a copy of the License at
-ruau/ruau/src/main/java/org/ruauframework/expression/Expression.java: *         http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau/src/main/java/org/ruauframework/expression/Expression.java: * Unless required by applicable law or agreed to in writing, software
-ruau/ruau/src/main/java/org/ruauframework/expression/Expression.java: * distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau/src/main/java/org/ruauframework/expression/Expression.java: * See the License for the specific language governing permissions and
-ruau/ruau/src/main/java/org/ruauframework/expression/Expression.java: * limitations under the License.
-ruau/ruau/src/main/java/org/ruauframework/expression/Expression.java:package org.ruauframework.expression;
-ruau/ruau/src/main/java/org/ruauframework/expression/Expression.java:import java.io.Serializable;
-ruau/ruau/src/main/java/org/ruauframework/expression/Expression.java:import java.util.Set;
-ruau/ruau/src/main/java/org/ruauframework/expression/Expression.java:import org.ruauframework.def.DefDescriptor;
-ruau/ruau/src/main/java/org/ruauframework/expression/Expression.java:import org.ruauframework.def.TypeDef;
-ruau/ruau/src/main/java/org/ruauframework/expression/Expression.java:import org.ruauframework.instance.ValueProvider;
-ruau/ruau/src/main/java/org/ruauframework/expression/Expression.java:import org.ruauframework.system.Location;
-ruau/ruau/src/main/java/org/ruauframework/expression/Expression.java:import org.ruauframework.throwable.quickfix.QuickFixException;
-ruau/ruau/src/main/java/org/ruauframework/expression/Expression.java: * An expression that can be evaluated on the server or the client.
-ruau/ruau/src/main/java/org/ruauframework/expression/Expression.java:public interface Expression extends Serializable {
-ruau/ruau/src/main/java/org/ruauframework/expression/Expression.java:     * Evaluate this expression and return the result, resolving references
-ruau/ruau/src/main/java/org/ruauframework/expression/Expression.java:     * against the passed in value provider.
-ruau/ruau/src/main/java/org/ruauframework/expression/Expression.java:    Object evaluate(ValueProvider vp) throws QuickFixException;
-ruau/ruau/src/main/java/org/ruauframework/expression/Expression.java:     * @return descriptor for the type that this expression will return (for
-ruau/ruau/src/main/java/org/ruauframework/expression/Expression.java:     *         validation)
-ruau/ruau/src/main/java/org/ruauframework/expression/Expression.java:    // void validate(ValueProvider vp) throws Something;
-ruau/ruau/src/main/java/org/ruauframework/expression/Expression.java:     * @return location where it was defined
-ruau/ruau/src/main/java/org/ruauframework/expression/Expression.java:    Location getLocation();
-ruau/ruau/src/main/java/org/ruauframework/expression/Expression.java:     * Gathers up all the property references in this expression
-ruau/ruau/src/main/java/org/ruauframework/expression/Expression.java:     * @param propRefs set to add them to
-ruau/ruau/src/main/java/org/ruauframework/expression/Expression.java:    void gatherPropertyReferences(Set<PropertyReference> propRefs);
-ruau/ruau/src/main/java/org/ruauframework/expression/PropertyReference.java: * Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau/src/main/java/org/ruauframework/expression/PropertyReference.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/expression/PropertyReference.java: * you may not use this file except in compliance with the License.
-ruau/ruau/src/main/java/org/ruauframework/expression/PropertyReference.java: * You may obtain a copy of the License at
-ruau/ruau/src/main/java/org/ruauframework/expression/PropertyReference.java: *         http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau/src/main/java/org/ruauframework/expression/PropertyReference.java: * Unless required by applicable law or agreed to in writing, software
-ruau/ruau/src/main/java/org/ruauframework/expression/PropertyReference.java: * distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau/src/main/java/org/ruauframework/expression/PropertyReference.java: * See the License for the specific language governing permissions and
-ruau/ruau/src/main/java/org/ruauframework/expression/PropertyReference.java: * limitations under the License.
-ruau/ruau/src/main/java/org/ruauframework/expression/PropertyReference.java:package org.ruauframework.expression;
-ruau/ruau/src/main/java/org/ruauframework/expression/PropertyReference.java:import java.util.List;
-ruau/ruau/src/main/java/org/ruauframework/expression/PropertyReference.java: * A reference to some property, i.e. a parsed list of strings separated by dots.
-ruau/ruau/src/main/java/org/ruauframework/expression/PropertyReference.java:public interface PropertyReference extends Expression {
-ruau/ruau/src/main/java/org/ruauframework/expression/PropertyReference.java:     * @return a new PropertyReference representing the everything after the root
-ruau/ruau/src/main/java/org/ruauframework/expression/PropertyReference.java:     * @return a part of this PropertyReference
-ruau/ruau/src/main/java/org/ruauframework/expression/PropertyReference.java:     * @param start the starting position (inclusive)
-ruau/ruau/src/main/java/org/ruauframework/expression/PropertyReference.java:     * @param end the ending position (exclusive)
-ruau/ruau/src/main/java/org/ruauframework/expression/PropertyReference.java:    PropertyReference getSub(int start, int end);
-ruau/ruau/src/main/java/org/ruauframework/expression/PropertyReference.java:     * @return list of the parts of this PropertyReference
-ruau/ruau/src/main/java/org/ruauframework/expression/PropertyReference.java:     * @return the last item in this PropertyReference
-ruau/ruau/src/main/java/org/ruauframework/expression/PropertyReference.java:    String getLeaf();
-ruau/ruau/src/main/java/org/ruauframework/expression/PropertyReference.java:     * @return size of this PropertyReference path
-ruau/ruau/src/main/java/org/ruauframework/expression/Literal.java: * Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau/src/main/java/org/ruauframework/expression/Literal.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/expression/Literal.java: * you may not use this file except in compliance with the License.
-ruau/ruau/src/main/java/org/ruauframework/expression/Literal.java: * You may obtain a copy of the License at
-ruau/ruau/src/main/java/org/ruauframework/expression/Literal.java: *         http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau/src/main/java/org/ruauframework/expression/Literal.java: * Unless required by applicable law or agreed to in writing, software
-ruau/ruau/src/main/java/org/ruauframework/expression/Literal.java: * distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau/src/main/java/org/ruauframework/expression/Literal.java: * See the License for the specific language governing permissions and
-ruau/ruau/src/main/java/org/ruauframework/expression/Literal.java: * limitations under the License.
-ruau/ruau/src/main/java/org/ruauframework/expression/Literal.java:package org.ruauframework.expression;
-ruau/ruau/src/main/java/org/ruauframework/expression/Literal.java: * Expression wrapper around a literal string, boolean, or number
-ruau/ruau/src/main/java/org/ruauframework/expression/Literal.java:public interface Literal extends Expression {
-ruau/ruau/src/main/java/org/ruauframework/expression/Literal.java:    Object getValue();
-ruau/ruau/src/main/java/org/ruauframework/expression/FunctionCall.java: * Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau/src/main/java/org/ruauframework/expression/FunctionCall.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/expression/FunctionCall.java: * you may not use this file except in compliance with the License.
-ruau/ruau/src/main/java/org/ruauframework/expression/FunctionCall.java: * You may obtain a copy of the License at
-ruau/ruau/src/main/java/org/ruauframework/expression/FunctionCall.java: *         http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau/src/main/java/org/ruauframework/expression/FunctionCall.java: * Unless required by applicable law or agreed to in writing, software
-ruau/ruau/src/main/java/org/ruauframework/expression/FunctionCall.java: * distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau/src/main/java/org/ruauframework/expression/FunctionCall.java: * See the License for the specific language governing permissions and
-ruau/ruau/src/main/java/org/ruauframework/expression/FunctionCall.java: * limitations under the License.
-ruau/ruau/src/main/java/org/ruauframework/expression/FunctionCall.java:package org.ruauframework.expression;
-ruau/ruau/src/main/java/org/ruauframework/expression/FunctionCall.java:import java.util.List;
-ruau/ruau/src/main/java/org/ruauframework/expression/FunctionCall.java:import org.ruauframework.def.DefDescriptor;
-ruau/ruau/src/main/java/org/ruauframework/expression/FunctionCall.java:import org.ruauframework.def.TypeDef;
-ruau/ruau/src/main/java/org/ruauframework/expression/FunctionCall.java: * expression for a function call
-ruau/ruau/src/main/java/org/ruauframework/expression/FunctionCall.java:public interface FunctionCall extends Expression {
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/ExpressionType.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/ExpressionType.java: * Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/ExpressionType.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/ExpressionType.java: * You may obtain a copy of the License at
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/ExpressionType.java: *         http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/ExpressionType.java: * Unless required by applicable law or agreed to in writing, software
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/ExpressionType.java: * distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/ExpressionType.java: * See the License for the specific language governing permissions and
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/ExpressionType.java: * limitations under the License.
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/ExpressionType.java:package org.ruauframework.expression;
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/ExpressionType.java:    PROPERTY, FUNCTION, // operators are just functions
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Expression.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Expression.java: * Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Expression.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Expression.java: * You may obtain a copy of the License at
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Expression.java: *         http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Expression.java: * Unless required by applicable law or agreed to in writing, software
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Expression.java: * distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Expression.java: * See the License for the specific language governing permissions and
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Expression.java: * limitations under the License.
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Expression.java:package org.ruauframework.expression;
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Expression.java:import java.io.Serializable;
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Expression.java:import java.util.Set;
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Expression.java:import org.ruauframework.def.DefDescriptor;
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Expression.java:import org.ruauframework.def.TypeDef;
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Expression.java:import org.ruauframework.instance.ValueProvider;
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Expression.java:import org.ruauframework.system.Location;
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Expression.java:import org.ruauframework.throwable.quickfix.QuickFixException;
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Expression.java: * An expression that can be evaluated on the server or the client.
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Expression.java:public interface Expression extends Serializable {
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Expression.java:     * Evaluate this expression and return the result, resolving references
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Expression.java:     * against the passed in value provider.
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Expression.java:    Object evaluate(ValueProvider vp) throws QuickFixException;
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Expression.java:     * @return descriptor for the type that this expression will return (for
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Expression.java:     *         validation)
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Expression.java:    // void validate(ValueProvider vp) throws Something;
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Expression.java:     * @return location where it was defined
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Expression.java:    Location getLocation();
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Expression.java:     * Gathers up all the property references in this expression
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Expression.java:     * @param propRefs set to add them to
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Expression.java:    void gatherPropertyReferences(Set<PropertyReference> propRefs);
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/PropertyReference.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/PropertyReference.java: * Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/PropertyReference.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/PropertyReference.java: * You may obtain a copy of the License at
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/PropertyReference.java: *         http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/PropertyReference.java: * Unless required by applicable law or agreed to in writing, software
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/PropertyReference.java: * distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/PropertyReference.java: * See the License for the specific language governing permissions and
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/PropertyReference.java: * limitations under the License.
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/PropertyReference.java:package org.ruauframework.expression;
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/PropertyReference.java:import java.util.List;
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/PropertyReference.java: * A reference to some property, i.e. a parsed list of strings separated by dots.
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/PropertyReference.java:public interface PropertyReference extends Expression {
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/PropertyReference.java:     * @return a new PropertyReference representing the everything after the root
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/PropertyReference.java:     * @return a part of this PropertyReference
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/PropertyReference.java:     * @param start the starting position (inclusive)
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/PropertyReference.java:     * @param end the ending position (exclusive)
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/PropertyReference.java:    PropertyReference getSub(int start, int end);
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/PropertyReference.java:     * @return list of the parts of this PropertyReference
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/PropertyReference.java:     * @return the last item in this PropertyReference
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/PropertyReference.java:    String getLeaf();
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/PropertyReference.java:     * @return size of this PropertyReference path
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Literal.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Literal.java: * Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Literal.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Literal.java: * You may obtain a copy of the License at
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Literal.java: *         http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Literal.java: * Unless required by applicable law or agreed to in writing, software
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Literal.java: * distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Literal.java: * See the License for the specific language governing permissions and
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Literal.java: * limitations under the License.
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Literal.java:package org.ruauframework.expression;
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Literal.java: * Expression wrapper around a literal string, boolean, or number
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Literal.java:public interface Literal extends Expression {
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/Literal.java:    Object getValue();
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/FunctionCall.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/FunctionCall.java: * Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/FunctionCall.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/FunctionCall.java: * You may obtain a copy of the License at
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/FunctionCall.java: *         http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/FunctionCall.java: * Unless required by applicable law or agreed to in writing, software
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/FunctionCall.java: * distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/FunctionCall.java: * See the License for the specific language governing permissions and
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/FunctionCall.java: * limitations under the License.
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/FunctionCall.java:package org.ruauframework.expression;
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/FunctionCall.java:import java.util.List;
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/FunctionCall.java:import org.ruauframework.def.DefDescriptor;
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/FunctionCall.java:import org.ruauframework.def.TypeDef;
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/FunctionCall.java: * expression for a function call
+ruau/ruau/src/main/java/org/ruauframework/exPrEssion/FunctionCall.java:public interface FunctionCall extends Expression {
 ruau/ruau/src/main/java/org/ruauframework/data/HasClassName.java: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/main/java/org/ruauframework/data/HasClassName.java: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau/src/main/java/org/ruauframework/data/HasClassName.java: * you may not use this file except in compliance with the License.
@@ -1287,7 +1287,7 @@ ruau/ruau/src/main/java/org/ruauframework/throwable/package-info.java: * provide
 ruau/ruau/src/main/java/org/ruauframework/throwable/package-info.java: * automatically surfaced from within plug-in code, and should always send the appropriate
 ruau/ruau/src/main/java/org/ruauframework/throwable/package-info.java: * message to the client, short-circuiting all other handling.
 ruau/ruau/src/main/java/org/ruauframework/throwable/package-info.java: * In order for this to be extended externally, appropriate handlers must be provided
-ruau/ruau/src/main/java/org/ruauframework/throwable/package-info.java: * and they must provide messaging that will be correctly interpreted by the client.
+ruau/ruau/src/main/java/org/ruauframework/throwable/package-info.java: * and they must provide messaging that will be correctly interPrEted by the client.
 ruau/ruau/src/main/java/org/ruauframework/throwable/package-info.java: * A {@link org.ruauframework.throwable.RuueExecutionException}
 ruau/ruau/src/main/java/org/ruauframework/throwable/package-info.java: * is used to wrap an exception that occurs in plug-in code and to tag it with
 ruau/ruau/src/main/java/org/ruauframework/throwable/package-info.java: * the location of the definition to aid in tracking * down the problem. This exception
@@ -1515,24 +1515,24 @@ ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidAccessValueE
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidAccessValueException.java:			RuueQuickFix... quickFixes) {
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidAccessValueException.java:		super(message, l, quickFixes);
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidAccessValueException.java:	public InvalidAccessValueException(String msg) {
-ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExpressionException.java: * Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExpressionException.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExpressionException.java: * you may not use this file except in compliance with the License.
-ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExpressionException.java: * You may obtain a copy of the License at
-ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExpressionException.java: *         http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExpressionException.java: * Unless required by applicable law or agreed to in writing, software
-ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExpressionException.java: * distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExpressionException.java: * See the License for the specific language governing permissions and
-ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExpressionException.java: * limitations under the License.
-ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExpressionException.java:package org.ruauframework.throwable.quickfix;
-ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExpressionException.java:import org.ruauframework.system.Location;
-ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExpressionException.java: * thrown when an invalid expression is detected
-ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExpressionException.java:public class InvalidExpressionException extends RuueValidationException {
-ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExpressionException.java:    private static final long serialVersionUID = -2728500342139623859L;
-ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExpressionException.java:    public InvalidExpressionException(String message, Location l) {
-ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExpressionException.java:        super(message, l);
-ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExpressionException.java:    public InvalidExpressionException(String message, Location l, Throwable cause) {
-ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExpressionException.java:        super(message, l, cause);
+ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExPrEssionException.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExPrEssionException.java: * Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExPrEssionException.java: * you may not use this file except in compliance with the License.
+ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExPrEssionException.java: * You may obtain a copy of the License at
+ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExPrEssionException.java: *         http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExPrEssionException.java: * Unless required by applicable law or agreed to in writing, software
+ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExPrEssionException.java: * distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExPrEssionException.java: * See the License for the specific language governing permissions and
+ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExPrEssionException.java: * limitations under the License.
+ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExPrEssionException.java:package org.ruauframework.throwable.quickfix;
+ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExPrEssionException.java:import org.ruauframework.system.Location;
+ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExPrEssionException.java: * thrown when an invalid expression is detected
+ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExPrEssionException.java:public class InvalidExpressionException extends RuueValidationException {
+ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExPrEssionException.java:    private static final long serialVersionUID = -2728500342139623859L;
+ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExPrEssionException.java:    public InvalidExpressionException(String message, Location l) {
+ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExPrEssionException.java:        super(message, l);
+ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExPrEssionException.java:    public InvalidExpressionException(String message, Location l, Throwable cause) {
+ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidExPrEssionException.java:        super(message, l, cause);
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidReferenceException.java: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidReferenceException.java: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/InvalidReferenceException.java: * you may not use this file except in compliance with the License.
@@ -1754,7 +1754,7 @@ ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueQuickFix.java: 
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueQuickFix.java:    public Map<String, Object> getAttributes() {
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueQuickFix.java:        return attributes;
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueQuickFix.java:        return getAttribute(attributes, key);
-ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueQuickFix.java:    @SuppressWarnings("unchecked")
+ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueQuickFix.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueQuickFix.java:    private Object getAttribute(Map<String, Object> root, String key) {
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueQuickFix.java:            List<String> split = RuueTextUtil.splitSimple(".", key);
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueQuickFix.java:                    sb.append(split.get(i));
@@ -1805,7 +1805,7 @@ ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.jav
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:import javax.xml.stream.events.XMLEvent;
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:import javax.xml.xpath.XPath;
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:import javax.xml.xpath.XPathConstants;
-ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:import javax.xml.xpath.XPathExpression;
+ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:import javax.xml.xpath.XPathExPrEssion;
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:import javax.xml.xpath.XPathFactory;
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:import org.ruauframework.Ruue;
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:import org.ruauframework.def.ComponentDef;
@@ -1844,7 +1844,7 @@ ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.jav
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:    private Node findNode(Document doc, String xPathExpr) throws Exception {
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:        XPathFactory factory = XPathFactory.newInstance();
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:        XPath xpath = factory.newXPath();
-ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:        XPathExpression expr = xpath.compile(xPathExpr);
+ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:        XPathExPrEssion expr = xpath.compile(xPathExpr);
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:        NodeList nodes = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:            throw new RuueRuntimeException(String.format("Unable to find node: %s", xPathExpr));
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:    protected Node findNode(Source<?> source, String xPathExpr) throws Exception {
@@ -1995,7 +1995,7 @@ ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/CreateStyleDefQuick
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/CreateStyleDefQuickFix.java:        this(createMap(descriptor));
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/CreateStyleDefQuickFix.java:    private static Map<String, Object> createMap(DefDescriptor<?> descriptor) {
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/CreateStyleDefQuickFix.java:        Map<String, Object> ret = Maps.newHashMap();
-ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/CreateStyleDefQuickFix.java:    @SuppressWarnings("unchecked")
+ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/CreateStyleDefQuickFix.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/CreateStyleDefQuickFix.java:        BuilderService builderService = Ruue.getBuilderService();
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/CreateStyleDefQuickFix.java:        DefinitionService definitionService = Ruue.getDefinitionService();
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/CreateStyleDefQuickFix.java:        builder.setClassName(styleDescriptor.getNamespace() + RuueTextUtil.initCap(styleDescriptor.getName()));
@@ -2020,7 +2020,7 @@ ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueQuickFixControl
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueQuickFixController.java:import org.ruauframework.system.Annotations.Key;
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueQuickFixController.java:public class RuueQuickFixController {
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueQuickFixController.java:    private static final String className = "org.ruauframework.throwable.quickfix.%sQuickFix";
-ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueQuickFixController.java:    @SuppressWarnings("unchecked")
+ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueQuickFixController.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueQuickFixController.java:    @RuueEnabled
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueQuickFixController.java:    public static void doFix(@Key("name") String name, @Key("attributes") Map<String, Object> attributes)
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueQuickFixController.java:        Class<RuueQuickFix> clz = (Class<RuueQuickFix>) Class.forName(String.format(className, name));
@@ -2545,9 +2545,9 @@ ruau/ruau/src/main/java/org/ruauframework/test/javascript/GenerateXUnitJS.java: 
 ruau/ruau/src/main/java/org/ruauframework/test/javascript/GenerateXUnitJS.java:            System.err.println("Impl file must be a readable directory: "+dest_f.getPath());
 ruau/ruau/src/main/java/org/ruauframework/test/javascript/GenerateXUnitJS.java:        ImportDirectiveType importType = new ImportDirectiveType(ruau_dest_f, impl_f);
 ruau/ruau/src/main/java/org/ruauframework/test/javascript/GenerateXUnitJS.java:        ImmutableList<DirectiveType<?>> DIRECTIVES = ImmutableList.<DirectiveType<?>> of(importType);
-ruau/ruau/src/main/java/org/ruauframework/test/javascript/GenerateXUnitJS.java:        int prefixLength = source_f.getAbsolutePath().length() + 1;
+ruau/ruau/src/main/java/org/ruauframework/test/javascript/GenerateXUnitJS.java:        int PrEfixLength = source_f.getAbsolutePath().length() + 1;
 ruau/ruau/src/main/java/org/ruauframework/test/javascript/GenerateXUnitJS.java:                String path = file.getAbsolutePath();
-ruau/ruau/src/main/java/org/ruauframework/test/javascript/GenerateXUnitJS.java:                String name = path.substring(prefixLength);
+ruau/ruau/src/main/java/org/ruauframework/test/javascript/GenerateXUnitJS.java:                String name = path.substring(PrEfixLength);
 ruau/ruau/src/main/java/org/ruauframework/test/javascript/GenerateXUnitJS.java:                DirectiveBasedJavascriptGroup group = new DirectiveBasedJavascriptGroup(name,
 ruau/ruau/src/main/java/org/ruauframework/test/javascript/GenerateXUnitJS.java:                        impl_f, path, DIRECTIVES, EnumSet.of(JavascriptGeneratorMode.DOC));
 ruau/ruau/src/main/java/org/ruauframework/test/javascript/GenerateXUnitJS.java:                group.parse();
@@ -2867,7 +2867,7 @@ ruau/ruau/src/main/java/org/ruauframework/test/mock/MockModel.java:import java.u
 ruau/ruau/src/main/java/org/ruauframework/test/mock/MockModel.java:import org.ruauframework.def.DefDescriptor;
 ruau/ruau/src/main/java/org/ruauframework/test/mock/MockModel.java:import org.ruauframework.def.ModelDef;
 ruau/ruau/src/main/java/org/ruauframework/test/mock/MockModel.java:import org.ruauframework.def.TypeDef;
-ruau/ruau/src/main/java/org/ruauframework/test/mock/MockModel.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau/src/main/java/org/ruauframework/test/mock/MockModel.java:import org.ruauframework.exPrEssion.PropertyReference;
 ruau/ruau/src/main/java/org/ruauframework/test/mock/MockModel.java:import org.ruauframework.instance.Model;
 ruau/ruau/src/main/java/org/ruauframework/test/mock/MockModel.java:import org.ruauframework.instance.ValueProvider;
 ruau/ruau/src/main/java/org/ruauframework/test/mock/MockModel.java:import org.ruauframework.throwable.RuueExecutionException;

@@ -141,7 +141,7 @@ ruau/ruau-components/src/main/components/ui/tabset/tabsetHelper.js:        var a
 ruau/ruau-components/src/main/components/ui/tabset/tabsetHelper.js:        cmp._tabCollection.removeTab(index);
 ruau/ruau-components/src/main/components/ui/tabset/tabsetHelper.js:    	var size = cmp._tabCollection.getSize();
 ruau/ruau-components/src/main/components/ui/tabset/tabsetHelper.js:    	if (size > 0 && index === activeIndex) {
-ruau/ruau-components/src/main/components/ui/tabset/tabsetHelper.js:    	    //activate next tab, or previous tabif the removed tab is the last one
+ruau/ruau-components/src/main/components/ui/tabset/tabsetHelper.js:    	    //activate next tab, or PrEvious tabif the removed tab is the last one
 ruau/ruau-components/src/main/components/ui/tabset/tabsetHelper.js:     * Initialize tabs
 ruau/ruau-components/src/main/components/ui/tabset/tabsetHelper.js:     * @private
 ruau/ruau-components/src/main/components/ui/tabset/tabsetHelper.js:    initTabs: function(cmp) {
@@ -320,7 +320,7 @@ ruau/ruau-components/src/main/components/ui/tabset/tabset.cmp:    <ruau:register
 ruau/ruau-components/src/main/components/ui/tabset/tabset.cmp:    <ruau:registerevent name="removeTab" type="ui:tabsetEvent" description="Remove a tab from the component." />
 ruau/ruau-components/src/main/components/ui/tabset/tabset.cmp:    <ruau:registerevent name="activateTab" type="ui:tabsetEvent" description="Activate a tab." />
 ruau/ruau-components/src/main/components/ui/tabset/tabset.cmp:    <ruau:registerevent name="getActiveTab" type="ui:tabsetEvent" description="Get the currently active tab." />
-ruau/ruau-components/src/main/components/ui/tabset/tabset.cmp:    <ruau:registerevent name="beforeActivate" type="ui:tabsetEvent" description="The event is triggered before the tab is activated. Can be canceled to prevent the tab from activating." />
+ruau/ruau-components/src/main/components/ui/tabset/tabset.cmp:    <ruau:registerevent name="beforeActivate" type="ui:tabsetEvent" description="The event is triggered before the tab is activated. Can be canceled to PrEvent the tab from activating." />
 ruau/ruau-components/src/main/components/ui/tabset/tabset.cmp:    <ruau:registerevent name="onActivate" type="ui:tabsetEvent" description="The event is triggered when the tab is activated."/>
 ruau/ruau-components/src/main/components/ui/tabset/tabset.cmp:    <ruau:handler name="init" value="{!this}" action="{!c.onInit}" />
 ruau/ruau-components/src/main/components/ui/tabset/tabset.cmp:    <ruau:handler name="addTab" action="{!c.addTab}" />
@@ -434,8 +434,8 @@ ruau/ruau-components/src/main/components/ui/menuTrigger/menuTriggerHelper.js:   
 ruau/ruau-components/src/main/components/ui/menuTrigger/menuTriggerHelper.js:        if ($A.util.getBooleanValue(concreteCmp.get("v.stopClickPropagation"))) {
 ruau/ruau-components/src/main/components/ui/menuTrigger/menuTriggerHelper.js:            $A.util.squash(event, true);
 ruau/ruau-components/src/main/components/ui/menuTrigger/menuTriggerHelper.js:        this.handleTriggerPress(concreteCmp);
-ruau/ruau-components/src/main/components/ui/menuTrigger/menuTriggerHelper.js:        var pressEvent = component.get("e.menuTriggerPress");
-ruau/ruau-components/src/main/components/ui/menuTrigger/menuTriggerHelper.js:        pressEvent.setParams({
+ruau/ruau-components/src/main/components/ui/menuTrigger/menuTriggerHelper.js:        var PrEssEvent = component.get("e.menuTriggerPress");
+ruau/ruau-components/src/main/components/ui/menuTrigger/menuTriggerHelper.js:        PrEssEvent.setParams({
 ruau/ruau-components/src/main/components/ui/menuTrigger/menuTriggerController.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/menuTrigger/menuTriggerController.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/menuTrigger/menuTriggerController.js: * you may not use this file except in compliance with the License.
@@ -677,7 +677,7 @@ ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.
 ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:                    className = "weekend";
 ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:                    className = "weekday";
 ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:                if (d.getMonth() == month - 1 || d.getFullYear() == year - 1) {
-ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:                    className += " prevMonth"
+ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:                    className += " PrEvMonth"
 ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:                } else if (d.getMonth() == month + 1 || d.getFullYear() == year + 1) {
 ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:                    className += " nextMonth"
 ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:                if (this.dateEquals(d, today)) {
@@ -731,16 +731,16 @@ ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.
 ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:        var domEvent = event.getParam("domEvent");
 ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:        var localId = cellCmp.getLocalId();
 ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:        if (keyCode == 39) {  // right arrow key
-ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:            domEvent.preventDefault();
+ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:            domEvent.PrEventDefault();
 ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:            this.handleArrowKey(component, localId, 1);
 ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:        } else if (keyCode == 37) { // left arrow key
-ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:            domEvent.preventDefault();
+ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:            domEvent.PrEventDefault();
 ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:            this.handleArrowKey(component, localId, -1);
 ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:        } else if (keyCode == 38) { // up arrow key
-ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:            domEvent.preventDefault();
+ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:            domEvent.PrEventDefault();
 ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:            this.handleArrowKey(component, localId, -7);
 ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:        } else if (keyCode == 40) { // down arrow key
-ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:            domEvent.preventDefault();
+ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:            domEvent.PrEventDefault();
 ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:            this.handleArrowKey(component, localId, 7);
 ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:        } else if (keyCode == 9 && shiftKey == true) { // Tab + shift
 ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:        } else if (keyCode == 33 && shiftKey == true) { // Page Up + shift
@@ -775,7 +775,7 @@ ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.
 ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:            var lastDateId = parseInt(lastDateCellCmp.getLocalId(),10);
 ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:            var currentId = parseInt(source.getLocalId(),10);
 ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:            var currentDate = source.get("v.label");
-ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:            if (currentId < firstDateId) { // previous month
+ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:            if (currentId < firstDateId) { // PrEvious month
 ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:                var targetDate = new Date(component.get("v.year"), component.get("v.month") - 1, currentDate);
 ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:                component.set("v.year", targetDate.getFullYear());
 ruau/ruau-components/src/main/components/ui/datePickerGrid/datePickerGridHelper.js:                component.set("v.month", targetDate.getMonth());
@@ -882,11 +882,11 @@ ruau/ruau-components/src/main/components/ui/popupTrigger/popupTriggerHelper.js: 
 ruau/ruau-components/src/main/components/ui/popupTrigger/popupTriggerHelper.js:        for (var i=0, len=events.length; i < len; i++) {
 ruau/ruau-components/src/main/components/ui/popupTrigger/popupTriggerHelper.js:            if (!component.hasEventHandler(events[i])) {
 ruau/ruau-components/src/main/components/ui/popupTrigger/popupTriggerHelper.js:                this.addDomHandler(component, events[i]);
-ruau/ruau-components/src/main/components/ui/popupTrigger/popupTriggerHelper.js:     * preEventFiring is a method from ui:interactive that is meant to be overridden
+ruau/ruau-components/src/main/components/ui/popupTrigger/popupTriggerHelper.js:     * PrEEventFiring is a method from ui:interactive that is meant to be overridden
 ruau/ruau-components/src/main/components/ui/popupTrigger/popupTriggerHelper.js:     * it allows developers to respond to dome events that are registered by addTriggerDomeEvents (see above)
 ruau/ruau-components/src/main/components/ui/popupTrigger/popupTriggerHelper.js:            if (event.keyCode === 32) { // space key
-ruau/ruau-components/src/main/components/ui/popupTrigger/popupTriggerHelper.js:                event.preventDefault();
-ruau/ruau-components/src/main/components/ui/popupTrigger/popupTriggerHelper.js:            	event.preventDefault();
+ruau/ruau-components/src/main/components/ui/popupTrigger/popupTriggerHelper.js:                event.PrEventDefault();
+ruau/ruau-components/src/main/components/ui/popupTrigger/popupTriggerHelper.js:            	event.PrEventDefault();
 ruau/ruau-components/src/main/components/ui/popupTrigger/popupTriggerHelper.js:            	this.firePopupEvent(component, "e.popupTargetShow"); // for key arrows, we want to only show the target since the menu should stay visible so users can interact with it 
 ruau/ruau-components/src/main/components/ui/popupTrigger/popupTriggerHelper.js:            } else if (event.keyCode === 9 || event.keyCode === 27) { // tab or escape 
 ruau/ruau-components/src/main/components/ui/popupTrigger/popupTriggerHelper.js:            	this.firePopupEvent(component, "e.popupTargetHide");
@@ -922,8 +922,8 @@ ruau/ruau-components/src/main/components/ui/popupTrigger/popupTrigger.cmp:    li
 ruau/ruau-components/src/main/components/ui/popupTrigger/popupTrigger.cmp:<ruau:component extensible="true" extends="ui:interactive" description="A trigger that expands and collapses a menu, used in a ui:menu component." support="GA">
 ruau/ruau-components/src/main/components/ui/popupTrigger/popupTrigger.cmp:    <ruau:attribute access="GLOBAL" name="title" type="String" default="" description="The text to display as a tooltip when the mouse pointer hovers over this component."/>
 ruau/ruau-components/src/main/components/ui/popupTrigger/popupTrigger.cmp:    <ruau:attribute name="trigger" type="Ruue.Component[]" description="Used to override the default HTML and trigger event handling. If used, developer must trigger show/hide events for popup target since v.trigger is not wrapped in a link tag, it is wrapped in a plain div."/>
-ruau/ruau-components/src/main/components/ui/popupTrigger/popupTrigger.cmp:    <ruau:attribute name="stopClickPropagation" type="Boolean" default="false" description="Prevents the click event from bubbling up the DOM tree, preventing any parent handlers from being notified of the event."/>
-ruau/ruau-components/src/main/components/ui/popupTrigger/popupTrigger.cmp:    <ruau:registerEvent name="popupTriggerPress" type="ui:popupTriggerPress" description="The event fired when a popup trigger is pressed."/>
+ruau/ruau-components/src/main/components/ui/popupTrigger/popupTrigger.cmp:    <ruau:attribute name="stopClickPropagation" type="Boolean" default="false" description="Prevents the click event from bubbling up the DOM tree, PrEventing any parent handlers from being notified of the event."/>
+ruau/ruau-components/src/main/components/ui/popupTrigger/popupTrigger.cmp:    <ruau:registerEvent name="popupTriggerPress" type="ui:popupTriggerPress" description="The event fired when a popup trigger is PrEssed."/>
 ruau/ruau-components/src/main/components/ui/popupTrigger/popupTrigger.cmp:    <ruau:registerEvent name="popupTargetShow" type="ui:popupTargetShow" description="The trigger fires this event to show the target."/>
 ruau/ruau-components/src/main/components/ui/popupTrigger/popupTrigger.cmp:    <ruau:registerEvent name="popupTargetHide" type="ui:popupTargetHide" description="The trigger fires this event to hide the target."/>
 ruau/ruau-components/src/main/components/ui/popupTrigger/popupTrigger.cmp:    <ruau:registerEvent name="popupKeyboardEvent" type="ui:popupKeyboardEvent" description="The event fired when a user interacts with a popup via the keyboard."/>
@@ -1062,7 +1062,7 @@ ruau/ruau-components/src/main/components/ui/treeNode/treeNode.cmp:    <ruau:attr
 ruau/ruau-components/src/main/components/ui/treeNode/treeNode.cmp:       description="The active state of the node. If true, then this node's &lt;li&gt; will have the DOM attribute active='true' and the node will scroll into view if necessary. "/>
 ruau/ruau-components/src/main/components/ui/treeNode/treeNode.cmp:	<ruau:attribute name="hidden" type="Boolean" default="false"
 ruau/ruau-components/src/main/components/ui/treeNode/treeNode.cmp:	<ruau:attribute name="item" type="java://org.ruauframework.components.ui.TreeNode"
-ruau/ruau-components/src/main/components/ui/treeNode/treeNode.cmp:	   description="For nodes generated via a server-side model, the dictionary representing the TreeNode object." />
+ruau/ruau-components/src/main/components/ui/treeNode/treeNode.cmp:	   description="For nodes generated via a server-side model, the dictionary rePrEsenting the TreeNode object." />
 ruau/ruau-components/src/main/components/ui/treeNode/treeNode.cmp:	<ruau:handler name="traverse" action="{!c.traverse}" />
 ruau/ruau-components/src/main/components/ui/treeNode/treeNode.cmp:	<ruau:handler name="makeVisitor" action="{!c.makeVisitor}" />
 ruau/ruau-components/src/main/components/ui/treeNode/treeNode.cmp:	<ruau:registerEvent name="getChildren" type="ui:getChildren" />
@@ -1463,9 +1463,9 @@ ruau/ruau-components/src/main/components/ui/baseKeyboardEvent/baseKeyboardEvent.
 ruau/ruau-components/src/main/components/ui/baseKeyboardEvent/baseKeyboardEvent.evt:    See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ui/baseKeyboardEvent/baseKeyboardEvent.evt:    limitations under the License.
 ruau/ruau-components/src/main/components/ui/baseKeyboardEvent/baseKeyboardEvent.evt:<ruau:event type="COMPONENT" extends="ui:baseDOMEvent" support="GA">
-ruau/ruau-components/src/main/components/ui/baseKeyboardEvent/baseKeyboardEvent.evt:    <ruau:attribute name="ctrlKey" type="Boolean" description="Indicate if ctrl key is pressed."/>
-ruau/ruau-components/src/main/components/ui/baseKeyboardEvent/baseKeyboardEvent.evt:    <ruau:attribute name="keyCode" type="Integer" description="A numerical code identifying the value of the pressed key."/>
-ruau/ruau-components/src/main/components/ui/baseKeyboardEvent/baseKeyboardEvent.evt:    <ruau:attribute name="shiftKey" type="Boolean" description="Indicate if shift key is pressed."/>
+ruau/ruau-components/src/main/components/ui/baseKeyboardEvent/baseKeyboardEvent.evt:    <ruau:attribute name="ctrlKey" type="Boolean" description="Indicate if ctrl key is PrEssed."/>
+ruau/ruau-components/src/main/components/ui/baseKeyboardEvent/baseKeyboardEvent.evt:    <ruau:attribute name="keyCode" type="Integer" description="A numerical code identifying the value of the PrEssed key."/>
+ruau/ruau-components/src/main/components/ui/baseKeyboardEvent/baseKeyboardEvent.evt:    <ruau:attribute name="shiftKey" type="Boolean" description="Indicate if shift key is PrEssed."/>
 ruau/ruau-components/src/main/components/ui/baseKeyboardEvent/baseKeyboardEvent.evt:</ruau:event>
 ruau/ruau-components/src/main/components/ui/updateGridRow/updateGridRow.evt:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/updateGridRow/updateGridRow.evt:    Licensed under the Apache License, Version 2.0 (the "License");
@@ -1619,7 +1619,7 @@ ruau/ruau-components/src/main/components/ui/menu/menuHelper.js:    handleRefresh
 ruau/ruau-components/src/main/components/ui/menu/menuHelper.js:        var menuList = this.getTargetComponent(component);
 ruau/ruau-components/src/main/components/ui/menu/menuHelper.js:    setTargetEventHandlers : function(component, targetComponent) {
 ruau/ruau-components/src/main/components/ui/menu/menuHelper.js:        this.addCloseHandler(component, targetComponent);
-ruau/ruau-components/src/main/components/ui/menu/menuHelper.js:        var focusActionHandler = $A.expressionService.create(component, component.getConcreteComponent().get('c.focusTrigger'));
+ruau/ruau-components/src/main/components/ui/menu/menuHelper.js:        var focusActionHandler = $A.exPrEssionService.create(component, component.getConcreteComponent().get('c.focusTrigger'));
 ruau/ruau-components/src/main/components/ui/menu/menuHelper.js:        targetComponent.set("v.focusTrigger", focusActionHandler);
 ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
@@ -1633,14 +1633,14 @@ ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:    limitations un
 ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:<ruau:documentation>
 ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:	<ruau:description>
 ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:			A <code>ui:menu</code> component contains a trigger and list items. You can wire up list items to actions in a client-side controller so that selection of the item triggers an action.
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:			This example shows a menu with list items, which when pressed updates the label on the trigger.
+ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:			This example shows a menu with list items, which when PrEssed updates the label on the trigger.
 ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:    &lt;ui:menuTriggerLink ruau:id="trigger" label="Opportunity Status"/>
 ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:        &lt;ui:menuList class="actionMenu" ruau:id="actionMenu">
 ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:              &lt;ui:actionMenuItem ruau:id="item1" label="Any" click="{!c.updateTriggerLabel}"/>
 ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:              &lt;ui:actionMenuItem ruau:id="item2" label="Open" click="{!c.updateTriggerLabel}" disabled="true"/>
 ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:              &lt;ui:actionMenuItem ruau:id="item3" label="Closed" click="{!c.updateTriggerLabel}"/>
 ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:              &lt;ui:actionMenuItem ruau:id="item4" label="Closed Won" click="{!c.updateTriggerLabel}"/>
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:&lt;/ui:menu></pre><p>This client-side controller updates the trigger label when a menu item is clicked.</p>
+ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:&lt;/ui:menu></PrE><p>This client-side controller updates the trigger label when a menu item is clicked.</p>
 ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:    updateTriggerLabel: function(cmp, event) {
 ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:        var triggerCmp = cmp.find("trigger");
 ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:            var source = event.getSource();
@@ -1670,7 +1670,7 @@ ruau/ruau-components/src/main/components/ui/menu/menuController.js: * See the Li
 ruau/ruau-components/src/main/components/ui/menu/menuController.js: * limitations under the License.
 ruau/ruau-components/src/main/components/ui/menu/menuController.js:    	var trigger = helper.getTriggerComponent(component);
 ruau/ruau-components/src/main/components/ui/menu/menuController.js:    		var action = trigger.get("c.focus");
-ruau/ruau-components/src/main/components/ui/menu/menuController.js:    		action.runDeprecated();
+ruau/ruau-components/src/main/components/ui/menu/menuController.js:    		action.runDePrEcated();
 ruau/ruau-components/src/main/components/ui/menu/menu.cmp:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/menu/menu.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/menu/menu.cmp:    you may not use this file except in compliance with the License.
@@ -1715,7 +1715,7 @@ ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.css: *
 ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.css: * See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.css: * limitations under the License.
 ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.css:.uiOutputTextArea{
-ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.css:	white-space: pre-line;
+ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.css:	white-space: PrE-line;
 ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.cmp:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.cmp:    you may not use this file except in compliance with the License.
@@ -1739,13 +1739,13 @@ ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudo
 ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:    limitations under the License.
 ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:<ruau:documentation>
 ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:			A <code>ui:outputTextArea</code> component represents text output that is wrapped in an HTML <code>span</code> tag.
+ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:			A <code>ui:outputTextArea</code> component rePrEsents text output that is wrapped in an HTML <code>span</code> tag.
 ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:			This component can be used with <code>ui:inputTextArea</code>, which takes in a multi-line text input. 
 ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:			To display text, you can use an attribute value and bind it to the <code>ui:outputTextArea</code> component.
-ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:		<pre>&lt;ruau:attribute name="myTextArea" type="String" default="some string"/>
-ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:&lt;ui:outputTextArea value="{!v.myTextArea}" label="my output"/></pre>
-ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:		<p>The previous example renders the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:		<pre>&lt;span class="uiOutputTextArea">some string&lt;/span></pre>
+ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:		<PrE>&lt;ruau:attribute name="myTextArea" type="String" default="some string"/>
+ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:&lt;ui:outputTextArea value="{!v.myTextArea}" label="my output"/></PrE>
+ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:		<p>The PrEvious example renders the following HTML.</p>
+ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:		<PrE>&lt;span class="uiOutputTextArea">some string&lt;/span></pre>
 ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:	</ruau:description>	
 ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:		<ruau:example name="outputExample" ref="uiExamples:outputExample" label="Using the Output Components">
 ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:    	<p>This example shows how you can bind data to the output components by using component attributes.</p>
@@ -1790,7 +1790,7 @@ ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:  
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:      &lt;ruaudocs:demoDataProvider />
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:    &lt;/ruau:set>
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:    &lt;ruau:set attribute="footer">
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:     &lt;ui:button label="Show More" press="{!c.show}"/>
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:     &lt;ui:button label="Show More" PrEss="{!c.show}"/>
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:    &lt;/ruau:set>
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:    &lt;ruau:set attribute="itemTemplate">
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:      &lt;ruaudocs:demoListTemplate label="{!item.label}" />
@@ -1836,7 +1836,7 @@ ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:	
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:		cmp._ontouchstart = function (e) {
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:			self.ontouchstart(cmp, e);
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    		e.stopPropagation();
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    		e.preventDefault();
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    		e.PrEventDefault();
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    		// 2. make the target row the open row
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    		// 3. open the row with a transition (if desired, check for e.details.useTransition
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    		$A.warning('List row open is unimplemented.');
@@ -1860,13 +1860,13 @@ ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js: 
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    	var ul = cmp.getElement();
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    	ul.addEventListener(this.getEventNames().move, cmp._ontouchmove, false);
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:        ul.addEventListener(this.getEventNames().end, cmp._ontouchend, false);
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:        ul.addEventListener("dragstart", cmp._preventEvent, true);
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:        ul.addEventListener("dragstart", cmp._PrEventEvent, true);
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:     * Detaches event listeners to their handlers.
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    detachListeners: function (cmp) {
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    	var ul = cmp.getElement();
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    	ul.removeEventListener(this.getEventNames().move, cmp._ontouchmove);
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    	ul.removeEventListener(this.getEventNames().end, cmp._ontouchend);
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    	ul.removeEventListener("dragstart", cmp._preventEvent, true);
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    	ul.removeEventListener("dragstart", cmp._PrEventEvent, true);
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:     * 'start' handler. 
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:     *  Attempts to resolve the actionable row and  
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:     *  attaches 'move' and 'end' listeners if a valid row was found.
@@ -1876,18 +1876,18 @@ ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js: 
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:        // Cancel when blocking is needed.
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:        if (cmp._isClosing || cmp._isSnapping || this.isBlocked(cmp)) {
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:            e.stopPropagation();
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:            e.preventDefault();    
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:            e.PrEventDefault();    
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    	if ((e.touches && e.touches.length == 1) || (e.pageX !== undefined)) {
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    		rootClassName = cmp.getElement().className || 'uiInfiniteList';
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    		row = this.getRow(e.target, 'uiInfiniteListRow', rootClassName); 
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    		// Only proceed if a valid row was found.
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    			this.attachListeners(cmp);
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    			// Detect whether this interaction is on the open row.
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    			cmp._isInteractionOnOpenRow = cmp._openRow && cmp._previousSwipe && (cmp._previousSwipe.row === row);
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    			cmp._isInteractionOnOpenRow = cmp._openRow && cmp._PrEviousSwipe && (cmp._previousSwipe.row === row);
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:                // If a different row was open, close it. Slightly different logic than above.
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:                    // Cancel all further events - this handler is registered in the 'capture' phase.
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:                    e.stopPropagation();
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:                    e.preventDefault();
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:                    e.PrEventDefault();
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:	    		// If another swipe is occurring on the same row. Check for openness.	
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:						initialPosition = this.getPixelFromPercentage(cmp, row, this.OPEN_PERCENTAGE);
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:		    	// Begin tracking the swipe gesture.
@@ -1902,7 +1902,7 @@ ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js: 
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    	// bounce the event and return.
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:        if (cmp._isClosing || cmp._isSnapping || this.isBlocked(cmp)) {
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:            e.stopPropagation();
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:            e.preventDefault();    
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:            e.PrEventDefault();    
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    	// Continue tracking the swipe if the an associated row was found.
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:	    	// Calculates the diffs in horizontal (X) and vertical (Y) position.
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:	    	swipe.diffX = (swipe.startX - point.x);
@@ -1914,7 +1914,7 @@ ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js: 
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:            if (axis === 'x') {
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:                // If a greater gesture occurred horizontally than vertically, 
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:                e.stopPropagation();
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:                e.preventDefault();
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:                e.PrEventDefault();
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:                // Positive displacement is a 'open' gesture.
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:            	// Negative displacement is an 'close' gesture.
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:                	percentage = this.getWidthPercentage(cmp, swipe.body, swipe.absX + swipe.initialPosition);
@@ -1929,7 +1929,7 @@ ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js: 
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:                // Movement along the y direction on the current row will force the row closed. 
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:            	// Cancel all further events.
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:                e.stopPropagation();
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:                e.preventDefault();
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:                e.PrEventDefault();
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:     * 'end' handler. 
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:     * Determines if the movements is considered a swipe. 
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:     * Detaches event listeners.
@@ -1963,7 +1963,7 @@ ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js: 
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:        				$A.util.addClass(cmp._openRow, 'open');
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:        	// Prevent anything else from happening (clicks, etc).
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:        	e.stopPropagation();
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:            e.preventDefault();
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:            e.PrEventDefault();
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:        // Reset '_isBlockedInteraction' so that future touch events are not cancelled.
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:        // This is here because the touch gesture might last longer than the animation.
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:        // A 'blocked interaction' means that all pointer events are cancelled as long as 
@@ -1971,7 +1971,7 @@ ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js: 
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    	this.detachListeners(cmp);
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:        cmp._moved = false;
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:        cmp._isInteractionOnOpenRow = null;
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    	e.preventDefault();
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    	e.PrEventDefault();
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    	e.stopPropagation();
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    	var target 		  = e.target,
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    		body 		  = target.querySelector('div.body'),
@@ -2036,7 +2036,7 @@ ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js: 
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:     * Attempts to find a row given the current touch target.
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:     * @return {HTMLElement} If a row is found or null if otherwise.
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    getRow: function (el, targetClassName, rootClassName) {
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    	// Count prevents an infinite loop from occurring due to algorithm breakage.
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    	// Count PrEvents an infinite loop from occurring due to algorithm breakage.
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    	// God save you if you have 100 nested elements in your component.
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    	var count = 0,
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js:    	// Walk the tree until the closest target is found.
@@ -2293,7 +2293,7 @@ ruau/ruau-components/src/main/components/ui/carouselPageIndicatorItem/carouselPa
 ruau/ruau-components/src/main/components/ui/carouselPageIndicatorItem/carouselPageIndicatorItem.cmp:   <ruau:handler name="pageSelected"  action="{!c.onPageSelected}" />    
 ruau/ruau-components/src/main/components/ui/carouselPageIndicatorItem/carouselPageIndicatorItem.cmp:   <ruau:handler name="click" action="{!c.clickHandler}" />
 ruau/ruau-components/src/main/components/ui/carouselPageIndicatorItem/carouselPageIndicatorItem.cmp:    <!-- aria-controls attribute is linked to the section id attribute in the page -->
-ruau/ruau-components/src/main/components/ui/carouselPageIndicatorItem/carouselPageIndicatorItem.cmp:    <li role="presentation" class="{!v.class + (v.navigationTab ? ' tab' : '')}">  
+ruau/ruau-components/src/main/components/ui/carouselPageIndicatorItem/carouselPageIndicatorItem.cmp:    <li role="PrEsentation" class="{!v.class + (v.navigationTab ? ' tab' : '')}">  
 ruau/ruau-components/src/main/components/ui/carouselPageIndicatorItem/carouselPageIndicatorItem.cmp:	    <a ruau:id="pageItem" class="{!v.priv_selectedClass + ' carousel-nav-item'}" tabindex="{!v.priv_tabIndex}" role="tab" 
 ruau/ruau-components/src/main/components/ui/carouselPageIndicatorItem/carouselPageIndicatorItem.cmp:	    	aria-controls="{!v.priv_ariaControlId}" aria-selected="{!v.priv_ariaSelected}" title="{!v.title}"
 ruau/ruau-components/src/main/components/ui/carouselPageIndicatorItem/carouselPageIndicatorItem.cmp:	    	onkeydown="{!c.keyHandler}" id="{!v.priv_id}" >    
@@ -2430,7 +2430,7 @@ ruau/ruau-components/src/main/components/ui/resizeObserver/resizeObserverHelper.
 ruau/ruau-components/src/main/components/ui/resizeObserver/resizeObserverHelper.js:            var a = component.get("v.onresize");
 ruau/ruau-components/src/main/components/ui/resizeObserver/resizeObserverHelper.js:            if (a) {
 ruau/ruau-components/src/main/components/ui/resizeObserver/resizeObserverHelper.js:            	//$A.log("ui:resizeObserver.update()", component);
-ruau/ruau-components/src/main/components/ui/resizeObserver/resizeObserverHelper.js:                a.runDeprecated();
+ruau/ruau-components/src/main/components/ui/resizeObserver/resizeObserverHelper.js:                a.runDePrEcated();
 ruau/ruau-components/src/main/components/ui/resizeObserver/resizeObserverHelper.js:        var resizer = this.getResizer();
 ruau/ruau-components/src/main/components/ui/resizeObserver/resizeObserverHelper.js:            var id = component.getGlobalId();
 ruau/ruau-components/src/main/components/ui/resizeObserver/resizeObserverHelper.js:                $A.error("os:resizeObserver.remove() called with unregistered component " + id);
@@ -2532,7 +2532,7 @@ ruau/ruau-components/src/main/components/ui/dataProvider/dataProviderHelper.js: 
 ruau/ruau-components/src/main/components/ui/dataProvider/dataProviderHelper.js:    	var dataChangeEvent = dataProvider.getEvent("onchange");
 ruau/ruau-components/src/main/components/ui/dataProvider/dataProviderHelper.js:    	dataChangeEvent.setParams({
 ruau/ruau-components/src/main/components/ui/dataProvider/dataProviderHelper.js:    		data : data
-ruau/ruau-components/src/main/components/ui/dataProvider/dataProviderHelper.js:        component.getConcreteComponent().get("c.provide").runDeprecated();
+ruau/ruau-components/src/main/components/ui/dataProvider/dataProviderHelper.js:        component.getConcreteComponent().get("c.provide").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/dataProvider/dataProviderController.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/dataProvider/dataProviderController.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/dataProvider/dataProviderController.js: * you may not use this file except in compliance with the License.
@@ -2560,7 +2560,7 @@ ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:		
 ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:			To customize this behavior, set the event handler in the component that extends <code>ui:dataProvider</code> by using the <code>ruau:handler</code> tag with the attribute <code>name="provide"</code>.
 ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:	</ruau:description>
 ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:	<ruau:example name="example1" ref="uiExamples:dataProviderExample" label="Using ui:dataProvider">
-ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:    	<p>This example shows how to fetch data using <code>ui:dataProvider</code> in a <code>ui:list</code> component. The data provider is represented by the <code>uitest:infiniteDataProvider</code>component, which extends <code>ui:dataProvider</code>.</p>
+ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:    	<p>This example shows how to fetch data using <code>ui:dataProvider</code> in a <code>ui:list</code> component. The data provider is rePrEsented by the <code>uitest:infiniteDataProvider</code>component, which extends <code>ui:dataProvider</code>.</p>
 ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:    	<p>When the list data is initialized, the <code>provide</code> handler is called, which runs the controller-side action. This action sets the callback using the <code>action.setCallback</code> method to return any new data. In the callback, this code attaches the data to the <code>ui:dataChanged</code> event.</p>
 ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:         data = action.getReturnValue();<br/>helper.fireDataChangeEvent(component, data);
 ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:	</ruau:example>
@@ -2590,14 +2590,14 @@ ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:  
 ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:    limitations under the License.
 ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:<ruau:documentation>
 ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:			A <code>ui:outputNumber</code> component represents a number output that is rendered as an HTML <code>span</code> tag.
+ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:			A <code>ui:outputNumber</code> component rePrEsents a number output that is rendered as an HTML <code>span</code> tag.
 ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:			This component can be used with <code>ui:inputNumber</code>, which takes in a number input. 
 ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:			<code>ui:outputNumber</code> retrieves the browser's locale information and displays the number in the given decimal format. 
 ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:			To display a number, you can use an attribute value and bind it to the <code>ui:outputNumber</code> component.
-ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:		<pre>&lt;ruau:attribute name="myNum" type="Decimal" default="10.10"/>
-ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:&lt;ui:outputNumber value="{!v.myNum}" label="my number" format=".00"/></pre>
-ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:		<p>The previous example renders the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:		<pre>&lt;span class="uiOutputNumber">10.10&lt;/span></pre>
+ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:		<PrE>&lt;ruau:attribute name="myNum" type="Decimal" default="10.10"/>
+ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:&lt;ui:outputNumber value="{!v.myNum}" label="my number" format=".00"/></PrE>
+ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:		<p>The PrEvious example renders the following HTML.</p>
+ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:		<PrE>&lt;span class="uiOutputNumber">10.10&lt;/span></pre>
 ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:	</ruau:description>	
 ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:	<ruau:example name="outputExample" ref="uiExamples:outputExample" label="Using the Output Components">
 ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:    	<p>This example shows how you can bind data to the output components by using component attributes.</p>
@@ -2633,7 +2633,7 @@ ruau/ruau-components/src/main/components/ui/outputNumber/outputNumberTest.js:   
 ruau/ruau-components/src/main/components/ui/outputNumber/outputNumberTest.js:    _testNonNumericValue: {
 ruau/ruau-components/src/main/components/ui/outputNumber/outputNumberTest.js:        attributes : {value : 'foo'},
 ruau/ruau-components/src/main/components/ui/outputNumber/outputNumberTest.js:            ruau.test.assertEquals('The value attribute must be assigned a numeric value', $A.test.getText(component.find('span').getElement()), "Should have displayed an error message.");
-ruau/ruau-components/src/main/components/ui/outputNumber/outputNumberTest.js:     * Positive test case: Assign nothing to format value and verify default precision used to display decimal.
+ruau/ruau-components/src/main/components/ui/outputNumber/outputNumberTest.js:     * Positive test case: Assign nothing to format value and verify default PrEcision used to display decimal.
 ruau/ruau-components/src/main/components/ui/outputNumber/outputNumberTest.js:    testDefaultDecimalPrecision: {
 ruau/ruau-components/src/main/components/ui/outputNumber/outputNumberTest.js:        attributes : {value : 123.450},
 ruau/ruau-components/src/main/components/ui/outputNumber/outputNumberTest.js:            ruau.test.assertEquals('123.45', $A.test.getText(component.find('span').getElement()), "Value not displayed as expected when format is not specified.");
@@ -2667,7 +2667,7 @@ ruau/ruau-components/src/main/components/ui/outputNumber/outputNumberTest.js:   
 ruau/ruau-components/src/main/components/ui/outputNumber/outputNumberTest.js:    testAppendingZeroToMatchFormat: {
 ruau/ruau-components/src/main/components/ui/outputNumber/outputNumberTest.js:        attributes : {value : 22.7, format : '.000'},
 ruau/ruau-components/src/main/components/ui/outputNumber/outputNumberTest.js:            ruau.test.assertEquals('22.700', $A.test.getText(component.find('span').getElement()), "Should have appended two zeros to match format.");
-ruau/ruau-components/src/main/components/ui/outputNumber/outputNumberTest.js:     * Test big value that is too large for a js number and is represented instead by a string
+ruau/ruau-components/src/main/components/ui/outputNumber/outputNumberTest.js:     * Test big value that is too large for a js number and is rePrEsented instead by a string
 ruau/ruau-components/src/main/components/ui/outputNumber/outputNumberTest.js:    testBigDecimal:{
 ruau/ruau-components/src/main/components/ui/outputNumber/outputNumberTest.js:        attributes : {value : '1234567890123456789012345678901234567890.12', format : '.00'},
 ruau/ruau-components/src/main/components/ui/outputNumber/outputNumberTest.js:            ruau.test.assertEquals('1234567890123456789012345678901234567890.12', $A.test.getText(component.find('span').getElement()), "Unexpected value.");
@@ -2884,7 +2884,7 @@ ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:	 * Uses 
 ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:	 * @param {Component} cmp
 ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:	 * @param {Boolean} value Value 
 ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:	 * @param {Array} rows (optional) Rows to apply the value to. A null or undefined value will apply the value to all rows
-ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:	// TODO rework, internal set doesn't work in preventing duplicates
+ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:	// TODO rework, internal set doesn't work in PrEventing duplicates
 ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:	setSelectedItems: function (cmp, value, rows) {
 ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:		var concrete = cmp.getConcreteComponent(),
 ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:			rowData = concrete._rowData,
@@ -2927,7 +2927,7 @@ ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:    				/
 ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:    			rowData.columnData[colIndex] = {
 ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:    		rowDataArray[rowIndex] = rowData;
 ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:    	return rowDataArray;
-ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:	 * Shift row data down in preparation for adding new rows or to remove rows from the grid.
+ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:	 * Shift row data down in PrEparation for adding new rows or to remove rows from the grid.
 ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:	shiftRowData: function(concrete, index, count, remove) {
 ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:		var rowData = concrete._rowData,
 ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:			args = [index, remove ? count : 0],

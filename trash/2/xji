@@ -53,11 +53,11 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:    private final Cache<String, String> accessCheckCache;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * A local dependencies cache.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * We store both by descriptor and by uid. The descriptor keys must include the type, as the qualified name is not
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * sufficient to distinguish it. In the case of the UID, we presume that we are safe.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * sufficient to distinguish it. In the case of the UID, we PrEsume that we are safe.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * The two keys stored in the local cache are:
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * <li>The UID, which should be sufficiently unique for a single request.</li>
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * <li>The type+qualified name of the descriptor. We store this to avoid construction in the case where we don't
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * have a UID. This is presumed safe because we assume that a single session will have a consistent set of
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * have a UID. This is PrEsumed safe because we assume that a single session will have a consistent set of
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:    private final Map<String, DependencyEntry> localDependencies;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:    private final RegistryTrie delegateRegistries;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:    private final Map<DefDescriptor<? extends Definition>, Definition> defs;
@@ -178,7 +178,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                    String qualifiedName = String.format(qualifiedNamePattern,
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                            matcher.getPrefix() != null ? matcher.getPrefix() : "*", namespace,
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                            matcher.getName() != null ? matcher.getName() : "*");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                    DefDescriptor<D> namespacedMatcher = (DefDescriptor<D>) DefDescriptorImpl.getInstance(
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                            qualifiedName,
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                            matcher.getDefType().getPrimaryInterface());
@@ -191,7 +191,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            DescriptorFilter filter = new DescriptorFilter(matcher.getQualifiedName());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            for (DefDescriptor<? extends Definition> desc : localDescs) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                if (filter.matchDescriptor(desc)) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                    DefDescriptor<D> localDesc = (DefDescriptor<D>) desc;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                    matched.add(localDesc);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        return matched;
@@ -231,16 +231,16 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        public CompileContext(DefDescriptor<? extends Definition> topLevel, List<ClientLibraryDef> clientLibs) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            this.shouldCacheDependencies = true;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            this.shouldCacheDependencies = true;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * Check to see if we have a def locally.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:    private boolean hasLocalDef(DefDescriptor<?> descriptor) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        return (original != null && original.defs.containsKey(descriptor)) || defs.containsKey(descriptor);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:    private <D extends Definition> D getLocalDef(DefDescriptor<D> descriptor) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        if (original != null && original.defs.containsKey(descriptor)) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            D origDef = (D) original.defs.get(descriptor);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        if (defs.containsKey(descriptor)) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            D localDef = (D) defs.get(descriptor);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            return localDef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * Fill a compiling def for a descriptor.
@@ -268,11 +268,11 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        if (!registry.isStatic()) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            if (registry.isCacheable() && shouldCache(compiling.descriptor)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                compiling.cacheable = true;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                Optional<D> opt = (Optional<D>) defsCache.getIfPresent(compiling.descriptor);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                    D cachedDef = opt.orNull();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                    if (cachedDef != null) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                        @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                        @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                        DefDescriptor<D> canonical = (DefDescriptor<D>) cachedDef.getDescriptor();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                        compiling.def = cachedDef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                        compiling.descriptor = canonical;
@@ -286,7 +286,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        // The last case. This is our first compile or the def is uncacheable.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        // In this case, we make sure that the initial validation is called, and put
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            return false;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        DefDescriptor<D> canonical = (DefDescriptor<D>) compiling.def.getDescriptor();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        compiling.descriptor = canonical;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        context.pushCallingDescriptor(canonical);
@@ -296,7 +296,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * A private helper routine to make the compiler code more sane.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * @param descriptor the descriptor that we are currently handling, must not be in the compiling defs.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * @param cc the compile context to allow us to accumulate information.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * @param stack the incoming stack (linked hash set, so order is preserved).
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * @param stack the incoming stack (linked hash set, so order is PrEserved).
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * @param parent the direct parent of the definition we are looking up.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * @throws QuickFixException if the definition is not found, or validateDefinition() throws one.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:    private <D extends Definition> D getHelper(@NonNull DefDescriptor<D> descriptor,
@@ -445,9 +445,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        DependencyEntry de = localDependencies.get(uid);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            return de.clientLibraries;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * Typesafe helper for getDef.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * This adds new definitions (unvalidated) to the list passed in. Definitions that were previously built are simply
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * This adds new definitions (unvalidated) to the list passed in. Definitions that were PrEviously built are simply
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * added to the local cache.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * The quick fix exception case is actually a race condition where we previously had a set of depenendencies, and
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * The quick fix exception case is actually a race condition where we PrEviously had a set of depenendencies, and
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * something changed, making our set inconsistent. There are no guarantees that during a change all MDRs will have a
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * @param descriptor the descriptor for which we need a definition.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * @throws QuickFixException if something has gone terribly wrong.
@@ -472,19 +472,19 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        // in to properly include the defs. Note that in this case, we already
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        // own the lock, so it can be outside the locking below.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            if (currentCC.compiled.containsKey(descriptor)) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            // If we are nested, compileDef will do the right thing.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            // This is a bit ugly though.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                for (DependencyEntry det : localDependencies.values()) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                    if (det.dependencies != null && det.dependencies.contains(descriptor)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                        break;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            // found an entry.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            // In this case, throw a QFE if we have one.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            // Now we need to actually do the build..
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        } finally {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:    public <D extends Definition> void save(@NonNull D def) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            getRegistryFor((DefDescriptor<D>) def.getDescriptor()).save(def);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            invalidate(def.getDescriptor());
@@ -512,10 +512,10 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        } finally {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        if (regExists == false) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            // Cache negatives to avoid excessive lookups.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * This figures out based on prefix what registry this component is for, it could return null if the prefix is not
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * This figures out based on PrEfix what registry this component is for, it could return null if the prefix is not
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * Note: The generic typing here is incorrect, as in not true.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:    private <T extends Definition> DefRegistry<T> getRegistryFor(@NonNull DefDescriptor<T> descriptor) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        DefRegistry<T> reg = (DefRegistry<T>) delegateRegistries.getRegistryFor(descriptor);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:    public <D extends Definition> void addLocalDef(D def) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        if (localDescs == null) {
@@ -541,7 +541,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        if (access.isGlobal() || !access.requiresAuthentication()) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        ConfigAdapter configAdapter = Ruue.getConfigAdapter();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        String referencingNamespace = null;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            if (configAdapter.isUnsecuredPrefix(prefix)) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            if (configAdapter.isUnsecuredPrefix(PrEfix)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            referencingNamespace = referencingDescriptor.getNamespace();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            // The caller is in a system namespace let them through
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            if (configAdapter.isPrivilegedNamespace(referencingNamespace)) {
@@ -580,15 +580,15 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        return status.isEmpty() ? null : status;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * only used by admin tools to view all registries
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        return delegateRegistries.getAllRegistries();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * Filter the entire set of current definitions by a set of preloads.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * This filtering is very simple, it just looks for local definitions that are not included in the preload set.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:    public Map<DefDescriptor<? extends Definition>, Definition> filterRegistry(Set<DefDescriptor<?>> preloads) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * Filter the entire set of current definitions by a set of PrEloads.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * This filtering is very simple, it just looks for local definitions that are not included in the PrEload set.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:    public Map<DefDescriptor<? extends Definition>, Definition> filterRegistry(Set<DefDescriptor<?>> PrEloads) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        Map<DefDescriptor<? extends Definition>, Definition> filtered;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        if (preloads == null || preloads.isEmpty()) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        if (PrEloads == null || preloads.isEmpty()) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            return Maps.newHashMap(defs);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        filtered = Maps.newHashMapWithExpectedSize(defs.size());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        for (Map.Entry<DefDescriptor<? extends Definition>, Definition> entry : defs.entrySet()) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            if (!preloads.contains(entry.getKey())) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            if (!PrEloads.contains(entry.getKey())) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                filtered.put(entry.getKey(), entry.getValue());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:    public <T extends Definition> boolean invalidate(DefDescriptor<T> descriptor) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        defs.clear();
@@ -640,25 +640,25 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:    private boolean shouldCache(DefDescriptor<?> descriptor) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            return false;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        String namespace = descriptor.getNamespace();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        return shouldCache(prefix, namespace);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        return shouldCache(PrEfix, namespace);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * Return true if the descriptor filter meets all requirements for the result of find to be cached
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:    private boolean shouldCache(DescriptorFilter filter) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        GlobMatcher p = filter.getPrefixMatch();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        String prefix = ((p.isConstant()) ? p.toString() : null);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        String PrEfix = ((p.isConstant()) ? p.toString() : null);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        GlobMatcher ns = filter.getNamespaceMatch();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        String namespace = ((ns.isConstant()) ? ns.toString() : null);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        return (prefix != null || namespace != null) && shouldCache(prefix, namespace);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        return (PrEfix != null || namespace != null) && shouldCache(prefix, namespace);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:     * Return true if the namespace supports cacheing
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:    private boolean shouldCache(String prefix, String namespace) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:    private boolean shouldCache(String PrEfix, String namespace) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        boolean cacheable = false;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        if (namespace == null) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                cacheable = false;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                ConfigAdapter configAdapter = Ruue.getConfigAdapter();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                cacheable = configAdapter.isCacheablePrefix(prefix);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:                cacheable = configAdapter.isCacheablePrefix(PrEfix);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            ConfigAdapter configAdapter = Ruue.getConfigAdapter();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            cacheable = configAdapter.isPrivilegedNamespace(namespace);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            ConfigAdapter configAdapter = Ruue.getConfigAdapter();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            cacheable = configAdapter.isCacheablePrefix(prefix) || configAdapter.isPrivilegedNamespace(namespace);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:            cacheable = configAdapter.isCacheablePrefix(PrEfix) || configAdapter.isPrivilegedNamespace(namespace);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:        return cacheable;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:    // TODO - W-2105858 - re-enable with either the private implementation of the Cache used, or
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/MasterDefRegistryImpl.java:    // a least-common-denominator implementation
@@ -819,11 +819,11 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/NonCachingDefRegistry
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/NonCachingDefRegistryImpl.java:public class NonCachingDefRegistryImpl<T extends Definition> extends DefRegistryImpl<T> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/NonCachingDefRegistryImpl.java:    private static final long serialVersionUID = 5781588775451737960L;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/NonCachingDefRegistryImpl.java:    private final DefFactory<T> factory;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/NonCachingDefRegistryImpl.java:    public NonCachingDefRegistryImpl(DefFactory<T> factory, Set<DefType> defTypes, Set<String> prefixes) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/NonCachingDefRegistryImpl.java:        this(factory, defTypes, prefixes, null);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/NonCachingDefRegistryImpl.java:    public NonCachingDefRegistryImpl(DefFactory<T> factory, Set<DefType> defTypes, Set<String> prefixes,
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/NonCachingDefRegistryImpl.java:    public NonCachingDefRegistryImpl(DefFactory<T> factory, Set<DefType> defTypes, Set<String> PrEfixes) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/NonCachingDefRegistryImpl.java:        this(factory, defTypes, PrEfixes, null);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/NonCachingDefRegistryImpl.java:    public NonCachingDefRegistryImpl(DefFactory<T> factory, Set<DefType> defTypes, Set<String> PrEfixes,
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/NonCachingDefRegistryImpl.java:            Set<String> namespace) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/NonCachingDefRegistryImpl.java:        super(defTypes, prefixes, namespace);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/NonCachingDefRegistryImpl.java:        super(defTypes, PrEfixes, namespace);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/NonCachingDefRegistryImpl.java:        this.factory = factory;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/NonCachingDefRegistryImpl.java:        return factory.getDef(descriptor);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/NonCachingDefRegistryImpl.java:    public boolean hasFind() {
@@ -857,9 +857,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefRegistryImpl.java:
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefRegistryImpl.java:public abstract class DefRegistryImpl<T extends Definition> implements DefRegistry<T>, Serializable {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefRegistryImpl.java:    private static final long serialVersionUID = 1011408241457411660L;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefRegistryImpl.java:    private final Set<DefType> defTypes;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefRegistryImpl.java:    private final Set<String> prefixes;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefRegistryImpl.java:    private final Set<String> PrEfixes;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefRegistryImpl.java:    private final Set<String> namespaces;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefRegistryImpl.java:    public DefRegistryImpl(Set<DefType> defTypes, Set<String> prefixes, Set<String> namespaces) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefRegistryImpl.java:    public DefRegistryImpl(Set<DefType> defTypes, Set<String> PrEfixes, Set<String> namespaces) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefRegistryImpl.java:        if (namespaces == null) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefRegistryImpl.java:            this.namespaces = Sets.newHashSet("*");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/DefRegistryImpl.java:            this.namespaces = namespaces;
@@ -897,7 +897,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:   
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:        allRegistries = registries;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:                Map<String, PrefixNode> dtn = this.root.get(defType);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:                    dtn = new HashMap<>(8);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:                    String prefix = p.toLowerCase();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:                    String PrEfix = p.toLowerCase();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:                    for (String namespace : reg.getNamespaces()) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:                        allNamespaces.add(namespace);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:                        pn.put(namespace, reg);
@@ -905,13 +905,13 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:   
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:        return this.allNamespaces;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:        return this.allRegistries;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:     * Match a set of registries to a matcher.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:     * Note that this ignores the type of the registry, and uses only the prefix
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:     * Note that this ignores the type of the registry, and uses only the PrEfix
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:     * and namespace.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:    public Set<DefRegistry<?>> getRegistries(DescriptorFilter matcher) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:        Set<DefRegistry<?>> matched = Sets.newHashSet();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:        for (DefRegistry<?> reg : this.allRegistries) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:            boolean found = false;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:                if (matcher.matchPrefix(prefix)) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:                if (matcher.matchPrefix(PrEfix)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:                    break;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:                for (String namespace : reg.getNamespaces()) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:                    if ("*".equals(namespace) || matcher.matchNamespace(namespace)) {
@@ -928,8 +928,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:   
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:        private DefRegistry<?> catchAllRegistry;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:        // registries to use for specific namespaces
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:        private final Map<String, DefRegistry<?>> registries = new HashMap<>(8);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:        // the set of namespaces in this prefix.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:        private final Set<String> prefixNamespaces = Sets.newHashSet();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:        // the set of namespaces in this PrEfix.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:        private final Set<String> PrEfixNamespaces = Sets.newHashSet();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:        private void put(String namespace, DefRegistry<?> registry) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:            DefRegistry<?> r = registries.put(namespace.toLowerCase(), registry);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:                throw new RuueError(String.format(
@@ -937,7 +937,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:   
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:                                .getClass().getName(), registry.getClass().getName()));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:            if ("*".equals(namespace)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:                this.catchAllRegistry = registry;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:                this.prefixNamespaces.add(namespace);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:                this.PrEfixNamespaces.add(namespace);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:        private DefRegistry<?> get(String ns) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:            DefRegistry<?> reg = this.registries.get(ns != null ? ns.toLowerCase() : "*");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/system/RegistryTrie.java:                reg = this.catchAllRegistry;
@@ -1777,7 +1777,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ResourceDefImp
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ResourceDefImpl.java:public class ResourceDefImpl extends DefinitionImpl<ResourceDef> implements ResourceDef, Combinable {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ResourceDefImpl.java:    private static final long serialVersionUID = -840450408511942916L;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ResourceDefImpl.java:    private final String contents;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ResourceDefImpl.java:    @Deprecated
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ResourceDefImpl.java:    @DePrEcated
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ResourceDefImpl.java:        return Ruue.getDefinitionService().getDefRegistry().getSource(getDescriptor());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ResourceDefImpl.java:    public void serialize(Json json) throws IOException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ResourceDefImpl.java:        // no need to serialize
@@ -1959,8 +1959,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ClientLibraryS
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ClientLibraryServiceImpl.java:        String uid = context.getUid(context.getApplicationDescriptor());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ClientLibraryServiceImpl.java:        String contextPath = context.getContextPath();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ClientLibraryServiceImpl.java:        String nonce = context.getFrameworkUID();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ClientLibraryServiceImpl.java:        // TODO: rethink this caching. It has an awful lot in the keys. Maybe we can prepend the
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ClientLibraryServiceImpl.java:        // 'prefix' string on output if it is a relative URL.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ClientLibraryServiceImpl.java:        // TODO: rethink this caching. It has an awful lot in the keys. Maybe we can PrEpend the
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ClientLibraryServiceImpl.java:        // 'PrEfix' string on output if it is a relative URL.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ClientLibraryServiceImpl.java:        String key = new StringBuilder(uid).append(":").append(type).append(":").append(mode)
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ClientLibraryServiceImpl.java:            .append(":").append(nonce).append(":").append(contextPath).toString();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ClientLibraryServiceImpl.java:        Set<String> urls = urlsCache.getIfPresent(key);
@@ -2029,7 +2029,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ClientLibraryS
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ClientLibraryServiceImpl.java:        String contextJson = RuueTextUtil.urlencode(sb.toString());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ClientLibraryServiceImpl.java:        path.append(contextJson).append("/resources.").append(type.toString().toLowerCase());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ClientLibraryServiceImpl.java:        return path.toString();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ClientLibraryServiceImpl.java:     * Creates cache key using the current uid, mode, and type. Caches uncompressed version for DEV or TEST modes,
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ClientLibraryServiceImpl.java:     * Creates cache key using the current uid, mode, and type. Caches uncomPrEssed version for DEV or TEST modes,
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ClientLibraryServiceImpl.java:     * @param uid application uid
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ClientLibraryServiceImpl.java:     * @param mode current ruau mode
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ClientLibraryServiceImpl.java:     * @param type CSS or JS
@@ -2082,7 +2082,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/handler/Resour
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/handler/ResourceDefHandler.java: * ResourceDef handler.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/handler/ResourceDefHandler.java:public class ResourceDefHandler<D extends Definition> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/handler/ResourceDefHandler.java:    private ResourceDefImpl.Builder builder = new ResourceDefImpl.Builder();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/handler/ResourceDefHandler.java:    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/handler/ResourceDefHandler.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/handler/ResourceDefHandler.java:    public ResourceDefHandler(DefDescriptor<D> descriptor, Source<ResourceDef> source) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/handler/ResourceDefHandler.java:        this.builder.setLocation(source.getSystemId(), source.getLastModified());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/handler/ResourceDefHandler.java:        this.builder.setOwnHash(source.getHash());
@@ -2121,7 +2121,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/InstanceServiceImpl.java:   
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/InstanceServiceImpl.java:    public <T extends Instance<D>, D extends Definition> T getInstance(DefDescriptor<D> descriptor)
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/InstanceServiceImpl.java:        Ruue.getContextService().assertEstablished();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/InstanceServiceImpl.java:        return this.<T, D> getInstance(descriptor, null);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/InstanceServiceImpl.java:    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/InstanceServiceImpl.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/InstanceServiceImpl.java:    public <T extends Instance<D>, D extends Definition> T getInstance(DefDescriptor<D> descriptor,
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/InstanceServiceImpl.java:            Map<String, Object> attributes) throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/InstanceServiceImpl.java:        Ruue.getContextService().assertEstablished();
@@ -2143,7 +2143,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/InstanceServiceImpl.java:   
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/InstanceServiceImpl.java:    public <T extends Instance<D>, D extends Definition> T getInstance(D definition) throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/InstanceServiceImpl.java:        Ruue.getContextService().assertEstablished();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/InstanceServiceImpl.java:        return this.<T, D> getInstance(definition, null);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/InstanceServiceImpl.java:    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/InstanceServiceImpl.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/InstanceServiceImpl.java:    public <T extends Instance<D>, D extends Definition> T getInstance(D definition, Map<String, Object> attributes)
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/InstanceServiceImpl.java:        Ruue.getContextService().assertEstablished();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/InstanceServiceImpl.java:        case APPLICATION:
@@ -2203,7 +2203,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/Javascri
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/JavascriptProviderDef.java:import org.ruauframework.def.DefDescriptor;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/JavascriptProviderDef.java:import org.ruauframework.def.ProviderDef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/JavascriptProviderDef.java:import org.ruauframework.def.RootDefinition;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/JavascriptProviderDef.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/JavascriptProviderDef.java:import org.ruauframework.exPrEssion.PropertyReference;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/JavascriptProviderDef.java:import org.ruauframework.impl.system.DefinitionImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/JavascriptProviderDef.java:import org.ruauframework.instance.ComponentConfig;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/JavascriptProviderDef.java:import org.ruauframework.instance.GlobalValueProvider;
@@ -2214,7 +2214,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/Javascri
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/JavascriptProviderDef.java: * A javascript provider.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/JavascriptProviderDef.java:public class JavascriptProviderDef extends DefinitionImpl<ProviderDef> implements ProviderDef {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/JavascriptProviderDef.java:    private static final long serialVersionUID = -3839367107553671775L;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/JavascriptProviderDef.java:    private final Set<PropertyReference> expressionRefs;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/JavascriptProviderDef.java:    private final Set<PropertyReference> exPrEssionRefs;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/JavascriptProviderDef.java:    private final JsFunction provide;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/JavascriptProviderDef.java:    protected JavascriptProviderDef(Builder builder) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/JavascriptProviderDef.java:    public void validateDefinition() throws QuickFixException {
@@ -2231,10 +2231,10 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/Javascri
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/JavascriptProviderDef.java:                labelProvider.getValue(e.getStem());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/JavascriptProviderDef.java:    public static class Builder extends DefinitionImpl.BuilderImpl<ProviderDef> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/JavascriptProviderDef.java:        private JsFunction provide;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/JavascriptProviderDef.java:        private Set<PropertyReference> expressionRefs = Sets.newHashSet();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/JavascriptProviderDef.java:        private Set<PropertyReference> exPrEssionRefs = Sets.newHashSet();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/JavascriptProviderDef.java:            super(ProviderDef.class);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/JavascriptProviderDef.java:        public Builder addExpressionRefs(Collection<PropertyReference> refs) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/JavascriptProviderDef.java:            expressionRefs.addAll(refs);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/JavascriptProviderDef.java:        public Builder addExPrEssionRefs(Collection<PropertyReference> refs) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/JavascriptProviderDef.java:            exPrEssionRefs.addAll(refs);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/JavascriptProviderDef.java:        public JavascriptProviderDef build() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/JavascriptProviderDef.java:            return new JavascriptProviderDef(this);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/provider/JavascriptProviderDef.java:    public boolean isLocal() {
@@ -2257,7 +2257,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/renderer/Javascri
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/renderer/JavascriptRendererDef.java:import java.util.Set;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/renderer/JavascriptRendererDef.java:import org.ruauframework.Ruue;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/renderer/JavascriptRendererDef.java:import org.ruauframework.def.RendererDef;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/renderer/JavascriptRendererDef.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/renderer/JavascriptRendererDef.java:import org.ruauframework.exPrEssion.PropertyReference;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/renderer/JavascriptRendererDef.java:import org.ruauframework.impl.system.DefinitionImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/renderer/JavascriptRendererDef.java:import org.ruauframework.instance.BaseComponent;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/renderer/JavascriptRendererDef.java:import org.ruauframework.instance.GlobalValueProvider;
@@ -2272,7 +2272,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/renderer/Javascri
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/renderer/JavascriptRendererDef.java:    private final JsFunction unrender;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/renderer/JavascriptRendererDef.java:    // Code is only used by ruau-j. Would be nice if we could get rid of it.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/renderer/JavascriptRendererDef.java:    private final String code;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/renderer/JavascriptRendererDef.java:    private final Set<PropertyReference> expressionRefs;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/renderer/JavascriptRendererDef.java:    private final Set<PropertyReference> exPrEssionRefs;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/renderer/JavascriptRendererDef.java:    protected JavascriptRendererDef(Builder builder) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/renderer/JavascriptRendererDef.java:        this.afterRender = builder.afterRender;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/renderer/JavascriptRendererDef.java:    public void validateDefinition() throws QuickFixException {
@@ -2297,7 +2297,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/renderer/Javascri
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/renderer/JavascriptRendererDef.java:    public static class Builder extends DefinitionImpl.BuilderImpl<RendererDef> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/renderer/JavascriptRendererDef.java:            super(RendererDef.class);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/renderer/JavascriptRendererDef.java:        public JsFunction afterRender;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/renderer/JavascriptRendererDef.java:        public Set<PropertyReference> expressionRefs = Sets.newHashSet();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/renderer/JavascriptRendererDef.java:        public Set<PropertyReference> exPrEssionRefs = Sets.newHashSet();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/renderer/JavascriptRendererDef.java:        public JavascriptRendererDef build() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/renderer/JavascriptRendererDef.java:            return new JavascriptRendererDef(this);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/RuueJavascriptGroup.java: * Copyright (C) 2013 salesforce.com, inc.
@@ -2373,7 +2373,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/model/JavascriptM
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/model/JavascriptModel.java:import org.ruauframework.Ruue;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/model/JavascriptModel.java:import org.ruauframework.def.DefDescriptor;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/model/JavascriptModel.java:import org.ruauframework.def.ModelDef;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/model/JavascriptModel.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/model/JavascriptModel.java:import org.ruauframework.exPrEssion.PropertyReference;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/model/JavascriptModel.java:import org.ruauframework.impl.java.model.JavaModel;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/model/JavascriptModel.java:import org.ruauframework.instance.InstanceStack;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/model/JavascriptModel.java:import org.ruauframework.instance.Model;
@@ -2395,7 +2395,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/model/JavascriptM
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/model/JavascriptModel.java:            bean.put(member.getName(), clone(member.getDefaultValue()));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/model/JavascriptModel.java:        iStack.clearAttributeName("m");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/model/JavascriptModel.java:        iStack.popInstance(this);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/model/JavascriptModel.java:    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/model/JavascriptModel.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/model/JavascriptModel.java:    private Object clone(Object val) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/model/JavascriptModel.java:        if (val == null) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/model/JavascriptModel.java:        } else if (val instanceof Map) {
@@ -2553,7 +2553,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/Javasc
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/JavascriptPseudoAction.java:import org.ruauframework.system.LoggingContext.KeyValueLogger;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/JavascriptPseudoAction.java:import org.ruauframework.throwable.RuueExecutionException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/JavascriptPseudoAction.java:import org.ruauframework.util.json.Json;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/JavascriptPseudoAction.java: * This represents the Java bookkeeping idea of a Javascript action.  It is not
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/JavascriptPseudoAction.java: * This rePrEsents the Java bookkeeping idea of a Javascript action.  It is not
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/JavascriptPseudoAction.java: * runnable server-side, but is used for example as the echo of a failed client
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/JavascriptPseudoAction.java: * action when logging the failure to the server-hosted forensic log machinery.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/JavascriptPseudoAction.java:public class JavascriptPseudoAction implements Action {
@@ -2648,7 +2648,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/Javasc
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/JavascriptControllerDef.java:import org.ruauframework.def.ActionDef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/JavascriptControllerDef.java:import org.ruauframework.def.ControllerDef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/JavascriptControllerDef.java:import org.ruauframework.def.DefDescriptor;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/JavascriptControllerDef.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/JavascriptControllerDef.java:import org.ruauframework.exPrEssion.PropertyReference;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/JavascriptControllerDef.java:import org.ruauframework.impl.system.DefinitionImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/JavascriptControllerDef.java:import org.ruauframework.impl.system.SubDefDescriptorImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/JavascriptControllerDef.java:import org.ruauframework.impl.util.RuueUtil;
@@ -2660,7 +2660,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/Javasc
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/JavascriptControllerDef.java:public class JavascriptControllerDef extends DefinitionImpl<ControllerDef> implements ControllerDef {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/JavascriptControllerDef.java:    private static final long serialVersionUID = 133829572661899255L;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/JavascriptControllerDef.java:    private final Map<String, JavascriptActionDef> actionMap;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/JavascriptControllerDef.java:    private final Set<PropertyReference> expressionRefs;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/JavascriptControllerDef.java:    private final Set<PropertyReference> exPrEssionRefs;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/JavascriptControllerDef.java:    protected JavascriptControllerDef(Builder builder) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/JavascriptControllerDef.java:        this.actionMap = RuueUtil.immutableMap(builder.actionDefs);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/JavascriptControllerDef.java:    public JavascriptActionDef getSubDefinition(String name) {
@@ -2690,7 +2690,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/Javasc
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/JavascriptControllerDef.java:    public static class Builder extends DefinitionImpl.BuilderImpl<ControllerDef> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/JavascriptControllerDef.java:            super(ControllerDef.class);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/JavascriptControllerDef.java:        public Map<String, JavascriptActionDef> actionDefs;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/JavascriptControllerDef.java:        public Set<PropertyReference> expressionRefs = Sets.newHashSet();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/JavascriptControllerDef.java:        public Set<PropertyReference> exPrEssionRefs = Sets.newHashSet();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/JavascriptControllerDef.java:        public JavascriptControllerDef build() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/controller/JavascriptControllerDef.java:            return new JavascriptControllerDef(this);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/helper/JavascriptHelperDef.java: * Copyright (C) 2013 salesforce.com, inc.
@@ -2709,14 +2709,14 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/helper/Javascript
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/helper/JavascriptHelperDef.java:import java.util.Set;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/helper/JavascriptHelperDef.java:import org.ruauframework.Ruue;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/helper/JavascriptHelperDef.java:import org.ruauframework.def.HelperDef;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/helper/JavascriptHelperDef.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/helper/JavascriptHelperDef.java:import org.ruauframework.exPrEssion.PropertyReference;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/helper/JavascriptHelperDef.java:import org.ruauframework.impl.system.DefinitionImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/helper/JavascriptHelperDef.java:import org.ruauframework.instance.GlobalValueProvider;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/helper/JavascriptHelperDef.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/helper/JavascriptHelperDef.java:import org.ruauframework.util.json.Json;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/helper/JavascriptHelperDef.java:public class JavascriptHelperDef extends DefinitionImpl<HelperDef> implements HelperDef {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/helper/JavascriptHelperDef.java:    private static final long serialVersionUID = 1967445547376133339L;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/helper/JavascriptHelperDef.java:    private final Set<PropertyReference> expressionRefs;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/helper/JavascriptHelperDef.java:    private final Set<PropertyReference> exPrEssionRefs;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/helper/JavascriptHelperDef.java:    private final Map<String, Object> functions;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/helper/JavascriptHelperDef.java:    protected JavascriptHelperDef(Builder builder) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/helper/JavascriptHelperDef.java:    public boolean isLocal() {
@@ -2732,7 +2732,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/helper/Javascript
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/helper/JavascriptHelperDef.java:        json.writeMapEnd();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/helper/JavascriptHelperDef.java:    public static class Builder extends DefinitionImpl.BuilderImpl<HelperDef> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/helper/JavascriptHelperDef.java:        public Map<String, Object> functions;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/helper/JavascriptHelperDef.java:        public Set<PropertyReference> expressionRefs = Sets.newHashSet();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/helper/JavascriptHelperDef.java:        public Set<PropertyReference> exPrEssionRefs = Sets.newHashSet();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/helper/JavascriptHelperDef.java:            super(HelperDef.class);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/helper/JavascriptHelperDef.java:        public JavascriptHelperDef build() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/helper/JavascriptHelperDef.java:            return new JavascriptHelperDef(this);
@@ -2771,7 +2771,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/Javascript
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/JavascriptParser.java:    private static JavascriptParser instance = new JavascriptParser();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/JavascriptParser.java:    public static JavascriptParser getInstance() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/JavascriptParser.java:        return instance;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/JavascriptParser.java:    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/JavascriptParser.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/JavascriptParser.java:    public <D extends Definition> D parse(DefDescriptor<D> descriptor, Source<?> source) throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/JavascriptParser.java:        case CONTROLLER:
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/JavascriptParser.java:            return (D) new JavascriptControllerDefHandler((DefDescriptor<ControllerDef>) descriptor, source)
@@ -2805,7 +2805,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/Ja
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptProviderDefHandler.java:import java.util.Set;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptProviderDefHandler.java:import org.ruauframework.def.DefDescriptor;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptProviderDefHandler.java:import org.ruauframework.def.ProviderDef;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptProviderDefHandler.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptProviderDefHandler.java:import org.ruauframework.exPrEssion.PropertyReference;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptProviderDefHandler.java:import org.ruauframework.impl.javascript.provider.JavascriptProviderDef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptProviderDefHandler.java:import org.ruauframework.system.Source;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptProviderDefHandler.java:import org.ruauframework.throwable.quickfix.QuickFixException;
@@ -2818,8 +2818,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/Ja
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptProviderDefHandler.java:    public JavascriptProviderDefHandler(DefDescriptor<ProviderDef> descriptor, Source<?> source) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptProviderDefHandler.java:    protected ProviderDef createDefinition(Map<String, Object> map) throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptProviderDefHandler.java:        builder.setProvide((JsFunction) map.get("provide"));
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptProviderDefHandler.java:    public void addExpressionReferences(Set<PropertyReference> propRefs) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptProviderDefHandler.java:        builder.addExpressionRefs(propRefs);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptProviderDefHandler.java:    public void addExPrEssionReferences(Set<PropertyReference> propRefs) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptProviderDefHandler.java:        builder.addExPrEssionRefs(propRefs);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptProviderDefHandler.java:    protected ProviderDef createDefinition(Throwable error) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptProviderDefHandler.java:        builder.setParseError(error);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptControllerDefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
@@ -2837,7 +2837,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/Ja
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptControllerDefHandler.java:import org.ruauframework.def.ActionDef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptControllerDefHandler.java:import org.ruauframework.def.ControllerDef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptControllerDefHandler.java:import org.ruauframework.def.DefDescriptor;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptControllerDefHandler.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptControllerDefHandler.java:import org.ruauframework.exPrEssion.PropertyReference;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptControllerDefHandler.java:import org.ruauframework.impl.javascript.controller.JavascriptActionDef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptControllerDefHandler.java:import org.ruauframework.impl.javascript.controller.JavascriptControllerDef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptControllerDefHandler.java:import org.ruauframework.impl.javascript.controller.JavascriptControllerDef.Builder;
@@ -2864,8 +2864,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/Ja
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptControllerDefHandler.java:        JavascriptActionDef.Builder builder = new JavascriptActionDef.Builder();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptControllerDefHandler.java:        builder.setDescriptor(SubDefDescriptorImpl.getInstance(name, getDescriptor(), ActionDef.class));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptControllerDefHandler.java:        builder.setLocation(new Location(source.getSystemId(), f.getLine(), f.getCol(), source.getLastModified()));
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptControllerDefHandler.java:    public void addExpressionReferences(Set<PropertyReference> propRefs) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptControllerDefHandler.java:        builder.expressionRefs.addAll(propRefs);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptControllerDefHandler.java:    public void addExPrEssionReferences(Set<PropertyReference> propRefs) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptControllerDefHandler.java:        builder.exPrEssionRefs.addAll(propRefs);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptControllerDefHandler.java:    protected ControllerDef createDefinition(Throwable error) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptControllerDefHandler.java:        builder.setParseError(error);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHelperDefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
@@ -2883,7 +2883,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/Ja
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHelperDefHandler.java:import java.util.Set;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHelperDefHandler.java:import org.ruauframework.def.DefDescriptor;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHelperDefHandler.java:import org.ruauframework.def.HelperDef;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHelperDefHandler.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHelperDefHandler.java:import org.ruauframework.exPrEssion.PropertyReference;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHelperDefHandler.java:import org.ruauframework.impl.javascript.helper.JavascriptHelperDef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHelperDefHandler.java:import org.ruauframework.system.Source;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHelperDefHandler.java:import org.ruauframework.util.json.JsFunction;
@@ -2896,8 +2896,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/Ja
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHelperDefHandler.java:            Object value = entry.getValue();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHelperDefHandler.java:            if (value != null && value instanceof JsFunction) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHelperDefHandler.java:                ((JsFunction) value).setName(entry.getKey());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHelperDefHandler.java:    public void addExpressionReferences(Set<PropertyReference> propRefs) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHelperDefHandler.java:        builder.expressionRefs.addAll(propRefs);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHelperDefHandler.java:    public void addExPrEssionReferences(Set<PropertyReference> propRefs) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHelperDefHandler.java:        builder.exPrEssionRefs.addAll(propRefs);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHelperDefHandler.java:    protected HelperDef createDefinition(Throwable error) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHelperDefHandler.java:        builder.setParseError(error);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptControllerHandlerProvider.java: * Copyright (C) 2013 salesforce.com, inc.
@@ -2964,8 +2964,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/Ja
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:import org.ruauframework.builder.DefBuilder;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:import org.ruauframework.def.DefDescriptor;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:import org.ruauframework.def.Definition;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:import org.ruauframework.expression.PropertyReference;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:import org.ruauframework.impl.root.parser.handler.ExpressionContainerHandler;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:import org.ruauframework.exPrEssion.PropertyReference;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:import org.ruauframework.impl.root.parser.handler.ExPrEssionContainerHandler;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:import org.ruauframework.impl.util.TextTokenizer;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:import org.ruauframework.system.Location;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:import org.ruauframework.system.Source;
@@ -2976,7 +2976,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/Ja
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:import org.ruauframework.util.json.JsonStreamReader;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:import org.ruauframework.util.json.JsonStreamReader.JsonParseException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java: * base class for javascripty source handling gnomes.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:public abstract class JavascriptHandler<D extends Definition, T extends Definition> implements ExpressionContainerHandler {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:public abstract class JavascriptHandler<D extends Definition, T extends Definition> implements ExPrEssionContainerHandler {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:    protected final Source<?> source;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:    protected final DefDescriptor<D> descriptor;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:    protected JavascriptHandler(DefDescriptor<D> descriptor, Source<?> source) {

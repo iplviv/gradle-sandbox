@@ -91,7 +91,7 @@ ruau/ruau/src/test/components/uitest/localStorageFiller/localStorageFiller.cmp: 
 ruau/ruau/src/test/components/uitest/localStorageFiller/localStorageFiller.cmp:<ruau:component>
 ruau/ruau/src/test/components/uitest/localStorageFiller/localStorageFiller.cmp:<ruau:attribute name="message" type="String"></ruau:attribute>
 ruau/ruau/src/test/components/uitest/localStorageFiller/localStorageFiller.cmp:This component will try to fill up browser's local storage with junk. Look for messages in browser console.
-ruau/ruau/src/test/components/uitest/localStorageFiller/localStorageFiller.cmp:<ui:button label="Fill up Local Storage" press="{!c.fillLocalStorage}"></ui:button>
+ruau/ruau/src/test/components/uitest/localStorageFiller/localStorageFiller.cmp:<ui:button label="Fill up Local Storage" PrEss="{!c.fillLocalStorage}"></ui:button>
 ruau/ruau/src/test/components/uitest/localStorageFiller/localStorageFiller.cmp:</ruau:component>
 ruau/ruau/src/test/components/uitest/localStorageFiller/localStorageFillerController.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/test/components/uitest/localStorageFiller/localStorageFillerController.js: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -585,7 +585,7 @@ ruau/ruau/src/test/components/uitest/accessibilityTool/accessibilityToolTest.js:
 ruau/ruau/src/test/components/uitest/accessibilityTool/accessibilityToolTest.js:        testInputDefaultError : {
 ruau/ruau/src/test/components/uitest/accessibilityTool/accessibilityToolTest.js:        	attributes: {
 ruau/ruau/src/test/components/uitest/accessibilityTool/accessibilityToolTest.js:                caseToRender: 'testInputDefaultError'
-ruau/ruau/src/test/components/uitest/accessibilityTool/accessibilityToolTest.js:            	cmp.find("inputErrorTest").find("validate").getEvent("press").fire({});
+ruau/ruau/src/test/components/uitest/accessibilityTool/accessibilityToolTest.js:            	cmp.find("inputErrorTest").find("validate").getEvent("PrEss").fire({});
 ruau/ruau/src/test/components/uitest/accessibilityTool/accessibilityToolTest.js:        testWithNoHeader: {
 ruau/ruau/src/test/components/uitest/accessibilityTool/accessibilityToolTest.js:            attributes: {
 ruau/ruau/src/test/components/uitest/accessibilityTool/accessibilityToolTest.js:                caseToRender: 'testWithNoHeader'
@@ -929,7 +929,7 @@ ruau/ruau/src/test/components/uitest/dataTable_NoHeaderValue/dataTable_NoHeaderV
 ruau/ruau/src/test/components/uitest/dataTable_NoHeaderValue/dataTable_NoHeaderValueTest.js:            ruau.test.assertFalse( $A.util.hasClass(dataRow.cells[0],'header') , "data cells should not have header class" );
 ruau/ruau/src/test/components/uitest/popupTestTriggerElement/popupTestTriggerElement.cmp:<ruau:component>
 ruau/ruau/src/test/components/uitest/popupTestTriggerElement/popupTestTriggerElement.cmp:	<ruau:registerevent name="popupTargetToggle" type="ui:popupTargetToggle" />
-ruau/ruau/src/test/components/uitest/popupTestTriggerElement/popupTestTriggerElement.cmp:	<ui:label class="customTriggerLabel" label="Custom trigger" /> <ui:button class="customTriggerButton" press="{!c.hideTarget}" label="Close Target" /><br />
+ruau/ruau/src/test/components/uitest/popupTestTriggerElement/popupTestTriggerElement.cmp:	<ui:label class="customTriggerLabel" label="Custom trigger" /> <ui:button class="customTriggerButton" PrEss="{!c.hideTarget}" label="Close Target" /><br />
 ruau/ruau/src/test/components/uitest/popupTestTriggerElement/popupTestTriggerElement.cmp:	<ui:inputText class="customTriggerInput" focus="{!c.showTarget}" />
 ruau/ruau/src/test/components/uitest/popupTestTriggerElement/popupTestTriggerElement.cmp:</ruau:component>
 ruau/ruau/src/test/components/uitest/popupTestTriggerElement/popupTestTriggerElementController.js:	showTarget : function(component) {
@@ -960,8 +960,8 @@ ruau/ruau/src/test/components/uitest/panelTest/panelTest.cmp:    <ruau:dependenc
 ruau/ruau/src/test/components/uitest/panelTest/panelTest.cmp:    <div class="container">
 ruau/ruau/src/test/components/uitest/panelTest/panelTest.cmp:        <div class="footer">
 ruau/ruau/src/test/components/uitest/panelTest/panelTest.cmp:            <div ruau:id="content">content to show inside panel</div>
-ruau/ruau/src/test/components/uitest/panelTest/panelTest.cmp:            <ui:button class="panelDialogModalButton" press="{!c.showModal}" label="Show Panel Dialog Modal"></ui:button>
-ruau/ruau/src/test/components/uitest/panelTest/panelTest.cmp:            <ui:button class="panelDialogNonModalButton" press="{!c.showNonModal}" label="Show Panel Dialog Non-Modal" ruau:id="nonModalButton"></ui:button>
+ruau/ruau/src/test/components/uitest/panelTest/panelTest.cmp:            <ui:button class="panelDialogModalButton" PrEss="{!c.showModal}" label="Show Panel Dialog Modal"></ui:button>
+ruau/ruau/src/test/components/uitest/panelTest/panelTest.cmp:            <ui:button class="panelDialogNonModalButton" PrEss="{!c.showNonModal}" label="Show Panel Dialog Non-Modal" ruau:id="nonModalButton"></ui:button>
 ruau/ruau/src/test/components/uitest/panelTest/panelTest.cmp:    <ui:panelManager />
 ruau/ruau/src/test/components/uitest/panelTest/panelTest.cmp:</ruau:component>
 ruau/ruau/src/test/components/uitest/panelTest/panelTestHelper.js:				componentDef: 'markup://ui:outputText',
@@ -979,12 +979,12 @@ ruau/ruau/src/test/components/uitest/panelTest/panelTestHelper.js:						label : 
 ruau/ruau/src/test/components/uitest/panelTest/panelTestHelper.js:				componentDef: 'markup://ui:button',
 ruau/ruau/src/test/components/uitest/panelTest/panelTestHelper.js:				attributes : {
 ruau/ruau/src/test/components/uitest/panelTest/panelTestHelper.js:					values :
-ruau/ruau/src/test/components/uitest/panelTest/panelTestHelper.js:						"class": 'pressOverlay',
+ruau/ruau/src/test/components/uitest/panelTest/panelTestHelper.js:						"class": 'PrEssOverlay',
 ruau/ruau/src/test/components/uitest/panelTest/panelTestHelper.js:						label : 'open another overlay'
 ruau/ruau/src/test/components/uitest/panelTest/panelTestController.js:	showModal: function(cmp, event, helper) {
 ruau/ruau/src/test/components/uitest/panelTest/panelTestController.js:		var cmps = $A.componentService.newComponentAsync(this, function(){}, helper.getConfig(cmp));
 ruau/ruau/src/test/components/uitest/panelTest/panelTestController.js:		var overlay = cmps[3];
-ruau/ruau/src/test/components/uitest/panelTest/panelTestController.js:		overlay.addHandler('press', cmp, 'c.showModal')
+ruau/ruau/src/test/components/uitest/panelTest/panelTestController.js:		overlay.addHandler('PrEss', cmp, 'c.showModal')
 ruau/ruau/src/test/components/uitest/panelTest/panelTestController.js:		var openPanelEvent = $A.get('e.ui:openPanel').setParams({
 ruau/ruau/src/test/components/uitest/panelTest/panelTestController.js:            isModal: true,
 ruau/ruau/src/test/components/uitest/panelTest/panelTestController.js:            isDialog: true,
@@ -998,7 +998,7 @@ ruau/ruau/src/test/components/uitest/panelTest/panelTestController.js:    showNo
 ruau/ruau/src/test/components/uitest/panelTest/panelTestController.js:        var cmps = $A.componentService.newComponentAsync(this, function(){}, helper.getConfig(cmp));
 ruau/ruau/src/test/components/uitest/panelTest/panelTestController.js:        var overlay = cmps[3];
 ruau/ruau/src/test/components/uitest/panelTest/panelTestController.js:        var referenceElement = cmp.find("nonModalButton").getElement();
-ruau/ruau/src/test/components/uitest/panelTest/panelTestController.js:        overlay.addHandler('press', cmp, 'c.showNonModal');
+ruau/ruau/src/test/components/uitest/panelTest/panelTestController.js:        overlay.addHandler('PrEss', cmp, 'c.showNonModal');
 ruau/ruau/src/test/components/uitest/panelTest/panelTestController.js:        var openPanelEvent = $A.get('e.ui:openPanel').setParams({
 ruau/ruau/src/test/components/uitest/panelTest/panelTestController.js:            isModal: false,
 ruau/ruau/src/test/components/uitest/panelTest/panelTestController.js:            isDialog: true,
@@ -1193,8 +1193,8 @@ ruau/ruau/src/test/components/uitest/inputError_CustomTest/inputError_CustomTest
 ruau/ruau/src/test/components/uitest/inputError_CustomTest/inputError_CustomTest.cmp:	<ui:inputText ruau:id="inputCmp" value="" onError="{!c.handleError}" onClearErrors="{!c.handleClearError}"/> <br/>
 ruau/ruau/src/test/components/uitest/inputError_CustomTest/inputError_CustomTest.cmp:	Error message: <div id="errorDiv">{!v.errorMessage}</div>
 ruau/ruau/src/test/components/uitest/inputError_CustomTest/inputError_CustomTest.cmp:	Error Status: <ui:outputText ruau:id="outputStatus" value=""/> <br/><br/>
-ruau/ruau/src/test/components/uitest/inputError_CustomTest/inputError_CustomTest.cmp:    <div id="ErrorFireOnErrorEvent"><ui:button label="Server error - Fire onError event" press="{!c.doServerErrorFireOnErrorEvent}"/></div>
-ruau/ruau/src/test/components/uitest/inputError_CustomTest/inputError_CustomTest.cmp:    <div id="ClearFireOnClearErrrorsEvent"><ui:button label="Clear error - Fire onClearErrors event" press="{!c.clearErrorFireOnClearErrorsEvent}"/></div>
+ruau/ruau/src/test/components/uitest/inputError_CustomTest/inputError_CustomTest.cmp:    <div id="ErrorFireOnErrorEvent"><ui:button label="Server error - Fire onError event" PrEss="{!c.doServerErrorFireOnErrorEvent}"/></div>
+ruau/ruau/src/test/components/uitest/inputError_CustomTest/inputError_CustomTest.cmp:    <div id="ClearFireOnClearErrrorsEvent"><ui:button label="Clear error - Fire onClearErrors event" PrEss="{!c.clearErrorFireOnClearErrorsEvent}"/></div>
 ruau/ruau/src/test/components/uitest/inputError_CustomTest/inputError_CustomTest.cmp:</ruau:component>
 ruau/ruau/src/test/components/uitest/inputError_CustomTest/inputError_CustomTestController.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/test/components/uitest/inputError_CustomTest/inputError_CustomTestController.js: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -1212,7 +1212,7 @@ ruau/ruau/src/test/components/uitest/inputError_CustomTest/inputError_CustomTest
 ruau/ruau/src/test/components/uitest/inputError_CustomTest/inputError_CustomTestController.js:            for (var i = 0; i < errorsObj.length; i++) {
 ruau/ruau/src/test/components/uitest/inputError_CustomTest/inputError_CustomTestController.js:                errMsgs.push("Custom Error Msg: " + errorsObj[i].message);
 ruau/ruau/src/test/components/uitest/inputError_CustomTest/inputError_CustomTestController.js:            // uncomment after bug: W-1412621
-ruau/ruau/src/test/components/uitest/inputError_CustomTest/inputError_CustomTestController.js:            errorCmp = $A.componentService.newComponentDeprecated({
+ruau/ruau/src/test/components/uitest/inputError_CustomTest/inputError_CustomTestController.js:            errorCmp = $A.componentService.newComponentDePrEcated({
 ruau/ruau/src/test/components/uitest/inputError_CustomTest/inputError_CustomTestController.js:                "componentDef": "markup://ui:inputDefaultError",
 ruau/ruau/src/test/components/uitest/inputError_CustomTest/inputError_CustomTestController.js:                "attributes": {
 ruau/ruau/src/test/components/uitest/inputError_CustomTest/inputError_CustomTestController.js:                    "values": {
@@ -1313,7 +1313,7 @@ ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_Te
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_Test.cmp:       Test that will verify that the the inputDefault error shows up when there is an error, and doesn't when there isn't an error  
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_Test.cmp:    <ruau:if isTrue="{!v.caseToRender == 'dynamic' }">   	
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_Test.cmp:	    <div ruau:id="propsArea"></div>
-ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_Test.cmp:	    <ui:button label="New" ruau:id="new_button" press="{!c.createNew}"/>	   
+ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_Test.cmp:	    <ui:button label="New" ruau:id="new_button" PrEss="{!c.createNew}"/>	   
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_Test.cmp:    </ruau:if>
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_Test.cmp:       Test that will verify that the the inputDefault error shows up when there is an error, and doesn't when there isn't an error  
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_Test.cmp:    <ruau:if isTrue="{!v.caseToRender == 'default' || v.caseToRender == 'all'}">
@@ -1379,7 +1379,7 @@ ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_Te
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_Test.cmp:       <ui:label for="textInvalid" label="testingInvalidInput"/>
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_Test.cmp:       <ui:inputText ruau:id="textInvalid"/>
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_Test.cmp:     </ruau:if>
-ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_Test.cmp:    <ui:button label="validate" press="{!c.validateInput}" ruau:id="validate"/>
+ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_Test.cmp:    <ui:button label="validate" PrEss="{!c.validateInput}" ruau:id="validate"/>
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_Test.cmp:</ruau:component>
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -1439,7 +1439,7 @@ ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_Te
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:    testInputDefaultShowsWithOnlyOneItem : {
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:    	attributes : {"caseToRender" : "default"},
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:    		//Verify that there are no inputDefaultErrors or uls on the page
-ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:    		$A.test.assertEquals(document.getElementsByTagName("ul").length, 0, "There should be no uls present")
+ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:    		$A.test.assertEquals(document.getElementsByTagName("ul").length, 0, "There should be no uls PrEsent")
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:    		//Validate the components
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:    		this.fireErrorValidation(cmp.find("validate"), false);
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:    		var chldsText = "",
@@ -1449,7 +1449,7 @@ ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_Te
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:    		 //Grab the uls children and verify that there are three
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:            var chlds = ul[0].children;
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:    		//Verify error messages are correct
-ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:            	$A.test.assertTrue(this.ERROR_OUTPUT.indexOf(chldsText) > -1, "Error message that is present is incorrect");
+ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:            	$A.test.assertTrue(this.ERROR_OUTPUT.indexOf(chldsText) > -1, "Error message that is PrEsent is incorrect");
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:     * Show inputDefault error then take it away, then put it back
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:    testInputDefaultToggles : {
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:    	attributes: {"caseToRender" : "default"},
@@ -1482,7 +1482,7 @@ ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_Te
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:    		//Validate the components
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:    		this.fireErrorValidation(cmp.find("validate"), false);
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:    		this.verifyInputDefaultStructure(input, ul, 1, 0, 0); 
-ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:     * All tests from here on down, test individual components and make sure that the connection is still present 
+ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:     * All tests from here on down, test individual components and make sure that the connection is still PrEsent 
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:    	attributes: { "caseToRender" : "select"},
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:    		this.fireErrorValidation(cmp.find("validate"), false);
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:    		this.validateBasic(cmp,"select"+this.IDENTIFIER);
@@ -1743,7 +1743,7 @@ ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTestTe
 ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTestTest.js:	        this.baseFunction(cmp, this.EXPECTED_2,  this.EXPECTED_2_1, 2, "goTo1Column");
 ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTestTest.js:	        //verify that headers and correct data does not exists
 ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTestTest.js:            this.verifyHeaderElements(cmp.find("grid"), 3, this.EXPECTED_2_1);  
-ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTestTest.js:   * Using columns that are already present verify that we can append to them dynamically
+ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTestTest.js:   * Using columns that are already PrEsent verify that we can append to them dynamically
 ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTestTest.js:	  attributes : {"appendOrOverwrite" : "append", "useDynamicColumns" : "false"},
 ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTestTest.js:	        this.baseFunction(cmp, this.EXPECTED_2,  this.EXPECTED_2_1, 2, "goTo1Column");
 ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTestTest.js:	        //verify that headers and correct data does not exists
@@ -1788,12 +1788,12 @@ ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTest.c
 ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTest.cmp:    <ruau:attribute name="totalItems"          type="Integer"/>
 ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTest.cmp:    <ruau:dependency resource="markup://ui:dataGrid"/>
 ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTest.cmp:    <ruau:dependency resource="markup://ui:dataGridColumn"/>
-ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTest.cmp:    <ui:button label="Add a Column"   press='{!c.addAColumn}'              ruau:id="addAColumn"/>
-ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTest.cmp:    <ui:button label="5 Columns"      press='{!c.goTo5Columns}'            ruau:id="goTo5Columns"/>
-ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTest.cmp:    <ui:button label="2 Columns"      press='{!c.goTo2Columns}'            ruau:id="goTo2Columns"/>
-ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTest.cmp:    <ui:button label="1 Columns"      press='{!c.goTo1Column}'             ruau:id="goTo1Column"/>
-ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTest.cmp:    <ui:button label="use wrong name" press='{!c.goToColumnWithWrongName}' ruau:id="goToColumnWithWrongName"/>
-ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTest.cmp:    <ui:button label="remove Columns" press='{!c.removeColumns}' ruau:id="removeColumns"/>
+ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTest.cmp:    <ui:button label="Add a Column"   PrEss='{!c.addAColumn}'              ruau:id="addAColumn"/>
+ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTest.cmp:    <ui:button label="5 Columns"      PrEss='{!c.goTo5Columns}'            ruau:id="goTo5Columns"/>
+ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTest.cmp:    <ui:button label="2 Columns"      PrEss='{!c.goTo2Columns}'            ruau:id="goTo2Columns"/>
+ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTest.cmp:    <ui:button label="1 Columns"      PrEss='{!c.goTo1Column}'             ruau:id="goTo1Column"/>
+ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTest.cmp:    <ui:button label="use wrong name" PrEss='{!c.goToColumnWithWrongName}' ruau:id="goToColumnWithWrongName"/>
+ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTest.cmp:    <ui:button label="remove Columns" PrEss='{!c.removeColumns}' ruau:id="removeColumns"/>
 ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTest.cmp:     <ruau:if isTrue="{!v.useDynamicColumns}">
 ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTest.cmp:	     <ui:dataGrid ruau:id="grid" mode="VIEW" sortBy="{!v.sortBy}">  
 ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTest.cmp:	        <ruau:set attribute="dataProvider">
@@ -2129,14 +2129,14 @@ ruau/ruau/src/test/components/uitest/menu_MetadataTest/menu_MetadataTest.app:   
 ruau/ruau/src/test/components/uitest/menu_MetadataTest/menu_MetadataTest.app:        <h2>Example: how to get menu selected values</h2>
 ruau/ruau/src/test/components/uitest/menu_MetadataTest/menu_MetadataTest.app:            <ui:menuTriggerLink class="checkboxMenuLabel" ruau:id="checkboxMenuLabel" label="NFC West Teams"/>
 ruau/ruau/src/test/components/uitest/menu_MetadataTest/menu_MetadataTest.app:            <ui:menuList class="checkboxMenu" ruau:id="checkboxMenu" menuItems="{!m.data}"/>
-ruau/ruau/src/test/components/uitest/menu_MetadataTest/menu_MetadataTest.app:        <ui:button class="checkboxButton" ruau:id="checkboxButton" press="{!c.getMenuSelected}" label="Check the selected menu items"/>
+ruau/ruau/src/test/components/uitest/menu_MetadataTest/menu_MetadataTest.app:        <ui:button class="checkboxButton" ruau:id="checkboxButton" PrEss="{!c.getMenuSelected}" label="Check the selected menu items"/>
 ruau/ruau/src/test/components/uitest/menu_MetadataTest/menu_MetadataTest.app:        <ui:outputText class="result" ruau:id="result" value="Which items get selected"/>
 ruau/ruau/src/test/components/uitest/menu_MetadataTest/menu_MetadataTest.app:    <div style="display:inline-block;width:50%;">
 ruau/ruau/src/test/components/uitest/menu_MetadataTest/menu_MetadataTest.app:        <ui:outputText value='&#60;ui:menu&#62;'/>
 ruau/ruau/src/test/components/uitest/menu_MetadataTest/menu_MetadataTest.app:        <ui:outputText value='&#160;&#160;&#60;ui:menuTriggerLink ruau:id="metadatatrigger" label="Snow Resorts"/&#62;'/>
 ruau/ruau/src/test/components/uitest/menu_MetadataTest/menu_MetadataTest.app:        <ui:outputText value='&#160;&#160;&#60;ui:menuList ruau:id="myMenu" menuItems="{&#160;!m.data}"/&#62;'/>
 ruau/ruau/src/test/components/uitest/menu_MetadataTest/menu_MetadataTest.app:        <ui:outputText value='&#60;/ui:menu&#62;'/>
-ruau/ruau/src/test/components/uitest/menu_MetadataTest/menu_MetadataTest.app:        <ui:outputText value='&#60;ui:button press="{&#160;!c.getMenuSelected}" label="Check the selected menu items"/&#62;'/>
+ruau/ruau/src/test/components/uitest/menu_MetadataTest/menu_MetadataTest.app:        <ui:outputText value='&#60;ui:button PrEss="{&#160;!c.getMenuSelected}" label="Check the selected menu items"/&#62;'/>
 ruau/ruau/src/test/components/uitest/menu_MetadataTest/menu_MetadataTest.app:        <ui:outputText value='&#60;ui:outputText ruau:id="result" value="Which items get selected"/&#62;'/>
 ruau/ruau/src/test/components/uitest/menu_MetadataTest/menu_MetadataTest.app:<div style="margin:20px;">
 ruau/ruau/src/test/components/uitest/menu_MetadataTest/menu_MetadataTest.app:    <div style="display:inline-block;width:50%;vertical-align:top;">
@@ -2239,7 +2239,7 @@ ruau/ruau/src/test/components/uitest/infiniteListCscc_Test/infiniteListCscc_Test
 ruau/ruau/src/test/components/uitest/infiniteListCscc_Test/infiniteListCscc_Test.cmp:		<ruau:set attribute="itemTemplate">
 ruau/ruau/src/test/components/uitest/infiniteListCscc_Test/infiniteListCscc_Test.cmp:			<div style="border: 1px solid black">{!row.index} : {!row.char}</div>
 ruau/ruau/src/test/components/uitest/infiniteListCscc_Test/infiniteListCscc_Test.cmp:		</ruau:set>
-ruau/ruau/src/test/components/uitest/infiniteListCscc_Test/infiniteListCscc_Test.cmp:	<ui:button ruau:id="btnShowMore" label="show more" press="{!c.showMore}"/><br/>
+ruau/ruau/src/test/components/uitest/infiniteListCscc_Test/infiniteListCscc_Test.cmp:	<ui:button ruau:id="btnShowMore" label="show more" PrEss="{!c.showMore}"/><br/>
 ruau/ruau/src/test/components/uitest/infiniteListCscc_Test/infiniteListCscc_Test.cmp:</ruau:component>
 ruau/ruau/src/test/components/uitest/outputDateTime_JavaModel/outputDateTime_JavaModelTest.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/test/components/uitest/outputDateTime_JavaModel/outputDateTime_JavaModelTest.js: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -2415,7 +2415,7 @@ ruau/ruau/src/test/components/uitest/infiniteList_ScrollerTest/infiniteList_Scro
 ruau/ruau/src/test/components/uitest/infiniteList_ScrollerTest/infiniteList_ScrollerTestTest.js: * See the License for the specific language governing permissions and
 ruau/ruau/src/test/components/uitest/infiniteList_ScrollerTest/infiniteList_ScrollerTestTest.js: * limitations under the License.
 ruau/ruau/src/test/components/uitest/infiniteList_ScrollerTest/infiniteList_ScrollerTestTest.js:// Excluding ie8 and 7 browsers due to lack of support for addEventListener function
-ruau/ruau/src/test/components/uitest/infiniteList_ScrollerTest/infiniteList_ScrollerTestTest.js:    * Testing to make sure that when pullToRefresh and PullToShowMore are not present,
+ruau/ruau/src/test/components/uitest/infiniteList_ScrollerTest/infiniteList_ScrollerTestTest.js:    * Testing to make sure that when pullToRefresh and PullToShowMore are not PrEsent,
 ruau/ruau/src/test/components/uitest/infiniteList_ScrollerTest/infiniteList_ScrollerTestTest.js:    * that there isn't a spacer div. This appears when the amount of data on the screen
 ruau/ruau/src/test/components/uitest/infiniteList_ScrollerTest/infiniteList_ScrollerTestTest.js:    * does not fill out the scrollable area 
 ruau/ruau/src/test/components/uitest/infiniteList_ScrollerTest/infiniteList_ScrollerTestTest.js:   testNoPullToRefreshNoDivSpace: {
@@ -2586,7 +2586,7 @@ ruau/ruau/src/test/components/uitest/scrollerNative/scrollerNative.cmp:				<div 
 ruau/ruau/src/test/components/uitest/scrollerNative/scrollerNative.cmp:	<div id="footer" class="common">This is a footer</div>
 ruau/ruau/src/test/components/uitest/scrollerNative/scrollerNative.cmp:	<span id="scrollMoveHandlerCalled">0</span>
 ruau/ruau/src/test/components/uitest/scrollerNative/scrollerNative.cmp:</ruau:component>
-ruau/ruau/src/test/components/uitest/scrollerNative/scrollerNativeController.js:		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+ruau/ruau/src/test/components/uitest/scrollerNative/scrollerNativeController.js:		document.addEventListener('touchmove', function (e) { e.PrEventDefault(); }, false);
 ruau/ruau/src/test/components/uitest/scrollerNative/scrollerNativeController.js:    scrollMoveHandler: function(component, event, helper){
 ruau/ruau/src/test/components/uitest/scrollerNative/scrollerNativeController.js:    	var span = document.getElementById('scrollMoveHandlerCalled');
 ruau/ruau/src/test/components/uitest/scrollerNative/scrollerNativeController.js:    	if(span.textContent.trim() === "0"){
@@ -2988,7 +2988,7 @@ ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComp
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.css:	margin: 5px;
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.css:	padding: 5px;
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.css:	background-color: #E3EDFA;
-ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.css:/* locale representation and submit count container */
+ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.css:/* locale rePrEsentation and submit count container */
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.css:.uitestLocalizationComponent_Test.banner {
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.css:	font-family: monospace;
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.css:	color: black;

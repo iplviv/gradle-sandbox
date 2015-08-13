@@ -1,21 +1,21 @@
-ruau/.git/hooks/pre-rebase.sample:    change things related to the topic as patches against your
-ruau/.git/hooks/pre-rebase.sample:    "master", so if you need further changes, it is better to
-ruau/.git/hooks/pre-rebase.sample:    fork the topic (perhaps with the same name) afresh from the
-ruau/.git/hooks/pre-rebase.sample:    tip of "master".
-ruau/.git/hooks/pre-rebase.sample:Let's look at this example:
-ruau/.git/hooks/pre-rebase.sample:		 /   a---a---b A     /           /
-ruau/.git/hooks/pre-rebase.sample:    ---o---o---o---o---o---o---o---o---o---o---o "master"
-ruau/.git/hooks/pre-rebase.sample:A, B and C are topic branches.
-ruau/.git/hooks/pre-rebase.sample: * A has one fix since it was merged up to "next".
-ruau/.git/hooks/pre-rebase.sample: * B has finished.  It has been fully merged up to "master" and "next",
-ruau/.git/hooks/pre-rebase.sample:   and is ready to be deleted.
-ruau/.git/hooks/pre-rebase.sample: * C has not merged to "next" at all.
-ruau/.git/hooks/pre-rebase.sample:We would want to allow C to be rebased, refuse A, and encourage
-ruau/.git/hooks/pre-rebase.sample:	git rev-list ^master ^topic next
-ruau/.git/hooks/pre-rebase.sample:	git rev-list ^master        next
-ruau/.git/hooks/pre-rebase.sample:	if these match, topic has not merged in next at all.
-ruau/.git/hooks/pre-rebase.sample:	git rev-list master..topic
-ruau/.git/hooks/pre-rebase.sample:	if this is empty, it is fully merged to "master".
+ruau/.git/hooks/PrE-rebase.sample:    change things related to the topic as patches against your
+ruau/.git/hooks/PrE-rebase.sample:    "master", so if you need further changes, it is better to
+ruau/.git/hooks/PrE-rebase.sample:    fork the topic (perhaps with the same name) afresh from the
+ruau/.git/hooks/PrE-rebase.sample:    tip of "master".
+ruau/.git/hooks/PrE-rebase.sample:Let's look at this example:
+ruau/.git/hooks/PrE-rebase.sample:		 /   a---a---b A     /           /
+ruau/.git/hooks/PrE-rebase.sample:    ---o---o---o---o---o---o---o---o---o---o---o "master"
+ruau/.git/hooks/PrE-rebase.sample:A, B and C are topic branches.
+ruau/.git/hooks/PrE-rebase.sample: * A has one fix since it was merged up to "next".
+ruau/.git/hooks/PrE-rebase.sample: * B has finished.  It has been fully merged up to "master" and "next",
+ruau/.git/hooks/PrE-rebase.sample:   and is ready to be deleted.
+ruau/.git/hooks/PrE-rebase.sample: * C has not merged to "next" at all.
+ruau/.git/hooks/PrE-rebase.sample:We would want to allow C to be rebased, refuse A, and encourage
+ruau/.git/hooks/PrE-rebase.sample:	git rev-list ^master ^topic next
+ruau/.git/hooks/PrE-rebase.sample:	git rev-list ^master        next
+ruau/.git/hooks/PrE-rebase.sample:	if these match, topic has not merged in next at all.
+ruau/.git/hooks/PrE-rebase.sample:	git rev-list master..topic
+ruau/.git/hooks/PrE-rebase.sample:	if this is empty, it is fully merged to "master".
 ruau/.git/hooks/update.sample:# An example hook script to blocks unannotated tags from entering.
 ruau/.git/hooks/update.sample:# Called by "git receive-pack" with arguments: refname sha1-old sha1-new
 ruau/.git/hooks/update.sample:# To enable this hook, rename this file to "update".
@@ -82,39 +82,39 @@ ruau/.git/hooks/update.sample:			echo "*** Deleting a tracking branch is not all
 ruau/.git/hooks/update.sample:		# Anything else (is there anything else?)
 ruau/.git/hooks/update.sample:		echo "*** Update hook: unknown type of update to ref $refname of type $newrev_type" >&2
 ruau/.git/hooks/update.sample:esac
-ruau/.git/hooks/pre-applypatch.sample:# An example hook script to verify what is about to be committed
-ruau/.git/hooks/pre-applypatch.sample:# by applypatch from an e-mail message.
-ruau/.git/hooks/pre-applypatch.sample:# The hook should exit with non-zero status after issuing an
-ruau/.git/hooks/pre-applypatch.sample:# appropriate message if it wants to stop the commit.
-ruau/.git/hooks/pre-applypatch.sample:# To enable this hook, rename this file to "pre-applypatch".
-ruau/.git/hooks/pre-commit.sample:# An example hook script to verify what is about to be committed.
-ruau/.git/hooks/pre-commit.sample:# Called by "git commit" with no arguments.  The hook should
-ruau/.git/hooks/pre-commit.sample:# exit with non-zero status after issuing an appropriate message if
-ruau/.git/hooks/pre-commit.sample:# it wants to stop the commit.
-ruau/.git/hooks/pre-commit.sample:# To enable this hook, rename this file to "pre-commit".
-ruau/.git/hooks/pre-commit.sample:if git rev-parse --verify HEAD >/dev/null 2>&1
-ruau/.git/hooks/pre-commit.sample:	against=HEAD
-ruau/.git/hooks/pre-commit.sample:	# Initial commit: diff against an empty tree object
-ruau/.git/hooks/pre-commit.sample:	against=4b825dc642cb6eb9a060e54bf8d69288fbee4904
-ruau/.git/hooks/pre-commit.sample:# If you want to allow non-ascii filenames set this variable to true.
-ruau/.git/hooks/pre-commit.sample:allownonascii=$(git config hooks.allownonascii)
-ruau/.git/hooks/pre-commit.sample:# Cross platform projects tend to avoid non-ascii filenames; prevent
-ruau/.git/hooks/pre-commit.sample:# them from being added to the repository. We exploit the fact that the
-ruau/.git/hooks/pre-commit.sample:# printable range starts at the space character and ends with tilde.
-ruau/.git/hooks/pre-commit.sample:if [ "$allownonascii" != "true" ] &&
-ruau/.git/hooks/pre-commit.sample:	# Note that the use of brackets around a tr range is ok here, (it's
-ruau/.git/hooks/pre-commit.sample:	# even required, for portability to Solaris 10's /usr/bin/tr), since
-ruau/.git/hooks/pre-commit.sample:	# the square bracket bytes happen to fall in the designated range.
-ruau/.git/hooks/pre-commit.sample:	test $(git diff --cached --name-only --diff-filter=A -z $against |
-ruau/.git/hooks/pre-commit.sample:	echo "Error: Attempt to add a non-ascii file name."
-ruau/.git/hooks/pre-commit.sample:	echo "This can cause problems if you want to work"
-ruau/.git/hooks/pre-commit.sample:	echo "with people on other platforms."
-ruau/.git/hooks/pre-commit.sample:	echo "To be portable it is advisable to rename the file ..."
-ruau/.git/hooks/pre-commit.sample:	echo "If you know what you are doing you can disable this"
-ruau/.git/hooks/pre-commit.sample:	echo "  git config hooks.allownonascii true"
-ruau/.git/hooks/pre-commit.sample:# If there are whitespace errors, print the offending file names and fail.
-ruau/.git/hooks/pre-commit.sample:exec git diff-index --check --cached $against --
-ruau/.git/hooks/post-update.sample:# An example hook script to prepare a packed repository for use over
+ruau/.git/hooks/PrE-applypatch.sample:# An example hook script to verify what is about to be committed
+ruau/.git/hooks/PrE-applypatch.sample:# by applypatch from an e-mail message.
+ruau/.git/hooks/PrE-applypatch.sample:# The hook should exit with non-zero status after issuing an
+ruau/.git/hooks/PrE-applypatch.sample:# appropriate message if it wants to stop the commit.
+ruau/.git/hooks/PrE-applypatch.sample:# To enable this hook, rename this file to "pre-applypatch".
+ruau/.git/hooks/PrE-commit.sample:# An example hook script to verify what is about to be committed.
+ruau/.git/hooks/PrE-commit.sample:# Called by "git commit" with no arguments.  The hook should
+ruau/.git/hooks/PrE-commit.sample:# exit with non-zero status after issuing an appropriate message if
+ruau/.git/hooks/PrE-commit.sample:# it wants to stop the commit.
+ruau/.git/hooks/PrE-commit.sample:# To enable this hook, rename this file to "pre-commit".
+ruau/.git/hooks/PrE-commit.sample:if git rev-parse --verify HEAD >/dev/null 2>&1
+ruau/.git/hooks/PrE-commit.sample:	against=HEAD
+ruau/.git/hooks/PrE-commit.sample:	# Initial commit: diff against an empty tree object
+ruau/.git/hooks/PrE-commit.sample:	against=4b825dc642cb6eb9a060e54bf8d69288fbee4904
+ruau/.git/hooks/PrE-commit.sample:# If you want to allow non-ascii filenames set this variable to true.
+ruau/.git/hooks/PrE-commit.sample:allownonascii=$(git config hooks.allownonascii)
+ruau/.git/hooks/PrE-commit.sample:# Cross platform projects tend to avoid non-ascii filenames; prevent
+ruau/.git/hooks/PrE-commit.sample:# them from being added to the repository. We exploit the fact that the
+ruau/.git/hooks/PrE-commit.sample:# printable range starts at the space character and ends with tilde.
+ruau/.git/hooks/PrE-commit.sample:if [ "$allownonascii" != "true" ] &&
+ruau/.git/hooks/PrE-commit.sample:	# Note that the use of brackets around a tr range is ok here, (it's
+ruau/.git/hooks/PrE-commit.sample:	# even required, for portability to Solaris 10's /usr/bin/tr), since
+ruau/.git/hooks/PrE-commit.sample:	# the square bracket bytes happen to fall in the designated range.
+ruau/.git/hooks/PrE-commit.sample:	test $(git diff --cached --name-only --diff-filter=A -z $against |
+ruau/.git/hooks/PrE-commit.sample:	echo "Error: Attempt to add a non-ascii file name."
+ruau/.git/hooks/PrE-commit.sample:	echo "This can cause problems if you want to work"
+ruau/.git/hooks/PrE-commit.sample:	echo "with people on other platforms."
+ruau/.git/hooks/PrE-commit.sample:	echo "To be portable it is advisable to rename the file ..."
+ruau/.git/hooks/PrE-commit.sample:	echo "If you know what you are doing you can disable this"
+ruau/.git/hooks/PrE-commit.sample:	echo "  git config hooks.allownonascii true"
+ruau/.git/hooks/PrE-commit.sample:# If there are whitespace errors, print the offending file names and fail.
+ruau/.git/hooks/PrE-commit.sample:exec git diff-index --check --cached $against --
+ruau/.git/hooks/post-update.sample:# An example hook script to PrEpare a packed repository for use over
 ruau/.git/hooks/post-update.sample:# dumb transports.
 ruau/.git/hooks/post-update.sample:# To enable this hook, rename this file to "post-update".
 ruau/.git/hooks/post-update.sample:exec git update-server-info
@@ -125,31 +125,31 @@ ruau/.git/hooks/commit-msg.sample:# status after issuing an appropriate message 
 ruau/.git/hooks/commit-msg.sample:# commit.  The hook is allowed to edit the commit message file.
 ruau/.git/hooks/commit-msg.sample:# To enable this hook, rename this file to "commit-msg".
 ruau/.git/hooks/commit-msg.sample:# Uncomment the below to add a Signed-off-by line to the message.
-ruau/.git/hooks/commit-msg.sample:# Doing this in a hook is a bad idea in general, but the prepare-commit-msg
+ruau/.git/hooks/commit-msg.sample:# Doing this in a hook is a bad idea in general, but the PrEpare-commit-msg
 ruau/.git/hooks/commit-msg.sample:# SOB=$(git var GIT_AUTHOR_IDENT | sed -n 's/^\(.*>\).*$/Signed-off-by: \1/p')
 ruau/.git/hooks/commit-msg.sample:# This example catches duplicate Signed-off-by lines.
 ruau/.git/hooks/commit-msg.sample:	echo >&2 Duplicate Signed-off-by lines.
-ruau/.git/hooks/prepare-commit-msg.sample:# An example hook script to prepare the commit log message.
-ruau/.git/hooks/prepare-commit-msg.sample:# Called by "git commit" with the name of the file that has the
-ruau/.git/hooks/prepare-commit-msg.sample:# commit message, followed by the description of the commit
-ruau/.git/hooks/prepare-commit-msg.sample:# message's source.  The hook's purpose is to edit the commit
-ruau/.git/hooks/prepare-commit-msg.sample:# message file.  If the hook fails with a non-zero status,
-ruau/.git/hooks/prepare-commit-msg.sample:# the commit is aborted.
-ruau/.git/hooks/prepare-commit-msg.sample:# To enable this hook, rename this file to "prepare-commit-msg".
-ruau/.git/hooks/prepare-commit-msg.sample:# This hook includes three examples.  The first comments out the
-ruau/.git/hooks/prepare-commit-msg.sample:# "Conflicts:" part of a merge commit.
-ruau/.git/hooks/prepare-commit-msg.sample:# The second includes the output of "git diff --name-status -r"
-ruau/.git/hooks/prepare-commit-msg.sample:# into the message, just before the "git status" output.  It is
-ruau/.git/hooks/prepare-commit-msg.sample:# commented because it doesn't cope with --amend or with squashed
-ruau/.git/hooks/prepare-commit-msg.sample:# The third example adds a Signed-off-by line to the message, that can
-ruau/.git/hooks/prepare-commit-msg.sample:# still be edited.  This is rarely a good idea.
-ruau/.git/hooks/prepare-commit-msg.sample:case "$2,$3" in
-ruau/.git/hooks/prepare-commit-msg.sample:    /usr/bin/perl -i.bak -ne 's/^/# /, s/^# #/#/ if /^Conflicts/ .. /#/; print' "$1" ;;
-ruau/.git/hooks/prepare-commit-msg.sample:# ,|template,)
-ruau/.git/hooks/prepare-commit-msg.sample:#   /usr/bin/perl -i.bak -pe '
-ruau/.git/hooks/prepare-commit-msg.sample:#      print "\n" . `git diff --cached --name-status -r`
-ruau/.git/hooks/prepare-commit-msg.sample:esac
-ruau/.git/hooks/prepare-commit-msg.sample:# SOB=$(git var GIT_AUTHOR_IDENT | sed -n 's/^\(.*>\).*$/Signed-off-by: \1/p')
+ruau/.git/hooks/PrEpare-commit-msg.sample:# An example hook script to prepare the commit log message.
+ruau/.git/hooks/PrEpare-commit-msg.sample:# Called by "git commit" with the name of the file that has the
+ruau/.git/hooks/PrEpare-commit-msg.sample:# commit message, followed by the description of the commit
+ruau/.git/hooks/PrEpare-commit-msg.sample:# message's source.  The hook's purpose is to edit the commit
+ruau/.git/hooks/PrEpare-commit-msg.sample:# message file.  If the hook fails with a non-zero status,
+ruau/.git/hooks/PrEpare-commit-msg.sample:# the commit is aborted.
+ruau/.git/hooks/PrEpare-commit-msg.sample:# To enable this hook, rename this file to "prepare-commit-msg".
+ruau/.git/hooks/PrEpare-commit-msg.sample:# This hook includes three examples.  The first comments out the
+ruau/.git/hooks/PrEpare-commit-msg.sample:# "Conflicts:" part of a merge commit.
+ruau/.git/hooks/PrEpare-commit-msg.sample:# The second includes the output of "git diff --name-status -r"
+ruau/.git/hooks/PrEpare-commit-msg.sample:# into the message, just before the "git status" output.  It is
+ruau/.git/hooks/PrEpare-commit-msg.sample:# commented because it doesn't cope with --amend or with squashed
+ruau/.git/hooks/PrEpare-commit-msg.sample:# The third example adds a Signed-off-by line to the message, that can
+ruau/.git/hooks/PrEpare-commit-msg.sample:# still be edited.  This is rarely a good idea.
+ruau/.git/hooks/PrEpare-commit-msg.sample:case "$2,$3" in
+ruau/.git/hooks/PrEpare-commit-msg.sample:    /usr/bin/perl -i.bak -ne 's/^/# /, s/^# #/#/ if /^Conflicts/ .. /#/; print' "$1" ;;
+ruau/.git/hooks/PrEpare-commit-msg.sample:# ,|template,)
+ruau/.git/hooks/PrEpare-commit-msg.sample:#   /usr/bin/perl -i.bak -pe '
+ruau/.git/hooks/PrEpare-commit-msg.sample:#      print "\n" . `git diff --cached --name-status -r`
+ruau/.git/hooks/PrEpare-commit-msg.sample:esac
+ruau/.git/hooks/PrEpare-commit-msg.sample:# SOB=$(git var GIT_AUTHOR_IDENT | sed -n 's/^\(.*>\).*$/Signed-off-by: \1/p')
 ruau/.git/hooks/applypatch-msg.sample:# An example hook script to check the commit log message taken by
 ruau/.git/hooks/applypatch-msg.sample:# applypatch from an e-mail message.
 ruau/.git/hooks/applypatch-msg.sample:# The hook should exit with non-zero status after issuing an
@@ -1219,49 +1219,49 @@ ruau/.git/logs/HEAD:7e982df8c3f3b7fcd145460c574cb14e0ddb3973 727fb124c6bc9e21660
 ruau/.git/logs/HEAD:727fb124c6bc9e2166003cf54fa5ff5806c72ae2 068cb0fde2fb6b916e124ed8ed137f4ebc93ae69 Ivan Lesnik <ilesnik@onasellabs.com> 1417003137 +0000	rebase: Fixes a list visibility issue and the logic for when emptyListContent is shown.
 ruau/.git/logs/HEAD:068cb0fde2fb6b916e124ed8ed137f4ebc93ae69 bd481b190396f229da09c5b9a946dcbce73ca15c Ivan Lesnik <ilesnik@onasellabs.com> 1417003138 +0000	rebase: rename dependsOnAttribute to dependsOn
 ruau/.git/logs/HEAD:bd481b190396f229da09c5b9a946dcbce73ca15c b7a5d052b2705b1000bc3c946341c08dbff51be2 Ivan Lesnik <ilesnik@onasellabs.com> 1417003138 +0000	rebase: refactor PageObject
-ruau/.git/logs/HEAD:b7a5d052b2705b1000bc3c946341c08dbff51be2 72614c1265b5dada2a444a9750b714c976cd5a6a Ivan Lesnik <ilesnik@onasellabs.com> 1417003139 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1582
-ruau/.git/logs/HEAD:72614c1265b5dada2a444a9750b714c976cd5a6a d6a517f44f1abf8faf328a4569f7b4a364a26878 Ivan Lesnik <ilesnik@onasellabs.com> 1417003139 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:b7a5d052b2705b1000bc3c946341c08dbff51be2 72614c1265b5dada2a444a9750b714c976cd5a6a Ivan Lesnik <ilesnik@onasellabs.com> 1417003139 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1582
+ruau/.git/logs/HEAD:72614c1265b5dada2a444a9750b714c976cd5a6a d6a517f44f1abf8faf328a4569f7b4a364a26878 Ivan Lesnik <ilesnik@onasellabs.com> 1417003139 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:d6a517f44f1abf8faf328a4569f7b4a364a26878 a06148d8b98f5991608869222080b73033e0ee5a Ivan Lesnik <ilesnik@onasellabs.com> 1417003140 +0000	rebase: add svg parsing max length
 ruau/.git/logs/HEAD:a06148d8b98f5991608869222080b73033e0ee5a b6519c1a268d4caaadcfadc6cc4efcd6fcb11f3d Ivan Lesnik <ilesnik@onasellabs.com> 1417003141 +0000	rebase: fail if expected exceptions are not thrown during test cases
 ruau/.git/logs/HEAD:b6519c1a268d4caaadcfadc6cc4efcd6fcb11f3d 35840c67bbc363b353f427ab993f2ef916e4de8d Ivan Lesnik <ilesnik@onasellabs.com> 1417003141 +0000	rebase: Convert SFDC WebDriver tests to Ruue JS test
-ruau/.git/logs/HEAD:35840c67bbc363b353f427ab993f2ef916e4de8d ef28f14827be51001374ba4eee94543999b71524 Ivan Lesnik <ilesnik@onasellabs.com> 1417003142 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1583
-ruau/.git/logs/HEAD:ef28f14827be51001374ba4eee94543999b71524 abe97a6b7e63e4b97fce351876ce0ba800722f09 Ivan Lesnik <ilesnik@onasellabs.com> 1417003142 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:35840c67bbc363b353f427ab993f2ef916e4de8d ef28f14827be51001374ba4eee94543999b71524 Ivan Lesnik <ilesnik@onasellabs.com> 1417003142 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1583
+ruau/.git/logs/HEAD:ef28f14827be51001374ba4eee94543999b71524 abe97a6b7e63e4b97fce351876ce0ba800722f09 Ivan Lesnik <ilesnik@onasellabs.com> 1417003142 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:abe97a6b7e63e4b97fce351876ce0ba800722f09 7fc8cd6c291426458c6acad55d3d6ae863bae42c Ivan Lesnik <ilesnik@onasellabs.com> 1417003143 +0000	rebase: PanelModal and ModalOverlay changes
 ruau/.git/logs/HEAD:7fc8cd6c291426458c6acad55d3d6ae863bae42c f33c10081ecfe00ed3fc2f2504a7b35822ee5da7 Ivan Lesnik <ilesnik@onasellabs.com> 1417003143 +0000	rebase: Remove Ruue's Promise implementation in favor of native ES6 Promises.
-ruau/.git/logs/HEAD:f33c10081ecfe00ed3fc2f2504a7b35822ee5da7 84c5f1081e3c8f4cc4acba22291fe1cd10f7433e Ivan Lesnik <ilesnik@onasellabs.com> 1417003144 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1584
-ruau/.git/logs/HEAD:84c5f1081e3c8f4cc4acba22291fe1cd10f7433e 6166cdf03882a1bb0bad65c76217be2581b8cd5e Ivan Lesnik <ilesnik@onasellabs.com> 1417003144 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:f33c10081ecfe00ed3fc2f2504a7b35822ee5da7 84c5f1081e3c8f4cc4acba22291fe1cd10f7433e Ivan Lesnik <ilesnik@onasellabs.com> 1417003144 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1584
+ruau/.git/logs/HEAD:84c5f1081e3c8f4cc4acba22291fe1cd10f7433e 6166cdf03882a1bb0bad65c76217be2581b8cd5e Ivan Lesnik <ilesnik@onasellabs.com> 1417003144 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:6166cdf03882a1bb0bad65c76217be2581b8cd5e fc6bef044e6c0d94f84436e785a2c78295c65fd9 Ivan Lesnik <ilesnik@onasellabs.com> 1417003145 +0000	rebase: Disabling test from IE7 and IE8
-ruau/.git/logs/HEAD:fc6bef044e6c0d94f84436e785a2c78295c65fd9 a0873e0bfd40bd2db47da5b2a85796dbee61ea50 Ivan Lesnik <ilesnik@onasellabs.com> 1417003145 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1585
-ruau/.git/logs/HEAD:a0873e0bfd40bd2db47da5b2a85796dbee61ea50 79d168650aebfe097e67a79320650fdb0deda79a Ivan Lesnik <ilesnik@onasellabs.com> 1417003146 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:fc6bef044e6c0d94f84436e785a2c78295c65fd9 a0873e0bfd40bd2db47da5b2a85796dbee61ea50 Ivan Lesnik <ilesnik@onasellabs.com> 1417003145 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1585
+ruau/.git/logs/HEAD:a0873e0bfd40bd2db47da5b2a85796dbee61ea50 79d168650aebfe097e67a79320650fdb0deda79a Ivan Lesnik <ilesnik@onasellabs.com> 1417003146 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:79d168650aebfe097e67a79320650fdb0deda79a 50c9f658e0efd62bc26df57d5c93029fd788cdab Ivan Lesnik <ilesnik@onasellabs.com> 1417003146 +0000	rebase: Remove workaround in test component
-ruau/.git/logs/HEAD:50c9f658e0efd62bc26df57d5c93029fd788cdab 88347708bec447f7565bc04154b18bc9d454aad9 Ivan Lesnik <ilesnik@onasellabs.com> 1417003147 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1586
-ruau/.git/logs/HEAD:88347708bec447f7565bc04154b18bc9d454aad9 b8a2b595839be49dde65364e0a1a13fa267510f1 Ivan Lesnik <ilesnik@onasellabs.com> 1417003147 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:50c9f658e0efd62bc26df57d5c93029fd788cdab 88347708bec447f7565bc04154b18bc9d454aad9 Ivan Lesnik <ilesnik@onasellabs.com> 1417003147 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1586
+ruau/.git/logs/HEAD:88347708bec447f7565bc04154b18bc9d454aad9 b8a2b595839be49dde65364e0a1a13fa267510f1 Ivan Lesnik <ilesnik@onasellabs.com> 1417003147 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:b8a2b595839be49dde65364e0a1a13fa267510f1 36592364b9ec6877720596c42082d73f2ecc081b Ivan Lesnik <ilesnik@onasellabs.com> 1417003148 +0000	rebase: validate interface access using design descriptor instead of region descriptor
-ruau/.git/logs/HEAD:36592364b9ec6877720596c42082d73f2ecc081b 55a765fce624f8e102b7fa054e60050fc4597b61 Ivan Lesnik <ilesnik@onasellabs.com> 1417003148 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1587
-ruau/.git/logs/HEAD:55a765fce624f8e102b7fa054e60050fc4597b61 480504f1b0b095304fdc40471aab0a11ecedd3bc Ivan Lesnik <ilesnik@onasellabs.com> 1417003149 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:480504f1b0b095304fdc40471aab0a11ecedd3bc e34940cd176bd2e0c625e46aa03d68a067c0a98f Ivan Lesnik <ilesnik@onasellabs.com> 1417003149 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1588
-ruau/.git/logs/HEAD:e34940cd176bd2e0c625e46aa03d68a067c0a98f 7a628717fde5851abdd3237f77913ddab993de25 Ivan Lesnik <ilesnik@onasellabs.com> 1417003150 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:36592364b9ec6877720596c42082d73f2ecc081b 55a765fce624f8e102b7fa054e60050fc4597b61 Ivan Lesnik <ilesnik@onasellabs.com> 1417003148 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1587
+ruau/.git/logs/HEAD:55a765fce624f8e102b7fa054e60050fc4597b61 480504f1b0b095304fdc40471aab0a11ecedd3bc Ivan Lesnik <ilesnik@onasellabs.com> 1417003149 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
+ruau/.git/logs/HEAD:480504f1b0b095304fdc40471aab0a11ecedd3bc e34940cd176bd2e0c625e46aa03d68a067c0a98f Ivan Lesnik <ilesnik@onasellabs.com> 1417003149 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1588
+ruau/.git/logs/HEAD:e34940cd176bd2e0c625e46aa03d68a067c0a98f 7a628717fde5851abdd3237f77913ddab993de25 Ivan Lesnik <ilesnik@onasellabs.com> 1417003150 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:7a628717fde5851abdd3237f77913ddab993de25 226cc0602fd38383978d7ee8a450981f1e12571b Ivan Lesnik <ilesnik@onasellabs.com> 1417003150 +0000	rebase: Fix double labels (under screen reader) in ui:button
-ruau/.git/logs/HEAD:226cc0602fd38383978d7ee8a450981f1e12571b 6af79f5433745621a860963df2c9b145699404e0 Ivan Lesnik <ilesnik@onasellabs.com> 1417003151 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1589
-ruau/.git/logs/HEAD:6af79f5433745621a860963df2c9b145699404e0 c3f2631042fd90137d8a16b29bbeed91a2c2f485 Ivan Lesnik <ilesnik@onasellabs.com> 1417003151 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:226cc0602fd38383978d7ee8a450981f1e12571b 6af79f5433745621a860963df2c9b145699404e0 Ivan Lesnik <ilesnik@onasellabs.com> 1417003151 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1589
+ruau/.git/logs/HEAD:6af79f5433745621a860963df2c9b145699404e0 c3f2631042fd90137d8a16b29bbeed91a2c2f485 Ivan Lesnik <ilesnik@onasellabs.com> 1417003151 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:c3f2631042fd90137d8a16b29bbeed91a2c2f485 337f36cce6f2af4f463f60cde5542e80470e5c67 Ivan Lesnik <ilesnik@onasellabs.com> 1417003152 +0000	rebase: fixing rendering issues: uiblock, inputs, autocomplete
-ruau/.git/logs/HEAD:337f36cce6f2af4f463f60cde5542e80470e5c67 d0e8c3c1d798862ce328748b3bea5d40a73671f4 Ivan Lesnik <ilesnik@onasellabs.com> 1417003152 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1590
-ruau/.git/logs/HEAD:d0e8c3c1d798862ce328748b3bea5d40a73671f4 a809b24ad506df1049f0f204c1e8d9de0ecb3645 Ivan Lesnik <ilesnik@onasellabs.com> 1417003153 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:337f36cce6f2af4f463f60cde5542e80470e5c67 d0e8c3c1d798862ce328748b3bea5d40a73671f4 Ivan Lesnik <ilesnik@onasellabs.com> 1417003152 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1590
+ruau/.git/logs/HEAD:d0e8c3c1d798862ce328748b3bea5d40a73671f4 a809b24ad506df1049f0f204c1e8d9de0ecb3645 Ivan Lesnik <ilesnik@onasellabs.com> 1417003153 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:a809b24ad506df1049f0f204c1e8d9de0ecb3645 0621fb797cf020ac2744205c3be74f89168a56d1 Ivan Lesnik <ilesnik@onasellabs.com> 1417003153 +0000	rebase: Fixed dataGrid method call name
-ruau/.git/logs/HEAD:0621fb797cf020ac2744205c3be74f89168a56d1 491ac0baa44d28b8d92fb8bc3f23774d954d32fc Ivan Lesnik <ilesnik@onasellabs.com> 1417003154 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1591
-ruau/.git/logs/HEAD:491ac0baa44d28b8d92fb8bc3f23774d954d32fc f245d2a0b51ffd1bdace964c9e5e24b594eeebeb Ivan Lesnik <ilesnik@onasellabs.com> 1417003154 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:0621fb797cf020ac2744205c3be74f89168a56d1 491ac0baa44d28b8d92fb8bc3f23774d954d32fc Ivan Lesnik <ilesnik@onasellabs.com> 1417003154 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1591
+ruau/.git/logs/HEAD:491ac0baa44d28b8d92fb8bc3f23774d954d32fc f245d2a0b51ffd1bdace964c9e5e24b594eeebeb Ivan Lesnik <ilesnik@onasellabs.com> 1417003154 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:f245d2a0b51ffd1bdace964c9e5e24b594eeebeb 343320975d20f5f9d296d2a0a3a0d775a49041d9 Ivan Lesnik <ilesnik@onasellabs.com> 1417003157 +0000	rebase: Adding RuueServiceProvider marker interface and [passive] @Component annotations as the firs increment to make OSGi integration easier.
 ruau/.git/logs/HEAD:343320975d20f5f9d296d2a0a3a0d775a49041d9 c01798ef1d73a92672e5158f7ffca35f7b4af580 Ivan Lesnik <ilesnik@onasellabs.com> 1417003157 +0000	rebase: fix for menu and spinner aotp
-ruau/.git/logs/HEAD:c01798ef1d73a92672e5158f7ffca35f7b4af580 0e9b2681fd0b472281ede01d4ebbd34052808e3a Ivan Lesnik <ilesnik@onasellabs.com> 1417003159 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1592
-ruau/.git/logs/HEAD:0e9b2681fd0b472281ede01d4ebbd34052808e3a e3dfcc89fe0792ce4e61318e2d32222c0145ce0e Ivan Lesnik <ilesnik@onasellabs.com> 1417003160 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:c01798ef1d73a92672e5158f7ffca35f7b4af580 0e9b2681fd0b472281ede01d4ebbd34052808e3a Ivan Lesnik <ilesnik@onasellabs.com> 1417003159 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1592
+ruau/.git/logs/HEAD:0e9b2681fd0b472281ede01d4ebbd34052808e3a e3dfcc89fe0792ce4e61318e2d32222c0145ce0e Ivan Lesnik <ilesnik@onasellabs.com> 1417003160 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:e3dfcc89fe0792ce4e61318e2d32222c0145ce0e eb09b057fedd4719680000af39cdc3c0069dd1af Ivan Lesnik <ilesnik@onasellabs.com> 1417003160 +0000	rebase: Revert "Add two phase provided facet initialization"
-ruau/.git/logs/HEAD:eb09b057fedd4719680000af39cdc3c0069dd1af 8191bd70e31af907ad08525cbc8892e639fbeba7 Ivan Lesnik <ilesnik@onasellabs.com> 1417003161 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1593
-ruau/.git/logs/HEAD:8191bd70e31af907ad08525cbc8892e639fbeba7 3b301d552b2bd5ca036e9a3d326468efa686327d Ivan Lesnik <ilesnik@onasellabs.com> 1417003163 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:eb09b057fedd4719680000af39cdc3c0069dd1af 8191bd70e31af907ad08525cbc8892e639fbeba7 Ivan Lesnik <ilesnik@onasellabs.com> 1417003161 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1593
+ruau/.git/logs/HEAD:8191bd70e31af907ad08525cbc8892e639fbeba7 3b301d552b2bd5ca036e9a3d326468efa686327d Ivan Lesnik <ilesnik@onasellabs.com> 1417003163 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:3b301d552b2bd5ca036e9a3d326468efa686327d 5de769dc09ce2d99520720d400cb2c27f5505e9d Ivan Lesnik <ilesnik@onasellabs.com> 1417003163 +0000	rebase: Fix CSS helper classes
-ruau/.git/logs/HEAD:5de769dc09ce2d99520720d400cb2c27f5505e9d 70616e57bcc162249952074c7ed939ed20211ec6 Ivan Lesnik <ilesnik@onasellabs.com> 1417003164 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1594
-ruau/.git/logs/HEAD:70616e57bcc162249952074c7ed939ed20211ec6 8b9de0d6193d1d9fdb045b3204d3bfa6555415c5 Ivan Lesnik <ilesnik@onasellabs.com> 1417003165 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:8b9de0d6193d1d9fdb045b3204d3bfa6555415c5 68420d18be826487ae67d57332a329ec122a9846 Ivan Lesnik <ilesnik@onasellabs.com> 1417003167 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1595
-ruau/.git/logs/HEAD:68420d18be826487ae67d57332a329ec122a9846 f97c0b40f8d7c55fb58572e3453447c74fb786bb Ivan Lesnik <ilesnik@onasellabs.com> 1417003168 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:5de769dc09ce2d99520720d400cb2c27f5505e9d 70616e57bcc162249952074c7ed939ed20211ec6 Ivan Lesnik <ilesnik@onasellabs.com> 1417003164 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1594
+ruau/.git/logs/HEAD:70616e57bcc162249952074c7ed939ed20211ec6 8b9de0d6193d1d9fdb045b3204d3bfa6555415c5 Ivan Lesnik <ilesnik@onasellabs.com> 1417003165 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
+ruau/.git/logs/HEAD:8b9de0d6193d1d9fdb045b3204d3bfa6555415c5 68420d18be826487ae67d57332a329ec122a9846 Ivan Lesnik <ilesnik@onasellabs.com> 1417003167 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1595
+ruau/.git/logs/HEAD:68420d18be826487ae67d57332a329ec122a9846 f97c0b40f8d7c55fb58572e3453447c74fb786bb Ivan Lesnik <ilesnik@onasellabs.com> 1417003168 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:f97c0b40f8d7c55fb58572e3453447c74fb786bb c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 Ivan Lesnik <ilesnik@onasellabs.com> 1417003302 +0000	rebase: aborting
 ruau/.git/logs/HEAD:c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.com> 1417003336 +0000	checkout: moving from master to jenkins-onasel-migration
 ruau/.git/logs/HEAD:027d62c63762dff82846acb1156993f75fd2bbc2 c8656779038dddc4d8fbeea8eb6f7482b3a0a5e3 Ivan Lesnik <ilesnik@onasellabs.com> 1417003586 +0000	checkout: moving from jenkins-onasel-migration to master
@@ -1291,7 +1291,7 @@ ruau/.git/logs/HEAD:532918904de05a8c59ace773bbde205853cf5c1c b16cebd6909503ed2e2
 ruau/.git/logs/HEAD:b16cebd6909503ed2e2be55ab139e95f7db8b903 532918904de05a8c59ace773bbde205853cf5c1c Ivan Lesnik <ilesnik@onasellabs.com> 1417598293 +0000	checkout: moving from onasel-config to simple
 ruau/.git/logs/HEAD:532918904de05a8c59ace773bbde205853cf5c1c a57a0a181fb4f80ebc0853346133d745c8765419 Ivan Lesnik <ilesnik@onasellabs.com> 1417722640 +0000	commit: Minor changes
 ruau/.git/logs/HEAD:a57a0a181fb4f80ebc0853346133d745c8765419 b16cebd6909503ed2e2be55ab139e95f7db8b903 Ivan Lesnik <ilesnik@onasellabs.com> 1417722661 +0000	checkout: moving from simple to onasel-config
-ruau/.git/logs/HEAD:b16cebd6909503ed2e2be55ab139e95f7db8b903 79b0002c5a45481a1639034d136daddaedfe5819 Ivan Lesnik <ilesnik@onasellabs.com> 1417722749 +0000	commit: Add option disable_dodge_preload
+ruau/.git/logs/HEAD:b16cebd6909503ed2e2be55ab139e95f7db8b903 79b0002c5a45481a1639034d136daddaedfe5819 Ivan Lesnik <ilesnik@onasellabs.com> 1417722749 +0000	commit: Add option disable_dodge_PrEload
 ruau/.git/logs/HEAD:79b0002c5a45481a1639034d136daddaedfe5819 9fd50c77e95d99e0dc5818b32dc035ffbf841fe7 Ivan Lesnik <ilesnik@onasellabs.com> 1417726760 +0000	commit: Increase timeout to 7200; remove test_pattern as useless
 ruau/.git/logs/HEAD:9fd50c77e95d99e0dc5818b32dc035ffbf841fe7 1e058bc75ed1087936eacb582bdb9c00ee2c6e2c Ivan Lesnik <ilesnik@onasellabs.com> 1417777377 +0000	commit: Enable parallel testing mode
 ruau/.git/logs/HEAD:1e058bc75ed1087936eacb582bdb9c00ee2c6e2c f1e5e8630def5b2c9d9136293d8b87e019b8ccb7 Ivan Lesnik <ilesnik@onasellabs.com> 1417777844 +0000	commit: Add files pattern
@@ -1365,112 +1365,112 @@ ruau/.git/logs/HEAD:86f366e5a8f2907277d994e0a5462775bee3bf5e eb72a8ce6a0b7e2d7a0
 ruau/.git/logs/HEAD:eb72a8ce6a0b7e2d7a0785242560a85fb85425b8 a42e2c2f70de11ad9cb58dfa74ddd67f3d55a0d7 Ivan Lesnik <ilesnik@onasellabs.com> 1418982231 +0000	rebase: Redo pull request #130 from UI/ishmulevich/review-pending/apply-type-checking-to-ServiceLocator
 ruau/.git/logs/HEAD:a42e2c2f70de11ad9cb58dfa74ddd67f3d55a0d7 c8338f43c43a41f0187a3dfb1ef3f3f575083cef Ivan Lesnik <ilesnik@onasellabs.com> 1418982232 +0000	rebase: update osgi module version
 ruau/.git/logs/HEAD:c8338f43c43a41f0187a3dfb1ef3f3f575083cef 47b4265bd94390a9b51a94dbd2e265199d6447c8 Ivan Lesnik <ilesnik@onasellabs.com> 1418982232 +0000	rebase: make bnd provided
-ruau/.git/logs/HEAD:47b4265bd94390a9b51a94dbd2e265199d6447c8 5d39ebe955b55878b7daf687fe08fd81a866a68d Ivan Lesnik <ilesnik@onasellabs.com> 1418982233 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1660
-ruau/.git/logs/HEAD:5d39ebe955b55878b7daf687fe08fd81a866a68d 6d83be4fdb6992ea01e4a897d6fb726b81570e42 Ivan Lesnik <ilesnik@onasellabs.com> 1418982234 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:47b4265bd94390a9b51a94dbd2e265199d6447c8 5d39ebe955b55878b7daf687fe08fd81a866a68d Ivan Lesnik <ilesnik@onasellabs.com> 1418982233 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1660
+ruau/.git/logs/HEAD:5d39ebe955b55878b7daf687fe08fd81a866a68d 6d83be4fdb6992ea01e4a897d6fb726b81570e42 Ivan Lesnik <ilesnik@onasellabs.com> 1418982234 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:6d83be4fdb6992ea01e4a897d6fb726b81570e42 433aaec519c710be7ceaa57f071d775b56828bc2 Ivan Lesnik <ilesnik@onasellabs.com> 1418982234 +0000	rebase: Services extends RuueServiceProvider
-ruau/.git/logs/HEAD:433aaec519c710be7ceaa57f071d775b56828bc2 a72f36f5c0b6583447e28e40156230e56d0df4f6 Ivan Lesnik <ilesnik@onasellabs.com> 1418982235 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1661
-ruau/.git/logs/HEAD:a72f36f5c0b6583447e28e40156230e56d0df4f6 4b97e8928195bb78a7bf7a987bbb281726dd4dc0 Ivan Lesnik <ilesnik@onasellabs.com> 1418982235 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:433aaec519c710be7ceaa57f071d775b56828bc2 a72f36f5c0b6583447e28e40156230e56d0df4f6 Ivan Lesnik <ilesnik@onasellabs.com> 1418982235 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1661
+ruau/.git/logs/HEAD:a72f36f5c0b6583447e28e40156230e56d0df4f6 4b97e8928195bb78a7bf7a987bbb281726dd4dc0 Ivan Lesnik <ilesnik@onasellabs.com> 1418982235 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:4b97e8928195bb78a7bf7a987bbb281726dd4dc0 49c9ea20f0cde63dfeee457a984c7583b37670f8 Ivan Lesnik <ilesnik@onasellabs.com> 1418982236 +0000	rebase: csp test update for browser compatility
-ruau/.git/logs/HEAD:49c9ea20f0cde63dfeee457a984c7583b37670f8 b4a49338d71525f748af5766deca2801677f7d60 Ivan Lesnik <ilesnik@onasellabs.com> 1418982237 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1662
-ruau/.git/logs/HEAD:b4a49338d71525f748af5766deca2801677f7d60 1cc2d2e5c2755a552dd5f893980fb5e71f737548 Ivan Lesnik <ilesnik@onasellabs.com> 1418982237 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:49c9ea20f0cde63dfeee457a984c7583b37670f8 b4a49338d71525f748af5766deca2801677f7d60 Ivan Lesnik <ilesnik@onasellabs.com> 1418982237 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1662
+ruau/.git/logs/HEAD:b4a49338d71525f748af5766deca2801677f7d60 1cc2d2e5c2755a552dd5f893980fb5e71f737548 Ivan Lesnik <ilesnik@onasellabs.com> 1418982237 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:1cc2d2e5c2755a552dd5f893980fb5e71f737548 57d945db056230ed96c47e35900fd416abdde66b Ivan Lesnik <ilesnik@onasellabs.com> 1418982238 +0000	rebase: inputRichText initial value not set in the editor
-ruau/.git/logs/HEAD:57d945db056230ed96c47e35900fd416abdde66b b568d6cff1db1b253d61ffc284b63a42030bf750 Ivan Lesnik <ilesnik@onasellabs.com> 1418982238 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1663
-ruau/.git/logs/HEAD:b568d6cff1db1b253d61ffc284b63a42030bf750 01387b0f681fb6a9345fcb93b2869eec7a1c4394 Ivan Lesnik <ilesnik@onasellabs.com> 1418982239 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:57d945db056230ed96c47e35900fd416abdde66b b568d6cff1db1b253d61ffc284b63a42030bf750 Ivan Lesnik <ilesnik@onasellabs.com> 1418982238 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1663
+ruau/.git/logs/HEAD:b568d6cff1db1b253d61ffc284b63a42030bf750 01387b0f681fb6a9345fcb93b2869eec7a1c4394 Ivan Lesnik <ilesnik@onasellabs.com> 1418982239 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:01387b0f681fb6a9345fcb93b2869eec7a1c4394 749980a2a94afbffc69687295c6a217164d7197b Ivan Lesnik <ilesnik@onasellabs.com> 1418982240 +0000	rebase: test fix for testSvgCacheClearedOnSourceChange : NPE
-ruau/.git/logs/HEAD:749980a2a94afbffc69687295c6a217164d7197b ca526f09f897a76daa670bfced742e7d697b3867 Ivan Lesnik <ilesnik@onasellabs.com> 1418982240 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1664
-ruau/.git/logs/HEAD:ca526f09f897a76daa670bfced742e7d697b3867 0ed537cf95e748fb39d0ee639d26551a7d92d08e Ivan Lesnik <ilesnik@onasellabs.com> 1418982241 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:749980a2a94afbffc69687295c6a217164d7197b ca526f09f897a76daa670bfced742e7d697b3867 Ivan Lesnik <ilesnik@onasellabs.com> 1418982240 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1664
+ruau/.git/logs/HEAD:ca526f09f897a76daa670bfced742e7d697b3867 0ed537cf95e748fb39d0ee639d26551a7d92d08e Ivan Lesnik <ilesnik@onasellabs.com> 1418982241 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:0ed537cf95e748fb39d0ee639d26551a7d92d08e d712b581b807df8d42940adb79b58312e89ecdaa Ivan Lesnik <ilesnik@onasellabs.com> 1418982241 +0000	rebase: testStopClickPropogoationIsSet is failing
-ruau/.git/logs/HEAD:d712b581b807df8d42940adb79b58312e89ecdaa fed09980685de0e10584fcf1128b6af685aff95e Ivan Lesnik <ilesnik@onasellabs.com> 1418982242 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1665
-ruau/.git/logs/HEAD:fed09980685de0e10584fcf1128b6af685aff95e 5e7058bb6a9eec3e77f16b1f27dcef0ca78ac176 Ivan Lesnik <ilesnik@onasellabs.com> 1418982243 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:d712b581b807df8d42940adb79b58312e89ecdaa fed09980685de0e10584fcf1128b6af685aff95e Ivan Lesnik <ilesnik@onasellabs.com> 1418982242 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1665
+ruau/.git/logs/HEAD:fed09980685de0e10584fcf1128b6af685aff95e 5e7058bb6a9eec3e77f16b1f27dcef0ca78ac176 Ivan Lesnik <ilesnik@onasellabs.com> 1418982243 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:5e7058bb6a9eec3e77f16b1f27dcef0ca78ac176 5599515990ca22f19db84e068f029137a91cc024 Ivan Lesnik <ilesnik@onasellabs.com> 1418982243 +0000	rebase: DocDef update for inputDefaultError
 ruau/.git/logs/HEAD:5599515990ca22f19db84e068f029137a91cc024 5aecaadff4c70e1aa30f616aa815ee63f952c447 Ivan Lesnik <ilesnik@onasellabs.com> 1418982244 +0000	rebase: update test for IE7
-ruau/.git/logs/HEAD:5aecaadff4c70e1aa30f616aa815ee63f952c447 adc327cc6f9a6d97c7faebda7e8fc5d1e222a5fb Ivan Lesnik <ilesnik@onasellabs.com> 1418982244 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1666
-ruau/.git/logs/HEAD:adc327cc6f9a6d97c7faebda7e8fc5d1e222a5fb c07ef2c1562f70e34ac3ba7b449cbded19849647 Ivan Lesnik <ilesnik@onasellabs.com> 1418982245 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:5aecaadff4c70e1aa30f616aa815ee63f952c447 adc327cc6f9a6d97c7faebda7e8fc5d1e222a5fb Ivan Lesnik <ilesnik@onasellabs.com> 1418982244 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1666
+ruau/.git/logs/HEAD:adc327cc6f9a6d97c7faebda7e8fc5d1e222a5fb c07ef2c1562f70e34ac3ba7b449cbded19849647 Ivan Lesnik <ilesnik@onasellabs.com> 1418982245 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:c07ef2c1562f70e34ac3ba7b449cbded19849647 47c7558735587bd29a2dadb488e7c1e97ff44d90 Ivan Lesnik <ilesnik@onasellabs.com> 1418982246 +0000	rebase: enable test with mockCSP for sfdc side
-ruau/.git/logs/HEAD:47c7558735587bd29a2dadb488e7c1e97ff44d90 23fab2e729e309929ffb297373314eac83e11820 Ivan Lesnik <ilesnik@onasellabs.com> 1418982246 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1667
-ruau/.git/logs/HEAD:23fab2e729e309929ffb297373314eac83e11820 457e644bb646dce987f9e4b82acadb418500e689 Ivan Lesnik <ilesnik@onasellabs.com> 1418982247 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:47c7558735587bd29a2dadb488e7c1e97ff44d90 23fab2e729e309929ffb297373314eac83e11820 Ivan Lesnik <ilesnik@onasellabs.com> 1418982246 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1667
+ruau/.git/logs/HEAD:23fab2e729e309929ffb297373314eac83e11820 457e644bb646dce987f9e4b82acadb418500e689 Ivan Lesnik <ilesnik@onasellabs.com> 1418982247 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:457e644bb646dce987f9e4b82acadb418500e689 dbe20a89f9262096f46533cfbace3b4e43d5b813 Ivan Lesnik <ilesnik@onasellabs.com> 1418982247 +0000	rebase: reverting fcv guard
-ruau/.git/logs/HEAD:dbe20a89f9262096f46533cfbace3b4e43d5b813 bb8e1cb5d30b7c0cf328091bbbde43bd6019f42a Ivan Lesnik <ilesnik@onasellabs.com> 1418982248 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1668
-ruau/.git/logs/HEAD:bb8e1cb5d30b7c0cf328091bbbde43bd6019f42a 6bc99940bd932b502ede5897398f4c6b45293407 Ivan Lesnik <ilesnik@onasellabs.com> 1418982249 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:dbe20a89f9262096f46533cfbace3b4e43d5b813 bb8e1cb5d30b7c0cf328091bbbde43bd6019f42a Ivan Lesnik <ilesnik@onasellabs.com> 1418982248 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1668
+ruau/.git/logs/HEAD:bb8e1cb5d30b7c0cf328091bbbde43bd6019f42a 6bc99940bd932b502ede5897398f4c6b45293407 Ivan Lesnik <ilesnik@onasellabs.com> 1418982249 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:6bc99940bd932b502ede5897398f4c6b45293407 ae68dd21f54e62b7ea3fe8c9f53fdcbd435ca87a Ivan Lesnik <ilesnik@onasellabs.com> 1418982249 +0000	rebase: Un-localize Locale patterns (i.e. percentFormat, numberFormat, currencyFormat).
-ruau/.git/logs/HEAD:ae68dd21f54e62b7ea3fe8c9f53fdcbd435ca87a dd5a2e10308dd37bccdc08b0b1c5dccb2589c02f Ivan Lesnik <ilesnik@onasellabs.com> 1418982250 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1669
-ruau/.git/logs/HEAD:dd5a2e10308dd37bccdc08b0b1c5dccb2589c02f 94a25c2e4f1aa7dafcbef7ffafbd0857f8a20c75 Ivan Lesnik <ilesnik@onasellabs.com> 1418982250 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:ae68dd21f54e62b7ea3fe8c9f53fdcbd435ca87a dd5a2e10308dd37bccdc08b0b1c5dccb2589c02f Ivan Lesnik <ilesnik@onasellabs.com> 1418982250 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1669
+ruau/.git/logs/HEAD:dd5a2e10308dd37bccdc08b0b1c5dccb2589c02f 94a25c2e4f1aa7dafcbef7ffafbd0857f8a20c75 Ivan Lesnik <ilesnik@onasellabs.com> 1418982250 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:94a25c2e4f1aa7dafcbef7ffafbd0857f8a20c75 4b817da919635359d2b8af9437ee0b5bab205417 Ivan Lesnik <ilesnik@onasellabs.com> 1418982251 +0000	rebase: Tests are now working, re-enable.
-ruau/.git/logs/HEAD:4b817da919635359d2b8af9437ee0b5bab205417 45e04981526b2f5b7b30788954b7c2d5350617b9 Ivan Lesnik <ilesnik@onasellabs.com> 1418982252 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1670
-ruau/.git/logs/HEAD:45e04981526b2f5b7b30788954b7c2d5350617b9 98cd57e69c2edafc042cc67bd0d13021d6418cfe Ivan Lesnik <ilesnik@onasellabs.com> 1418982252 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:4b817da919635359d2b8af9437ee0b5bab205417 45e04981526b2f5b7b30788954b7c2d5350617b9 Ivan Lesnik <ilesnik@onasellabs.com> 1418982252 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1670
+ruau/.git/logs/HEAD:45e04981526b2f5b7b30788954b7c2d5350617b9 98cd57e69c2edafc042cc67bd0d13021d6418cfe Ivan Lesnik <ilesnik@onasellabs.com> 1418982252 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:98cd57e69c2edafc042cc67bd0d13021d6418cfe 1f1d6d63a8ca1592d4c9e581034fad9af07d8934 Ivan Lesnik <ilesnik@onasellabs.com> 1418982253 +0000	rebase: Temporary fix for input classNames on inherited components.
-ruau/.git/logs/HEAD:1f1d6d63a8ca1592d4c9e581034fad9af07d8934 c33ea52f6e44d7a65819e5fd7cad0ca8846ed8fb Ivan Lesnik <ilesnik@onasellabs.com> 1418982253 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1671
-ruau/.git/logs/HEAD:c33ea52f6e44d7a65819e5fd7cad0ca8846ed8fb d7d6d53b263d921bf4aab3cbb158dbdfafdc7fc3 Ivan Lesnik <ilesnik@onasellabs.com> 1418982254 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:1f1d6d63a8ca1592d4c9e581034fad9af07d8934 c33ea52f6e44d7a65819e5fd7cad0ca8846ed8fb Ivan Lesnik <ilesnik@onasellabs.com> 1418982253 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1671
+ruau/.git/logs/HEAD:c33ea52f6e44d7a65819e5fd7cad0ca8846ed8fb d7d6d53b263d921bf4aab3cbb158dbdfafdc7fc3 Ivan Lesnik <ilesnik@onasellabs.com> 1418982254 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:d7d6d53b263d921bf4aab3cbb158dbdfafdc7fc3 82b59b8c214f34426117e65ada12bc3166fb59e7 Ivan Lesnik <ilesnik@onasellabs.com> 1418982255 +0000	rebase: Fix a problem with undefined in afterRender.
-ruau/.git/logs/HEAD:82b59b8c214f34426117e65ada12bc3166fb59e7 cf501dc655ee682f228986b383b391c8f0f36feb Ivan Lesnik <ilesnik@onasellabs.com> 1418982255 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1672
-ruau/.git/logs/HEAD:cf501dc655ee682f228986b383b391c8f0f36feb 752cddbc59fd99bef9f404c3ed46d2ce3aea95d2 Ivan Lesnik <ilesnik@onasellabs.com> 1418982256 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:82b59b8c214f34426117e65ada12bc3166fb59e7 cf501dc655ee682f228986b383b391c8f0f36feb Ivan Lesnik <ilesnik@onasellabs.com> 1418982255 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1672
+ruau/.git/logs/HEAD:cf501dc655ee682f228986b383b391c8f0f36feb 752cddbc59fd99bef9f404c3ed46d2ce3aea95d2 Ivan Lesnik <ilesnik@onasellabs.com> 1418982256 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:752cddbc59fd99bef9f404c3ed46d2ce3aea95d2 a502159fa3b9978bbf4aaf3a138a5111f217b33f Ivan Lesnik <ilesnik@onasellabs.com> 1418982256 +0000	rebase: Automation for rendering of InputRichtext
-ruau/.git/logs/HEAD:a502159fa3b9978bbf4aaf3a138a5111f217b33f 74c67663d76088bcece77b07e92d43b4cfa25c89 Ivan Lesnik <ilesnik@onasellabs.com> 1418982257 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1673
-ruau/.git/logs/HEAD:74c67663d76088bcece77b07e92d43b4cfa25c89 00319af67656d7a27ccf30d8969befdc3cddee6a Ivan Lesnik <ilesnik@onasellabs.com> 1418982258 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:a502159fa3b9978bbf4aaf3a138a5111f217b33f 74c67663d76088bcece77b07e92d43b4cfa25c89 Ivan Lesnik <ilesnik@onasellabs.com> 1418982257 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1673
+ruau/.git/logs/HEAD:74c67663d76088bcece77b07e92d43b4cfa25c89 00319af67656d7a27ccf30d8969befdc3cddee6a Ivan Lesnik <ilesnik@onasellabs.com> 1418982258 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:00319af67656d7a27ccf30d8969befdc3cddee6a 3504c3398ca853fc3a4e608423feb0b8f74ff2dc Ivan Lesnik <ilesnik@onasellabs.com> 1418982258 +0000	rebase: test fix for html test -- nbsp in IEs
-ruau/.git/logs/HEAD:3504c3398ca853fc3a4e608423feb0b8f74ff2dc 832c0fd649c3b0b5197b990e438d0346cb8ac1ed Ivan Lesnik <ilesnik@onasellabs.com> 1418982259 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1674
-ruau/.git/logs/HEAD:832c0fd649c3b0b5197b990e438d0346cb8ac1ed c34862426a15d7a19f69b18266f04d6f6c7a51fe Ivan Lesnik <ilesnik@onasellabs.com> 1418982259 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:3504c3398ca853fc3a4e608423feb0b8f74ff2dc 832c0fd649c3b0b5197b990e438d0346cb8ac1ed Ivan Lesnik <ilesnik@onasellabs.com> 1418982259 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1674
+ruau/.git/logs/HEAD:832c0fd649c3b0b5197b990e438d0346cb8ac1ed c34862426a15d7a19f69b18266f04d6f6c7a51fe Ivan Lesnik <ilesnik@onasellabs.com> 1418982259 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:c34862426a15d7a19f69b18266f04d6f6c7a51fe b575e084fc6883423fd7cb8b8f7d9fcecd659893 Ivan Lesnik <ilesnik@onasellabs.com> 1418982260 +0000	rebase: avoid NPE from DummyHttpServletRequest
-ruau/.git/logs/HEAD:b575e084fc6883423fd7cb8b8f7d9fcecd659893 d588d6028436537739219e87d1b4efd3e6eb5c09 Ivan Lesnik <ilesnik@onasellabs.com> 1418982261 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1675
-ruau/.git/logs/HEAD:d588d6028436537739219e87d1b4efd3e6eb5c09 4f02e35a036df52ba5c7a4469a724b9a0b37b7c0 Ivan Lesnik <ilesnik@onasellabs.com> 1418982261 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:b575e084fc6883423fd7cb8b8f7d9fcecd659893 d588d6028436537739219e87d1b4efd3e6eb5c09 Ivan Lesnik <ilesnik@onasellabs.com> 1418982261 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1675
+ruau/.git/logs/HEAD:d588d6028436537739219e87d1b4efd3e6eb5c09 4f02e35a036df52ba5c7a4469a724b9a0b37b7c0 Ivan Lesnik <ilesnik@onasellabs.com> 1418982261 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:4f02e35a036df52ba5c7a4469a724b9a0b37b7c0 f0e560f19cfeba170f5d0f750eb8e11bd6c849e5 Ivan Lesnik <ilesnik@onasellabs.com> 1418982262 +0000	rebase: Quickfix CSS fix for accessibility
-ruau/.git/logs/HEAD:f0e560f19cfeba170f5d0f750eb8e11bd6c849e5 81910f3994301d1804e3e4ed3bc3ba220ac684f6 Ivan Lesnik <ilesnik@onasellabs.com> 1418982263 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1676
-ruau/.git/logs/HEAD:81910f3994301d1804e3e4ed3bc3ba220ac684f6 e6edfd8d99a5403d2a49fc01674756d5a346048e Ivan Lesnik <ilesnik@onasellabs.com> 1418982263 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:f0e560f19cfeba170f5d0f750eb8e11bd6c849e5 81910f3994301d1804e3e4ed3bc3ba220ac684f6 Ivan Lesnik <ilesnik@onasellabs.com> 1418982263 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1676
+ruau/.git/logs/HEAD:81910f3994301d1804e3e4ed3bc3ba220ac684f6 e6edfd8d99a5403d2a49fc01674756d5a346048e Ivan Lesnik <ilesnik@onasellabs.com> 1418982263 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:e6edfd8d99a5403d2a49fc01674756d5a346048e a973a79db92643c1c6ea1153786b8ff5efadfee7 Ivan Lesnik <ilesnik@onasellabs.com> 1418982264 +0000	rebase: Automation for when v.items is undefined.
 ruau/.git/logs/HEAD:a973a79db92643c1c6ea1153786b8ff5efadfee7 4f7aeb5de7e5fe00cdd857ab489b98bee3a49f6e Ivan Lesnik <ilesnik@onasellabs.com> 1418982265 +0000	rebase: Automation for dataGrid, sorting columns
-ruau/.git/logs/HEAD:4f7aeb5de7e5fe00cdd857ab489b98bee3a49f6e 3db81957d6c12071b14867418e46633a0ff0360d Ivan Lesnik <ilesnik@onasellabs.com> 1418982265 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1677
-ruau/.git/logs/HEAD:3db81957d6c12071b14867418e46633a0ff0360d a6c2b25696ebd14142fe43ed1bca4c8d42a104fd Ivan Lesnik <ilesnik@onasellabs.com> 1418982266 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:4f7aeb5de7e5fe00cdd857ab489b98bee3a49f6e 3db81957d6c12071b14867418e46633a0ff0360d Ivan Lesnik <ilesnik@onasellabs.com> 1418982265 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1677
+ruau/.git/logs/HEAD:3db81957d6c12071b14867418e46633a0ff0360d a6c2b25696ebd14142fe43ed1bca4c8d42a104fd Ivan Lesnik <ilesnik@onasellabs.com> 1418982266 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:a6c2b25696ebd14142fe43ed1bca4c8d42a104fd 9f0ae3992580a3ead580f2f29778068da26099e5 Ivan Lesnik <ilesnik@onasellabs.com> 1418982266 +0000	rebase: validate library js
-ruau/.git/logs/HEAD:9f0ae3992580a3ead580f2f29778068da26099e5 26ebca5c8f639764ab1e894b7eafe89ca667b7e2 Ivan Lesnik <ilesnik@onasellabs.com> 1418982267 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1678
-ruau/.git/logs/HEAD:26ebca5c8f639764ab1e894b7eafe89ca667b7e2 8d2884feb4dcf7f6d4d577dba5ed79aacc868468 Ivan Lesnik <ilesnik@onasellabs.com> 1418982268 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:9f0ae3992580a3ead580f2f29778068da26099e5 26ebca5c8f639764ab1e894b7eafe89ca667b7e2 Ivan Lesnik <ilesnik@onasellabs.com> 1418982267 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1678
+ruau/.git/logs/HEAD:26ebca5c8f639764ab1e894b7eafe89ca667b7e2 8d2884feb4dcf7f6d4d577dba5ed79aacc868468 Ivan Lesnik <ilesnik@onasellabs.com> 1418982268 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:8d2884feb4dcf7f6d4d577dba5ed79aacc868468 e993ba0a80ec8c6465953997503436452266ff50 Ivan Lesnik <ilesnik@onasellabs.com> 1418982268 +0000	rebase: create dummyHttpServletRequest with default url, also cherrypick fix for test flapper in AIS UI test.
-ruau/.git/logs/HEAD:e993ba0a80ec8c6465953997503436452266ff50 5db8613a6a0a44dfb338e4b8c36acd981a785d2d Ivan Lesnik <ilesnik@onasellabs.com> 1418982269 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1679
-ruau/.git/logs/HEAD:5db8613a6a0a44dfb338e4b8c36acd981a785d2d 8e7da122e7e83c2d049f2163a119a1036c07f15d Ivan Lesnik <ilesnik@onasellabs.com> 1418982269 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:e993ba0a80ec8c6465953997503436452266ff50 5db8613a6a0a44dfb338e4b8c36acd981a785d2d Ivan Lesnik <ilesnik@onasellabs.com> 1418982269 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1679
+ruau/.git/logs/HEAD:5db8613a6a0a44dfb338e4b8c36acd981a785d2d 8e7da122e7e83c2d049f2163a119a1036c07f15d Ivan Lesnik <ilesnik@onasellabs.com> 1418982269 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:8e7da122e7e83c2d049f2163a119a1036c07f15d 471e0d0d3a25e2b50cc53ce0c06ce1b43ec8c3ce Ivan Lesnik <ilesnik@onasellabs.com> 1418982270 +0000	rebase: Rethrow errors thrown by .test.fail if they don't bubble up
 ruau/.git/logs/HEAD:471e0d0d3a25e2b50cc53ce0c06ce1b43ec8c3ce f2cf5d3a893cc0b5efdaa7942686ad2ce908629b Ivan Lesnik <ilesnik@onasellabs.com> 1418982271 +0000	rebase: Test fixes for Test.fail changes
-ruau/.git/logs/HEAD:f2cf5d3a893cc0b5efdaa7942686ad2ce908629b 772ac280e4ebd2e5de8ecbd3a23553649073b04b Ivan Lesnik <ilesnik@onasellabs.com> 1418982271 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1680
-ruau/.git/logs/HEAD:772ac280e4ebd2e5de8ecbd3a23553649073b04b a1c8313041830120dabef540aaee94d314108b66 Ivan Lesnik <ilesnik@onasellabs.com> 1418982272 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:f2cf5d3a893cc0b5efdaa7942686ad2ce908629b 772ac280e4ebd2e5de8ecbd3a23553649073b04b Ivan Lesnik <ilesnik@onasellabs.com> 1418982271 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1680
+ruau/.git/logs/HEAD:772ac280e4ebd2e5de8ecbd3a23553649073b04b a1c8313041830120dabef540aaee94d314108b66 Ivan Lesnik <ilesnik@onasellabs.com> 1418982272 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:a1c8313041830120dabef540aaee94d314108b66 d37962ffee68943aadf14fbd394142a1e4098baf Ivan Lesnik <ilesnik@onasellabs.com> 1418982272 +0000	rebase: IE8 fix moving from for…in to for()
-ruau/.git/logs/HEAD:d37962ffee68943aadf14fbd394142a1e4098baf 529a752606cde031cfc1e2dc1ab4cce33c713fac Ivan Lesnik <ilesnik@onasellabs.com> 1418982273 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1681
-ruau/.git/logs/HEAD:529a752606cde031cfc1e2dc1ab4cce33c713fac 4a300d89079d2a2206702869a369967bfb130332 Ivan Lesnik <ilesnik@onasellabs.com> 1418982274 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:d37962ffee68943aadf14fbd394142a1e4098baf 529a752606cde031cfc1e2dc1ab4cce33c713fac Ivan Lesnik <ilesnik@onasellabs.com> 1418982273 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1681
+ruau/.git/logs/HEAD:529a752606cde031cfc1e2dc1ab4cce33c713fac 4a300d89079d2a2206702869a369967bfb130332 Ivan Lesnik <ilesnik@onasellabs.com> 1418982274 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:4a300d89079d2a2206702869a369967bfb130332 2ed0b741b4475319cc93366123007fd075930bc1 Ivan Lesnik <ilesnik@onasellabs.com> 1418982274 +0000	rebase: Fix ruau types to be case insensitive for now.
-ruau/.git/logs/HEAD:2ed0b741b4475319cc93366123007fd075930bc1 742e6939b98cec14610f599700e3614b36fbe4c6 Ivan Lesnik <ilesnik@onasellabs.com> 1418982275 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1682
-ruau/.git/logs/HEAD:742e6939b98cec14610f599700e3614b36fbe4c6 f92e9a82bfb71752a72507c3626be4b40da1193e Ivan Lesnik <ilesnik@onasellabs.com> 1418982275 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:2ed0b741b4475319cc93366123007fd075930bc1 742e6939b98cec14610f599700e3614b36fbe4c6 Ivan Lesnik <ilesnik@onasellabs.com> 1418982275 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1682
+ruau/.git/logs/HEAD:742e6939b98cec14610f599700e3614b36fbe4c6 f92e9a82bfb71752a72507c3626be4b40da1193e Ivan Lesnik <ilesnik@onasellabs.com> 1418982275 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:f92e9a82bfb71752a72507c3626be4b40da1193e e1a617b02e694f8c362fc07c52509675edf76f5a Ivan Lesnik <ilesnik@onasellabs.com> 1418982276 +0000	rebase: no message
 ruau/.git/logs/HEAD:e1a617b02e694f8c362fc07c52509675edf76f5a e9b4d243df6ae315fbc3b3b333f9f29871d50a9d Ivan Lesnik <ilesnik@onasellabs.com> 1418982277 +0000	rebase: Update ES6-Promises library to new version that minifies correctly.
-ruau/.git/logs/HEAD:e9b4d243df6ae315fbc3b3b333f9f29871d50a9d bd676f29437a411690657e2f49182762a690f182 Ivan Lesnik <ilesnik@onasellabs.com> 1418982277 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1683
-ruau/.git/logs/HEAD:bd676f29437a411690657e2f49182762a690f182 e73e0aeac52bc7de3ce13436aff203ccb0218e67 Ivan Lesnik <ilesnik@onasellabs.com> 1418982278 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:e9b4d243df6ae315fbc3b3b333f9f29871d50a9d bd676f29437a411690657e2f49182762a690f182 Ivan Lesnik <ilesnik@onasellabs.com> 1418982277 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1683
+ruau/.git/logs/HEAD:bd676f29437a411690657e2f49182762a690f182 e73e0aeac52bc7de3ce13436aff203ccb0218e67 Ivan Lesnik <ilesnik@onasellabs.com> 1418982278 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:e73e0aeac52bc7de3ce13436aff203ccb0218e67 fad479b6bc73deb85540b61cc696bb82d2c56485 Ivan Lesnik <ilesnik@onasellabs.com> 1418982278 +0000	rebase: Clean up file source listener.
-ruau/.git/logs/HEAD:fad479b6bc73deb85540b61cc696bb82d2c56485 3a57a7b77cae6da4620692483f16eb1b719f48fa Ivan Lesnik <ilesnik@onasellabs.com> 1418982279 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1684
-ruau/.git/logs/HEAD:3a57a7b77cae6da4620692483f16eb1b719f48fa 9b884834a5c37cdce8138812fa9abd1f10106d76 Ivan Lesnik <ilesnik@onasellabs.com> 1418982280 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:fad479b6bc73deb85540b61cc696bb82d2c56485 3a57a7b77cae6da4620692483f16eb1b719f48fa Ivan Lesnik <ilesnik@onasellabs.com> 1418982279 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1684
+ruau/.git/logs/HEAD:3a57a7b77cae6da4620692483f16eb1b719f48fa 9b884834a5c37cdce8138812fa9abd1f10106d76 Ivan Lesnik <ilesnik@onasellabs.com> 1418982280 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:9b884834a5c37cdce8138812fa9abd1f10106d76 13cd2e0f66a5e2271cfe72bb69b450da25076de8 Ivan Lesnik <ilesnik@onasellabs.com> 1418982280 +0000	rebase: testPerfRunner -- let us to rerun pending tests
-ruau/.git/logs/HEAD:13cd2e0f66a5e2271cfe72bb69b450da25076de8 7ee889537e41ba4a52dda94aa33af5be94edd5ac Ivan Lesnik <ilesnik@onasellabs.com> 1418982281 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1685
-ruau/.git/logs/HEAD:7ee889537e41ba4a52dda94aa33af5be94edd5ac 694350052dafb093902a3909511ec6542f938c89 Ivan Lesnik <ilesnik@onasellabs.com> 1418982281 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:13cd2e0f66a5e2271cfe72bb69b450da25076de8 7ee889537e41ba4a52dda94aa33af5be94edd5ac Ivan Lesnik <ilesnik@onasellabs.com> 1418982281 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1685
+ruau/.git/logs/HEAD:7ee889537e41ba4a52dda94aa33af5be94edd5ac 694350052dafb093902a3909511ec6542f938c89 Ivan Lesnik <ilesnik@onasellabs.com> 1418982281 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:694350052dafb093902a3909511ec6542f938c89 3ea51c3d963e8d5fe2a93c8e29254c0f70866b95 Ivan Lesnik <ilesnik@onasellabs.com> 1418982282 +0000	rebase: Fix SVG defs.
-ruau/.git/logs/HEAD:3ea51c3d963e8d5fe2a93c8e29254c0f70866b95 adae4de219d4e5138ac2ca970edd66b70ca727c0 Ivan Lesnik <ilesnik@onasellabs.com> 1418982283 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1686
-ruau/.git/logs/HEAD:adae4de219d4e5138ac2ca970edd66b70ca727c0 d3306cb7b1d7437de982a1e4db7c00df3a16f694 Ivan Lesnik <ilesnik@onasellabs.com> 1418982283 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:3ea51c3d963e8d5fe2a93c8e29254c0f70866b95 adae4de219d4e5138ac2ca970edd66b70ca727c0 Ivan Lesnik <ilesnik@onasellabs.com> 1418982283 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1686
+ruau/.git/logs/HEAD:adae4de219d4e5138ac2ca970edd66b70ca727c0 d3306cb7b1d7437de982a1e4db7c00df3a16f694 Ivan Lesnik <ilesnik@onasellabs.com> 1418982283 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:d3306cb7b1d7437de982a1e4db7c00df3a16f694 04a26116cbde60457e52f5a185c6226223a88537 Ivan Lesnik <ilesnik@onasellabs.com> 1418982284 +0000	rebase: Reverting Halo changes to ui:tab to fix setting the default tab as active
-ruau/.git/logs/HEAD:04a26116cbde60457e52f5a185c6226223a88537 ff2eab5f46e611596d8d5ef772cd4645c170b5e2 Ivan Lesnik <ilesnik@onasellabs.com> 1418982285 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1687
-ruau/.git/logs/HEAD:ff2eab5f46e611596d8d5ef772cd4645c170b5e2 be0bcc105b20323f25a547248a960535c4b34328 Ivan Lesnik <ilesnik@onasellabs.com> 1418982285 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:be0bcc105b20323f25a547248a960535c4b34328 30585d6cbfbf92b3d4224525f462fae36f2111c9 Ivan Lesnik <ilesnik@onasellabs.com> 1418982286 +0000	rebase: Fixing memory leak in expressions
+ruau/.git/logs/HEAD:04a26116cbde60457e52f5a185c6226223a88537 ff2eab5f46e611596d8d5ef772cd4645c170b5e2 Ivan Lesnik <ilesnik@onasellabs.com> 1418982285 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1687
+ruau/.git/logs/HEAD:ff2eab5f46e611596d8d5ef772cd4645c170b5e2 be0bcc105b20323f25a547248a960535c4b34328 Ivan Lesnik <ilesnik@onasellabs.com> 1418982285 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
+ruau/.git/logs/HEAD:be0bcc105b20323f25a547248a960535c4b34328 30585d6cbfbf92b3d4224525f462fae36f2111c9 Ivan Lesnik <ilesnik@onasellabs.com> 1418982286 +0000	rebase: Fixing memory leak in exPrEssions
 ruau/.git/logs/HEAD:30585d6cbfbf92b3d4224525f462fae36f2111c9 8da62f2976695e11020c7e756b7de3cb38ada213 Ivan Lesnik <ilesnik@onasellabs.com> 1418982286 +0000	rebase: Adding stopPropagation to prvs though iteration
-ruau/.git/logs/HEAD:8da62f2976695e11020c7e756b7de3cb38ada213 0eb084b439a221dff604cc17851e19e7098c8a15 Ivan Lesnik <ilesnik@onasellabs.com> 1418982287 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1688
-ruau/.git/logs/HEAD:0eb084b439a221dff604cc17851e19e7098c8a15 f9e93c854d0f3901d25d1ceb47047f785c66d79d Ivan Lesnik <ilesnik@onasellabs.com> 1418982287 +0000	rebase: [maven-release-plugin] prepare for next development iteration
-ruau/.git/logs/HEAD:f9e93c854d0f3901d25d1ceb47047f785c66d79d 27ea4e1488dfa04c102afe7d4a9ebfae701601e8 Ivan Lesnik <ilesnik@onasellabs.com> 1418982288 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1689
-ruau/.git/logs/HEAD:27ea4e1488dfa04c102afe7d4a9ebfae701601e8 d372643d008fb3034267e572e7eda0060a5a2bf2 Ivan Lesnik <ilesnik@onasellabs.com> 1418982289 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:8da62f2976695e11020c7e756b7de3cb38ada213 0eb084b439a221dff604cc17851e19e7098c8a15 Ivan Lesnik <ilesnik@onasellabs.com> 1418982287 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1688
+ruau/.git/logs/HEAD:0eb084b439a221dff604cc17851e19e7098c8a15 f9e93c854d0f3901d25d1ceb47047f785c66d79d Ivan Lesnik <ilesnik@onasellabs.com> 1418982287 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
+ruau/.git/logs/HEAD:f9e93c854d0f3901d25d1ceb47047f785c66d79d 27ea4e1488dfa04c102afe7d4a9ebfae701601e8 Ivan Lesnik <ilesnik@onasellabs.com> 1418982288 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1689
+ruau/.git/logs/HEAD:27ea4e1488dfa04c102afe7d4a9ebfae701601e8 d372643d008fb3034267e572e7eda0060a5a2bf2 Ivan Lesnik <ilesnik@onasellabs.com> 1418982289 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:d372643d008fb3034267e572e7eda0060a5a2bf2 6efade7b39f3df827f388b324e201b2a708881a0 Ivan Lesnik <ilesnik@onasellabs.com> 1418982289 +0000	rebase: Use native scrolling on Windows tablet.
-ruau/.git/logs/HEAD:6efade7b39f3df827f388b324e201b2a708881a0 884907d554f0beddac350b94057d6124fef9dfcf Ivan Lesnik <ilesnik@onasellabs.com> 1418982290 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1690
-ruau/.git/logs/HEAD:884907d554f0beddac350b94057d6124fef9dfcf 9438a24f2b4188029b6cb3ba099f562c997be97e Ivan Lesnik <ilesnik@onasellabs.com> 1418982290 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:6efade7b39f3df827f388b324e201b2a708881a0 884907d554f0beddac350b94057d6124fef9dfcf Ivan Lesnik <ilesnik@onasellabs.com> 1418982290 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1690
+ruau/.git/logs/HEAD:884907d554f0beddac350b94057d6124fef9dfcf 9438a24f2b4188029b6cb3ba099f562c997be97e Ivan Lesnik <ilesnik@onasellabs.com> 1418982290 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:9438a24f2b4188029b6cb3ba099f562c997be97e fe028c0a60ac17a51857433f803675b737a9b5f6 Ivan Lesnik <ilesnik@onasellabs.com> 1418982291 +0000	rebase: Sauce Env issue so disabling test
-ruau/.git/logs/HEAD:fe028c0a60ac17a51857433f803675b737a9b5f6 77b57906b1302ecac556c8a812743d02468f2d76 Ivan Lesnik <ilesnik@onasellabs.com> 1418982292 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1691
-ruau/.git/logs/HEAD:77b57906b1302ecac556c8a812743d02468f2d76 2f7cd1ea16f6e943b66d76465116ab0f2062a611 Ivan Lesnik <ilesnik@onasellabs.com> 1418982293 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:fe028c0a60ac17a51857433f803675b737a9b5f6 77b57906b1302ecac556c8a812743d02468f2d76 Ivan Lesnik <ilesnik@onasellabs.com> 1418982292 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1691
+ruau/.git/logs/HEAD:77b57906b1302ecac556c8a812743d02468f2d76 2f7cd1ea16f6e943b66d76465116ab0f2062a611 Ivan Lesnik <ilesnik@onasellabs.com> 1418982293 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:2f7cd1ea16f6e943b66d76465116ab0f2062a611 7e47d3be502128c85f8339d086e1e7a50f762a87 Ivan Lesnik <ilesnik@onasellabs.com> 1418982293 +0000	rebase: Removing test for unsupported browsers IE7/8
 ruau/.git/logs/HEAD:7e47d3be502128c85f8339d086e1e7a50f762a87 c125e4d49af1f6ad50f814e80cb71dcaeba594db Ivan Lesnik <ilesnik@onasellabs.com> 1418982294 +0000	rebase: Fixes for tests to work on Mobile again
-ruau/.git/logs/HEAD:c125e4d49af1f6ad50f814e80cb71dcaeba594db b5d6db7c8bc54ee8515f1026f02a2cb942c619ca Ivan Lesnik <ilesnik@onasellabs.com> 1418982295 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1692
-ruau/.git/logs/HEAD:b5d6db7c8bc54ee8515f1026f02a2cb942c619ca 01d41500d4a1fba5376769951ba3693330526418 Ivan Lesnik <ilesnik@onasellabs.com> 1418982296 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:c125e4d49af1f6ad50f814e80cb71dcaeba594db b5d6db7c8bc54ee8515f1026f02a2cb942c619ca Ivan Lesnik <ilesnik@onasellabs.com> 1418982295 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1692
+ruau/.git/logs/HEAD:b5d6db7c8bc54ee8515f1026f02a2cb942c619ca 01d41500d4a1fba5376769951ba3693330526418 Ivan Lesnik <ilesnik@onasellabs.com> 1418982296 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:01d41500d4a1fba5376769951ba3693330526418 c02f42e752835af7c842da6d008dad8d56265e71 Ivan Lesnik <ilesnik@onasellabs.com> 1418982296 +0000	rebase: ui:inputSelect should support basic select functionality when using ruau:iteration
-ruau/.git/logs/HEAD:c02f42e752835af7c842da6d008dad8d56265e71 147c1903ed33f78c85ea359e9d4f69315562ba93 Ivan Lesnik <ilesnik@onasellabs.com> 1418982297 +0000	rebase: [maven-release-plugin] prepare release ruau-framework-0.1693
-ruau/.git/logs/HEAD:147c1903ed33f78c85ea359e9d4f69315562ba93 468152772d027cbea6fea02b0672c53c28878237 Ivan Lesnik <ilesnik@onasellabs.com> 1418982298 +0000	rebase: [maven-release-plugin] prepare for next development iteration
+ruau/.git/logs/HEAD:c02f42e752835af7c842da6d008dad8d56265e71 147c1903ed33f78c85ea359e9d4f69315562ba93 Ivan Lesnik <ilesnik@onasellabs.com> 1418982297 +0000	rebase: [maven-release-plugin] PrEpare release ruau-framework-0.1693
+ruau/.git/logs/HEAD:147c1903ed33f78c85ea359e9d4f69315562ba93 468152772d027cbea6fea02b0672c53c28878237 Ivan Lesnik <ilesnik@onasellabs.com> 1418982298 +0000	rebase: [maven-release-plugin] PrEpare for next development iteration
 ruau/.git/logs/HEAD:468152772d027cbea6fea02b0672c53c28878237 468152772d027cbea6fea02b0672c53c28878237 Ivan Lesnik <ilesnik@onasellabs.com> 1418982298 +0000	rebase finished: returning to refs/heads/master
 ruau/.git/logs/HEAD:468152772d027cbea6fea02b0672c53c28878237 468152772d027cbea6fea02b0672c53c28878237 Ivan Lesnik <ilesnik@onasellabs.com> 1418984108 +0000	checkout: moving from master to serial
 ruau/.git/logs/HEAD:468152772d027cbea6fea02b0672c53c28878237 86f366e5a8f2907277d994e0a5462775bee3bf5e Ivan Lesnik <ilesnik@onasellabs.com> 1418986285 +0000	checkout: moving from serial to onasel-config
@@ -1534,7 +1534,7 @@ ruau/.git/logs/refs/remotes/origin/master:027d62c63762dff82846acb1156993f75fd2bb
 ruau/.git/logs/refs/heads/onasel-config:0000000000000000000000000000000000000000 027d62c63762dff82846acb1156993f75fd2bbc2 Ivan Lesnik <ilesnik@onasellabs.com> 1417004113 +0000	branch: Created from HEAD
 ruau/.git/logs/refs/heads/onasel-config:027d62c63762dff82846acb1156993f75fd2bbc2 ec0187143197f386d5d78c1345ed566b1b8f16a3 Ivan Lesnik <ilesnik@onasellabs.com> 1417090660 +0000	commit: Temporary remove failing tests
 ruau/.git/logs/refs/heads/onasel-config:ec0187143197f386d5d78c1345ed566b1b8f16a3 b16cebd6909503ed2e2be55ab139e95f7db8b903 Ivan Lesnik <ilesnik@onasellabs.com> 1417539145 +0000	commit: Delete jenkins-to-onasel converter since it is moved to mudial_devops
-ruau/.git/logs/refs/heads/onasel-config:b16cebd6909503ed2e2be55ab139e95f7db8b903 79b0002c5a45481a1639034d136daddaedfe5819 Ivan Lesnik <ilesnik@onasellabs.com> 1417722749 +0000	commit: Add option disable_dodge_preload
+ruau/.git/logs/refs/heads/onasel-config:b16cebd6909503ed2e2be55ab139e95f7db8b903 79b0002c5a45481a1639034d136daddaedfe5819 Ivan Lesnik <ilesnik@onasellabs.com> 1417722749 +0000	commit: Add option disable_dodge_PrEload
 ruau/.git/logs/refs/heads/onasel-config:79b0002c5a45481a1639034d136daddaedfe5819 9fd50c77e95d99e0dc5818b32dc035ffbf841fe7 Ivan Lesnik <ilesnik@onasellabs.com> 1417726760 +0000	commit: Increase timeout to 7200; remove test_pattern as useless
 ruau/.git/logs/refs/heads/onasel-config:9fd50c77e95d99e0dc5818b32dc035ffbf841fe7 1e058bc75ed1087936eacb582bdb9c00ee2c6e2c Ivan Lesnik <ilesnik@onasellabs.com> 1417777377 +0000	commit: Enable parallel testing mode
 ruau/.git/logs/refs/heads/onasel-config:1e058bc75ed1087936eacb582bdb9c00ee2c6e2c f1e5e8630def5b2c9d9136293d8b87e019b8ccb7 Ivan Lesnik <ilesnik@onasellabs.com> 1417777844 +0000	commit: Add files pattern

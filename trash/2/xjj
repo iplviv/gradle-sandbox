@@ -1,7 +1,7 @@
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:                    // more information there, or we successfully finished, in which
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:                    // case it is rather unclear how this could happen.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:            TextTokenizer tt = TextTokenizer.tokenize(contents, getLocation());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:            tt.addExpressionRefs(this);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:            tt.addExPrEssionRefs(this);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:            return createDefinition(map);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:        } catch (QuickFixException qfe) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:            return createDefinition(qfe);
@@ -15,10 +15,10 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/Ja
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:     * create the definition from a parse error.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:     * @param error the parse error.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:    protected abstract T createDefinition(Throwable error);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:    public static String getCompressedSource(Source<?> source) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:    public void addExpressionReferences(Set<PropertyReference> propRefs) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:    public static String getComPrEssedSource(Source<?> source) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:    public void addExPrEssionReferences(Set<PropertyReference> propRefs) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:        // TODO: this should be a typed exception
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:        throw new RuueRuntimeException("Expressions are not allowed inside a " + descriptor.getDefType()
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:        throw new RuueRuntimeException("ExPrEssions are not allowed inside a " + descriptor.getDefType()
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptHandler.java:                + " definition", propRefs.iterator().next().getLocation());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptRendererDefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptRendererDefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -34,7 +34,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/Ja
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptRendererDefHandler.java:import java.util.Set;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptRendererDefHandler.java:import org.ruauframework.def.DefDescriptor;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptRendererDefHandler.java:import org.ruauframework.def.RendererDef;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptRendererDefHandler.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptRendererDefHandler.java:import org.ruauframework.exPrEssion.PropertyReference;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptRendererDefHandler.java:import org.ruauframework.impl.javascript.renderer.JavascriptRendererDef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptRendererDefHandler.java:import org.ruauframework.system.Source;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptRendererDefHandler.java:import org.ruauframework.throwable.quickfix.QuickFixException;
@@ -54,8 +54,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/Ja
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptRendererDefHandler.java:            builder.rerender.setName(String.format("rerender_%s_%s", descriptor.getNamespace(), descriptor.getName()));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptRendererDefHandler.java:        builder.unrender = (JsFunction) map.get("unrender");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptRendererDefHandler.java:            builder.unrender.setName(String.format("unrender_%s_%s", descriptor.getNamespace(), descriptor.getName()));
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptRendererDefHandler.java:    public void addExpressionReferences(Set<PropertyReference> propRefs) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptRendererDefHandler.java:        builder.expressionRefs.addAll(propRefs);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptRendererDefHandler.java:    public void addExPrEssionReferences(Set<PropertyReference> propRefs) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptRendererDefHandler.java:        builder.exPrEssionRefs.addAll(propRefs);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptRendererDefHandler.java:    protected RendererDef createDefinition(Throwable error) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptRendererDefHandler.java:        builder.setParseError(error);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptIncludeDefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
@@ -74,7 +74,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/Ja
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptIncludeDefHandler.java:import java.util.Set;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptIncludeDefHandler.java:import org.ruauframework.def.DefDescriptor;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptIncludeDefHandler.java:import org.ruauframework.def.IncludeDef;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptIncludeDefHandler.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptIncludeDefHandler.java:import org.ruauframework.exPrEssion.PropertyReference;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptIncludeDefHandler.java:import org.ruauframework.impl.root.library.IncludeDefImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptIncludeDefHandler.java:import org.ruauframework.system.Source;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptIncludeDefHandler.java:import org.ruauframework.throwable.RuueRuntimeException;
@@ -101,7 +101,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/Ja
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptIncludeDefHandler.java:                // We are in a very confusing state here, don't throw an exception. Either we've already had an
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptIncludeDefHandler.java:                // exception, in which case we have more information there, or we successfully finished, in which case
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptIncludeDefHandler.java:                // it is rather unclear how this could happen.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptIncludeDefHandler.java:    public void addExpressionReferences(Set<PropertyReference> propRefs) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptIncludeDefHandler.java:    public void addExPrEssionReferences(Set<PropertyReference> propRefs) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptIncludeDefHandler.java:    protected IncludeDef createDefinition(Throwable error) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptIncludeDefHandler.java:        builder.setParseError(error);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptIncludeDefHandler.java:    protected IncludeDef createDefinition(Map<String, Object> map) throws QuickFixException {
@@ -128,7 +128,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/Ja
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptTestSuiteDefHandler.java:import org.ruauframework.def.DefDescriptor;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptTestSuiteDefHandler.java:import org.ruauframework.def.DefDescriptor.DefType;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptTestSuiteDefHandler.java:import org.ruauframework.def.TestSuiteDef;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptTestSuiteDefHandler.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptTestSuiteDefHandler.java:import org.ruauframework.exPrEssion.PropertyReference;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptTestSuiteDefHandler.java:import org.ruauframework.impl.javascript.testsuite.JavascriptTestCaseDef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptTestSuiteDefHandler.java:import org.ruauframework.impl.javascript.testsuite.JavascriptTestSuiteDef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptTestSuiteDefHandler.java:import org.ruauframework.impl.javascript.testsuite.JavascriptTestSuiteDef.Builder;
@@ -144,10 +144,10 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/Ja
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptTestSuiteDefHandler.java:    private final Builder builder = new Builder();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptTestSuiteDefHandler.java:    public JavascriptTestSuiteDefHandler(DefDescriptor<TestSuiteDef> descriptor, Source<?> source) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptTestSuiteDefHandler.java:    private void putMocks(Map<String,Object> mocksMap, List<Object> mocks) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptTestSuiteDefHandler.java:            @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptTestSuiteDefHandler.java:            @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptTestSuiteDefHandler.java:            Map<String,Object> mock = (Map<String,Object>)obj;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptTestSuiteDefHandler.java:            mocksMap.put((String)mock.get("type") + "@@@" + (String)mock.get("descriptor"), mock);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptTestSuiteDefHandler.java:    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptTestSuiteDefHandler.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptTestSuiteDefHandler.java:    protected JavascriptTestSuiteDef createDefinition(Map<String, Object> map) throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptTestSuiteDefHandler.java:        builder.setLocation(getLocation());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptTestSuiteDefHandler.java:        builder.caseDefs = new ArrayList<>();
@@ -215,7 +215,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/Ja
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptTestSuiteDefHandler.java:                    mocks = Lists.newArrayList(mocksMap.values());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptTestSuiteDefHandler.java:                builder.caseDefs.add(new JavascriptTestCaseDef(descriptor, key, null, attributes, defType, labels,
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptTestSuiteDefHandler.java:                        browsers, mocks, ruauErrorsExpectedDuringInit, scrumTeam, owner));
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptTestSuiteDefHandler.java:    public void addExpressionReferences(Set<PropertyReference> propRefs) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptTestSuiteDefHandler.java:    public void addExPrEssionReferences(Set<PropertyReference> propRefs) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptTestSuiteDefHandler.java:    protected TestSuiteDef createDefinition(Throwable error) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/parser/handler/JavascriptTestSuiteDefHandler.java:        builder.setParseError(error);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptTestCaseDef.java: * Copyright (C) 2013 salesforce.com, inc.
@@ -304,7 +304,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/Javascr
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptTestCaseDef.java:        DefDescriptor<? extends BaseComponentDef> compDesc = DefDescriptorImpl
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptTestCaseDef.java:                .getAssociateDescriptor(suiteDescriptor, ComponentDef.class,
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptTestCaseDef.java:        List<Definition> building = Lists.newArrayList();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptTestCaseDef.java:                @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptTestCaseDef.java:                @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptTestCaseDef.java:                Definition mockDef = parseMock(compDesc, (Map<String, Object>) mock);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptTestCaseDef.java:                    building.add(mockDef);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptTestCaseDef.java:    private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
@@ -385,7 +385,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/Javascr
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockActionHandler.java:            actionDef = controllerDef.getSubDefinition(name);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockActionHandler.java:            return new ActionInvocation("createAction", ImmutableList.of(name), type);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockActionHandler.java:        return super.getInvocation(object);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockActionHandler.java:    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockActionHandler.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockActionHandler.java:    protected <T> Answer<T> getAnswer(Object object, Class<T> retClass) throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockActionHandler.java:        if (object instanceof Map) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockActionHandler.java:            Map<?, ?> map = (Map<?, ?>) object;
@@ -465,7 +465,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/Javascr
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:            return Ruue.getDefinitionService().getDefDescriptor(descStr, defClass);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     * Read a single or list of Stubs
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     * @param object
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     *            the parsed json representation
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     *            the parsed json rePrEsentation
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     * @return a list of Stubs
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:        if (!(object instanceof List)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:            object = Lists.newArrayList(object);
@@ -476,20 +476,20 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/Javascr
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     * of Answers, "answers".
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     * @param <T>
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     * @param object
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     *            the parsed json representation
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     *            the parsed json rePrEsentation
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     * @return a Stub object
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:        if (object instanceof Map) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:            Invocation invocation = getInvocation(((Map<?, ?>) object).get("method"));
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:            @SuppressWarnings("rawtypes")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:            @SupPrEssWarnings("rawtypes")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:            Class retType = invocation.getReturnType();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:            @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:            @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:            List<Answer<Object>> answers = getAnswers(((Map<?, ?>) object).get("answers"), retType);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:            return new Stub<>(invocation, answers);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:    protected abstract Invocation getDefaultInvocation() throws QuickFixException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     * Read an Invocation, which must have a "name" and, optionally,
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     * a "params" list of the input parameters to the method.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     * @param object
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     *            the parsed json representation
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     *            the parsed json rePrEsentation
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     * @return an Invocation object
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:    protected Invocation getInvocation(Object object) throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:            return getDefaultInvocation();
@@ -507,7 +507,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/Javascr
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:    protected Location getLocation() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     * Read a single or list of answers
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     * @param object
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     *            the parsed json representation
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     *            the parsed json rePrEsentation
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     * @param retClass
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     * @return a list of Answers
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:    protected <T> List<Answer<T>> getAnswers(Object object, Class<T> retClass) throws QuickFixException {
@@ -521,7 +521,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/Javascr
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     * Read an Answer, which must have either a 'value' or 'error',
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     * corresponding to Returns or ThrowsExceptionClass instances.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     * @param object
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     *            the parsed json representation
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     *            the parsed json rePrEsentation
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     * @param retClass
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     * @return an Answer object
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:    protected <T> Answer<T> getAnswer(Object object, Class<T> retClass) throws QuickFixException {
@@ -536,13 +536,13 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/Javascr
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     * Read a value. Usually, this will be returned by an Answer and/or may
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     * contain nested Answers.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     * @param object
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     *            the parsed json representation
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     *            the parsed json rePrEsentation
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     * @param retClass
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     *            the expected type of the value
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     * @return the value
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:    protected <T> T getValue(Object object, Class<T> retClass) throws QuickFixException {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     * Gets the Class from a simple name representation. Classes from the java.lang package may omit the package name.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     * Gets the Class from a simple name rePrEsentation. Classes from the java.lang package may omit the package name.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     * For example, "java.lang.String[][]" and "String[][]" will return the same Class object.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     * @param simpleName
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockHandler.java:     * @return the Class, if found
@@ -662,7 +662,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/Javascr
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockProviderHandler.java:        return (ProviderDef) Proxy.newProxyInstance(this.getClass()
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockProviderHandler.java:                .getClassLoader(), new Class<?>[] { ProviderDef.class, Resettable.class },
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockProviderHandler.java:                new DelegatingStubHandler(baseDef, stubs));
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockProviderHandler.java:    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockProviderHandler.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockProviderHandler.java:    protected <T> T getValue(Object object, Class<T> retClass) throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockProviderHandler.java:        if (object != null && ComponentConfig.class.equals(retClass)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockProviderHandler.java:            if (!(object instanceof Map)) {
@@ -679,7 +679,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/Javascr
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockProviderHandler.java:        if (object instanceof Map) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockProviderHandler.java:            Map<?, ?> map = (Map<?, ?>) object;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockProviderHandler.java:            final String configProvider = (String)((Map<?, ?>)map.get("value")).get("configProvider");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockProviderHandler.java:                    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockProviderHandler.java:                    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockProviderHandler.java:                    public T answer() throws Throwable {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockProviderHandler.java:                        if(configProvider.startsWith("java://")){
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockProviderHandler.java:                            mockProvider = configProvider.substring("java://".length());
@@ -739,7 +739,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/Javascr
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockModelHandler.java:        List<Stub<?>> stubs = getStubs(map.get("stubs"));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockModelHandler.java:        return (ModelDef) Proxy.newProxyInstance(this.getClass().getClassLoader(),
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockModelHandler.java:                new Class<?>[] { ModelDef.class, Resettable.class }, new DelegatingStubHandler(baseDef, stubs));
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockModelHandler.java:    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockModelHandler.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockModelHandler.java:    protected <T> T getValue(Object object, Class<T> retClass) throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockModelHandler.java:        if (object != null && Model.class.equals(retClass)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/javascript/testsuite/JavascriptMockModelHandler.java:            if (!(object instanceof Map)) {
@@ -803,7 +803,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java: 
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:            return SubDefDescriptorImpl.getInstance(qualifiedName, defClass, ControllerDef.class);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:        return DefDescriptorImpl.getInstance(qualifiedName, defClass, bundle);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:            Class<T> defClass) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:        return DefDescriptorImpl.getAssociateDescriptor(desc, defClass, prefix);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:        return DefDescriptorImpl.getAssociateDescriptor(desc, defClass, PrEfix);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:        ContextService contextService = Ruue.getContextService();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:        contextService.assertEstablished();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:        RuueContext context = Ruue.getContextService().getCurrentContext();
@@ -840,7 +840,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java: 
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:     * This routine takes in the current descriptor, It then expands out dependencies and
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:     * cleans up the set of explicitly loaded descriptors by removing descriptors that are
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:     * implicitly loaded by others in the set.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:     * Note that the client out of sync exception has higher 'precedence' than
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:     * Note that the client out of sync exception has higher 'PrEcedence' than
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:     * the quick fix exception. This allows the servlet to correctly refresh a
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:     * fact that the server side code changed). This is because quick fix exceptions
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:     * are thrown and swallowed during posts to avoid circular qfes, which cause
@@ -856,7 +856,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java: 
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:        RuueContext context;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:        MasterDefRegistry mdr;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:        Set<DefDescriptor<?>> loaded = Sets.newHashSet();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:        Set<DefDescriptor<?>> prev = Sets.newHashSet();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:        Set<DefDescriptor<?>> PrEv = Sets.newHashSet();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:        contextService.assertEstablished();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:        if (context.getPreloadedDefinitions() == null) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:            // TODO (optimize): we could reverse this set randomly to try
@@ -869,14 +869,14 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java: 
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:                    String uid = entry.getValue();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:                        // If we are given a null, bounce out.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:                    } catch (QuickFixException broke) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:                        // See note above. This is how we enforce precedence of ClientOutOfSyncException
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:                        // See note above. This is how we enforce PrEcedence of ClientOutOfSyncException
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:                    if (!uid.equals(tuid)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:                        throw new ClientOutOfSyncException(descriptor + ": mismatched UIDs " + uid + " != " + tuid);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:                    loaded.addAll(deps);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:                        if (deps.contains(x)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:                                remove = Sets.newHashSet();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:                            remove.add(x);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:                    prev.add(descriptor);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:                    PrEv.add(descriptor);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:            context.setPreloadedDefinitions(loaded);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:            loaded = context.getPreloadedDefinitions();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/DefinitionServiceImpl.java:                context.dropLoaded(x);
@@ -941,8 +941,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:  
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:                	PrivilegedNamespaceSourceLoader privilegedLoader = (PrivilegedNamespaceSourceLoader)loader;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:	                if (privilegedLoader.isPrivilegedNamespace(namespace)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:	                	configAdapter.addPrivilegedNamespace(namespace);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:                for (String prefix : loader.getPrefixes()) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:                    LoaderKey key = new LoaderKey(namespace, prefix);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:                for (String PrEfix : loader.getPrefixes()) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:                    LoaderKey key = new LoaderKey(namespace, PrEfix);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:                    if (mutableLoaderMap.containsKey(key)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:                        throw new RuueRuntimeException(String.format(
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:                                "Namespace/Prefix combination %s claimed by 2 SourceLoaders : %s and %s", key
@@ -957,7 +957,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:  
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:        SourceLoader loader = loaders.get(key);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:        if (loader == null) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:        return loader.getSource(descriptor);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:    public <T extends Definition> Set<DefDescriptor<T>> find(DefDescriptor<T> matcher) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:        String namespace = matcher.getNamespace();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:        Class<T> primaryInterface = (Class<T>) matcher.getDefType().getPrimaryInterface();
@@ -972,19 +972,19 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:  
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:            if (matcher.matchPrefix(entry.getKey().getPrefix())
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:                    && matcher.matchNamespace(entry.getKey().getNamespace())) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:                ret.addAll(entry.getValue().find(matcher));
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:    private <T extends Definition> Set<DefDescriptor<T>> find(Class<T> primaryInterface, String prefix, String namespace) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:        LoaderKey key = new LoaderKey(namespace, prefix);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:    private <T extends Definition> Set<DefDescriptor<T>> find(Class<T> primaryInterface, String PrEfix, String namespace) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:        LoaderKey key = new LoaderKey(namespace, PrEfix);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:        SourceLoader loader = loaders.get(key);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:        if (loader == null) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:            throw new RuueRuntimeException(String.format("Loader not found for %s", key));
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:        return loader.find(primaryInterface, prefix, namespace);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:        return loader.find(primaryInterface, PrEfix, namespace);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:    private static class LoaderKey {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:        private final String namespace;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:        private final String prefix;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:        private final String PrEfix;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:        private final int hashCode;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:        private LoaderKey(String namespace, String prefix) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:        private LoaderKey(String namespace, String PrEfix) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:            this.namespace = namespace;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:            this.hashCode = RuueUtil.hashCode(namespace != null ? namespace.toLowerCase() : null, prefix.toLowerCase());
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:            this.hashCode = RuueUtil.hashCode(namespace != null ? namespace.toLowerCase() : null, PrEfix.toLowerCase());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:         * @see java.lang.Object#hashCode()
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:        public int hashCode() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:            return hashCode;
@@ -992,16 +992,16 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:  
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:        public boolean equals(Object obj) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:            if (obj instanceof LoaderKey) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:                LoaderKey l = (LoaderKey) obj;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:                if (prefix.equalsIgnoreCase(l.prefix) && l.namespace != null) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:                if (PrEfix.equalsIgnoreCase(l.prefix) && l.namespace != null) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:                    return l.namespace.equalsIgnoreCase(namespace);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:            return false;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:         * @see java.lang.Object#toString()
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:            return prefix + "://" + namespace;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:            return PrEfix + "://" + namespace;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:         * Gets the namespace for this instance.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:         * @return The namespace.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:        public String getNamespace() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:            return this.namespace;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:         * Gets the prefix for this instance.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/SourceFactory.java:         * Gets the PrEfix for this instance.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java: * you may not use this file except in compliance with the License.
@@ -1030,33 +1030,33 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:    public enum NameFormat {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        BUNDLE, // ! A 'bundle' file like controller, component, app, helper.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        BUNDLED_EXTRA, // ! An 'extra' file e.g. library include js file
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        NAMESPACE // ! a namespace .xml file (deprecated)
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        NAMESPACE // ! a namespace .xml file (dePrEcated)
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:    protected static final class ExtensionInfo {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        public final String extension;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        public final NameFormat nameFormat;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        public final String prefix;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        public final String PrEfix;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        public final DefType defType;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        public final Format format;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        public ExtensionInfo(String extension, NameFormat nameFormat, String prefix, DefType defType, Format format) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        public ExtensionInfo(String extension, NameFormat nameFormat, String PrEfix, DefType defType, Format format) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:            this.nameFormat = nameFormat;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:            this.format = format;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:            return "ExtensionInfo{" + this.extension + ", " + this.prefix + ", " + this.nameFormat
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:            return "ExtensionInfo{" + this.extension + ", " + this.PrEfix + ", " + this.nameFormat
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:                    + ", " + this.defType + ", " + this.format + "}";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:    protected final static Map<String, ExtensionInfo> byExtension = Maps.newHashMapWithExpectedSize(32);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:    private final static Map<String, Map<DefType, ExtensionInfo>> byCompound = Maps.newHashMapWithExpectedSize(8);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:    private final static Set<DefType> defTypes = Sets.newHashSet();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:    private final static Set<String> prefixes = Sets.newHashSet();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:    private final static Set<String> PrEfixes = Sets.newHashSet();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:    protected synchronized static void addExtension(String extension, NameFormat nameFormat,
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:            String prefix, DefType defType, Format format) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        ExtensionInfo ei = new ExtensionInfo(extension, nameFormat, prefix, defType, format);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:            String PrEfix, DefType defType, Format format) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        ExtensionInfo ei = new ExtensionInfo(extension, nameFormat, PrEfix, defType, format);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        byExtension.put(ei.extension.toLowerCase(), ei);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        Map<DefType, ExtensionInfo> defTypeMap = byCompound.get(ei.prefix.toLowerCase());
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        Map<DefType, ExtensionInfo> defTypeMap = byCompound.get(ei.PrEfix.toLowerCase());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        if (defTypeMap == null) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:            defTypeMap = Maps.newHashMap();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:            byCompound.put(ei.prefix.toLowerCase(), defTypeMap);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:            byCompound.put(ei.PrEfix.toLowerCase(), defTypeMap);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        defTypeMap.put(defType, ei);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        defTypes.add(defType);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        prefixes.add(ei.prefix);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        PrEfixes.add(ei.prefix);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:    private boolean havePrefix(DefDescriptor<?> desc) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        return byCompound.get(desc.getPrefix().toLowerCase()) != null;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        Map<DefType, ExtensionInfo> defTypeMap = byCompound.get(desc.getPrefix().toLowerCase());
@@ -1097,15 +1097,15 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        if (last.startsWith(name)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:            ext = last.substring(name.length());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:            ei = byExtension.get(ext.toLowerCase());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:                String format = DefDescriptor.MARKUP_PREFIX.equals(ei.prefix) ? "%s://%s:%s" : "%s://%s.%s";
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:                String format = DefDescriptor.MARKUP_PREFIX.equals(ei.PrEfix) ? "%s://%s:%s" : "%s://%s.%s";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:                return Ruue.getDefinitionService().getDefDescriptor(
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:                        String.format(format, ei.prefix, ns, name), ei.defType.getPrimaryInterface());
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:                        String.format(format, ei.PrEfix, ns, name), ei.defType.getPrimaryInterface());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        List<String> ext = RuueTextUtil.splitSimple(".", last);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:            ei = byExtension.get(ext.get(1).toLowerCase());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:                if (ei.nameFormat == NameFormat.BUNDLED_EXTRA) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:                    String format = DefDescriptor.MARKUP_PREFIX.equals(ei.prefix) ? "%s://%s:%s" : "%s://%s.%s";
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:                    String format = DefDescriptor.MARKUP_PREFIX.equals(ei.PrEfix) ? "%s://%s:%s" : "%s://%s.%s";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:                    return Ruue.getDefinitionService().getDefDescriptor(
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:                            String.format(format, ei.prefix, ns, ext.get(0)), ei.defType.getPrimaryInterface());
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:                            String.format(format, ei.PrEfix, ns, ext.get(0)), ei.defType.getPrimaryInterface());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:    protected Format getFormat(DefDescriptor<?> descriptor) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:            return ei.format;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:            return Format.valueOf(descriptor.getPrefix().toUpperCase());
@@ -1138,7 +1138,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        throw new RuueRuntimeException("Could not get path for " + descriptor + "@" + descriptor.getDefType()
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:    protected String getPath(DefDescriptor<?> descriptor) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:    	return getPath(descriptor, FILE_SEPARATOR);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:    protected <D extends Definition> DefDescriptor<D> updateDescriptorName(DefDescriptor<D> desc, String newNamespace,
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:            String newName) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        String name = newName;
@@ -1273,8 +1273,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/resource/ResourceSour
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/resource/ResourceSourceLoader.java:            namespaces.add(desc.getNamespace());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/resource/ResourceSourceLoader.java:                set = Sets.newHashSet();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/resource/ResourceSourceLoader.java:            set.add(desc);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/resource/ResourceSourceLoader.java:    @SuppressWarnings("unchecked")
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/resource/ResourceSourceLoader.java:    public <T extends Definition> Set<DefDescriptor<T>> find(Class<T> primaryInterface, String prefix, String namespace) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/resource/ResourceSourceLoader.java:    @SupPrEssWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/resource/ResourceSourceLoader.java:    public <T extends Definition> Set<DefDescriptor<T>> find(Class<T> primaryInterface, String PrEfix, String namespace) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/resource/ResourceSourceLoader.java:        IndexKey key = new IndexKey(DefType.getDefType(primaryInterface), namespace);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/resource/ResourceSourceLoader.java:        Set<DefDescriptor<T>> ret = Sets.newHashSet();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/resource/ResourceSourceLoader.java:        Set<DefDescriptor<?>> values = index.get(key);
@@ -1291,7 +1291,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/resource/ResourceSour
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/resource/ResourceSourceLoader.java:    public Set<String> getNamespaces() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/resource/ResourceSourceLoader.java:        return namespaces;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/resource/ResourceSourceLoader.java:        Source<D> ret = new ResourceSource<D>(descriptor, resourcePrefix + "/" + getPath(descriptor, "/"), getFormat(descriptor));
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/resource/ResourceSourceLoader.java:            @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/resource/ResourceSourceLoader.java:            @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/resource/ResourceSourceLoader.java:            Set<DefDescriptor<D>> all = find((Class<D>) descriptor.getDefType().getPrimaryInterface(),
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/resource/ResourceSourceLoader.java:                    descriptor.getPrefix(), descriptor.getNamespace());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/resource/ResourceSourceLoader.java:            for (DefDescriptor<D> candidate : all) {
@@ -1588,7 +1588,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/RuueFileMonitor.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/RuueFileMonitor.java:            watchService = FileSystems.getDefault().newWatchService();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/RuueFileMonitor.java:        } catch (IOException e) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/RuueFileMonitor.java:            LOG.error("Could not create ruau WatchService.  File changes will not be noticed");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/RuueFileMonitor.java:    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/RuueFileMonitor.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/RuueFileMonitor.java:    static <T> WatchEvent<T> cast(WatchEvent<?> event) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/RuueFileMonitor.java:        return (WatchEvent<T>) event;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/RuueFileMonitor.java:     * Register a single directory with the WatchService
@@ -1601,7 +1601,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/RuueFileMonitor.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/RuueFileMonitor.java:    private void registerAll(final Path start) throws IOException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/RuueFileMonitor.java:        // register directory and sub-directories
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/RuueFileMonitor.java:        Files.walkFileTree(start, new SimpleFileVisitor<Path>() {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/RuueFileMonitor.java:            public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs)
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/RuueFileMonitor.java:            public FileVisitResult PrEVisitDirectory(Path dir, BasicFileAttributes attrs)
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/RuueFileMonitor.java:        // loop forever, waiting on monitor for watchService, unless isTerminateThread
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/RuueFileMonitor.java:            // wait for watchService to become signaled
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/RuueFileMonitor.java:            WatchKey key;
@@ -1767,11 +1767,11 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceLoader
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceLoader.java:                if (matcher.matchNamespace(ns)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceLoader.java:                    af.setNamespace(ns);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceLoader.java:                    findFiles(new File(base, ns), null, af);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceLoader.java:    public <T extends Definition> Set<DefDescriptor<T>> find(Class<T> primaryInterface, String prefix, String namespace) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceLoader.java:    public <T extends Definition> Set<DefDescriptor<T>> find(Class<T> primaryInterface, String PrEfix, String namespace) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceLoader.java:        Set<DefDescriptor<T>> ret = new HashSet<>();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceLoader.java:        DefType defType = DefType.getDefType(primaryInterface);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceLoader.java:        findFiles(new File(base, namespace), null, otf);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceLoader.java:        //System.out.println("PI="+primaryInterface.getName()+", prefix="+prefix+", ns = "+namespace+", RET="+ret);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceLoader.java:        //System.out.println("PI="+primaryInterface.getName()+", PrEfix="+prefix+", ns = "+namespace+", RET="+ret);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceLoader.java:     * Find the set of files that match the filter.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceLoader.java:     * This will recursively walk a set of directories to find all files that matche the filter, in any directory.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceLoader.java:     * @param file the base directory to search.
@@ -1798,7 +1798,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceLoader
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceLoader.java:         * @param dm the matcher to check the descriptors.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceLoader.java:        public boolean accept(File file) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceLoader.java:            DefDescriptor<?> dd = getDescriptor(file.getPath());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceLoader.java:                @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceLoader.java:                @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceLoader.java:                dset.add(ddt);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceLoader.java:            // We don't need to accept this, as we've already either included or
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceLoader.java:            // descriptor above.
@@ -1970,7 +1970,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/IncludeDefRefIm
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/IncludeDefRefImpl.java:    public String getName() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/IncludeDefRefImpl.java:        return descriptor != null ? descriptor.getName() : null;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/IncludeDefRefImpl.java:    public void serialize(Json json) throws IOException {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/IncludeDefRefImpl.java:        JsFunction function = new JsFunction(Arrays.asList("define"), prepareCode());
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/IncludeDefRefImpl.java:        JsFunction function = new JsFunction(Arrays.asList("define"), PrEpareCode());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/IncludeDefRefImpl.java:        json.writeValue(function);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/IncludeDefRefImpl.java:    public void validateDefinition() throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/IncludeDefRefImpl.java:        if (getName() == null) {
@@ -1995,7 +1995,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/IncludeDefRefIm
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/IncludeDefRefImpl.java:        return false;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/IncludeDefRefImpl.java:    public int hashCode() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/IncludeDefRefImpl.java:        return hashCode;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/IncludeDefRefImpl.java:    private String prepareCode() {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/IncludeDefRefImpl.java:    private String PrEpareCode() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/IncludeDefRefImpl.java:                source = Ruue.getDefinitionService().getDefinition(getIncludeDescriptor()).getCode();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/IncludeDefRefImpl.java:            } catch (QuickFixException qfe) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/IncludeDefRefImpl.java:                throw new RuueRuntimeException(qfe);
@@ -2206,13 +2206,13 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:                    dependantsMap.put(imported, include);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:        // Until there are no dependencies resolved in a pass:
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:        while (!pass.isEmpty()) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:            List<IncludeDefRef> previousPass = pass;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:            List<IncludeDefRef> PrEviousPass = pass;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:            pass = Lists.newLinkedList();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:            // For each include that was resolved in the previous pass:
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:            for (IncludeDefRef previousPassInclude : previousPass) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:            // For each include that was resolved in the PrEvious pass:
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:            for (IncludeDefRef PrEviousPassInclude : previousPass) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:                // Find all things that depend on this include:
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:                for (IncludeDefRef requiredCurrent : dependantsMap.get(previousPassInclude.getIncludeDescriptor())) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:                    // Skip includes that depend on this include from the previous pass that are already resolved:
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:                for (IncludeDefRef requiredCurrent : dependantsMap.get(PrEviousPassInclude.getIncludeDescriptor())) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:                    // Skip includes that depend on this include from the PrEvious pass that are already resolved:
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:                    if (resolved.contains(requiredCurrent.getIncludeDescriptor())) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:                        break;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:                    // Check to see if in this pass, the include's dependencies can be resolved:
@@ -2233,7 +2233,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:            super(LibraryDef.class);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:         * @see org.ruauframework.impl.system.DefinitionImpl.BuilderImpl#build()
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:        public LibraryDefImpl build() {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:            // Lookup associated documentation in present:
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:            // Lookup associated documentation in PrEsent:
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:            DefDescriptor<DocumentationDef> documentationDescriptor = DefDescriptorImpl.getAssociateDescriptor(
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:                    getDescriptor(), DocumentationDef.class, DefDescriptor.MARKUP_PREFIX
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:            if (documentationDescriptor.exists()) {
@@ -2268,7 +2268,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/ComponentDefR
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/ComponentDefRefArrayImpl.java:    public ComponentDefRefArrayImpl(List<ComponentDefRef> cdrs, BaseComponent<?, ?> vp) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/ComponentDefRefArrayImpl.java:    public List<Component> newInstance(BaseComponent<?, ?> fallbackValueProvider) throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/ComponentDefRefArrayImpl.java:        return newInstance(fallbackValueProvider, null);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/ComponentDefRefArrayImpl.java:    @SuppressWarnings({ "unchecked", "rawtypes" })
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/ComponentDefRefArrayImpl.java:    @SupPrEssWarnings({ "unchecked", "rawtypes" })
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/ComponentDefRefArrayImpl.java:    public List<Component> newInstance(BaseComponent<?, ?> fallbackValueProvider, Map<String, Object> extraProviders) throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/ComponentDefRefArrayImpl.java:        List<Component> components = Lists.newArrayListWithExpectedSize(cdrs.size());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/ComponentDefRefArrayImpl.java:        BaseComponent<?, ?> valueProvider = this.vp != null ? this.vp : fallbackValueProvider;
@@ -2372,7 +2372,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBui
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBuilderImpl.java:import org.ruauframework.def.DefDescriptor;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBuilderImpl.java:import org.ruauframework.def.HtmlTag;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBuilderImpl.java:import org.ruauframework.def.optimizer.DefBuilderOptimizer;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBuilderImpl.java:import org.ruauframework.expression.Expression;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBuilderImpl.java:import org.ruauframework.exPrEssion.Expression;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBuilderImpl.java:import org.ruauframework.impl.root.AttributeDefRefImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBuilderImpl.java:import org.ruauframework.impl.root.parser.handler.HTMLComponentDefRefHandler;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBuilderImpl.java:import org.ruauframework.impl.system.DefDescriptorImpl;
@@ -2400,11 +2400,11 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBui
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBuilderImpl.java:            // FIXME: we should warn about non-null namespaces.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBuilderImpl.java:            htmlAttributes.put(key, value.getValue());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBuilderImpl.java:    protected static class Optimizer implements DefBuilderOptimizer<HTMLDefRefBuilderImpl> {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBuilderImpl.java:        @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBuilderImpl.java:        @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBuilderImpl.java:            DefDescriptor<AttributeDef> bodyDesc = DefDescriptorImpl.getInstance("body", AttributeDef.class);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBuilderImpl.java:            DefDescriptor<AttributeDef> tagDesc = DefDescriptorImpl.getInstance("tag", AttributeDef.class);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBuilderImpl.java:            DefDescriptor<ComponentDef> textDesc = DefDescriptorImpl.getInstance("ruau:text", ComponentDef.class);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBuilderImpl.java:            DefDescriptor<ComponentDef> expDesc = DefDescriptorImpl.getInstance("ruau:expression", ComponentDef.class);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBuilderImpl.java:            DefDescriptor<ComponentDef> expDesc = DefDescriptorImpl.getInstance("ruau:exPrEssion", ComponentDef.class);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBuilderImpl.java:            AttributeDefRef bodyRef = builder.getAttributeValue(bodyDesc);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBuilderImpl.java:            Map<DefDescriptor<AttributeDef>, Object> htmlAttributes = builder.htmlAttributes;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBuilderImpl.java:            boolean pureHTML = true;
@@ -2433,7 +2433,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBui
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBuilderImpl.java:                        Object value = entry.getValue();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBuilderImpl.java:                        if (value != null) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBuilderImpl.java:                            add(markup, " ").add(markup, entry.getKey().getName()).add(markup, "=").add(markup, "\"");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBuilderImpl.java:                            if (value instanceof Expression) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBuilderImpl.java:                            if (value instanceof ExPrEssion) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBuilderImpl.java:                                add(markup, value);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBuilderImpl.java:                                add(markup, value.toString());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/HTMLDefRefBuilderImpl.java:                            add(markup, "\"");
@@ -2483,7 +2483,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponent
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:import org.ruauframework.def.RendererDef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:import org.ruauframework.def.RootDefinition;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:import org.ruauframework.def.TypeDef;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:import org.ruauframework.exPrEssion.PropertyReference;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:import org.ruauframework.impl.java.model.JavaModel;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:import org.ruauframework.impl.root.AttributeDefImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:import org.ruauframework.impl.root.AttributeSetImpl;
@@ -2520,7 +2520,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponent
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:            this.attributeSet.set(attributes);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:        } finally {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:        Ruue.getContextService().getCurrentContext().getInstanceStack().popInstance(this);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:    public <T extends D> BaseComponentImpl(T def, Map<String, Object> attributes) throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:        this((DefDescriptor<D>) def.getDescriptor(), null, (Map<String, Object>) null, null, def);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:        LoggingService loggingService = Ruue.getLoggingService();
@@ -2666,14 +2666,14 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponent
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:    public Object getValue(PropertyReference expr) throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:        RuueContext context = Ruue.getContextService().getCurrentContext();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:        BaseComponent<?, ?> oldComponent = context.setCurrentComponent(this);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:            if ("c".equals(prefix)) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:            Object root = valueProviders.get(prefix);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:                ValueProviderType vpt = ValueProviderType.getTypeByPrefix(prefix);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:            if ("c".equals(PrEfix)) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:            Object root = valueProviders.get(PrEfix);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:                ValueProviderType vpt = ValueProviderType.getTypeByPrefix(PrEfix);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:                    root = context.getGlobalProviders().get(vpt);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:                    if (root instanceof ValueProvider) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:                        return ((ValueProvider) root).getValue(stem);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:                        return JavaModel.getValue(root, stem, null);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:                        // no throw error at runtime even though expression
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:                        // no throw error at runtime even though exPrEssion
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:                    // they asked for just the root.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:                    // TODO: this should only work for foreach, shouldn't be
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:                    // able to {!m}
@@ -2708,14 +2708,14 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponent
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:            if (componentArrType.equals(typeDesc)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:                Object val = getAttributes().getValue(foo.getKey().getName());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:                if (val instanceof List) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:                    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:                    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:                    List<BaseComponent<?, ?>> facet = (List<BaseComponent<?, ?>>) val;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:                    for (BaseComponent<?, ?> c : facet) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:                        c.reinitializeModel();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:            else if (componentDefRefArrayType.equals(typeDesc)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:            	ComponentDefRefArray val = getAttributes().getValue(foo.getKey().getName(), ComponentDefRefArray.class);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:                if (val != null) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:                    //@SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:                    //@SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:                    //List<BaseComponent<?, ?>> facet = (List<BaseComponent<?, ?>>) val;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:                    for (Object c : val.getList()) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/BaseComponentImpl.java:                    	if(c instanceof BaseComponent) {
@@ -2963,7 +2963,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/ProtoComponen
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/ProtoComponentImpl.java:import java.io.IOException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/ProtoComponentImpl.java:import org.ruauframework.def.ComponentDef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/ProtoComponentImpl.java:import org.ruauframework.def.DefDescriptor;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/ProtoComponentImpl.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/ProtoComponentImpl.java:import org.ruauframework.exPrEssion.PropertyReference;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/ProtoComponentImpl.java:import org.ruauframework.instance.AttributeSet;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/ProtoComponentImpl.java:import org.ruauframework.instance.Component;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/ProtoComponentImpl.java:import org.ruauframework.instance.Model;

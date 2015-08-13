@@ -11,7 +11,7 @@ ruau/ruau-integration-test/ruau.log:2014-12-12 12:38:52,430  INFO [main] (Seleni
 ruau/ruau-integration-test/ruau.log:2014-12-12 12:38:52,471  INFO [main] (SeleniumServer.java:765) - Java: Oracle Corporation 24.65-b04
 ruau/ruau-integration-test/ruau.log:2014-12-12 12:38:52,471  INFO [main] (SeleniumServer.java:767) - OS: Linux 3.8.0-44-generic amd64
 ruau/ruau-integration-test/ruau.log:2014-12-12 12:38:52,483  INFO [main] (SeleniumServer.java:340) - v2.42.2, with Core v2.42.2. Built from revision 6a6995d31c7c56c340d6f45a76976d43506cd6cc
-ruau/ruau-integration-test/ruau.log:2014-12-12 12:38:52,722  INFO [main] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://127.0.0.1:12247/wd/hub
+ruau/ruau-integration-test/ruau.log:2014-12-12 12:38:52,722  INFO [main] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://100.0.0.1:12247/wd/hub
 ruau/ruau-integration-test/ruau.log:2014-12-12 12:38:52,729  INFO [main] (HttpServer.java:694) - Version Jetty/5.1.x
 ruau/ruau-integration-test/ruau.log:2014-12-12 12:38:52,730  INFO [main] (Container.java:74) - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
 ruau/ruau-integration-test/ruau.log:2014-12-12 12:38:52,739  INFO [main] (Container.java:74) - Started HttpContext[/selenium-server,/selenium-server]
@@ -52,7 +52,7 @@ ruau/ruau-integration-test/ruau.log:2014-12-12 12:55:31,360  INFO [main] (Seleni
 ruau/ruau-integration-test/ruau.log:2014-12-12 12:55:31,413  INFO [main] (SeleniumServer.java:765) - Java: Oracle Corporation 24.65-b04
 ruau/ruau-integration-test/ruau.log:2014-12-12 12:55:31,413  INFO [main] (SeleniumServer.java:767) - OS: Linux 3.8.0-44-generic amd64
 ruau/ruau-integration-test/ruau.log:2014-12-12 12:55:31,424  INFO [main] (SeleniumServer.java:340) - v2.42.2, with Core v2.42.2. Built from revision 6a6995d31c7c56c340d6f45a76976d43506cd6cc
-ruau/ruau-integration-test/ruau.log:2014-12-12 12:55:31,677  INFO [main] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://127.0.0.1:19234/wd/hub
+ruau/ruau-integration-test/ruau.log:2014-12-12 12:55:31,677  INFO [main] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://100.0.0.1:19234/wd/hub
 ruau/ruau-integration-test/ruau.log:2014-12-12 12:55:31,680  INFO [main] (HttpServer.java:694) - Version Jetty/5.1.x
 ruau/ruau-integration-test/ruau.log:2014-12-12 12:55:31,681  INFO [main] (Container.java:74) - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
 ruau/ruau-integration-test/ruau.log:2014-12-12 12:55:31,684  INFO [main] (Container.java:74) - Started HttpContext[/selenium-server,/selenium-server]
@@ -68,7 +68,7 @@ ruau/ruau-integration-test/ruau.log:2014-12-12 12:55:31,874  INFO [SeleniumServe
 ruau/ruau-integration-test/ruau.log:2014-12-12 12:55:31,990  INFO [SeleniumServerShutDownHook] (Container.java:156) - Stopped HttpContext[/selenium-server/driver,/selenium-server/driver]
 ruau/ruau-integration-test/ruau.log:2014-12-12 12:55:32,071  INFO [SeleniumServerShutDownHook] (Container.java:156) - Stopped HttpContext[/selenium-server,/selenium-server]
 ruau/ruau-integration-test/ruau.log:2014-12-12 12:55:32,126  INFO [SeleniumServerShutDownHook] (Container.java:156) - Stopped HttpContext[/,/]
-ruau/ruau-integration-test/ruau.log:2014-12-12 12:55:32,127  INFO [SeleniumServerShutDownHook] (Container.java:156) - Stopped org.openqa.jetty.jetty.servlet.ServletHandler@7f23034b
+ruau/ruau-integration-test/ruau.log:2014-12-12 12:55:32,100  INFO [SeleniumServerShutDownHook] (Container.java:156) - Stopped org.openqa.jetty.jetty.servlet.ServletHandler@7f23034b
 ruau/ruau-integration-test/ruau.log:2014-12-12 12:55:32,179  INFO [SeleniumServerShutDownHook] (Container.java:156) - Stopped HttpContext[/wd,/wd]
 ruau/ruau-integration-test/ruau.log:2014-12-12 12:55:32,179  INFO [SeleniumServerShutDownHook] (Container.java:156) - Stopped org.openqa.jetty.jetty.Server@3c24ea0e
 ruau/ruau-integration-test/ruau.log:2014-12-12 13:01:56,795  INFO [main] (RuueFileMonitor.java:222) - Monitoring directory /vagrant/ruau/ruau-impl/src/main/resources
@@ -184,7 +184,7 @@ ruau/ruau-integration-test/ruau.log:2014-12-12 14:22:28,015  INFO [main] (Seleni
 ruau/ruau-integration-test/ruau.log:2014-12-12 14:22:28,059  INFO [main] (SeleniumServer.java:765) - Java: Oracle Corporation 24.65-b04
 ruau/ruau-integration-test/ruau.log:2014-12-12 14:22:28,059  INFO [main] (SeleniumServer.java:767) - OS: Linux 3.8.0-44-generic amd64
 ruau/ruau-integration-test/ruau.log:2014-12-12 14:22:28,073  INFO [main] (SeleniumServer.java:340) - v2.42.2, with Core v2.42.2. Built from revision 6a6995d31c7c56c340d6f45a76976d43506cd6cc
-ruau/ruau-integration-test/ruau.log:2014-12-12 14:22:28,344  INFO [main] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://127.0.0.1:32531/wd/hub
+ruau/ruau-integration-test/ruau.log:2014-12-12 14:22:28,344  INFO [main] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://100.0.0.1:32531/wd/hub
 ruau/ruau-integration-test/ruau.log:2014-12-12 14:22:28,349  INFO [main] (HttpServer.java:694) - Version Jetty/5.1.x
 ruau/ruau-integration-test/ruau.log:2014-12-12 14:22:28,350  INFO [main] (Container.java:74) - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
 ruau/ruau-integration-test/ruau.log:2014-12-12 14:22:28,357  INFO [main] (Container.java:74) - Started HttpContext[/selenium-server,/selenium-server]
@@ -216,7 +216,7 @@ ruau/ruau-integration-test/ruau.log:2014-12-12 15:13:24,231  INFO [main] (Seleni
 ruau/ruau-integration-test/ruau.log:2014-12-12 15:13:24,273  INFO [main] (SeleniumServer.java:765) - Java: Oracle Corporation 24.65-b04
 ruau/ruau-integration-test/ruau.log:2014-12-12 15:13:24,273  INFO [main] (SeleniumServer.java:767) - OS: Linux 3.8.0-44-generic amd64
 ruau/ruau-integration-test/ruau.log:2014-12-12 15:13:24,293  INFO [main] (SeleniumServer.java:340) - v2.42.2, with Core v2.42.2. Built from revision 6a6995d31c7c56c340d6f45a76976d43506cd6cc
-ruau/ruau-integration-test/ruau.log:2014-12-12 15:13:24,594  INFO [main] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://127.0.0.1:13467/wd/hub
+ruau/ruau-integration-test/ruau.log:2014-12-12 15:13:24,594  INFO [main] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://100.0.0.1:13467/wd/hub
 ruau/ruau-integration-test/ruau.log:2014-12-12 15:13:24,596  INFO [main] (HttpServer.java:694) - Version Jetty/5.1.x
 ruau/ruau-integration-test/ruau.log:2014-12-12 15:13:24,597  INFO [main] (Container.java:74) - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
 ruau/ruau-integration-test/ruau.log:2014-12-12 15:13:24,600  INFO [main] (Container.java:74) - Started HttpContext[/selenium-server,/selenium-server]
@@ -248,7 +248,7 @@ ruau/ruau-integration-test/ruau.log:2014-12-12 15:47:03,574  INFO [main] (Seleni
 ruau/ruau-integration-test/ruau.log:2014-12-12 15:47:03,622  INFO [main] (SeleniumServer.java:765) - Java: Oracle Corporation 24.65-b04
 ruau/ruau-integration-test/ruau.log:2014-12-12 15:47:03,623  INFO [main] (SeleniumServer.java:767) - OS: Linux 3.8.0-44-generic amd64
 ruau/ruau-integration-test/ruau.log:2014-12-12 15:47:03,635  INFO [main] (SeleniumServer.java:340) - v2.42.2, with Core v2.42.2. Built from revision 6a6995d31c7c56c340d6f45a76976d43506cd6cc
-ruau/ruau-integration-test/ruau.log:2014-12-12 15:47:03,882  INFO [main] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://127.0.0.1:12505/wd/hub
+ruau/ruau-integration-test/ruau.log:2014-12-12 15:47:03,882  INFO [main] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://100.0.0.1:12505/wd/hub
 ruau/ruau-integration-test/ruau.log:2014-12-12 15:47:03,885  INFO [main] (HttpServer.java:694) - Version Jetty/5.1.x
 ruau/ruau-integration-test/ruau.log:2014-12-12 15:47:03,886  INFO [main] (Container.java:74) - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
 ruau/ruau-integration-test/ruau.log:2014-12-12 15:47:03,891  INFO [main] (Container.java:74) - Started HttpContext[/selenium-server,/selenium-server]
@@ -288,7 +288,7 @@ ruau/ruau-integration-test/ruau.log:2014-12-12 16:45:33,517  INFO [pool-1-thread
 ruau/ruau-integration-test/ruau.log:2014-12-12 16:45:33,552  INFO [pool-1-thread-2] (SeleniumServer.java:765) - Java: Oracle Corporation 24.65-b04
 ruau/ruau-integration-test/ruau.log:2014-12-12 16:45:33,553  INFO [pool-1-thread-2] (SeleniumServer.java:767) - OS: Linux 3.8.0-44-generic amd64
 ruau/ruau-integration-test/ruau.log:2014-12-12 16:45:33,562  INFO [pool-1-thread-2] (SeleniumServer.java:340) - v2.42.2, with Core v2.42.2. Built from revision 6a6995d31c7c56c340d6f45a76976d43506cd6cc
-ruau/ruau-integration-test/ruau.log:2014-12-12 16:45:33,818  INFO [pool-1-thread-2] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://127.0.0.1:20694/wd/hub
+ruau/ruau-integration-test/ruau.log:2014-12-12 16:45:33,818  INFO [pool-1-thread-2] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://100.0.0.1:20694/wd/hub
 ruau/ruau-integration-test/ruau.log:2014-12-12 16:45:33,821  INFO [pool-1-thread-2] (HttpServer.java:694) - Version Jetty/5.1.x
 ruau/ruau-integration-test/ruau.log:2014-12-12 16:45:33,822  INFO [pool-1-thread-2] (Container.java:74) - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
 ruau/ruau-integration-test/ruau.log:2014-12-12 16:45:33,823  INFO [pool-1-thread-2] (Container.java:74) - Started HttpContext[/selenium-server,/selenium-server]
@@ -320,7 +320,7 @@ ruau/ruau-integration-test/ruau.log:2014-12-12 17:07:46,502  INFO [main] (Seleni
 ruau/ruau-integration-test/ruau.log:2014-12-12 17:07:46,581  INFO [main] (SeleniumServer.java:765) - Java: Oracle Corporation 24.65-b04
 ruau/ruau-integration-test/ruau.log:2014-12-12 17:07:46,582  INFO [main] (SeleniumServer.java:767) - OS: Linux 3.8.0-44-generic amd64
 ruau/ruau-integration-test/ruau.log:2014-12-12 17:07:46,601  INFO [main] (SeleniumServer.java:340) - v2.42.2, with Core v2.42.2. Built from revision 6a6995d31c7c56c340d6f45a76976d43506cd6cc
-ruau/ruau-integration-test/ruau.log:2014-12-12 17:07:46,742  INFO [main] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://127.0.0.1:6989/wd/hub
+ruau/ruau-integration-test/ruau.log:2014-12-12 17:07:46,742  INFO [main] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://100.0.0.1:6989/wd/hub
 ruau/ruau-integration-test/ruau.log:2014-12-12 17:07:46,744  INFO [main] (HttpServer.java:694) - Version Jetty/5.1.x
 ruau/ruau-integration-test/ruau.log:2014-12-12 17:07:46,745  INFO [main] (Container.java:74) - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
 ruau/ruau-integration-test/ruau.log:2014-12-12 17:07:46,748  INFO [main] (Container.java:74) - Started HttpContext[/selenium-server,/selenium-server]
@@ -352,7 +352,7 @@ ruau/ruau-integration-test/ruau.log:2014-12-15 09:12:50,372  INFO [main] (Seleni
 ruau/ruau-integration-test/ruau.log:2014-12-15 09:12:50,405  INFO [main] (SeleniumServer.java:765) - Java: Oracle Corporation 24.65-b04
 ruau/ruau-integration-test/ruau.log:2014-12-15 09:12:50,405  INFO [main] (SeleniumServer.java:767) - OS: Linux 3.8.0-44-generic amd64
 ruau/ruau-integration-test/ruau.log:2014-12-15 09:12:50,414  INFO [main] (SeleniumServer.java:340) - v2.42.2, with Core v2.42.2. Built from revision 6a6995d31c7c56c340d6f45a76976d43506cd6cc
-ruau/ruau-integration-test/ruau.log:2014-12-15 09:12:50,583  INFO [main] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://127.0.0.1:14607/wd/hub
+ruau/ruau-integration-test/ruau.log:2014-12-15 09:12:50,583  INFO [main] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://100.0.0.1:14607/wd/hub
 ruau/ruau-integration-test/ruau.log:2014-12-15 09:12:50,586  INFO [main] (HttpServer.java:694) - Version Jetty/5.1.x
 ruau/ruau-integration-test/ruau.log:2014-12-15 09:12:50,587  INFO [main] (Container.java:74) - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
 ruau/ruau-integration-test/ruau.log:2014-12-15 09:12:50,592  INFO [main] (Container.java:74) - Started HttpContext[/selenium-server,/selenium-server]
@@ -384,7 +384,7 @@ ruau/ruau-integration-test/ruau.log:2014-12-15 10:26:22,879  INFO [main] (Seleni
 ruau/ruau-integration-test/ruau.log:2014-12-15 10:26:22,916  INFO [main] (SeleniumServer.java:765) - Java: Oracle Corporation 24.65-b04
 ruau/ruau-integration-test/ruau.log:2014-12-15 10:26:22,917  INFO [main] (SeleniumServer.java:767) - OS: Linux 3.8.0-44-generic amd64
 ruau/ruau-integration-test/ruau.log:2014-12-15 10:26:22,926  INFO [main] (SeleniumServer.java:340) - v2.42.2, with Core v2.42.2. Built from revision 6a6995d31c7c56c340d6f45a76976d43506cd6cc
-ruau/ruau-integration-test/ruau.log:2014-12-15 10:26:23,101  INFO [main] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://127.0.0.1:19685/wd/hub
+ruau/ruau-integration-test/ruau.log:2014-12-15 10:26:23,101  INFO [main] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://100.0.0.1:19685/wd/hub
 ruau/ruau-integration-test/ruau.log:2014-12-15 10:26:23,103  INFO [main] (HttpServer.java:694) - Version Jetty/5.1.x
 ruau/ruau-integration-test/ruau.log:2014-12-15 10:26:23,104  INFO [main] (Container.java:74) - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
 ruau/ruau-integration-test/ruau.log:2014-12-15 10:26:23,107  INFO [main] (Container.java:74) - Started HttpContext[/selenium-server,/selenium-server]
@@ -473,7 +473,7 @@ ruau/ruau-integration-test/ruau.log:2014-12-15 11:03:39,909  INFO [main] (Seleni
 ruau/ruau-integration-test/ruau.log:2014-12-15 11:03:39,946  INFO [main] (SeleniumServer.java:765) - Java: Oracle Corporation 24.65-b04
 ruau/ruau-integration-test/ruau.log:2014-12-15 11:03:39,947  INFO [main] (SeleniumServer.java:767) - OS: Linux 3.8.0-44-generic amd64
 ruau/ruau-integration-test/ruau.log:2014-12-15 11:03:39,958  INFO [main] (SeleniumServer.java:340) - v2.42.2, with Core v2.42.2. Built from revision 6a6995d31c7c56c340d6f45a76976d43506cd6cc
-ruau/ruau-integration-test/ruau.log:2014-12-15 11:03:40,218  INFO [main] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://127.0.0.1:2420/wd/hub
+ruau/ruau-integration-test/ruau.log:2014-12-15 11:03:40,218  INFO [main] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://100.0.0.1:2420/wd/hub
 ruau/ruau-integration-test/ruau.log:2014-12-15 11:03:40,224  INFO [main] (HttpServer.java:694) - Version Jetty/5.1.x
 ruau/ruau-integration-test/ruau.log:2014-12-15 11:03:40,225  INFO [main] (Container.java:74) - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
 ruau/ruau-integration-test/ruau.log:2014-12-15 11:03:40,228  INFO [main] (Container.java:74) - Started HttpContext[/selenium-server,/selenium-server]
@@ -505,7 +505,7 @@ ruau/ruau-integration-test/ruau.log:2014-12-15 12:56:23,869  INFO [main] (Seleni
 ruau/ruau-integration-test/ruau.log:2014-12-15 12:56:23,901  INFO [main] (SeleniumServer.java:765) - Java: Oracle Corporation 24.65-b04
 ruau/ruau-integration-test/ruau.log:2014-12-15 12:56:23,901  INFO [main] (SeleniumServer.java:767) - OS: Linux 3.8.0-44-generic amd64
 ruau/ruau-integration-test/ruau.log:2014-12-15 12:56:23,914  INFO [main] (SeleniumServer.java:340) - v2.42.2, with Core v2.42.2. Built from revision 6a6995d31c7c56c340d6f45a76976d43506cd6cc
-ruau/ruau-integration-test/ruau.log:2014-12-15 12:56:24,062  INFO [main] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://127.0.0.1:22184/wd/hub
+ruau/ruau-integration-test/ruau.log:2014-12-15 12:56:24,062  INFO [main] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://100.0.0.1:22184/wd/hub
 ruau/ruau-integration-test/ruau.log:2014-12-15 12:56:24,065  INFO [main] (HttpServer.java:694) - Version Jetty/5.1.x
 ruau/ruau-integration-test/ruau.log:2014-12-15 12:56:24,066  INFO [main] (Container.java:74) - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
 ruau/ruau-integration-test/ruau.log:2014-12-15 12:56:24,068  INFO [main] (Container.java:74) - Started HttpContext[/selenium-server,/selenium-server]
@@ -563,7 +563,7 @@ ruau/ruau-integration-test/ruau.log:2014-12-15 13:49:16,829  INFO [qtp85207947-2
 ruau/ruau-integration-test/ruau.log:2014-12-15 13:49:16,870  INFO [qtp85207947-21] (LoggingContextImpl.java:351) - ruauRequestQuery: ruau.format=css&ruau.context={"mode":"PROD","app":"appCache:withpreload","requestedLocales":["en_US"],"loaded":{"APPLICATION@markup://appCache:withpreload":"Us1QZxGbiXj1EWax8RmqCg"},"fwuid":"V2_gAg5Ehnu7kBZFxkh4fw"}&ruau.type=app;httpStatus: 200;ruau: 1;requestMethod: GET;ruauRequestURI: /ruauResource;totalTime: 1;
 ruau/ruau-integration-test/ruau.log:2014-12-15 13:49:17,032  INFO [qtp85207947-23] (LoggingContextImpl.java:351) - defDescriptorCount: 23;defCount: 11;httpStatus: 200;componentCreation: 44;RootDefFactory.exists: 7;defVisitCount: 126;serializationRuue: 81;ruauRequestURI: /appCache/additionalUrls.app;ruauRequestQuery: ruau.mode=PROD;cmpCount: 54;serialization: 81;defDescriptorCreation: 0;ruau: 314;java: 23;JavaCallCount: 53;requestMethod: GET;definitionCreation: 228;totalTime: 314;
 ruau/ruau-integration-test/ruau.log:2014-12-15 13:49:17,063  INFO [qtp85207947-23] (LoggingContextImpl.java:351) - defDescriptorCount: 2;defCount: 10;httpStatus: 200;componentCreation: 1;RootDefFactory.exists: 1;defVisitCount: 1;ruauRequestURI: /ruauResource;ruauRequestQuery: ruau.format=manifest&ruau.context={"mode":"PROD","app":"appCache:additionalUrls","requestedLocales":["en_US"],"loaded":{"APPLICATION@markup://appCache:additionalUrls":"aYd6siP3inA-mcnZ2Wq0Ww"},"fwuid":"V2_gAg5Ehnu7kBZFxkh4fw"}&ruau.type=app;cmpCount: 8;defDescriptorCreation: 0;ruau: 28;java: 0;JavaCallCount: 8;requestMethod: GET;definitionCreation: 23;totalTime: 28;
-ruau/ruau-integration-test/ruau.log:2014-12-15 13:49:17,093  INFO [qtp85207947-18] (LoggingContextImpl.java:351) - defDescriptorCount: 16;defCount: 12;httpStatus: 200;componentCreation: 16;RootDefFactory.exists: 7;defVisitCount: 127;serializationRuue: 32;ruauRequestURI: /appCache/nopreload.app;ruauRequestQuery: ruau.mode=PROD;cmpCount: 54;serialization: 32;defDescriptorCreation: 0;ruau: 260;java: 15;JavaCallCount: 53;requestMethod: GET;definitionCreation: 218;totalTime: 260;
+ruau/ruau-integration-test/ruau.log:2014-12-15 13:49:17,093  INFO [qtp85207947-18] (LoggingContextImpl.java:351) - defDescriptorCount: 16;defCount: 12;httpStatus: 200;componentCreation: 16;RootDefFactory.exists: 7;defVisitCount: 100;serializationRuue: 32;ruauRequestURI: /appCache/nopreload.app;ruauRequestQuery: ruau.mode=PROD;cmpCount: 54;serialization: 32;defDescriptorCreation: 0;ruau: 260;java: 15;JavaCallCount: 53;requestMethod: GET;definitionCreation: 218;totalTime: 260;
 ruau/ruau-integration-test/ruau.log:2014-12-15 13:49:17,128  INFO [qtp85207947-19] (LoggingContextImpl.java:351) - ruauRequestQuery: ruau.format=css&ruau.context={"mode":"PROD","app":"appCache:additionalUrls","requestedLocales":["en_US"],"loaded":{"APPLICATION@markup://appCache:additionalUrls":"aYd6siP3inA-mcnZ2Wq0Ww"},"fwuid":"V2_gAg5Ehnu7kBZFxkh4fw"}&ruau.type=app;defCount: 9;httpStatus: 200;RootDefFactory.exists: 1;ruau: 15;requestMethod: GET;ruauRequestURI: /ruauResource;totalTime: 15;
 ruau/ruau-integration-test/ruau.log:2014-12-15 13:49:17,417  INFO [qtp85207947-18] (LoggingContextImpl.java:351) - defDescriptorCount: 16;defCount: 13;httpStatus: 200;componentCreation: 35;RootDefFactory.exists: 7;defVisitCount: 118;serializationRuue: 56;ruauRequestURI: /clientLibraryTest/clientLibraryTest.app;ruauRequestQuery: ruau.mode=PTEST;cmpCount: 54;serialization: 56;defDescriptorCreation: 1;ruau: 301;java: 7;JavaCallCount: 53;requestMethod: GET;definitionCreation: 241;totalTime: 301;
 ruau/ruau-integration-test/ruau.log:2014-12-15 13:49:17,442  INFO [qtp85207947-18] (LoggingContextImpl.java:351) - ruauRequestQuery: ruau.format=manifest&ruau.context={"mode":"PTEST","app":"clientLibraryTest:clientLibraryTest","requestedLocales":["en_US"],"loaded":{"APPLICATION@markup://clientLibraryTest:clientLibraryTest":"qKzgT47M1aaViSU3LQhbEQ"},"fwuid":"V2_gAg5Ehnu7kBZFxkh4fw"}&ruau.type=app;defCount: 9;httpStatus: 200;componentCreation: 18;cmpCount: 8;ruau: 22;java: 0;JavaCallCount: 7;requestMethod: GET;ruauRequestURI: /ruauResource;totalTime: 22;
@@ -746,7 +746,7 @@ ruau/ruau-integration-test/ruau.log:2014-12-15 13:50:22,097 ERROR [pool-1-thread
 ruau/ruau-integration-test/ruau.log:2014-12-15 13:50:27,106 ERROR [pool-1-thread-2] (CachingServiceImpl.java:201) - Couldn't acquire cache clear lock in a reasonable time.  Cache may be stale until next clear.
 ruau/ruau-integration-test/ruau.log:2014-12-15 13:50:32,111 ERROR [pool-1-thread-2] (CachingServiceImpl.java:201) - Couldn't acquire cache clear lock in a reasonable time.  Cache may be stale until next clear.
 ruau/ruau-integration-test/ruau.log:2014-12-15 13:50:37,112 ERROR [pool-1-thread-2] (CachingServiceImpl.java:201) - Couldn't acquire cache clear lock in a reasonable time.  Cache may be stale until next clear.
-ruau/ruau-integration-test/ruau.log:2014-12-15 13:50:42,127 ERROR [pool-1-thread-2] (CachingServiceImpl.java:201) - Couldn't acquire cache clear lock in a reasonable time.  Cache may be stale until next clear.
+ruau/ruau-integration-test/ruau.log:2014-12-15 13:50:42,100 ERROR [pool-1-thread-2] (CachingServiceImpl.java:201) - Couldn't acquire cache clear lock in a reasonable time.  Cache may be stale until next clear.
 ruau/ruau-integration-test/ruau.log:2014-12-15 13:50:42,146  INFO [qtp85207947-18] (LoggingContextImpl.java:351) - defDescriptorCount: 18;defCount: 10;httpStatus: 200;componentCreation: 2;RootDefFactory.exists: 6;defVisitCount: 114;serializationRuue: 3;ruauRequestURI: /string/thing9.app;cmpCount: 54;serialization: 3;defDescriptorCreation: 0;ruau: 12;java: 0;JavaCallCount: 53;requestMethod: GET;definitionCreation: 4;totalTime: 12;
 ruau/ruau-integration-test/ruau.log:2014-12-15 13:50:47,146 ERROR [pool-1-thread-2] (CachingServiceImpl.java:201) - Couldn't acquire cache clear lock in a reasonable time.  Cache may be stale until next clear.
 ruau/ruau-integration-test/ruau.log:2014-12-15 13:50:47,161  INFO [qtp85207947-20] (LoggingContextImpl.java:351) - ruauRequestQuery: ruau.tag&nocache=http%3A%2F%2Fany.host%2Fm%3Fchatter;httpStatus: 302;ruau: 3;requestMethod: GET;ruauRequestURI: /ruau;totalTime: 3;
@@ -755,7 +755,7 @@ ruau/ruau-integration-test/ruau.log:2014-12-15 13:50:49,225  INFO [pool-1-thread
 ruau/ruau-integration-test/ruau.log:2014-12-15 13:50:49,419  INFO [pool-1-thread-2] (SeleniumServer.java:765) - Java: Oracle Corporation 24.65-b04
 ruau/ruau-integration-test/ruau.log:2014-12-15 13:50:49,426  INFO [pool-1-thread-2] (SeleniumServer.java:767) - OS: Linux 3.8.0-44-generic amd64
 ruau/ruau-integration-test/ruau.log:2014-12-15 13:50:49,445  INFO [pool-1-thread-2] (SeleniumServer.java:340) - v2.42.2, with Core v2.42.2. Built from revision 6a6995d31c7c56c340d6f45a76976d43506cd6cc
-ruau/ruau-integration-test/ruau.log:2014-12-15 13:50:49,925  INFO [pool-1-thread-2] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://127.0.0.1:26428/wd/hub
+ruau/ruau-integration-test/ruau.log:2014-12-15 13:50:49,925  INFO [pool-1-thread-2] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://100.0.0.1:26428/wd/hub
 ruau/ruau-integration-test/ruau.log:2014-12-15 13:50:49,928  INFO [pool-1-thread-2] (HttpServer.java:694) - Version Jetty/5.1.x
 ruau/ruau-integration-test/ruau.log:2014-12-15 13:50:49,929  INFO [pool-1-thread-2] (Container.java:74) - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
 ruau/ruau-integration-test/ruau.log:2014-12-15 13:50:49,931  INFO [pool-1-thread-2] (Container.java:74) - Started HttpContext[/selenium-server,/selenium-server]
@@ -834,7 +834,7 @@ ruau/ruau-integration-test/ruau.log:2014-12-15 15:10:30,911  INFO [pool-1-thread
 ruau/ruau-integration-test/ruau.log:2014-12-15 15:10:30,992  INFO [pool-1-thread-2] (SeleniumServer.java:765) - Java: Oracle Corporation 24.65-b04
 ruau/ruau-integration-test/ruau.log:2014-12-15 15:10:30,993  INFO [pool-1-thread-2] (SeleniumServer.java:767) - OS: Linux 3.8.0-44-generic amd64
 ruau/ruau-integration-test/ruau.log:2014-12-15 15:10:31,025  INFO [pool-1-thread-2] (SeleniumServer.java:340) - v2.42.2, with Core v2.42.2. Built from revision 6a6995d31c7c56c340d6f45a76976d43506cd6cc
-ruau/ruau-integration-test/ruau.log:2014-12-15 15:10:31,283  INFO [pool-1-thread-2] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://127.0.0.1:13547/wd/hub
+ruau/ruau-integration-test/ruau.log:2014-12-15 15:10:31,283  INFO [pool-1-thread-2] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://100.0.0.1:13547/wd/hub
 ruau/ruau-integration-test/ruau.log:2014-12-15 15:10:31,288  INFO [pool-1-thread-2] (HttpServer.java:694) - Version Jetty/5.1.x
 ruau/ruau-integration-test/ruau.log:2014-12-15 15:10:31,289  INFO [pool-1-thread-2] (Container.java:74) - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
 ruau/ruau-integration-test/ruau.log:2014-12-15 15:10:31,291  INFO [pool-1-thread-2] (Container.java:74) - Started HttpContext[/selenium-server,/selenium-server]
@@ -896,7 +896,7 @@ ruau/ruau-integration-test/ruau.log:2014-12-15 18:57:06,870  INFO [qtp1597313470
 ruau/ruau-integration-test/ruau.log:2014-12-15 18:57:06,887  INFO [qtp1597313470-20] (LoggingContextImpl.java:351) - defDescriptorCount: 2;defCount: 10;httpStatus: 200;componentCreation: 0;RootDefFactory.exists: 1;defVisitCount: 1;ruauRequestURI: /ruauResource;ruauRequestQuery: ruau.format=manifest&ruau.context={"mode":"PROD","app":"appCache:additionalUrls","requestedLocales":["en_US"],"loaded":{"APPLICATION@markup://appCache:additionalUrls":"aYd6siP3inA-mcnZ2Wq0Ww"},"fwuid":"V2_gAg5Ehnu7kBZFxkh4fw"}&ruau.type=app;cmpCount: 8;defDescriptorCreation: 0;ruau: 25;java: 0;JavaCallCount: 8;requestMethod: GET;definitionCreation: 20;totalTime: 26;
 ruau/ruau-integration-test/ruau.log:2014-12-15 18:57:06,897  INFO [qtp1597313470-19] (LoggingContextImpl.java:351) - ruauRequestQuery: ruau.format=manifest&ruau.context={"mode":"PROD","app":"appCache:withpreload","requestedLocales":["en_US"],"loaded":{"APPLICATION@markup://appCache:withpreload":"Us1QZxGbiXj1EWax8RmqCg"},"fwuid":"V2_gAg5Ehnu7kBZFxkh4fw"}&ruau.type=app;httpStatus: 404;ruau: 1;requestMethod: GET;ruauRequestURI: /ruauResource;totalTime: 1;
 ruau/ruau-integration-test/ruau.log:2014-12-15 18:57:06,993  INFO [qtp1597313470-19] (LoggingContextImpl.java:351) - ruauRequestQuery: ruau.format=css&ruau.context={"mode":"PROD","app":"appCache:additionalUrls","requestedLocales":["en_US"],"loaded":{"APPLICATION@markup://appCache:additionalUrls":"aYd6siP3inA-mcnZ2Wq0Ww"},"fwuid":"V2_gAg5Ehnu7kBZFxkh4fw"}&ruau.type=app;defCount: 9;httpStatus: 200;RootDefFactory.exists: 1;ruau: 24;requestMethod: GET;ruauRequestURI: /ruauResource;totalTime: 24;
-ruau/ruau-integration-test/ruau.log:2014-12-15 18:57:07,226  INFO [qtp1597313470-20] (LoggingContextImpl.java:351) - defDescriptorCount: 16;defCount: 12;httpStatus: 200;componentCreation: 2;RootDefFactory.exists: 7;defVisitCount: 127;serializationRuue: 7;ruauRequestURI: /appCache/nopreload.app;ruauRequestQuery: ruau.mode=PROD;cmpCount: 54;serialization: 7;defDescriptorCreation: 0;ruau: 305;java: 3;JavaCallCount: 53;requestMethod: GET;definitionCreation: 277;totalTime: 305;
+ruau/ruau-integration-test/ruau.log:2014-12-15 18:57:07,226  INFO [qtp1597313470-20] (LoggingContextImpl.java:351) - defDescriptorCount: 16;defCount: 12;httpStatus: 200;componentCreation: 2;RootDefFactory.exists: 7;defVisitCount: 100;serializationRuue: 7;ruauRequestURI: /appCache/nopreload.app;ruauRequestQuery: ruau.mode=PROD;cmpCount: 54;serialization: 7;defDescriptorCreation: 0;ruau: 305;java: 3;JavaCallCount: 53;requestMethod: GET;definitionCreation: 277;totalTime: 305;
 ruau/ruau-integration-test/ruau.log:2014-12-15 18:57:07,428  INFO [qtp1597313470-22] (LoggingContextImpl.java:351) - defDescriptorCount: 16;defCount: 13;httpStatus: 200;componentCreation: 2;RootDefFactory.exists: 7;defVisitCount: 118;serializationRuue: 20;ruauRequestURI: /clientLibraryTest/clientLibraryTest.app;ruauRequestQuery: ruau.mode=PTEST;cmpCount: 54;serialization: 20;defDescriptorCreation: 1;ruau: 197;java: 3;JavaCallCount: 53;requestMethod: GET;definitionCreation: 161;totalTime: 197;
 ruau/ruau-integration-test/ruau.log:2014-12-15 18:57:07,454  INFO [qtp1597313470-22] (LoggingContextImpl.java:351) - ruauRequestQuery: ruau.format=manifest&ruau.context={"mode":"PTEST","app":"clientLibraryTest:clientLibraryTest","requestedLocales":["en_US"],"loaded":{"APPLICATION@markup://clientLibraryTest:clientLibraryTest":"qKzgT47M1aaViSU3LQhbEQ"},"fwuid":"V2_gAg5Ehnu7kBZFxkh4fw"}&ruau.type=app;defCount: 9;httpStatus: 200;componentCreation: 10;cmpCount: 8;ruau: 24;java: 0;JavaCallCount: 7;requestMethod: GET;ruauRequestURI: /ruauResource;totalTime: 24;
 ruau/ruau-integration-test/ruau.log:2014-12-15 18:57:07,536 ERROR [qtp1597313470-23] (ExceptionAdapterImpl.java:111) - Unhandled Exception 'java://org.ruauframework.impl.java.controller.JavaTestController: org.ruauframework.throwable.RuueRuntimeException: test-filename: throwExceptionNoLineNums' at java://org.ruauframework.impl.java.controller.JavaTestController: 
@@ -1087,7 +1087,7 @@ ruau/ruau-integration-test/ruau.log:2014-12-15 18:58:40,580  INFO [pool-1-thread
 ruau/ruau-integration-test/ruau.log:2014-12-15 18:58:40,710  INFO [pool-1-thread-3] (SeleniumServer.java:765) - Java: Oracle Corporation 24.65-b04
 ruau/ruau-integration-test/ruau.log:2014-12-15 18:58:40,710  INFO [pool-1-thread-3] (SeleniumServer.java:767) - OS: Linux 3.8.0-44-generic amd64
 ruau/ruau-integration-test/ruau.log:2014-12-15 18:58:40,767  INFO [pool-1-thread-3] (SeleniumServer.java:340) - v2.42.2, with Core v2.42.2. Built from revision 6a6995d31c7c56c340d6f45a76976d43506cd6cc
-ruau/ruau-integration-test/ruau.log:2014-12-15 18:58:41,250  INFO [pool-1-thread-3] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://127.0.0.1:10849/wd/hub
+ruau/ruau-integration-test/ruau.log:2014-12-15 18:58:41,250  INFO [pool-1-thread-3] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://100.0.0.1:10849/wd/hub
 ruau/ruau-integration-test/ruau.log:2014-12-15 18:58:41,253  INFO [pool-1-thread-3] (HttpServer.java:694) - Version Jetty/5.1.x
 ruau/ruau-integration-test/ruau.log:2014-12-15 18:58:41,254  INFO [pool-1-thread-3] (Container.java:74) - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
 ruau/ruau-integration-test/ruau.log:2014-12-15 18:58:41,255  INFO [pool-1-thread-3] (Container.java:74) - Started HttpContext[/selenium-server,/selenium-server]
@@ -1141,7 +1141,7 @@ ruau/ruau-integration-test/ruau.log:2014-12-15 20:26:34,249  INFO [Thread-2] (Fi
 ruau/ruau-integration-test/ruau.log:2014-12-15 20:26:34,250  INFO [Thread-2] (RuueFileMonitor.java:174) - Unable to signal source change due to exception: String index out of range: -1
 ruau/ruau-integration-test/ruau.log:2014-12-15 20:26:35,751  INFO [qtp1597313470-17] (LoggingContextImpl.java:351) - defDescriptorCount: 85;defCount: 56;httpStatus: 200;componentCreation: 1;RootDefFactory.exists: 41;defVisitCount: 114;serializationRuue: 3;ruauRequestURI: /string/thing31.app;cmpCount: 56;serialization: 3;defDescriptorCreation: 1;ruau: 1498;java: 1;JavaCallCount: 54;requestMethod: GET;definitionCreation: 749;totalTime: 1498;
 ruau/ruau-integration-test/ruau.log:2014-12-15 20:26:35,963  INFO [Thread-2] (FileSourceListener.java:88) - File /vagrant/ruau/ruau/src/test/components/ruautest/createAttributeQuickFix_child/createAttributeQuickFix_child.cmp changed due to: CHANGED
-ruau/ruau-integration-test/ruau.log:2014-12-15 20:26:39,127  INFO [Thread-2] (FileSourceListener.java:88) - File /vagrant/ruau/ruau/src/test/components/ruautest/createAttributeQuickFix_child/createAttributeQuickFix_child.cmp changed due to: DELETED
+ruau/ruau-integration-test/ruau.log:2014-12-15 20:26:39,100  INFO [Thread-2] (FileSourceListener.java:88) - File /vagrant/ruau/ruau/src/test/components/ruautest/createAttributeQuickFix_child/createAttributeQuickFix_child.cmp changed due to: DELETED
 ruau/ruau-integration-test/ruau.log:2014-12-15 20:26:39,135  INFO [Thread-2] (FileSourceListener.java:88) - File /vagrant/ruau/ruau/src/test/components/ruautest/createAttributeQuickFix_child changed due to: DELETED
 ruau/ruau-integration-test/ruau.log:2014-12-15 20:26:39,135  INFO [Thread-2] (RuueFileMonitor.java:174) - Unable to signal source change due to exception: String index out of range: -1
 ruau/ruau-integration-test/ruau.log:2014-12-15 20:26:40,674  INFO [qtp1597313470-21] (LoggingContextImpl.java:351) - defDescriptorCount: 51;defCount: 56;httpStatus: 200;componentCreation: 1;RootDefFactory.exists: 41;defVisitCount: 114;serializationRuue: 3;ruauRequestURI: /string/thing32.app;cmpCount: 56;serialization: 3;defDescriptorCreation: 0;ruau: 1535;java: 0;JavaCallCount: 54;requestMethod: GET;definitionCreation: 761;totalTime: 1535;
@@ -1222,7 +1222,7 @@ ruau/ruau-integration-test/ruau.log:2014-12-16 09:22:46,792  INFO [pool-1-thread
 ruau/ruau-integration-test/ruau.log:2014-12-16 09:22:46,861  INFO [pool-1-thread-1] (SeleniumServer.java:765) - Java: Oracle Corporation 24.65-b04
 ruau/ruau-integration-test/ruau.log:2014-12-16 09:22:46,861  INFO [pool-1-thread-1] (SeleniumServer.java:767) - OS: Linux 3.8.0-44-generic amd64
 ruau/ruau-integration-test/ruau.log:2014-12-16 09:22:46,877  INFO [pool-1-thread-1] (SeleniumServer.java:340) - v2.42.2, with Core v2.42.2. Built from revision 6a6995d31c7c56c340d6f45a76976d43506cd6cc
-ruau/ruau-integration-test/ruau.log:2014-12-16 09:22:47,053  INFO [pool-1-thread-1] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://127.0.0.1:9629/wd/hub
+ruau/ruau-integration-test/ruau.log:2014-12-16 09:22:47,053  INFO [pool-1-thread-1] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://100.0.0.1:9629/wd/hub
 ruau/ruau-integration-test/ruau.log:2014-12-16 09:22:47,055  INFO [pool-1-thread-1] (HttpServer.java:694) - Version Jetty/5.1.x
 ruau/ruau-integration-test/ruau.log:2014-12-16 09:22:47,057  INFO [pool-1-thread-1] (Container.java:74) - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
 ruau/ruau-integration-test/ruau.log:2014-12-16 09:22:47,059  INFO [pool-1-thread-1] (Container.java:74) - Started HttpContext[/selenium-server,/selenium-server]
@@ -1290,8 +1290,8 @@ ruau/ruau-integration-test/ruau.log:2014-12-16 10:06:25,532  INFO [qtp1202632934
 ruau/ruau-integration-test/ruau.log:2014-12-16 10:06:25,768  INFO [qtp1202632934-23] (LoggingContextImpl.java:351) - defDescriptorCount: 18;defCount: 10;httpStatus: 200;componentCreation: 2;RootDefFactory.exists: 6;defVisitCount: 114;serializationRuue: 118;ruauRequestURI: /string/thing7.app;cmpCount: 56;serialization: 118;defDescriptorCreation: 0;ruau: 258;java: 2;JavaCallCount: 54;requestMethod: GET;definitionCreation: 136;totalTime: 258;
 ruau/ruau-integration-test/ruau.log:2014-12-16 10:06:25,894  INFO [qtp1202632934-19] (LoggingContextImpl.java:351) - defDescriptorCount: 18;defCount: 10;httpStatus: 200;componentCreation: 2;RootDefFactory.exists: 6;defVisitCount: 114;serializationRuue: 5;ruauRequestURI: /string/thing8.app;cmpCount: 56;serialization: 5;defDescriptorCreation: 0;ruau: 121;java: 2;JavaCallCount: 54;requestMethod: GET;definitionCreation: 109;totalTime: 121;
 ruau/ruau-integration-test/ruau.log:2014-12-16 10:06:26,019  INFO [qtp1202632934-21] (LoggingContextImpl.java:351) - defDescriptorCount: 17;defCount: 10;httpStatus: 200;componentCreation: 2;RootDefFactory.exists: 4;defVisitCount: 108;serializationRuue: 4;ruauRequestURI: /string/thing9.cmp;cmpCount: 56;serialization: 4;defDescriptorCreation: 0;ruau: 122;java: 1;JavaCallCount: 54;requestMethod: GET;definitionCreation: 112;totalTime: 122;
-ruau/ruau-integration-test/ruau.log:2014-12-16 10:06:26,156  INFO [qtp1202632934-20] (LoggingContextImpl.java:351) - defDescriptorCount: 18;defCount: 10;httpStatus: 200;componentCreation: 2;RootDefFactory.exists: 6;defVisitCount: 114;serializationRuue: 5;ruauRequestURI: /string/thing10.app;cmpCount: 56;serialization: 5;defDescriptorCreation: 0;ruau: 127;java: 1;JavaCallCount: 54;requestMethod: GET;definitionCreation: 119;totalTime: 127;
-ruau/ruau-integration-test/ruau.log:2014-12-16 10:06:26,299  INFO [qtp1202632934-22] (LoggingContextImpl.java:351) - defDescriptorCount: 18;defCount: 10;httpStatus: 200;componentCreation: 2;RootDefFactory.exists: 6;defVisitCount: 114;serializationRuue: 4;ruauRequestURI: /string/thing11.app;cmpCount: 56;serialization: 4;defDescriptorCreation: 0;ruau: 127;java: 1;JavaCallCount: 54;requestMethod: GET;definitionCreation: 112;totalTime: 127;
+ruau/ruau-integration-test/ruau.log:2014-12-16 10:06:26,156  INFO [qtp1202632934-20] (LoggingContextImpl.java:351) - defDescriptorCount: 18;defCount: 10;httpStatus: 200;componentCreation: 2;RootDefFactory.exists: 6;defVisitCount: 114;serializationRuue: 5;ruauRequestURI: /string/thing10.app;cmpCount: 56;serialization: 5;defDescriptorCreation: 0;ruau: 100;java: 1;JavaCallCount: 54;requestMethod: GET;definitionCreation: 119;totalTime: 127;
+ruau/ruau-integration-test/ruau.log:2014-12-16 10:06:26,299  INFO [qtp1202632934-22] (LoggingContextImpl.java:351) - defDescriptorCount: 18;defCount: 10;httpStatus: 200;componentCreation: 2;RootDefFactory.exists: 6;defVisitCount: 114;serializationRuue: 4;ruauRequestURI: /string/thing11.app;cmpCount: 56;serialization: 4;defDescriptorCreation: 0;ruau: 100;java: 1;JavaCallCount: 54;requestMethod: GET;definitionCreation: 112;totalTime: 127;
 ruau/ruau-integration-test/ruau.log:2014-12-16 10:06:26,413  INFO [qtp1202632934-20] (LoggingContextImpl.java:351) - defDescriptorCount: 18;defCount: 10;httpStatus: 200;componentCreation: 2;RootDefFactory.exists: 6;defVisitCount: 114;serializationRuue: 4;ruauRequestURI: /string/thing12.app;cmpCount: 56;serialization: 4;defDescriptorCreation: 0;ruau: 112;java: 1;JavaCallCount: 54;requestMethod: GET;definitionCreation: 105;totalTime: 112;
 ruau/ruau-integration-test/ruau.log:2014-12-16 10:06:26,545  INFO [qtp1202632934-19] (LoggingContextImpl.java:351) - defDescriptorCount: 18;defCount: 10;httpStatus: 200;componentCreation: 3;RootDefFactory.exists: 6;defVisitCount: 114;serializationRuue: 7;ruauRequestURI: /string/thing13.app;cmpCount: 56;serialization: 7;defDescriptorCreation: 0;ruau: 121;java: 2;JavaCallCount: 54;requestMethod: GET;definitionCreation: 111;totalTime: 121;
 ruau/ruau-integration-test/ruau.log:2014-12-16 10:06:26,681  INFO [qtp1202632934-22] (LoggingContextImpl.java:351) - defDescriptorCount: 18;defCount: 10;httpStatus: 200;componentCreation: 1;RootDefFactory.exists: 6;defVisitCount: 114;serializationRuue: 3;ruauRequestURI: /string/thing14.app;cmpCount: 56;serialization: 3;defDescriptorCreation: 0;ruau: 126;java: 1;JavaCallCount: 54;requestMethod: GET;definitionCreation: 120;totalTime: 126;
@@ -1301,7 +1301,7 @@ ruau/ruau-integration-test/ruau.log:2014-12-16 10:06:26,971  INFO [main] (Seleni
 ruau/ruau-integration-test/ruau.log:2014-12-16 10:06:27,003  INFO [main] (SeleniumServer.java:765) - Java: Oracle Corporation 24.65-b04
 ruau/ruau-integration-test/ruau.log:2014-12-16 10:06:27,003  INFO [main] (SeleniumServer.java:767) - OS: Linux 3.8.0-44-generic amd64
 ruau/ruau-integration-test/ruau.log:2014-12-16 10:06:27,013  INFO [main] (SeleniumServer.java:340) - v2.42.2, with Core v2.42.2. Built from revision 6a6995d31c7c56c340d6f45a76976d43506cd6cc
-ruau/ruau-integration-test/ruau.log:2014-12-16 10:06:27,171  INFO [main] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://127.0.0.1:8881/wd/hub
+ruau/ruau-integration-test/ruau.log:2014-12-16 10:06:27,171  INFO [main] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://100.0.0.1:8881/wd/hub
 ruau/ruau-integration-test/ruau.log:2014-12-16 10:06:27,174  INFO [main] (HttpServer.java:694) - Version Jetty/5.1.x
 ruau/ruau-integration-test/ruau.log:2014-12-16 10:06:27,175  INFO [main] (Container.java:74) - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
 ruau/ruau-integration-test/ruau.log:2014-12-16 10:06:27,176  INFO [main] (Container.java:74) - Started HttpContext[/selenium-server,/selenium-server]
@@ -1333,7 +1333,7 @@ ruau/ruau-integration-test/ruau.log:2014-12-16 10:29:58,164  INFO [main] (Seleni
 ruau/ruau-integration-test/ruau.log:2014-12-16 10:29:58,208  INFO [main] (SeleniumServer.java:765) - Java: Oracle Corporation 24.65-b04
 ruau/ruau-integration-test/ruau.log:2014-12-16 10:29:58,208  INFO [main] (SeleniumServer.java:767) - OS: Linux 3.8.0-44-generic amd64
 ruau/ruau-integration-test/ruau.log:2014-12-16 10:29:58,219  INFO [main] (SeleniumServer.java:340) - v2.42.2, with Core v2.42.2. Built from revision 6a6995d31c7c56c340d6f45a76976d43506cd6cc
-ruau/ruau-integration-test/ruau.log:2014-12-16 10:29:58,436  INFO [main] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://127.0.0.1:32440/wd/hub
+ruau/ruau-integration-test/ruau.log:2014-12-16 10:29:58,436  INFO [main] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://100.0.0.1:32440/wd/hub
 ruau/ruau-integration-test/ruau.log:2014-12-16 10:29:58,439  INFO [main] (HttpServer.java:694) - Version Jetty/5.1.x
 ruau/ruau-integration-test/ruau.log:2014-12-16 10:29:58,440  INFO [main] (Container.java:74) - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
 ruau/ruau-integration-test/ruau.log:2014-12-16 10:29:58,443  INFO [main] (Container.java:74) - Started HttpContext[/selenium-server,/selenium-server]
@@ -1411,7 +1411,7 @@ ruau/ruau-integration-test/ruau.log:2014-12-16 10:43:45,122  INFO [main] (Seleni
 ruau/ruau-integration-test/ruau.log:2014-12-16 10:43:45,170  INFO [main] (SeleniumServer.java:765) - Java: Oracle Corporation 24.65-b04
 ruau/ruau-integration-test/ruau.log:2014-12-16 10:43:45,170  INFO [main] (SeleniumServer.java:767) - OS: Linux 3.8.0-44-generic amd64
 ruau/ruau-integration-test/ruau.log:2014-12-16 10:43:45,188  INFO [main] (SeleniumServer.java:340) - v2.42.2, with Core v2.42.2. Built from revision 6a6995d31c7c56c340d6f45a76976d43506cd6cc
-ruau/ruau-integration-test/ruau.log:2014-12-16 10:43:45,359  INFO [main] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://127.0.0.1:2895/wd/hub
+ruau/ruau-integration-test/ruau.log:2014-12-16 10:43:45,359  INFO [main] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://100.0.0.1:2895/wd/hub
 ruau/ruau-integration-test/ruau.log:2014-12-16 10:43:45,361  INFO [main] (HttpServer.java:694) - Version Jetty/5.1.x
 ruau/ruau-integration-test/ruau.log:2014-12-16 10:43:45,362  INFO [main] (Container.java:74) - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
 ruau/ruau-integration-test/ruau.log:2014-12-16 10:43:45,364  INFO [main] (Container.java:74) - Started HttpContext[/selenium-server,/selenium-server]
@@ -1466,7 +1466,7 @@ ruau/ruau-integration-test/ruau.log:2014-12-16 12:48:12,524  INFO [pool-1-thread
 ruau/ruau-integration-test/ruau.log:2014-12-16 12:48:12,578  INFO [pool-1-thread-3] (SeleniumServer.java:765) - Java: Oracle Corporation 24.65-b04
 ruau/ruau-integration-test/ruau.log:2014-12-16 12:48:12,579  INFO [pool-1-thread-3] (SeleniumServer.java:767) - OS: Linux 3.8.0-44-generic amd64
 ruau/ruau-integration-test/ruau.log:2014-12-16 12:48:12,602  INFO [pool-1-thread-3] (SeleniumServer.java:340) - v2.42.2, with Core v2.42.2. Built from revision 6a6995d31c7c56c340d6f45a76976d43506cd6cc
-ruau/ruau-integration-test/ruau.log:2014-12-16 12:48:12,919  INFO [pool-1-thread-3] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://127.0.0.1:13030/wd/hub
+ruau/ruau-integration-test/ruau.log:2014-12-16 12:48:12,919  INFO [pool-1-thread-3] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://100.0.0.1:13030/wd/hub
 ruau/ruau-integration-test/ruau.log:2014-12-16 12:48:12,921  INFO [pool-1-thread-3] (HttpServer.java:694) - Version Jetty/5.1.x
 ruau/ruau-integration-test/ruau.log:2014-12-16 12:48:12,924  INFO [pool-1-thread-3] (Container.java:74) - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
 ruau/ruau-integration-test/ruau.log:2014-12-16 12:48:12,925  INFO [pool-1-thread-3] (Container.java:74) - Started HttpContext[/selenium-server,/selenium-server]
@@ -1509,7 +1509,7 @@ ruau/ruau-integration-test/ruau.log:2014-12-16 12:55:30,031  INFO [qtp1134970210
 ruau/ruau-integration-test/ruau.log:2014-12-16 12:55:30,048  INFO [qtp1134970210-20] (LoggingContextImpl.java:351) - ruauRequestQuery: ruau.format=css&ruau.context={"mode":"PROD","app":"appCache:withpreload","requestedLocales":["en_US"],"loaded":{"APPLICATION@markup://appCache:withpreload":"Us1QZxGbiXj1EWax8RmqCg"},"fwuid":"V2_gAg5Ehnu7kBZFxkh4fw"}&ruau.type=app;defCount: 10;httpStatus: 200;RootDefFactory.exists: 3;ruau: 99;requestMethod: GET;ruauRequestURI: /ruauResource;totalTime: 99;
 ruau/ruau-integration-test/ruau.log:2014-12-16 12:55:30,049  INFO [qtp1134970210-19] (LoggingContextImpl.java:351) - ruauRequestQuery: ruau.format=manifest&ruau.context={"mode":"PROD","app":"appCache:withpreload","requestedLocales":["en_US"],"loaded":{"APPLICATION@markup://appCache:withpreload":"Us1QZxGbiXj1EWax8RmqCg"},"fwuid":"V2_gAg5Ehnu7kBZFxkh4fw"}&ruau.type=app;httpStatus: 404;ruau: 14;requestMethod: GET;ruauRequestURI: /ruauResource;totalTime: 14;
 ruau/ruau-integration-test/ruau.log:2014-12-16 12:55:30,094  INFO [qtp1134970210-18] (LoggingContextImpl.java:351) - ruauRequestQuery: ruau.format=css&ruau.context={"mode":"PROD","app":"appCache:withpreload","requestedLocales":["en_US"],"loaded":{"APPLICATION@markup://appCache:withpreload":"Us1QZxGbiXj1EWax8RmqCg"},"fwuid":"V2_gAg5Ehnu7kBZFxkh4fw"}&ruau.type=app;defCount: 10;httpStatus: 200;RootDefFactory.exists: 3;ruau: 93;requestMethod: GET;ruauRequestURI: /ruauResource;totalTime: 93;
-ruau/ruau-integration-test/ruau.log:2014-12-16 12:55:30,414  INFO [qtp1134970210-20] (LoggingContextImpl.java:351) - defDescriptorCount: 16;defCount: 12;httpStatus: 200;componentCreation: 15;RootDefFactory.exists: 7;defVisitCount: 127;serializationRuue: 18;ruauRequestURI: /appCache/nopreload.app;ruauRequestQuery: ruau.mode=PROD;cmpCount: 54;serialization: 18;defDescriptorCreation: 0;ruau: 328;java: 1;JavaCallCount: 53;requestMethod: GET;definitionCreation: 295;totalTime: 328;
+ruau/ruau-integration-test/ruau.log:2014-12-16 12:55:30,414  INFO [qtp1134970210-20] (LoggingContextImpl.java:351) - defDescriptorCount: 16;defCount: 12;httpStatus: 200;componentCreation: 15;RootDefFactory.exists: 7;defVisitCount: 100;serializationRuue: 18;ruauRequestURI: /appCache/nopreload.app;ruauRequestQuery: ruau.mode=PROD;cmpCount: 54;serialization: 18;defDescriptorCreation: 0;ruau: 328;java: 1;JavaCallCount: 53;requestMethod: GET;definitionCreation: 295;totalTime: 328;
 ruau/ruau-integration-test/ruau.log:2014-12-16 12:55:30,738  INFO [qtp1134970210-20] (LoggingContextImpl.java:351) - defDescriptorCount: 16;defCount: 13;httpStatus: 200;componentCreation: 15;RootDefFactory.exists: 7;defVisitCount: 118;serializationRuue: 29;ruauRequestURI: /clientLibraryTest/clientLibraryTest.app;ruauRequestQuery: ruau.mode=PTEST;cmpCount: 54;serialization: 29;defDescriptorCreation: 0;ruau: 313;java: 1;JavaCallCount: 53;requestMethod: GET;definitionCreation: 281;totalTime: 313;
 ruau/ruau-integration-test/ruau.log:2014-12-16 12:55:30,768  INFO [qtp1134970210-1073] (LoggingContextImpl.java:351) - ruauRequestQuery: ruau.format=manifest&ruau.context={"mode":"PTEST","app":"clientLibraryTest:clientLibraryTest","requestedLocales":["en_US"],"loaded":{"APPLICATION@markup://clientLibraryTest:clientLibraryTest":"qKzgT47M1aaViSU3LQhbEQ"},"fwuid":"V2_gAg5Ehnu7kBZFxkh4fw"}&ruau.type=app;defCount: 9;httpStatus: 200;componentCreation: 0;cmpCount: 8;ruau: 4;java: 8;JavaCallCount: 7;requestMethod: GET;ruauRequestURI: /ruauResource;totalTime: 13;
 ruau/ruau-integration-test/ruau.log:2014-12-16 12:55:30,894 ERROR [qtp1134970210-18] (ExceptionAdapterImpl.java:111) - Unhandled Exception 'java://org.ruauframework.impl.java.controller.JavaTestController: org.ruauframework.throwable.RuueRuntimeException: test-filename: throwExceptionNoLineNums' at java://org.ruauframework.impl.java.controller.JavaTestController: 
@@ -1814,7 +1814,7 @@ ruau/ruau-integration-test/ruau.log:2014-12-17 14:11:00,293  INFO [pool-1-thread
 ruau/ruau-integration-test/ruau.log:2014-12-17 14:11:00,422  INFO [pool-1-thread-4] (SeleniumServer.java:765) - Java: Oracle Corporation 24.65-b04
 ruau/ruau-integration-test/ruau.log:2014-12-17 14:11:00,422  INFO [pool-1-thread-4] (SeleniumServer.java:767) - OS: Linux 3.8.0-44-generic amd64
 ruau/ruau-integration-test/ruau.log:2014-12-17 14:11:00,447  INFO [pool-1-thread-4] (SeleniumServer.java:340) - v2.42.2, with Core v2.42.2. Built from revision 6a6995d31c7c56c340d6f45a76976d43506cd6cc
-ruau/ruau-integration-test/ruau.log:2014-12-17 14:11:00,800  INFO [pool-1-thread-4] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://127.0.0.1:14673/wd/hub
+ruau/ruau-integration-test/ruau.log:2014-12-17 14:11:00,800  INFO [pool-1-thread-4] (SeleniumServer.java:400) - RemoteWebDriver instances should connect to: http://100.0.0.1:14673/wd/hub
 ruau/ruau-integration-test/ruau.log:2014-12-17 14:11:00,808  INFO [pool-1-thread-4] (HttpServer.java:694) - Version Jetty/5.1.x
 ruau/ruau-integration-test/ruau.log:2014-12-17 14:11:00,817  INFO [pool-1-thread-4] (Container.java:74) - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
 ruau/ruau-integration-test/ruau.log:2014-12-17 14:11:00,822  INFO [pool-1-thread-4] (Container.java:74) - Started HttpContext[/selenium-server,/selenium-server]
@@ -2694,11 +2694,11 @@ ruau/xlog.full:java.util.concurrent.ExecutionException: org.openqa.selenium.WebD
 ruau/xlog.full:  (Driver info: chromedriver=2.9.248304,platform=Linux 3.8.0-44-generic x86_64) (WARNING: The server did not provide any stacktrace information)
 ruau/xlog.full:Command duration or timeout: 642 milliseconds
 ruau/xlog.full:Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-ruau/xlog.full:System info: host: 'precise64', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
+ruau/xlog.full:System info: host: 'precise64', ip: '100.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
 ruau/xlog.full:Driver info: org.openqa.selenium.chrome.ChromeDriver
 ruau/xlog.full:Command duration or timeout: 1.95 seconds
 ruau/xlog.full:Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-ruau/xlog.full:System info: host: 'precise64', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
+ruau/xlog.full:System info: host: 'precise64', ip: '100.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
 ruau/xlog.full:Driver info: org.ruauframework.test.PooledRemoteWebDriverFactory$PooledRemoteWebDriver
 ruau/xlog.full:	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
 ruau/xlog.full:	at java.util.concurrent.FutureTask.get(FutureTask.java:202)
@@ -2725,11 +2725,11 @@ ruau/xlog.full:Caused by: org.openqa.selenium.WebDriverException: unknown error:
 ruau/xlog.full:  (Driver info: chromedriver=2.9.248304,platform=Linux 3.8.0-44-generic x86_64) (WARNING: The server did not provide any stacktrace information)
 ruau/xlog.full:Command duration or timeout: 642 milliseconds
 ruau/xlog.full:Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-ruau/xlog.full:System info: host: 'precise64', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
+ruau/xlog.full:System info: host: 'precise64', ip: '100.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
 ruau/xlog.full:Driver info: org.openqa.selenium.chrome.ChromeDriver
 ruau/xlog.full:Command duration or timeout: 1.95 seconds
 ruau/xlog.full:Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-ruau/xlog.full:System info: host: 'precise64', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
+ruau/xlog.full:System info: host: 'precise64', ip: '100.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
 ruau/xlog.full:Driver info: org.ruauframework.test.PooledRemoteWebDriverFactory$PooledRemoteWebDriver
 ruau/xlog.full:	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 ruau/xlog.full:	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
@@ -2749,10 +2749,10 @@ ruau/xlog.full:Caused by: org.openqa.selenium.WebDriverException: unknown error:
 ruau/xlog.full:  (Driver info: chromedriver=2.9.248304,platform=Linux 3.8.0-44-generic x86_64) (WARNING: The server did not provide any stacktrace information)
 ruau/xlog.full:Command duration or timeout: 642 milliseconds
 ruau/xlog.full:Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-ruau/xlog.full:System info: host: 'precise64', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
+ruau/xlog.full:System info: host: 'precise64', ip: '100.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
 ruau/xlog.full:Driver info: org.openqa.selenium.chrome.ChromeDriver
 ruau/xlog.full:Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-ruau/xlog.full:System info: host: 'precise64', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
+ruau/xlog.full:System info: host: 'precise64', ip: '100.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
 ruau/xlog.full:	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 ruau/xlog.full:	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
 ruau/xlog.full:	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -2781,11 +2781,11 @@ ruau/xlog.full:java.util.concurrent.ExecutionException: org.openqa.selenium.WebD
 ruau/xlog.full:  (Driver info: chromedriver=2.9.248304,platform=Linux 3.8.0-44-generic x86_64) (WARNING: The server did not provide any stacktrace information)
 ruau/xlog.full:Command duration or timeout: 516 milliseconds
 ruau/xlog.full:Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-ruau/xlog.full:System info: host: 'precise64', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
+ruau/xlog.full:System info: host: 'precise64', ip: '100.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
 ruau/xlog.full:Driver info: org.openqa.selenium.chrome.ChromeDriver
 ruau/xlog.full:Command duration or timeout: 1.08 seconds
 ruau/xlog.full:Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-ruau/xlog.full:System info: host: 'precise64', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
+ruau/xlog.full:System info: host: 'precise64', ip: '100.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
 ruau/xlog.full:Driver info: org.ruauframework.test.PooledRemoteWebDriverFactory$PooledRemoteWebDriver
 ruau/xlog.full:	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
 ruau/xlog.full:	at java.util.concurrent.FutureTask.get(FutureTask.java:202)
@@ -2812,11 +2812,11 @@ ruau/xlog.full:Caused by: org.openqa.selenium.WebDriverException: unknown error:
 ruau/xlog.full:  (Driver info: chromedriver=2.9.248304,platform=Linux 3.8.0-44-generic x86_64) (WARNING: The server did not provide any stacktrace information)
 ruau/xlog.full:Command duration or timeout: 516 milliseconds
 ruau/xlog.full:Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-ruau/xlog.full:System info: host: 'precise64', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
+ruau/xlog.full:System info: host: 'precise64', ip: '100.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
 ruau/xlog.full:Driver info: org.openqa.selenium.chrome.ChromeDriver
 ruau/xlog.full:Command duration or timeout: 1.08 seconds
 ruau/xlog.full:Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-ruau/xlog.full:System info: host: 'precise64', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
+ruau/xlog.full:System info: host: 'precise64', ip: '100.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
 ruau/xlog.full:Driver info: org.ruauframework.test.PooledRemoteWebDriverFactory$PooledRemoteWebDriver
 ruau/xlog.full:	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 ruau/xlog.full:	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
@@ -2836,10 +2836,10 @@ ruau/xlog.full:Caused by: org.openqa.selenium.WebDriverException: unknown error:
 ruau/xlog.full:  (Driver info: chromedriver=2.9.248304,platform=Linux 3.8.0-44-generic x86_64) (WARNING: The server did not provide any stacktrace information)
 ruau/xlog.full:Command duration or timeout: 516 milliseconds
 ruau/xlog.full:Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-ruau/xlog.full:System info: host: 'precise64', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
+ruau/xlog.full:System info: host: 'precise64', ip: '100.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
 ruau/xlog.full:Driver info: org.openqa.selenium.chrome.ChromeDriver
 ruau/xlog.full:Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-ruau/xlog.full:System info: host: 'precise64', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
+ruau/xlog.full:System info: host: 'precise64', ip: '100.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
 ruau/xlog.full:	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 ruau/xlog.full:	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
 ruau/xlog.full:	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -2868,11 +2868,11 @@ ruau/xlog.full:java.util.concurrent.ExecutionException: org.openqa.selenium.WebD
 ruau/xlog.full:  (Driver info: chromedriver=2.9.248304,platform=Linux 3.8.0-44-generic x86_64) (WARNING: The server did not provide any stacktrace information)
 ruau/xlog.full:Command duration or timeout: 543 milliseconds
 ruau/xlog.full:Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-ruau/xlog.full:System info: host: 'precise64', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
+ruau/xlog.full:System info: host: 'precise64', ip: '100.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
 ruau/xlog.full:Driver info: org.openqa.selenium.chrome.ChromeDriver
 ruau/xlog.full:Command duration or timeout: 1.10 seconds
 ruau/xlog.full:Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-ruau/xlog.full:System info: host: 'precise64', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
+ruau/xlog.full:System info: host: 'precise64', ip: '100.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
 ruau/xlog.full:Driver info: org.ruauframework.test.PooledRemoteWebDriverFactory$PooledRemoteWebDriver
 ruau/xlog.full:	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
 ruau/xlog.full:	at java.util.concurrent.FutureTask.get(FutureTask.java:202)
@@ -2899,11 +2899,11 @@ ruau/xlog.full:Caused by: org.openqa.selenium.WebDriverException: unknown error:
 ruau/xlog.full:  (Driver info: chromedriver=2.9.248304,platform=Linux 3.8.0-44-generic x86_64) (WARNING: The server did not provide any stacktrace information)
 ruau/xlog.full:Command duration or timeout: 543 milliseconds
 ruau/xlog.full:Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-ruau/xlog.full:System info: host: 'precise64', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
+ruau/xlog.full:System info: host: 'precise64', ip: '100.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
 ruau/xlog.full:Driver info: org.openqa.selenium.chrome.ChromeDriver
 ruau/xlog.full:Command duration or timeout: 1.10 seconds
 ruau/xlog.full:Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-ruau/xlog.full:System info: host: 'precise64', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
+ruau/xlog.full:System info: host: 'precise64', ip: '100.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
 ruau/xlog.full:Driver info: org.ruauframework.test.PooledRemoteWebDriverFactory$PooledRemoteWebDriver
 ruau/xlog.full:	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 ruau/xlog.full:	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
@@ -2923,10 +2923,10 @@ ruau/xlog.full:Caused by: org.openqa.selenium.WebDriverException: unknown error:
 ruau/xlog.full:  (Driver info: chromedriver=2.9.248304,platform=Linux 3.8.0-44-generic x86_64) (WARNING: The server did not provide any stacktrace information)
 ruau/xlog.full:Command duration or timeout: 543 milliseconds
 ruau/xlog.full:Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-ruau/xlog.full:System info: host: 'precise64', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
+ruau/xlog.full:System info: host: 'precise64', ip: '100.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
 ruau/xlog.full:Driver info: org.openqa.selenium.chrome.ChromeDriver
 ruau/xlog.full:Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-ruau/xlog.full:System info: host: 'precise64', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
+ruau/xlog.full:System info: host: 'precise64', ip: '100.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
 ruau/xlog.full:	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 ruau/xlog.full:	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
 ruau/xlog.full:	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -2957,11 +2957,11 @@ ruau/xlog.full:java.util.concurrent.ExecutionException: org.openqa.selenium.WebD
 ruau/xlog.full:  (Driver info: chromedriver=2.9.248304,platform=Linux 3.8.0-44-generic x86_64) (WARNING: The server did not provide any stacktrace information)
 ruau/xlog.full:Command duration or timeout: 512 milliseconds
 ruau/xlog.full:Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-ruau/xlog.full:System info: host: 'precise64', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
+ruau/xlog.full:System info: host: 'precise64', ip: '100.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
 ruau/xlog.full:Driver info: org.openqa.selenium.chrome.ChromeDriver
 ruau/xlog.full:Command duration or timeout: 1.05 seconds
 ruau/xlog.full:Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-ruau/xlog.full:System info: host: 'precise64', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
+ruau/xlog.full:System info: host: 'precise64', ip: '100.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
 ruau/xlog.full:Driver info: org.ruauframework.test.PooledRemoteWebDriverFactory$PooledRemoteWebDriver
 ruau/xlog.full:	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
 ruau/xlog.full:	at java.util.concurrent.FutureTask.get(FutureTask.java:202)
@@ -2988,11 +2988,11 @@ ruau/xlog.full:Caused by: org.openqa.selenium.WebDriverException: unknown error:
 ruau/xlog.full:  (Driver info: chromedriver=2.9.248304,platform=Linux 3.8.0-44-generic x86_64) (WARNING: The server did not provide any stacktrace information)
 ruau/xlog.full:Command duration or timeout: 512 milliseconds
 ruau/xlog.full:Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-ruau/xlog.full:System info: host: 'precise64', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
+ruau/xlog.full:System info: host: 'precise64', ip: '100.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
 ruau/xlog.full:Driver info: org.openqa.selenium.chrome.ChromeDriver
 ruau/xlog.full:Command duration or timeout: 1.05 seconds
 ruau/xlog.full:Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-ruau/xlog.full:System info: host: 'precise64', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
+ruau/xlog.full:System info: host: 'precise64', ip: '100.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.8.0-44-generic', java.version: '1.7.0_65'
 ruau/xlog.full:Driver info: org.ruauframework.test.PooledRemoteWebDriverFactory$PooledRemoteWebDriver
 ruau/xlog.full:	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 ruau/xlog.full:	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)

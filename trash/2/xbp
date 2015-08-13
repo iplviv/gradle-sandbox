@@ -46,11 +46,11 @@ ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js: 
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:        if (panelDom) {
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:            $A.util.addClass(panelDom, 'active');
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:            panelDom.setAttribute('aria-hidden', 'false');
-ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:        	// if we have previously stored the body scroll position for this panel, now is the time to reset it
+ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:        	// if we have PrEviously stored the body scroll position for this panel, now is the time to reset it
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:            if (panel._scrolled)  {
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:            	document.body.scrollTop = panel._scrolled;
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:            if (panel.get('v.autoFocus') !== false) {
-ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:                // if panel is being reshown because a stacked panel was hidden, reset the previously
+ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:                // if panel is being reshown because a stacked panel was hidden, reset the PrEviously
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:                // focused element, otherwise set focus to the first focusable element
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:                var last = panel.get('v.lastFocusedInput');
 ruau/ruau-components/src/main/components/ui/panelManager/panelManagerHelper.js:                if (last && !last.disabled && self.isVisible(last)) {
@@ -221,23 +221,23 @@ ruau/ruau-components/src/main/components/ui/panelManager/panelManager.ruaudoc:<r
 ruau/ruau-components/src/main/components/ui/panelManager/panelManager.ruaudoc:    <ruau:description>
 ruau/ruau-components/src/main/components/ui/panelManager/panelManager.ruaudoc:        <p><code>ui:​panelManager</code>​ handles panel overlays, modal overlays, and panel sliders. 
 ruau/ruau-components/src/main/components/ui/panelManager/panelManager.ruaudoc:          You only need one instance of <code>ui:​panelManager</code> in an app. To open a panel, fire the <code>ui:openPanel</code> event. Adding the <code>'class'</code> parameter inserts the style to the <code>div</code> tag of the panel container. This example fires the event to open a panel overlay with body markup passed in via <code>newComponentAsync()</code> in a callback.
-ruau/ruau-components/src/main/components/ui/panelManager/panelManager.ruaudoc:<pre>showPanel: function(cmp, event, helper) {
+ruau/ruau-components/src/main/components/ui/panelManager/panelManager.ruaudoc:<PrE>showPanel: function(cmp, event, helper) {
 ruau/ruau-components/src/main/components/ui/panelManager/panelManager.ruaudoc:    var openPanelEvent = $A.get('e.ui:openPanel').setParams({
 ruau/ruau-components/src/main/components/ui/panelManager/panelManager.ruaudoc:    	title: 'my panel',
 ruau/ruau-components/src/main/components/ui/panelManager/panelManager.ruaudoc:    	'class': 'myPanel',
 ruau/ruau-components/src/main/components/ui/panelManager/panelManager.ruaudoc:        callbacks: { onCreate: function(panel){
 ruau/ruau-components/src/main/components/ui/panelManager/panelManager.ruaudoc:            	var cmps = $A.componentService.newComponentAsync(this, function(){}, helper.getConfig(cmp));
 ruau/ruau-components/src/main/components/ui/panelManager/panelManager.ruaudoc:            	var overlay = cmps[3];
-ruau/ruau-components/src/main/components/ui/panelManager/panelManager.ruaudoc:        		overlay.addHandler('press', cmp, 'c.showPanel')
+ruau/ruau-components/src/main/components/ui/panelManager/panelManager.ruaudoc:        		overlay.addHandler('PrEss', cmp, 'c.showPanel')
 ruau/ruau-components/src/main/components/ui/panelManager/panelManager.ruaudoc:        		panel.set("v.body", cmps);
 ruau/ruau-components/src/main/components/ui/panelManager/panelManager.ruaudoc:    openPanelEvent.fire();
 ruau/ruau-components/src/main/components/ui/panelManager/panelManager.ruaudoc:	<p>To open a modal overlay, set <code>isModal: true</code> on the <code>ui:openPanel</code> event before you fire it. 
 ruau/ruau-components/src/main/components/ui/panelManager/panelManager.ruaudoc:	   To create a panel slider, set <code>isSlider: true</code> on the <code>ui:openPanel</code> event before you fire it.</p>
 ruau/ruau-components/src/main/components/ui/panelManager/panelManager.ruaudoc:	<p>When working with a modal overlay, you can set its body by passing in the <code>body</code> event parameter.</p>
-ruau/ruau-components/src/main/components/ui/panelManager/panelManager.ruaudoc:<pre>showModal: function(cmp, event, helper) {
+ruau/ruau-components/src/main/components/ui/panelManager/panelManager.ruaudoc:<PrE>showModal: function(cmp, event, helper) {
 ruau/ruau-components/src/main/components/ui/panelManager/panelManager.ruaudoc:    var cmps = $A.componentService.newComponentAsync(this, function(){}, helper.getConfig(cmp));
 ruau/ruau-components/src/main/components/ui/panelManager/panelManager.ruaudoc:    var overlay = cmps[3];
-ruau/ruau-components/src/main/components/ui/panelManager/panelManager.ruaudoc:    overlay.addHandler('press', cmp, 'c.showModal')
+ruau/ruau-components/src/main/components/ui/panelManager/panelManager.ruaudoc:    overlay.addHandler('PrEss', cmp, 'c.showModal')
 ruau/ruau-components/src/main/components/ui/panelManager/panelManager.ruaudoc:    var openPanelEvent = $A.get('e.ui:openPanel').setParams({
 ruau/ruau-components/src/main/components/ui/panelManager/panelManager.ruaudoc:        isModal: true,
 ruau/ruau-components/src/main/components/ui/panelManager/panelManager.ruaudoc:        title: 'my panel',
@@ -374,7 +374,7 @@ ruau/ruau-components/src/main/components/ui/outputText/outputTextTest.js:    // 
 ruau/ruau-components/src/main/components/ui/outputText/outputTextTest.js:    _testTrimmingSpaces:{
 ruau/ruau-components/src/main/components/ui/outputText/outputTextTest.js:        attributes: {value: '   '},
 ruau/ruau-components/src/main/components/ui/outputText/outputTextTest.js:            ruau.test.assertEquals('', $A.test.getText(component.find("span").getElement()), "Failed to trim spaces");
-ruau/ruau-components/src/main/components/ui/outputText/outputTextTest.js:     * Verify prefix and suffix trimming of space.
+ruau/ruau-components/src/main/components/ui/outputText/outputTextTest.js:     * Verify PrEfix and suffix trimming of space.
 ruau/ruau-components/src/main/components/ui/outputText/outputTextTest.js:    // W-1075402 https://gus.soma.salesforce.com/a07B0000000GCEAIA4
 ruau/ruau-components/src/main/components/ui/outputText/outputTextTest.js:    _testTrimmingSpacesAtFrontAndEnd:{
 ruau/ruau-components/src/main/components/ui/outputText/outputTextTest.js:        attributes: {value: '   foo '},
@@ -423,14 +423,14 @@ ruau/ruau-components/src/main/components/ui/outputText/outputText.ruaudoc:    Se
 ruau/ruau-components/src/main/components/ui/outputText/outputText.ruaudoc:    limitations under the License.
 ruau/ruau-components/src/main/components/ui/outputText/outputText.ruaudoc:<ruau:documentation>
 ruau/ruau-components/src/main/components/ui/outputText/outputText.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/outputText/outputText.ruaudoc:			A <code>ui:outputText</code> component represents text output that is wrapped in an HTML <code>span</code> tag.
+ruau/ruau-components/src/main/components/ui/outputText/outputText.ruaudoc:			A <code>ui:outputText</code> component rePrEsents text output that is wrapped in an HTML <code>span</code> tag.
 ruau/ruau-components/src/main/components/ui/outputText/outputText.ruaudoc:			This component can be used with <code>ui:inputText</code>, which takes in a text input. 
 ruau/ruau-components/src/main/components/ui/outputText/outputText.ruaudoc:			To display text, you can use an attribute value and bind it to the <code>ui:outputText</code> component.
-ruau/ruau-components/src/main/components/ui/outputText/outputText.ruaudoc:		<pre>&lt;ruau:attribute name="myText" type="String" default="some string"/>
-ruau/ruau-components/src/main/components/ui/outputText/outputText.ruaudoc:&lt;ui:outputText value="{!v.myText}" label="my output"/></pre>
-ruau/ruau-components/src/main/components/ui/outputText/outputText.ruaudoc:		<p>The previous example renders the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/outputText/outputText.ruaudoc:		<pre>&lt;span dir="ltr" class="uiOutputText">
-ruau/ruau-components/src/main/components/ui/outputText/outputText.ruaudoc:&lt;/span></pre>
+ruau/ruau-components/src/main/components/ui/outputText/outputText.ruaudoc:		<PrE>&lt;ruau:attribute name="myText" type="String" default="some string"/>
+ruau/ruau-components/src/main/components/ui/outputText/outputText.ruaudoc:&lt;ui:outputText value="{!v.myText}" label="my output"/></PrE>
+ruau/ruau-components/src/main/components/ui/outputText/outputText.ruaudoc:		<p>The PrEvious example renders the following HTML.</p>
+ruau/ruau-components/src/main/components/ui/outputText/outputText.ruaudoc:		<PrE>&lt;span dir="ltr" class="uiOutputText">
+ruau/ruau-components/src/main/components/ui/outputText/outputText.ruaudoc:&lt;/span></PrE>
 ruau/ruau-components/src/main/components/ui/outputText/outputText.ruaudoc:	</ruau:description>	
 ruau/ruau-components/src/main/components/ui/outputText/outputText.ruaudoc:		<ruau:example name="outputExample" ref="uiExamples:outputExample" label="Using the Output Components">
 ruau/ruau-components/src/main/components/ui/outputText/outputText.ruaudoc:    	<p>This example shows how you can bind data to the output components by using component attributes.</p>
@@ -639,15 +639,15 @@ ruau/ruau-components/src/main/components/ui/autocomplete/autocompleteHelper.js: 
 ruau/ruau-components/src/main/components/ui/autocomplete/autocompleteHelper.js:            list.set("v.visible", false);
 ruau/ruau-components/src/main/components/ui/autocomplete/autocompleteHelper.js:    handleEnterkey: function(component, event) {
 ruau/ruau-components/src/main/components/ui/autocomplete/autocompleteHelper.js:        var list = component.find("list");
-ruau/ruau-components/src/main/components/ui/autocomplete/autocompleteHelper.js:            var pEvent = list.get("e.pressOnHighlighted");
+ruau/ruau-components/src/main/components/ui/autocomplete/autocompleteHelper.js:            var pEvent = list.get("e.PrEssOnHighlighted");
 ruau/ruau-components/src/main/components/ui/autocomplete/autocompleteHelper.js:    handleEsckey: function(component, event) {
 ruau/ruau-components/src/main/components/ui/autocomplete/autocompleteHelper.js:    handleKeyAction: function(component, event) {
 ruau/ruau-components/src/main/components/ui/autocomplete/autocompleteHelper.js:        var keyCode = event.getParam("keyCode");
 ruau/ruau-components/src/main/components/ui/autocomplete/autocompleteHelper.js:        var domEvent = event.getParam("domEvent");
 ruau/ruau-components/src/main/components/ui/autocomplete/autocompleteHelper.js:        if (keyCode === 40) {  // down arrow key
-ruau/ruau-components/src/main/components/ui/autocomplete/autocompleteHelper.js:            domEvent.preventDefault();
+ruau/ruau-components/src/main/components/ui/autocomplete/autocompleteHelper.js:            domEvent.PrEventDefault();
 ruau/ruau-components/src/main/components/ui/autocomplete/autocompleteHelper.js:        } else if (keyCode === 38) {  // up arrow key
-ruau/ruau-components/src/main/components/ui/autocomplete/autocompleteHelper.js:            domEvent.preventDefault();
+ruau/ruau-components/src/main/components/ui/autocomplete/autocompleteHelper.js:            domEvent.PrEventDefault();
 ruau/ruau-components/src/main/components/ui/autocomplete/autocompleteHelper.js:            domEvent.stopPropagation();
 ruau/ruau-components/src/main/components/ui/autocomplete/autocompleteHelper.js:            this.handleEsckey(component, event);
 ruau/ruau-components/src/main/components/ui/autocomplete/autocompleteHelper.js:        } else if (keyCode === 9) {  // tab key: dismiss the list
@@ -690,7 +690,7 @@ ruau/ruau-components/src/main/components/ui/autocomplete/autocomplete.cmp:    Un
 ruau/ruau-components/src/main/components/ui/autocomplete/autocomplete.cmp:    distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau-components/src/main/components/ui/autocomplete/autocomplete.cmp:    See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ui/autocomplete/autocomplete.cmp:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/autocomplete/autocomplete.cmp:<ruau:component extends="ui:input" support="proto" description="Represents an input field that suggests a list of values from the data provider as you type.">
+ruau/ruau-components/src/main/components/ui/autocomplete/autocomplete.cmp:<ruau:component extends="ui:input" support="proto" description="RePrEsents an input field that suggests a list of values from the data provider as you type.">
 ruau/ruau-components/src/main/components/ui/autocomplete/autocomplete.cmp:    <ruau:attribute name="dataProvider" type="Ruue.Component[]" required="true" description="A list of data provider components"/>
 ruau/ruau-components/src/main/components/ui/autocomplete/autocomplete.cmp:    <ruau:attribute name="emptyListContent" type="Ruue.Component[]" description="Content to be shown if the list is empty"/>
 ruau/ruau-components/src/main/components/ui/autocomplete/autocomplete.cmp:    <ruau:attribute name="loadingIndicator" type="Ruue.Component[]" description="Content to be shown while the list is loading"/>
@@ -895,7 +895,7 @@ ruau/ruau-components/src/main/components/ui/dialogManager/dialogManagerHelper.js
 ruau/ruau-components/src/main/components/ui/dialogManager/dialogManagerHelper.js:        $A.util.removeOn(document, "click", config.clickHandler, false);
 ruau/ruau-components/src/main/components/ui/dialogManager/dialogManagerHelper.js:        $A.util.removeOn(window, "resize", config.resizeHandler, false);
 ruau/ruau-components/src/main/components/ui/dialogManager/dialogManagerHelper.js:     * Builds the appropriate DOM event handlers necessary to interact with the
-ruau/ruau-components/src/main/components/ui/dialogManager/dialogManagerHelper.js:     * active ui:dialog component, as well as references to the document's previously
+ruau/ruau-components/src/main/components/ui/dialogManager/dialogManagerHelper.js:     * active ui:dialog component, as well as references to the document's PrEviously
 ruau/ruau-components/src/main/components/ui/dialogManager/dialogManagerHelper.js:     * focused element (before the dialog opens), and the first focusable element
 ruau/ruau-components/src/main/components/ui/dialogManager/dialogManagerHelper.js:     * inside the dialog. This config object is stored on the dialog component's
 ruau/ruau-components/src/main/components/ui/dialogManager/dialogManagerHelper.js:     * model so we can remove the event handlers when the dialog is finally closed.
@@ -975,7 +975,7 @@ ruau/ruau-components/src/main/components/ui/dialogManager/dialogManagerHelper.js
 ruau/ruau-components/src/main/components/ui/dialogManager/dialogManagerHelper.js:                for (var i=0; i<length; i++) {
 ruau/ruau-components/src/main/components/ui/dialogManager/dialogManagerHelper.js:                    if (!formElements[i].disabled && formElements[i].type.toLowerCase() !== "hidden") {
 ruau/ruau-components/src/main/components/ui/dialogManager/dialogManagerHelper.js:                        break;
-ruau/ruau-components/src/main/components/ui/dialogManager/dialogManagerHelper.js:                // we should never get here - at a minimum, the "close" link should always be present
+ruau/ruau-components/src/main/components/ui/dialogManager/dialogManagerHelper.js:                // we should never get here - at a minimum, the "close" link should always be PrEsent
 ruau/ruau-components/src/main/components/ui/dialogManager/dialogManagerHelper.js:                $A.assert(false, "No focusable element found.");
 ruau/ruau-components/src/main/components/ui/dialogManager/dialogManagerHelper.js:     * Handles the application and removal of CSS classes that control the visibility of
 ruau/ruau-components/src/main/components/ui/dialogManager/dialogManagerHelper.js:     * all dialog types, as well as the animation behaviour of modal dialogs. This method
@@ -1070,7 +1070,7 @@ ruau/ruau-components/src/main/components/ui/dialogManager/dialogManagerControlle
 ruau/ruau-components/src/main/components/ui/dialogManager/dialogManagerController.js:        // we need to kill all "click" events that open dialogs, so they don't
 ruau/ruau-components/src/main/components/ui/dialogManager/dialogManagerController.js:        // bubble up to the document and immediately close the dialog.
 ruau/ruau-components/src/main/components/ui/dialogManager/dialogManagerController.js:        // the triggerEvent could either be a raw DOM click, or a click generated
-ruau/ruau-components/src/main/components/ui/dialogManager/dialogManagerController.js:            if (triggerEvent.getName && triggerEvent.getName() === "press") {
+ruau/ruau-components/src/main/components/ui/dialogManager/dialogManagerController.js:            if (triggerEvent.getName && triggerEvent.getName() === "PrEss") {
 ruau/ruau-components/src/main/components/ui/dialogManager/dialogManagerController.js:                eventToKill = triggerEvent.getParam("domEvent");
 ruau/ruau-components/src/main/components/ui/dialogManager/dialogManagerController.js:            $A.util.squash(eventToKill);
 ruau/ruau-components/src/main/components/ui/dialogManager/dialogManagerController.js:        // only one open dialog is allowed at a time ... if there's one
@@ -1106,9 +1106,9 @@ ruau/ruau-components/src/main/components/ui/inputSelect/inputSelect.ruaudoc:    
 ruau/ruau-components/src/main/components/ui/inputSelect/inputSelect.ruaudoc:    limitations under the License.
 ruau/ruau-components/src/main/components/ui/inputSelect/inputSelect.ruaudoc:<ruau:documentation>
 ruau/ruau-components/src/main/components/ui/inputSelect/inputSelect.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/inputSelect/inputSelect.ruaudoc:			 A <code>ui:inputSelect</code> component is rendered as an HTML <code>select</code> element. It contains options, represented by the <code>ui:inputSelectOption</code> components. To enable multiple selections, set <code>multiple="true"</code>.
+ruau/ruau-components/src/main/components/ui/inputSelect/inputSelect.ruaudoc:			 A <code>ui:inputSelect</code> component is rendered as an HTML <code>select</code> element. It contains options, rePrEsented by the <code>ui:inputSelectOption</code> components. To enable multiple selections, set <code>multiple="true"</code>.
 ruau/ruau-components/src/main/components/ui/inputSelect/inputSelect.ruaudoc:			 To wire up any client-side logic when an input value is selected, use the <code>change</code> event. 
-ruau/ruau-components/src/main/components/ui/inputSelect/inputSelect.ruaudoc:<pre>&lt;ui:inputSelect class="single" ruau:id="InputSelectSingle" change="{!c.onSingleSelectChange}">
+ruau/ruau-components/src/main/components/ui/inputSelect/inputSelect.ruaudoc:<PrE>&lt;ui:inputSelect class="single" ruau:id="InputSelectSingle" change="{!c.onSingleSelectChange}">
 ruau/ruau-components/src/main/components/ui/inputSelect/inputSelect.ruaudoc:        &lt;ui:inputSelectOption text="Lion" value="true"/>
 ruau/ruau-components/src/main/components/ui/inputSelect/inputSelect.ruaudoc:        &lt;ui:inputSelectOption text="Bear"/>
 ruau/ruau-components/src/main/components/ui/inputSelect/inputSelect.ruaudoc:        &lt;ui:inputSelectOption text="Dragonfly"/>
@@ -1358,7 +1358,7 @@ ruau/ruau-components/src/main/components/ui/inputSelect/inputSelect.cmp:    Unle
 ruau/ruau-components/src/main/components/ui/inputSelect/inputSelect.cmp:    distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau-components/src/main/components/ui/inputSelect/inputSelect.cmp:    See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ui/inputSelect/inputSelect.cmp:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/inputSelect/inputSelect.cmp:<ruau:component access="GLOBAL" support="GA" extends="ui:input" extensible="true" description="Represents a drop-down list with options.">
+ruau/ruau-components/src/main/components/ui/inputSelect/inputSelect.cmp:<ruau:component access="GLOBAL" support="GA" extends="ui:input" extensible="true" description="RePrEsents a drop-down list with options.">
 ruau/ruau-components/src/main/components/ui/inputSelect/inputSelect.cmp:    <!-- A list of ruau.components.ui.InputOption -->
 ruau/ruau-components/src/main/components/ui/inputSelect/inputSelect.cmp:    <ruau:attribute access="GLOBAL" name="options" type="List" description="A list of ruau.components.ui.InputOption."/>
 ruau/ruau-components/src/main/components/ui/inputSelect/inputSelect.cmp:    <ruau:attribute name="name" type="String" description="The name of the component."/>
@@ -1498,12 +1498,12 @@ ruau/ruau-components/src/main/components/ui/dialogButtons/dialogButtons.cmp:    
 ruau/ruau-components/src/main/components/ui/dialogButtons/dialogButtons.cmp:    <ruau:attribute name="_parentDialog" type="Object" description="PRIVATE ATTRIBUTE - DO NOT SET | Reference to the parent ui:dialog component."/>
 ruau/ruau-components/src/main/components/ui/dialogButtons/dialogButtons.cmp:    <ruau:handler name="init" value="{!this}" action="{!c.doInit}"/>
 ruau/ruau-components/src/main/components/ui/dialogButtons/dialogButtons.cmp:    <ruau:if isTrue="{!v.defaultButtons == 'cancel' || v.defaultButtons == 'both'}">
-ruau/ruau-components/src/main/components/ui/dialogButtons/dialogButtons.cmp:        <ui:button ruau:id="cancelButton" class="{!v.cancelClass}" label="{!v.cancelLabel}" buttonTitle="{!v.cancelTitle}" press="{!c.cancel}"/>
+ruau/ruau-components/src/main/components/ui/dialogButtons/dialogButtons.cmp:        <ui:button ruau:id="cancelButton" class="{!v.cancelClass}" label="{!v.cancelLabel}" buttonTitle="{!v.cancelTitle}" PrEss="{!c.cancel}"/>
 ruau/ruau-components/src/main/components/ui/dialogButtons/dialogButtons.cmp:    </ruau:if>
 ruau/ruau-components/src/main/components/ui/dialogButtons/dialogButtons.cmp:    <!-- custom buttons go between 'cancel' and 'confirm', because 'cancel' buttons should always be on the far left
 ruau/ruau-components/src/main/components/ui/dialogButtons/dialogButtons.cmp:         and 'confirm' buttons should always be on the far right. any other action should be in the middle. -->
 ruau/ruau-components/src/main/components/ui/dialogButtons/dialogButtons.cmp:    <ruau:if isTrue="{!v.defaultButtons == 'confirm' || v.defaultButtons == 'both'}">
-ruau/ruau-components/src/main/components/ui/dialogButtons/dialogButtons.cmp:        <ui:button ruau:id="confirmButton" class="{!v.confirmClass}" label="{!v.confirmLabel}" buttonTitle="{!v.confirmTitle}" press="{!c.confirm}"/>
+ruau/ruau-components/src/main/components/ui/dialogButtons/dialogButtons.cmp:        <ui:button ruau:id="confirmButton" class="{!v.confirmClass}" label="{!v.confirmLabel}" buttonTitle="{!v.confirmTitle}" PrEss="{!c.confirm}"/>
 ruau/ruau-components/src/main/components/ui/dialogButtons/dialogButtons.cmp:    </ruau:if>
 ruau/ruau-components/src/main/components/ui/dialogButtons/dialogButtons.cmp:</ruau:component>
 ruau/ruau-components/src/main/components/ui/dialogButtons/dialogButtonsTest.js: * Copyright (C) 2013 salesforce.com, inc.
@@ -1641,7 +1641,7 @@ ruau/ruau-components/src/main/components/ui/outputMultiSelect/outputMultiSelect.
 ruau/ruau-components/src/main/components/ui/outputMultiSelect/outputMultiSelect.cmp:    See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ui/outputMultiSelect/outputMultiSelect.cmp:    limitations under the License.
 ruau/ruau-components/src/main/components/ui/outputMultiSelect/outputMultiSelect.cmp:<ruau:component extends="ui:output" extensible="true" support="GA" description="Displays multiple values from a list of options.">
-ruau/ruau-components/src/main/components/ui/outputMultiSelect/outputMultiSelect.cmp:    <ruau:attribute name="value" type="String[]" required="true" description="An array of string values representing the selected options."/>
+ruau/ruau-components/src/main/components/ui/outputMultiSelect/outputMultiSelect.cmp:    <ruau:attribute name="value" type="String[]" required="true" description="An array of string values rePrEsenting the selected options."/>
 ruau/ruau-components/src/main/components/ui/outputMultiSelect/outputMultiSelect.cmp:    <ruau:attribute name="delimiter" type="String" default="; " description="The symbol or character used to separate the selected options. Default value is &#8220;; &#8221;."/>
 ruau/ruau-components/src/main/components/ui/outputMultiSelect/outputMultiSelect.cmp:    <span ruau:id='span' class="{!v.class}"></span>
 ruau/ruau-components/src/main/components/ui/outputMultiSelect/outputMultiSelect.cmp:</ruau:component>
@@ -1671,7 +1671,7 @@ ruau/ruau-components/src/main/components/ui/datePickerManager/datePickerManagerC
 ruau/ruau-components/src/main/components/ui/datePickerManager/datePickerManagerController.js:		// Invoke onselected if it's a function; otherwise, assume Ruue.Action.
 ruau/ruau-components/src/main/components/ui/datePickerManager/datePickerManagerController.js:			selected.call({}, evt);
 ruau/ruau-components/src/main/components/ui/datePickerManager/datePickerManagerController.js:		else if (selected.ruauType === 'Action') {
-ruau/ruau-components/src/main/components/ui/datePickerManager/datePickerManagerController.js:			selected.runDeprecated(evt);
+ruau/ruau-components/src/main/components/ui/datePickerManager/datePickerManagerController.js:			selected.runDePrEcated(evt);
 ruau/ruau-components/src/main/components/ui/datePickerManager/datePickerManager.cmp:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/datePickerManager/datePickerManager.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/datePickerManager/datePickerManager.cmp:    you may not use this file except in compliance with the License.
@@ -1681,7 +1681,7 @@ ruau/ruau-components/src/main/components/ui/datePickerManager/datePickerManager.
 ruau/ruau-components/src/main/components/ui/datePickerManager/datePickerManager.cmp:    distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau-components/src/main/components/ui/datePickerManager/datePickerManager.cmp:    See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ui/datePickerManager/datePickerManager.cmp:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/datePickerManager/datePickerManager.cmp:<ruau:component description="Represents a date picker manager that renders a single date picker for multiple date input components.">
+ruau/ruau-components/src/main/components/ui/datePickerManager/datePickerManager.cmp:<ruau:component description="RePrEsents a date picker manager that renders a single date picker for multiple date input components.">
 ruau/ruau-components/src/main/components/ui/datePickerManager/datePickerManager.cmp:	<ruau:handler event="ui:showDatePicker" action="{!c.handleShowDatePicker}"/>
 ruau/ruau-components/src/main/components/ui/datePickerManager/datePickerManager.cmp:	<ui:datePicker ruau:id="datePicker" managed="true" selectDate="{!c.handleDateSelected}"/>
 ruau/ruau-components/src/main/components/ui/datePickerManager/datePickerManager.cmp:</ruau:component>
@@ -1836,12 +1836,12 @@ ruau/ruau-components/src/main/components/ui/inputTextArea/inputTextArea.ruaudoc:
 ruau/ruau-components/src/main/components/ui/inputTextArea/inputTextArea.ruaudoc:    limitations under the License.
 ruau/ruau-components/src/main/components/ui/inputTextArea/inputTextArea.ruaudoc:<ruau:documentation>
 ruau/ruau-components/src/main/components/ui/inputTextArea/inputTextArea.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/inputTextArea/inputTextArea.ruaudoc:			A <code>ui:inputTextArea</code> component represents a multi-line text input control, which is rendered as an HTML <code>textarea</code> tag.
+ruau/ruau-components/src/main/components/ui/inputTextArea/inputTextArea.ruaudoc:			A <code>ui:inputTextArea</code> component rePrEsents a multi-line text input control, which is rendered as an HTML <code>textarea</code> tag.
 ruau/ruau-components/src/main/components/ui/inputTextArea/inputTextArea.ruaudoc:			To render the output from a <code>ui:inputTextArea</code> component, use the <code>ui:outputTextArea</code> component.
 ruau/ruau-components/src/main/components/ui/inputTextArea/inputTextArea.ruaudoc:		<p>This is a basic set up of a <code>ui:inputTextArea</code> component.</p>
-ruau/ruau-components/src/main/components/ui/inputTextArea/inputTextArea.ruaudoc:		<pre>&lt;ui:inputTextArea ruau:id="comments" label="Comments" value="My comments" rows="5"/></pre>
+ruau/ruau-components/src/main/components/ui/inputTextArea/inputTextArea.ruaudoc:		<PrE>&lt;ui:inputTextArea ruau:id="comments" label="Comments" value="My comments" rows="5"/></pre>
 ruau/ruau-components/src/main/components/ui/inputTextArea/inputTextArea.ruaudoc:		<p>This example results in the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/inputTextArea/inputTextArea.ruaudoc:<pre>&lt;div class="uiInput uiInputTextArea">
+ruau/ruau-components/src/main/components/ui/inputTextArea/inputTextArea.ruaudoc:<PrE>&lt;div class="uiInput uiInputTextArea">
 ruau/ruau-components/src/main/components/ui/inputTextArea/inputTextArea.ruaudoc:    &lt;label class="uiLabel-left uiLabel">
 ruau/ruau-components/src/main/components/ui/inputTextArea/inputTextArea.ruaudoc:        &lt;span>Comments&lt;/span>
 ruau/ruau-components/src/main/components/ui/inputTextArea/inputTextArea.ruaudoc:    &lt;/label>
@@ -1863,16 +1863,16 @@ ruau/ruau-components/src/main/components/ui/inputTextArea/inputTextAreaControlle
 ruau/ruau-components/src/main/components/ui/inputTextArea/inputTextAreaController.js: * limitations under the License.
 ruau/ruau-components/src/main/components/ui/inputTextArea/inputTextAreaController.js:    valueChange: function(cmp, evt, helper) {
 ruau/ruau-components/src/main/components/ui/inputTextArea/inputTextAreaController.js:        helper.setDomElementValue(cmp);
-ruau/ruau-components/src/main/components/ui/press/press.evt:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/press/press.evt:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/press/press.evt:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/press/press.evt:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/press/press.evt:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/press/press.evt:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/press/press.evt:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/press/press.evt:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/press/press.evt:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/press/press.evt:<ruau:event type="COMPONENT" extends="ui:baseDOMEvent" support="GA" description="Indicates that the component has been pressed."/>
+ruau/ruau-components/src/main/components/ui/PrEss/press.evt:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/PrEss/press.evt:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/PrEss/press.evt:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/PrEss/press.evt:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/PrEss/press.evt:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/PrEss/press.evt:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/PrEss/press.evt:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/PrEss/press.evt:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/PrEss/press.evt:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/PrEss/press.evt:<ruau:event type="COMPONENT" extends="ui:baseDOMEvent" support="GA" description="Indicates that the component has been pressed."/>
 ruau/ruau-components/src/main/components/ui/scrollTo/scrollTo.evt:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/scrollTo/scrollTo.evt:    Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/scrollTo/scrollTo.evt:    you may not use this file except in compliance with the License.
@@ -1923,7 +1923,7 @@ ruau/ruau-components/src/main/components/ui/keydown/keydown.evt:    Unless requi
 ruau/ruau-components/src/main/components/ui/keydown/keydown.evt:    distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau-components/src/main/components/ui/keydown/keydown.evt:    See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ui/keydown/keydown.evt:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/keydown/keydown.evt:<ruau:event type="COMPONENT" extends="ui:baseKeyboardEvent" support="GA" description="Indicates that the user has pressed and released a keyboard key."></ruau:event>
+ruau/ruau-components/src/main/components/ui/keydown/keydown.evt:<ruau:event type="COMPONENT" extends="ui:baseKeyboardEvent" support="GA" description="Indicates that the user has PrEssed and released a keyboard key."></ruau:event>
 ruau/ruau-components/src/main/components/ui/datePicker/datePickerHelper.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/datePicker/datePickerHelper.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/datePicker/datePickerHelper.js: * you may not use this file except in compliance with the License.
@@ -2246,7 +2246,7 @@ ruau/ruau-components/src/main/components/ui/datePicker/datePickerController.js: 
 ruau/ruau-components/src/main/components/ui/datePicker/datePickerController.js:        var keyCode = event.keyCode;
 ruau/ruau-components/src/main/components/ui/datePicker/datePickerController.js:        var shiftKey = event.shiftKey;
 ruau/ruau-components/src/main/components/ui/datePicker/datePickerController.js:        if (keyCode == 9 && shiftKey != true) { // Tab
-ruau/ruau-components/src/main/components/ui/datePicker/datePickerController.js:            event.preventDefault();
+ruau/ruau-components/src/main/components/ui/datePicker/datePickerController.js:            event.PrEventDefault();
 ruau/ruau-components/src/main/components/ui/datePicker/datePickerController.js:            helper.focusDate(component);
 ruau/ruau-components/src/main/components/ui/datePicker/datePickerController.js:	goToPrevYear: function(component, event, helper) {
 ruau/ruau-components/src/main/components/ui/datePicker/datePickerController.js:	    helper.goToPrevYear(component);
@@ -2264,7 +2264,7 @@ ruau/ruau-components/src/main/components/ui/datePicker/datePickerController.js: 
 ruau/ruau-components/src/main/components/ui/datePicker/datePickerController.js:        var domEvent = event.getParam("domEvent");
 ruau/ruau-components/src/main/components/ui/datePicker/datePickerController.js:            var keycode = domEvent.keyCode;
 ruau/ruau-components/src/main/components/ui/datePicker/datePickerController.js:                if (domEvent.shiftKey == true) { // Tab + shift
-ruau/ruau-components/src/main/components/ui/datePicker/datePickerController.js:                    domEvent.preventDefault();
+ruau/ruau-components/src/main/components/ui/datePicker/datePickerController.js:                    domEvent.PrEventDefault();
 ruau/ruau-components/src/main/components/ui/datePicker/datePickerController.js:                    helper.focusDate(component);
 ruau/ruau-components/src/main/components/ui/datePicker/datePickerController.js:                } else { // Tab
 ruau/ruau-components/src/main/components/ui/datePicker/datePickerController.js:                    component.set("v.visible", false);
@@ -2279,7 +2279,7 @@ ruau/ruau-components/src/main/components/ui/datePicker/datePickerController.js: 
 ruau/ruau-components/src/main/components/ui/datePicker/datePickerController.js:        } else if ((startY - endY) > 10) { // swipe up
 ruau/ruau-components/src/main/components/ui/datePicker/datePickerController.js:            helper.goToPrevYear(component);
 ruau/ruau-components/src/main/components/ui/datePicker/datePickerController.js:    handleTouchMove: function(component, event, helper) {
-ruau/ruau-components/src/main/components/ui/datePicker/datePickerController.js:        event.preventDefault();
+ruau/ruau-components/src/main/components/ui/datePicker/datePickerController.js:        event.PrEventDefault();
 ruau/ruau-components/src/main/components/ui/datePicker/datePickerController.js:        event.stopPropagation();
 ruau/ruau-components/src/main/components/ui/datePicker/datePickerController.js:        var touch;
 ruau/ruau-components/src/main/components/ui/datePicker/datePickerController.js:        var touchIdFound = false;
@@ -2335,7 +2335,7 @@ ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:    Unless
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:    distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:    See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:<ruau:component extensible="true" implements="ui:visible" description="Represents a date picker, which can be used in input components such as ui:inputDate and ui:inputDateTime.">
+ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:<ruau:component extensible="true" implements="ui:visible" description="RePrEsents a date picker, which can be used in input components such as ui:inputDate and ui:inputDateTime.">
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:    <ruau:attribute name="hasTime" type="Boolean" default="false" description="Indicate if the parent datePicker component supports time picker."/>
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:    <ruau:attribute name="hours" type="Integer" description="The hour value of a date object, which is always in 24 hour format."/>
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:    <ruau:attribute name="is24HourFormat" type="Boolean" default="true" description="Indicate if it is set to 24 hour or 12-hour with am/pm."/>
@@ -2357,14 +2357,14 @@ ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:          
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:                    <a ruau:id="set" onclick="{!c.set}" class="calSet button" href="javascript:void(0);">Set</a>
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:            </ruau:if>
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:            <div class="dateBar">
-ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:                <div class="prevLinks">
+ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:                <div class="PrEvLinks">
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:                    <ruau:if isTrue="{!!$Browser.isPhone &amp;&amp; !$Browser.isTablet}">
-ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:                        <a ruau:id="prevYear" class="navLink prevYear" title="Go to previous year" onclick="{!c.goToPrevYear}" onkeydown="{!c.closeOnTab}">
-ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:                            <span class="assistiveText">Go to previous year</span>
+ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:                        <a ruau:id="PrEvYear" class="navLink prevYear" title="Go to previous year" onclick="{!c.goToPrevYear}" onkeydown="{!c.closeOnTab}">
+ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:                            <span class="assistiveText">Go to PrEvious year</span>
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:                        </a>
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:                    </ruau:if>
-ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:                    <a ruau:id="prevMonth" class="navLink prevMonth" title="Go to previous month" onclick="{!c.goToPrevMonth}" onkeydown="{!c.handleKeydown}">
-ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:                        <span class="assistiveText">Go to previous month</span>
+ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:                    <a ruau:id="PrEvMonth" class="navLink prevMonth" title="Go to previous month" onclick="{!c.goToPrevMonth}" onkeydown="{!c.handleKeydown}">
+ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:                        <span class="assistiveText">Go to PrEvious month</span>
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:                    </a>
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:                <div class="nextLinks">
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:                    <a ruau:id="nextMonth" class="navLink nextMonth" title="Go to next month" onclick="{!c.goToNextMonth}" onkeydown="{!c.handleKeydown}">
@@ -2392,7 +2392,7 @@ ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:          
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:                    <ui:timePicker ruau:id="time" is24HourFormat="{!v.is24HourFormat}"/>
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:                <ruau:set attribute="else">
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:                    <div class="buttonBar">
-ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:                        <ui:button ruau:id="today" press="{!c.selectToday}" keydown="{!c.handleTabToday}" class="calToday" label="Today"/>
+ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:                        <ui:button ruau:id="today" PrEss="{!c.selectToday}" keydown="{!c.handleTabToday}" class="calToday" label="Today"/>
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:                </ruau:set>
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:            </ruau:if>
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.cmp:    </div><!-- datePicker --> 
@@ -2450,7 +2450,7 @@ ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:    text-a
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:    padding: 14px 14px 7px 14px;
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:.THIS a {
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:    text-decoration: none;
-ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:.THIS .dateBar .prevLinks {
+ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:.THIS .dateBar .PrEvLinks {
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:    float: left;
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:    text-align: left;
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:.THIS .dateBar .nextLinks {
@@ -2463,16 +2463,16 @@ ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:    displa
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:.THIS .navLink:hover {
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:    background-color: #E1E1E1;
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 1), 0 2px 2px rgba(0, 0, 0, .25);
-ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:.THIS .dateBar .prevYear {
+ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:.THIS .dateBar .PrEvYear {
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:    background-position: 6px 7px;
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:    margin-left: 5px;
-ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:.THIS .dateBar .navLink.prevYear:hover,
-ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:.THIS .dateBar .navLink.prevYear:focus {
+ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:.THIS .dateBar .navLink.PrEvYear:hover,
+ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:.THIS .dateBar .navLink.PrEvYear:focus {
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:    background-position: 6px -23px;
-ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:.THIS .dateBar .prevMonth {
+ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:.THIS .dateBar .PrEvMonth {
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:    background-position: -26px 7px;
-ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:.THIS .dateBar .navLink.prevMonth:hover,
-ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:.THIS .dateBar .navLink.prevMonth:focus {
+ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:.THIS .dateBar .navLink.PrEvMonth:hover,
+ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:.THIS .dateBar .navLink.PrEvMonth:focus {
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:    background-position: -26px -23px;
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:.THIS .dateBar .nextMonth {
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:    background-position: -66px 7px;
@@ -2519,7 +2519,7 @@ ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:	display:i
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:	text-align: center;
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:    background-color: #f0f1f2;
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:@media only screen and (max-width: 999px) and (orientation: portrait) {
-ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:    .THIS .dateBar .navLink.prevMonth {
+ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:    .THIS .dateBar .navLink.PrEvMonth {
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:	    background: url('/ruauFW/resources/ruau/images/arrow-left.png') no-repeat;
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:	    background-size: 12px 14px;
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:	    background-position: center;        
@@ -2529,8 +2529,8 @@ ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:	    backg
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:	    background-position: center;        
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:	.THIS .dateBar .navLink {
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:		padding: 3px;	
-ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:	.THIS .dateBar .navLink.prevMonth:hover,
-ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:	.THIS .dateBar .navLink.prevMonth:focus,
+ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:	.THIS .dateBar .navLink.PrEvMonth:hover,
+ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:	.THIS .dateBar .navLink.PrEvMonth:focus,
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:	.THIS .dateBar .navLink.nextMonth:hover,
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:	.THIS .dateBar .navLink.nextMonth:focus {
 ruau/ruau-components/src/main/components/ui/datePicker/datePicker.css:		background-position: center;
@@ -2743,16 +2743,16 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:         
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        if (action) {
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            scrollerInstance.on(actionName, function () {
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                action.run.apply(action, arguments);
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:    _preventDefault: function (e) {
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        e.preventDefault();
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:    _PrEventDefault: function (e) {
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        e.PrEventDefault();
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:    _attachRuueEvents: function (component, scrollerInstance) {
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        var events = [
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                'beforeScrollStart',
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                'scrollStart',
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            ], wrapper;
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        if (component.get('v.preventDefaultOnMove')) {
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        if (component.get('v.PrEventDefaultOnMove')) {
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            wrapper = this._getScrollerWrapper(component);
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            wrapper.addEventListener('touchmove', this._preventDefault, false);
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            wrapper.addEventListener('touchmove', this._PrEventDefault, false);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        if (component.get('v.useNativeScroller')) {
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            this._attachNativeScrollerEvents(component, scrollerInstance);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            this._stopNativeDragging(component);
@@ -2795,7 +2795,7 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        w
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:    * @_captureClickEvents:
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:    * Due to the way ruau handles click events (attaching the handler directly to the DOM element (no delegation mechanism))
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:    * We need to handle the click event in the capture face, and if the scroller didn't move, let  the event flow and let ruau handle the event.
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:    * Otherwise a click will be fired even when you have moved the scroller which presents a huge usability issue.
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:    * Otherwise a click will be fired even when you have moved the scroller which PrEsents a huge usability issue.
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:    * This function will make the click pointers and touch events work properly across devices/platforms
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:    _captureClickEvents: function (component, scroller) {
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        var wrapper = this._getScrollerWrapper(component);
@@ -2806,8 +2806,8 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:    deact
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        var namespace = this.getScrollerNamespace(),
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            scroller  = this.getScrollerInstance(component),
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            wrapper   = this._getScrollerWrapper(component);
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        if (component.get('v.preventDefaultOnMove')) {
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            wrapper.removeEventListener('touchmove', this._preventDefault, false);
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        if (component.get('v.PrEventDefaultOnMove')) {
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            wrapper.removeEventListener('touchmove', this._PrEventDefault, false);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        delete namespace.instances[component.getGlobalId()];
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:* IF YOU WANT TO MODIFY THIS CODE those are the steps:
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:*    1. Clone this repo:  https://git.soma.salesforce.com/UI/scroller and follow the instructions there to test and modify the code
@@ -2815,7 +2815,7 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:*    2. O
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:*    3. Copy the content of the file right after this comments. Make sure you don't break anything in the SFDC/P4 world!
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:* ALSO, BEFORE MODIFYING ANYTHING, PLEASE TALK TO Diego (@dval) or Nihar (@ndandekar)
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:_bootstrapScroller: function () {
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:    !function(a){"use strict";a.__S||(a.__S={plugins:{}},a.DEBUG={warn:function(){},log:function(){}})}(window),function(a){"use strict";Array.prototype.forEach||(Array.prototype.forEach=function(a){if(void 0===this||null===this)throw new TypeError;var b=Object(this),c=b.length>>>0;if("function"!=typeof a)throw new TypeError;for(var d=arguments.length>=2?arguments[1]:void 0,e=0;c>e;e++)e in b&&a.call(d,b[e],e,b)});var b,c,d,e=a.__S||(a.__S={}),f=a.document.documentElement.style,g=["webkit","Moz","ms"],h=!1,i=!1;if("transition"in f)h=!0,c="";else for(d=0;d<g.length;d++)b=g[d]+"Transition","undefined"!==f[b]&&(h=!0,c=g[d]);if("undefined"!=typeof f.transform)i=!0;else for(d=0;d<g.length;d++)b=g[d]+"Transform","undefined"!=typeof f[b]&&(i=!0,c=g[d]);e.support={prefix:c,transition:h,transform:i,matrix:!(!a.WebKitCSSMatrix&&!a.MSCSSMatrix),touch:"ontouchstart"in a,pointers:a.navigator.pointerEnabled,msPointers:a.navigator.msPointerEnabled}}(window),function(a){"use strict";function b(b,c){for(var d=["Top","Right","Bottom","Left"],e=a.getComputedStyle(c),f="width"===b,g=f?1:0,h=0;4>g;g+=2)h+=parseInt(e["margin"+d[g]],10);return h+(f?c.offsetWidth:c.offsetHeight)}var c=a.__S||(a.__S={}),d=c.support,e=d&&d.prefix,f={};return d?(d.transition&&d.transform&&(f=""!==e?{transform:e+"Transform",transition:e+"Transition",transitionProperty:e+"TransitionProperty",transitionTimingFunction:e+"TransitionTimingFunction",transitionDuration:e+"TransitionDuration",transformOrigin:e+"TransformOrigin",boxSizing:e+"BoxSizing",matrix:a.WebKitCSSMatrix||a.MSCSSMatrix}:{transform:"transform",transition:"transition",transitionProperty:"transitionProperty",transitionTimingFunction:"transitionTimingFunction",transitionDuration:"transitionDuration",transformOrigin:"transformOrigin",boxSizing:"boxSizing",matrix:a.WebKitCSSMatrix||a.MSCSSMatrix}),f.getHeight=function(a){return b("height",a)},f.getWidth=function(a){return b("width",a)},void(c.styles=f)):void a.console.log("Scroller Dependency error! browser support detection needed")}(window),function(a){"use strict";var b=a.__S||(a.__S={}),c={simpleMerge:function(a,b){var c,d={};for(c in a)a.hasOwnProperty(c)&&(d[c]=a[c]);for(c in b)b.hasOwnProperty(c)&&(d[c]=b[c]);return d},parseDOM:function(b){var c;return b&&b.length?"string"==typeof b?(c=a.document.createElement("div"),c.innerHTML=b,Array.prototype.slice.call(c.children,0)):Array.prototype.slice.call(b,0):void 0},bind:function(a,b,c,d){a.addEventListener(b,c,!!d)},unbind:function(a,b,c,d){a.removeEventListener(b,c,!!d)}};b.helpers=c}(window),function(a){"use strict";for(var b=0,c="CancelAnimationFrame",d=["ms","moz","webkit","o"],e=0;e<d.length&&!a.requestAnimationFrame;++e)a.requestAnimationFrame=a[d[e]+"RequestAnimationFrame"],a.cancelAnimationFrame=a[d[e]+c]||a[d[e]+c];a.requestAnimationFrame||(a.requestAnimationFrame=function(c){var d=(new Date).getTime(),e=Math.max(0,16-(d-b)),f=a.setTimeout(function(){c(d+e)},e);return b=d+e,f}),a.cancelAnimationFrame||(a.cancelAnimationFrame=function(b){a.clearTimeout(b)})}(window),function(a){function b(a){if(this._element=a,a.className!=this._classCache){if(this._classCache=a.className,!this._classCache)return;var b,c=this._classCache.replace(/^\s+|\s+$/g,"").split(/\s+/);for(b=0;b<c.length;b++)h.call(this,c[b])}}function c(a,b){a.className=b.join(" ")}function d(a,b,c){Object.defineProperty?Object.defineProperty(a,b,{get:c}):a.__defineGetter__(b,c)}if(!("undefined"==typeof a.Element||"classList"in document.documentElement)){Array.prototype.indexOf||(Array.prototype.indexOf=function(a,b){for(var c=b||0,d=this.length;d>c;c++)if(this[c]===a)return c;return-1});var e=Array.prototype,f=e.indexOf,g=e.slice,h=e.push,i=e.splice,j=e.join;b.prototype={add:function(a){this.contains(a)||(h.call(this,a),c(this._element,g.call(this,0)))},contains:function(a){return-1!==f.call(this,a)},item:function(a){return this[a]||null},remove:function(a){var b=f.call(this,a);-1!==b&&(i.call(this,b,1),c(this._element,g.call(this,0)))},toString:function(){return j.call(this," ")},toggle:function(a){return this.contains(a)?this.remove(a):this.add(a),this.contains(a)}},window.DOMTokenList=b,d(Element.prototype,"classList",function(){return new b(this)})}}(window),function(a){"use strict";function b(a,b,c,e){function f(a,b){return 1-3*b+3*a}function g(a,b){return 3*b-6*a}function h(a){return 3*a}function i(a,b,c){return((f(b,c)*a+g(b,c))*a+h(b))*a}function j(a,b,c){return 3*f(b,c)*a*a+2*g(b,c)*a+h(b)}function k(b){var e,f,g,h=b,k=d;for(g=0;k>g;g++){if(e=j(h,a,c),0===e)return h;f=i(h,a,c)-b,h-=f/e}return h}var l;return l=function(d){return a===b&&c===e?d:i(k(d),b,e)},l.toString=function(){return"cubic-bezier("+a+", "+b+", "+c+", "+e+")"},l}var c=a.__S||(a.__S={}),d=4;c.CubicBezier=b}(window);
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:    !function(a){"use strict";a.__S||(a.__S={plugins:{}},a.DEBUG={warn:function(){},log:function(){}})}(window),function(a){"use strict";Array.prototype.forEach||(Array.prototype.forEach=function(a){if(void 0===this||null===this)throw new TypeError;var b=Object(this),c=b.length>>>0;if("function"!=typeof a)throw new TypeError;for(var d=arguments.length>=2?arguments[1]:void 0,e=0;c>e;e++)e in b&&a.call(d,b[e],e,b)});var b,c,d,e=a.__S||(a.__S={}),f=a.document.documentElement.style,g=["webkit","Moz","ms"],h=!1,i=!1;if("transition"in f)h=!0,c="";else for(d=0;d<g.length;d++)b=g[d]+"Transition","undefined"!==f[b]&&(h=!0,c=g[d]);if("undefined"!=typeof f.transform)i=!0;else for(d=0;d<g.length;d++)b=g[d]+"Transform","undefined"!=typeof f[b]&&(i=!0,c=g[d]);e.support={PrEfix:c,transition:h,transform:i,matrix:!(!a.WebKitCSSMatrix&&!a.MSCSSMatrix),touch:"ontouchstart"in a,pointers:a.navigator.pointerEnabled,msPointers:a.navigator.msPointerEnabled}}(window),function(a){"use strict";function b(b,c){for(var d=["Top","Right","Bottom","Left"],e=a.getComputedStyle(c),f="width"===b,g=f?1:0,h=0;4>g;g+=2)h+=parseInt(e["margin"+d[g]],10);return h+(f?c.offsetWidth:c.offsetHeight)}var c=a.__S||(a.__S={}),d=c.support,e=d&&d.prefix,f={};return d?(d.transition&&d.transform&&(f=""!==e?{transform:e+"Transform",transition:e+"Transition",transitionProperty:e+"TransitionProperty",transitionTimingFunction:e+"TransitionTimingFunction",transitionDuration:e+"TransitionDuration",transformOrigin:e+"TransformOrigin",boxSizing:e+"BoxSizing",matrix:a.WebKitCSSMatrix||a.MSCSSMatrix}:{transform:"transform",transition:"transition",transitionProperty:"transitionProperty",transitionTimingFunction:"transitionTimingFunction",transitionDuration:"transitionDuration",transformOrigin:"transformOrigin",boxSizing:"boxSizing",matrix:a.WebKitCSSMatrix||a.MSCSSMatrix}),f.getHeight=function(a){return b("height",a)},f.getWidth=function(a){return b("width",a)},void(c.styles=f)):void a.console.log("Scroller Dependency error! browser support detection needed")}(window),function(a){"use strict";var b=a.__S||(a.__S={}),c={simpleMerge:function(a,b){var c,d={};for(c in a)a.hasOwnProperty(c)&&(d[c]=a[c]);for(c in b)b.hasOwnProperty(c)&&(d[c]=b[c]);return d},parseDOM:function(b){var c;return b&&b.length?"string"==typeof b?(c=a.document.createElement("div"),c.innerHTML=b,Array.prototype.slice.call(c.children,0)):Array.prototype.slice.call(b,0):void 0},bind:function(a,b,c,d){a.addEventListener(b,c,!!d)},unbind:function(a,b,c,d){a.removeEventListener(b,c,!!d)}};b.helpers=c}(window),function(a){"use strict";for(var b=0,c="CancelAnimationFrame",d=["ms","moz","webkit","o"],e=0;e<d.length&&!a.requestAnimationFrame;++e)a.requestAnimationFrame=a[d[e]+"RequestAnimationFrame"],a.cancelAnimationFrame=a[d[e]+c]||a[d[e]+c];a.requestAnimationFrame||(a.requestAnimationFrame=function(c){var d=(new Date).getTime(),e=Math.max(0,16-(d-b)),f=a.setTimeout(function(){c(d+e)},e);return b=d+e,f}),a.cancelAnimationFrame||(a.cancelAnimationFrame=function(b){a.clearTimeout(b)})}(window),function(a){function b(a){if(this._element=a,a.className!=this._classCache){if(this._classCache=a.className,!this._classCache)return;var b,c=this._classCache.replace(/^\s+|\s+$/g,"").split(/\s+/);for(b=0;b<c.length;b++)h.call(this,c[b])}}function c(a,b){a.className=b.join(" ")}function d(a,b,c){Object.defineProperty?Object.defineProperty(a,b,{get:c}):a.__defineGetter__(b,c)}if(!("undefined"==typeof a.Element||"classList"in document.documentElement)){Array.prototype.indexOf||(Array.prototype.indexOf=function(a,b){for(var c=b||0,d=this.length;d>c;c++)if(this[c]===a)return c;return-1});var e=Array.prototype,f=e.indexOf,g=e.slice,h=e.push,i=e.splice,j=e.join;b.prototype={add:function(a){this.contains(a)||(h.call(this,a),c(this._element,g.call(this,0)))},contains:function(a){return-1!==f.call(this,a)},item:function(a){return this[a]||null},remove:function(a){var b=f.call(this,a);-1!==b&&(i.call(this,b,1),c(this._element,g.call(this,0)))},toString:function(){return j.call(this," ")},toggle:function(a){return this.contains(a)?this.remove(a):this.add(a),this.contains(a)}},window.DOMTokenList=b,d(Element.prototype,"classList",function(){return new b(this)})}}(window),function(a){"use strict";function b(a,b,c,e){function f(a,b){return 1-3*b+3*a}function g(a,b){return 3*b-6*a}function h(a){return 3*a}function i(a,b,c){return((f(b,c)*a+g(b,c))*a+h(b))*a}function j(a,b,c){return 3*f(b,c)*a*a+2*g(b,c)*a+h(b)}function k(b){var e,f,g,h=b,k=d;for(g=0;k>g;g++){if(e=j(h,a,c),0===e)return h;f=i(h,a,c)-b,h-=f/e}return h}var l;return l=function(d){return a===b&&c===e?d:i(k(d),b,e)},l.toString=function(){return"cubic-bezier("+a+", "+b+", "+c+", "+e+")"},l}var c=a.__S||(a.__S={}),d=4;c.CubicBezier=b}(window);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:    this._initSurfaceManagerPlugin();
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:    this._initPullToLoadMorePlugin();
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:    this._initIndicatorsPlugin();
@@ -2883,7 +2883,7 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        *
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * @static
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * @default "CubicBezier(0.33, 0.33, 0.66, 0.81)"
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * Wraps EASING_REGULAR and EASING_BOUNCE 
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * with the corresponding string representation.
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * with the corresponding string rePrEsentation.
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * @static
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * @final
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * @default "{regular: {}, bounce: {}}"

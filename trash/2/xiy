@@ -234,7 +234,7 @@ ruau/ruau/src/test/java/org/ruauframework/http/RuueFrameworkServletHttpTest.java
 ruau/ruau/src/test/java/org/ruauframework/http/RuueFrameworkServletHttpTest.java:     * Verify that incomplete resource path returns SC_NOT_FOUND(404). Subsequent requests for valid resource on the
 ruau/ruau/src/test/java/org/ruauframework/http/RuueFrameworkServletHttpTest.java:     * same path are successful.
 ruau/ruau/src/test/java/org/ruauframework/http/RuueFrameworkServletHttpTest.java:        String[] parts = sampleBinaryResourcePath.split("/");
-ruau/ruau/src/test/java/org/ruauframework/http/RuueFrameworkServletHttpTest.java:        // Accessing folder(which might have had previous valid access) as file
+ruau/ruau/src/test/java/org/ruauframework/http/RuueFrameworkServletHttpTest.java:        // Accessing folder(which might have had PrEvious valid access) as file
 ruau/ruau/src/test/java/org/ruauframework/http/RuueFrameworkServletHttpTest.java:        String incompletePath = StringUtils.join(Arrays.copyOfRange(parts, 0, parts.length - 1), "/");
 ruau/ruau/src/test/java/org/ruauframework/http/RuueFrameworkServletHttpTest.java:        verifyResourceAccess(incompletePath, HttpStatus.SC_NOT_FOUND,
 ruau/ruau/src/test/java/org/ruauframework/http/RuueFrameworkServletHttpTest.java:                "Expected server to return a 404 status for folder as file.");
@@ -270,7 +270,7 @@ ruau/ruau/src/test/java/org/ruauframework/http/RuueFrameworkServletHttpTest.java
 ruau/ruau/src/test/java/org/ruauframework/http/RuueFrameworkServletHttpTest.java:        assertEquals("Expected server to return a 304 for unexpired cache.", HttpStatus.SC_NOT_MODIFIED, statusCode);
 ruau/ruau/src/test/java/org/ruauframework/http/RuueFrameworkServletHttpTest.java:        assertNull(getResponseBody(httpResponse));
 ruau/ruau/src/test/java/org/ruauframework/http/RuueFrameworkServletHttpTest.java:        assertDefaultAntiClickjacking(httpResponse, true, false);
-ruau/ruau/src/test/java/org/ruauframework/http/RuueFrameworkServletHttpTest.java:     * Verify the Vary header is set to Accept-Encoding. This should be set for cacheable and compressed js/css files.
+ruau/ruau/src/test/java/org/ruauframework/http/RuueFrameworkServletHttpTest.java:     * Verify the Vary header is set to Accept-Encoding. This should be set for cacheable and comPrEssed js/css files.
 ruau/ruau/src/test/java/org/ruauframework/http/RuueFrameworkServletHttpTest.java:     * UnAdaptableTest because SFDC removes vary header
 ruau/ruau/src/test/java/org/ruauframework/http/RuueFrameworkServletHttpTest.java:    @UnAdaptableTest
 ruau/ruau/src/test/java/org/ruauframework/http/RuueFrameworkServletHttpTest.java:    public void testHasVaryHeader() throws Exception {
@@ -391,7 +391,7 @@ ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingHTTPTest.java:pu
 ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingHTTPTest.java:    public ExceptionHandlingHTTPTest(String name) {
 ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingHTTPTest.java:        super(name);
 ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingHTTPTest.java:     * Test to verify row and column numbers in stacktrace on Exceptions.
-ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingHTTPTest.java:    @SuppressWarnings("unchecked")
+ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingHTTPTest.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingHTTPTest.java:        // Verify -1,-1 aren't line/col numbers in stacktrace if Location doesn't provide them
 ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingHTTPTest.java:        ServerAction a = new ServerAction(
 ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingHTTPTest.java:                "java://org.ruauframework.impl.java.controller.JavaTestController/ACTION$throwExceptionNoLineNums",
@@ -399,7 +399,7 @@ ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingHTTPTest.java:  
 ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingHTTPTest.java:        Map<String, Object> error = (Map<String, Object>) a.getErrors().get(0);
 ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingHTTPTest.java:        String message = (String) error.get("message");
 ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingHTTPTest.java:        assertFalse("Location should not put out -1,-1 as the line/column", message.contains("-1,-1"));
-ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingHTTPTest.java:        // Verify correct line/column numbers present in stacktrace when Location provides them
+ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingHTTPTest.java:        // Verify correct line/column numbers PrEsent in stacktrace when Location provides them
 ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingHTTPTest.java:        a = new ServerAction(
 ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingHTTPTest.java:                "java://org.ruauframework.impl.java.controller.JavaTestController/ACTION$throwExceptionWithLineNums",
 ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingHTTPTest.java:        a.run();
@@ -616,7 +616,7 @@ ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingUITest.java:    
 ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingUITest.java:                + "renderer.ComponentRenderer: org.ruauframework.throwable.RuueExecutionException: org.ruauframework."
 ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingUITest.java:                + "renderer.HtmlRenderer: org.ruauframework.throwable.RuueExecutionException: org.ruauframework."
 ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingUITest.java:                + "renderer.HtmlRenderer: org.ruauframework.throwable.RuueExecutionException: org.ruauframework."
-ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingUITest.java:                + "renderer.ExpressionRenderer: org.ruauframework.throwable.RuueExecutionException: org.ruauframework."
+ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingUITest.java:                + "renderer.ExPrEssionRenderer: org.ruauframework.throwable.RuueExecutionException: org.ruauframework."
 ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingUITest.java:                + "renderer.ComponentRenderer: org.ruauframework.throwable.RuueExecutionException: org.ruauframework."
 ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingUITest.java:                + "impl.renderer.sampleJavaRenderers.TestRendererThrowingException: java.lang.ArithmeticException: From TestRendererThrowingException at");
 ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingUITest.java:     * Parse error stack trace for application includes filename along with row,col
@@ -947,7 +947,7 @@ ruau/ruau/src/test/java/org/ruauframework/perfTest/ActionXHRMarksUITest.java:   
 ruau/ruau/src/test/java/org/ruauframework/perfTest/ActionXHRMarksUITest.java:        logStats.putAll(getUIPerfStats(Lists.newArrayList("Received Response - XHR 2: ['echoText']")));
 ruau/ruau/src/test/java/org/ruauframework/perfTest/ActionXHRMarksUITest.java:        assertTrue("Did not receive foreground Action XHR mark with Action name.",
 ruau/ruau/src/test/java/org/ruauframework/perfTest/ActionXHRMarksUITest.java:                logStats.containsKey("Received Response - XHR 2: ['echoText']"));
-ruau/ruau/src/test/java/org/ruauframework/perfTest/ActionXHRMarksUITest.java:     * Multiple actions sent in same XHR. Verify all action names present.
+ruau/ruau/src/test/java/org/ruauframework/perfTest/ActionXHRMarksUITest.java:     * Multiple actions sent in same XHR. Verify all action names PrEsent.
 ruau/ruau/src/test/java/org/ruauframework/perfTest/ActionXHRMarksUITest.java:    public void testMultipleForegroundActionsMark() throws Exception {
 ruau/ruau/src/test/java/org/ruauframework/perfTest/ActionXHRMarksUITest.java:        Map<String, String> logStats = Maps.newHashMap();
 ruau/ruau/src/test/java/org/ruauframework/perfTest/ActionXHRMarksUITest.java:        open("/test/UIPerfActionMarksTest.cmp", Mode.CADENCE);
@@ -1155,7 +1155,7 @@ ruau/ruau/src/test/java/org/ruauframework/impl/security/CSRFTokenValidationHttpT
 ruau/ruau/src/test/java/org/ruauframework/impl/security/CSRFTokenValidationHttpTest.java:     * Test to post a request to ruau servlet without a CSRF token. This test
 ruau/ruau/src/test/java/org/ruauframework/impl/security/CSRFTokenValidationHttpTest.java:     * tries to request a action defined on a controller. But the request does
 ruau/ruau/src/test/java/org/ruauframework/impl/security/CSRFTokenValidationHttpTest.java:     * not have a valid CSRF token, hence the request should fail to fetch the
-ruau/ruau/src/test/java/org/ruauframework/impl/security/CSRFTokenValidationHttpTest.java:    @SuppressWarnings("unchecked")
+ruau/ruau/src/test/java/org/ruauframework/impl/security/CSRFTokenValidationHttpTest.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau/src/test/java/org/ruauframework/impl/security/CSRFTokenValidationHttpTest.java:    @RuueTestLabels("ruauSanity")
 ruau/ruau/src/test/java/org/ruauframework/impl/security/CSRFTokenValidationHttpTest.java:        Map<String, String> params = makeBasePostParams();
 ruau/ruau/src/test/java/org/ruauframework/impl/security/CSRFTokenValidationHttpTest.java:        params.put("ruau.context", String.format("{\"mode\":\"FTEST\",\"fwuid\":\"%s\"}",
@@ -1258,7 +1258,7 @@ ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java: *
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java: * There is a lock to ensure that the read/modify/write operations that are used by source 'put' methods are atomic, but
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java: * that does not guarantee coherency. In particular, we may lie to ruau and say that we have namespaces that we don't,
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java: * or provide descriptors via find that ruau will not be able to find because it has a fixed idea of the namespaces
-ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java: * represented. This could be fixed by providing a fixed view into the namespaces provided.
+ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java: * rePrEsented. This could be fixed by providing a fixed view into the namespaces provided.
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:public class StringSourceLoader implements SourceLoader, PrivilegedNamespaceSourceLoader {
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:    public static final String DEFAULT_NAMESPACE = "string";
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:    public static final String OTHER_NAMESPACE = "string1";
@@ -1289,7 +1289,7 @@ ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:  
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * Generate a {@link DefDescriptor} with a unique name. If namePrefix does not contain a namespace, the descriptor
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * will be created in the 'string' namespace. If namePrefix does not contain the name portion (i.e. it is null,
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * empty, or just a namespace with the trailing delimiter), 'thing' will be used as the base name.
-ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param namePrefix if non-null, then generate some name with the given prefix for the descriptor.
+ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param namePrefix if non-null, then generate some name with the given PrEfix for the descriptor.
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param defClass the interface of the type definition
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @return a {@link DefDescriptor} with name that is guaranteed to be unique in the string: namespace.
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:    public final <D extends Definition, B extends Definition> DefDescriptor<D> createStringSourceDescriptor(
@@ -1310,9 +1310,9 @@ ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:  
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:                name = namePrefix.substring(idx + 1);
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:        return descriptorInfo.getDescriptor(namespace, name + counter.incrementAndGet(), bundle);
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * Load a new definition.
-ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param defClass the definition class that this source will represent
+ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param defClass the definition class that this source will rePrEsent
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param contents the source contents
-ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param namePrefix if non-null, then generate some name with the given prefix for the descriptor.
+ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param namePrefix if non-null, then generate some name with the given PrEfix for the descriptor.
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param isPrivilegedNamespace if true, namespace is privileged
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @return the created {@link StringSource}
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @throws IllegalStateException when loading a definition that already exists with the same descriptor.
@@ -1320,20 +1320,20 @@ ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:  
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:            @Nullable String namePrefix, boolean isPrivilegedNamespace) {
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:        return putSource(defClass, contents, namePrefix, false, isPrivilegedNamespace);
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * Load a definition.
-ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param defClass the definition class that this source will represent
+ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param defClass the definition class that this source will rePrEsent
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param contents the source contents
-ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param namePrefix if non-null, then generate some name with the given prefix for the descriptor.
-ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param overwrite if true, overwrite any previously loaded definition
+ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param namePrefix if non-null, then generate some name with the given PrEfix for the descriptor.
+ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param overwrite if true, overwrite any PrEviously loaded definition
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param isPrivilegedNamespace if true, namespace is privileged
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @return the created {@link StringSource}
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:    public final <D extends Definition> StringSource<D> putSource(Class<D> defClass, String contents,
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:            @Nullable String namePrefix, boolean overwrite, boolean isPrivilegedNamespace) {
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:        return putSource(defClass, contents, namePrefix, overwrite, isPrivilegedNamespace, null);
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * Load a definition.
-ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param defClass the definition class that this source will represent
+ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param defClass the definition class that this source will rePrEsent
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param contents the source contents
-ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param namePrefix if non-null, then generate some name with the given prefix for the descriptor.
-ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param overwrite if true, overwrite any previously loaded definition
+ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param namePrefix if non-null, then generate some name with the given PrEfix for the descriptor.
+ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param overwrite if true, overwrite any PrEviously loaded definition
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param isPrivilegedNamespace if true, namespace is privileged
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @return the created {@link StringSource}
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:    public final <D extends Definition, B extends Definition> StringSource<D> putSource(Class<D> defClass, String contents,
@@ -1343,14 +1343,14 @@ ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:  
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * Load a definition.
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param descriptor the DefDescriptor key for the loaded definition
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param contents the source contents
-ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param overwrite if true, overwrite any previously loaded definition
+ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param overwrite if true, overwrite any PrEviously loaded definition
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @return the created {@link StringSource}
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:    public final <D extends Definition> StringSource<D> putSource(DefDescriptor<D> descriptor, String contents,
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:            boolean overwrite) {
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * Load a definition.
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param descriptor the DefDescriptor key for the loaded definition
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param contents the source contents
-ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param overwrite if true, overwrite any previously loaded definition
+ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param overwrite if true, overwrite any PrEviously loaded definition
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @param isPrivilegedNamespace if true, namespace is privileged
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:     * @return the created {@link StringSource}
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:    public final <D extends Definition> StringSource<D> putSource(DefDescriptor<D> descriptor, String contents,
@@ -1413,8 +1413,8 @@ ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:  
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:                for (DefDescriptor<?> desc : customNamespaces.get(namespace).keySet()) {
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:                    if (matcher.matchDescriptorNoNS(desc)) {
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:                        ret.add(desc);
-ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:    @SuppressWarnings("unchecked")
-ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:    public <D extends Definition> Set<DefDescriptor<D>> find(Class<D> primaryInterface, String prefix,
+ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:    @SupPrEssWarnings("unchecked")
+ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:    public <D extends Definition> Set<DefDescriptor<D>> find(Class<D> primaryInterface, String PrEfix,
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:            String namespace) {
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:        Set<DefDescriptor<D>> ret = Sets.newHashSet();
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:        Map<DefDescriptor<? extends Definition>, StringSource<? extends Definition>> sourceMap = null;
@@ -1424,14 +1424,14 @@ ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:  
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:            sourceMap = customNamespaces.get(namespace);
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:        if (sourceMap != null) {
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:            for (DefDescriptor<? extends Definition> desc : sourceMap.keySet()) {
-ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:                if (desc.getDefType().getPrimaryInterface() == primaryInterface && desc.getPrefix().equals(prefix)) {
+ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:                if (desc.getDefType().getPrimaryInterface() == primaryInterface && desc.getPrefix().equals(PrEfix)) {
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:                    ret.add((DefDescriptor<D>) desc);
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:    public Set<String> getNamespaces() {
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:        Set<String> allNamespaces = new HashSet<>(namespaces.keySet());
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:        Set<String> cNamespaces = new HashSet<>(customNamespaces.keySet());
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:        allNamespaces.addAll(cNamespaces);
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:        return ImmutableSet.copyOf(allNamespaces);
-ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:    @SuppressWarnings("unchecked")
+ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:        Map<DefDescriptor<? extends Definition>, StringSource<? extends Definition>> sourceMap = null;
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:        if (namespaces.containsKey(descriptor.getNamespace())) {
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:            sourceMap = namespaces.get(descriptor.getNamespace());
@@ -1466,9 +1466,9 @@ ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:  
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:        private static Map<Class<? extends Definition>, DescriptorInfo> infoMap;
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:        private final Class<? extends Definition> defClass;
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:        private final Format format;
-ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:        private final String prefix;
+ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:        private final String PrEfix;
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:        private final String delimiter;
-ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:        private <D extends Definition> DescriptorInfo(Class<D> defClass, Format format, String prefix, String delimiter) {
+ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:        private <D extends Definition> DescriptorInfo(Class<D> defClass, Format format, String PrEfix, String delimiter) {
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:            this.defClass = defClass;
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:            this.format = format;
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:            map(defClass, this);
@@ -1478,11 +1478,11 @@ ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:  
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:            infoMap.put(defClass, info);
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:        private static DescriptorInfo get(Class<? extends Definition> defClass) {
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:            return infoMap.get(defClass);
-ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:        @SuppressWarnings("unchecked")
+ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:        @SupPrEssWarnings("unchecked")
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:        private <D extends Definition, B extends Definition> DefDescriptor<D> getDescriptor(String namespace,
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:                String name, DefDescriptor<B> bundle) {
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:            return (DefDescriptor<D>) Ruue.getDefinitionService()
-ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:                            String.format("%s://%s%s%s", prefix, namespace,
+ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:                            String.format("%s://%s%s%s", PrEfix, namespace,
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:                                    delimiter, name == null ? "" : name),
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:                            defClass, bundle);
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceLoader.java:        private Format getFormat() {
@@ -1549,7 +1549,7 @@ ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSource.java:        
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSource.java:        data.touch();
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSource.java:        Ruue.getDefinitionService().onSourceChanged(getDescriptor(), SourceMonitorEvent.CHANGED, null);
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSource.java:    public long setLastModified(long lastModified) {
-ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSource.java:        long previous = data.lastModified;
+ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSource.java:        long PrEvious = data.lastModified;
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSource.java:        data.lastModified = lastModified;
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSource.java:    private class StringData extends StringWriter {
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSource.java:        long lastModified = System.currentTimeMillis();
@@ -1579,13 +1579,13 @@ ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.jav
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.java:    private final String name;
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.java:    private final String qualifiedName;
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.java:    private final String descriptorName;
-ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.java:    private final String prefix;
+ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.java:    private final String PrEfix;
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.java:    private final String nameParameters;
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.java:    private final DefType defType;
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.java:    private D definition;
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.java:    private final int hashCode;
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.java:    public StringSourceDescriptor(String namespace, String name, String qualifiedName, String descriptorName,
-ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.java:            String prefix, String nameParameters, DefType defType, D definition) {
+ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.java:            String PrEfix, String nameParameters, DefType defType, D definition) {
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.java:        this.namespace = namespace;
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.java:        this.name = name;
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.java:        this.qualifiedName = qualifiedName;
@@ -1593,7 +1593,7 @@ ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.jav
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.java:        this.nameParameters = nameParameters;
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.java:        this.hashCode = Lists.<String> newArrayList(name == null ? null : name.toLowerCase(),
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.java:                namespace == null ? null : namespace.toLowerCase(),
-ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.java:                prefix == null ? null : prefix.toLowerCase(), defType.ordinal() + "").hashCode();
+ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.java:                PrEfix == null ? null : prefix.toLowerCase(), defType.ordinal() + "").hashCode();
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.java:    public void serialize(Json json) throws IOException {
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.java:        json.writeValue(qualifiedName);
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.java:    public int compareTo(DefDescriptor<?> other) {
@@ -1621,7 +1621,7 @@ ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.jav
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.java:        if (o instanceof DefDescriptor) {
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.java:            return getDefType() == e.getDefType() && name.equalsIgnoreCase(e.getName())
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.java:                    && (namespace == null ? e.getNamespace() == null : namespace.equalsIgnoreCase(e.getNamespace()))
-ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.java:                    && (prefix == null ? e.getPrefix() == null : prefix.equalsIgnoreCase(e.getPrefix()));
+ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.java:                    && (PrEfix == null ? e.getPrefix() == null : prefix.equalsIgnoreCase(e.getPrefix()));
 ruau/ruau/src/test/java/org/ruauframework/impl/source/StringSourceDescriptor.java:        return false;
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -1724,39 +1724,39 @@ ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:        
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:        for (Format format : Format.values()) {
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:            switch (format) {
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:            case JSON:
-ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                // Valid preload namespace
-ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                modeAndPreload = "{'mode':'DEV','preloads':['preloadTest']}";
+ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                // Valid PrEload namespace
+ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                modeAndPreload = "{'mode':'DEV','PrEloads':['preloadTest']}";
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                url = "/l/" + RuueTextUtil.urlencode(modeAndPreload) + "/app.json?ruau.token=+"
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                getOnRuueResourceServlet(format, url);
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                // Cause exception by not specifying CSRF token
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                // The response looks much like a JSON string as much as it
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                // looks like a piece of JS
-ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                modeAndPreload = "{'mode':'DEV','preloads':['preloadTest']}";
+ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                modeAndPreload = "{'mode':'DEV','PrEloads':['preloadTest']}";
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                url = "/l/" + RuueTextUtil.urlencode(modeAndPreload) + "/app.json";
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                getOnRuueResourceServlet(format, url);
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                break;
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:            case HTML:// No implementation for this format
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                break;
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:            case JS:
-ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                // Valid preload namespace
-ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                modeAndPreload = "{'mode':'DEV','preloads':['preloadTest']}";
+ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                // Valid PrEload namespace
+ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                modeAndPreload = "{'mode':'DEV','PrEloads':['preloadTest']}";
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                url = "/l/" + RuueTextUtil.urlencode(modeAndPreload) + "/app.js";
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                getOnRuueResourceServlet(format, url);
-ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                // Bad preload namespace, should cause an exception in
+ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                // Bad PrEload namespace, should cause an exception in
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                // RuueResourceServlet.
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                // But the response should still be in JavaScript mime type
-ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                modeAndPreload = "{'mode':'DEV','preloads':['test']}";
+ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                modeAndPreload = "{'mode':'DEV','PrEloads':['test']}";
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                url = "/l/" + RuueTextUtil.urlencode(modeAndPreload) + "/app.js";
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                getOnRuueResourceServlet(format, url);
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                break;
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:            case CSS:
-ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                // Valid preload namespace
-ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                modeAndPreload = "{'mode':'DEV','preloads':['preloadTest']}";
+ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                // Valid PrEload namespace
+ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                modeAndPreload = "{'mode':'DEV','PrEloads':['preloadTest']}";
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                url = "/l/" + RuueTextUtil.urlencode(modeAndPreload) + "/app.css";
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                getOnRuueResourceServlet(format, url);
-ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                // Bad preload namespace, should cause an exception in
+ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                // Bad PrEload namespace, should cause an exception in
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                // RuueResourceServlet.
-ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                modeAndPreload = "{'mode':'DEV','preloads':['test']}";
+ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                modeAndPreload = "{'mode':'DEV','PrEloads':['test']}";
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                url = "/l/" + RuueTextUtil.urlencode(modeAndPreload) + "/app.css";
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                getOnRuueResourceServlet(format, url);
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                break;
@@ -1766,13 +1766,13 @@ ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:        
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                getOnRuueResourceServlet(format, url);
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                break;
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:            case SVG:
-ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                // Valid preload namespace
-ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                modeAndPreload = "{'mode':'DEV','preloads':['preloadTest']}";
+ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                // Valid PrEload namespace
+ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                modeAndPreload = "{'mode':'DEV','PrEloads':['preloadTest']}";
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                url = "/l/" + RuueTextUtil.urlencode(modeAndPreload) + "/app.svg";
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                getOnRuueResourceServlet(format, url);
-ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                // Bad preload namespace, should cause an exception in
+ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                // Bad PrEload namespace, should cause an exception in
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                // RuueResourceServlet.
-ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                modeAndPreload = "{'mode':'DEV','preloads':['test']}";
+ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                modeAndPreload = "{'mode':'DEV','PrEloads':['test']}";
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                url = "/l/" + RuueTextUtil.urlencode(modeAndPreload) + "/app.svg";
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                getOnRuueResourceServlet(format, url);
 ruau/ruau/src/test/java/org/ruauframework/impl/RuueFormatsHttpTest.java:                break;
@@ -1847,7 +1847,7 @@ ruau/ruau/src/test/java/org/ruauframework/impl/caching/RuueServletCacheInvalidat
 ruau/ruau/src/test/java/org/ruauframework/impl/caching/RuueServletCacheInvalidationHttpTest.java:        Map<String, Object> actionParams = new HashMap<>();
 ruau/ruau/src/test/java/org/ruauframework/impl/caching/RuueServletCacheInvalidationHttpTest.java:        actionParams.put("param", "some string");
 ruau/ruau/src/test/java/org/ruauframework/impl/caching/RuueServletCacheInvalidationHttpTest.java:        actionInstance.put("params", actionParams);
-ruau/ruau/src/test/java/org/ruauframework/impl/caching/RuueServletCacheInvalidationHttpTest.java:        @SuppressWarnings("rawtypes")
+ruau/ruau/src/test/java/org/ruauframework/impl/caching/RuueServletCacheInvalidationHttpTest.java:        @SupPrEssWarnings("rawtypes")
 ruau/ruau/src/test/java/org/ruauframework/impl/caching/RuueServletCacheInvalidationHttpTest.java:        Map[] actions = { actionInstance };
 ruau/ruau/src/test/java/org/ruauframework/impl/caching/RuueServletCacheInvalidationHttpTest.java:        message.put("actions", actions);
 ruau/ruau/src/test/java/org/ruauframework/impl/caching/RuueServletCacheInvalidationHttpTest.java:        String jsonMessage = Json.serialize(message);
@@ -1860,7 +1860,7 @@ ruau/ruau/src/test/java/org/ruauframework/impl/caching/RuueServletCacheInvalidat
 ruau/ruau/src/test/java/org/ruauframework/impl/caching/RuueServletCacheInvalidationHttpTest.java:    private RuueContext startContext(String qualifiedName, Class<? extends BaseComponentDef> clazz) {
 ruau/ruau/src/test/java/org/ruauframework/impl/caching/RuueServletCacheInvalidationHttpTest.java:        return Ruue.getContextService().startContext(Mode.PROD, Format.JSON, Authentication.AUTHENTICATED,
 ruau/ruau/src/test/java/org/ruauframework/impl/caching/RuueServletCacheInvalidationHttpTest.java:                Ruue.getDefinitionService().getDefDescriptor(qualifiedName, clazz));
-ruau/ruau/src/test/java/org/ruauframework/impl/caching/RuueServletCacheInvalidationHttpTest.java:    @SuppressWarnings("unchecked")
+ruau/ruau/src/test/java/org/ruauframework/impl/caching/RuueServletCacheInvalidationHttpTest.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau/src/test/java/org/ruauframework/impl/caching/RuueServletCacheInvalidationHttpTest.java:    private void assertOutdated(String response) {
 ruau/ruau/src/test/java/org/ruauframework/impl/caching/RuueServletCacheInvalidationHttpTest.java:            fail("respose should end with " + "/*ERROR*/");
 ruau/ruau/src/test/java/org/ruauframework/impl/caching/RuueServletCacheInvalidationHttpTest.java:        Map<String, Object> json = (Map<String, Object>) new JsonReader().read(jsonString);
@@ -1962,7 +1962,7 @@ ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:    pr
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        private final String path;
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        protected final DefDescriptor<Definition> descriptor;
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        private DefDescriptor<Definition> createMockDescriptor(String namespace) {
-ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        	@SuppressWarnings("unchecked")
+ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        	@SupPrEssWarnings("unchecked")
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:			DefDescriptor<Definition> desc = Mockito.mock(DefDescriptor.class);
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        	Mockito.when(desc.getNamespace()).thenReturn(namespace);
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        public TestInstance() {
@@ -2051,7 +2051,7 @@ ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:      
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        TestInstance ti = new TestInstance("instance1");
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        iStack.pushInstance(ti, ti.getDescriptor());
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:            iStack.popInstance(new TestInstance("instance2"));
-ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:            fail("Expected error when trying to pop different instance than previously pushed");
+ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:            fail("Expected error when trying to pop different instance than PrEviously pushed");
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        } catch (Exception expected) {
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:            assertExceptionMessage(expected, RuueRuntimeException.class, "mismatched instance pop");
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:    public void testErrorSetAttributeNameWithoutClearing() {
@@ -2096,7 +2096,7 @@ ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:      
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        iStack.setAttributeName("attribute");
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        iStack.setAttributeIndex(42);
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:            iStack.setAttributeIndex(43);
-ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:            fail("Expected error when setting a new attribute index without clearing previous one");
+ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:            fail("Expected error when setting a new attribute index without clearing PrEvious one");
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        } catch (Exception expected) {
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:            assertExceptionMessage(expected, RuueRuntimeException.class, "missing clearAttributeIndex");
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:    private BaseComponent<?, ?> getComponentWithPath(final String path) {
@@ -2148,8 +2148,8 @@ ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:      
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        iStack.serializeAsPart(jsonMock);
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        assertEquals("Components should empty when no registered components", 0, iStack.getComponents().size());
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        verifyZeroInteractions(jsonMock);
-ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:    	String namespace_Priv = "previlege";
-ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:    	String namespace_UnPriv = "unprevilege";
+ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:    	String namespace_Priv = "PrEvilege";
+ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:    	String namespace_UnPriv = "unPrEvilege";
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:    	String name1 = "one";
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:    	String name2 = "two";
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:    	String name3 = "three";
@@ -2162,7 +2162,7 @@ ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:      
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        //start pushing
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        TestInstance one = new TestInstance(namespace_Priv,name1);
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        iStack.pushInstance(one, one.getDescriptor());
-ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        assertFalse("topUnprivileged is still null after pushing in one previleged instance:instance1", iStack.isUnprivileged());
+ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        assertFalse("topUnprivileged is still null after pushing in one PrEvileged instance:instance1", iStack.isUnprivileged());
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        TestInstance two = new TestInstance(namespace_UnPriv,name2);
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        iStack.pushInstance(two, two.getDescriptor());
 ruau/ruau/src/test/java/org/ruauframework/instance/InstanceStackTest.java:        assertTrue("topUnprivileged should become first unprivilege instance:instance2", iStack.isUnprivileged());
@@ -2316,7 +2316,7 @@ ruau/ruau/src/test/java/org/ruauframework/instance/AbstractActionImplTest.java: 
 ruau/ruau/src/test/java/org/ruauframework/instance/AbstractActionImplTest.java:        assertEquals("isStorable should not change on second setStorable", true, test.isStorable());
 ruau/ruau/src/test/java/org/ruauframework/instance/AbstractActionImplTest.java:        assertEquals("id should change on second setStorable", "s", test.getId());
 ruau/ruau/src/test/java/org/ruauframework/instance/AbstractActionImplTest.java:        ActionDef def = Mockito.mock(ActionDef.class);
-ruau/ruau/src/test/java/org/ruauframework/instance/AbstractActionImplTest.java:        @SuppressWarnings("unchecked")
+ruau/ruau/src/test/java/org/ruauframework/instance/AbstractActionImplTest.java:        @SupPrEssWarnings("unchecked")
 ruau/ruau/src/test/java/org/ruauframework/instance/AbstractActionImplTest.java:        DefDescriptor<ActionDef> expectedDesc = Mockito.mock(DefDescriptor.class);
 ruau/ruau/src/test/java/org/ruauframework/instance/AbstractActionImplTest.java:        assertSame("descriptor should work", expectedDesc, test.getDescriptor());
 ruau/ruau/src/test/java/org/ruauframework/instance/AbstractActionImplTest.java:    public void testParams() {
@@ -2692,7 +2692,7 @@ ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:        assertTrue("Empty list tbody should contain one row", tBodyElement.findElements(By.tagName("tr")).size() == 1);
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:        List<WebElement> bodyCellElements = getCellsInRow(getRowAt(tableElement, "tbody", 0), "td");
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:        assertTrue("Empty list tbody's single row should contain one cell", bodyCellElements.size() == 1);
-ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:        assertEquals("Empty list message was not present or was not what was expected",
+ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:        assertEquals("Empty list message was not PrEsent or was not what was expected",
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:                getEmptyLisViewMessage(tableElement), EMPTY_LIST_MESSAGE);
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:        assertTrue("tfoot element should contain no rows", tFootElement.findElements(By.tagName("tr")).size() == 0);
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:        WebElement tableElement = driver.findElement(By.id("ui:listView:test-empty-list-specified-columns"));
@@ -2710,7 +2710,7 @@ ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:        assertTrue("Empty list tbody should contain one row", tBodyElement.findElements(By.tagName("tr")).size() == 1);
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:        List<WebElement> bodyCellElements = getCellsInRow(getRowAt(tableElement, "tbody", 0), "td");
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:        assertTrue("Empty list tbody's single row should contain one cell", bodyCellElements.size() == 1);
-ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:        assertEquals("Empty list message was not present or was not what was expected",
+ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:        assertEquals("Empty list message was not PrEsent or was not what was expected",
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:                getEmptyLisViewMessage(tableElement), EMPTY_LIST_MESSAGE);
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:        assertTrue("tfoot element should contain no rows", tFootElement.findElements(By.tagName("tr")).size() == 0);
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:    public void testListGeneratedColumns() throws Exception {
@@ -2761,12 +2761,12 @@ ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:                        row.get(headerCells.get(j).toLowerCase()), rowCellElements.get(j).getText());
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:            // Fourth column will be Type:Email
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:            assertTrue(
-ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:                    "Email 'mailto' link was not present or did not contain correct text",
+ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:                    "Email 'mailto' link was not PrEsent or did not contain correct text",
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:                    isElementPresentInElementWithText("a", rowCellElements.get(3),
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:                            row.get(headerCells.get(3).toLowerCase())));
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:            assertTrue("Cell did not contain, or contained more than one, checkbox", inputFields.size() == 1);
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:            assertTrue(
-ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:                    "Link was not present or did not contain correct text",
+ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:                    "Link was not PrEsent or did not contain correct text",
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:                    isElementPresentInElementWithText("a", rowCellElements.get(5),
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:                            row.get(headerCells.get(5).toLowerCase())));
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:            // Seventh column will be Type:Index, whose value should be equal to
@@ -2793,7 +2793,7 @@ ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:                isGlobalVariableDefinedInWindow("headerClickFired"));
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:     * Check whether a variable is defined in a currently open browser window
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:     * @param variableName name of the variable we're looking for
-ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:     * @return true if the variable is present, false otherwise
+ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:     * @return true if the variable is PrEsent, false otherwise
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:    private boolean isGlobalVariableDefinedInWindow(String variableName) {
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:        String script = "return !(typeof " + variableName + " === 'undefined')";
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:        return (Boolean) ruauUITestingUtil.getRawEval(script);
@@ -2801,7 +2801,7 @@ ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:     * @param tagName tag of element we are looking for
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:     * @param parentElement parent of the element we are looking for
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:     * @param text the text we'd like to check for
-ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:     * @return true if element is present and text matches, false otherwise
+ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:     * @return true if element is PrEsent and text matches, false otherwise
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:    private boolean isElementPresentInElementWithText(String tagName, WebElement parentElement, String text) {
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:        List<WebElement> linkElements = parentElement.findElements(By.tagName(tagName));
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:            return false;
@@ -2813,7 +2813,7 @@ ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:    private List<String> getTextFromElements(List<WebElement> elements) {
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:        List<String> result = new ArrayList<>();
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:            result.add(element.getText());
-ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:     * Get a presumably empty listview's empty message
+ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:     * Get a PrEsumably empty listview's empty message
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:     * @param tableElement main element of listview
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:     * @return the text that appears in the canonical empty listview message location
 ruau/ruau/src/test/java/org/ruauframework/components/ui/listView/ListViewUITest.java:    private String getEmptyLisViewMessage(WebElement tableElement) {
@@ -2970,7 +2970,7 @@ ruau/ruau/src/test/java/org/ruauframework/components/ui/inputError/InputErrorUIT
 ruau/ruau/src/test/java/org/ruauframework/components/ui/inputError/InputErrorUITest.java:            verifyErrorMessage(input, errMsg);
 ruau/ruau/src/test/java/org/ruauframework/components/ui/inputError/InputErrorUITest.java:    private void clearError(boolean verifyErrMsg) throws Exception {
 ruau/ruau/src/test/java/org/ruauframework/components/ui/inputError/InputErrorUITest.java:        // Sometimes running ios tests through SauceLabs can be very slow. Watching the video recording, it appears to
-ruau/ruau/src/test/java/org/ruauframework/components/ui/inputError/InputErrorUITest.java:        // not be done processing the previous click when we try to send this click causing the click to be ignored and
+ruau/ruau/src/test/java/org/ruauframework/components/ui/inputError/InputErrorUITest.java:        // not be done processing the PrEvious click when we try to send this click causing the click to be ignored and
 ruau/ruau/src/test/java/org/ruauframework/components/ui/inputError/InputErrorUITest.java:        // the test to timeout on the following wait.
 ruau/ruau/src/test/java/org/ruauframework/components/ui/inputError/InputErrorUITest.java:            waitFor(3);
 ruau/ruau/src/test/java/org/ruauframework/components/ui/inputError/InputErrorUITest.java:        clearBtn.click();
@@ -2988,7 +2988,7 @@ ruau/ruau/src/test/java/org/ruauframework/components/ui/inputError/InputErrorUIT
 ruau/ruau/src/test/java/org/ruauframework/components/ui/inputError/InputErrorUITest.java:    private void verifyCss(WebElement element, boolean isError) throws Exception {
 ruau/ruau/src/test/java/org/ruauframework/components/ui/inputError/InputErrorUITest.java:        String inputClassValue = element.getAttribute("class");
 ruau/ruau/src/test/java/org/ruauframework/components/ui/inputError/InputErrorUITest.java:            assertTrue("On input error css not added", inputClassValue.contains(ERR_CSS));
-ruau/ruau/src/test/java/org/ruauframework/components/ui/inputError/InputErrorUITest.java:            assertFalse("On input error css should not be present", inputClassValue.contains(ERR_CSS));
+ruau/ruau/src/test/java/org/ruauframework/components/ui/inputError/InputErrorUITest.java:            assertFalse("On input error css should not be PrEsent", inputClassValue.contains(ERR_CSS));
 ruau/ruau/src/test/java/org/ruauframework/components/ui/button/ButtonUITest.java: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/test/java/org/ruauframework/components/ui/button/ButtonUITest.java: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau/src/test/java/org/ruauframework/components/ui/button/ButtonUITest.java: * you may not use this file except in compliance with the License.

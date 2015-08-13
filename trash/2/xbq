@@ -68,7 +68,7 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:         
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                eventType(wrapper, 'mousewheel', this);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                eventType(wrapper, 'DOMMouseScroll', this);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            eventType(this.scroller, 'transitionend', this);
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            eventType(this.scroller, SUPPORT.prefix + 'TransitionEnd', this);
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            eventType(this.scroller, SUPPORT.PrEfix + 'TransitionEnd', this);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            if (this._observeChanges()) {
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                this._initializeDOMObserver();
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * Fire a custom event by name.
@@ -127,7 +127,7 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:         
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                case 'resize':
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                    break;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                case 'transitionend':
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                case SUPPORT.prefix + 'TransitionEnd':
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                case SUPPORT.PrEfix + 'TransitionEnd':
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                    this._transitionEnd(e);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                    break;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                case 'wheel':
@@ -142,7 +142,7 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        _
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            if ( !this.enabled || (this._initiated && EVENT_TYPE[e.type] !== this._initiated)) {
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var point = e.touches ? e.touches[0] : e;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            // Reset internal state
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            this._initiated      = EVENT_TYPE[e.type]; // Register eventType so we can't prevent conflicts
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            this._initiated      = EVENT_TYPE[e.type]; // Register eventType so we can't PrEvent conflicts
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            this.moved           = false;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            this._transitionTime();    // Reset CSS transition timing
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            this._isAnimating = false;
@@ -157,13 +157,13 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:         
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            this._lastPosition  = this.scrollVertical ? this.startY : this.startX;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            this._fire('beforeScrollStart', ACTION_GESTURE_START, e);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * Invoked if a gestureStart event occurs while scrolling.
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * By default, it will `preventDefault()` the start event so if a link is clicked, 
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * By default, it will `PrEventDefault()` the start event so if a link is clicked, 
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * it won't trigger browser navigation.
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * @params e {event} The gesturemove event provided by the browser
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            e.preventDefault();
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            e.PrEventDefault();
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * Tracks and calculates the velocity of the gesture between two points in time.
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * Executed when scroller option `debounce: true` in the context of a `requestAnimationFrame` (every ~17ms).
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * It uses the delta for both position and time between the current and previous frames to get the current velocity value,
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * It uses the delta for both position and time between the current and PrEvious frames to get the current velocity value,
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * then it applies an exponential moving average filter to weight and smooth out the final velocity.
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * @params e {event} The gesturemove event provided by the browser
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * @method _trackVelocity
@@ -287,7 +287,7 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        *
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * @private
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            if (!this.enabled) {
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            // Stop browser defaults
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            e.preventDefault();
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            e.PrEventDefault();
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            e.stopPropagation();
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var self                 = this,
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                wheelDeltaX, wheelDeltaY, newX, newY;
@@ -423,7 +423,7 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:         
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                return false;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            this._scrollTo(x, y, time, EASING.regular);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * Sets the transition easing function property into the scroller node.
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * @params easing {integer} String representation of the CSS easing function
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * @params easing {integer} String rePrEsentation of the CSS easing function
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * @method _transitionEasing
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * @private
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        _transitionEasing: function (easing) {
@@ -494,8 +494,8 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:         
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * Prepend an Array of elements into the scroller.
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * This function is overriden by SurfaceManager to allow a custom DOM manipulation.
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * @params items {HTMLElement[]} Array of items to insert in the scroller
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * @method _prependData
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        _prependData: function (items) {
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * @method _PrEpendData
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        _PrEpendData: function (items) {
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var docfrag = w.document.createDocumentFragment(),
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                scrollerContainer = this.scroller,
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                ptrContainer = scrollerContainer.firstChild;
@@ -591,11 +591,11 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        	
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * It's recommended to use this method to add content to the scroller
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * instead of manually adding it to the DOM directly,
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * because the scroller will be able to optimize the rendering lifecycle depending on the configuration.
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * @params data {HTMLElement | HTMLElement[] | String} Elements to prepend into the scroller
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        prependItems: function (data) {
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * @params data {HTMLElement | HTMLElement[] | String} Elements to PrEpend into the scroller
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        PrEpendItems: function (data) {
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var parsedData = HELPERS.parseDOM(data);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            if (parsedData) {
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                this._prependData(parsedData);
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                this._PrEpendData(parsedData);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * It's recommended to use this method to add content to the scroller
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * instead of manually adding it to the DOM directly,
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * because the scroller will be able to optimize the rendering lifecycle depending on the configuration.
@@ -675,8 +675,8 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:         
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            height = surface.dom.offsetHeight;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            width  = surface.dom.offsetWidth;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            if (this.scrollVertical) {
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                offsetY = config.preCalculateSize ?  offset - height : offset;
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                offsetX = config.preCalculateSize ?  offset - width : offset;
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                offsetY = config.PrECalculateSize ?  offset - height : offset;
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                offsetX = config.PrECalculateSize ?  offset - width : offset;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            surface.dom.style[STYLES.transform] = 'matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,' + offsetX +',' + offsetY + ', 0, 1)';
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            surface.state       = 1;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            surface.contentIndex = index;
@@ -753,7 +753,7 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:         
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        _positionedSurfacesUnshift: function () {
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var topSurface = this._positionedSurfacesFirst(),
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                index      = this._mod(topSurface.contentIndex - 1),
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                payload    = {index: index, offset: topSurface.offset, preCalculateSize: true},
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                payload    = {index: index, offset: topSurface.offset, PrECalculateSize: true},
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                surface;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                surface = this._getAvailableSurface();
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                this._attachItemInSurface(this.items[index], surface, payload);
@@ -872,7 +872,7 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:         
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                self._setWrapperSize();
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            this._resetSurfaces();
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            this._initializePositions();
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        _prependData: function (data) {
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        _PrEpendData: function (data) {
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var item, i;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            for (i = 0; i < data.length; i++) {
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                item = {dom: data[i]};
@@ -890,7 +890,7 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:         
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                this.items.push(spacer);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var parsedData = HELPERS.parseDOM(items);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            if (parsedData) {
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                this._prependData(parsedData);
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                this._PrEpendData(parsedData);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        appendItems: function (items) {
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var parsedData = HELPERS.parseDOM(items);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            if (parsedData) {
@@ -959,7 +959,7 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:         
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                HELPERS.unbind(this.indicator, 'mousedown', this);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        _start: function (e) {
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var point = e.touches ? e.touches[0] : e;
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            e.preventDefault();
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            e.PrEventDefault();
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            e.stopPropagation();
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            this.transitionTime(0);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            this.initiated  = true;
@@ -973,7 +973,7 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:         
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var point     = e.touches ? e.touches[0] : e,
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                timestamp = NOW(),
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                deltaX, deltaY, newX, newY;
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            e.preventDefault();
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            e.PrEventDefault();
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            e.stopPropagation();
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            deltaX = point.pageX - this.lastPointX;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            deltaY = point.pageY - this.lastPointY;
@@ -983,7 +983,7 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:         
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            newY = this.y + deltaY;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            if (!this.initiated) {
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            this.initiated = false;
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            e.preventDefault();
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            e.PrEventDefault();
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            e.stopPropagation();
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var self = this;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            } else if ( x > this.maxPosX ) {
@@ -1234,7 +1234,7 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:         
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                this._ptrTriggered = false;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                    self._resetPosition(self._ptrSnapTime);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                    self._setPTRErrorState(false);
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                this.prependItems(data);
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                this.PrEpendItems(data);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                this._ptrTriggered = false;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                this._setPTRLoadingState(false);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                    self._resetPosition(self._ptrSnapTime);
@@ -1493,7 +1493,7 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:         
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            sizeNeeded   = this.activeOffset;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                    'Items are not sufficient to fulfill all scrollable area');
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                surface       = this._getAvailableSurface();
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                heightSum     += this._attachItemInSurface(item, surface, {index: j, offset: positioned[0].offset, preCalculateSize: true});
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                heightSum     += this._attachItemInSurface(item, surface, {index: j, offset: positioned[0].offset, PrECalculateSize: true});
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                positioned.unshift(surface);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:_initSnapPlugin: function () {
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js: * Copyright (C) 2013 salesforce.com, inc.
@@ -1692,7 +1692,7 @@ ruau/ruau-components/src/main/components/ui/scroller/scroller.cmp:    <ruau:attr
 ruau/ruau-components/src/main/components/ui/scroller/scroller.cmp:    <ruau:attribute name="enabled"               type="Boolean" default="true"     description="Sets the default state of the scroller"/>
 ruau/ruau-components/src/main/components/ui/scroller/scroller.cmp:    <ruau:attribute name="useCSSTransition"      type="Boolean"                    description="Denotes whether to use css transitions. By default scroller will decide depending on the platform"/>
 ruau/ruau-components/src/main/components/ui/scroller/scroller.cmp:    <ruau:attribute name="useNativeScroller"     type="Boolean" default="false"    description="Leverage native scrolling"/>
-ruau/ruau-components/src/main/components/ui/scroller/scroller.cmp:    <ruau:attribute name="preventDefaultOnMove"  type="Boolean" default="false"    description="preventDefault native events on mouse move"/>
+ruau/ruau-components/src/main/components/ui/scroller/scroller.cmp:    <ruau:attribute name="PrEventDefaultOnMove"  type="Boolean" default="false"    description="preventDefault native events on mouse move"/>
 ruau/ruau-components/src/main/components/ui/scroller/scroller.cmp:    <ruau:attribute name="debounce"              type="Boolean" default="false"    description="Separate the gesture move from the animation"/>
 ruau/ruau-components/src/main/components/ui/scroller/scroller.cmp:    <ruau:attribute name="snap"                  type="Boolean" default="false"    description="Enable snap behaviour on the scroller (adds the Snap plugins to the scroller)"/>
 ruau/ruau-components/src/main/components/ui/scroller/scroller.cmp:    <ruau:attribute name="endless"               type="Boolean" default="false"    description="Activates the endless plugin (gpuOptimization needs to be enable for this)"/>
@@ -1763,14 +1763,14 @@ ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColum
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                            actual = true;
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                    target: { checked: null }
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                var actual = null;
-ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                component.get("c.changeHandler").runDeprecated(domEvent);
+ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                component.get("c.changeHandler").runDePrEcated(domEvent);
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                ruau.test.assertTrue(actual);
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:            function CallsHelperFireEvent(component) {
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                var domEvent = { target: { checked: null } };
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                var mockWhile = this.getHelperMock(component, "fireEvent", function(){
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                    actual = true;
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                var actual = false;
-ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                    component.get("c.changeHandler").runDeprecated(domEvent);
+ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                    component.get("c.changeHandler").runDePrEcated(domEvent);
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                ruau.test.assertTrue(actual);
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:            function ComponentPassedToFireEvent(component){
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                var expected = component;
@@ -1778,7 +1778,7 @@ ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColum
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                var mockWhile = this.getHelperMock(component, "fireEvent", function(component){
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                    actual = component;
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                var actual = false;
-ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                    component.get("c.changeHandler").runDeprecated(domEvent);
+ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                    component.get("c.changeHandler").runDePrEcated(domEvent);
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                ruau.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:            function EventNamePassedToFireEvent(component){
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                var expected = "onchange";
@@ -1786,7 +1786,7 @@ ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColum
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                var mockWhile = this.getHelperMock(component, "fireEvent", function(component, eventName){
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                    actual = eventName;
-ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                    component.get("c.changeHandler").runDeprecated(domEvent);
+ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                    component.get("c.changeHandler").runDePrEcated(domEvent);
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                ruau.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:            function EventCategoryPassedToFireEvent(component){
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                var expected = "checkbox";
@@ -1794,7 +1794,7 @@ ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColum
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                var mockWhile = this.getHelperMock(component, "fireEvent", function(component, eventName, category){
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                    actual = category;
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                var actual = null;
-ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                    component.get("c.changeHandler").runDeprecated(domEvent);
+ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                    component.get("c.changeHandler").runDePrEcated(domEvent);
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                ruau.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:            function RawDomEventPassedToFireEvent(component){
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                var domEvent = { target: { checked: null } };
@@ -1802,7 +1802,7 @@ ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColum
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                var mockWhile = this.getHelperMock(component, "fireEvent", function(component, eventName, category, rawDomEvent){
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                    actual = rawDomEvent;
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                var actual = null;
-ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                    component.get("c.changeHandler").runDeprecated(domEvent);
+ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                    component.get("c.changeHandler").runDePrEcated(domEvent);
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                ruau.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:            function CheckedInformationPassedToFireEvent(component){
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                var expected = true;
@@ -1810,7 +1810,7 @@ ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColum
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                var mockWhile = this.getHelperMock(component, "fireEvent", function(component, eventName, category, rawDomEvent, data){
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                    actual = data.checked;
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                var actual = null;
-ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                    component.get("c.changeHandler").runDeprecated(domEvent);
+ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                    component.get("c.changeHandler").runDePrEcated(domEvent);
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:                ruau.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:    getHelperMock:function (component, name, mock) {
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckboxTest.js:        return this.getMock(this.getHelper(component), name, mock);
@@ -1862,13 +1862,13 @@ ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:    
 ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:    limitations under the License.
 ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:<ruau:documentation>
 ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:			A <code>ui:outputEmail</code> component represents an email output that is wrapped in an HTML <code>span</code> tag.
+ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:			A <code>ui:outputEmail</code> component rePrEsents an email output that is wrapped in an HTML <code>span</code> tag.
 ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:			This component can be used with <code>ui:inputEmail</code>, which takes in an email input. 
 ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:			The email output is wrapped in an HTML anchor element and <code>mailto</code> is automatically appended to it.
 ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:			This is a simple set up of a <code>ui:outputEmail</code> component.
-ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:		<pre>&lt;ui:outputEmail value="abc@email.com" label="abc@email.com"/></pre>
-ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:		<p>The previous example renders the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:		<pre>&lt;a href="mailto:abc@email.com" class="uiOutputEmail">abc@email.com&lt;/span></pre>
+ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:		<PrE>&lt;ui:outputEmail value="abc@email.com" label="abc@email.com"/></pre>
+ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:		<p>The PrEvious example renders the following HTML.</p>
+ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:		<PrE>&lt;a href="mailto:abc@email.com" class="uiOutputEmail">abc@email.com&lt;/span></pre>
 ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:	</ruau:description>	
 ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:	<ruau:example name="outputExample" ref="uiExamples:outputExample" label="Using the Output Components">
 ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:    	<p>This example shows how you can bind data to the output components by using component attributes.</p>
@@ -2132,7 +2132,7 @@ ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:	//number
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:	//indicates only the selected page is visible or not
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:    //Minimum distance to swipe to find out the intended swipe direction
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:    //navContainer height, hardcode for now so it does not require updating the size dynamically if width and height is set
-ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:    //number of previous or next pages to mark as visible while user is swiping
+ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:    //number of PrEvious or next pages to mark as visible while user is swiping
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		this.initPages(cmp);
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		var carouselSize = this.getCarouselSize(cmp);
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		cmp._width = carouselSize.width;
@@ -2177,7 +2177,7 @@ ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		} else 
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			for ( var i = 0; i < pageModels.length; i++) {
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:				page = pageModels[i];
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:				//create new instance of carousePage and pass pageModel to it
-ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:				 var component=$A.componentService.newComponentDeprecated({
+ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:				 var component=$A.componentService.newComponentDePrEcated({
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			            componentDef:{descriptor: 'markup://ui:carouselPage'},
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			            //page index starts with 1
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			            attributes:{values: {
@@ -2215,7 +2215,7 @@ ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		cmp._st
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			startx: point.pageX,
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			starty: point.pageY
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		if (cmp._startPos && this.hasMoved(cmp, evt, this.HORIZONTAL)) {
-ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:    		//swiping horizontally, stop event from bubbling up to prevent parent scroller from moving
+ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:    		//swiping horizontally, stop event from bubbling up to PrEvent parent scroller from moving
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			evt.stopPropagation();
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		if (this.hasMoved(cmp, evt)) {
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			$A.util.squash(evt, true);
@@ -2254,7 +2254,7 @@ ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:				//nee
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:					var curPage = me.getSelectedPage(cmp);
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:					if (curPage == selectedPage) {
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:						scroller.scrollToPage(--selectedPage, null, 0);
-ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:	 * Update carousel and page size if carousel width is not pre-defined
+ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:	 * Update carousel and page size if carousel width is not PrE-defined
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:	updateSize: function(cmp, force) {
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		var width = cmp.get('v.width'),
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		var pages = this.getPageComponents(cmp);
@@ -2298,8 +2298,8 @@ ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:	handlePa
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		var keyCode = evt.getParam("event").keyCode;
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:        // left arrow or right arrow
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:            var pageComps = this.getPageComponents(cmp),
-ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:            	prevPage = evt.getParam("pageIndex"),
-ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:            	pageIndex = prevPage;
+ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:            	PrEvPage = evt.getParam("pageIndex"),
+ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:            	pageIndex = PrEvPage;
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:            if (keyCode === 37 && pageIndex > 0) {  // left arrow
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:            	pageIndex--;
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:            if (keyCode === 39 && pageIndex < pageComps.length) {  // right arrow
@@ -2312,13 +2312,13 @@ ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:         
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:    		cmp._keyPageSelectionTimeout = window.setTimeout(function() {
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:    			cmp._keyPageSelectionTimeout = null;
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:    			me.selectPage(cmp, pageIndex);
-ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:            if (evt.preventDefault) evt.preventDefault();
+ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:            if (evt.PrEventDefault) evt.preventDefault();
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:	 * Handle scrollStart event
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:	handleScrollMove: function(cmp, evt) {
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		var scroller = this.getScroller(cmp),
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			nextPage,
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			toPage,
-ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			prevSelectedPage = cmp.get('v.priv_currentPage');
+ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			PrEvSelectedPage = cmp.get('v.priv_currentPage');
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		if (scroller.absDistX > this.SCROLL_START_THRESHOLD && !cmp._isScrollStartProcessed) {
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			var pages = this.getPageComponents(cmp);
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			cmp._isScrollStartProcessed = true;
@@ -2334,14 +2334,14 @@ ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:	handleSc
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		var scroller = this.getScroller(cmp),
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			//scroller page starts with 0
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			currentPageX = scroller.currPageX + 1,
-ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			prevSelectedPage = cmp.get('v.priv_currentPage');
+ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			PrEvSelectedPage = cmp.get('v.priv_currentPage');
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		cmp._isScrollStartProcessed = false;
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		cmp._isMoving = false;
-ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		if (prevSelectedPage == currentPageX) {
+ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		if (PrEvSelectedPage == currentPageX) {
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			//scrolled back to the same page
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		var action = cmp.get("v.onPageChange");
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		if (action) {
-ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			action.runDeprecated(cmp);
+ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			action.runDePrEcated(cmp);
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		this.pageSelected(cmp, currentPageX);
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:	showPage: function(pageCmp, pageIndex){
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		var e = pageCmp.get('e.show');
@@ -2351,16 +2351,16 @@ ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		var e =
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		e.setParams({'pageIndex' : pageIndex});
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:	 * Page is selected, delegate the event to page component
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:	pageSelected: function(cmp, pageIndex) {
-ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		var prevSelectedPage = cmp.get('v.priv_currentPage');
+ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		var PrEvSelectedPage = cmp.get('v.priv_currentPage');
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		var me = this;
-ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		if (prevSelectedPage == pageIndex) {
+ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		if (PrEvSelectedPage == pageIndex) {
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		var curPageCmp = this.getPageComponentFromIndex(cmp, pageIndex);
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		if (curPageCmp && curPageCmp.isRendered()) {
-ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			var prePageCmp = this.getPageComponentFromIndex(cmp, prevSelectedPage);
+ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			var PrEPageCmp = this.getPageComponentFromIndex(cmp, prevSelectedPage);
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			this.setSelectedPage(cmp, pageIndex);
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			me.firePageSelectedEventToPageIndicator(cmp, curPageCmp, pageIndex);
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			cmp.set('v.priv_currentPage', pageIndex);
-ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			me.firePageSelectedEventToPage(prePageCmp, pageIndex);
+ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			me.firePageSelectedEventToPage(PrEPageCmp, pageIndex);
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			me.firePageSelectedEventToPage(curPageCmp, pageIndex);
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			var pageModel = me.getPageModelFromIndex(cmp, pageIndex);
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:				if (cmp.isValid()) {
@@ -2408,10 +2408,10 @@ ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			e.setP
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:	 * Selecting a page from non-scrolling events
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:	selectPage : function(cmp, pageIndex, time) {
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		var pages = this.getPageComponents(cmp),
-ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			prevSelectedPage = cmp.get('v.priv_currentPage');
-ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		if (pageIndex > 0 && pageIndex <= pages.length && prevSelectedPage !== pageIndex) {
+ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			PrEvSelectedPage = cmp.get('v.priv_currentPage');
+ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		if (pageIndex > 0 && pageIndex <= pages.length && PrEvSelectedPage !== pageIndex) {
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			//show all pages in between before scrolling for better UI experience
-ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			var from = prevSelectedPage == -1 ? pageIndex : (prevSelectedPage < pageIndex ? ++prevSelectedPage : --prevSelectedPage);
+ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			var from = PrEvSelectedPage == -1 ? pageIndex : (prevSelectedPage < pageIndex ? ++prevSelectedPage : --prevSelectedPage);
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			//save the pageIndex, so that it won't be hide by the callback in the timer, which could cause flickering and performance issue
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			this.setSelectedPage(cmp, pageIndex);
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			this.showPages(cmp, from, pageIndex);
@@ -2455,7 +2455,7 @@ ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		return 
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:	getSnap : function(cmp) {
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		var id = cmp.getGlobalId().replace(';', '_').replace(':', '-');
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		return cmp.get('v.continuousFlow') != true ? 'section.snap-class-' + id + '' : null;
-ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:	 * Buffer the execution of the function, if during the time interval, the function is call again, the previous execution will be canceled
+ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:	 * Buffer the execution of the function, if during the time interval, the function is call again, the PrEvious execution will be canceled
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:	delayHideAllUnselectedPages : function(cmp) {
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:		if (!cmp._delayHidePagesTimer) {
 ruau/ruau-components/src/main/components/ui/carousel/carouselHelper.js:			var that = this;
@@ -2504,7 +2504,7 @@ ruau/ruau-components/src/main/components/ui/carousel/carouselController.js:     
 ruau/ruau-components/src/main/components/ui/carousel/carouselController.js:    pagerClicked: function (cmp, evt, helper) {    	
 ruau/ruau-components/src/main/components/ui/carousel/carouselController.js:        var pageIndex = evt.getParam("pageIndex");
 ruau/ruau-components/src/main/components/ui/carousel/carouselController.js:        helper.handlePagerClicked(cmp, pageIndex);
-ruau/ruau-components/src/main/components/ui/carousel/carouselController.js:        if (evt.preventDefault) evt.preventDefault();
+ruau/ruau-components/src/main/components/ui/carousel/carouselController.js:        if (evt.PrEventDefault) evt.preventDefault();
 ruau/ruau-components/src/main/components/ui/carousel/carouselController.js:     * Handle key event from page indicator
 ruau/ruau-components/src/main/components/ui/carousel/carouselController.js:    pagerKeyed: function (cmp, evt, helper) {	
 ruau/ruau-components/src/main/components/ui/carousel/carouselController.js:        helper.handlePagerKeyed(cmp, evt);
@@ -2629,14 +2629,14 @@ ruau/ruau-components/src/main/components/ui/carousel/carousel.cmp:		    	<div ru
 ruau/ruau-components/src/main/components/ui/carousel/carousel.cmp:		    		<!--TODO: each page should has its own spinner -->
 ruau/ruau-components/src/main/components/ui/carousel/carousel.cmp:		    		<ruau:if isTrue="{!v.spinner.length > 0}"> 
 ruau/ruau-components/src/main/components/ui/carousel/carousel.cmp:			   		</ruau:if>
-ruau/ruau-components/src/main/components/ui/carousel/carousel.cmp:			    	<ui:scrollerDeprecated ruau:id="scroller"			    		
+ruau/ruau-components/src/main/components/ui/carousel/carousel.cmp:			    	<ui:scrollerDePrEcated ruau:id="scroller"			    		
 ruau/ruau-components/src/main/components/ui/carousel/carousel.cmp:			    	 	class="scroll-container"			    	 	
 ruau/ruau-components/src/main/components/ui/carousel/carousel.cmp:			    	   	vScroll="false"			    	   				    	   				    	   
 ruau/ruau-components/src/main/components/ui/carousel/carousel.cmp:			    	   	snap="{!v.priv_snap}"
 ruau/ruau-components/src/main/components/ui/carousel/carousel.cmp:			    	   	scrollContentClass="{!v.priv_scrollContentClass}"
 ruau/ruau-components/src/main/components/ui/carousel/carousel.cmp:			    	   	useTransition="{!v.useTransition}">
 ruau/ruau-components/src/main/components/ui/carousel/carousel.cmp:							{!v.pageComponents}
-ruau/ruau-components/src/main/components/ui/carousel/carousel.cmp:					</ui:scrollerDeprecated>					
+ruau/ruau-components/src/main/components/ui/carousel/carousel.cmp:					</ui:scrollerDePrEcated>					
 ruau/ruau-components/src/main/components/ui/carousel/carousel.cmp:				<ruau:if isTrue="{!v.continuousFlow != true &amp;&amp; v.pageIndicatorPosition == 'bottom'}" >
 ruau/ruau-components/src/main/components/ui/carousel/carousel.cmp:					<nav ruau:id="navContainer" class="{!'carousel-nav-container carousel-nav-position-' + v.pageIndicatorPosition}" role="tablist">        		 
 ruau/ruau-components/src/main/components/ui/carousel/carousel.cmp:	        			<ui:carouselPageIndicator />      		 
@@ -2708,7 +2708,7 @@ ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:			if
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:				trigger[0].set("v.label", triggerLabel);
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:			trigger[0].addHandler('click', cmp, 'c.onOpen');
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:		} else if (triggerLabel) {
-ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:			var menuTrigger = $A.componentService.newComponentDeprecated({
+ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:			var menuTrigger = $A.componentService.newComponentDePrEcated({
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:	            	"descriptor" : "markup://ui:menuTriggerLink"
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:	            "attributes" : {
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:	            	"values" : {
@@ -2759,7 +2759,7 @@ ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:		cmp
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:		this.setVisible(cmp, false);
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:		var action = cmp.get('v.onCancel');
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:        if (action) {
-ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:        	action.runDeprecated();
+ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:        	action.runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:	handleApply : function(cmp) {
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:		this.removeEventHandler(cmp);
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:		cmp.set('v.visible', false, true);
@@ -2769,9 +2769,9 @@ ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:		if 
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:			var result = [], order;
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:			var selectedItems = this.getSelectedMenuItems(cmp);
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:			for (var i=0; i < selectedItems.length; i++) {
-ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:				// append prefix for descending order
+ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:				// append PrEfix for descending order
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:				result.push({ sortBy: order + selectedItems[i].fieldName, label: selectedItems[i].label });
-ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:			action.runDeprecated(result);
+ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:			action.runDePrEcated(result);
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:	 * Reset selected items and sort orders
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:		/*var sMap = cmp._sortOrderMap;
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:		for (var prop in sMap) {
@@ -2796,7 +2796,7 @@ ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:	pars
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:		var ret = [];
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:			var fieldName;
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:			for (var i=0; i<sortBy.length; i++) {
-ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:				//fieldName starts with "-" prefix means descending
+ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:				//fieldName starts with "-" PrEfix means descending
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:	    			var fn = sortBy[i].substring(1); 
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:	    			ret.push({fieldName: fn, ascending: false});
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:	    			ret.push({fieldName: sortBy[i], ascending: true});
@@ -2959,7 +2959,7 @@ ruau/ruau-components/src/main/components/ui/listSorter/listSorter.cmp:	<ruau:att
 ruau/ruau-components/src/main/components/ui/listSorter/listSorter.cmp:	<ruau:attribute name="cancelLabel" type="String" default="Cancel" description="The label for the cancel button." />
 ruau/ruau-components/src/main/components/ui/listSorter/listSorter.cmp:	<ruau:attribute name="applyLabel" type="String" default="Apply" description="The label for the apply button." />
 ruau/ruau-components/src/main/components/ui/listSorter/listSorter.cmp:	<ruau:attribute name="visible" type="Boolean" default="false" description="Controls the visibility of the component."/>		
-ruau/ruau-components/src/main/components/ui/listSorter/listSorter.cmp:	<ruau:attribute name="items" type="Object[]" description="An array of arbitrary map objects representing the rows of data in the list." />
+ruau/ruau-components/src/main/components/ui/listSorter/listSorter.cmp:	<ruau:attribute name="items" type="Object[]" description="An array of arbitrary map objects rePrEsenting the rows of data in the list." />
 ruau/ruau-components/src/main/components/ui/listSorter/listSorter.cmp:	<ruau:attribute name="defaultSelectedItems" type="Object" description="Default selected row item." />
 ruau/ruau-components/src/main/components/ui/listSorter/listSorter.cmp:	<ruau:attribute name="triggerLabel" type="String" description="The text displayed on the trigger component." />
 ruau/ruau-components/src/main/components/ui/listSorter/listSorter.cmp:	<ruau:attribute name="ascendingLabel" type="String" default="Ascending" description="Assistive text label for the ascending button" />
@@ -2968,7 +2968,7 @@ ruau/ruau-components/src/main/components/ui/listSorter/listSorter.cmp:	<ruau:att
 ruau/ruau-components/src/main/components/ui/listSorter/listSorter.cmp:	<ruau:attribute name="modal" type="Boolean" default="true" description="Determines whether the component is a modal dialog." />
 ruau/ruau-components/src/main/components/ui/listSorter/listSorter.cmp:	<ruau:attribute name="rowVar" type="String" description="The name by which to refer to the current data object inside of the sorter for each sorter row."/>
 ruau/ruau-components/src/main/components/ui/listSorter/listSorter.cmp:	<ruau:attribute name="rowDef" type="Ruue.ComponentDefRef[]" description="Component definition to use for each row in the list sorter"/> 	
-ruau/ruau-components/src/main/components/ui/listSorter/listSorter.cmp:	<ruau:attribute name="onApply" type="Ruue.Action" description="The action invoked when the user click on the apply button. The selected items are passed in as the argument. If the sort order is descending, the prefix '-' is appended to the the item." />
+ruau/ruau-components/src/main/components/ui/listSorter/listSorter.cmp:	<ruau:attribute name="onApply" type="Ruue.Action" description="The action invoked when the user click on the apply button. The selected items are passed in as the argument. If the sort order is descending, the PrEfix '-' is appended to the the item." />
 ruau/ruau-components/src/main/components/ui/listSorter/listSorter.cmp:	<ruau:attribute name="onOpen" type="Ruue.Action" description="The action invoked when the user click on the trigger to open the sorter component." />
 ruau/ruau-components/src/main/components/ui/listSorter/listSorter.cmp:	<ruau:attribute name="onCancel" type="Ruue.Action" description="The action invoked when the user click on the cancel button or hit ESC key to close the listSorter component." />
 ruau/ruau-components/src/main/components/ui/listSorter/listSorter.cmp:	<ruau:registerEvent name="refresh" type="ui:refresh"/>

@@ -149,11 +149,11 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaTypeDef.java: 
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaTypeDef.java:    public void serialize(Json json) throws IOException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaTypeDef.java:        json.writeString(getName());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaTypeDef.java:     * @return The Java class wrapped by this Ruue TypeDef
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaTypeDef.java:    public Object getExternalType(String prefix) throws QuickFixException {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaTypeDef.java:        prefix = prefix.toLowerCase();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaTypeDef.java:        if (!prefix.equals("java")) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaTypeDef.java:            TypeDef typeDef = DefDescriptorImpl.getAssociateDescriptor(descriptor, TypeDef.class, prefix).getDef();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaTypeDef.java:                return typeDef.getExternalType(prefix);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaTypeDef.java:    public Object getExternalType(String PrEfix) throws QuickFixException {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaTypeDef.java:        PrEfix = prefix.toLowerCase();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaTypeDef.java:        if (!PrEfix.equals("java")) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaTypeDef.java:            TypeDef typeDef = DefDescriptorImpl.getAssociateDescriptor(descriptor, TypeDef.class, PrEfix).getDef();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaTypeDef.java:                return typeDef.getExternalType(PrEfix);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaTypeDef.java:        return clazz;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaTypeDef.java:        return descriptor.getQualifiedName();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaTypeDef.java:    public Object valueOf(Object value) {
@@ -282,8 +282,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/LocalizedConverter
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/LocalizedConverter.java: * implement all the required methods listed here directly, or subclass a
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/LocalizedConverter.java: * non-localized version to pick some up for free.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/LocalizedConverter.java:public interface LocalizedConverter<F, T> {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/LocalizedConverter.java:     * This was previously a child of Converter, but the Ruue service loader
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/LocalizedConverter.java:     * loads by class type and precaches all the converters for performance. If
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/LocalizedConverter.java:     * This was PrEviously a child of Converter, but the Ruue service loader
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/LocalizedConverter.java:     * loads by class type and PrEcaches all the converters for performance. If
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/LocalizedConverter.java:     * this extends Converter the classes that implement this will be put into
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/LocalizedConverter.java:     * BOTH caches (that's bad). However the implementing classes can extend
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/LocalizedConverter.java:     * classes that implement Converter and only get put into a single cache.
@@ -388,7 +388,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaLocalizedTypeU
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaLocalizedTypeUtil.java:     * @param trim
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaLocalizedTypeUtil.java:     * @param locale
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaLocalizedTypeUtil.java:     * @return a converted T
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaLocalizedTypeUtil.java:    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaLocalizedTypeUtil.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaLocalizedTypeUtil.java:    public static <F, T> T convert(F value, Class<T> to, String of, boolean trim, RuueLocale locale) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaLocalizedTypeUtil.java:        if (value == null) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaLocalizedTypeUtil.java:        // if no localized version exists, use the standard convert utility
@@ -428,7 +428,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaLocalizedTypeU
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaLocalizedTypeUtil.java:        return convert(value, to, of, trim, null);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaLocalizedTypeUtil.java:     * Returns a LocalizedConverter to go from F to T, or null if one is not
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaLocalizedTypeUtil.java:     * available. If 'of' is not null, it indicates that 'to' is a container of
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaLocalizedTypeUtil.java:    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaLocalizedTypeUtil.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaLocalizedTypeUtil.java:    private static <F, T> LocalizedConverter<F, T> getConverter(Class<F> from, Class<T> to, String of) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaLocalizedTypeUtil.java:        JavaLocalizedTypeUtil typeUtil = get();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/type/JavaLocalizedTypeUtil.java:            Map<String, LocalizedConverter<?, ?>> map = typeUtil.converters.get(from.getName());
@@ -681,7 +681,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/controller/JavaControll
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/controller/JavaControllerDefImpl.java:import org.ruauframework.def.DefDescriptor.DefType;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/controller/JavaControllerDefImpl.java:import org.ruauframework.def.Definition;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/controller/JavaControllerDefImpl.java:import org.ruauframework.def.JavaControllerDef;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/controller/JavaControllerDefImpl.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/controller/JavaControllerDefImpl.java:import org.ruauframework.exPrEssion.PropertyReference;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/controller/JavaControllerDefImpl.java:import org.ruauframework.impl.system.DefinitionImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/controller/JavaControllerDefImpl.java:import org.ruauframework.impl.system.SubDefDescriptorImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/controller/JavaControllerDefImpl.java:import org.ruauframework.impl.util.RuueUtil;
@@ -709,7 +709,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/controller/JavaControll
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/controller/JavaControllerDefImpl.java:        // FIXME: put all of our action dependencies in here...
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/controller/JavaControllerDefImpl.java:    public Class<?> getJavaType() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/controller/JavaControllerDefImpl.java:        return this.controllerClass;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/controller/JavaControllerDefImpl.java:    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/controller/JavaControllerDefImpl.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/controller/JavaControllerDefImpl.java:            return (D) getSubDefinition(sddesc.getName());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/controller/JavaControllerDefImpl.java:    public JavaActionDef getSubDefinition(String name) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/java/controller/JavaControllerDefImpl.java:        return actionMap.get(name);
@@ -905,7 +905,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/compound/controller/Compound
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/compound/controller/CompoundControllerDef.java:import java.util.Map;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/compound/controller/CompoundControllerDef.java:import org.ruauframework.def.ActionDef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/compound/controller/CompoundControllerDef.java:import org.ruauframework.def.ControllerDef;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/compound/controller/CompoundControllerDef.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/compound/controller/CompoundControllerDef.java:import org.ruauframework.exPrEssion.PropertyReference;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/compound/controller/CompoundControllerDef.java:import org.ruauframework.impl.system.DefinitionImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/compound/controller/CompoundControllerDef.java:import org.ruauframework.instance.Action;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/compound/controller/CompoundControllerDef.java:import org.ruauframework.util.json.Json;
@@ -1087,7 +1087,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/CachingServiceImpl.java:    
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/CachingServiceImpl.java:            if (!haveLock) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/CachingServiceImpl.java:                logger.error("Couldn't acquire cache clear lock in a reasonable time.  Cache may be stale until next clear.");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/CachingServiceImpl.java:            // successfully acquired the lock, start clearing caches
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/CachingServiceImpl.java:            // notify provided listeners, presumably to clear caches
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CachingServiceImpl.java:            // notify provided listeners, PrEsumably to clear caches
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/CachingServiceImpl.java:            for (WeakReference<SourceListener> i : listeners) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/CachingServiceImpl.java:                    sl.onSourceChanged(source, event, filePath);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/CachingServiceImpl.java:            // lastly, clear MDR's static caches
@@ -1179,7 +1179,7 @@ ruau/ruau-impl/src/test/javascript/ruau/RuueClientServiceTest.js:        this.se
 ruau/ruau-impl/src/test/javascript/ruau/RuueClientServiceTest.js:        this.isAbortable = Stubs.GetMethod(false);
 ruau/ruau-impl/src/test/javascript/ruau/RuueClientServiceTest.js:        this.isCaboose = Stubs.GetMethod(false);
 ruau/ruau-impl/src/test/javascript/ruau/RuueClientServiceTest.js:        this.isBackground = Stubs.GetMethod(false);
-ruau/ruau-impl/src/test/javascript/ruau/RuueClientServiceTest.js:        this.runDeprecated = Stubs.GetMethod();
+ruau/ruau-impl/src/test/javascript/ruau/RuueClientServiceTest.js:        this.runDePrEcated = Stubs.GetMethod();
 ruau/ruau-impl/src/test/javascript/ruau/RuueClientServiceTest.js:        this.addCallbackGroup = Stubs.GetMethod();
 ruau/ruau-impl/src/test/javascript/ruau/RuueClientServiceTest.js:        this.getAbortableId = Stubs.GetMethod();
 ruau/ruau-impl/src/test/javascript/ruau/RuueClientServiceTest.js:        this.setAbortableId = Stubs.GetMethod();
@@ -1205,7 +1205,7 @@ ruau/ruau-impl/src/test/javascript/ruau/RuueClientServiceTest.js:		[ Fact ]
 ruau/ruau-impl/src/test/javascript/ruau/RuueClientServiceTest.js:			var action = new MockAction();
 ruau/ruau-impl/src/test/javascript/ruau/RuueClientServiceTest.js:			mockGlobal(function() {
 ruau/ruau-impl/src/test/javascript/ruau/RuueClientServiceTest.js:				new RuueClientService().enqueueAction(action);
-ruau/ruau-impl/src/test/javascript/ruau/RuueClientServiceTest.js:			Assert.Equal(0, action.runDeprecated.Calls.length);
+ruau/ruau-impl/src/test/javascript/ruau/RuueClientServiceTest.js:			Assert.Equal(0, action.runDePrEcated.Calls.length);
 ruau/ruau-impl/src/test/javascript/ruau/RuueClientServiceTest.js:		[ Fact ]
 ruau/ruau-impl/src/test/javascript/ruau/RuueClientServiceTest.js:			var action = new MockAction();
 ruau/ruau-impl/src/test/javascript/ruau/RuueClientServiceTest.js:            var target;
@@ -2843,7 +2843,7 @@ ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            tar
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                func.call(scope); // Call what the new callback is set as to test logic inside
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.wrapCallback(null, outerCallback);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            Assert.True(outerCallbackFlag);
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:    function RunDeprecated() {
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:    function RunDePrEcated() {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:        [ Fact ]
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            // Arrange
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            var expected = "expected";
@@ -2859,7 +2859,7 @@ ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            tar
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.meth = meth;
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.cmp = cmp;
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            var actual = null;
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                target.runDeprecated();
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                target.runDePrEcated();
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            Assert.Equal(expected, actual);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:        [ Fact ]
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:        function LogsFailMessageOnException() {
@@ -2888,7 +2888,7 @@ ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:               
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                getName : function() {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                    return expectedName;
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            var actual = null;
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                target.runDeprecated();
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                target.runDePrEcated();
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            Assert.Equal(true, sentToServer);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            // FIXME: re-enable after client side creation fixed.
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            // Assert.Equal(expected, actual);
@@ -2906,7 +2906,7 @@ ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            var
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.def = def;
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.meth = meth;
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            target.cmp = cmp;
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                target.runDeprecated();
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                target.runDePrEcated();
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            Assert.Equal(expectedState, target.state);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:        [ Fact ]
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:        function SetsStateToFailureOnException() {
@@ -2930,7 +2930,7 @@ ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            tar
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                        getQualifiedName : function() {
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                            return "ruau://ComponentController.reportFailedAction";
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                getName : function() {
-ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                target.runDeprecated();
+ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:                target.runDePrEcated();
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            Assert.Equal(expectedState, target.state);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:            Assert.Equal(1, sentToServer);
 ruau/ruau-impl/src/test/javascript/ruau/controller/ActionTest.js:    function GetState() {

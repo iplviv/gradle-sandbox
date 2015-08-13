@@ -63,7 +63,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentArrayTypeDef.j
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentArrayTypeDef.java:import org.ruauframework.def.ComponentDefRef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentArrayTypeDef.java:import org.ruauframework.def.DefDescriptor;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentArrayTypeDef.java:import org.ruauframework.def.TypeDef;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentArrayTypeDef.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentArrayTypeDef.java:import org.ruauframework.exPrEssion.PropertyReference;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentArrayTypeDef.java:import org.ruauframework.impl.java.type.JavaValueProvider;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentArrayTypeDef.java:import org.ruauframework.impl.system.DefDescriptorImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentArrayTypeDef.java:import org.ruauframework.impl.system.DefinitionImpl;
@@ -85,7 +85,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentArrayTypeDef.j
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentArrayTypeDef.java:            setLocation(getDescriptor().getQualifiedName(), -1);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentArrayTypeDef.java:        public ComponentArrayTypeDef build() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentArrayTypeDef.java:            return new ComponentArrayTypeDef(this);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentArrayTypeDef.java:    public Object getExternalType(String prefix) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentArrayTypeDef.java:    public Object getExternalType(String PrEfix) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentArrayTypeDef.java:        return Component[].class;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentArrayTypeDef.java:    public Object valueOf(Object stringRep) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentArrayTypeDef.java:    public Object wrap(Object o) {
@@ -103,7 +103,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentArrayTypeDef.j
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentArrayTypeDef.java:                    throw new InvalidDefinitionException(String.format("Expected Component, received %s", defRef
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentArrayTypeDef.java:                            .getClass().getName()), getLocation());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentArrayTypeDef.java:     * Expects instance to be a List<ComponentDefRef>
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentArrayTypeDef.java:    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentArrayTypeDef.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentArrayTypeDef.java:    public void appendDependencies(Object instance, Set<DefDescriptor<?>> deps) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentArrayTypeDef.java:        List<ComponentDefRef> value = (List<ComponentDefRef>) instance;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentArrayTypeDef.java:        for (ComponentDefRef componentDefRef : value) {
@@ -144,14 +144,14 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentDefRefArrayTyp
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentDefRefArrayTypeDef.java:        json.writeString(getName());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentDefRefArrayTypeDef.java:    public Object valueOf(Object stringRep) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentDefRefArrayTypeDef.java:    public Object wrap(Object o) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentDefRefArrayTypeDef.java:    public Object getExternalType(String prefix) throws QuickFixException {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentDefRefArrayTypeDef.java:    public Object getExternalType(String PrEfix) throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentDefRefArrayTypeDef.java:        return ComponentDefRef[].class;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentDefRefArrayTypeDef.java:    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentDefRefArrayTypeDef.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentDefRefArrayTypeDef.java:    public Object initialize(Object config, BaseComponent<?, ?> valueProvider) throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentDefRefArrayTypeDef.java:        if (config != null && config instanceof List) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentDefRefArrayTypeDef.java:            return new ComponentDefRefArrayImpl((List<ComponentDefRef>)config, valueProvider);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentDefRefArrayTypeDef.java:    public void appendDependencies(Object instance, Set<DefDescriptor<?>> deps) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentDefRefArrayTypeDef.java:        @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentDefRefArrayTypeDef.java:        @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentDefRefArrayTypeDef.java:        List<ComponentDefRef> value = (List<ComponentDefRef>) instance;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentDefRefArrayTypeDef.java:        for (ComponentDefRef componentDefRef : value) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentDefRefArrayTypeDef.java:            componentDefRef.appendDependencies(deps);
@@ -180,7 +180,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentTypeDef.java:i
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentTypeDef.java:import org.ruauframework.util.json.Json;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentTypeDef.java:public class ComponentTypeDef extends DefinitionImpl<TypeDef> implements TypeDef {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentTypeDef.java:    private static final long serialVersionUID = 6622541489062928808L;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentTypeDef.java:    public Object getExternalType(String prefix) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentTypeDef.java:    public Object getExternalType(String PrEfix) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentTypeDef.java:        return Component.class;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentTypeDef.java:    public Object valueOf(Object stringRep) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ComponentTypeDef.java:    public Object wrap(Object o) {
@@ -220,7 +220,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/RuueStaticTypeDefRegist
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/RuueStaticTypeDefRegistry.java:public class RuueStaticTypeDefRegistry extends StaticDefRegistryImpl<TypeDef> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/RuueStaticTypeDefRegistry.java:    private static final long serialVersionUID = -969733961482080930L;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/RuueStaticTypeDefRegistry.java:    public static final String PREFIX = "ruau";
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/RuueStaticTypeDefRegistry.java:    private static final Set<String> prefixes = Sets.newHashSet(PREFIX);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/RuueStaticTypeDefRegistry.java:    private static final Set<String> PrEfixes = Sets.newHashSet(PREFIX);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/RuueStaticTypeDefRegistry.java:    private static final Set<DefType> defTypes = Sets.immutableEnumSet(DefType.TYPE);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/RuueStaticTypeDefRegistry.java:    private static final Map<String, TypeDef> defs = Maps.newHashMap();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/RuueStaticTypeDefRegistry.java:    static {
@@ -249,7 +249,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/RuueStaticTypeDefRegist
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/RuueStaticTypeDefRegistry.java:                throw new RuueRuntimeException(qfe);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/RuueStaticTypeDefRegistry.java:    public static final RuueStaticTypeDefRegistry INSTANCE = new RuueStaticTypeDefRegistry();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/RuueStaticTypeDefRegistry.java:    protected RuueStaticTypeDefRegistry() {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/RuueStaticTypeDefRegistry.java:        super(defTypes, prefixes, null, defs.values());
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/RuueStaticTypeDefRegistry.java:        super(defTypes, PrEfixes, null, defs.values());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/RuueStaticTypeDefRegistry.java:    public TypeDef getDef(String name) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/RuueStaticTypeDefRegistry.java:        if (name.startsWith("Map<")) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/RuueStaticTypeDefRegistry.java:            name = "Map";
@@ -276,7 +276,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ActionTypeDef.java:impo
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ActionTypeDef.java:public class ActionTypeDef extends DefinitionImpl<TypeDef> implements TypeDef {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ActionTypeDef.java:    private static final long serialVersionUID = -791084249967361700L;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ActionTypeDef.java:     * @param builder
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ActionTypeDef.java:    public Object getExternalType(String prefix) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ActionTypeDef.java:    public Object getExternalType(String PrEfix) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ActionTypeDef.java:        return Action.class;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ActionTypeDef.java:    public Object initialize(Object config, BaseComponent<?, ?> valueProvider) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/type/ActionTypeDef.java:    public Object valueOf(Object stringRep) {
@@ -575,11 +575,11 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:            LOG.warn(descriptor + " (" + source.getUrl() + ')', ex);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:            // TODO: report analysis error
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:     * Validates all know descriptors.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:     * @param prefix language prefix to validate, or null to validate all prefixes
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:    public List<ValidationError> validateAllKnown(String prefix) throws QuickFixException {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:     * @param PrEfix language prefix to validate, or null to validate all prefixes
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:    public List<ValidationError> validateAllKnown(String PrEfix) throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:        List<ValidationError> allErrors = Lists.newArrayList();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:        Set<DefDescriptor<?>> descriptors = ValidationUtil.getAllKnownDescriptors();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:            if (prefix == null || prefix.equals(descriptor.getPrefix())) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:            if (PrEfix == null || prefix.equals(descriptor.getPrefix())) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:                allErrors.addAll(validate(descriptor));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:        return allErrors;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:    // private:
@@ -587,7 +587,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:        List<ValidationError> errors = Lists.newArrayList();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:            // getDef() invokes the validate methods
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:        } catch (StyleParserException e) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:            if (prefix.equals(DefDescriptor.CSS_PREFIX)) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:            if (PrEfix.equals(DefDescriptor.CSS_PREFIX)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:                // report css parser errors only when directly validating a .css def
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:                errors.add(RuueValidationError.make(source.getUrl().toString(), e));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:        } catch (DefinitionNotFoundException e) {
@@ -598,14 +598,14 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:        } catch (Exception e) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:            LOG.warn("exception loading definition for " + descriptor + ": " + e);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:        // perform language specific checking
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:        if (prefix.equals(DefDescriptor.JAVASCRIPT_PREFIX)) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:        if (PrEfix.equals(DefDescriptor.JAVASCRIPT_PREFIX)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:            errors.addAll(validateJavascript(source, descriptor.getDefType()));
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:        } else if (prefix.equals(DefDescriptor.CSS_PREFIX)) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:        } else if (PrEfix.equals(DefDescriptor.CSS_PREFIX)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:            errors.addAll(validateCSS(source, descriptor.getDefType()));
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:        // TODO: all other prefixes
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:        // TODO: all other PrEfixes
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:        return ValidationUtil.patchErrors(errors);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:    private List<ValidationError> validateJavascript(Source<?> source, DefType defType) throws IOException {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:        // check if needs to add "var actions=" line before '{' to prevent jslint parser errors
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:        // check if needs to add "var actions=" line before '{' to PrEvent jslint parser errors
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:        JsonStreamReader jreader = new JsonStreamReader(sourceCode);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:        jreader.setRecursiveReadEnabled(false);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/validation/ValidationEngine.java:        // skip comment and whitespace
@@ -716,13 +716,13 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/cache/CacheImpl.java:       
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/cache/CacheImpl.java:            this.cache = cache;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/cache/CacheImpl.java:        public void onRemoval(RemovalNotification<K, T> notification) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/cache/CacheImpl.java:            // We don't much care about removal for reasons other than space constraint;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/cache/CacheImpl.java:            // those happen for lots of reasons.  But size eviction means size pressure,
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/cache/CacheImpl.java:            // those happen for lots of reasons.  But size eviction means size PrEssure,
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/cache/CacheImpl.java:            // which we do care about.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/cache/CacheImpl.java:            if (notification.getCause() == RemovalCause.SIZE) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/cache/CacheImpl.java:                    Logger logger = Logger.getLogger(ConfigAdapterImpl.class);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/cache/CacheImpl.java:                    CacheStats stats = cache.stats();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/cache/CacheImpl.java:                    logger.info(String.format(
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/cache/CacheImpl.java:                        "Cache %s evicted %d entries for size pressure, hit rate=%.3f, evictions=%d, loads=%d %s",
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/cache/CacheImpl.java:                        "Cache %s evicted %d entries for size PrEssure, hit rate=%.3f, evictions=%d, loads=%d %s",
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/cache/CacheImpl.java:                        name, evictions, stats.hitRate(), stats.evictionCount(),
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/cache/CacheImpl.java:                        stats.loadCount(), stats.toString()));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/cache/CacheImpl.java:                    // We want to log every 10 until 100, every 100 until 1000, every 1000 thereafter
@@ -851,7 +851,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/svg/SVGDefImpl.java:import o
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/svg/SVGDefImpl.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/svg/SVGDefImpl.java:import org.ruauframework.util.json.Json;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/svg/SVGDefImpl.java: * Defines an SVG for use within the component bundles. It will be parsed out in bulk as markup with minimal validation.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/svg/SVGDefImpl.java: * It's primary purpose is to serve an icon that represents the top level component visually for use in various editors.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/svg/SVGDefImpl.java: * It's primary purpose is to serve an icon that rePrEsents the top level component visually for use in various editors.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/svg/SVGDefImpl.java: * Generally, the SVG source size should be less than 4096 bytes.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/svg/SVGDefImpl.java:public class SVGDefImpl extends RootDefinitionImpl<SVGDef> implements SVGDef {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/svg/SVGDefImpl.java:    private static final long serialVersionUID = 94337546417596992L;
@@ -890,7 +890,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/svg/parser/SVGParser.java:pu
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/svg/parser/SVGParser.java:    private static final SVGParser instance = new SVGParser();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/svg/parser/SVGParser.java:    public static SVGParser getInstance() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/svg/parser/SVGParser.java:        return instance;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/svg/parser/SVGParser.java:    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/svg/parser/SVGParser.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/svg/parser/SVGParser.java:    public <D extends Definition> D parse(DefDescriptor<D> descriptor, Source<?> source) throws SVGParserException,
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/svg/parser/SVGParser.java:            return (D) new SVGDefHandler<SVGDef>((DefDescriptor<SVGDef>) descriptor,
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/svg/parser/SVGParser.java:                    (Source<SVGDef>) source).createDefinition();
@@ -910,8 +910,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.j
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.java:import org.ruauframework.def.DefDescriptor;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.java:import org.ruauframework.def.StyleDef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.java:import org.ruauframework.def.ThemeDef;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.java:import org.ruauframework.expression.Expression;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.java:import org.ruauframework.exPrEssion.Expression;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.java:import org.ruauframework.exPrEssion.PropertyReference;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.java:import org.ruauframework.impl.RuueImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.java:import org.ruauframework.impl.root.theme.Themes;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.java:import org.ruauframework.system.Location;
@@ -934,7 +934,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.j
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.java:        checkNotNull(scope, "scope cannot be null");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.java:        this.namespaceTheme = Themes.getNamespaceDefaultTheme(scope);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.java:    public Object getValue(String reference, Location location) throws QuickFixException {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.java:        return getExpression(reference, location).evaluate(this);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.java:        return getExPrEssion(reference, location).evaluate(this);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.java:    public Object getValue(PropertyReference reference) throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.java:        checkNotNull(reference, "reference cannot be null");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.java:        Optional<Object> value;
@@ -959,13 +959,13 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.j
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.java:        if (!value.isPresent()) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.java:            throw new ThemeValueNotFoundException(reference.getRoot(), namespaceTheme, reference.getLocation());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.java:        return value;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.java:     * Gets an expression representing the given reference. If simply trying to evaluate a string reference, prefer
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.java:     * Gets an exPrEssion representing the given reference. If simply trying to evaluate a string reference, prefer
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.java:     * {@link #getValue(String, Location)} instead.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.java:     * @param reference The string input source (should not be quoted).
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.java:     * @param location The location of the reference in the source code.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.java:     * @throws RuueValidationException
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.java:    private static Expression getExpression(String reference, Location location) throws RuueValidationException {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.java:        return RuueImpl.getExpressionAdapter().buildExpression(reference, location);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.java:    private static ExPrEssion getExpression(String reference, Location location) throws RuueValidationException {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeValueProviderImpl.java:        return RuueImpl.getExPrEssionAdapter().buildExpression(reference, location);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeListImpl.java: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeListImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeListImpl.java: * you may not use this file except in compliance with the License.
@@ -1037,7 +1037,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeListImpl.java:     
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeListImpl.java:        DefDescriptor<ThemeDef> realDescriptor = themeDescriptor.getDef().getConcreteDescriptor();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeListImpl.java:        themes.add(0, realDescriptor);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeListImpl.java:        processNewTheme(realDescriptor);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeListImpl.java:    public ThemeListImpl prependAll(Iterable<DefDescriptor<ThemeDef>> themeDescriptors) throws QuickFixException {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeListImpl.java:    public ThemeListImpl PrEpendAll(Iterable<DefDescriptor<ThemeDef>> themeDescriptors) throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeListImpl.java:        checkNotNull(themeDescriptors, "themeDescriptors cannot be null");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeListImpl.java:        List<DefDescriptor<ThemeDef>> list = Lists.newArrayList();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/ThemeListImpl.java:            DefDescriptor<ThemeDef> realDescriptor = themeDescriptor.getDef().getConcreteDescriptor();
@@ -1094,22 +1094,22 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:    private static final long serialVersionUID = 7140896215068458158L;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:    private final String content;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:    private final String className;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:    private final Set<String> expressions;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:    private final Set<String> exPrEssions;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:        this.className = builder.className;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:        this.expressions = RuueUtil.immutableSet(builder.expressions);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:        this.exPrEssions = RuueUtil.immutableSet(builder.expressions);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:    public void appendDependencies(Set<DefDescriptor<?>> dependencies) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:            // we know that any expression means we have a dependency on a theme, but we can't determine here if that is
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:            // we know that any exPrEssion means we have a dependency on a theme, but we can't determine here if that is
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:            // only a dependency on the component theme, only on the namespace-default, or both (however if the
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:            // expression references a var not defined in either then a QFE will be thrown during #validateReferences).
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:            // exPrEssion references a var not defined in either then a QFE will be thrown during #validateReferences).
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:                dependencies.add(cmpTheme);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:            DefDescriptor<ThemeDef> namespaceTheme = Themes.getNamespaceDefaultTheme(descriptor);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:            if (namespaceTheme.exists()) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:                dependencies.add(namespaceTheme);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:    public void validateReferences() throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:        super.validateReferences();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:        // validate that expressions reference valid vars
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:        // validate that exPrEssions reference valid vars
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:            ThemeValueProvider vp = Ruue.getStyleAdapter().getThemeValueProviderNoOverrides(descriptor);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:                vp.getValue(reference, getLocation()); // getValue will validate it's a valid expression/variable
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:                vp.getValue(reference, getLocation()); // getValue will validate it's a valid exPrEssion/variable
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:        return getCode(ImmutableList.<Plugin>of());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:                    .resourceName(descriptor.getQualifiedName())
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:                    .extras(plugins)
@@ -1132,7 +1132,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:            super(StyleDef.class);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:        private String content;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:        private String className;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:        private Set<String> expressions;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:        private Set<String> exPrEssions;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:        public StyleDefBuilder setClassName(String className) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefImpl.java:            this.className = className;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/style/StyleDefFactory.java: * Copyright (C) 2013 salesforce.com, inc.
@@ -1269,7 +1269,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/DuplicateFontFace
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/DuplicateFontFacePlugin.java:                    fontFeatureSettings = sibling.propertyValue().singleTextualValue().get();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/DuplicateFontFacePlugin.java:        FontKey key = new FontKey(name.get(),
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/DuplicateFontFacePlugin.java:                fontStyle, fontWeight, fontStretch, fontVariant, unicodeRange, fontFeatureSettings);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/DuplicateFontFacePlugin.java:        // if a previous font-face with the same key was previously found then throw an error. However if enabled, the
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/DuplicateFontFacePlugin.java:        // if a PrEvious font-face with the same key was previously found then throw an error. However if enabled, the
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/DuplicateFontFacePlugin.java:        // CSS author can bypass this with the correct annotation on both font-faces.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/DuplicateFontFacePlugin.java:        if (declared.containsKey(key)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/DuplicateFontFacePlugin.java:            Value value = declared.get(key);
@@ -1330,7 +1330,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefi
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:import org.ruauframework.util.RuueTextUtil;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:import com.google.common.base.Optional;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:import com.salesforce.omakase.ast.atrule.AtRule;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:import com.salesforce.omakase.ast.atrule.GenericAtRuleExpression;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:import com.salesforce.omakase.ast.atrule.GenericAtRuleExPrEssion;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:import com.salesforce.omakase.ast.atrule.MediaQueryList;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:import com.salesforce.omakase.ast.declaration.GenericFunctionValue;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:import com.salesforce.omakase.ast.declaration.RawFunction;
@@ -1347,7 +1347,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefi
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:final class ThemeFunctionRefiner implements FunctionRefiner, AtRuleRefiner {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:    private static final String UNABLE_PARSE = "Unable to parse the remaining content '%s'";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:    private static final String INVALID_EMPTY = "The theme function arguments '%s' must not evaluate to an " +
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:            "empty string. Ensure that the variable(s) referenced have a valid media query expression value";
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:            "empty string. Ensure that the variable(s) referenced have a valid media query exPrEssion value";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:    private static final String NORMAL = "theme";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:    private static final String SHORTHAND = "t";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:    public static final String NORMAL_FUNCTION = NORMAL + "(";
@@ -1355,56 +1355,56 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefi
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:    public static final String MEDIA = "media";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:    private final boolean passthrough;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:    private final ThemeValueProvider provider;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:    private final Set<String> expressions = Sets.newHashSet();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:    private final Set<String> exPrEssions = Sets.newHashSet();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:    public ThemeFunctionRefiner(boolean passthrough, ThemeValueProvider provider) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:        this.passthrough = passthrough;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:     * Gets the set of all theme function expressions that were found.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:     * Gets the set of all theme function exPrEssions that were found.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:     * Refines theme functions, e.g., "theme(varname)".
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:    public boolean refine(RawFunction raw, Broadcaster broadcaster, GenericRefiner refiner) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:        if (!raw.name().equals(NORMAL) && !raw.name().equals(SHORTHAND)) return false;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:            String expression = expression(raw.args());
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:            String exPrEssion = expression(raw.args());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:            if (passthrough) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:                broadcaster.broadcast(new GenericFunctionValue(raw.line(), raw.column(), NORMAL, expression));
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:                broadcaster.broadcast(new GenericFunctionValue(raw.line(), raw.column(), NORMAL, exPrEssion));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:                Location location = new Location(null, raw.line(), raw.column(), -1);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:                String evaluated = provider.getValue(expression, location).toString();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:                String evaluated = provider.getValue(exPrEssion, location).toString();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:                if (evaluated.isEmpty()) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:                    broadcaster.broadcast(new EmptyTerm(expression));
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:                    broadcaster.broadcast(new EmptyTerm(exPrEssion));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:                    Source source = new Source(evaluated.toString(), raw.line(), raw.column());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:                    ParserFactory.termSequenceParser().parse(source, broadcaster, refiner);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:        } catch (QuickFixException e) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:            throw new ParserException(e);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:     * Refines theme functions inside of the media query expression.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:     * Refines theme functions inside of the media query exPrEssion.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:    public boolean refine(AtRule atRule, Broadcaster broadcaster, GenericRefiner refiner) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:        if (!atRule.name().equals(MEDIA) || !atRule.rawExpression().isPresent()) return false;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:        // check if the raw expression starts with the theme function
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:        String raw = atRule.rawExpression().get().content();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:        if (!atRule.name().equals(MEDIA) || !atRule.rawExPrEssion().isPresent()) return false;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:        // check if the raw exPrEssion starts with the theme function
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:        String raw = atRule.rawExPrEssion().get().content();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:        if (!raw.startsWith(NORMAL_FUNCTION) && !raw.startsWith(SHORTHAND_FUNCTION)) return false;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:        int line = atRule.rawExpression().get().line();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:        int col = atRule.rawExpression().get().column();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:            // extract the inner expression
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:            String expression = expression(Args.extract(raw));
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:        int line = atRule.rawExPrEssion().get().line();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:        int col = atRule.rawExPrEssion().get().column();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:            // extract the inner exPrEssion
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:            String exPrEssion = expression(Args.extract(raw));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:            if (passthrough) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:                atRule.expression(new GenericAtRuleExpression(NORMAL_FUNCTION + expression + ")"));
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:                Object evaluated = provider.getValue(expression, new Location(null, line, col, -1));
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:                atRule.exPrEssion(new GenericAtRuleExpression(NORMAL_FUNCTION + expression + ")"));
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:                Object evaluated = provider.getValue(exPrEssion, new Location(null, line, col, -1));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:                // cannot be empty
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:                if (RuueTextUtil.isEmptyOrWhitespace(evaluated.toString())) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:                    throw new ParserException(atRule, String.format(INVALID_EMPTY, expression));
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:                // parse the media query expression
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:                    throw new ParserException(atRule, String.format(INVALID_EMPTY, exPrEssion));
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:                // parse the media query exPrEssion
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:                Source source = new Source(evaluated.toString(), line, col);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:                SingleInterestBroadcaster<MediaQueryList> single = SingleInterestBroadcaster
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:                        .of(MediaQueryList.class, broadcaster);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:                ParserFactory.mediaQueryListParser().parse(source, single, refiner);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:                Optional<MediaQueryList> queryList = single.broadcasted();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:                    atRule.expression(queryList.get());
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:                    atRule.exPrEssion(queryList.get());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:                if (!source.skipWhitepace().eof()) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:                    throw new ParserException(source, String.format(UNABLE_PARSE, source.remaining()));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:        } catch (QuickFixException e) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:            throw new ParserException(e);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:        // return false because we didn't refine the block, just the expression. the standard refiner will pick that up.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:        // return false because we didn't refine the block, just the exPrEssion. the standard refiner will pick that up.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:        return false;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:    private String expression(String raw) throws QuickFixException {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:        String expression = Args.trimDoubleQuotes(raw); // remove encasing double quotes if they exist
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:        expressions.add(expression);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:    private String exPrEssion(String raw) throws QuickFixException {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:        String exPrEssion = Args.trimDoubleQuotes(raw); // remove encasing double quotes if they exist
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionRefiner.java:        exPrEssions.add(expression);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/CssPreprocessor.java: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/CssPreprocessor.java: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/CssPreprocessor.java: * you may not use this file except in compliance with the License.
@@ -1439,7 +1439,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/CssPreprocessor.j
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/CssPreprocessor.java:public final class CssPreprocessor {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/CssPreprocessor.java:    /** Use one of the constructor methods instead */
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/CssPreprocessor.java:    private CssPreprocessor() {}
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/CssPreprocessor.java:    /** For the initial preprocessing of css, this includes all syntax validations and static rework */
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/CssPreprocessor.java:    /** For the initial PrEprocessing of css, this includes all syntax validations and static rework */
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/CssPreprocessor.java:    public static ParserConfiguration initial() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/CssPreprocessor.java:        return new ParserConfiguration(false);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/CssPreprocessor.java:    /** For parsing contextual css, skips syntax validations and static rework, uses client from the current context */
@@ -1488,7 +1488,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/CssPreprocessor.j
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/CssPreprocessor.java:            this.plugins.addAll(plugins);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/CssPreprocessor.java:        /** parses the CSS according to the specified configuration */
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/CssPreprocessor.java:        public ParserResult parse() throws StyleParserException, QuickFixException {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/CssPreprocessor.java:            // determine the output compression level based on the ruau mode
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/CssPreprocessor.java:            // determine the output comPrEssion level based on the ruau mode
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/CssPreprocessor.java:            Mode mode = Ruue.getContextService().getCurrentContext().getMode();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/CssPreprocessor.java:                // write annotated comments out on the initial pass, in case the runtime pass needs them
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/CssPreprocessor.java:            // do the parsing
@@ -1497,7 +1497,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/CssPreprocessor.j
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/CssPreprocessor.java:            // report any errors found during parsing
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/CssPreprocessor.java:            ParserResult result = new ParserResult();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/CssPreprocessor.java:            if (registry.retrieve(ThemeFunctionPlugin.class).isPresent()) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/CssPreprocessor.java:                result.themeExpressions = registry.retrieve(ThemeFunctionPlugin.class).get().parsedExpressions();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/CssPreprocessor.java:                result.themeExPrEssions = registry.retrieve(ThemeFunctionPlugin.class).get().parsedExpressions();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/CssPreprocessor.java:    /** Result of calling {@link ParserConfiguration#parse()} */
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/CssPreprocessor.java:    public static final class ParserResult {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/CssPreprocessor.java:        /** parsed content */
@@ -1655,7 +1655,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/StyleParser.java:
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/StyleParser.java:        this.doValidation = doValidation;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/StyleParser.java:    public boolean shouldValidate(String name) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/StyleParser.java:        return name.toLowerCase().endsWith("template") ? false : doValidation;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/StyleParser.java:    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/StyleParser.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/StyleParser.java:    public <D extends Definition> D parse(DefDescriptor<D> descriptor, Source<?> source) throws StyleParserException,
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/StyleParser.java:            String className = descriptor.getNamespace() + RuueTextUtil.initCap(descriptor.getName());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/StyleParser.java:            builder.setLocation(source.getSystemId(), source.getLastModified());
@@ -1715,8 +1715,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlug
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:            provider = Ruue.getStyleAdapter().getThemeValueProviderNoOverrides(styleDef);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:            provider = Ruue.getStyleAdapter().getThemeValueProvider(styleDef);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:        themeRefiner = new ThemeFunctionRefiner(passthrough, provider);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:     * Gets all parsed theme expressions.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:    public Set<String> parsedExpressions() {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:     * Gets all parsed theme exPrEssions.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:    public Set<String> parsedExPrEssions() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:    public void declaration(Declaration declaration) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:        // refine any declaration that we think is using the theme function. we only check for the normal function name
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:        if (!declaration.isRefined()
@@ -1726,13 +1726,13 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlug
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:    public void media(AtRule rule) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:        // refine any media query that we think is using the theme function
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:                && rule.name().equals(MEDIA)
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:                && rule.rawExpression().isPresent()
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:                && rule.rawExpression().get().content().contains(NORMAL_FUNCTION)) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:                && rule.rawExPrEssion().isPresent()
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:                && rule.rawExPrEssion().get().content().contains(NORMAL_FUNCTION)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:    @Validate
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:    public void validate(EmptyTerm empty, ErrorManager em) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:        // can't have the function evaluate to empty (which means "remove the declaration") if there are other terms
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:        // besides the theme function in the declaration value.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:            em.report(ErrorLevel.FATAL, empty, String.format(MSG, empty.expression()));
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:            em.report(ErrorLevel.FATAL, empty, String.format(MSG, empty.exPrEssion()));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:    /** This will collect all theme function references but will leave them unevaluated in the CSS */
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:    public static ThemeFunctionPlugin passthrough(DefDescriptor<StyleDef> styleDef) throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:    /** This will resolve all theme function references */
@@ -1740,12 +1740,12 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlug
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:        return new ThemeFunctionPlugin(false, styleDef);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:    @Subscribable
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:    static final class EmptyTerm extends AbstractTerm {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:        private final String expression;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:        private final String exPrEssion;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:        public String textualValue() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:        public boolean isWritable() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:            return false;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:        public void write(StyleWriter writer, StyleAppendable appendable) throws IOException {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:        protected PropertyValueMember makeCopy(Prefix prefix, SupportMatrix support) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/css/parser/ThemeFunctionPlugin.java:        protected PropertyValueMember makeCopy(Prefix PrEfix, SupportMatrix support) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/ComponentController.java: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/ComponentController.java: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/ComponentController.java: * you may not use this file except in compliance with the License.
@@ -1773,7 +1773,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/ComponentControll
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/ComponentController.java:import org.ruauframework.system.Annotations.Key;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/ComponentController.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/ComponentController.java:public class ComponentController {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/ComponentController.java:     * A Java exception representing a <em>Javascript</em> error condition, as
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/ComponentController.java:     * A Java exception rePrEsenting a <em>Javascript</em> error condition, as
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/ComponentController.java:    public static class RuueClientException extends Exception {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/ComponentController.java:        private static final long serialVersionUID = -5884312216684971013L;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/ComponentController.java:        private final Action action;
@@ -1809,7 +1809,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/ComponentControll
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/ComponentController.java:     * @param desc The name of the client action failing
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/ComponentController.java:     * @param id The id of the client action failing
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/ComponentController.java:     * @param error The javascript error message of the failure
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/ComponentController.java:     * @param stack Not always available (it's browser dependent), but if present, a browser-dependent
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/ComponentController.java:     * @param stack Not always available (it's browser dependent), but if PrEsent, a browser-dependent
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/ComponentController.java:     *      string describing the Javascript stack for the error.  Some frames may be obfuscated,
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/ComponentController.java:     *      anonymous, omitted after inlining, etc., but it may help diagnosis. 
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/ComponentController.java:    @RuueEnabled
@@ -1826,7 +1826,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/ComponentControll
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/ComponentController.java:    public static ApplicationDef getApplicationDef(@Key(value = "name", loggable = true) String name) throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/ComponentController.java:        DefDescriptor<ApplicationDef> desc = Ruue.getDefinitionService().getDefDescriptor(name, ApplicationDef.class);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/ComponentController.java:        return Ruue.getDefinitionService().getDefinition(desc);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/ComponentController.java:    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/ComponentController.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/ComponentController.java:    @RuueEnabled
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/ComponentController.java:    public static List<Component> getComponents(@Key("components") List<Map<String, Object>> components)
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/ComponentController.java:        List<Component> ret = Lists.newArrayList();
@@ -1843,8 +1843,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/LabelController.j
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/LabelController.java: * limitations under the License.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/LabelController.java:package org.ruauframework.impl.controller;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/LabelController.java:import org.ruauframework.Ruue;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/LabelController.java:import org.ruauframework.expression.PropertyReference;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/LabelController.java:import org.ruauframework.impl.expression.PropertyReferenceImpl;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/LabelController.java:import org.ruauframework.exPrEssion.PropertyReference;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/LabelController.java:import org.ruauframework.impl.exPrEssion.PropertyReferenceImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/LabelController.java:import org.ruauframework.instance.GlobalValueProvider;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/LabelController.java:import org.ruauframework.system.Annotations.RuueEnabled;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/LabelController.java:import org.ruauframework.system.Annotations.Controller;
@@ -1938,7 +1938,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/RuueStaticControl
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/RuueStaticControllerDefRegistry.java:    public static final String COMPONENT_CONTROLLER = "ruau://ComponentController";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/RuueStaticControllerDefRegistry.java:    public static final String LABEL_CONTROLLER = "ruau://LabelController";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/RuueStaticControllerDefRegistry.java:    public static final String TIMEZONEINFO_CONTROLLER = "ruau://TimeZoneInfoController";
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/RuueStaticControllerDefRegistry.java:    private static final Set<String> prefixes = Sets.newHashSet(PREFIX);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/RuueStaticControllerDefRegistry.java:    private static final Set<String> PrEfixes = Sets.newHashSet(PREFIX);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/RuueStaticControllerDefRegistry.java:    private static final Set<DefType> defTypes = Sets.immutableEnumSet(DefType.CONTROLLER);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/RuueStaticControllerDefRegistry.java:    public static final RuueStaticControllerDefRegistry INSTANCE = new RuueStaticControllerDefRegistry();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/controller/RuueStaticControllerDefRegistry.java:    protected RuueStaticControllerDefRegistry() {
@@ -2087,7 +2087,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java: * If a 
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java: * Firefox for compatibility can be identified as the the reported browser
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java: * rather than the underlying actual browser.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java: * Very common, very expensive, or very ugly cases can be rerouted to the real
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java: * browser to avoid problems. For example old Palm devices pretend to be
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java: * browser to avoid problems. For example old Palm devices PrEtend to be
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java: * Internet Explorer, often with bad results, and IE in compatibility mode acts
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java: * like IE7 but we log it in Login History as the true IE version, with a note
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java: * that it was in compatibility view.
@@ -2164,7 +2164,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:            int flags = UA.UNSPECIFIED;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:            if (ua.contains(UA.TOUCH)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:                flags += 100;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:            // compatibility view mode pretends to be IE7, and includes a Trident/ string
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:            // compatibility view mode PrEtends to be IE7, and includes a Trident/ string
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:            // the only non-compatibility view Trident is IEMobile 7 + Trident/3.1
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:            if (ua.contains(UA.TRIDENT) && ua.contains(UA.MSIE_7) && !ua.contains(UA.TRIDENT_3_1)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:                flags += 10;
@@ -2203,8 +2203,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:                && !ua.contains(UA.NAVIGATOR)
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:                && !ua.contains(UA.OPERA));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:         * All the 4.x Firefoxes will appear as &quot;Firefox 4&quot;.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:         * This used to not be precise enough, but since we are now supporting only
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:         * latest (FF 15 as of now), 4.anything is precise enough to know to
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:         * This used to not be PrEcise enough, but since we are now supporting only
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:         * latest (FF 15 as of now), 4.anything is PrEcise enough to know to
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        int majorVersion(String ua) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:                int verStart = ua.indexOf(UA.FIREFOX) + 8; // 8 = "firefox/".length()
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:                int verEnd = ua.indexOf(UA.DOT, verStart);
@@ -2463,13 +2463,13 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:            if (ua.contains(UA.MOBILE) || ua.contains(UA.PHONE)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:     * Web services and minor clients that don't need a version or flag.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:     * We consolidate them here to roll up all of them into a smaller space,
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:     * to avoid running out of usable prefixes later.  This also gives them
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:     * to avoid running out of usable PrEfixes later.  This also gives them
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:     * a different label pattern to avoid clutter in login.xml: 99 _ _ _ _ _ _
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:     * Everything after 99 can be used to point to a label or legacy
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:     * browserType int value.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        // [<key to match ua.startsWith> , <label key>]
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        // order is important in some cases - a string might contain matches to 2+ keys
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        @SuppressWarnings("serial")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        @SupPrEssWarnings("serial")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        private final Map<String, Integer> STARTS_WITH = new LinkedHashMap<String, Integer>() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:                put("pocketsoap", BROWSER_POCKETSOAP);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:                put("pear-soap", BROWSER_PEAR_SOAP);
@@ -2485,7 +2485,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:                put("meap http client library", BROWSER_MEAP);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:                put("soap toolkit 3.0", BROWSER_MSFT_STK);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        // [<key to match ua.contains> , <label key>]
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        @SuppressWarnings("serial")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        @SupPrEssWarnings("serial")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        private final Map<String, Integer> CONTAINS = new LinkedHashMap<String, Integer>() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:                put("soap::lite/perl", BROWSER_SOAP_LITE);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:                put("jakarta commons-httpclient", BROWSER_HTTP_COMMONS);
@@ -2504,10 +2504,10 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:    stat
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:    // higher than this means 182+ unversioned
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:    static final int VERSIONED_CUTOFF = 99000000;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:    // 2 digits for browser family/type
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:    private final int prefix;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:     * Private constructor, setting the prefix value.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:     * @param prefix an int between MIN_PREFIX and MAX_PREFIX (inclusive).
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:    private UserAgent(int prefix) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:    private final int PrEfix;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:     * Private constructor, setting the PrEfix value.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:     * @param PrEfix an int between MIN_PREFIX and MAX_PREFIX (inclusive).
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:    private UserAgent(int PrEfix) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:     * Examines the user agent String and returns the appropriate matching
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:     * UserAgent enum instance.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:     * @param userAgent Browser user agent
@@ -2516,7 +2516,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:            for (UserAgent a : UserAgent.values()) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:                if (a.match(userAgent)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:                    return a;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:     * Get the browser two digit prefix for this UserAgent as an int.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:     * Get the browser two digit PrEfix for this UserAgent as an int.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:     * Gets the major version for this browser as an int, or 0 if unknown.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:     * If overridden and a a calculated int may be returned, it should
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:     * be no greater than {@link UserAgent#MAX_SUPPORTED_VERSION}.
@@ -2531,7 +2531,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:     * D
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:     * @param browser the browser int to check
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:     * @return true if a match, false otherwise
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:    public boolean match(int browser) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        return browser > LEGACY_CUTOFF && prefix == Integer.parseInt(String.valueOf(browser).substring(0, 2));
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        return browser > LEGACY_CUTOFF && PrEfix == Integer.parseInt(String.valueOf(browser).substring(0, 2));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:     * Determines if the given browser int is a match for this UserAgent,
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:     * and if the browser int major version refers to exactly the given version.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:     * @param browser the browser int to check
@@ -2550,7 +2550,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:     * @
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:     * @return true if a match, false otherwise
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:    public boolean match(int browser, int version, boolean atLeast) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:            String b = String.valueOf(browser);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:            if (prefix == Integer.parseInt(b.substring(0, 2))) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:            if (PrEfix == Integer.parseInt(b.substring(0, 2))) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:                int browserVer = Integer.parseInt(b.substring(2, 5));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:                if (atLeast) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        return false;
@@ -2562,7 +2562,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:     * @
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:     * @return true if a match for browser and version, false otherwise
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:    public boolean match(int browser, int minVer, int maxVer) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:            String b = String.valueOf(browser);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:            if (prefix == Integer.parseInt(b.substring(0, 2))) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:            if (PrEfix == Integer.parseInt(b.substring(0, 2))) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:                int browserVer = Integer.parseInt(b.substring(2, 5));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:                return (browserVer >= minVer) && (browserVer <= maxVer);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        return false;

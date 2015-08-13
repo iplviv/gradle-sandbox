@@ -19,11 +19,11 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: 
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: * UTF-8 characters bypass the CharsetDecoder.<br>
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: * This Reader assumes that characters in the InputStream are all UTF-8. Byte
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: * order mark (BOM) characters encoded as UTF-8 are dropped, since their
-ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: * presence is nonsensical in UTF-8 (and we don't want to potentially
+ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: * PrEsence is nonsensical in UTF-8 (and we don't want to potentially
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: * contaminate any UTF-16 outputs). 5-byte and 6-byte UTF-8 byte sequences are
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: * dropped at this time. Bytes with values 0xfe or 0xff are dropped as neither
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: * are valid UTF-8 bytes.<br>
-ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: * Codepoints that are represented in UTF-16 as surrogate pairs are supported by
+ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: * Codepoints that are rePrEsented in UTF-16 as surrogate pairs are supported by
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: * this reader.
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java:@NotThreadSafe
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java:public class Utf8InputStreamReader extends Reader {
@@ -41,7 +41,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: 
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java:    public Utf8InputStreamReader(InputStream in) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java:        this.cd = Charsets.UTF_8.newDecoder();
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java:    public int read() throws IOException {
-ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java:        // If our previous read gave us a surrogate pair, then return the next
+ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java:        // If our PrEvious read gave us a surrogate pair, then return the next
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java:        // character now
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java:        if (cb.hasRemaining()) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java:        // Read until we have a character or EOF
@@ -73,7 +73,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java: 
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java:    public int read(char[] cbuf, int off, int len) throws IOException {
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java:            final int ch = read();
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java:                cbuf[i] = (char) ch;
-ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java:                // End of stream prematurely. If we read nothing when we got -1,
+ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java:                // End of stream PrEmaturely. If we read nothing when we got -1,
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java:        // We were able to read exactly what we had set out to read
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java:    public boolean ready() throws IOException {
 ruau/ruau-util/src/main/java/org/ruauframework/util/Utf8InputStreamReader.java:        // If we have at least four bytes available, then we'll consider
@@ -134,7 +134,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/adapter/SourceControlAdapter
 ruau/ruau-util/src/main/java/org/ruauframework/util/adapter/SourceControlAdapterImpl.java:                } catch (Throwable t) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/adapter/SourceControlAdapterImpl.java:                    // The only case in which we will call close here is when
 ruau/ruau-util/src/main/java/org/ruauframework/util/adapter/SourceControlAdapterImpl.java:                    // we have had an exception. In that case, we want to ignore
-ruau/ruau-util/src/main/java/org/ruauframework/util/adapter/SourceControlAdapterImpl.java:                    // this exception, and let the previous one bubble up.
+ruau/ruau-util/src/main/java/org/ruauframework/util/adapter/SourceControlAdapterImpl.java:                    // this exception, and let the PrEvious one bubble up.
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java: * you may not use this file except in compliance with the License.
@@ -242,7 +242,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * Pro
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    public static String escapeForJSONString(String in) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:        return TrieMatcher.replaceMultiple(in, JSON_SEARCH_REPLACE);
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * Properly escapes string for JSON Function.
-ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * This ensures that a very few sequences are not present, the most important of which is the end comment string, as
+ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * This ensures that a very few sequences are not PrEsent, the most important of which is the end comment string, as
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * that causes severe breakage when used in a broken JSON string that is commented out by the error handling.
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * @param in the incoming (unsafe) string
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * @return a string with the sequences replaced appropriately
@@ -252,7 +252,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * Spl
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * The returned string list is an ArrayList that is constructed using the 4 as the ArrayList's initial size. If you
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * expect to have more than four elements more than just on the rare occasion, then please consider using another
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * splitSimple overload that lets you pass in the expected size.<br>
-ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * This is more efficient than String.split or TextUtil.split because it does not use a regular expression.<br>
+ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * This is more efficient than String.split or TextUtil.split because it does not use a regular exPrEssion.<br>
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * <b>CAUTION:</b> The str and delimiter parameters are in an order that differs from other string splitting
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * methods. Be absolutely sure that you get the str and delimiter parameter arguments correct. This may eventually
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * be fixed with a refactoring.
@@ -264,7 +264,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * Spl
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * The returned string list is an ArrayList that is constructed using the given expected size as the ArrayList's
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * initial size. If you are not aware of the expected size, then use 0, which will cause this method to use a
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * LinkedList instead of an ArrayList.<br>
-ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * This is more efficient than String.split or TextUtil.split because it does not use a regular expression.<br>
+ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * This is more efficient than String.split or TextUtil.split because it does not use a regular exPrEssion.<br>
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * <b>CAUTION:</b> The str and delimiter parameters are in an order that differs from other string splitting
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * methods. Be absolutely sure that you get the str and delimiter parameter arguments correct. This may eventually
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * be fixed with a refactoring.
@@ -360,7 +360,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * Spl
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * The returned string list is an ArrayList that is constructed using the given expected size as the ArrayList's
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * initial size. If you are not aware of the expected size, then use 0, which will cause this method to use a
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * LinkedList instead of an ArrayList.<br>
-ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * This is more efficient than String.split or TextUtil.split because it does not use a regular expression.
+ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * This is more efficient than String.split or TextUtil.split because it does not use a regular exPrEssion.
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * @param str The string to split
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * @param delimiter The delimiter to split the string using
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * @param expectedSize The expected number of elements in the output list. If you don't know, or if it could be
@@ -429,8 +429,8 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     * @re
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:     *         <delim><lastDelim>, for lists like "apple, banana, and orange"
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    public static String collectionToString(Iterable<?> c, String delim, String lastDelim) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:        return collectionToString(c, delim, lastDelim, null, null);
-ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    public static String collectionToString(Iterable<?> c, String delim, String lastDelim, String prefix, String suffix) {
-ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:            sb.append(prefix);
+ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:    public static String collectionToString(Iterable<?> c, String delim, String lastDelim, String PrEfix, String suffix) {
+ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:            sb.append(PrEfix);
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:            sb.append(count == 0 ? "" : delim).append(o);
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:        if (lastDelim != null && delim != null && delim.length() != 0 && count > 1) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/RuueTextUtil.java:            sb.insert(sb.lastIndexOf(delim) + delim.length(), lastDelim);
@@ -535,7 +535,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java:                // that it will
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java:                // only fail here if the file exists and cannot be deleted,
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java:                // which is probably
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java:                // a pretty bad problem.
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java:                // a PrEtty bad problem.
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java:        this.cache.mkdirs();
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java:    public Writer getWriter(String name) throws IOException {
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/ResourceLoader.java:        File file = new File(cache, name);
@@ -716,7 +716,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/resource/HashingGroup.java: 
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/HashingGroup.java:            Hash currentTextHash = computeGroupHash(getFiles());
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/HashingGroup.java:            return !currentTextHash.equals(getGroupHash());
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/HashingGroup.java:        } catch (IOException e) {
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/HashingGroup.java:            // presume we're stale; we'll probably try to regenerate and die from that.
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/HashingGroup.java:            // PrEsume we're stale; we'll probably try to regenerate and die from that.
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/HashingGroup.java:        // instead of this.clear(), we would like to load any new files added as well
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -746,7 +746,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:    public static final String UUID_PROPERTY = "uid";
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:    /** Property name for the lastmod time, which is merely advisory now. */
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:    public static final String LASTMOD_PROPERTY = "lastmod";
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:    /** Base name of the file containing the framework UID, when precompiled in jars. */
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:    /** Base name of the file containing the framework UID, when PrEcompiled in jars. */
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:    private String versionUri;
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:    public String groupName;
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:    private long lastMod = 0L;
@@ -791,13 +791,13 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:                    props.load(versionStream);
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:                    String hashText = props.getProperty(UUID_PROPERTY);
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:                    if (hashText == null || hashText.isEmpty()) {
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:                        throw new RuntimeException("Can't parse precomputed hash from " + this.versionUri);
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:                        throw new RuntimeException("Can't parse PrEcomputed hash from " + this.versionUri);
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:                    // compiled hash gives us actual string value
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:                    this.hash = new CompiledHash(hashText);
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:                    this.lastMod = Long.parseLong(props.getProperty(LASTMOD_PROPERTY));
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:                } catch (IOException e) {
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:                    throw new RuntimeException("Can't parse precomputed info from " + this.versionUri, e);
-ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:            throw new RuntimeException("Can't find " + this.versionUri + " to get precomputed uuid");
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:                    throw new RuntimeException("Can't parse PrEcomputed info from " + this.versionUri, e);
+ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:            throw new RuntimeException("Can't find " + this.versionUri + " to get PrEcomputed uuid");
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:     * Compiled hash provides string value instead of creating a {@link Hash} of the string value
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:    private static class CompiledHash extends Hash {
 ruau/ruau-util/src/main/java/org/ruauframework/util/resource/CompiledGroup.java:        private String hashText;
@@ -999,13 +999,13 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:     
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:    @Target(ElementType.METHOD)
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:    public @interface PrimaryImpl {
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:    private static final ServiceLoader instance = new ServiceLoaderImpl();
-ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:    @SuppressWarnings("unchecked")
-ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:    private static final Predicate<? super Method> predicate = Predicates.and(
+ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:    @SupPrEssWarnings("unchecked")
+ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:    private static final Predicate<? super Method> PrEdicate = Predicates.and(
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:            ReflectionUtils.withModifier(Modifier.PUBLIC), ReflectionUtils.withAnnotation(Impl.class),
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:            ReflectionUtils.withModifier(Modifier.STATIC), ReflectionUtils.withParametersCount(0));
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:    private final Reflections reflections;
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:    private ServiceLoaderImpl() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:        Predicate<String> filter = new FilterBuilder().include(FilterBuilder.prefix("configuration"));
+ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:        Predicate<String> filter = new FilterBuilder().include(FilterBuilder.PrEfix("configuration"));
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:        reflections = new Reflections(new ConfigurationBuilder().filterInputsBy(filter)
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:                .setUrls(ClasspathHelper.forPackage("configuration"))
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:                .setScanners(new TypeAnnotationsScanner(), new MethodAnnotationsScanner(), new TypesScanner()));
@@ -1014,38 +1014,38 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:     
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:    public <T> T get(Class<T> type) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:            Set<Class<?>> classes = reflections.getTypesAnnotatedWith(RuueConfiguration.class);
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:            // First try those marked with primary
-ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:            T ret = get(type, classes, true, predicate);
-ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:            return get(type, classes, false, predicate);
+ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:            T ret = get(type, classes, true, PrEdicate);
+ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:            return get(type, classes, false, PrEdicate);
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:        } catch (Throwable t) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:            throw new ServiceLocatorException(t);
-ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:    @SuppressWarnings("unchecked")
-ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:    private <T> T get(Class<T> type, Set<Class<?>> classes, boolean primary, Predicate<? super Method> predicate) {
+ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:    @SupPrEssWarnings("unchecked")
+ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:    private <T> T get(Class<T> type, Set<Class<?>> classes, boolean primary, Predicate<? super Method> PrEdicate) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:        Set<Method> beanMethods = Sets.newHashSet();
-ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:        Predicate<Method> pred;
-ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:        pred = Predicates.and(predicate, ReflectionUtils.withReturnTypeAssignableTo(type));
+ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:        Predicate<Method> PrEd;
+ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:        PrEd = Predicates.and(predicate, ReflectionUtils.withReturnTypeAssignableTo(type));
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:        if (primary) {
-ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:            pred = Predicates.and(pred, ReflectionUtils.withAnnotation(PrimaryImpl.class));
+ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:            PrEd = Predicates.and(pred, ReflectionUtils.withAnnotation(PrimaryImpl.class));
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:         * This is a better way to do it, but hits a runtime dep on Guava 12, so
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:         * until we upgrade to Guava 12, working around this.
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:        for (Class<?> clazz : classes) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:            for (Method meth : clazz.getDeclaredMethods()) {
-ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:                if (pred.apply(meth)) {
+ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:                if (PrEd.apply(meth)) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:                    beanMethods.add(meth);
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:            for (Method meth : beanMethods) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:                        throw new ServiceLocatorException("More than one implementation found (primary=" + primary
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:        } catch (Exception e) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:            throw new ServiceLocatorException(e);
-ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:    @SuppressWarnings("unchecked")
+ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:    public <T> Set<T> getAll(Class<T> type) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:        Set<Method> beanMethods = Sets.newHashSet();
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:        Set<T> ret = Sets.newHashSet();
-ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:        Predicate<Method> pred = Predicates.and(predicate, ReflectionUtils.withReturnTypeAssignableTo(type));
+ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:        Predicate<Method> PrEd = Predicates.and(predicate, ReflectionUtils.withReturnTypeAssignableTo(type));
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:        Set<Class<?>> classes = reflections.getTypesAnnotatedWith(RuueConfiguration.class);
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:         * This is a better way to do it, but hits a runtime dep on Guava 12, so
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:         * until we upgrade to Guava 12, working around this.
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:        for (Class<?> clazz : classes) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:            for (Method meth : clazz.getDeclaredMethods()) {
-ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:                if (pred.apply(meth)) {
+ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:                if (PrEd.apply(meth)) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:                    beanMethods.add(meth);
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:            for (Method meth : beanMethods) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:                T val = (T) meth.invoke(null);
@@ -1054,13 +1054,13 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:     
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:        } catch (Exception e) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:            throw new ServiceLocatorException(e);
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:    public <T> T get(Class<T> type, final String name) {
-ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:            Predicate<? super Method> predicate = Predicates.and(ServiceLoaderImpl.predicate, new Predicate<Method>() {
+ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:            Predicate<? super Method> PrEdicate = Predicates.and(ServiceLoaderImpl.predicate, new Predicate<Method>() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:                public boolean apply(Method input) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:                    return input.getAnnotation(Impl.class).name().equals(name);
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:            Set<Class<?>> classes = reflections.getTypesAnnotatedWith(RuueConfiguration.class);
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:            // First try those marked with primary
-ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:            T ret = get(type, classes, true, predicate);
-ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:            return get(type, classes, false, predicate);
+ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:            T ret = get(type, classes, true, PrEdicate);
+ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:            return get(type, classes, false, PrEdicate);
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:        } catch (Throwable t) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLoaderImpl.java:            throw new ServiceLocatorException(t);
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java: * Copyright (C) 2013 salesforce.com, inc.
@@ -1093,7 +1093,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:import com.google.javascript.jscomp.SourceFile;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:import com.google.javascript.jscomp.SourceMap;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:import com.google.javascript.jscomp.VariableRenamingPolicy;
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java: * Util for compressing and writing javascript.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java: * Util for comPrEssing and writing javascript.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:public enum JavascriptWriter {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            CompilationLevel.SIMPLE_OPTIMIZATIONS.setOptionsForCompilationLevel(options);
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            CompilationLevel.WHITESPACE_ONLY.setOptionsForCompilationLevel(options);
@@ -1103,8 +1103,8 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * of the "false" value. It could also set "f" to the prototype of some object. It does all of this to reduce the
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * number of chars in the file. Unless accounted for, this will cause issues since files are run through the
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * compiler individually. So it's possible that the global variable "b" is later set to "true" as part of another
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * file's compilation, which will change the behavior of the previous files's compiled code.
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * Note: This doesn't prevent global functions from being renamed, i.e., it will still rename
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * file's compilation, which will change the behavior of the PrEvious files's compiled code.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * Note: This doesn't PrEvent global functions from being renamed, i.e., it will still rename
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * "function MyObject(){...}" to "function b(){...}", leaving the "b" function in the global namespace. This is true
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * even if "b" is exported in the standard way (window["MyObject"] = MyObject).
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * TODO the keyword renaming can cause issues, but would the prototype renaming cause any code conflicts?
@@ -1131,48 +1131,48 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            // This could be a no-op, but if you're even asking about closure
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            // options here, you're in the wrong place, so it throws instead.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            throw new UnsupportedOperationException();
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        public List<JavascriptProcessingError> compress(String in, Writer out, String filename) throws IOException {
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        public List<JavascriptProcessingError> comPrEss(String in, Writer out, String filename) throws IOException {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            out.append(in);
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            return new ArrayList<JavascriptProcessingError>();
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        public List<JavascriptProcessingError> compress(InputStream in, Writer out, String filename) throws IOException {
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        public List<JavascriptProcessingError> comPrEss(InputStream in, Writer out, String filename) throws IOException {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            IOUtil.copyStream(new InputStreamReader(in), out);
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            return new ArrayList<JavascriptProcessingError>();
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:    public static final JavascriptWriter DEFAULT = CLOSURE_SIMPLE;
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:    /** Gets the Closure CompilationLevel for this compression. */
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:    /** Gets the Closure CompilationLevel for this comPrEssion. */
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:    public abstract void setClosureOptions(CompilerOptions options);
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * I'm not sure this is exactly "compression level," but it's here for hysterical raisins: some of our closure runs
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * I'm not sure this is exactly "comPrEssion level," but it's here for hysterical raisins: some of our closure runs
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * want to be run in an anonymous function, so they explicitly export anything that should survive.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:    public boolean isSelfScoping() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        return false;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * @param in Javascript source.
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * @param out Write the compressed source to this Writer.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * @param out Write the comPrEssed source to this Writer.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * @param filename Name used for error reporting, etc...
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * @TODO nmcwilliams: set externs file properly.
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:    public List<JavascriptProcessingError> compress(String in, Writer out, String filename) throws IOException {
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:    public List<JavascriptProcessingError> comPrEss(String in, Writer out, String filename) throws IOException {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        SourceFile input = SourceFile.fromCode(filename, in);
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        return compress(input, out, null, filename, null);
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * Reader-based compression.
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:    public List<JavascriptProcessingError> compress(Reader in, Writer out, String filename) throws IOException {
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        return comPrEss(input, out, null, filename, null);
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * Reader-based comPrEssion.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:    public List<JavascriptProcessingError> comPrEss(Reader in, Writer out, String filename) throws IOException {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        SourceFile input = SourceFile.fromReader(filename, in);
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        return compress(input, out, null, filename, null);
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * Compress source file and generate associated sourcemap.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        return comPrEss(input, out, null, filename, null);
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * ComPrEss source file and generate associated sourcemap.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * @param sourceFileReader source Javascrpt file reader
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * @param compressedFileWriter Compressed Javascript file writer
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * @param comPrEssedFileWriter Compressed Javascript file writer
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * @param sourceMapWriter Source map writer
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * @param filename Source javascript file name
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * @param sourceMapLocationMapping Source file path mapping.
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:    public List<JavascriptProcessingError> compress(Reader sourceFileReader, Writer compressedFileWriter, Writer sourceMapWriter,  String filename, Map<String, String> sourceMapLocationMapping) throws IOException {
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:    public List<JavascriptProcessingError> comPrEss(Reader sourceFileReader, Writer compressedFileWriter, Writer sourceMapWriter,  String filename, Map<String, String> sourceMapLocationMapping) throws IOException {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        SourceFile input = SourceFile.fromReader(filename, sourceFileReader);
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        return compress(input, compressedFileWriter, sourceMapWriter, filename, sourceMapLocationMapping);
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * InputStream base compression
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        return comPrEss(input, compressedFileWriter, sourceMapWriter, filename, sourceMapLocationMapping);
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * InputStream base comPrEssion
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * @param in source stream
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * @param compressedFileWriter Compressed Javascript file writer
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * @param comPrEssedFileWriter Compressed Javascript file writer
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * @param filename Source javascript file name
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:    public List<JavascriptProcessingError> compress(InputStream in, Writer out, String filename) throws IOException {
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:    public List<JavascriptProcessingError> comPrEss(InputStream in, Writer out, String filename) throws IOException {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        SourceFile input = SourceFile.fromInputStream(filename, in);
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        return compress(input, out, null, filename, null);
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * Does the actual compression work.
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:    private List<JavascriptProcessingError> compress(SourceFile in, Writer out, Writer sourceMapWriter, String filename, Map<String, String> sourceMapLocationMapping) throws IOException {
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        return comPrEss(input, out, null, filename, null);
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:     * Does the actual comPrEssion work.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:    private List<JavascriptProcessingError> comPrEss(SourceFile in, Writer out, Writer sourceMapWriter, String filename, Map<String, String> sourceMapLocationMapping) throws IOException {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        List<JavascriptProcessingError> msgs = new ArrayList<JavascriptProcessingError>();
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        // Do some actual closure variation:
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        if(sourceMapWriter != null) {
@@ -1184,10 +1184,10 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            for(Map.Entry<String, String> entry : sourceMapLocationMapping.entrySet()) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:                options.sourceMapLocationMappings.add(new SourceMap.LocationMapping(entry.getKey(), entry.getValue()));
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        Result result = c.compile(externs, Lists.<SourceFile> newArrayList(in), options);
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            // Encase the compressed output in a self-executing function to
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            // Encase the comPrEssed output in a self-executing function to
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            // Global APIs are exported explicitly in the code.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            out.append("(function(){");
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            // Encase the compressed output in a self-executing function to
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            // Encase the comPrEssed output in a self-executing function to
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            // Global APIs are exported explicitly in the code.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:            out.append("})();");
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptWriter.java:        //Write sourcemap
@@ -1287,7 +1287,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/Di
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DirectiveImpl.java:    private final Map<String, Object> config;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DirectiveImpl.java:    private final Set<JavascriptGeneratorMode> modes;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DirectiveImpl.java:    private String content;
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DirectiveImpl.java:    @SuppressWarnings("unchecked")
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DirectiveImpl.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DirectiveImpl.java:        Object parsedLine = null;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DirectiveImpl.java:                parsedLine = new JsonReader().read(line);
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/impl/DirectiveImpl.java:            } catch (JsonParseException e) {
@@ -1463,7 +1463,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/Directi
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:                        builder.append(": ");
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:                        builder.append(message);
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:                    builder.append("\n");
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:    // name for threads that compress and write the output
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:    // name for threads that comPrEss and write the output
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:    public static final String THREAD_NAME = "jsgen.";
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:    private final List<DirectiveType<?>> directiveTypes;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:    private final Set<JavascriptGeneratorMode> modes;
@@ -1511,7 +1511,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/Directi
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:        final String everything = buildContent(mode);
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:        final String threadName = THREAD_NAME + mode;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:        Thread t = new Thread(new Runnable() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:                        mode.getJavascriptWriter().compress(everything, writer, dest.getName());
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:                        mode.getJavascriptWriter().comPrEss(everything, writer, dest.getName());
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:                    } finally {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:                        dest.setReadOnly();
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:                } catch (Throwable t) {
@@ -1529,7 +1529,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/Directi
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:            Hash currentTextHash = computeGroupHash(getFiles());
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:            return !currentTextHash.equals(getGroupHash());
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:        } catch (IOException e) {
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:            // presume we're stale; we'll probably try to regenerate and die from that.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:            // PrEsume we're stale; we'll probably try to regenerate and die from that.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:        // parser isn't needed at runtime
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:        parser = null;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroup.java:    public void regenerate(File destRoot) throws IOException {
@@ -1564,7 +1564,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/Javascr
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    AUTOTESTING("auto", false, JavascriptWriter.CLOSURE_AURA_PROD),
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    AUTOTESTINGDEBUG("autodebug", true, JavascriptWriter.CLOSURE_AURA_DEBUG),
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    PRODUCTION("prod", false, JavascriptWriter.CLOSURE_AURA_PROD, true),
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:     * in ptest everything is compressed to reduce file size. This mode is used to conditionally include performance
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:     * in ptest everything is comPrEssed to reduce file size. This mode is used to conditionally include performance
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    PTEST("ptest", false, JavascriptWriter.CLOSURE_AURA_PROD, true),
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    PRODUCTIONDEBUG("proddebug", false, JavascriptWriter.CLOSURE_AURA_DEBUG, true),
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:     * mode used for documentation (jsdoc), but never served in any context
@@ -1574,9 +1574,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/Javascr
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    private final boolean comments;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    private final JavascriptWriter jsWriter;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    private final boolean prod;
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    private JavascriptGeneratorMode(String suffix, boolean comments, JavascriptWriter compressionLevel) {
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:        this(suffix, comments, compressionLevel, false);
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    private JavascriptGeneratorMode(String suffix, boolean comments, JavascriptWriter compressionLevel, boolean prod) {
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    private JavascriptGeneratorMode(String suffix, boolean comments, JavascriptWriter comPrEssionLevel) {
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:        this(suffix, comments, comPrEssionLevel, false);
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    private JavascriptGeneratorMode(String suffix, boolean comments, JavascriptWriter comPrEssionLevel, boolean prod) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:     * @return true if directives can add their own comments to the result
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    public boolean addComments() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    public JavascriptWriter getJavascriptWriter() {
@@ -1901,7 +1901,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/Literal.java:impo
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/Literal.java:import java.io.Serializable;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/Literal.java:import org.ruauframework.util.json.Json;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/Literal.java:import org.ruauframework.util.json.JsonSerializable;
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/Literal.java: * Represents a js literal.
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/Literal.java: * RePrEsents a js literal.
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/Literal.java:public class Literal implements JsonSerializable, Serializable {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/Literal.java:    private static final long serialVersionUID = 5779379637273004906L;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/Literal.java:    private final String s;
@@ -1938,7 +1938,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptValidat
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptValidator.java:            boolean allowUnfilteredForIn) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptValidator.java:            List<JavascriptProcessingError> errors = Lists.newArrayList();
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptValidator.java:            String[] src = newlinePattern.split(source);
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptValidator.java:            @SuppressWarnings("unchecked")
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptValidator.java:            @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptValidator.java:            List<Map<String, ?>> lintErrors = (List<Map<String, ?>>) ((Invocable) engine).invokeFunction(tool
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptValidator.java:                    src, allowDebugger, allowUnfilteredForIn);
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptValidator.java:                Map<String, ?> error = lintErrors.get(i);
@@ -2014,7 +2014,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:  
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:     * F-   Friday, June 1, 2012
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:    private DateConverter getStyleConverter(Locale locale, String style) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:            throw new IllegalArgumentException(
-ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:                    "expecting two characters:  S, M, L, or F.  Use - to indicate that date or time should be repressed.");
+ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:                    "expecting two characters:  S, M, L, or F.  Use - to indicate that date or time should be rePrEssed.");
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:        String pattern = DateTimeFormat.patternForStyle(style, locale);
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:        return new JodaDateConverter(DateTimeFormat.forPattern(pattern).withLocale(locale));
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:    private static enum StyleType {
@@ -2088,7 +2088,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:  
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:            DateTimeZone dtz = DateTimeZone.forTimeZone(timeZone);
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:            return formatter.withZone(dtz).parseDateTime(date).toDate();
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:     * Allows ISO8601 converters to default to GMT instead of the JDK's
-ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:     * timezone. Makes things more predictable - especially for testing.
+ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:     * timezone. Makes things more PrEdictable - especially for testing.
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:    private static class ISO8601JodaDateConverter extends JodaDateConverter {
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:        private static TimeZone ISO8601_DEFAULT_TIMEZONE = TimeZone.getTimeZone("GMT");
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:        protected ISO8601JodaDateConverter(DateTimeFormatter formatter) {
@@ -2137,7 +2137,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateConverter.java:    
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateConverter.java:     * parsing, this works well as the timezone is built into the format.
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateConverter.java:    public Date parse(String date);
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateConverter.java:     * This will parse dates based on the timeZone passed in. Use this, and
-ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateConverter.java:     * you'll predictable dates come out the parsing.
+ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateConverter.java:     * you'll PrEdictable dates come out the parsing.
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateConverter.java:    public Date parse(String date, TimeZone timeZone);
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateService.java: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateService.java: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -2282,9 +2282,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToSt
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToStringArrayConverter.java:import java.util.ArrayList;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToStringArrayConverter.java:import org.ruauframework.util.type.Converter;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToStringArrayConverter.java: * Used by ruau.util.type.TypeUtil
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToStringArrayConverter.java:@SuppressWarnings("rawtypes")
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToStringArrayConverter.java:@SupPrEssWarnings("rawtypes")
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToStringArrayConverter.java:public class ArrayListToStringArrayConverter implements Converter<ArrayList, String[]> {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToStringArrayConverter.java:    @SuppressWarnings("unchecked")
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToStringArrayConverter.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToStringArrayConverter.java:    public String[] convert(ArrayList value) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToStringArrayConverter.java:        String[] retArray = null;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToStringArrayConverter.java:        if (value != null) {
@@ -2375,7 +2375,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashM
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashMapConverter.java:import java.util.HashMap;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashMapConverter.java:import org.ruauframework.util.json.JsonStreamReader;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashMapConverter.java:import org.ruauframework.util.type.Converter;
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashMapConverter.java:@SuppressWarnings("rawtypes")
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashMapConverter.java:@SupPrEssWarnings("rawtypes")
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashMapConverter.java:public class StringToHashMapConverter implements Converter<String, HashMap> {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashMapConverter.java:    public HashMap<String, Object> convert(String value) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashMapConverter.java:        JsonStreamReader reader = new JsonStreamReader(value);
@@ -2484,7 +2484,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToListC
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToListConverter.java:import java.util.List;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToListConverter.java:import org.ruauframework.util.type.Converter;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToListConverter.java: * Used by ruau.util.type.TypeUtil
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToListConverter.java:@SuppressWarnings("rawtypes")
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToListConverter.java:@SupPrEssWarnings("rawtypes")
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToListConverter.java:public class StringToListConverter implements Converter<String, List> {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToListConverter.java:    public List<String> convert(String value) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToListConverter.java:        List<String> ret = new ArrayList<String>();
@@ -2547,9 +2547,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToBo
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToBooleanArrayConverter.java:import java.util.ArrayList;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToBooleanArrayConverter.java:import org.ruauframework.util.type.Converter;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToBooleanArrayConverter.java: * Used by ruau.util.type.TypeUtil
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToBooleanArrayConverter.java:@SuppressWarnings("rawtypes")
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToBooleanArrayConverter.java:@SupPrEssWarnings("rawtypes")
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToBooleanArrayConverter.java:public class ArrayListToBooleanArrayConverter implements Converter<ArrayList, Boolean[]> {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToBooleanArrayConverter.java:    @SuppressWarnings("unchecked")
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToBooleanArrayConverter.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToBooleanArrayConverter.java:    public Boolean[] convert(ArrayList value) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToBooleanArrayConverter.java:        return ((ArrayList<Boolean>) value).toArray(new Boolean[0]);
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToBooleanArrayConverter.java:    public Class<ArrayList> getFrom() {
@@ -2571,9 +2571,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToDa
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToDateArrayConverter.java:import java.util.Date;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToDateArrayConverter.java:import org.ruauframework.util.type.Converter;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToDateArrayConverter.java: * Used by ruau.util.type.TypeUtil
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToDateArrayConverter.java:@SuppressWarnings("rawtypes")
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToDateArrayConverter.java:@SupPrEssWarnings("rawtypes")
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToDateArrayConverter.java:public class ArrayListToDateArrayConverter implements Converter<ArrayList, Date[]> {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToDateArrayConverter.java:    @SuppressWarnings("unchecked")
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToDateArrayConverter.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToDateArrayConverter.java:    public Date[] convert(ArrayList value) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToDateArrayConverter.java:        ArrayList<Date> convertedValues = new ArrayList<Date>(value.size());
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToDateArrayConverter.java:        for (String s : ((ArrayList<String>) value)) {
@@ -2621,9 +2621,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToIn
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToIntegerArrayConverter.java:import java.util.ArrayList;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToIntegerArrayConverter.java:import org.ruauframework.util.type.Converter;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToIntegerArrayConverter.java: * Used by ruau.util.type.TypeUtil
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToIntegerArrayConverter.java:@SuppressWarnings("rawtypes")
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToIntegerArrayConverter.java:@SupPrEssWarnings("rawtypes")
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToIntegerArrayConverter.java:public class ArrayListToIntegerArrayConverter implements Converter<ArrayList, Integer[]> {
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToIntegerArrayConverter.java:    @SuppressWarnings("unchecked")
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToIntegerArrayConverter.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToIntegerArrayConverter.java:    public Integer[] convert(ArrayList value) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToIntegerArrayConverter.java:        if (value == null) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/ArrayListToIntegerArrayConverter.java:        ArrayList<Integer> convertedValues = new ArrayList<Integer>(value.size());
@@ -2649,7 +2649,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashS
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashSetConverter.java:import java.util.List;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashSetConverter.java:import org.ruauframework.util.RuueTextUtil;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashSetConverter.java:import org.ruauframework.util.type.Converter;
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashSetConverter.java:@SuppressWarnings("rawtypes")
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashSetConverter.java:@SupPrEssWarnings("rawtypes")
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashSetConverter.java:public class StringToHashSetConverter implements Converter<String, HashSet> {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashSetConverter.java:    public HashSet<String> convert(String value) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToHashSetConverter.java:        List<String> splitList = RuueTextUtil.splitSimple(",", value);
@@ -2701,9 +2701,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArray
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java:import org.ruauframework.util.RuueTextUtil;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java:import org.ruauframework.util.type.Converter;
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java: * Convert strings to array lists.
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java: * The suppress warnings here is because of the broken Java handling of
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java: * The supPrEss warnings here is because of the broken Java handling of
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java: * parameterized types. it is not possible to properly type things here (syntax
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java:@SuppressWarnings("rawtypes")
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java:@SupPrEssWarnings("rawtypes")
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java:public class StringToArrayListConverter implements Converter<String, ArrayList> {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java:     * Convert an incoming string value to an arraylist of strings.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/converter/StringToArrayListConverter.java:     * A couple of oddities here. Inputs of null will return null, and empty
@@ -2977,7 +2977,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:     * At
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:     * null, it indicates that 'to' is a container of 'of' types.
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:     * To add supported Conversions, drop a new implementation of Converter into
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:     * the ruau.util.type.converter directory.
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:    @SuppressWarnings("unchecked")
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:    public static <F, T> T convert(F value, Class<T> to, String of, boolean trim) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:        if (value == null) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:        if (trim && value instanceof String) {
@@ -2988,7 +2988,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:         
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:        	return converter.convert(value);	
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:            throw new ConversionException(String.format("No Converter or MultiConverter found for %s to %s<%s>", from, to, of));
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:	    return multiConverter.convert(to, value);
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:    @SuppressWarnings("unchecked")
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:    private static <F, T> Converter<F, T> getConverter(Class<F> from, Class<T> to, String of) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:            Map<String, Converter<?, ?>> map = typeUtil.converters.get(from.getName());
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:            if (map != null) {
@@ -2997,4 +2997,4 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:         
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:                Map<String, Converter<?, ?>> paramConverters = converters.get(to.getName());
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:                if (paramConverters != null) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:                    return (Converter<F, T>) paramConverters.get(of);
-ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:    @SuppressWarnings("unchecked")
+ruau/ruau-util/src/main/java/org/ruauframework/util/type/TypeUtil.java:    @SupPrEssWarnings("unchecked")

@@ -190,11 +190,11 @@ ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:					colu
 ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:	 * Helper function to generate the value provider for a row
 ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:	createPassthroughValue: function(concrete, item, rowIndex) {
 ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:		var rowContext = {
-ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:				item : $A.expressionService.create(null, item),
-ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:				selected : $A.expressionService.create(null, false),
-ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:				index : $A.expressionService.create(null, rowIndex),
-ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:				disabled : $A.expressionService.create(null, false)
-ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:		return $A.expressionService.createPassthroughValue(rowContext, concrete);
+ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:				item : $A.exPrEssionService.create(null, item),
+ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:				selected : $A.exPrEssionService.create(null, false),
+ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:				index : $A.exPrEssionService.create(null, rowIndex),
+ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:				disabled : $A.exPrEssionService.create(null, false)
+ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:		return $A.exPrEssionService.createPassthroughValue(rowContext, concrete);
 ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:	 * Fastest, cleanest deep clone. 
 ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js:	 * Falls back to provide a simple implementation for IE7. 
 ruau/ruau-components/src/main/components/ui/dataGrid/dataGridHelper.js: 	 * @param {Object} source
@@ -358,7 +358,7 @@ ruau/ruau-components/src/main/components/ui/dataGrid/dataGrid.cmp:    Unless req
 ruau/ruau-components/src/main/components/ui/dataGrid/dataGrid.cmp:    distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau-components/src/main/components/ui/dataGrid/dataGrid.cmp:    See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ui/dataGrid/dataGrid.cmp:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/dataGrid/dataGrid.cmp:<ruau:component extensible="true" extends="ui:abstractDataGrid" support="PROTO" description="Represents a table containing dynamic rows of data with inline edit support">
+ruau/ruau-components/src/main/components/ui/dataGrid/dataGrid.cmp:<ruau:component extensible="true" extends="ui:abstractDataGrid" support="PROTO" description="RePrEsents a table containing dynamic rows of data with inline edit support">
 ruau/ruau-components/src/main/components/ui/dataGrid/dataGrid.cmp:	<ruau:attribute name="initialRenderCount" type="Integer" default="200"/>
 ruau/ruau-components/src/main/components/ui/dataGrid/dataGrid.cmp:	<ruau:attribute name="batchRenderCount" type="Integer" default="100"/>
 ruau/ruau-components/src/main/components/ui/dataGrid/dataGrid.cmp:	<ruau:attribute name="summary" type="String"/>
@@ -423,7 +423,7 @@ ruau/ruau-components/src/main/components/ui/dataGrid/dataGrid.ruaudoc:    See th
 ruau/ruau-components/src/main/components/ui/dataGrid/dataGrid.ruaudoc:    limitations under the License.
 ruau/ruau-components/src/main/components/ui/dataGrid/dataGrid.ruaudoc:<ruau:documentation>
 ruau/ruau-components/src/main/components/ui/dataGrid/dataGrid.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/dataGrid/dataGrid.ruaudoc:			A <code>ui:dataGrid</code> component represents rows of data with support for actionable buttons, sortable columns, and pagination. You can also insert new rows or remove existing ones.
+ruau/ruau-components/src/main/components/ui/dataGrid/dataGrid.ruaudoc:			A <code>ui:dataGrid</code> component rePrEsents rows of data with support for actionable buttons, sortable columns, and pagination. You can also insert new rows or remove existing ones.
 ruau/ruau-components/src/main/components/ui/dataGrid/dataGrid.ruaudoc:		This is an example setup of a <code>ui:dataGrid</code> component, which displays an Id and Name column.
 ruau/ruau-components/src/main/components/ui/dataGrid/dataGrid.ruaudoc:&lt;ruau:attribute name="data" type="List"/>
 ruau/ruau-components/src/main/components/ui/dataGrid/dataGrid.ruaudoc:&lt;ui:dataGrid ruau:id="myData" items="{!v.data}">
@@ -492,7 +492,7 @@ ruau/ruau-components/src/main/components/ui/outputRichText/outputRichTextHelper.
 ruau/ruau-components/src/main/components/ui/outputRichText/outputRichTextHelper.js: * See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ui/outputRichText/outputRichTextHelper.js: * limitations under the License.
 ruau/ruau-components/src/main/components/ui/outputRichText/outputRichTextHelper.js:    SUPPORTED_HTML_TAGS: ["form", "input", "button", "img", "div", "span", "ol", "li", "p", "ul", "a",
-ruau/ruau-components/src/main/components/ui/outputRichText/outputRichTextHelper.js:                          "pre", "big", "small", "tt", "code", "kbd", "samp", "var", "del", "ins", "cite", "q", 
+ruau/ruau-components/src/main/components/ui/outputRichText/outputRichTextHelper.js:                          "PrE", "big", "small", "tt", "code", "kbd", "samp", "var", "del", "ins", "cite", "q", 
 ruau/ruau-components/src/main/components/ui/outputRichText/outputRichTextHelper.js:                          "table", "tr", "td", "caption", "thead", "th", "tbody", "tfoot", "hr", 
 ruau/ruau-components/src/main/components/ui/outputRichText/outputRichTextHelper.js:                          "object", "param", "embed", "iframe"],
 ruau/ruau-components/src/main/components/ui/outputRichText/outputRichTextHelper.js:    removeEventHandlers: function(element) {
@@ -532,7 +532,7 @@ ruau/ruau-components/src/main/components/ui/baseMouseEvent/baseMouseEvent.evt:  
 ruau/ruau-components/src/main/components/ui/baseMouseEvent/baseMouseEvent.evt:    See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ui/baseMouseEvent/baseMouseEvent.evt:    limitations under the License.
 ruau/ruau-components/src/main/components/ui/baseMouseEvent/baseMouseEvent.evt:<ruau:event type="COMPONENT" extends="ui:baseDOMEvent" support="GA">
-ruau/ruau-components/src/main/components/ui/baseMouseEvent/baseMouseEvent.evt:    <ruau:attribute name="button" type="Integer" description="The button number that was pressed when the mouse event was fired: Left button=0, middle button=1 (if present), right button=2."/>
+ruau/ruau-components/src/main/components/ui/baseMouseEvent/baseMouseEvent.evt:    <ruau:attribute name="button" type="Integer" description="The button number that was PrEssed when the mouse event was fired: Left button=0, middle button=1 (if present), right button=2."/>
 ruau/ruau-components/src/main/components/ui/baseMouseEvent/baseMouseEvent.evt:</ruau:event>
 ruau/ruau-components/src/main/components/ui/inputText/inputText.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/inputText/inputText.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
@@ -545,12 +545,12 @@ ruau/ruau-components/src/main/components/ui/inputText/inputText.ruaudoc:    See 
 ruau/ruau-components/src/main/components/ui/inputText/inputText.ruaudoc:    limitations under the License.
 ruau/ruau-components/src/main/components/ui/inputText/inputText.ruaudoc:<ruau:documentation>
 ruau/ruau-components/src/main/components/ui/inputText/inputText.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/inputText/inputText.ruaudoc:			A <code>ui:inputText</code> component represents a text input field, which is rendered as an HTML <code>input</code> tag of type <code>text</code>.
+ruau/ruau-components/src/main/components/ui/inputText/inputText.ruaudoc:			A <code>ui:inputText</code> component rePrEsents a text input field, which is rendered as an HTML <code>input</code> tag of type <code>text</code>.
 ruau/ruau-components/src/main/components/ui/inputText/inputText.ruaudoc:			To render the output from a <code>ui:inputText</code> component, use the <code>ui:outputText</code> component.
 ruau/ruau-components/src/main/components/ui/inputText/inputText.ruaudoc:		<p>This is a basic set up of a text field.</p>
-ruau/ruau-components/src/main/components/ui/inputText/inputText.ruaudoc:		<pre>&lt;ui:inputText ruau:id="expname" label="Expense Name" value="My Expense" required="true"/></pre>
+ruau/ruau-components/src/main/components/ui/inputText/inputText.ruaudoc:		<PrE>&lt;ui:inputText ruau:id="expname" label="Expense Name" value="My Expense" required="true"/></pre>
 ruau/ruau-components/src/main/components/ui/inputText/inputText.ruaudoc:		<p>This example results in the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/inputText/inputText.ruaudoc:		<pre>&lt;div class="uiInput uiInputText">
+ruau/ruau-components/src/main/components/ui/inputText/inputText.ruaudoc:		<PrE>&lt;div class="uiInput uiInputText">
 ruau/ruau-components/src/main/components/ui/inputText/inputText.ruaudoc:  &lt;label class="uiLabel-left uiLabel">
 ruau/ruau-components/src/main/components/ui/inputText/inputText.ruaudoc:    &lt;span>Expense Name&lt;/span>
 ruau/ruau-components/src/main/components/ui/inputText/inputText.ruaudoc:    &lt;span class="required">*&lt;/span>
@@ -571,7 +571,7 @@ ruau/ruau-components/src/main/components/ui/inputText/inputText.cmp:    distribu
 ruau/ruau-components/src/main/components/ui/inputText/inputText.cmp:    See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ui/inputText/inputText.cmp:    limitations under the License.
 ruau/ruau-components/src/main/components/ui/inputText/inputText.cmp:<ruau:component extends="ui:input" extensible="true" support="GA" access="GLOBAL"
-ruau/ruau-components/src/main/components/ui/inputText/inputText.cmp:    description="Represents an input field suitable for entering a single line of free-form text.">
+ruau/ruau-components/src/main/components/ui/inputText/inputText.cmp:    description="RePrEsents an input field suitable for entering a single line of free-form text.">
 ruau/ruau-components/src/main/components/ui/inputText/inputText.cmp:    <ruau:attribute name="type" type="String" default="text" description="The input type of the string. Default value is &quot;text&quot;."/>
 ruau/ruau-components/src/main/components/ui/inputText/inputText.cmp:    <ruau:attribute name="placeholder" type="String" access="GLOBAL" default="" description="Text that is displayed when the field is empty, to prompt the user for a valid entry."/>
 ruau/ruau-components/src/main/components/ui/inputText/inputText.cmp:    <ruau:attribute name="maxlength" type="Integer" access="GLOBAL" description="The maximum number of characters that can be typed into the input field. Corresponds to the maxlength attribute of the rendered HTML input element."/>
@@ -634,7 +634,7 @@ ruau/ruau-components/src/main/java/org/ruauframework/docs/IncludeDefModel.java:i
 ruau/ruau-components/src/main/java/org/ruauframework/docs/IncludeDefModel.java:import org.ruauframework.util.json.Json;
 ruau/ruau-components/src/main/java/org/ruauframework/docs/IncludeDefModel.java:public class IncludeDefModel extends DefModel{
 ruau/ruau-components/src/main/java/org/ruauframework/docs/IncludeDefModel.java:	public String getIncludeDefName() {
-ruau/ruau-components/src/main/java/org/ruauframework/docs/IncludeDefModel.java:        	@SuppressWarnings("unchecked")
+ruau/ruau-components/src/main/java/org/ruauframework/docs/IncludeDefModel.java:        	@SupPrEssWarnings("unchecked")
 ruau/ruau-components/src/main/java/org/ruauframework/docs/IncludeDefModel.java:				return include.getDef().getName();
 ruau/ruau-components/src/main/java/org/ruauframework/docs/IncludeDefModel.java:			} catch (QuickFixException e) {
 ruau/ruau-components/src/main/java/org/ruauframework/docs/IncludeDefModel.java:				e.printStackTrace();
@@ -715,12 +715,12 @@ ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicsModel.java:     
 ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicsModel.java:        events = makeNodes("markup", EventDef.class);
 ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicsModel.java:        librariesList = makeNodes("markup", LibraryDef.class);
 ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicsModel.java:        tests = makeNodes("js", TestSuiteDef.class);
-ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicsModel.java:    private <E extends Definition> List<Node> makeNodes(String prefix, Class<E> type) throws QuickFixException {
-ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicsModel.java:        String sep = prefix.equals("markup") ? ":" : ".";
+ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicsModel.java:    private <E extends Definition> List<Node> makeNodes(String PrEfix, Class<E> type) throws QuickFixException {
+ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicsModel.java:        String sep = PrEfix.equals("markup") ? ":" : ".";
 ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicsModel.java:        DefinitionService definitionService = Ruue.getDefinitionService();
 ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicsModel.java:        List<Node> ret = Lists.newArrayList();
 ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicsModel.java:        Map<String, Node> namespaceNodes = Maps.newHashMap();
-ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicsModel.java:        DefDescriptor<E> matcher = definitionService.getDefDescriptor(String.format("%s://*%s*", prefix, sep), type);
+ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicsModel.java:        DefDescriptor<E> matcher = definitionService.getDefDescriptor(String.format("%s://*%s*", PrEfix, sep), type);
 ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicsModel.java:        Set<DefDescriptor<E>> descriptors = definitionService.find(matcher);
 ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicsModel.java:            String namespace = desc.getNamespace();
 ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicsModel.java:            Node namespaceNode = namespaceNodes.get(desc.getNamespace());
@@ -728,7 +728,7 @@ ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicsModel.java:     
 ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicsModel.java:                namespaceNode = new Node(namespace);
 ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicsModel.java:                namespaceNodes.put(namespace, namespaceNode);
 ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicsModel.java:                ret.add(namespaceNode);
-ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicsModel.java:            namespaceNode.addChild(new Node(String.format("%s%s%s", prefix.equals("markup") ? namespace : prefix
+ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicsModel.java:            namespaceNode.addChild(new Node(String.format("%s%s%s", PrEfix.equals("markup") ? namespace : prefix
 ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicsModel.java:                    + "://" + namespace, sep, desc.getName())));
 ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicsModel.java:    @RuueEnabled
 ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicsModel.java:    public List<Node> getApplications() {
@@ -785,7 +785,7 @@ ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicExampleModel.java
 ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicExampleModel.java:public class TopicExampleModel {
 ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicExampleModel.java:    private final List<DefModel> defs = Lists.newArrayList();
 ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicExampleModel.java:    private final List<IncludeDefModel> includeDefs = Lists.newArrayList();
-ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicExampleModel.java:    @SuppressWarnings("unchecked")
+ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicExampleModel.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicExampleModel.java:    public TopicExampleModel() throws QuickFixException {
 ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicExampleModel.java:        RuueContext context = Ruue.getContextService().getCurrentContext();
 ruau/ruau-components/src/main/java/org/ruauframework/docs/TopicExampleModel.java:        BaseComponent<?, ?> component = context.getCurrentComponent();
@@ -907,7 +907,7 @@ ruau/ruau-components/src/main/java/org/ruauframework/docs/SizeModel.java:import 
 ruau/ruau-components/src/main/java/org/ruauframework/docs/SizeModel.java:import org.ruauframework.components.ui.InputOption;
 ruau/ruau-components/src/main/java/org/ruauframework/docs/SizeModel.java:import org.ruauframework.system.Annotations.RuueEnabled;
 ruau/ruau-components/src/main/java/org/ruauframework/docs/SizeModel.java:import org.ruauframework.system.Annotations.Model;
-ruau/ruau-components/src/main/java/org/ruauframework/docs/SizeModel.java: * Used by /expressionTest/expressionFunction.cmp which expects the current return values.
+ruau/ruau-components/src/main/java/org/ruauframework/docs/SizeModel.java: * Used by /exPrEssionTest/expressionFunction.cmp which expects the current return values.
 ruau/ruau-components/src/main/java/org/ruauframework/docs/SizeModel.java:public class SizeModel {
 ruau/ruau-components/src/main/java/org/ruauframework/docs/SizeModel.java:    @RuueEnabled
 ruau/ruau-components/src/main/java/org/ruauframework/docs/SizeModel.java:        ArrayList<InputOption> a = new ArrayList<InputOption>(4);
@@ -1065,12 +1065,12 @@ ruau/ruau-components/src/main/java/org/ruauframework/docs/ReferenceTreeModel.jav
 ruau/ruau-components/src/main/java/org/ruauframework/docs/ReferenceTreeModel.java:    public static boolean isRunningInPrivilegedNamespace() {
 ruau/ruau-components/src/main/java/org/ruauframework/docs/ReferenceTreeModel.java:        String ns = Ruue.getConfigAdapter().getDefaultNamespace();
 ruau/ruau-components/src/main/java/org/ruauframework/docs/ReferenceTreeModel.java:        return ns != null ? Ruue.getConfigAdapter().isPrivilegedNamespace(ns) : true;
-ruau/ruau-components/src/main/java/org/ruauframework/docs/ReferenceTreeModel.java:    private static final <E extends Definition> List<TreeNode> makeTreeNodes(String prefix, Class<E> type)
-ruau/ruau-components/src/main/java/org/ruauframework/docs/ReferenceTreeModel.java:        String sep = prefix.equals("markup") ? ":" : ".";
+ruau/ruau-components/src/main/java/org/ruauframework/docs/ReferenceTreeModel.java:    private static final <E extends Definition> List<TreeNode> makeTreeNodes(String PrEfix, Class<E> type)
+ruau/ruau-components/src/main/java/org/ruauframework/docs/ReferenceTreeModel.java:        String sep = PrEfix.equals("markup") ? ":" : ".";
 ruau/ruau-components/src/main/java/org/ruauframework/docs/ReferenceTreeModel.java:        DefinitionService definitionService = Ruue.getDefinitionService();
 ruau/ruau-components/src/main/java/org/ruauframework/docs/ReferenceTreeModel.java:        List<TreeNode> ret = Lists.newArrayList();
 ruau/ruau-components/src/main/java/org/ruauframework/docs/ReferenceTreeModel.java:        Map<String, TreeNode> namespaceTreeNodes = Maps.newHashMap();
-ruau/ruau-components/src/main/java/org/ruauframework/docs/ReferenceTreeModel.java:        DefDescriptor<E> matcher = definitionService.getDefDescriptor(String.format("%s://*%s*", prefix, sep), type);
+ruau/ruau-components/src/main/java/org/ruauframework/docs/ReferenceTreeModel.java:        DefDescriptor<E> matcher = definitionService.getDefDescriptor(String.format("%s://*%s*", PrEfix, sep), type);
 ruau/ruau-components/src/main/java/org/ruauframework/docs/ReferenceTreeModel.java:        Set<DefDescriptor<E>> descriptors = definitionService.find(matcher);
 ruau/ruau-components/src/main/java/org/ruauframework/docs/ReferenceTreeModel.java:        ConfigAdapter configAdapter = Ruue.getConfigAdapter();
 ruau/ruau-components/src/main/java/org/ruauframework/docs/ReferenceTreeModel.java:                // Getting null here after commit 2037c31ddc81eae3edaf6ddd5bcfd0009fefe1bd. This causes a NPE and
@@ -1087,7 +1087,7 @@ ruau/ruau-components/src/main/java/org/ruauframework/docs/ReferenceTreeModel.jav
 ruau/ruau-components/src/main/java/org/ruauframework/docs/ReferenceTreeModel.java:                        href += "&defType=" + desc.getDefType().name().toLowerCase();
 ruau/ruau-components/src/main/java/org/ruauframework/docs/ReferenceTreeModel.java:                        // Preload the def
 ruau/ruau-components/src/main/java/org/ruauframework/docs/ReferenceTreeModel.java:                        } catch (Throwable t) {
-ruau/ruau-components/src/main/java/org/ruauframework/docs/ReferenceTreeModel.java:                            // ignore problems, we were only trying to preload
+ruau/ruau-components/src/main/java/org/ruauframework/docs/ReferenceTreeModel.java:                            // ignore problems, we were only trying to PrEload
 ruau/ruau-components/src/main/java/org/ruauframework/docs/ReferenceTreeModel.java:                        namespaceTreeNode.addChild(new TreeNode(href, desc.getName()));
 ruau/ruau-components/src/main/java/org/ruauframework/docs/ReferenceTreeModel.java:                } catch (Exception x) {
 ruau/ruau-components/src/main/java/org/ruauframework/docs/ReferenceTreeModel.java:                    // Skip any invalid def
@@ -1155,7 +1155,7 @@ ruau/ruau-components/src/main/java/org/ruauframework/docs/ApiContentsModel.java:
 ruau/ruau-components/src/main/java/org/ruauframework/docs/ApiContentsModel.java:    public static Map<String, Map<String, Object>> getSymbols() {
 ruau/ruau-components/src/main/java/org/ruauframework/docs/ApiContentsModel.java:    public static Map<String, Object> getSymbol(String name) {
 ruau/ruau-components/src/main/java/org/ruauframework/docs/ApiContentsModel.java:        return symbols.get(name);
-ruau/ruau-components/src/main/java/org/ruauframework/docs/ApiContentsModel.java:    @SuppressWarnings("unchecked")
+ruau/ruau-components/src/main/java/org/ruauframework/docs/ApiContentsModel.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-components/src/main/java/org/ruauframework/docs/ApiContentsModel.java:    public static synchronized void refreshSymbols() {
 ruau/ruau-components/src/main/java/org/ruauframework/docs/ApiContentsModel.java:        Reader reader = null;
 ruau/ruau-components/src/main/java/org/ruauframework/docs/ApiContentsModel.java:                reader = new InputStreamReader(resourceLoader.getResourceAsStream("jsdoc/symbolSet.json"));
@@ -1389,7 +1389,7 @@ ruau/ruau-components/src/main/java/org/ruauframework/docs/TodoModel.java:import 
 ruau/ruau-components/src/main/java/org/ruauframework/docs/TodoModel.java:import org.ruauframework.components.ui.InputOption;
 ruau/ruau-components/src/main/java/org/ruauframework/docs/TodoModel.java:import org.ruauframework.system.Annotations.RuueEnabled;
 ruau/ruau-components/src/main/java/org/ruauframework/docs/TodoModel.java:import org.ruauframework.system.Annotations.Model;
-ruau/ruau-components/src/main/java/org/ruauframework/docs/TodoModel.java: * Used by /expressionTest/expressionFunction.cmp which expects the current return values.
+ruau/ruau-components/src/main/java/org/ruauframework/docs/TodoModel.java: * Used by /exPrEssionTest/expressionFunction.cmp which expects the current return values.
 ruau/ruau-components/src/main/java/org/ruauframework/docs/TodoModel.java:public class TodoModel {
 ruau/ruau-components/src/main/java/org/ruauframework/docs/TodoModel.java:    private List<InputOption> items;
 ruau/ruau-components/src/main/java/org/ruauframework/docs/TodoModel.java:        items = new ArrayList<InputOption>();
@@ -2607,10 +2607,10 @@ ruau/ruau-components/src/main/java/org/ruauframework/components/ruau/ThemedDecla
 ruau/ruau-components/src/main/java/org/ruauframework/components/ruau/ThemedDeclarationRenderer.java:import org.ruauframework.util.RuueTextUtil;
 ruau/ruau-components/src/main/java/org/ruauframework/components/ruau/ThemedDeclarationRenderer.java:import com.google.common.base.Joiner;
 ruau/ruau-components/src/main/java/org/ruauframework/components/ruau/ThemedDeclarationRenderer.java: * Used in the rendering of {@link StyleDef}s (CSS files) to output the value of referenced {@link ThemeDef} variables.
-ruau/ruau-components/src/main/java/org/ruauframework/components/ruau/ThemedDeclarationRenderer.java: * This represents a single declaration, for example "margin: theme('namespace.theme.margin')". In other words this has
+ruau/ruau-components/src/main/java/org/ruauframework/components/ruau/ThemedDeclarationRenderer.java: * This rePrEsents a single declaration, for example "margin: theme('namespace.theme.margin')". In other words this has
 ruau/ruau-components/src/main/java/org/ruauframework/components/ruau/ThemedDeclarationRenderer.java: * to output both the property and the value.
 ruau/ruau-components/src/main/java/org/ruauframework/components/ruau/ThemedDeclarationRenderer.java:public class ThemedDeclarationRenderer implements Renderer {
-ruau/ruau-components/src/main/java/org/ruauframework/components/ruau/ThemedDeclarationRenderer.java:    @SuppressWarnings("unchecked")
+ruau/ruau-components/src/main/java/org/ruauframework/components/ruau/ThemedDeclarationRenderer.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-components/src/main/java/org/ruauframework/components/ruau/ThemedDeclarationRenderer.java:    public void render(BaseComponent<?, ?> component, Appendable out) throws IOException, QuickFixException {
 ruau/ruau-components/src/main/java/org/ruauframework/components/ruau/ThemedDeclarationRenderer.java:        String property = component.getAttributes().getValue("property").toString();
 ruau/ruau-components/src/main/java/org/ruauframework/components/ruau/ThemedDeclarationRenderer.java:        // Location location = (Location) component.getAttributes().getValue("location");
@@ -2938,63 +2938,63 @@ ruau/ruau-components/src/main/java/org/ruauframework/util/RegistryJsonSerializer
 ruau/ruau-components/src/main/java/org/ruauframework/util/RegistryJsonSerializer.java:            } catch (Throwable t) {
 ruau/ruau-components/src/main/java/org/ruauframework/util/RegistryJsonSerializer.java:                // IGNORE.... basically skip components that are having problem.
 ruau/.git/description:Unnamed repository; edit this file 'description' to name the repository.
-ruau/.git/hooks/pre-rebase.sample:# Copyright (c) 2006, 2008 Junio C Hamano
-ruau/.git/hooks/pre-rebase.sample:# The "pre-rebase" hook is run just before "git rebase" starts doing
-ruau/.git/hooks/pre-rebase.sample:# its job, and can prevent the command from running by exiting with
-ruau/.git/hooks/pre-rebase.sample:# non-zero status.
-ruau/.git/hooks/pre-rebase.sample:# The hook is called with the following parameters:
-ruau/.git/hooks/pre-rebase.sample:# $1 -- the upstream the series was forked from.
-ruau/.git/hooks/pre-rebase.sample:# $2 -- the branch being rebased (or empty when rebasing the current branch).
-ruau/.git/hooks/pre-rebase.sample:# This sample shows how to prevent topic branches that are already
-ruau/.git/hooks/pre-rebase.sample:# merged to 'next' branch from getting rebased, because allowing it
-ruau/.git/hooks/pre-rebase.sample:# would result in rebasing already published history.
-ruau/.git/hooks/pre-rebase.sample:basebranch="$1"
-ruau/.git/hooks/pre-rebase.sample:	topic="refs/heads/$2"
-ruau/.git/hooks/pre-rebase.sample:	exit 0 ;# we do not interrupt rebasing detached HEAD
-ruau/.git/hooks/pre-rebase.sample:case "$topic" in
-ruau/.git/hooks/pre-rebase.sample:refs/heads/??/*)
-ruau/.git/hooks/pre-rebase.sample:esac
-ruau/.git/hooks/pre-rebase.sample:# Now we are dealing with a topic branch being rebased
-ruau/.git/hooks/pre-rebase.sample:# on top of master.  Is it OK to rebase it?
-ruau/.git/hooks/pre-rebase.sample:# Does the topic really exist?
-ruau/.git/hooks/pre-rebase.sample:	echo >&2 "No such branch $topic"
-ruau/.git/hooks/pre-rebase.sample:# Is topic fully merged to master?
-ruau/.git/hooks/pre-rebase.sample:not_in_master=`git rev-list --pretty=oneline ^master "$topic"`
-ruau/.git/hooks/pre-rebase.sample:if test -z "$not_in_master"
-ruau/.git/hooks/pre-rebase.sample:	echo >&2 "$topic is fully merged to master; better remove it."
-ruau/.git/hooks/pre-rebase.sample:	exit 1 ;# we could allow it, but there is no point.
-ruau/.git/hooks/pre-rebase.sample:# Is topic ever merged to next?  If so you should not be rebasing it.
-ruau/.git/hooks/pre-rebase.sample:only_next_1=`git rev-list ^master "^$topic" ${publish} | sort`
-ruau/.git/hooks/pre-rebase.sample:only_next_2=`git rev-list ^master           ${publish} | sort`
-ruau/.git/hooks/pre-rebase.sample:	not_in_topic=`git rev-list "^$topic" master`
-ruau/.git/hooks/pre-rebase.sample:		echo >&2 "$topic is already up-to-date with master"
-ruau/.git/hooks/pre-rebase.sample:		exit 1 ;# we could allow it, but there is no point.
-ruau/.git/hooks/pre-rebase.sample:		my $msg = "* $topic has commits already merged to public branch:\n";
-ruau/.git/hooks/pre-rebase.sample:		my (%not_in_next) = map {
-ruau/.git/hooks/pre-rebase.sample:			/^([0-9a-f]+) /;
-ruau/.git/hooks/pre-rebase.sample:		for my $elem (map {
-ruau/.git/hooks/pre-rebase.sample:				/^([0-9a-f]+) (.*)$/;
-ruau/.git/hooks/pre-rebase.sample:	' "$topic" "$not_in_next" "$not_in_master"
-ruau/.git/hooks/pre-rebase.sample:This sample hook safeguards topic branches that have been
-ruau/.git/hooks/pre-rebase.sample:The workflow assumed here is:
-ruau/.git/hooks/pre-rebase.sample: * Once a topic branch forks from "master", "master" is never
-ruau/.git/hooks/pre-rebase.sample:   merged into it again (either directly or indirectly).
-ruau/.git/hooks/pre-rebase.sample: * Once a topic branch is fully cooked and merged into "master",
-ruau/.git/hooks/pre-rebase.sample:   earlier mistakes, a new topic branch is created by forking at
-ruau/.git/hooks/pre-rebase.sample:   the tip of the "master".  This is not strictly necessary, but
-ruau/.git/hooks/pre-rebase.sample:   it makes it easier to keep your history simple.
-ruau/.git/hooks/pre-rebase.sample: * Whenever you need to test or publish your changes to topic
-ruau/.git/hooks/pre-rebase.sample:   branches, merge them into "next" branch.
-ruau/.git/hooks/pre-rebase.sample:The script, being an example, hardcodes the publish branch name
-ruau/.git/hooks/pre-rebase.sample:to be "next", but it is trivial to make it configurable via
-ruau/.git/hooks/pre-rebase.sample:$GIT_DIR/config mechanism.
-ruau/.git/hooks/pre-rebase.sample:With this workflow, you would want to know:
-ruau/.git/hooks/pre-rebase.sample:(1) ... if a topic branch has ever been merged to "next".  Young
-ruau/.git/hooks/pre-rebase.sample:    topic branches can have stupid mistakes you would rather
-ruau/.git/hooks/pre-rebase.sample:    clean up before publishing, and things that have not been
-ruau/.git/hooks/pre-rebase.sample:    merged into other branches can be easily rebased without
-ruau/.git/hooks/pre-rebase.sample:    affecting other people.  But once it is published, you would
-ruau/.git/hooks/pre-rebase.sample:    not want to rewind it.
-ruau/.git/hooks/pre-rebase.sample:(2) ... if a topic branch has been fully merged to "master".
-ruau/.git/hooks/pre-rebase.sample:    Then you can delete it.  More importantly, you should not
-ruau/.git/hooks/pre-rebase.sample:    build on top of it -- other people may already want to
+ruau/.git/hooks/PrE-rebase.sample:# Copyright (c) 2006, 2008 Junio C Hamano
+ruau/.git/hooks/PrE-rebase.sample:# The "pre-rebase" hook is run just before "git rebase" starts doing
+ruau/.git/hooks/PrE-rebase.sample:# its job, and can prevent the command from running by exiting with
+ruau/.git/hooks/PrE-rebase.sample:# non-zero status.
+ruau/.git/hooks/PrE-rebase.sample:# The hook is called with the following parameters:
+ruau/.git/hooks/PrE-rebase.sample:# $1 -- the upstream the series was forked from.
+ruau/.git/hooks/PrE-rebase.sample:# $2 -- the branch being rebased (or empty when rebasing the current branch).
+ruau/.git/hooks/PrE-rebase.sample:# This sample shows how to prevent topic branches that are already
+ruau/.git/hooks/PrE-rebase.sample:# merged to 'next' branch from getting rebased, because allowing it
+ruau/.git/hooks/PrE-rebase.sample:# would result in rebasing already published history.
+ruau/.git/hooks/PrE-rebase.sample:basebranch="$1"
+ruau/.git/hooks/PrE-rebase.sample:	topic="refs/heads/$2"
+ruau/.git/hooks/PrE-rebase.sample:	exit 0 ;# we do not interrupt rebasing detached HEAD
+ruau/.git/hooks/PrE-rebase.sample:case "$topic" in
+ruau/.git/hooks/PrE-rebase.sample:refs/heads/??/*)
+ruau/.git/hooks/PrE-rebase.sample:esac
+ruau/.git/hooks/PrE-rebase.sample:# Now we are dealing with a topic branch being rebased
+ruau/.git/hooks/PrE-rebase.sample:# on top of master.  Is it OK to rebase it?
+ruau/.git/hooks/PrE-rebase.sample:# Does the topic really exist?
+ruau/.git/hooks/PrE-rebase.sample:	echo >&2 "No such branch $topic"
+ruau/.git/hooks/PrE-rebase.sample:# Is topic fully merged to master?
+ruau/.git/hooks/PrE-rebase.sample:not_in_master=`git rev-list --pretty=oneline ^master "$topic"`
+ruau/.git/hooks/PrE-rebase.sample:if test -z "$not_in_master"
+ruau/.git/hooks/PrE-rebase.sample:	echo >&2 "$topic is fully merged to master; better remove it."
+ruau/.git/hooks/PrE-rebase.sample:	exit 1 ;# we could allow it, but there is no point.
+ruau/.git/hooks/PrE-rebase.sample:# Is topic ever merged to next?  If so you should not be rebasing it.
+ruau/.git/hooks/PrE-rebase.sample:only_next_1=`git rev-list ^master "^$topic" ${publish} | sort`
+ruau/.git/hooks/PrE-rebase.sample:only_next_2=`git rev-list ^master           ${publish} | sort`
+ruau/.git/hooks/PrE-rebase.sample:	not_in_topic=`git rev-list "^$topic" master`
+ruau/.git/hooks/PrE-rebase.sample:		echo >&2 "$topic is already up-to-date with master"
+ruau/.git/hooks/PrE-rebase.sample:		exit 1 ;# we could allow it, but there is no point.
+ruau/.git/hooks/PrE-rebase.sample:		my $msg = "* $topic has commits already merged to public branch:\n";
+ruau/.git/hooks/PrE-rebase.sample:		my (%not_in_next) = map {
+ruau/.git/hooks/PrE-rebase.sample:			/^([0-9a-f]+) /;
+ruau/.git/hooks/PrE-rebase.sample:		for my $elem (map {
+ruau/.git/hooks/PrE-rebase.sample:				/^([0-9a-f]+) (.*)$/;
+ruau/.git/hooks/PrE-rebase.sample:	' "$topic" "$not_in_next" "$not_in_master"
+ruau/.git/hooks/PrE-rebase.sample:This sample hook safeguards topic branches that have been
+ruau/.git/hooks/PrE-rebase.sample:The workflow assumed here is:
+ruau/.git/hooks/PrE-rebase.sample: * Once a topic branch forks from "master", "master" is never
+ruau/.git/hooks/PrE-rebase.sample:   merged into it again (either directly or indirectly).
+ruau/.git/hooks/PrE-rebase.sample: * Once a topic branch is fully cooked and merged into "master",
+ruau/.git/hooks/PrE-rebase.sample:   earlier mistakes, a new topic branch is created by forking at
+ruau/.git/hooks/PrE-rebase.sample:   the tip of the "master".  This is not strictly necessary, but
+ruau/.git/hooks/PrE-rebase.sample:   it makes it easier to keep your history simple.
+ruau/.git/hooks/PrE-rebase.sample: * Whenever you need to test or publish your changes to topic
+ruau/.git/hooks/PrE-rebase.sample:   branches, merge them into "next" branch.
+ruau/.git/hooks/PrE-rebase.sample:The script, being an example, hardcodes the publish branch name
+ruau/.git/hooks/PrE-rebase.sample:to be "next", but it is trivial to make it configurable via
+ruau/.git/hooks/PrE-rebase.sample:$GIT_DIR/config mechanism.
+ruau/.git/hooks/PrE-rebase.sample:With this workflow, you would want to know:
+ruau/.git/hooks/PrE-rebase.sample:(1) ... if a topic branch has ever been merged to "next".  Young
+ruau/.git/hooks/PrE-rebase.sample:    topic branches can have stupid mistakes you would rather
+ruau/.git/hooks/PrE-rebase.sample:    clean up before publishing, and things that have not been
+ruau/.git/hooks/PrE-rebase.sample:    merged into other branches can be easily rebased without
+ruau/.git/hooks/PrE-rebase.sample:    affecting other people.  But once it is published, you would
+ruau/.git/hooks/PrE-rebase.sample:    not want to rewind it.
+ruau/.git/hooks/PrE-rebase.sample:(2) ... if a topic branch has been fully merged to "master".
+ruau/.git/hooks/PrE-rebase.sample:    Then you can delete it.  More importantly, you should not
+ruau/.git/hooks/PrE-rebase.sample:    build on top of it -- other people may already want to

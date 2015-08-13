@@ -1,9 +1,9 @@
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:        return data;
-ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:     * Get a string representing the labels for the x-axis.
+ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:     * Get a string rePrEsenting the labels for the x-axis.
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:    public String buildAxisLabels() {
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:        string.append("2:|Number of cmps >>|");
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:        string.append("3:|Time in μs^");
-ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:     * Get a string representing the label for each series in this chart.
+ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:     * Get a string rePrEsenting the label for each series in this chart.
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:        List<String> seriesNames = new ArrayList<>();
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:        for (ChartAxisPoints axisPoint : axisPoints) {
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:            seriesNames.add(axisPoint.axisPointLabel);
@@ -11,7 +11,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:     * Encodes a list of values into the Google Charts API "extended encoding",
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:     * scaling to the supplied max value.
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:     * http://code.google.com/apis/chart/docs/data_formats.html#extended
-ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:     * Try and dig into their data formats sometime. They're pretty annoying.
+ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:     * Try and dig into their data formats sometime. They're PrEtty annoying.
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:    public String buildDataPoints() {
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:        StringBuilder data = new StringBuilder();
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:        data.append("t:");
@@ -34,7 +34,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:     * will be replaced.
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:     * @param file Write to this file.
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:     * @return Whether the file was successfully created.
-ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:    @SuppressWarnings("deprecation")
+ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:    @SupPrEssWarnings("deprecation")
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:    public boolean writeToFile(File file) throws IOException {
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:        HttpParams httpParams = new BasicHttpParams();
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:        HttpConnectionParams.setConnectionTimeout(httpParams, 24000);
@@ -165,7 +165,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/resource/ResourceLoaderTest.
 ruau/ruau-util/src/test/java/org/ruauframework/util/resource/ResourceLoaderTest.java:    private File makeTestFile() throws IOException {
 ruau/ruau-util/src/test/java/org/ruauframework/util/resource/ResourceLoaderTest.java:        return File.createTempFile(getName(), null, origFolder);
 ruau/ruau-util/src/test/java/org/ruauframework/util/resource/ResourceLoaderTest.java:    private void writeStringToFile(File file, String string) throws IOException {
-ruau/ruau-util/src/test/java/org/ruauframework/util/resource/ResourceLoaderTest.java:    @SuppressWarnings("resource")
+ruau/ruau-util/src/test/java/org/ruauframework/util/resource/ResourceLoaderTest.java:    @SupPrEssWarnings("resource")
 ruau/ruau-util/src/test/java/org/ruauframework/util/resource/ResourceLoaderTest.java:    private String readStreamAsString(InputStream is) {
 ruau/ruau-util/src/test/java/org/ruauframework/util/resource/ResourceLoaderTest.java:        Scanner scanner = new Scanner(is);
 ruau/ruau-util/src/test/java/org/ruauframework/util/resource/ResourceLoaderTest.java:        String ret = scanner.useDelimiter("\\A").next();
@@ -666,7 +666,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/javascript/directive/Directi
 ruau/ruau-util/src/test/java/org/ruauframework/util/javascript/directive/DirectiveParserTest.java:import com.google.common.collect.ImmutableList;
 ruau/ruau-util/src/test/java/org/ruauframework/util/javascript/directive/DirectiveParserTest.java: * This class is to test the DirectiveParser class {@link DirectiveParser}.
 ruau/ruau-util/src/test/java/org/ruauframework/util/javascript/directive/DirectiveParserTest.java: * DirectiveParser class parses specified files for directives. Directives are
-ruau/ruau-util/src/test/java/org/ruauframework/util/javascript/directive/DirectiveParserTest.java: * specified with //# as prefix. The list of directives, root node of the file
+ruau/ruau-util/src/test/java/org/ruauframework/util/javascript/directive/DirectiveParserTest.java: * specified with //# as PrEfix. The list of directives, root node of the file
 ruau/ruau-util/src/test/java/org/ruauframework/util/javascript/directive/DirectiveParserTest.java: * system and javascript generation modes are specified in an
 ruau/ruau-util/src/test/java/org/ruauframework/util/javascript/directive/DirectiveParserTest.java: * DirectiveBasedJavascriptGroup object.
 ruau/ruau-util/src/test/java/org/ruauframework/util/javascript/directive/DirectiveParserTest.java:public class DirectiveParserTest extends UnitTestCase {
@@ -787,7 +787,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/javascript/directive/Directi
 ruau/ruau-util/src/test/java/org/ruauframework/util/javascript/directive/DirectiveParserTest.java:        goldFileText(dp.generate(JavascriptGeneratorMode.AUTOTESTING), "_auto.js");
 ruau/ruau-util/src/test/java/org/ruauframework/util/javascript/directive/DirectiveParserTest.java:        // The content generated in PRODUCTION mode still has comments because
 ruau/ruau-util/src/test/java/org/ruauframework/util/javascript/directive/DirectiveParserTest.java:        // the DirectiveParser doesn't really
-ruau/ruau-util/src/test/java/org/ruauframework/util/javascript/directive/DirectiveParserTest.java:        // Compression is handled in DirectivebasedJavascriptGroup
+ruau/ruau-util/src/test/java/org/ruauframework/util/javascript/directive/DirectiveParserTest.java:        // ComPrEssion is handled in DirectivebasedJavascriptGroup
 ruau/ruau-util/src/test/java/org/ruauframework/util/javascript/directive/DirectiveParserTest.java:        goldFileText(dp.generate(JavascriptGeneratorMode.PRODUCTION), "_prod.js");
 ruau/ruau-util/src/test/java/org/ruauframework/util/javascript/directive/DirectiveParserTest.java:        goldFileText(dp.generate(JavascriptGeneratorMode.DEVELOPMENT), "_dev.js");
 ruau/ruau-util/src/test/java/org/ruauframework/util/javascript/directive/DirectiveParserTest.java:        assertTrue("Should not have found any error while processing this file", dp.validate(new JavascriptValidator())
@@ -1236,7 +1236,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/javascript/directive/Directi
 ruau/ruau-util/src/test/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroupTest.java:                    newFile.getName(), ImmutableList.<DirectiveType<?>> of(DirectiveFactory.getDummyDirectiveType()),
 ruau/ruau-util/src/test/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroupTest.java:                    EnumSet.of(JavascriptGeneratorMode.TESTING));
 ruau/ruau-util/src/test/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroupTest.java:            // Immediately after the javascript group is instantiated, the group
-ruau/ruau-util/src/test/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroupTest.java:            // is stale because we don't know previous contents.
+ruau/ruau-util/src/test/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroupTest.java:            // is stale because we don't know PrEvious contents.
 ruau/ruau-util/src/test/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroupTest.java:            assertTrue(test.isStale());
 ruau/ruau-util/src/test/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroupTest.java:            test.getGroupHash(); // Hash it.
 ruau/ruau-util/src/test/java/org/ruauframework/util/javascript/directive/DirectiveBasedJavascriptGroupTest.java:            // Without modification, after that it is un-stale.
@@ -1446,7 +1446,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/date/DateServiceTest.java:im
 ruau/ruau-util/src/test/java/org/ruauframework/util/date/DateServiceTest.java:import org.ruauframework.test.UnitTestCase;
 ruau/ruau-util/src/test/java/org/ruauframework/util/date/DateServiceTest.java:public class DateServiceTest extends UnitTestCase {
 ruau/ruau-util/src/test/java/org/ruauframework/util/date/DateServiceTest.java:    private StringBuilder sb;
-ruau/ruau-util/src/test/java/org/ruauframework/util/date/DateServiceTest.java:    @SuppressWarnings("serial")
+ruau/ruau-util/src/test/java/org/ruauframework/util/date/DateServiceTest.java:    @SupPrEssWarnings("serial")
 ruau/ruau-util/src/test/java/org/ruauframework/util/date/DateServiceTest.java:    private static class DebugDate extends Date {
 ruau/ruau-util/src/test/java/org/ruauframework/util/date/DateServiceTest.java:        private final String debugInfo;
 ruau/ruau-util/src/test/java/org/ruauframework/util/date/DateServiceTest.java:        DebugDate(long time, String debugInfo) {
@@ -2240,16 +2240,16 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/io/Utf8InputStreamReaderTest
 ruau/ruau-util/src/test/java/org/ruauframework/util/io/Utf8InputStreamReaderTest.java:     * the standard. CharsetDecoder conveniently skips these for us.
 ruau/ruau-util/src/test/java/org/ruauframework/util/io/Utf8InputStreamReaderTest.java:    public void testUTF16SurrogatePairs() throws Exception {
 ruau/ruau-util/src/test/java/org/ruauframework/util/io/Utf8InputStreamReaderTest.java:        final ByteArrayOutputStream baos = new ByteArrayOutputStream(7);
-ruau/ruau-util/src/test/java/org/ruauframework/util/io/Utf8InputStreamReaderTest.java:        baos.write(0xED); // First high surrogate, expressed as UTF-8
+ruau/ruau-util/src/test/java/org/ruauframework/util/io/Utf8InputStreamReaderTest.java:        baos.write(0xED); // First high surrogate, exPrEssed as UTF-8
 ruau/ruau-util/src/test/java/org/ruauframework/util/io/Utf8InputStreamReaderTest.java:        baos.write(0x9F);
 ruau/ruau-util/src/test/java/org/ruauframework/util/io/Utf8InputStreamReaderTest.java:        baos.write(0xC0);
-ruau/ruau-util/src/test/java/org/ruauframework/util/io/Utf8InputStreamReaderTest.java:        baos.write(0xEE); // Last low surrogate, expressed as UTF-8
+ruau/ruau-util/src/test/java/org/ruauframework/util/io/Utf8InputStreamReaderTest.java:        baos.write(0xEE); // Last low surrogate, exPrEssed as UTF-8
 ruau/ruau-util/src/test/java/org/ruauframework/util/io/Utf8InputStreamReaderTest.java:        baos.write(0x80);
 ruau/ruau-util/src/test/java/org/ruauframework/util/io/Utf8InputStreamReaderTest.java:        baos.write(0x79);
-ruau/ruau-util/src/test/java/org/ruauframework/util/io/Utf8InputStreamReaderTest.java:        baos.write(0xEE); // Last low surrogate, expressed as UTF-8
+ruau/ruau-util/src/test/java/org/ruauframework/util/io/Utf8InputStreamReaderTest.java:        baos.write(0xEE); // Last low surrogate, exPrEssed as UTF-8
 ruau/ruau-util/src/test/java/org/ruauframework/util/io/Utf8InputStreamReaderTest.java:        baos.write(0x80);
 ruau/ruau-util/src/test/java/org/ruauframework/util/io/Utf8InputStreamReaderTest.java:        baos.write(0x79);
-ruau/ruau-util/src/test/java/org/ruauframework/util/io/Utf8InputStreamReaderTest.java:        baos.write(0xED); // First high surrogate, expressed as UTF-8
+ruau/ruau-util/src/test/java/org/ruauframework/util/io/Utf8InputStreamReaderTest.java:        baos.write(0xED); // First high surrogate, exPrEssed as UTF-8
 ruau/ruau-util/src/test/java/org/ruauframework/util/io/Utf8InputStreamReaderTest.java:        baos.write(0x9F);
 ruau/ruau-util/src/test/java/org/ruauframework/util/io/Utf8InputStreamReaderTest.java:        baos.write(0xC0);
 ruau/ruau-util/src/test/java/org/ruauframework/util/io/Utf8InputStreamReaderTest.java:        baos.write(0xED); // Last char before the first high surrogate (okay to
@@ -2712,7 +2712,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.ja
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        new ParseFailure("mismatched quote", "['hi', \"ho']", 1, 8, null, "Unterminated string"),
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        new ParseFailure("missing comma (1)", "[ 'a' 'b' ]", 1, 7, "b", "Expected ',' or ']'"),
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        new ParseFailure("missing comma (2)", "[ 'a' }", 1, 7, null, "Expected ',' or ']'"),
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:    @SuppressWarnings("unchecked")
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:    private static final ParseSuccess [] array_successes = {
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        new ParseSuccess("empty array", "[]", Lists.newArrayList()),
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        new ParseSuccess("one element array", "[\"test1\"]", Lists.newArrayList("test1")),
@@ -2751,7 +2751,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.ja
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        new ParseFailure("bad space in key", "{obj Name:\"string\"}", 1, 6, null, "Expected ':'"),
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        new ParseFailure("class as key", "{key:\"string\", class:\"string\"}", 1, 16, "class", "Reserved word used as a literal"),
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        for (ParseObjectSuccess pos : object_successes) {
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:            @SuppressWarnings("unchecked")
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:            @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:            Map<String,Object> m = (Map<String,Object>)parseAndRetrieve(pos.input);
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:            // ordering of keys not guaranteed
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:            List<String> keys = Lists.newArrayList(m.keySet());
@@ -2779,7 +2779,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.ja
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:                return reader;
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:            public boolean isRecursiveReadEnabled() {
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * Positive and negative tests for {@link JsonStreamReader#getList()}.
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:    @SuppressWarnings("unchecked")
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:    private void runGetListTest(JsonStreamGetObjectOrArrayTestConfig config) throws Exception {
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:            jsonStreamReader = config.createJsonStreamReader("\"string\"");
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:            jsonStreamReader.next();
@@ -2839,7 +2839,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.ja
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        boolean isRecursiveReadEnabled();
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * Positive and Negative test for {@link JsonStreamReader#getObject()} and
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * {@link JsonStreamReader#next()} when recursive reading is disabled. Also
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * other cases while parsing a string representing an Object
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * other cases while parsing a string rePrEsenting an Object
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:    public void testGetObjectWithRecursiveReadDisabled() throws Exception {
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        runGetObjectTest(new JsonStreamGetObjectOrArrayTestConfig() {
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:            public JsonStreamReader createJsonStreamReader(String json) {
@@ -2851,7 +2851,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.ja
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:                return false;
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * Positive and Negative test for {@link JsonStreamReader#getObject()} and
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * {@link JsonStreamReader#next()}. Also other cases while parsing a string
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * representing an Object
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * rePrEsenting an Object
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        runGetObjectTest(new JsonStreamGetObjectOrArrayTestConfig() {
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:            public JsonStreamReader createJsonStreamReader(String json) {
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:                final JsonStreamReader reader = new JsonStreamReader(json);
@@ -2860,12 +2860,12 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.ja
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:            public boolean isRecursiveReadEnabled() {
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * Positive and Negative test for {@link JsonStreamReader#getObject()} and
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * {@link JsonStreamReader#next()}. Also other cases while parsing a string
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * representing an Object
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * rePrEsenting an Object
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:    private void runGetObjectTest(JsonStreamGetObjectOrArrayTestConfig config) throws Exception {
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        jsonStreamReader = config.createJsonStreamReader("[\"test1\",20]");
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        jsonStreamReader.next();
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:            jsonStreamReader.getObject();
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:            fail("Expecting an object when a string representing an array is passed.");
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:            fail("Expecting an object when a string rePrEsenting an array is passed.");
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        } catch (JsonStreamParseException expected) {
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:            // Make sure the exception was because of mis-match between expected
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:            // token and actual token
@@ -2905,7 +2905,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.ja
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:            jsonStreamReader.close();
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * Test method for {@link JsonStreamReader#next()}.
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * FIXME: this test is a random amalgamation of stuff, we could do better with individual tests.
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:    @SuppressWarnings("unchecked")
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        String func = "function(arg1, arg2) {   /*comment\n\n\n*/var str = \"\\\"\"; var str2 = '\\'vads\\nadf' var foo = {\n}; var func = function(){ var foo = {};var str = \"{\";};}";
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        jsonStreamReader = new JsonStreamReader("  { " + "'foo' : 'bar', " + "'baz' : 'qux', "
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:                + "\"quux\" : \"corge grault\\n\\\"\\\\\\tga\\u030A\\u031Frply\", "

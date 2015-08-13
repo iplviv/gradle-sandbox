@@ -159,7 +159,7 @@ ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:                <ui
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:                <ui:checkboxMenuItem class="checkboxItem2" ruau:id="checkboxItem2" label="Seattle Seahawks"/>
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:                <ui:checkboxMenuItem class="checkboxItem3" ruau:id="checkboxItem3" label="St. Louis Rams"/>
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:                <ui:checkboxMenuItem class="checkboxItem4" ruau:id="checkboxItem4" label="Arizona Cardinals" disabled="true" selected="true"/>
-ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <ui:button class="checkboxButton" ruau:id="checkboxButton" press="{!c.getMenuSelected}" label="Check the selected menu items"/>
+ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <ui:button class="checkboxButton" ruau:id="checkboxButton" PrEss="{!c.getMenuSelected}" label="Check the selected menu items"/>
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <ui:outputText class="result" ruau:id="result" value="Which items get selected"/>
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:    <div style="display:inline-block;width:50%;">
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <ui:outputText value='&#60;ui:menu&#62;'/>
@@ -171,7 +171,7 @@ ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <ui:outputT
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <ui:outputText value='&#160;&#160;&#160;&#160;&#60;ui:checkboxMenuItem ruau:id="checkboxItem4" label="Arizona Cardinals" disabled="true" selected="true"/&#62;'/>
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <ui:outputText value='&#160;&#160;&#60;/ui:menuList&#62;'/>
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <ui:outputText value='&#60;/ui:menu&#62;'/>  
-ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <ui:outputText value='&#60;ui:button ruau:id="checkboxButton" press="{&#160;!c.getMenuSelected}" label="Check the selected menu items"/&#62;'/>
+ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <ui:outputText value='&#60;ui:button ruau:id="checkboxButton" PrEss="{&#160;!c.getMenuSelected}" label="Check the selected menu items"/&#62;'/>
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <ui:outputText value='&#60;ui:outputText ruau:id="result" value="Which items get selected"/&#62;'/>    
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:<div style="margin:20px;">
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:    <div style="display:inline-block;width:50%;vertical-align:top;">
@@ -183,7 +183,7 @@ ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:                <ui
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:                <ui:radioMenuItem class="radioItem3" ruau:id="radioItem3" label="Arizona"/>
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:                <ui:radioMenuItem class="radioItem4" ruau:id="radioItem4" label="Diego" disabled="true"/>
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:                <ui:radioMenuItem class="radioItem5" ruau:id="radioItem5" label="Colorado"/>
-ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <ui:button class="radioButton" ruau:id="radioButton" press="{!c.getRadioMenuSelected}" label="Check the selected menu items"/>
+ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <ui:button class="radioButton" ruau:id="radioButton" PrEss="{!c.getRadioMenuSelected}" label="Check the selected menu items"/>
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <ui:outputText class="radioResult" ruau:id="radioResult" value="Which items get selected"/> 
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:    <div style="display:inline-block;width:50%;">
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <h2>Radio menu source codes:</h2>
@@ -197,7 +197,7 @@ ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <ui:outputT
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <ui:outputText value='&#160;&#160;&#160;&#160;&#60;ui:radioMenuItem ruau:id="radioItem5" label="Colorado"/&#62;'/>
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <ui:outputText value='&#160;&#160;&#60;/ui:menuList&#62;'/>
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <ui:outputText value='&#60;/ui:menu&#62;'/>    
-ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <ui:outputText value='&#60;ui:button ruau:id="radioButton" press="{&#160;!c.getRadioMenuSelected}" label="Check the selected menu items"/&#62;'/>
+ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <ui:outputText value='&#60;ui:button ruau:id="radioButton" PrEss="{&#160;!c.getRadioMenuSelected}" label="Check the selected menu items"/&#62;'/>
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <ui:outputText value='&#60;ui:outputText ruau:id="radioResult" value="Which items get selected"/&#62;'/>  
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:<div style="margin:20px;">
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:    <div style="display:inline-block;width:50%;vertical-align:top;">
@@ -207,7 +207,7 @@ ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:					  <ui:menuList
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:					    <ruau:iteration items="{!m.iterationItems}" var="item">
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:					        <ui:radioMenuItem label="{!item.label}" value="{!item.value}"/>
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:					    </ruau:iteration>
-ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <ui:button class="radioIterationButton" ruau:id="radioIterationButton" press="{!c.getRadioIterationMenuSelected}" label="Check the selected menu items"/>
+ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <ui:button class="radioIterationButton" ruau:id="radioIterationButton" PrEss="{!c.getRadioIterationMenuSelected}" label="Check the selected menu items"/>
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <ui:outputText class="radioIterationResult" ruau:id="radioIterationResult" value="Which items get selected"/> 
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:   	<div style="display:inline-block;width:50%;">
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <h2>Radio menu using Iteration source codes:</h2>
@@ -219,7 +219,7 @@ ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <ui:outputT
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <ui:outputText value='&#160;&#160;&#160;&#160;&#60;/ruau:iteration&#62;'/>
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <ui:outputText value='&#160;&#160;&#60;/ui:menuList&#62;'/>
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <ui:outputText value='&#60;/ui:menu&#62;'/>    
-ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <ui:outputText value='&#60;ui:button ruau:id="radioIterationButton" press="{&#160;!c.getRadioIterationMenuSelected}" label="Check the selected menu items"/&#62;'/>
+ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <ui:outputText value='&#60;ui:button ruau:id="radioIterationButton" PrEss="{&#160;!c.getRadioIterationMenuSelected}" label="Check the selected menu items"/&#62;'/>
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:        <ui:outputText value='&#60;ui:outputText ruau:id="radioIterationResult" value="Which items get selected"/&#62;'/>  
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:<div style="margin:20px;">
 ruau/ruau/src/test/components/uitest/menu_Test/menu_Test.app:    <div style="display:inline-block;width:50%;vertical-align:top;">
@@ -302,7 +302,7 @@ ruau/ruau/src/test/components/uitest/inputDateTime_Test/inputDateTime_TestTest.j
 ruau/ruau/src/test/components/uitest/inputDateTime_Test/inputDateTime_TestTest.js:    		$A.test.clickOrTouch(cancelLink);
 ruau/ruau/src/test/components/uitest/inputDateTime_Test/inputDateTime_TestTest.js:    		$A.test.addWaitFor(false, function(){return $A.util.hasClass(datePicker.getElement(), "visible")});
 ruau/ruau/src/test/components/uitest/inputDateTime_Test/inputDateTime_TestTest.js:    		var value = cmp.find("dateTimePickerTest").get("v.value");
-ruau/ruau/src/test/components/uitest/inputDateTime_Test/inputDateTime_TestTest.js:    		$A.test.assertEquals("2012-09-10 11:23", value, "Cancel was pressed value should not have changed");
+ruau/ruau/src/test/components/uitest/inputDateTime_Test/inputDateTime_TestTest.js:    		$A.test.assertEquals("2012-09-10 11:23", value, "Cancel was PrEssed value should not have changed");
 ruau/ruau/src/test/components/uitest/inputDateTime_Test/inputDateTime_TestTest.js:      *  Test set link sets the appropriate date/time.
 ruau/ruau/src/test/components/uitest/inputDateTime_Test/inputDateTime_TestTest.js:    	attributes : {format: "MM/dd/yyyy hh:mm"},
 ruau/ruau/src/test/components/uitest/inputDateTime_Test/inputDateTime_TestTest.js:    		var input = cmp.find("dateTimePickerTest").find("inputText").getElement();
@@ -490,13 +490,13 @@ ruau/ruau/src/test/components/uitest/inputText_updateOnWithLabelTest/inputText_u
 ruau/ruau/src/test/components/uitest/inputText_updateOnWithLabelTest/inputText_updateOnWithLabelTest.cmp:	<ui:inputText ruau:id="mouseover" label="mouseover" class="mouseover" value="{!m.string}" updateOn="mouseover" mouseover="{!c.checkDomEventSet}"/>
 ruau/ruau/src/test/components/uitest/inputText_updateOnWithLabelTest/inputText_updateOnWithLabelTest.cmp:	<ui:inputText ruau:id="mouseup" label="mouseup" class="mouseup" value="{!m.string}" updateOn="mouseup" mouseup="{!c.checkDomEventSet}"/>
 ruau/ruau/src/test/components/uitest/inputText_updateOnWithLabelTest/inputText_updateOnWithLabelTest.cmp:	<ui:inputText ruau:id="keydown" label="keydown" class="keydown" value="{!m.string}" updateOn="keydown" keydown="{!c.checkDomEventSet}"/>
-ruau/ruau/src/test/components/uitest/inputText_updateOnWithLabelTest/inputText_updateOnWithLabelTest.cmp:	<ui:inputText ruau:id="keypress" label="keypress" class="keypress" value="{!m.string}" updateOn="keypress" keypress="{!c.checkDomEventSet}"/>
+ruau/ruau/src/test/components/uitest/inputText_updateOnWithLabelTest/inputText_updateOnWithLabelTest.cmp:	<ui:inputText ruau:id="keyPrEss" label="keypress" class="keypress" value="{!m.string}" updateOn="keypress" keypress="{!c.checkDomEventSet}"/>
 ruau/ruau/src/test/components/uitest/inputText_updateOnWithLabelTest/inputText_updateOnWithLabelTest.cmp:	<ui:inputText ruau:id="keyup" label="keyup" class="keyup" value="{!m.string}" updateOn="keyup" keyup="{!c.checkDomEventSet}"/>
 ruau/ruau/src/test/components/uitest/inputText_updateOnWithLabelTest/inputText_updateOnWithLabelTest.cmp:	<ui:inputText ruau:id="select" label="select" class="select" value="{!m.string}" updateOn="select"/>
 ruau/ruau/src/test/components/uitest/inputText_updateOnWithLabelTest/inputText_updateOnWithLabelTest.cmp:	<ui:inputText ruau:id="empty" label="" class="empty" value="{!m.string}" updateOn="blur" blur="{!c.checkDomEventSet}"/>
 ruau/ruau/src/test/components/uitest/inputText_updateOnWithLabelTest/inputText_updateOnWithLabelTest.cmp:	output: <ui:outputText value="{!m.string}"/>
 ruau/ruau/src/test/components/uitest/inputText_updateOnWithLabelTest/inputText_updateOnWithLabelTest.cmp:	<div id="inspectBaseEvent"> 
-ruau/ruau/src/test/components/uitest/inputText_updateOnWithLabelTest/inputText_updateOnWithLabelTest.cmp:	<ui:inputText ruau:id="keyup" label="inspectBaseEvent" class="keyup" value="{!m.string}" updateOn="keyup" keypress="{!c.inspectKeyEvent}" mousedown="{!c.inspectMouseEvent}"/><br/> 
+ruau/ruau/src/test/components/uitest/inputText_updateOnWithLabelTest/inputText_updateOnWithLabelTest.cmp:	<ui:inputText ruau:id="keyup" label="inspectBaseEvent" class="keyup" value="{!m.string}" updateOn="keyup" keyPrEss="{!c.inspectKeyEvent}" mousedown="{!c.inspectMouseEvent}"/><br/> 
 ruau/ruau/src/test/components/uitest/inputText_updateOnWithLabelTest/inputText_updateOnWithLabelTest.cmp:	outputValue: <ui:outputText ruau:id="outputValue" class="outputValue" value=""/> <br/><br/>
 ruau/ruau/src/test/components/uitest/inputText_updateOnWithLabelTest/inputText_updateOnWithLabelTest.cmp:</ruau:component>
 ruau/ruau/src/test/components/uitest/inputText_updateOnWithLabelTest/inputText_updateOnWithLabelTestController.js: * Copyright (C) 2013 salesforce.com, inc.
@@ -544,7 +544,7 @@ ruau/ruau/src/test/components/uitest/dialog_NonModalTest/dialog_NonModalTest.cmp
 ruau/ruau/src/test/components/uitest/dialog_NonModalTest/dialog_NonModalTest.cmp:    <ui:dialogManager/>
 ruau/ruau/src/test/components/uitest/dialog_NonModalTest/dialog_NonModalTest.cmp:    <ruau:handler event="ui:closeDialog" action="{!c.closeDialog}"/>
 ruau/ruau/src/test/components/uitest/dialog_NonModalTest/dialog_NonModalTest.cmp:    <ui:inputText ruau:id="resultLabel" class="resultLabel" value=""/>
-ruau/ruau/src/test/components/uitest/dialog_NonModalTest/dialog_NonModalTest.cmp:    <ui:button ruau:id="1" class="launchDialogButton" label="Click for Non-Modal!" press="{!c.openDialog}" />
+ruau/ruau/src/test/components/uitest/dialog_NonModalTest/dialog_NonModalTest.cmp:    <ui:button ruau:id="1" class="launchDialogButton" label="Click for Non-Modal!" PrEss="{!c.openDialog}" />
 ruau/ruau/src/test/components/uitest/dialog_NonModalTest/dialog_NonModalTest.cmp:    <ui:dialog ruau:id="dialogBoxId" title="BOOM!" description="Testing Non ModalDialog Box">
 ruau/ruau/src/test/components/uitest/dialog_NonModalTest/dialog_NonModalTest.cmp:        <ruau:set attribute="buttons">
 ruau/ruau/src/test/components/uitest/dialog_NonModalTest/dialog_NonModalTest.cmp:           <ui:dialogButtons defaultButtons="both"/>
@@ -592,17 +592,17 @@ ruau/ruau/src/test/components/uitest/button_Test/button_Test.cmp:    distributed
 ruau/ruau/src/test/components/uitest/button_Test/button_Test.cmp:    See the License for the specific language governing permissions and
 ruau/ruau/src/test/components/uitest/button_Test/button_Test.cmp:    limitations under the License.
 ruau/ruau/src/test/components/uitest/button_Test/button_Test.cmp:<ruau:component>
-ruau/ruau/src/test/components/uitest/button_Test/button_Test.cmp:    <ruau:attribute name="iconAndLabelButtonPressedMessage" type="String" default="Icon and label button NOT yet pressed"/>
-ruau/ruau/src/test/components/uitest/button_Test/button_Test.cmp:    <ruau:attribute name="labelOnlyButtonPressedMessage" type="String" default="Label only button NOT yet pressed"/>
-ruau/ruau/src/test/components/uitest/button_Test/button_Test.cmp:    <ruau:attribute name="iconOnlyButtonPressedMessage" type="String" default="Icon only button NOT yet pressed"/>
+ruau/ruau/src/test/components/uitest/button_Test/button_Test.cmp:    <ruau:attribute name="iconAndLabelButtonPressedMessage" type="String" default="Icon and label button NOT yet PrEssed"/>
+ruau/ruau/src/test/components/uitest/button_Test/button_Test.cmp:    <ruau:attribute name="labelOnlyButtonPressedMessage" type="String" default="Label only button NOT yet PrEssed"/>
+ruau/ruau/src/test/components/uitest/button_Test/button_Test.cmp:    <ruau:attribute name="iconOnlyButtonPressedMessage" type="String" default="Icon only button NOT yet PrEssed"/>
 ruau/ruau/src/test/components/uitest/button_Test/button_Test.cmp:	<ruau:attribute name="isDomEventSet" type="boolean" default="{!false}"/>
-ruau/ruau/src/test/components/uitest/button_Test/button_Test.cmp:    <ui:button class="Icon_and_label" label='Icon and label' disabled='false' press="{!c.handleIconAndLabel}" iconImgSrc="/ruauFW/resources/ruau/images/checkbox_checked.gif" accesskey="i"/>
+ruau/ruau/src/test/components/uitest/button_Test/button_Test.cmp:    <ui:button class="Icon_and_label" label='Icon and label' disabled='false' PrEss="{!c.handleIconAndLabel}" iconImgSrc="/ruauFW/resources/ruau/images/checkbox_checked.gif" accesskey="i"/>
 ruau/ruau/src/test/components/uitest/button_Test/button_Test.cmp:    <ui:outputText class="Icon_and_label" value='{!v.iconAndLabelButtonPressedMessage}'/>
-ruau/ruau/src/test/components/uitest/button_Test/button_Test.cmp:    <ui:button class="Label_only" label='Label only!!' disabled='false' press="{!c.handleLabelOnly}" iconImgSrc="" labelDir="rtl"/>
+ruau/ruau/src/test/components/uitest/button_Test/button_Test.cmp:    <ui:button class="Label_only" label='Label only!!' disabled='false' PrEss="{!c.handleLabelOnly}" iconImgSrc="" labelDir="rtl"/>
 ruau/ruau/src/test/components/uitest/button_Test/button_Test.cmp:    <ui:outputText class="Label_only" value='{!v.labelOnlyButtonPressedMessage}'/>
-ruau/ruau/src/test/components/uitest/button_Test/button_Test.cmp:    <ui:button class='Icon_only' disabled='false' press="{!c.handleIconOnly}" iconImgSrc="/ruauFW/resources/ruau/images/checkbox_checked.gif" label="Icon_only" labelDisplay="false"/>
+ruau/ruau/src/test/components/uitest/button_Test/button_Test.cmp:    <ui:button class='Icon_only' disabled='false' PrEss="{!c.handleIconOnly}" iconImgSrc="/ruauFW/resources/ruau/images/checkbox_checked.gif" label="Icon_only" labelDisplay="false"/>
 ruau/ruau/src/test/components/uitest/button_Test/button_Test.cmp:    <ui:outputText class='Icon_only' value='{!v.iconOnlyButtonPressedMessage}'/>
-ruau/ruau/src/test/components/uitest/button_Test/button_Test.cmp:    <ui:button class="testDomEventBtn" label="testDomEvent" press="{!c.checkDomEventSet}"/>
+ruau/ruau/src/test/components/uitest/button_Test/button_Test.cmp:    <ui:button class="testDomEventBtn" label="testDomEvent" PrEss="{!c.checkDomEventSet}"/>
 ruau/ruau/src/test/components/uitest/button_Test/button_Test.cmp:</ruau:component>
 ruau/ruau/src/test/components/uitest/button_Test/button_Test.css: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/test/components/uitest/button_Test/button_Test.css: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -623,11 +623,11 @@ ruau/ruau/src/test/components/uitest/button_Test/button_TestController.js: * dis
 ruau/ruau/src/test/components/uitest/button_Test/button_TestController.js: * See the License for the specific language governing permissions and
 ruau/ruau/src/test/components/uitest/button_Test/button_TestController.js: * limitations under the License.
 ruau/ruau/src/test/components/uitest/button_Test/button_TestController.js:    handleIconAndLabel : function(cmp, event){
-ruau/ruau/src/test/components/uitest/button_Test/button_TestController.js:        cmp.set("v.iconAndLabelButtonPressedMessage", "Icon and label button was pressed!!!");
+ruau/ruau/src/test/components/uitest/button_Test/button_TestController.js:        cmp.set("v.iconAndLabelButtonPressedMessage", "Icon and label button was PrEssed!!!");
 ruau/ruau/src/test/components/uitest/button_Test/button_TestController.js:    handleLabelOnly : function(cmp, event){
-ruau/ruau/src/test/components/uitest/button_Test/button_TestController.js:        cmp.set("v.labelOnlyButtonPressedMessage", "Label only button was pressed!!!");
+ruau/ruau/src/test/components/uitest/button_Test/button_TestController.js:        cmp.set("v.labelOnlyButtonPressedMessage", "Label only button was PrEssed!!!");
 ruau/ruau/src/test/components/uitest/button_Test/button_TestController.js:    handleIconOnly : function(cmp, event){
-ruau/ruau/src/test/components/uitest/button_Test/button_TestController.js:        cmp.set("v.iconOnlyButtonPressedMessage", "Icon only button was pressed!!!");
+ruau/ruau/src/test/components/uitest/button_Test/button_TestController.js:        cmp.set("v.iconOnlyButtonPressedMessage", "Icon only button was PrEssed!!!");
 ruau/ruau/src/test/components/uitest/button_Test/button_TestController.js:    	var domEvent = event.getParam("domEvent");
 ruau/ruau/src/test/components/uitest/button_Test/button_TestController.js:    		cmp.set("v.isDomEventSet", false);
 ruau/ruau/src/test/components/uitest/scroller_basicPerf/scroller_basicPerfController.js: * Copyright (C) 2013 salesforce.com, inc.
@@ -639,7 +639,7 @@ ruau/ruau/src/test/components/uitest/scroller_basicPerf/scroller_basicPerfContro
 ruau/ruau/src/test/components/uitest/scroller_basicPerf/scroller_basicPerfController.js: * distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau/src/test/components/uitest/scroller_basicPerf/scroller_basicPerfController.js: * See the License for the specific language governing permissions and
 ruau/ruau/src/test/components/uitest/scroller_basicPerf/scroller_basicPerfController.js: * limitations under the License.
-ruau/ruau/src/test/components/uitest/scroller_basicPerf/scroller_basicPerfController.js:		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+ruau/ruau/src/test/components/uitest/scroller_basicPerf/scroller_basicPerfController.js:		document.addEventListener('touchmove', function (e) { e.PrEventDefault(); }, false);
 ruau/ruau/src/test/components/uitest/scroller_basicPerf/scroller_basicPerfController.js:		var collection=[];
 ruau/ruau/src/test/components/uitest/scroller_basicPerf/scroller_basicPerfController.js:    	for(var i=0; i<500; i++){
 ruau/ruau/src/test/components/uitest/scroller_basicPerf/scroller_basicPerfController.js:    handleClick: function(component, event, helper){
@@ -1234,7 +1234,7 @@ ruau/ruau/src/test/components/uitest/dialog_ModalTest/dialog_ModalTest.cmp:<ruau
 ruau/ruau/src/test/components/uitest/dialog_ModalTest/dialog_ModalTest.cmp:    <ui:dialogManager/>
 ruau/ruau/src/test/components/uitest/dialog_ModalTest/dialog_ModalTest.cmp:    <ruau:handler event="ui:closeDialog" action="{!c.closeDialog}"/>
 ruau/ruau/src/test/components/uitest/dialog_ModalTest/dialog_ModalTest.cmp:    <ui:inputText ruau:id="resultLabel" class="resultLabel" value=""/>
-ruau/ruau/src/test/components/uitest/dialog_ModalTest/dialog_ModalTest.cmp:    <ui:button ruau:id="1" class="launchDialogButton" label="Click for Modal!" press="{!c.openDialog}" />
+ruau/ruau/src/test/components/uitest/dialog_ModalTest/dialog_ModalTest.cmp:    <ui:button ruau:id="1" class="launchDialogButton" label="Click for Modal!" PrEss="{!c.openDialog}" />
 ruau/ruau/src/test/components/uitest/dialog_ModalTest/dialog_ModalTest.cmp:    <ui:dialog clickOutToClose="false" ruau:id="dialogBoxId" title="Bang!" description="Testing Modal Dialog Box" isModal="true">
 ruau/ruau/src/test/components/uitest/dialog_ModalTest/dialog_ModalTest.cmp:        This is a public service announcement. Have you heard the word? No? Birds the word mate. Click ok to exit
 ruau/ruau/src/test/components/uitest/dialog_ModalTest/dialog_ModalTest.cmp:    </ui:dialog>
@@ -1372,7 +1372,7 @@ ruau/ruau/src/test/components/uitest/list_MultipleDataProvidersTest/list_Multipl
 ruau/ruau/src/test/components/uitest/list_MultipleDataProvidersTest/list_MultipleDataProvidersTestTest.js:			// verify no loading indicator.
 ruau/ruau/src/test/components/uitest/list_MultipleDataProvidersTest/list_MultipleDataProvidersTestTest.js:			var listElement = cmp.find("list").getElement();
 ruau/ruau/src/test/components/uitest/list_MultipleDataProvidersTest/list_MultipleDataProvidersTestTest.js:			$A.test.assertFalse($A.util.hasClass(listElement, "loading"), 
-ruau/ruau/src/test/components/uitest/list_MultipleDataProvidersTest/list_MultipleDataProvidersTestTest.js:				"Loading indicator is still present");
+ruau/ruau/src/test/components/uitest/list_MultipleDataProvidersTest/list_MultipleDataProvidersTestTest.js:				"Loading indicator is still PrEsent");
 ruau/ruau/src/test/components/uitest/list_MultipleDataProvidersTest/list_MultipleDataProvidersTestTest.js:	pushButton : function(cmp, btnName, numItems, expectedItemChar) {
 ruau/ruau/src/test/components/uitest/list_MultipleDataProvidersTest/list_MultipleDataProvidersTestTest.js:		var btn = cmp.find(btnName);
 ruau/ruau/src/test/components/uitest/list_MultipleDataProvidersTest/list_MultipleDataProvidersTestTest.js:		this.waitForItems(cmp, numItems, expectedItemChar);
@@ -1439,11 +1439,11 @@ ruau/ruau/src/test/components/uitest/list_MultipleDataProvidersTest/list_Multipl
 ruau/ruau/src/test/components/uitest/list_MultipleDataProvidersTest/list_MultipleDataProvidersTest.cmp:		<ruau:set attribute="itemTemplate">
 ruau/ruau/src/test/components/uitest/list_MultipleDataProvidersTest/list_MultipleDataProvidersTest.cmp:			<div style="border: 1px solid black">{!row.index} : {!row.char}</div>
 ruau/ruau/src/test/components/uitest/list_MultipleDataProvidersTest/list_MultipleDataProvidersTest.cmp:		</ruau:set>
-ruau/ruau/src/test/components/uitest/list_MultipleDataProvidersTest/list_MultipleDataProvidersTest.cmp:	<ui:button ruau:id="btnDP1" label="Get Data From Data Provider 1" press="{!c.getDP1Data}"/> <br/>
-ruau/ruau/src/test/components/uitest/list_MultipleDataProvidersTest/list_MultipleDataProvidersTest.cmp:	<ui:button ruau:id="btnDP2" label="Get Data From Data Provider 2" press="{!c.getDP2Data}"/> <br/>
-ruau/ruau/src/test/components/uitest/list_MultipleDataProvidersTest/list_MultipleDataProvidersTest.cmp:	<ui:button ruau:id="btnEmpty" label="Get Empty List" press="{!c.getEmptyList}"/> <br/>
-ruau/ruau/src/test/components/uitest/list_MultipleDataProvidersTest/list_MultipleDataProvidersTest.cmp:	<ui:button ruau:id="btnIndex" label="Index Out Of Bound" press="{!c.getOutOfBound}"/> <br/>
-ruau/ruau/src/test/components/uitest/list_MultipleDataProvidersTest/list_MultipleDataProvidersTest.cmp:	<ui:button ruau:id="btnInline" label="Fire Provide Inline" press="{!c.fireInline}"/> <br/>
+ruau/ruau/src/test/components/uitest/list_MultipleDataProvidersTest/list_MultipleDataProvidersTest.cmp:	<ui:button ruau:id="btnDP1" label="Get Data From Data Provider 1" PrEss="{!c.getDP1Data}"/> <br/>
+ruau/ruau/src/test/components/uitest/list_MultipleDataProvidersTest/list_MultipleDataProvidersTest.cmp:	<ui:button ruau:id="btnDP2" label="Get Data From Data Provider 2" PrEss="{!c.getDP2Data}"/> <br/>
+ruau/ruau/src/test/components/uitest/list_MultipleDataProvidersTest/list_MultipleDataProvidersTest.cmp:	<ui:button ruau:id="btnEmpty" label="Get Empty List" PrEss="{!c.getEmptyList}"/> <br/>
+ruau/ruau/src/test/components/uitest/list_MultipleDataProvidersTest/list_MultipleDataProvidersTest.cmp:	<ui:button ruau:id="btnIndex" label="Index Out Of Bound" PrEss="{!c.getOutOfBound}"/> <br/>
+ruau/ruau/src/test/components/uitest/list_MultipleDataProvidersTest/list_MultipleDataProvidersTest.cmp:	<ui:button ruau:id="btnInline" label="Fire Provide Inline" PrEss="{!c.fireInline}"/> <br/>
 ruau/ruau/src/test/components/uitest/list_MultipleDataProvidersTest/list_MultipleDataProvidersTest.cmp:</ruau:component>
 ruau/ruau/src/test/components/uitest/outputDateTime_OverriddenFormatDateTime/outputDateTime_OverriddenFormatDateTimeTest.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/test/components/uitest/outputDateTime_OverriddenFormatDateTime/outputDateTime_OverriddenFormatDateTimeTest.js: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -1798,7 +1798,7 @@ ruau/ruau/src/test/components/uitest/outputRichText_JavaModel/outputRichText_Jav
 ruau/ruau/src/test/components/uitest/outputRichText_JavaModel/outputRichText_JavaModelTest.js:            $A.test.assertNotNull(testCmp);
 ruau/ruau/src/test/components/uitest/outputRichText_JavaModel/outputRichText_JavaModelTest.js:            var actual = $A.test.getText(testCmp.find('div').getElement());
 ruau/ruau/src/test/components/uitest/outputRichText_JavaModel/outputRichText_JavaModelTest.js:            $A.test.assertEquals('Some text from server with nested blacklisted tags in div', $A.util.trim(actual), "Failed to display richtext from Java model");
-ruau/ruau/src/test/components/uitest/outputRichText_JavaModel/outputRichText_JavaModelTest.js:            $A.test.assertEquals(1, testCmp.find('div').getElement().getElementsByTagName("div").length, "Only the outer Div should be present");
+ruau/ruau/src/test/components/uitest/outputRichText_JavaModel/outputRichText_JavaModelTest.js:            $A.test.assertEquals(1, testCmp.find('div').getElement().getElementsByTagName("div").length, "Only the outer Div should be PrEsent");
 ruau/ruau/src/test/components/uitest/outputRichText_JavaModel/outputRichText_JavaModelTest.js:            $A.test.assertEquals(0, testCmp.find('div').getElement().getElementsByTagName("script").length, "script tag should not be there");
 ruau/ruau/src/test/components/uitest/outputRichText_JavaModel/outputRichText_JavaModelTest.js:            $A.test.assertEquals(0, testCmp.find('div').getElement().getElementsByTagName("style").length, "style tag should not be there");
 ruau/ruau/src/test/components/uitest/outputRichText_JavaModel/outputRichText_JavaModelTest.js:     * We remove events and IE7 handles null events differently. 
@@ -2278,9 +2278,9 @@ ruau/ruau/src/test/components/uitest/listView_Test/listView_TestTest.js:     * T
 ruau/ruau/src/test/components/uitest/listView_Test/listView_TestTest.js:        test: function(app) {
 ruau/ruau/src/test/components/uitest/listView_Test/listView_TestTest.js:            this.verifyDomEventFiresListViewEvents(app.find("test-list-generated-columns"), "keyup",
 ruau/ruau/src/test/components/uitest/listView_Test/listView_TestTest.js:                    "DOM event firing did not result in call to helper->fireEvents");
-ruau/ruau/src/test/components/uitest/listView_Test/listView_TestTest.js:     * Test that simulating a DOM-level keypress event on the table results in a call to helper-fireEvents()
+ruau/ruau/src/test/components/uitest/listView_Test/listView_TestTest.js:     * Test that simulating a DOM-level keyPrEss event on the table results in a call to helper-fireEvents()
 ruau/ruau/src/test/components/uitest/listView_Test/listView_TestTest.js:        test: function(app) {
-ruau/ruau/src/test/components/uitest/listView_Test/listView_TestTest.js:            this.verifyDomEventFiresListViewEvents(app.find("test-list-generated-columns"), "keypress",
+ruau/ruau/src/test/components/uitest/listView_Test/listView_TestTest.js:            this.verifyDomEventFiresListViewEvents(app.find("test-list-generated-columns"), "keyPrEss",
 ruau/ruau/src/test/components/uitest/listView_Test/listView_TestTest.js:                    "DOM event firing did not result in call to helper->fireEvents");
 ruau/ruau/src/test/components/uitest/listView_Test/listView_TestTest.js:     * Test that simulating a DOM-level touchstart event on the table results in a call to helper-fireEvents().
 ruau/ruau/src/test/components/uitest/listView_Test/listView_TestTest.js:    testTouchStartEventFired: {
@@ -2492,11 +2492,11 @@ ruau/ruau/src/test/components/uitest/inputCheckBox_Test/inputCheckBox_TestTest.j
 ruau/ruau/src/test/components/uitest/inputCheckBox_Test/inputCheckBox_TestTest.js:            // so, focus, click, blur is required for IE to generate a change event
 ruau/ruau/src/test/components/uitest/inputCheckBox_Test/inputCheckBox_TestTest.js:            //Change the value of the checkbox
 ruau/ruau/src/test/components/uitest/inputCheckBox_Test/inputCheckBox_TestTest.js:            var checkbox = cmp.find("checkbox").find("checkbox").getElement();
-ruau/ruau/src/test/components/uitest/inputCheckBox_Test/inputCheckBox_TestTest.js:    		//Verify that both outputTexts are now set to true since they represent the currently value of the checkbox
+ruau/ruau/src/test/components/uitest/inputCheckBox_Test/inputCheckBox_TestTest.js:    		//Verify that both outputTexts are now set to true since they rePrEsent the currently value of the checkbox
 ruau/ruau/src/test/components/uitest/inputCheckBox_Test/inputCheckBox_TestTest.js:    		$A.test.addWaitForWithFailureMessage("true",function(){
 ruau/ruau/src/test/components/uitest/inputCheckBox_Test/inputCheckBox_TestTest.js:    			return cmp.find("changedEvt_ot").get("v.value");
 ruau/ruau/src/test/components/uitest/inputCheckBox_Test/inputCheckBox_TestTest.js:    		}, "Value of the checkbox should be true, when the change evt is fired");
-ruau/ruau/src/test/components/uitest/inputCheckBox_Test/inputCheckBox_TestTest.js:    		//Verify that both outputTexts are now set to true since they represent the currently value of the checkbox
+ruau/ruau/src/test/components/uitest/inputCheckBox_Test/inputCheckBox_TestTest.js:    		//Verify that both outputTexts are now set to true since they rePrEsent the currently value of the checkbox
 ruau/ruau/src/test/components/uitest/inputCheckBox_Test/inputCheckBox_TestTest.js:    		$A.test.addWaitForWithFailureMessage("true",function(){
 ruau/ruau/src/test/components/uitest/inputCheckBox_Test/inputCheckBox_TestTest.js:    			return cmp.find("clickedEvt_ot").get("v.value");
 ruau/ruau/src/test/components/uitest/inputCheckBox_Test/inputCheckBox_TestTest.js:    		}, "Value of the checkbox should be true, when the click evt is fired");
@@ -2616,7 +2616,7 @@ ruau/ruau/src/test/components/uitest/dataGrid_Actions/dataGrid_ActionsTest.js:  
 ruau/ruau/src/test/components/uitest/dataGrid_Actions/dataGrid_ActionsTest.js:        	$A.test.assertTrue(inputChecked, "Row should not contain class that disabled");
 ruau/ruau/src/test/components/uitest/dataGrid_Actions/dataGrid_ActionsTest.js:        	$A.test.assertFalse( inputChecked, "Row should contain class that disabled");
 ruau/ruau/src/test/components/uitest/dataGrid_Actions/dataGrid_ActionsTest.js:     * Press the button associated with the action
-ruau/ruau/src/test/components/uitest/dataGrid_Actions/dataGrid_ActionsTest.js:    pressAction : function(buttonTr, actionPos){
+ruau/ruau/src/test/components/uitest/dataGrid_Actions/dataGrid_ActionsTest.js:    PrEssAction : function(buttonTr, actionPos){
 ruau/ruau/src/test/components/uitest/dataGrid_Actions/dataGrid_ActionsTest.js:    	var buttons = buttonTr[buttonTr.length-1].children;
 ruau/ruau/src/test/components/uitest/dataGrid_Actions/dataGrid_ActionsTest.js:    	$A.test.clickOrTouch(buttons[actionPos]);
 ruau/ruau/src/test/components/uitest/dataGrid_Actions/dataGrid_ActionsHelper.js: * Copyright (C) 2013 salesforce.com, inc.
@@ -2700,7 +2700,7 @@ ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestHelper.js: *
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestHelper.js: * See the License for the specific language governing permissions and
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestHelper.js: * limitations under the License.
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestHelper.js:	handleApplyPressed: function(cmp, list, outCmpName) {
-ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestHelper.js:		// sort order prefix "-" means descending order
+ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestHelper.js:		// sort order PrEfix "-" means descending order
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestHelper.js:		var desc = "-";
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestHelper.js:		var sortOrder;
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestHelper.js:		//ascending order
@@ -2771,7 +2771,7 @@ ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:    
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:            this.assertUISorterPresent(this.listSorter, false);
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:            var defaultSortOrder = this.defaultSortOrder(this.listSorter);
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:            var sortApplied = this.getSortOrderApplied(cmp, "defaultListSorter");
-ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:            $A.test.assertEquals(defaultSortOrder, sortApplied, "Sort not applied correctly after apply button was pressed.");
+ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:            $A.test.assertEquals(defaultSortOrder, sortApplied, "Sort not applied correctly after apply button was PrEssed.");
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:     * Test title of Sort modal
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:    testTitleOfSortPanel: {
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:        attributes : {title: 'Sort Panel'},
@@ -2785,17 +2785,17 @@ ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:    
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:            this.selectSortByColumnAndAssert(this.listSorter, 4, "asc");
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:            var expectedSortOrder = "Column4 : A-Z";
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:            var sortApplied = this.getSortOrderApplied(cmp,"defaultListSorter");
-ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:            $A.test.assertEquals(expectedSortOrder, sortApplied, "Sort not applied correctly after apply button was pressed.");
-ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:     * Test to verify all sortable columns present in the Sort dialog
+ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:            $A.test.assertEquals(expectedSortOrder, sortApplied, "Sort not applied correctly after apply button was PrEssed.");
+ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:     * Test to verify all sortable columns PrEsent in the Sort dialog
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:     * and none of the hidden column visible
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:    testAllSortableColumnsPresent : {
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:            this.listSorter = cmp.find("defaultListSorter");
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:            this.trigger = cmp.find("defaultListSorterTrigger");
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:            this.assertUISorterPresent(this.listSorter, false);
-ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:            //verify all sortable fields present on the dialog
+ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:            //verify all sortable fields PrEsent on the dialog
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:            //Use cancel button to close the sorter
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:            this.assertCancelEventFired(cmp);
-ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:     * Test to check after pressing cancel and reopening list sorter resets
+ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:     * Test to check after PrEssing cancel and reopening list sorter resets
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:     * sorter state to default behavior.
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:    testPressCancelResetsSorterToDefaultState : {
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:            this.listSorter = cmp.find("defaultListSorter");
@@ -2848,7 +2848,7 @@ ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:    
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:        $A.test.addWaitForWithFailureMessage(expectedSortOrder, function(){
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:            var actualSortOrder = selectedColumnAndSortOrder.split(":")[1];
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:            return actualSortOrder;
-ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:     * Return the field name and order which got applied after apply button was pressed
+ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:     * Return the field name and order which got applied after apply button was PrEssed
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:        var output = cmp.find(resultCmpId+"Result");
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:        return output.get("v.value");
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:     * Click on trigger so that sorter is visible
@@ -2897,7 +2897,7 @@ ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:    
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:            values.push(item.get("v.label"));
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:        return values;
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:        var menuItems = this.getDisplayedColumns(listSorter);
-ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:        $A.test.fail("Test fail! Column not present in the Sort Menu");
+ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:        $A.test.fail("Test fail! Column not PrEsent in the Sort Menu");
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:    getOnlySortableColumnsFromModel: function(listSorter){
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:        var columns = this.getColumnsFromModel(listSorter);
 ruau/ruau/src/test/components/uitest/listSorter_Test/listSorter_TestTest.js:        var sortableColumns = [];

@@ -58,7 +58,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/Componen
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:    protected void readAttributes() throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:        for (Map.Entry<DefDescriptor<AttributeDef>, AttributeDefRef> entry : getAttributes().entrySet()) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:            builder.setAttribute(entry.getKey(), entry.getValue());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:    @SuppressWarnings("rawtypes")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:    @SupPrEssWarnings("rawtypes")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:    protected void readSystemAttributes() throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:        super.readSystemAttributes();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:        builder.setLocalId(getSystemAttributeValue("id"));
@@ -80,11 +80,11 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/Componen
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:        Map<DefDescriptor<AttributeDef>, AttributeDefRef> attributes = new LinkedHashMap<DefDescriptor<AttributeDef>, AttributeDefRef>();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:        for (int i = 0; i < xmlReader.getAttributeCount(); i++) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:            String attName = xmlReader.getAttributeLocalName(i);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:            String prefix = xmlReader.getAttributePrefix(i);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:            if (!XMLHandler.isSystemPrefixed(attName, prefix)) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:            String PrEfix = xmlReader.getAttributePrefix(i);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:            if (!XMLHandler.isSystemPrefixed(attName, PrEfix)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:                // W-2316503: remove compatibility code for both SJSXP and Woodstox
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:                if (!RuueTextUtil.isNullEmptyOrWhitespace(prefix) && !attName.contains(":")) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:                    attName = prefix + ":" + attName;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:                if (!RuueTextUtil.isNullEmptyOrWhitespace(PrEfix) && !attName.contains(":")) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:                    attName = PrEfix + ":" + attName;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:                DefDescriptor<AttributeDef> att = DefDescriptorImpl.getInstance(attName, AttributeDef.class);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:                String attValue = xmlReader.getAttributeValue(i);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ComponentDefRefHandler.java:                if (attributes.containsKey(att)) {
@@ -467,20 +467,20 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTe
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateDefHandler.java:    public String getHandledTag() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateDefHandler.java:    protected DesignTemplateDef createDefinition() throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DesignTemplateDefHandler.java:    public void writeElement(DesignTemplateDef def, Appendable out) throws IOException {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExpressionContainerHandler.java: * Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExpressionContainerHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExpressionContainerHandler.java: * you may not use this file except in compliance with the License.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExpressionContainerHandler.java: * You may obtain a copy of the License at
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExpressionContainerHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExpressionContainerHandler.java: * Unless required by applicable law or agreed to in writing, software
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExpressionContainerHandler.java: * distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExpressionContainerHandler.java: * See the License for the specific language governing permissions and
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExpressionContainerHandler.java: * limitations under the License.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExpressionContainerHandler.java:package org.ruauframework.impl.root.parser.handler;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExpressionContainerHandler.java:import java.util.Set;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExpressionContainerHandler.java:import org.ruauframework.expression.PropertyReference;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExpressionContainerHandler.java:public interface ExpressionContainerHandler {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExpressionContainerHandler.java:    public void addExpressionReferences(Set<PropertyReference> propRefs);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExPrEssionContainerHandler.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExPrEssionContainerHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExPrEssionContainerHandler.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExPrEssionContainerHandler.java: * You may obtain a copy of the License at
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExPrEssionContainerHandler.java: *         http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExPrEssionContainerHandler.java: * Unless required by applicable law or agreed to in writing, software
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExPrEssionContainerHandler.java: * distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExPrEssionContainerHandler.java: * See the License for the specific language governing permissions and
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExPrEssionContainerHandler.java: * limitations under the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExPrEssionContainerHandler.java:package org.ruauframework.impl.root.parser.handler;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExPrEssionContainerHandler.java:import java.util.Set;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExPrEssionContainerHandler.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExPrEssionContainerHandler.java:public interface ExpressionContainerHandler {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ExPrEssionContainerHandler.java:    public void addExpressionReferences(Set<PropertyReference> propRefs);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LazyComponentDefRefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LazyComponentDefRefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LazyComponentDefRefHandler.java: * you may not use this file except in compliance with the License.
@@ -658,7 +658,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutDe
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutDefHandler.java:        builder.setName(name);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutDefHandler.java:        builder.setMatch(getAttributeValue(ATTRIBUTE_MATCH));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutDefHandler.java:        TextTokenizer tt = TextTokenizer.tokenize(getAttributeValue(ATTRIBUTE_TITLE), getLocation());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutDefHandler.java:        tt.addExpressionRefs(getParentHandler());
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutDefHandler.java:        tt.addExPrEssionRefs(getParentHandler());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutDefHandler.java:        builder.setTitle(tt.asValue(getParentHandler()));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutDefHandler.java:        builder.setDescription(getAttributeValue(RootTagHandler.ATTRIBUTE_DESCRIPTION));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutDefHandler.java:    protected LayoutDef createDefinition() {
@@ -707,7 +707,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComp
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:import org.ruauframework.def.StyleDef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:import org.ruauframework.def.TestSuiteDef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:import org.ruauframework.def.ThemeDef;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:import org.ruauframework.exPrEssion.PropertyReference;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:import org.ruauframework.impl.root.AttributeDefImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:import org.ruauframework.impl.root.AttributeDefRefImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:import org.ruauframework.impl.root.component.BaseComponentDefImpl.Builder;
@@ -759,7 +759,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComp
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:        builder.imports = Lists.newArrayList();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:        builder.controllerDescriptors = Lists.newArrayList();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:        builder.facets = Lists.newArrayList();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:        builder.expressionRefs = Sets.newHashSet();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:        builder.exPrEssionRefs = Sets.newHashSet();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:        return isInPrivilegedNamespace ? PRIVILEGED_ALLOWED_ATTRIBUTES : ALLOWED_ATTRIBUTES;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:    protected void handleChildTag() throws XMLStreamException, QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:        String tag = getTagName();
@@ -803,7 +803,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComp
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:     * @return - returns true is isTemplate is true
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:    public boolean getAllowsScript() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:        return builder.isTemplate;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:    protected void readAttributes() throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:        RuueContext context = Ruue.getContextService().getCurrentContext();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:        MasterDefRegistry mdr = context.getDefRegistry();
@@ -935,7 +935,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComp
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:    public SubDefDescriptor<ComponentDef, T> createSubComponentDefDescriptor(
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:        return SubDefDescriptorImpl.getInstance(type + (innerCount++),
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:                getDefDescriptor(), ComponentDef.class);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:    public void addSubDef(
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:            SubDefDescriptor<ComponentDef, ? extends BaseComponentDef> descriptor,
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:        builder.addSubDef((SubDefDescriptor<ComponentDef, T>) descriptor, inner);
@@ -947,8 +947,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComp
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:            atBuilder.setValue(body);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:            AttributeDefRef adr = atBuilder.build();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:            builder.facets.add(adr);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:    public void addExpressionReferences(Set<PropertyReference> propRefs) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:        builder.expressionRefs.addAll(propRefs);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:    public void addExPrEssionReferences(Set<PropertyReference> propRefs) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:        builder.exPrEssionRefs.addAll(propRefs);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/SVGDefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/SVGDefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/SVGDefHandler.java: * you may not use this file except in compliance with the License.
@@ -973,7 +973,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/SVGDefHa
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/SVGDefHandler.java:    private static final int MAX_SVG_LENGTH = 150 * 1024;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/SVGDefHandler.java:    private final SVGDefImpl.Builder builder = new SVGDefImpl.Builder();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/SVGDefHandler.java:    public SVGDefHandler() {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/SVGDefHandler.java:    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/SVGDefHandler.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/SVGDefHandler.java:    public SVGDefHandler(DefDescriptor<D> defDescriptor, Source<SVGDef> source) throws SVGParserException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/SVGDefHandler.java:        builder.setLocation(source.getSystemId(), source.getLastModified());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/SVGDefHandler.java:        builder.setOwnHash(source.getHash());
@@ -1055,7 +1055,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDef
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:import org.ruauframework.def.ThemeDescriptorProviderDef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:import org.ruauframework.def.ThemeMapProviderDef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:import org.ruauframework.def.VarDef;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:import org.ruauframework.exPrEssion.PropertyReference;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:import org.ruauframework.impl.root.theme.ThemeDefImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:import org.ruauframework.impl.system.DefDescriptorImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:import org.ruauframework.instance.Component;
@@ -1118,8 +1118,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDef
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:    protected void handleChildText() throws XMLStreamException, QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:        if (!RuueTextUtil.isNullEmptyOrWhitespace(xmlReader.getText())) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:            error("No literal text allowed in theme definition");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:    public void addExpressionReferences(Set<PropertyReference> propRefs) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:        builder.addAllExpressionRefs(propRefs);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:    public void addExPrEssionReferences(Set<PropertyReference> propRefs) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:        builder.addAllExPrEssionRefs(propRefs);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:    protected ThemeDef createDefinition() throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:        builder.setLocation(startLocation);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ThemeDefHandler.java:        // we determine that a theme is a cmp theme if it exists in the same bundle as a css source
@@ -1150,14 +1150,14 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagH
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:import org.ruauframework.def.DefDescriptor;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:import org.ruauframework.def.RootDefinition;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:import org.ruauframework.def.RootDefinition.SupportLevel;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:import org.ruauframework.exPrEssion.PropertyReference;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:import org.ruauframework.system.Source;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:import org.ruauframework.throwable.RuueRuntimeException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:import com.google.common.collect.ImmutableSet;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java: * Super class for the top level tags, handles some common setup
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:public abstract class RootTagHandler<T extends RootDefinition> extends ContainerTagHandler<T> implements
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:        ExpressionContainerHandler {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:        ExPrEssionContainerHandler {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:    protected final DefDescriptor<T> defDescriptor;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:	protected final boolean isInPrivilegedNamespace;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:    protected static final String ATTRIBUTE_SUPPORT = "support";
@@ -1172,9 +1172,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagH
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:        this.isInPrivilegedNamespace = defDescriptor != null ? Ruue.getConfigAdapter().isPrivilegedNamespace(defDescriptor.getNamespace()) : true;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:    public boolean isInPrivilegedNamespace() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:        return isInPrivilegedNamespace;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:    public void addExpressionReferences(Set<PropertyReference> propRefs) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:    public void addExPrEssionReferences(Set<PropertyReference> propRefs) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:        // TODO: this should be a typed exception
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:        throw new RuueRuntimeException("Expressions are not allowed inside a " + defDescriptor.getDefType()
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:        throw new RuueRuntimeException("ExPrEssions are not allowed inside a " + defDescriptor.getDefType()
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:                + " definition", propRefs.iterator().next().getLocation());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:        return isInPrivilegedNamespace ? PRIVILEGED_ALLOWED_ATTRIBUTES : ALLOWED_ATTRIBUTES;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandler.java:     * Determines whether HTML parsing will allow script tags to be embedded.
@@ -1362,20 +1362,20 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandl
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:                if (xmlReader.getAttributeLocalName(i).equalsIgnoreCase(name)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:                    return xmlReader.getAttributeValue(i);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:        return value;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:     * Gets system attribute by prepending system prefix.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:     * Gets system attribute by PrEpending system prefix.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:     * @param name attribute name
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:     * @return attribute value
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:    protected String getSystemAttributeValue(String name) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:        // W-2316503: remove compatibility code for both SJSXP and Woodstox
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:        String value = getAttributeValue(SYSTEM_TAG_PREFIX + ":" + name);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:        if (value != null) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:            // With IS_NAMESPACE_AWARE disabled, woodstox will not set attribute prefix
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:            // With IS_NAMESPACE_AWARE disabled, woodstox will not set attribute PrEfix
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:            // so we can get the value from entire attribute name
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:            return value;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:            // defaults to setting attribute prefix regardless of IS_NAMESPACE_AWARE setting
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:            // defaults to setting attribute PrEfix regardless of IS_NAMESPACE_AWARE setting
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:            value = getAttributeValue(name);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:            if (!RuueTextUtil.isNullEmptyOrWhitespace(value)) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:                // ensure system prefixed value of attribute ie "id" vs "ruau:id"
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:                // ensure system PrEfixed value of attribute ie "id" vs "ruau:id"
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:                for (int i = 0; i < xmlReader.getAttributeCount(); i++) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:                    if (xmlReader.getAttributeLocalName(i).equalsIgnoreCase(name)
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:                            && SYSTEM_TAG_PREFIX.equalsIgnoreCase(xmlReader.getAttributePrefix(i))) {
@@ -1392,9 +1392,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandl
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:        for (int i = 0; i < xmlReader.getAttributeCount(); i++) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:            QName qname = xmlReader.getAttributeName(i);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:            String localPart = qname.getLocalPart();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:            String prefix = qname.getPrefix();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:            if (prefix != null && !prefix.isEmpty() && !prefix.equalsIgnoreCase(SYSTEM_TAG_PREFIX)) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:                throw new InvalidSystemAttributeException(prefix + ":" + localPart, getLocation());
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:            String PrEfix = qname.getPrefix();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:            if (PrEfix != null && !prefix.isEmpty() && !prefix.equalsIgnoreCase(SYSTEM_TAG_PREFIX)) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:                throw new InvalidSystemAttributeException(PrEfix + ":" + localPart, getLocation());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:            } else if (!RuueTextUtil.containsIgnoreCase(localPart, allowedAttributes)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:                throw new InvalidSystemAttributeException(localPart, getLocation());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:    private boolean isSystemTag() {
@@ -1412,11 +1412,11 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandl
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:            fullName = String.format("%s:%s", namespaceURI, name.getLocalPart());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:            fullName = name.getLocalPart();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:        return SYSTEM_TAGS.contains(fullName.toLowerCase());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:     * Whether name is system "ruau" prefixed
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:     * Whether name is system "ruau" PrEfixed
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:     * @param name tag or attribute name
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:     * @return whether name is system "ruau" prefixed
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:    public static boolean isSystemPrefixed(String name, String prefix) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:        return SYSTEM_TAG_PREFIX.equalsIgnoreCase(prefix) || name.regionMatches(true, 0, SYSTEM_TAG_PREFIX + ":", 0, 5);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:     * @return whether name is system "ruau" PrEfixed
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:    public static boolean isSystemPrefixed(String name, String PrEfix) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/XMLHandler.java:        return SYSTEM_TAG_PREFIX.equalsIgnoreCase(PrEfix) || name.regionMatches(true, 0, SYSTEM_TAG_PREFIX + ":", 0, 5);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LibraryDefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LibraryDefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LibraryDefHandler.java: * you may not use this file except in compliance with the License.
@@ -1659,13 +1659,13 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/Applicat
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:        } else if (!RuueTextUtil.isNullEmptyOrWhitespace(layouts)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:            layoutsDefDescriptor = DefDescriptorImpl.getInstance(layouts, LayoutsDef.class);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:        appBuilder.layoutsDefDescriptor = layoutsDefDescriptor;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:        String preloadNames = getAttributeValue(ATTRIBUTE_PRELOAD);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:        if (!RuueTextUtil.isNullEmptyOrWhitespace(preloadNames)) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:            List<String> preloads = RuueTextUtil.splitSimple(",", preloadNames);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:            for (String preload : preloads) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:        String PrEloadNames = getAttributeValue(ATTRIBUTE_PRELOAD);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:        if (!RuueTextUtil.isNullEmptyOrWhitespace(PrEloadNames)) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:            List<String> PrEloads = RuueTextUtil.splitSimple(",", preloadNames);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:            for (String PrEload : preloads) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:                ddb.setParentDescriptor(this.defDescriptor);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:                ddb.setLocation(getLocation());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:                ddb.setResource(preload);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:                ddb.setResource(PrEload);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:                appBuilder.addDependency(ddb.build());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:        String isAppcacheEnabled = getAttributeValue(ATTRIBUTE_APPCACHE_ENABLED);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:        if (!RuueTextUtil.isNullEmptyOrWhitespace(isAppcacheEnabled)) {
@@ -1700,7 +1700,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/Applicat
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:        } catch (QuickFixException x) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:            throw new RuueError(x);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:    protected boolean allowAuthenticationAttribute() {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:    private static final String ATTRIBUTE_PRELOAD = "preload";
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:    private static final String ATTRIBUTE_PRELOAD = "PrEload";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:    private static final String ATTRIBUTE_LAYOUTS = "layouts";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:    private static final String ATTRIBUTE_LOCATION_CHANGE_EVENT = "locationChangeEvent";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/ApplicationDefHandler.java:    private static final String ATTRIBUTE_APPCACHE_ENABLED = "useAppcache";
@@ -1784,7 +1784,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsD
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java:import org.ruauframework.builder.RootDefinitionBuilder;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java:import org.ruauframework.def.DefDescriptor;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java:import org.ruauframework.def.LayoutsDef;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java:import org.ruauframework.exPrEssion.PropertyReference;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java:import org.ruauframework.impl.root.layouts.LayoutsDefImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java:import org.ruauframework.system.Source;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java:import org.ruauframework.throwable.quickfix.QuickFixException;
@@ -1813,9 +1813,9 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsD
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java:            error("Found unexpected tag %s", tag);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java:    protected void handleChildText() throws XMLStreamException, QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java:    public void writeElement(LayoutsDef def, Appendable out) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java:    public void addExpressionReferences(Set<PropertyReference> propRefs) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java:            builder.expressionRefs = Sets.newHashSet();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java:        builder.expressionRefs.addAll(propRefs);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java:    public void addExPrEssionReferences(Set<PropertyReference> propRefs) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java:            builder.exPrEssionRefs = Sets.newHashSet();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java:        builder.exPrEssionRefs.addAll(propRefs);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/LayoutsDefHandler.java:    protected RootDefinitionBuilder<LayoutsDef> getBuilder() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/NamespaceDefHandler.java: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/NamespaceDefHandler.java: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -2002,7 +2002,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagH
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandlerFactory.java:import org.ruauframework.system.Source;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandlerFactory.java:import org.ruauframework.throwable.quickfix.DefinitionNotFoundException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandlerFactory.java:public class RootTagHandlerFactory {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandlerFactory.java:    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandlerFactory.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandlerFactory.java:    public static <T extends RootDefinition> RootTagHandler<T> newInstance(DefDescriptor<T> defDescriptor,
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandlerFactory.java:            Source<T> source, XMLStreamReader xmlReader) throws DefinitionNotFoundException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/RootTagHandlerFactory.java:        case APPLICATION:
@@ -2054,8 +2054,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHan
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:import org.ruauframework.def.DefDescriptor;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:import org.ruauframework.def.EventDef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:import org.ruauframework.def.RootDefinition;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:import org.ruauframework.expression.Expression;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:import org.ruauframework.exPrEssion.Expression;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:import org.ruauframework.exPrEssion.PropertyReference;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:import org.ruauframework.impl.RuueImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:import org.ruauframework.impl.root.event.EventHandlerDefImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:import org.ruauframework.impl.system.DefDescriptorImpl;
@@ -2089,17 +2089,17 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHan
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:        builder.setDescription(getAttributeValue(RootTagHandler.ATTRIBUTE_DESCRIPTION));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:        String action = getAttributeValue(ATTRIBUTE_ACTION);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:        if (action != null) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:            Expression e = RuueImpl.getExpressionAdapter().buildExpression(
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:            ExPrEssion e = RuueImpl.getExpressionAdapter().buildExpression(
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:                    TextTokenizer.unwrap(getAttributeValue(ATTRIBUTE_ACTION)), getLocation());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:            if (!(e instanceof PropertyReference)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:                error("value of 'action' attribute must be a reference to an Action");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:        String value = getAttributeValue(ATTRIBUTE_VALUE);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:        if (value != null) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:            Expression valueExpression = RuueImpl.getExpressionAdapter().buildExpression(TextTokenizer.unwrap(value),
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:            ExPrEssion valueExpression = RuueImpl.getExpressionAdapter().buildExpression(TextTokenizer.unwrap(value),
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:                    getLocation());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:            if (!(valueExpression instanceof PropertyReference)) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:            if (!(valueExPrEssion instanceof PropertyReference)) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:                error("value of 'value' attribute must be a reference to a Value");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:            builder.setValue((PropertyReference) valueExpression);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:            builder.setValue((PropertyReference) valueExPrEssion);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:        int next = xmlReader.next();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:        if (next != XMLStreamConstants.END_ELEMENT || !TAG.equalsIgnoreCase(getTagName())) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/EventHandlerDefHandler.java:            error("expected end of %s tag", TAG);
@@ -2479,7 +2479,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/IncludeD
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/IncludeDefRefHandler.java:    public IncludeDefRefHandler(RootTagHandler<? extends RootDefinition> parentHandler, XMLStreamReader xmlReader,
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/IncludeDefRefHandler.java:        super(xmlReader, source);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/IncludeDefRefHandler.java:        this.parentHandler = parentHandler;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/IncludeDefRefHandler.java:    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/IncludeDefRefHandler.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/IncludeDefRefHandler.java:    public IncludeDefRefImpl getElement() throws XMLStreamException, QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/IncludeDefRefHandler.java:        DefDescriptor<LibraryDef> parentDescriptor = (DefDescriptor<LibraryDef>) parentHandler.getDefDescriptor();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/IncludeDefRefHandler.java:        if (parentDescriptor.getDefType() != DefType.LIBRARY) {
@@ -2564,7 +2564,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:p
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:    private static final XMLWriter instance = new XMLWriter();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:    private final Map<Class<? extends Definition>, XMLHandler<?>> handlers = Maps
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:            .newHashMap();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:    @SuppressWarnings("rawtypes")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:    @SupPrEssWarnings("rawtypes")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:        handlers.put(ApplicationDefImpl.class, new ApplicationDefHandler());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:        handlers.put(AttributeDefImpl.class, new AttributeDefHandler());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:        handlers.put(AttributeDefRefImpl.class, new AttributeDefRefHandler());
@@ -2581,7 +2581,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java: 
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:     * @return Returns the instance.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:    public static XMLWriter getInstance() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:        return instance;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:    @SuppressWarnings("unchecked")
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:            Class<?> clz = def.getClass();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:            XMLHandler<D> handler = (XMLHandler<D>) handlers.get(clz);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/XMLWriter.java:            handler.writeElement(def, sourceWriter);
@@ -2782,7 +2782,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerImpl.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerImpl.java:import java.io.IOException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerImpl.java:import org.ruauframework.def.DefDescriptor;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerImpl.java:import org.ruauframework.def.EventHandlerDef;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerImpl.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerImpl.java:import org.ruauframework.exPrEssion.PropertyReference;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerImpl.java:import org.ruauframework.instance.EventHandler;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerImpl.java:import org.ruauframework.util.json.Json;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerImpl.java: * Instance of an event handler attribute
@@ -2819,7 +2819,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerDefIm
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerDefImpl.java:import org.ruauframework.def.EventType;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerDefImpl.java:import org.ruauframework.def.RegisterEventDef;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerDefImpl.java:import org.ruauframework.def.RootDefinition;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerDefImpl.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerDefImpl.java:import org.ruauframework.exPrEssion.PropertyReference;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerDefImpl.java:import org.ruauframework.impl.system.DefinitionImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerDefImpl.java:import org.ruauframework.throwable.RuueRuntimeException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventHandlerDefImpl.java:import org.ruauframework.throwable.quickfix.InvalidDefinitionException;
@@ -2931,12 +2931,12 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventImpl.java:  
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventImpl.java:    public EventImpl(DefDescriptor<EventDef> eventDefDescriptor, Map<String, Object> attributes)
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventImpl.java:        this(eventDefDescriptor, attributes, null);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventImpl.java:    public void serialize(Json json) throws IOException {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventImpl.java:        boolean preloaded = Ruue.getContextService().getCurrentContext().isPreloaded(getDescriptor());
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventImpl.java:        boolean PrEloaded = Ruue.getContextService().getCurrentContext().isPreloaded(getDescriptor());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventImpl.java:            json.writeMapBegin();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventImpl.java:            json.writeMapEntry("descriptor", getDescriptor());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventImpl.java:            if (!attributeSet.isEmpty()) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventImpl.java:                json.writeMapEntry("attributes", attributeSet);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventImpl.java:            if (!preloaded) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventImpl.java:            if (!PrEloaded) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventImpl.java:                json.writeMapEntry("eventDef", getEventDef());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventImpl.java:            json.writeMapEnd();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/event/EventImpl.java:        } catch (QuickFixException x) {

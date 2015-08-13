@@ -1,16 +1,16 @@
 ruau/ruau/src/test/components/ruautest/valueChangeEvents/valueChangeEventsTest.js:	// 		}, "Updating the PRV to the passthrough value never caused a markDirty and rerender.");
-ruau/ruau/src/test/components/ruautest/test_press/test_press.evt:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau/src/test/components/ruautest/test_press/test_press.evt:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/components/ruautest/test_press/test_press.evt:    you may not use this file except in compliance with the License.
-ruau/ruau/src/test/components/ruautest/test_press/test_press.evt:    You may obtain a copy of the License at
-ruau/ruau/src/test/components/ruautest/test_press/test_press.evt:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau/src/test/components/ruautest/test_press/test_press.evt:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau/src/test/components/ruautest/test_press/test_press.evt:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau/src/test/components/ruautest/test_press/test_press.evt:    See the License for the specific language governing permissions and
-ruau/ruau/src/test/components/ruautest/test_press/test_press.evt:    limitations under the License.
-ruau/ruau/src/test/components/ruautest/test_press/test_press.evt:<ruau:event type="COMPONENT">
-ruau/ruau/src/test/components/ruautest/test_press/test_press.evt:    <!--ruau:attribute name="button" type="Integer"/-->
-ruau/ruau/src/test/components/ruautest/test_press/test_press.evt:</ruau:event>
+ruau/ruau/src/test/components/ruautest/test_PrEss/test_press.evt:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/components/ruautest/test_PrEss/test_press.evt:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau/src/test/components/ruautest/test_PrEss/test_press.evt:    you may not use this file except in compliance with the License.
+ruau/ruau/src/test/components/ruautest/test_PrEss/test_press.evt:    You may obtain a copy of the License at
+ruau/ruau/src/test/components/ruautest/test_PrEss/test_press.evt:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau/src/test/components/ruautest/test_PrEss/test_press.evt:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau/src/test/components/ruautest/test_PrEss/test_press.evt:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau/src/test/components/ruautest/test_PrEss/test_press.evt:    See the License for the specific language governing permissions and
+ruau/ruau/src/test/components/ruautest/test_PrEss/test_press.evt:    limitations under the License.
+ruau/ruau/src/test/components/ruautest/test_PrEss/test_press.evt:<ruau:event type="COMPONENT">
+ruau/ruau/src/test/components/ruautest/test_PrEss/test_press.evt:    <!--ruau:attribute name="button" type="Integer"/-->
+ruau/ruau/src/test/components/ruautest/test_PrEss/test_press.evt:</ruau:event>
 ruau/ruau/src/test/components/ruautest/test_Labels_NonExisting/test_Labels_NonExisting.cmp:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/test/components/ruautest/test_Labels_NonExisting/test_Labels_NonExisting.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau/src/test/components/ruautest/test_Labels_NonExisting/test_Labels_NonExisting.cmp:    you may not use this file except in compliance with the License.
@@ -72,7 +72,7 @@ ruau/ruau/src/test/components/ruautest/test_CompoundFormula_NonString/test_Compo
 ruau/ruau/src/test/components/ruautest/test_CompoundFormula_NonString/test_CompoundFormula_NonString.cmp:<ruau:component>
 ruau/ruau/src/test/components/ruautest/test_CompoundFormula_NonString/test_CompoundFormula_NonString.cmp:    <ruau:attribute name="NameString" type="String" default="Ruue"/>
 ruau/ruau/src/test/components/ruautest/test_CompoundFormula_NonString/test_CompoundFormula_NonString.cmp:    <ruau:attribute name="Acc" type="Account" />
-ruau/ruau/src/test/components/ruautest/test_CompoundFormula_NonString/test_CompoundFormula_NonString.cmp:    <!--Expressions involving variables in the component-->
+ruau/ruau/src/test/components/ruautest/test_CompoundFormula_NonString/test_CompoundFormula_NonString.cmp:    <!--ExPrEssions involving variables in the component-->
 ruau/ruau/src/test/components/ruautest/test_CompoundFormula_NonString/test_CompoundFormula_NonString.cmp:    <ruautest:test_button label="{!v.NameString + !v.Acc}"/>
 ruau/ruau/src/test/components/ruautest/test_CompoundFormula_NonString/test_CompoundFormula_NonString.cmp:</ruau:component>
 ruau/ruau/src/test/components/ruautest/testInterfaceChildImpl/testInterfaceChildImpl.cmp:    Copyright (C) 2013 salesforce.com, inc.
@@ -184,7 +184,7 @@ ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCs
 ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCscc.cmp:    See the License for the specific language governing permissions and
 ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCscc.cmp:    limitations under the License.
 ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCscc.cmp:<ruau:component>
-ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCscc.cmp:    <ui:button label="add item" ruau:id="addItem" press="{!c.add}"/>
+ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCscc.cmp:    <ui:button label="add item" ruau:id="addItem" PrEss="{!c.add}"/>
 ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCscc.cmp:    <ui:infiniteList ruau:id="list" itemVar="item">
 ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCscc.cmp:        <ruau:set attribute="dataProvider">
 ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCscc.cmp:            <ruautest:test_InfiniteListDataProvider/>
@@ -221,27 +221,27 @@ ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCs
 ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js: * See the License for the specific language governing permissions and
 ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js: * limitations under the License.
 ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:     * Verify that server created iteration components will actively respond to 
-ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:     * underlying value changes on which expressions depend.
+ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:     * underlying value changes on which exPrEssions depend.
 ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:            var btns = component.find("aButton");
 ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:            // Verify initial state of components
 ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:            $A.test.assertStartsWith("isClose-false Server 0", $A.util.getText(btns[0].getElement()));
 ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:            $A.test.assertStartsWith("isClose-false Server 1", $A.util.getText(btns[1].getElement()));
 ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:            $A.test.assertStartsWith("isClose-false Server 2", $A.util.getText(btns[2].getElement()));
-ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:            // press the first button,  changing what the expression is dependent on
-ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:        	component.find("aButton")[0].get("myButton").get("e.press").fire();
+ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:            // PrEss the first button,  changing what the expression is dependent on
+ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:        	component.find("aButton")[0].get("myButton").get("e.PrEss").fire();
 ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:        	var btns = component.find("aButton");
 ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:            $A.test.assertStartsWith("isClosed-true Server 0", $A.util.getText(btns[0].getElement()));
 ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:     * Verify that a combination of client and server iteration components will actively respond to 
-ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:     * underlying value changes on which expressions depend 
+ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:     * underlying value changes on which exPrEssions depend 
 ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:            // add one item to iteration from client using button
-ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:            component.get("addItem").get("e.press").fire();
+ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:            component.get("addItem").get("e.PrEss").fire();
 ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:            var btns = component.find("aButton");
 ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:            // verify initial component state
 ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:            $A.test.assertStartsWith("isClose-false Client", $A.util.getText(btns[3].getElement()));
 ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:            $A.test.assertStartsWith("isClose-false Server 0", $A.util.getText(btns[0].getElement()));
-ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:            // press the first button,  changing what the expression is dependent on
-ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:        	component.find("aButton")[3].get("myButton").get("e.press").fire();
-ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:        	component.find("aButton")[0].get("myButton").get("e.press").fire();
+ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:            // PrEss the first button,  changing what the expression is dependent on
+ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:        	component.find("aButton")[3].get("myButton").get("e.PrEss").fire();
+ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:        	component.find("aButton")[0].get("myButton").get("e.PrEss").fire();
 ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:        	var btns = component.find("aButton");
 ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:            // verify underlying data change is picked up
 ruau/ruau/src/test/components/ruautest/test_InfiniteListCscc/test_InfiniteListCsccTest.js:            $A.test.assertStartsWith("isClosed-true Client", $A.util.getText(btns[3].getElement()));
@@ -354,7 +354,7 @@ ruau/ruau/src/test/components/ruautest/test_BrowserInfo/test_BrowserInfoTest.js:
 ruau/ruau/src/test/components/ruautest/test_BrowserInfo/test_BrowserInfoTest.js:			if (text.indexOf("[" + propertyName + "=" + expectedValue + "]") < 0) {
 ruau/ruau/src/test/components/ruautest/test_BrowserInfo/test_BrowserInfoTest.js:				$A.test.fail("Unexpected value for '" + propertyName + "'; expected '" + expectedValue + "' but got " + text);
 ruau/ruau/src/test/components/ruautest/test_BrowserInfo/test_BrowserInfoTest.js:			$A.test.assertEquals(expectedValue, $A.get("$Browser")[propertyName], propertyName + ' had unexpected on $Browser');
-ruau/ruau/src/test/components/ruautest/test_BrowserInfo/test_BrowserInfoTest.js:			// check expression evaluation from root provider
+ruau/ruau/src/test/components/ruautest/test_BrowserInfo/test_BrowserInfoTest.js:			// check exPrEssion evaluation from root provider
 ruau/ruau/src/test/components/ruautest/test_BrowserInfo/test_BrowserInfoTest.js:			$A.test.assertEquals(expectedValue, $A.get(expr), propertyName + ' had unexpected value from $A.get()');
 ruau/ruau/src/test/components/ruautest/test_BrowserInfo/test_BrowserInfoTest.js:	testInvalidProperties : {
 ruau/ruau/src/test/components/ruautest/test_BrowserInfo/test_BrowserInfoTest.js:			$A.test.assertEquals(undefined, $A.get("$Browser.isUnknown"), "Unexpected property 'isUnknown' found on $Browser");
@@ -596,7 +596,7 @@ ruau/ruau/src/test/components/ruautest/test_Preload_ScrapNamespace/test_Preload_
 ruau/ruau/src/test/components/ruautest/test_Preload_ScrapNamespace/test_Preload_ScrapNamespace.app:    limitations under the License.
 ruau/ruau/src/test/components/ruautest/test_Preload_ScrapNamespace/test_Preload_ScrapNamespace.app:<ruau:application>
 ruau/ruau/src/test/components/ruautest/test_Preload_ScrapNamespace/test_Preload_ScrapNamespace.app:    <ruau:dependency resource="somecrap" />
-ruau/ruau/src/test/components/ruautest/test_Preload_ScrapNamespace/test_Preload_ScrapNamespace.app:    <ruautest:test_button class="displayText" label="Sitting pretty tight"/>
+ruau/ruau/src/test/components/ruautest/test_Preload_ScrapNamespace/test_Preload_ScrapNamespace.app:    <ruautest:test_button class="displayText" label="Sitting PrEtty tight"/>
 ruau/ruau/src/test/components/ruautest/test_Preload_ScrapNamespace/test_Preload_ScrapNamespace.app:</ruau:application>
 ruau/ruau/src/test/components/ruautest/test_Preload_ScrapNamespace/test_Preload_ScrapNamespace.app:<!-- This component is used in ApplicationDefTest.testNonExistantNameSpace() -->
 ruau/ruau/src/test/components/ruautest/test_ServerRendering/test_ServerRendering.app:    Copyright (C) 2013 salesforce.com, inc.
@@ -609,7 +609,7 @@ ruau/ruau/src/test/components/ruautest/test_ServerRendering/test_ServerRendering
 ruau/ruau/src/test/components/ruautest/test_ServerRendering/test_ServerRendering.app:    See the License for the specific language governing permissions and
 ruau/ruau/src/test/components/ruautest/test_ServerRendering/test_ServerRendering.app:    limitations under the License.
 ruau/ruau/src/test/components/ruautest/test_ServerRendering/test_ServerRendering.app:<ruau:application render="SERVER">
-ruau/ruau/src/test/components/ruautest/test_ServerRendering/test_ServerRendering.app:    <ruau:attribute name="expression" type="String" default="testServerSideRenderingOfBasicComponents"/>
+ruau/ruau/src/test/components/ruautest/test_ServerRendering/test_ServerRendering.app:    <ruau:attribute name="exPrEssion" type="String" default="testServerSideRenderingOfBasicComponents"/>
 ruau/ruau/src/test/components/ruautest/test_ServerRendering/test_ServerRendering.app:    <div class="htmlEntities">
 ruau/ruau/src/test/components/ruautest/test_ServerRendering/test_ServerRendering.app:        <div class="nonBreakingSpace">      &nbsp;</div>
 ruau/ruau/src/test/components/ruautest/test_ServerRendering/test_ServerRendering.app:        <div class="copyRight">             &copy;</div>
@@ -625,7 +625,7 @@ ruau/ruau/src/test/components/ruautest/test_ServerRendering/test_ServerRendering
 ruau/ruau/src/test/components/ruautest/test_ServerRendering/test_ServerRendering.app:        <div class="ampersand">&amp;</div>
 ruau/ruau/src/test/components/ruautest/test_ServerRendering/test_ServerRendering.app:    <div class="textComponent">
 ruau/ruau/src/test/components/ruautest/test_ServerRendering/test_ServerRendering.app:        testServerSideRenderingOfBasicComponents
-ruau/ruau/src/test/components/ruautest/test_ServerRendering/test_ServerRendering.app:    <div class="expressionComponent">
+ruau/ruau/src/test/components/ruautest/test_ServerRendering/test_ServerRendering.app:    <div class="exPrEssionComponent">
 ruau/ruau/src/test/components/ruautest/test_ServerRendering/test_ServerRendering.app:</ruau:application>
 ruau/ruau/src/test/components/ruautest/test_Component_NoModel/test_Component_NoModelTest.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/test/components/ruautest/test_Component_NoModel/test_Component_NoModelTest.js: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -923,7 +923,7 @@ ruau/ruau/src/test/components/ruautest/unescapedHtml/unescapedHtmlTest.js:      
 ruau/ruau/src/test/components/ruautest/unescapedHtml/unescapedHtmlTest.js:                $A.test.addWaitFor(true, function(){
 ruau/ruau/src/test/components/ruautest/unescapedHtml/unescapedHtmlTest.js:                    return !component.isDirty("v.value");
 ruau/ruau/src/test/components/ruautest/unescapedHtml/unescapedHtmlTest.js:                var cmp = component.find("value");
-ruau/ruau/src/test/components/ruautest/unescapedHtml/unescapedHtmlTest.js:                $A.test.assertTrue($A.util.isEmpty(cmp.getElements()), "previous element was not unrendered");
+ruau/ruau/src/test/components/ruautest/unescapedHtml/unescapedHtmlTest.js:                $A.test.assertTrue($A.util.isEmpty(cmp.getElements()), "PrEvious element was not unrendered");
 ruau/ruau/src/test/components/ruautest/unescapedHtml/unescapedHtmlTest.js:     * Undefined value renders no elements.
 ruau/ruau/src/test/components/ruautest/unescapedHtml/unescapedHtmlTest.js:    // W-1132685 - https://gus.salesforce.com/a07B0000000KzSX
 ruau/ruau/src/test/components/ruautest/unescapedHtml/unescapedHtmlTest.js:    testValueMissing: {
@@ -938,7 +938,7 @@ ruau/ruau/src/test/components/ruautest/unescapedHtml/unescapedHtmlTest.js:      
 ruau/ruau/src/test/components/ruautest/unescapedHtml/unescapedHtmlTest.js:                $A.test.addWaitFor(true, function(){
 ruau/ruau/src/test/components/ruautest/unescapedHtml/unescapedHtmlTest.js:                    return !component.isDirty("v.value");
 ruau/ruau/src/test/components/ruautest/unescapedHtml/unescapedHtmlTest.js:                var cmp = component.find("value");
-ruau/ruau/src/test/components/ruautest/unescapedHtml/unescapedHtmlTest.js:                $A.test.assertTrue($A.util.isEmpty(cmp.getElements()), "previous element was not unrendered");
+ruau/ruau/src/test/components/ruautest/unescapedHtml/unescapedHtmlTest.js:                $A.test.assertTrue($A.util.isEmpty(cmp.getElements()), "PrEvious element was not unrendered");
 ruau/ruau/src/test/components/ruautest/unescapedHtml/unescapedHtmlTest.js:     * Null value renders no elements.
 ruau/ruau/src/test/components/ruautest/unescapedHtml/unescapedHtmlTest.js:    // W-1132685 - https://gus.salesforce.com/a07B0000000KzSX
 ruau/ruau/src/test/components/ruautest/unescapedHtml/unescapedHtmlTest.js:    testValueNull: {
@@ -959,7 +959,7 @@ ruau/ruau/src/test/components/ruautest/unescapedHtml/unescapedHtml.cmp:    See t
 ruau/ruau/src/test/components/ruautest/unescapedHtml/unescapedHtml.cmp:    limitations under the License.
 ruau/ruau/src/test/components/ruautest/unescapedHtml/unescapedHtml.cmp:<ruau:component>
 ruau/ruau/src/test/components/ruautest/unescapedHtml/unescapedHtml.cmp:    <ruau:attribute name="value" type="String"/>
-ruau/ruau/src/test/components/ruautest/unescapedHtml/unescapedHtml.cmp:    <ui:button ruau:id="toggle" label="toggle" press="{!c.toggleValue}"/>
+ruau/ruau/src/test/components/ruautest/unescapedHtml/unescapedHtml.cmp:    <ui:button ruau:id="toggle" label="toggle" PrEss="{!c.toggleValue}"/>
 ruau/ruau/src/test/components/ruautest/unescapedHtml/unescapedHtml.cmp:    <ruau:unescapedHtml ruau:id="null" value="{!false || null}"/>
 ruau/ruau/src/test/components/ruautest/unescapedHtml/unescapedHtml.cmp:    <ruau:unescapedHtml ruau:id="value" value="{!v.value}"/>
 ruau/ruau/src/test/components/ruautest/unescapedHtml/unescapedHtml.cmp:</ruau:component>
@@ -1050,7 +1050,7 @@ ruau/ruau/src/test/components/ruautest/test_Preload_SimpleCmp/test_Preload_Simpl
 ruau/ruau/src/test/components/ruautest/test_Preload_SimpleCmp/test_Preload_SimpleCmp.app:    distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau/src/test/components/ruautest/test_Preload_SimpleCmp/test_Preload_SimpleCmp.app:    See the License for the specific language governing permissions and
 ruau/ruau/src/test/components/ruautest/test_Preload_SimpleCmp/test_Preload_SimpleCmp.app:    limitations under the License.
-ruau/ruau/src/test/components/ruautest/test_Preload_SimpleCmp/test_Preload_SimpleCmp.app:<ruau:application preload="ui,ruau">
+ruau/ruau/src/test/components/ruautest/test_Preload_SimpleCmp/test_Preload_SimpleCmp.app:<ruau:application PrEload="ui,ruau">
 ruau/ruau/src/test/components/ruautest/test_Preload_SimpleCmp/test_Preload_SimpleCmp.app:        <ui:button label="Apex Instantiated" class="displayText1" ruau:id="button"/>
 ruau/ruau/src/test/components/ruautest/test_Preload_SimpleCmp/test_Preload_SimpleCmp.app:</ruau:application>
 ruau/ruau/src/test/components/ruautest/jsmock/jsmockTest.js:			answers : [{
@@ -1105,7 +1105,7 @@ ruau/ruau/src/test/components/ruautest/jsmock/jsmock.cmp:		model="java://org.rua
 ruau/ruau/src/test/components/ruautest/jsmock/jsmock.cmp:		controller="java://org.ruauframework.impl.java.controller.JavaTestController"
 ruau/ruau/src/test/components/ruautest/jsmock/jsmock.cmp:		provider="java://org.ruauframework.impl.java.provider.EmptyConfigProvider">
 ruau/ruau/src/test/components/ruautest/jsmock/jsmock.cmp:	<ruau:attribute name="providedAttribute" type="String"/>
-ruau/ruau/src/test/components/ruautest/jsmock/jsmock.cmp:	<ui:button ruau:id="trigger" press="{!c.getServerString}" label="get a string"/>
+ruau/ruau/src/test/components/ruautest/jsmock/jsmock.cmp:	<ui:button ruau:id="trigger" PrEss="{!c.getServerString}" label="get a string"/>
 ruau/ruau/src/test/components/ruautest/jsmock/jsmock.cmp:	<div ruau:id="output">{!v.providedAttribute}{!m.secret}<ruau:iteration items="{!m.stringList}" var="x" start="{!m.integer}" end="{!m.integerString}">{!x}</ruau:iteration></div>
 ruau/ruau/src/test/components/ruautest/jsmock/jsmock.cmp:</ruau:component> 
 ruau/ruau/src/test/components/ruautest/jsmock/jsmockController.js:		var a = cmp.get("c.getString");
@@ -1556,9 +1556,9 @@ ruau/ruau/src/test/components/ruautest/rerenderAbstract/rerenderAbstract.cmp:   
 ruau/ruau/src/test/components/ruautest/rerenderAbstract/rerenderAbstract.cmp:        <div class="boxed">
 ruau/ruau/src/test/components/ruautest/rerenderAbstract/rerenderAbstract.cmp:            abstract
 ruau/ruau/src/test/components/ruautest/rerenderAbstract/rerenderAbstract.cmp:            <ruautest:rerenderCounter ruau:id="counter"/>
-ruau/ruau/src/test/components/ruautest/rerenderAbstract/rerenderAbstract.cmp:            <ui:button label="v.abstract" press="{!c.toggleAbstract}" ruau:id="toggleAbstract"/>
-ruau/ruau/src/test/components/ruautest/rerenderAbstract/rerenderAbstract.cmp:            <ui:button label="m.abstract" press="{!c.toggleAbstractModel}" ruau:id="toggleAbstractModel"/>
-ruau/ruau/src/test/components/ruautest/rerenderAbstract/rerenderAbstract.cmp:            <ui:button label="v.interface" press="{!c.toggleInterface}" ruau:id="toggleInterface"/>
+ruau/ruau/src/test/components/ruautest/rerenderAbstract/rerenderAbstract.cmp:            <ui:button label="v.abstract" PrEss="{!c.toggleAbstract}" ruau:id="toggleAbstract"/>
+ruau/ruau/src/test/components/ruautest/rerenderAbstract/rerenderAbstract.cmp:            <ui:button label="m.abstract" PrEss="{!c.toggleAbstractModel}" ruau:id="toggleAbstractModel"/>
+ruau/ruau/src/test/components/ruautest/rerenderAbstract/rerenderAbstract.cmp:            <ui:button label="v.interface" PrEss="{!c.toggleInterface}" ruau:id="toggleInterface"/>
 ruau/ruau/src/test/components/ruautest/rerenderAbstract/rerenderAbstract.cmp:</ruau:component>
 ruau/ruau/src/test/components/ruautest/test_Model_Parent/test_Model_Parent.cmp:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/test/components/ruautest/test_Model_Parent/test_Model_Parent.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
@@ -1583,7 +1583,7 @@ ruau/ruau/src/test/components/ruautest/fastClickDomEvents/fastClickDomEvents.css
 ruau/ruau/src/test/components/ruautest/fastClickDomEvents/fastClickDomEvents.css:    margin-top: 20px;
 ruau/ruau/src/test/components/ruautest/fastClickDomEvents/fastClickDomEvents.css:    border-radius: 20px;
 ruau/ruau/src/test/components/ruautest/fastClickDomEvents/fastClickDomEvents.css:    padding: 20px;
-ruau/ruau/src/test/components/ruautest/fastClickDomEvents/fastClickDomEventsHelper.js:    	var msg = evt.preventDefault ? 'DOM event' : 'Ruue Event';
+ruau/ruau/src/test/components/ruautest/fastClickDomEvents/fastClickDomEventsHelper.js:    	var msg = evt.PrEventDefault ? 'DOM event' : 'Ruue Event';
 ruau/ruau/src/test/components/ruautest/fastClickDomEvents/fastClickDomEventsController.js:    clearOutput: function(cmp, event, helper) {
 ruau/ruau/src/test/components/ruautest/fastClickDomEvents/fastClickDomEvents.cmp:<ruau:component>
 ruau/ruau/src/test/components/ruautest/fastClickDomEvents/fastClickDomEvents.cmp:	<ruau:attribute name="outterEvent" type="String" default=""/>
@@ -1600,7 +1600,7 @@ ruau/ruau/src/test/components/ruautest/fastClickDomEvents/fastClickDomEvents.cmp
 ruau/ruau/src/test/components/ruautest/fastClickDomEvents/fastClickDomEvents.cmp:	outter: <ui:outputText value="{!v.outterEvent}"/> <br/>
 ruau/ruau/src/test/components/ruautest/fastClickDomEvents/fastClickDomEvents.cmp:	middle: <ui:outputText value="{!v.middleEvent}"/> <br/>
 ruau/ruau/src/test/components/ruautest/fastClickDomEvents/fastClickDomEvents.cmp:	inner: <ui:outputText value="{!v.innerEvent}"/>  <br/>
-ruau/ruau/src/test/components/ruautest/fastClickDomEvents/fastClickDomEvents.cmp:	<ui:button ruau:id="clearBtn" label="clear" press="{!c.clearOutput}"/>
+ruau/ruau/src/test/components/ruautest/fastClickDomEvents/fastClickDomEvents.cmp:	<ui:button ruau:id="clearBtn" label="clear" PrEss="{!c.clearOutput}"/>
 ruau/ruau/src/test/components/ruautest/fastClickDomEvents/fastClickDomEvents.cmp:</ruau:component>
 ruau/ruau/src/test/components/ruautest/fastClickDomEvents/fastClickDomEventsTest.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/test/components/ruautest/fastClickDomEvents/fastClickDomEventsTest.js: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -1931,7 +1931,7 @@ ruau/ruau/src/test/components/ruautest/parseError/parseError.cmp:    distributed
 ruau/ruau/src/test/components/ruautest/parseError/parseError.cmp:    See the License for the specific language governing permissions and
 ruau/ruau/src/test/components/ruautest/parseError/parseError.cmp:    limitations under the License.
 ruau/ruau/src/test/components/ruautest/parseError/parseError.cmp:<ruau:component>
-ruau/ruau/src/test/components/ruautest/parseError/parseError.cmp:    <ruautest:test_button press="{!c.handleclick}" label="click"/>
+ruau/ruau/src/test/components/ruautest/parseError/parseError.cmp:    <ruautest:test_button PrEss="{!c.handleclick}" label="click"/>
 ruau/ruau/src/test/components/ruautest/parseError/parseError.cmp:</ruau:component>
 ruau/ruau/src/test/components/ruautest/renderEvent/renderEvent.evt:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/test/components/ruautest/renderEvent/renderEvent.evt:    Licensed under the Apache License, Version 2.0 (the "License");
@@ -2314,7 +2314,7 @@ ruau/ruau/src/test/components/ruautest/baseInputTest/baseInputTest.cmp:    limit
 ruau/ruau/src/test/components/ruautest/baseInputTest/baseInputTest.cmp:<ruau:component controller="java://org.ruauframework.impl.java.controller.JavaTestController">
 ruau/ruau/src/test/components/ruautest/baseInputTest/baseInputTest.cmp:    <ruau:attribute name="cmpType" type="string"/>
 ruau/ruau/src/test/components/ruautest/baseInputTest/baseInputTest.cmp:    <ruau:attribute name="ref" type="Object"/>
-ruau/ruau/src/test/components/ruautest/baseInputTest/baseInputTest.cmp:    <ui:button ruau:id="submitBtn" label="submit" press="{!c.submit}"/> <br/>
+ruau/ruau/src/test/components/ruautest/baseInputTest/baseInputTest.cmp:    <ui:button ruau:id="submitBtn" label="submit" PrEss="{!c.submit}"/> <br/>
 ruau/ruau/src/test/components/ruautest/baseInputTest/baseInputTest.cmp:    Value is: <ui:outputText ruau:id="outputValue" value=""/> <br/>
 ruau/ruau/src/test/components/ruautest/baseInputTest/baseInputTest.cmp:</ruau:component>
 ruau/ruau/src/test/components/ruautest/baseInputTest/baseInputTestController.js: * Copyright (C) 2013 salesforce.com, inc.
@@ -2499,7 +2499,7 @@ ruau/ruau/src/test/components/ruautest/test_InfiniteListButton/test_InfiniteList
 ruau/ruau/src/test/components/ruautest/test_InfiniteListButton/test_InfiniteListButton.cmp:    limitations under the License.
 ruau/ruau/src/test/components/ruautest/test_InfiniteListButton/test_InfiniteListButton.cmp:<ruau:component>
 ruau/ruau/src/test/components/ruautest/test_InfiniteListButton/test_InfiniteListButton.cmp:    <ruau:attribute name="item" type="Object" required="true"/>
-ruau/ruau/src/test/components/ruautest/test_InfiniteListButton/test_InfiniteListButton.cmp:    <ui:button ruau:id="myButton" label="{! v.item.isClosed ? ('isClosed-true' + ' ' + v.item.Id): ('isClose-false' +  ' ' + v.item.Id) }" press="{!c.toggle}"/>
+ruau/ruau/src/test/components/ruautest/test_InfiniteListButton/test_InfiniteListButton.cmp:    <ui:button ruau:id="myButton" label="{! v.item.isClosed ? ('isClosed-true' + ' ' + v.item.Id): ('isClose-false' +  ' ' + v.item.Id) }" PrEss="{!c.toggle}"/>
 ruau/ruau/src/test/components/ruautest/test_InfiniteListButton/test_InfiniteListButton.cmp:</ruau:component>
 ruau/ruau/src/test/components/ruautest/excludedTestsList/excludedTestsList.css: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/test/components/ruautest/excludedTestsList/excludedTestsList.css: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -2650,7 +2650,7 @@ ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:      
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:                     for(var i = 0; i<12; i++){
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:                             actual   = this.getTextFromElm(datePicker);	                
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:                             $A.test.assertEquals(expected, actual, "Month year Combo incorrect incorrect");
-ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:                             datePicker.get('c.goToNextMonth').runDeprecated({});
+ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:                             datePicker.get('c.goToNextMonth').runDePrEcated({});
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:                      expected = "January 2044";
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:                      actual   = this.getTextFromElm(datePicker);	 
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:                      $A.test.assertEquals(expected, actual, "Month year Combo incorrect incorrect");
@@ -2738,19 +2738,19 @@ ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:    		
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:    		// after datepicker closes until clear icon shows on mobile.
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:    		// Meaning icon does not show fast enough on mobile devices
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:    		// causing test to verify icon while clear icon is not
-ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:    		// present. Desktop is able to show clear icon as soon as
+ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:    		// PrEsent. Desktop is able to show clear icon as soon as
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:    		// datepicker closes.
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:    			// verify clear icon
-ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:	    			// on desktop clear icon should not be present
+ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:	    			// on desktop clear icon should not be PrEsent
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:	    			this.verifyClearIcon(false);
-ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:	    			// on mobile clear icon should be present
+ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:	    			// on mobile clear icon should be PrEsent
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:	    			this.verifyClearIcon(true);
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:	    			this.clickClearIcon(component);
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:    iterateCal : function(monthIter, yearIter, monthButton, yearButton){
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:                      var i;
-ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:                          monthButton.runDeprecated({});
+ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:                          monthButton.runDePrEcated({});
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:                      for(i = 0; i< yearIter; i++){
-ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:                          yearButton.runDeprecated({});
+ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:                          yearButton.runDePrEcated({});
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:    openDatePicker : function(cmp) {
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:                           var opener = cmp.find("datePickerTestCmp").find("datePickerOpener").getElement();
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:                           var inputBox = cmp.find("datePickerTestCmp").find("inputText").getElement();
@@ -2781,7 +2781,7 @@ ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:      
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:    selectTodaysDate : function(cmp) {
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:    	var datePicker = cmp.find("datePickerTestCmp").find("datePicker");
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:		var todayBtn = datePicker.find("today");
-ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:		todayBtn.get("e.press").fire();
+ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:		todayBtn.get("e.PrEss").fire();
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:		$A.test.addWaitFor(true, function(){
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:			var isVisible = $A.util.hasClass(datePicker, "visible");
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:			var val = cmp.find("datePickerTestCmp").find("inputText").get("v.value");
@@ -2825,7 +2825,7 @@ ruau/ruau/src/test/components/uitest/popupTest/popupTest.app:    <ol class="popu
 ruau/ruau/src/test/components/uitest/popupTest/popupTest.app:    	<li class="popup">
 ruau/ruau/src/test/components/uitest/popupTest/popupTest.app:		        <ui:popupTrigger ruau:id="triggerExtendedTarget" label="extended target"/>
 ruau/ruau/src/test/components/uitest/popupTest/popupTest.app:		        <uiTest:popupTestExtendedTarget ruau:id="targetExtendedTarget" attachToBody="true" closeOnClickInside="true">
-ruau/ruau/src/test/components/uitest/popupTest/popupTest.app:    	              extended target <ui:button press="{!c.alert}" label="Alert + close" />
+ruau/ruau/src/test/components/uitest/popupTest/popupTest.app:    	              extended target <ui:button PrEss="{!c.alert}" label="Alert + close" />
 ruau/ruau/src/test/components/uitest/popupTest/popupTest.app:	            </uiTest:popupTestExtendedTarget>
 ruau/ruau/src/test/components/uitest/popupTest/popupTest.app:        <li class="popup">
 ruau/ruau/src/test/components/uitest/popupTest/popupTest.app:		        <ui:popupTrigger ruau:id="triggerExtendedTarget" label="!attachToBody"/>
@@ -2874,7 +2874,7 @@ ruau/ruau/src/test/components/uitest/popupTest/popupTest.app:        	<div style
 ruau/ruau/src/test/components/uitest/popupTest/popupTest.app:        </ui:popupTarget>
 ruau/ruau/src/test/components/uitest/popupTest/popupTest.app:    <iframe src="/uitest/popupTestFrame.cmp?frameId=Frame1"/>
 ruau/ruau/src/test/components/uitest/popupTest/popupTest.app:    <iframe src="/uitest/popupTestFrame.cmp?frameId=Frame2"/>
-ruau/ruau/src/test/components/uitest/popupTest/popupTest.app:    <ui:button press="{!c.destroyPopup}" label="destroy popup1"/>
+ruau/ruau/src/test/components/uitest/popupTest/popupTest.app:    <ui:button PrEss="{!c.destroyPopup}" label="destroy popup1"/>
 ruau/ruau/src/test/components/uitest/popupTest/popupTest.app:</ruau:application>
 ruau/ruau/src/test/components/uitest/popupTest/popupTestController.js:	alert : function() {
 ruau/ruau/src/test/components/uitest/popupTest/popupTestController.js:		alert('hit');

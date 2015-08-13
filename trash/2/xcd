@@ -149,14 +149,14 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:static final String classIntroString =
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        "public class %s {\n" + 
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        "       private static class IdImpl {\n" +
-ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        "           public final String prefix;\n" +
+ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        "           public final String PrEfix;\n" +
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        "           public final String namespace;\n" +
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        "           public final String name;\n" +
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        "           public final DefType defType;\n" +
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        "           public final String ownerOrExtendsFrom;\n"+
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        "           private IdImpl(String namespace, String name, DefType defType, String ownerOrExtendsFrom) {\n" + 
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        "               this(\"markup\", namespace, name, defType, ownerOrExtendsFrom);\n" + 
-ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        "           private IdImpl(String prefix, String namespace, String name, DefType defType, String ownerOrExtendsFrom) {\n" + 
+ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        "           private IdImpl(String PrEfix, String namespace, String name, DefType defType, String ownerOrExtendsFrom) {\n" + 
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        "               this.namespace = namespace;\n" + 
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        "               this.name = name;\n" + 
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        "           public boolean isEvent() { return defType == DefType.EVENT; }\n" + 
@@ -182,8 +182,8 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        "          private final IdImpl impl;\n" + 
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        "          private static final String namespace = \"%s\";\n" + 
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        "          private %s(String name, DefType defType, String ownerOrExtendsFrom) { this(\"markup\",name,defType, ownerOrExtendsFrom); }\n" + 
-ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        "          private %s(String prefix, String name, DefType defType, String ownerOrExtendsFrom) {\n" + 
-ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        "              impl = new IdImpl(prefix, namespace, name, defType, ownerOrExtendsFrom);\n" + 
+ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        "          private %s(String PrEfix, String name, DefType defType, String ownerOrExtendsFrom) {\n" + 
+ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        "              impl = new IdImpl(PrEfix, namespace, name, defType, ownerOrExtendsFrom);\n" + 
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        "          public boolean isEvent() { return impl.isEvent(); }\n" + 
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        "          public boolean isComponent() { return impl.isComponent(); }\n" + 
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        "          public boolean isApplication() { return impl.isApplication(); }\n" + 
@@ -219,16 +219,16 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:// note:
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:static private String camelToUpperUnderscore(String camel) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:    int len = camel.length();
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:    char curChar = camel.charAt(0);
-ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:    char previousChar = curChar;
-ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:    boolean previousCaseIsUpper;
+ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:    char PrEviousChar = curChar;
+ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:    boolean PrEviousCaseIsUpper;
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:    boolean curCaseIsUpper = Character.isUpperCase(curChar);
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        curChar = camel.charAt(i);
-ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        previousCaseIsUpper = Character.isUpperCase(previousChar);
+ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        PrEviousCaseIsUpper = Character.isUpperCase(previousChar);
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        curCaseIsUpper = Character.isUpperCase(curChar);
-ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        if (!curCaseIsUpper && previousCaseIsUpper) {
+ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        if (!curCaseIsUpper && PrEviousCaseIsUpper) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:            sb.append("_");
-ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        sb.append(Character.toUpperCase(previousChar));
-ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        previousChar = curChar;
+ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        sb.append(Character.toUpperCase(PrEviousChar));
+ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        PrEviousChar = curChar;
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:    sb.append(Character.toUpperCase(curChar));
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:private static void InsertPair(TreeMap<String,TreeSet<BundleEntry>> namespaces, String namespace, BundleEntry bundleEntry) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:    if (!namespaces.containsKey(namespace)) {
@@ -239,7 +239,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:    fina
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        Path rootDir = f.toPath();
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        // Walk thru a root directory
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:        Files.walkFileTree(rootDir, new FileVisitor<Path>() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:            public FileVisitResult preVisitDirectory(Path path,
+ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:            public FileVisitResult PrEVisitDirectory(Path path,
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:                    BasicFileAttributes atts) throws IOException {
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:                // in our case, the directory is not filtered, so always continue
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/FileWalk.java:                // but if it were, we would test and return SKIP_SUBTREE
@@ -350,7 +350,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java:import
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java:import java.io.IOException;
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java:import java.io.Reader;
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java:import java.io.StringReader;
-ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java: * prepends a mini dtd that has common html entity references in it to the real
+ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java: * PrEpends a mini dtd that has common html entity references in it to the real
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java: * reader to work around the fact that we can't get the stax parser to resove
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java: * these entity references by any other documented mechanism. Hopefully the
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java: * features of the stax parser will be fixed in the future, and then we can
@@ -1659,12 +1659,12 @@ ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:        Object.ForEach
 ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:        var stubbedAttributeDefs=Stubs.GetList(attributes&&Object.keys(attributes)||[], {each:function(value){return this.Source_Value;}});
 ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:        var stubbedDescriptor=Stubs.GetObject({getQualifiedName:function(){return descriptor;}});
 ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:        var stubbedDef=Stubs.GetObject({getAttributeDefs:{returnValue:stubbedAttributeDefs}, getDescriptor:stubbedDescriptor});
-ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:		var getValue = function(expression){return stubbedAttributes[expression]||Stubs.Ruue.GetValue()};
-ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:		var setValue = function(expression,value){if(stubbedAttributes[expression])stubbedAttributes[expression].setValue(value);else stubbedAttributes[expression]=Stubs.Ruue.GetValue(value)};
+ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:		var getValue = function(exPrEssion){return stubbedAttributes[expression]||Stubs.Ruue.GetValue()};
+ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:		var setValue = function(exPrEssion,value){if(stubbedAttributes[expression])stubbedAttributes[expression].setValue(value);else stubbedAttributes[expression]=Stubs.Ruue.GetValue(value)};
 ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:        var stub=Stubs.GetObject({
-ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:            get:function(expression){return stubbedAttributes[expression]&&stubbedAttributes[expression].getValue();},
-ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:					getValue:function(expression){return getValue(String.Format("v.{0}",expression))},
-ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:					setValue:function(expression,value){setValue(String.Format("v.{0}", expression),value)}
+ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:            get:function(exPrEssion){return stubbedAttributes[expression]&&stubbedAttributes[expression].getValue();},
+ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:					getValue:function(exPrEssion){return getValue(String.Format("v.{0}",expression))},
+ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:					setValue:function(exPrEssion,value){setValue(String.Format("v.{0}", expression),value)}
 ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:            getDef:{returnValue:stubbedDef},
 ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:            getElement:{returnValue:Stubs.Dom.GetNode()},
 ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:            getEventDispatcher:{},
@@ -1687,7 +1687,7 @@ ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:            getAttribu
 ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:            hasChildNodes:function(){return this.childNodes.length>0;},
 ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:                if(!referenceElement)return this.appendChild(newElement);
 ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:                for(var i=0;i<this.childNodes.length;i++){
-ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:                        assignReferences(newElement,referenceElement.previousSibling, referenceElement, this);
+ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:                        assignReferences(newElement,referenceElement.PrEviousSibling, referenceElement, this);
 ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:                        assignReferences(referenceElement,newElement);
 ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:                throw new Error("Stubs.Dom.GetNode.insertBefore: 'referenceElement' was not found in the childNodes collection.");
 ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:                for (var i = 0; i < this.childNodes.length; i++) {
@@ -1733,9 +1733,9 @@ ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:            readyState
 ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:            status: status||200,
 ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:            statusText: statusText||"200 OK"
 ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:    // Private Methods
-ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:    function assignReferences(target, previous, next, parent) {
+ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:    function assignReferences(target, PrEvious, next, parent) {
 ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:        if (target) {
-ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:            if(previous!==undefined)target.previousSibling = previous || null;
+ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:            if(PrEvious!==undefined)target.previousSibling = previous || null;
 ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:            if(next!==undefined)target.nextSibling = next || null;
 ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:            if(parent!==undefined)target.parentNode = target.parentElement = parent || null;
 ruau/ruau-util/src/test/tools/xUnit/dependencies/Stubs.js:            target.ownerDocument=target.parentNode && target.parentNode.ownerDocument || null;
@@ -1795,9 +1795,9 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:Array.Clear=function(arr
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    if(!Object.IsType(Array,array))throw new Error("Array.Clear: 'array' must be a valid Array.");
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    for(var i=0;i<array.length;i++)array[i]=null;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    array.length=0;
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:Array.Contains=function(array,expected,predicate){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:Array.Contains=function(array,expected,PrEdicate){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    if(!Object.IsType(Array,array))throw new Error("Array.Contains: 'array' must be a valid Array.");
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    return Array.IndexOf(array,expected,0,predicate)>-1;
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    return Array.IndexOf(array,expected,0,PrEdicate)>-1;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:Array.Copy=function(sourceArray,sourceIndex,destinationArray,destinationIndex,length){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    if(!Object.IsType(Array,sourceArray)&&!sourceArray.hasOwnProperty("length"))throw new Error("Array.Copy: 'sourceArray' must be a valid Array.");
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    if(!Object.IsType(Number,sourceIndex))throw new Error("Array.Copy: 'sourceIndex' must be a valid Number.");
@@ -1825,42 +1825,42 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    for(var i=0;i<expect
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(!Object.Equals(expected[i],actual[i])){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            if(reason)reason.Value=String.Format("Array.Equals: Unexpected value found at position [{0}]. Expected '{1}', found '{2}'.",i,expected[i],actual[i]);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            return false;
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:Array.Find=function(array,expected,predicate){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:Array.Find=function(array,expected,PrEdicate){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    if(!Object.IsType(Array,array))throw new Error("Array.Contains: 'array' must be a valid Array.");
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    var index=Array.IndexOf(array,expected,0,predicate);
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    var index=Array.IndexOf(array,expected,0,PrEdicate);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    if(index>-1)return array[index];
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:Array.ForEach=function(array,handler,predicate,context){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:Array.ForEach=function(array,handler,PrEdicate,context){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    if(!Object.IsType(Array,array))throw new Error("Array.ForEach: 'array' must be a valid Array.");
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    if(!Object.IsType(Function,handler))throw new Error("Array.ForEach: argument 'handler' must be a valid Function pointer.");
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    if(predicate!=undefined){
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(!Object.IsType(Function,predicate))throw new Error("Array.ForEach: 'predicate' must be a valid Function pointer.");
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    if(PrEdicate!=undefined){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(!Object.IsType(Function,PrEdicate))throw new Error("Array.ForEach: 'predicate' must be a valid Function pointer.");
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        Cancel:false,
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        Instance:array
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    for(context.Index=0;context.Index<array.length;context.Index++){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        context.Current=array[context.Index];
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(!predicate||predicate(context.Current,context)){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(!PrEdicate||predicate(context.Current,context)){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            handler(context.Current,context);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            if(context.Cancel)break;
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:Array.IndexOf=function(array,expected,startingIndex,predicate,context){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:Array.IndexOf=function(array,expected,startingIndex,PrEdicate,context){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    if(!Object.IsType(Array,array))throw new Error("Array.IndexOf: 'array' must be a valid Array.");
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    if(startingIndex!=undefined){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(!Object.IsType(Number,startingIndex))throw new Error("Array.IndexOf: 'startingIndex' must be a valid Number.");
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    if(predicate!=undefined){
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(!Object.IsType(Function,predicate))throw new Error("Array.IndexOf: 'predicate' must be a valid Function pointer.");
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    if(PrEdicate!=undefined){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(!Object.IsType(Function,PrEdicate))throw new Error("Array.IndexOf: 'predicate' must be a valid Function pointer.");
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        Cancel:false,
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        Instance:array
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    for(context.Index=startingIndex||0;context.Index<array.length;context.Index++){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        context.Current=array[context.Index];
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(predicate){
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            if(predicate(context.Current,context))return context.Index;
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(PrEdicate){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            if(PrEdicate(context.Current,context))return context.Index;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            if(Object.Equals(expected,context.Current))return context.Index;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(context.Cancel)break;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:Array.IsEmpty=function(array){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    if(!Object.IsType(Array,array))throw new Error("Array.IsEmpty: 'array' must be a valid Array.");
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    return array.length==0;
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:Array.Remove=function(array,expected,predicate){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:Array.Remove=function(array,expected,PrEdicate){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    if(!Object.IsType(Array,array))throw new Error("Array.Remove: 'array' must be a valid Array.");
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    var index=Array.IndexOf(array,expected,0,predicate);
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    var index=Array.IndexOf(array,expected,0,PrEdicate);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    if(index>-1)return array.splice(index,1);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:Array.Shuffle=function(array){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    if(!Object.IsType(Array,array))throw new Error("Array.Shuffle: 'array' must be a valid Array.");
@@ -1957,9 +1957,9 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    return body.slice(bo
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:Function.GetDelegate=function(method,instance){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    if(!Object.IsType(Function,method))throw new Error("Function.GetDelegate: 'method' must be a valid Function pointer.");
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    if(!instance)throw new Error("Function.GetDelegate: 'instance' must be a valid Object.");
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    var preArgs=Array.prototype.slice.call(arguments,2);
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    var PrEArgs=Array.prototype.slice.call(arguments,2);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    return function delegate(){
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var args=preArgs.slice(0).concat(Array.prototype.slice.call(arguments,0));
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var args=PrEArgs.slice(0).concat(Array.prototype.slice.call(arguments,0));
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(this.constructor===arguments.callee||this.constructor===delegate){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            var argumentList=[];
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            for(var i=0;i<args.length;i++)argumentList.push(String.Format("args[{0}]",i));
@@ -2131,11 +2131,11 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            return false
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    for(x in actual){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            if(reason)reason.Value=String.Format("Object.Equals: found unexpected property '{0}' on actual, with value '{1}'",x,actual[x]);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            return false;
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:Object.ForEach=function(object,handler,predicate,context){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:Object.ForEach=function(object,handler,PrEdicate,context){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    if(object==undefined)throw new Error("Object.ForEach: 'object' must be a valid Object.");
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    if(!Object.IsType(Function,handler))throw new Error("Object.ForEach: argument 'handler' must be a valid Function pointer.");
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    if(predicate!=undefined){
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(!Object.IsType(Function,predicate))throw new Error("Object.ForEach: 'predicate' must be a valid Function pointer.");
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    if(PrEdicate!=undefined){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(!Object.IsType(Function,PrEdicate))throw new Error("Object.ForEach: 'predicate' must be a valid Function pointer.");
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        Cancel:false,
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        Instance:object,
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        Name:''
@@ -2144,7 +2144,7 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    for(var prop in blan
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    for(var x in object){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(blankObject[x])continue;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        context.Name=x;
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(!predicate||predicate(context.Current,context)){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(!PrEdicate||predicate(context.Current,context)){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            handler(context.Current,context);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            if(context.Cancel)break;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:Object.GetKeys=function(target){
@@ -2804,10 +2804,10 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        skippable.Skip(c
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:xUnit.js.Model.Fixture.Implement(xUnit.js.Model.IRunnable,"xUnit.js.Model.Fixture");
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:xUnit.js.Model.Fixture.Implement(xUnit.js.Model.ISkippable,"xUnit.js.Model.Fixture"); 
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:Function.RegisterNamespace("System.Script");
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:System.Script.DelayedConstructor=function(scope,constructor,callback,preloadArguments){
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:System.Script.DelayedConstructor=function(scope,constructor,callback,PrEloadArguments){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    if(!Object.IsType(Function,constructor))throw new Error("System.Script.DelayedConstructor: 'constructor' must be a valid Function pointer.");
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    if(callback!=undefined&&!Object.IsType(Function,callback))throw new Error("System.Script.DelayedConstructor: 'callback' must be a valid Function pointer.");
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    var args=Array.prototype.slice.call(preloadArguments||[],0);
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    var args=Array.prototype.slice.call(PrEloadArguments||[],0);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(callback)callback.apply(scope,args);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(args&&args.length){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            return Function.GetDelegate.apply(Function,[constructor,scope].concat(args));

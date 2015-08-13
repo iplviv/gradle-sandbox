@@ -134,7 +134,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java: 
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:    private Object current;
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:    private int charNum = 0;
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:    private int colNum = 1; // current parse column number
-ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:    private int prevColNum = 0; // max colNum of previously parsed line
+ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:    private int PrEvColNum = 0; // max colNum of previously parsed line
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:    private int lineNum = 1; // current parse line number (start at 1)
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:    private int lastLineNum = 0;        // the line number before the last token.
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:    private int lastColNum = 0;         // the column number before the last token.
@@ -207,7 +207,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java: 
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:     *             OBJECT_START. When recursive reading is disabled, this
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:     *             exception can also get thrown if a problem arises while
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:     *             consuming the object within the input stream
-ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:    @SuppressWarnings("unchecked")
+ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:    public Map<String, Object> getObject() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:        // If recursive reading is off and we are at an object start, then go
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:        // ahead and read in the object recursively
@@ -232,7 +232,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java: 
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:     *             ARRAY_START. When recursive reading is disabled, this
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:     *             exception can also get thrown if a problem arises while
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:     *             consuming the array within the input stream
-ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:    @SuppressWarnings("unchecked")
+ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:        // If recursive reading is off and we are at an array start, then go
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:        // ahead and read in the object recursively
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:        if (!recursiveRead && currentToken == ARRAY_START) {
@@ -445,9 +445,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java: 
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:        JsonConstant token;
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:        } catch (JsonStreamParseException jspe) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:            // Ignore this, we were expecting a comma, so let someone know.
-ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:            throw new JsonStreamParseException(String.format("Expected ',' or '%s'", alternate.getRepresentation()),
+ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:            throw new JsonStreamParseException(String.format("Expected ',' or '%s'", alternate.getRePrEsentation()),
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:        if (token != ENTRY_SEPARATOR && token != alternate) {
-ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:            throw new JsonStreamParseException(String.format("Expected ',' or '%s', got %s", alternate.getRepresentation(),
+ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:            throw new JsonStreamParseException(String.format("Expected ',' or '%s', got %s", alternate.getRePrEsentation(),
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:                    token.toString()), String.valueOf(current), getLineNum(), getColNum());
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:    private String readString(JsonConstant delim, boolean keepEscapers) throws IOException, JsonEndOfStreamException {
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:        boolean isEscaped = false;
@@ -596,9 +596,9 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java: 
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:        reader.close();
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:    private void assertTokenType(JsonConstant expected, JsonConstant actual) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:        if (expected != actual) {
-ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:            throw new JsonStreamParseException(String.format("Expected '%s', found '%s'", expected.getRepresentation(), actual.getRepresentation()));
+ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:            throw new JsonStreamParseException(String.format("Expected '%s', found '%s'", expected.getRePrEsentation(), actual.getRepresentation()));
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:    private void assertCurrentToken(JsonConstant expected) {
-ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:            throw new JsonStreamParseException(String.format("Current Token is '%s', not '%s'", currentToken.getRepresentation(), expected.getRepresentation()));
+ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:            throw new JsonStreamParseException(String.format("Current Token is '%s', not '%s'", currentToken.getRePrEsentation(), expected.getRepresentation()));
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:    private void setPosition(int line, int col) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:        lastLineNum = line;
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonStreamReader.java:        lastColNum = col;
@@ -904,7 +904,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializers.java:  
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializers.java:                        + Integer.toString(((String) value).length()
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializers.java:                                - json.getSerializationContext().getVariableDataSizeLimit()) + " more) ...";
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializers.java:            json.writeString(value);
-ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializers.java:     * Numbers in JS are only double precision, BigDecimals can overflow and so will be serialized as strings when too large
+ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializers.java:     * Numbers in JS are only double PrEcision, BigDecimals can overflow and so will be serialized as strings when too large
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializers.java:    public static class BigDecimalSerializer extends NoneSerializer<BigDecimal> {
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializers.java:        public static int MAX_PRECISION = 15;
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializers.java:        public void serialize(Json json, BigDecimal bd) throws IOException {
@@ -1051,7 +1051,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/json/ClassMapJsonSerializati
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/ClassMapJsonSerializationContext.java:        this.mappyFasty = mappyFasty;
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/ClassMapJsonSerializationContext.java:        this.mappySlowly = mappySlowly;
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/ClassMapJsonSerializationContext.java:        this.cache = cache;
-ruau/ruau-util/src/main/java/org/ruauframework/util/json/ClassMapJsonSerializationContext.java:    @SuppressWarnings("unchecked")
+ruau/ruau-util/src/main/java/org/ruauframework/util/json/ClassMapJsonSerializationContext.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/ClassMapJsonSerializationContext.java:    public <T> JsonSerializer<T> getSerializer(T o) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/ClassMapJsonSerializationContext.java:            return (JsonSerializer<T>) LITERAL;
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/ClassMapJsonSerializationContext.java:        Class<?> c = o.getClass();
@@ -1145,7 +1145,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java: * @see <a
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java: *      href="https://sites.google.com/a/salesforce.com/user-interface/documentation/json">SFDC
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java: *      json documentation</a>
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:public class Json {
-ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:    @SuppressWarnings("serial")
+ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:    @SupPrEssWarnings("serial")
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:    public static class JsonException extends RuntimeException {
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:        public JsonException(String message) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:            super(message);
@@ -1308,7 +1308,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:        if (!
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:        actionMap.clear();
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:     * @param rs the scope for the reference
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:     * @param value the value for which we want a reference.
-ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:     * @return The refId previously assigned to the value, or null if none has been assigned yet.
+ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:     * @return The refId PrEviously assigned to the value, or null if none has been assigned yet.
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:    protected Integer getRefId(ReferenceScope rs, Object value) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:        case ACTION:
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:            return actionMap.get(value);
@@ -1317,7 +1317,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:            r
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:     * Push an indent, with a type.
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:     * See the notes on performance on the class above.
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:     * This either creates a new IndentEntry and pushes a value on the boolean
-ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:     * stack, or it just uses the boolean stack (in the case of not pretty
+ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:     * stack, or it just uses the boolean stack (in the case of not PrEtty
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:     * @param type the type of indent to push.
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:        if (this.indentStack.isEmpty()) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:            this.indentStack.push(new IndentEntry(type, ""));
@@ -1363,7 +1363,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:        if (i
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:            writeBreak();
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:            out.append(" */");
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:     * Write out a part of a comment body.
-ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:     * This call must be preceded by {@link #writeCommentBegin()}.
+ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:     * This call must be PrEceded by {@link #writeCommentBegin()}.
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:     * @param body the comment to write.
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:        if (isFormatting()) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:            writeBreak();
@@ -1374,7 +1374,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:     * a flag
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:     * we'd also have to rework our error handling.
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:     * This could take the body and re-work newlines with the indent, but that
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:     * seems a good bit of work for little gain (i.e. the result would be
-ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:     * prettier, but who cares).
+ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:     * PrEttier, but who cares).
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:     * @param body the body of the comment.
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:     * Write the beginning of an array. Make sure to call writeArrayEnd later
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:    public void writeArrayBegin() throws IOException {
@@ -1438,7 +1438,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:        out.a
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:    private static final SimpleDateFormat ISO8601FORMAT;
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:    static {
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:        ISO8601FORMAT = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
-ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:     * Write a map in a predictable order
+ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:     * Write a map in a PrEdictable order
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:     * @param map
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:    public void writeMap(Map<?, ?> map) throws IOException {
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:        writeMapBegin();
@@ -1569,12 +1569,12 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:     * Resolv
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:     * Useful when parsing json serialized with reference support by this class.
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:     * @param config Must be a Map or List that consists only of other
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:     *            Maps/Lists and primitives
-ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:     * @return A Map or List representing the data passed in with its references
+ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:     * @return A Map or List rePrEsenting the data passed in with its references
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:    public static Object resolveRefs(Object config) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:        return resolveRefs(config, Maps.<Integer, Object> newHashMap(), null);
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:    private static Object resolveRefs(Object config, Map<Integer, Object> cache) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:        return resolveRefs(config, cache, null);
-ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:    @SuppressWarnings("unchecked")
+ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:    private static Object resolveRefs(Object config, Map<Integer, Object> cache, Object newValue) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:        if (config instanceof List) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:            if (newValue != null) {
@@ -1730,7 +1730,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializationContex
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializationContext.java:     * Don't render collections over this length, -1 to not truncate
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializationContext.java:     * @return format the output for humanity
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializationContext.java:    boolean format();
-ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializationContext.java:     * @return true if objects can be serialized by reference to prevent cycles
+ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializationContext.java:     * @return true if objects can be serialized by reference to PrEvent cycles
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializationContext.java:    boolean refSupport();
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializationContext.java:     * Get the serializer to use for the given object
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializationContext.java:     * @return the serializer
@@ -1743,7 +1743,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializationContex
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializationContext.java:     * sets whether or not null values in arrays and objects get written out.
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializationContext.java:     * By default, this is false. It should be treated as a stack.
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializationContext.java:     * @param nullValueEnabled the new value to set.
-ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializationContext.java:     * @return the previous value.
+ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializationContext.java:     * @return the PrEvious value.
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializationContext.java:    public boolean setNullValueEnabled(boolean nullValueEnabled);
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonConstant.java: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonConstant.java: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -1759,7 +1759,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonConstant.java:publi
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonConstant.java:    // Proprietary JSON+binary, which has the following format: `[length of data
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonConstant.java:    // in bytes as a 64-bit big-endian binary number][raw binary data]`
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonConstant.java:    private static final int MaxTokenValue = 255; // largest allowable token
-ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonConstant.java:    // tokens represents all possible token characters. It is
+ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonConstant.java:    // tokens rePrEsents all possible token characters. It is
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonConstant.java:    // OK to have characters beyond MaxTokenValue (for Unicode), but
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonConstant.java:    // those extended characters can only be literals or whitespace.
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonConstant.java:    private static final JsonConstant[] tokens = new JsonConstant[MaxTokenValue + 1];
@@ -1775,8 +1775,8 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonConstant.java:     
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonConstant.java:    private JsonConstant() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonConstant.java:    private JsonConstant(Character token) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonConstant.java:    public char getToken() {
-ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonConstant.java:     * @return Returns a reasonable representation.
-ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonConstant.java:    public String getRepresentation() {
+ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonConstant.java:     * @return Returns a reasonable rePrEsentation.
+ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonConstant.java:    public String getRePrEsentation() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonConstant.java:            return String.valueOf(token);
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonConstant.java:    public static JsonConstant valueOf(Character c) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonConstant.java:        JsonConstant ret = null;
@@ -1856,7 +1856,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonFriendlyMap.java:pu
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonFriendlyMap.java:    public JsonFriendlyMap() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonFriendlyMap.java:    public JsonFriendlyMap(Map<? extends Object, ? extends Object> m) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonFriendlyMap.java:    private static final long serialVersionUID = 1L;
-ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonFriendlyMap.java:    @SuppressWarnings("unchecked")
+ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonFriendlyMap.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonFriendlyMap.java:    public <T> void add(String key, T value) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonFriendlyMap.java:        Object oldValue = get(key);
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonFriendlyMap.java:        List<T> valueList = null;
@@ -2052,7 +2052,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/validation/ValidationError.j
 ruau/ruau-util/src/main/java/org/ruauframework/util/validation/ValidationError.java:            errors.add(line);
 ruau/ruau-util/src/main/java/org/ruauframework/util/validation/ValidationError.java:     * @return List of ValidationErrors parsed from the json input
 ruau/ruau-util/src/main/java/org/ruauframework/util/validation/ValidationError.java:    public static List<ValidationError> parseJsonErrors(Reader input) {
-ruau/ruau-util/src/main/java/org/ruauframework/util/validation/ValidationError.java:        @SuppressWarnings("unchecked")
+ruau/ruau-util/src/main/java/org/ruauframework/util/validation/ValidationError.java:        @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/main/java/org/ruauframework/util/validation/ValidationError.java:        List<Map<String, ?>> jsonErrors = (List<Map<String, ?>>) new JsonReader().read(input);
 ruau/ruau-util/src/main/java/org/ruauframework/util/validation/ValidationError.java:        List<ValidationError> errors = Lists.newArrayListWithCapacity(jsonErrors.size());
 ruau/ruau-util/src/main/java/org/ruauframework/util/validation/ValidationError.java:        for (Map<String, ?> jsonError : jsonErrors) {
@@ -2228,7 +2228,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/TrieMatch.java: * See the Li
 ruau/ruau-util/src/main/java/org/ruauframework/util/TrieMatch.java: * limitations under the License.
 ruau/ruau-util/src/main/java/org/ruauframework/util/TrieMatch.java:package org.ruauframework.util;
 ruau/ruau-util/src/main/java/org/ruauframework/util/TrieMatch.java:import javax.annotation.concurrent.Immutable;
-ruau/ruau-util/src/main/java/org/ruauframework/util/TrieMatch.java: * Struct returned by {@link TrieMatcher#match(String, int)} to represent a
+ruau/ruau-util/src/main/java/org/ruauframework/util/TrieMatch.java: * Struct returned by {@link TrieMatcher#match(String, int)} to rePrEsent a
 ruau/ruau-util/src/main/java/org/ruauframework/util/TrieMatch.java: * match.
 ruau/ruau-util/src/main/java/org/ruauframework/util/TrieMatch.java: * @see TrieMatcher
 ruau/ruau-util/src/main/java/org/ruauframework/util/TrieMatch.java:@Immutable
@@ -2302,7 +2302,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/TrieMatcher.java:     * your
 ruau/ruau-util/src/main/java/org/ruauframework/util/TrieMatcher.java:     * Note, regexes aren't supported by this, see
 ruau/ruau-util/src/main/java/org/ruauframework/util/TrieMatcher.java:     * {@link RuueTextUtil#replaceSimple(String, String[], String[])}.
 ruau/ruau-util/src/main/java/org/ruauframework/util/TrieMatcher.java:     * @param s the text you are searching in
-ruau/ruau-util/src/main/java/org/ruauframework/util/TrieMatcher.java:     * @param trieMatcher the trie representing the words to search and replace
+ruau/ruau-util/src/main/java/org/ruauframework/util/TrieMatcher.java:     * @param trieMatcher the trie rePrEsenting the words to search and replace
 ruau/ruau-util/src/main/java/org/ruauframework/util/TrieMatcher.java:     * @return the text with the search words swapped by the replacements
 ruau/ruau-util/src/main/java/org/ruauframework/util/TrieMatcher.java:    public static final String replaceMultiple(String s, TrieMatcher trieMatcher) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/TrieMatcher.java:        if (s == null || trieMatcher == null || s.length() == 0) {
@@ -2437,7 +2437,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/css/CSSLintValidator.java:  
 ruau/ruau-util/src/main/java/org/ruauframework/util/css/CSSLintValidator.java:     *            app/main/core/build/.csslintrc)
 ruau/ruau-util/src/main/java/org/ruauframework/util/css/CSSLintValidator.java:    public List<ValidationError> validate(String filename, String source, boolean disableRulesForRuue) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/css/CSSLintValidator.java:        List<ValidationError> errors = Lists.newArrayList();
-ruau/ruau-util/src/main/java/org/ruauframework/util/css/CSSLintValidator.java:            @SuppressWarnings("unchecked")
+ruau/ruau-util/src/main/java/org/ruauframework/util/css/CSSLintValidator.java:            @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/main/java/org/ruauframework/util/css/CSSLintValidator.java:            List<Map<String, ?>> lintErrors = (List<Map<String, ?>>) ((Invocable) engine).invokeFunction(tool
 ruau/ruau-util/src/main/java/org/ruauframework/util/css/CSSLintValidator.java:                    source, disableRulesForRuue);
 ruau/ruau-util/src/main/java/org/ruauframework/util/css/CSSLintValidator.java:                Map<String, ?> error = lintErrors.get(i);
@@ -2522,21 +2522,21 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocator.java:    		re
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocator.java:        return instance;
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocator.java:    private ServiceLocator() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocator.java:        loaders.add(ServiceLoaderImpl.get());
-ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocator.java:    @SuppressWarnings("unchecked")
+ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocator.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocator.java:    public <T> T get(Class<T> type) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocator.java:            Optional<Object> o = instanceCache.get(type);
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocator.java:                o = loadInstance(type);
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocator.java:                instanceCache.putIfAbsent(type, o);
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocator.java:        } catch (Exception e) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocator.java:            throw new ServiceLocatorException(e);
-ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocator.java:    @SuppressWarnings("unchecked")
+ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocator.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocator.java:    public <T> Set<T> getAll(Class<T> type) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocator.java:            Set<?> s = setCache.get(type);
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocator.java:                s = loadSet(type);
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocator.java:                setCache.putIfAbsent(type, s);
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocator.java:        } catch (Exception e) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocator.java:            throw new ServiceLocatorException(e);
-ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocator.java:    @SuppressWarnings("unchecked")
+ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocator.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocator.java:    public <T> T get(Class<T> type, String name) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocator.java:            ConcurrentMap<String, Optional<Object>> c = namedInstanceCache.get(type);
 ruau/ruau-util/src/main/java/org/ruauframework/util/ServiceLocator.java:                c = new ConcurrentHashMap<String, Optional<Object>>();
@@ -2642,7 +2642,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/text/Hash.java:            r
 ruau/ruau-util/src/main/java/org/ruauframework/util/text/Hash.java:        return false;
 ruau/ruau-util/src/main/java/org/ruauframework/util/text/Hash.java:    public int hashCode() {
 ruau/ruau-util/src/main/java/org/ruauframework/util/text/Hash.java:        if (value == null) {
-ruau/ruau-util/src/main/java/org/ruauframework/util/text/Hash.java:            return 3; // arbitrary value, but I dislike 0 as a hash precisely
+ruau/ruau-util/src/main/java/org/ruauframework/util/text/Hash.java:            return 3; // arbitrary value, but I dislike 0 as a hash PrEcisely
 ruau/ruau-util/src/main/java/org/ruauframework/util/text/Hash.java:                      // because it's so normal
 ruau/ruau-util/src/main/java/org/ruauframework/util/text/Hash.java:        return Arrays.hashCode(value);
 ruau/ruau-util/src/main/java/org/ruauframework/util/text/Hash.java:    public boolean isSet() {
@@ -2699,7 +2699,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/text/GlobMatcher.java: * A v
 ruau/ruau-util/src/main/java/org/ruauframework/util/text/GlobMatcher.java: * This matcher actually only matches the simplified patterns with '*' meaning
 ruau/ruau-util/src/main/java/org/ruauframework/util/text/GlobMatcher.java: * any string. All other globbing characters are illegal.
 ruau/ruau-util/src/main/java/org/ruauframework/util/text/GlobMatcher.java: * Note that for the moment, this is case insensitive...
-ruau/ruau-util/src/main/java/org/ruauframework/util/text/GlobMatcher.java:@SuppressWarnings("serial")
+ruau/ruau-util/src/main/java/org/ruauframework/util/text/GlobMatcher.java:@SupPrEssWarnings("serial")
 ruau/ruau-util/src/main/java/org/ruauframework/util/text/GlobMatcher.java:public class GlobMatcher implements Serializable {
 ruau/ruau-util/src/main/java/org/ruauframework/util/text/GlobMatcher.java:    private static final Pattern stringPattern = Pattern.compile("[a-zA-Z0-9_*]*");
 ruau/ruau-util/src/main/java/org/ruauframework/util/text/GlobMatcher.java:    private static final String ALL_STRING = "*";
@@ -2940,13 +2940,13 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/IOUtil.java:        if (at.i
 ruau/ruau-util/src/main/java/org/ruauframework/util/IOUtil.java:            File[] ff = at.listFiles();
 ruau/ruau-util/src/main/java/org/ruauframework/util/IOUtil.java:                    files.add(f);
 ruau/ruau-util/src/main/java/org/ruauframework/util/IOUtil.java:     * This exception is thrown by {@link #delete(File)} if some level of delete failed.
-ruau/ruau-util/src/main/java/org/ruauframework/util/IOUtil.java:    @SuppressWarnings("serial")
+ruau/ruau-util/src/main/java/org/ruauframework/util/IOUtil.java:    @SupPrEssWarnings("serial")
 ruau/ruau-util/src/main/java/org/ruauframework/util/IOUtil.java:    public static class DeleteFailedException extends Exception {
 ruau/ruau-util/src/main/java/org/ruauframework/util/IOUtil.java:        private final File file;
 ruau/ruau-util/src/main/java/org/ruauframework/util/IOUtil.java:        public DeleteFailedException(String message, File file) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/IOUtil.java:            super(message);
 ruau/ruau-util/src/main/java/org/ruauframework/util/IOUtil.java:     * This exception is thrown by {@link #delete(File)} if one of the directories is not readable.
-ruau/ruau-util/src/main/java/org/ruauframework/util/IOUtil.java:    @SuppressWarnings("serial")
+ruau/ruau-util/src/main/java/org/ruauframework/util/IOUtil.java:    @SupPrEssWarnings("serial")
 ruau/ruau-util/src/main/java/org/ruauframework/util/IOUtil.java:    public static class DirectoryNotReadableException extends DeleteFailedException {
 ruau/ruau-util/src/main/java/org/ruauframework/util/IOUtil.java:        public DirectoryNotReadableException(String message, File file) {
 ruau/ruau-util/src/main/java/org/ruauframework/util/IOUtil.java:            super(message, file);

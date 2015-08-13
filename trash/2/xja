@@ -14,7 +14,7 @@ ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.jav
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("outputNumber component rendered with wrong value", "411", elementoutput.getText());
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        // Tab out
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        elementInput.clear();
-ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        ruauUITestingUtil.pressTab(elementInput);
+ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        ruauUITestingUtil.PrEssTab(elementInput);
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("InputNumber component rendered with wrong value", "511", elementInput.getAttribute("value"));
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("outputNumber component rendered with wrong value", "511", elementoutput.getText());
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        elementInput.clear();
@@ -29,7 +29,7 @@ ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.jav
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("outputPercent component rendered with wrong value", "1,235%", elementoutput.getText());
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        // Tab out
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        elementInput.clear();
-ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        ruauUITestingUtil.pressTab(elementInput);
+ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        ruauUITestingUtil.PrEssTab(elementInput);
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("InputPercent component rendered with wrong value", ".2235", elementInput.getAttribute("value"));
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("outputPercent component rendered with wrong value", "22%", elementoutput.getText());
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        elementInput.clear();
@@ -45,7 +45,7 @@ ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.jav
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("outputCurrency component rendered with wrong value", "$123,456.79", elementoutput.getText());
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        // Tab out
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        elementInput.clear();
-ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        ruauUITestingUtil.pressTab(elementInput);
+ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        ruauUITestingUtil.PrEssTab(elementInput);
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("InputCurrency component rendered with wrong value", "123456", elementInput.getAttribute("value"));
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        assertEquals("outputCurrency component rendered with wrong value", "$123,456.00", elementoutput.getText());
 ruau/ruau/src/test/java/org/ruauframework/localization/LocalizationAppUITest.java:        elementInput.clear();
@@ -74,8 +74,8 @@ ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:            match = "Failed to match ";
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:            match = "Matched ";
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        return dm.toString() + ": " + match + " " + what + ": " + value;
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:    private void checkPrefix(DescriptorFilter dm, String prefix, boolean value) {
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        assertEquals(getLabel(dm, value, "prefix", prefix), value, dm.matchPrefix(prefix));
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:    private void checkPrefix(DescriptorFilter dm, String PrEfix, boolean value) {
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        assertEquals(getLabel(dm, value, "PrEfix", prefix), value, dm.matchPrefix(prefix));
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:    private void checkNamespace(DescriptorFilter dm, String namespace, boolean value) {
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        assertEquals(getLabel(dm, value, "namespace", namespace), value, dm.matchNamespace(namespace));
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:    private void checkName(DescriptorFilter dm, String name, boolean value) {
@@ -86,7 +86,7 @@ ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:    publ
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:            new DescriptorFilter("bah.humbug://a:b");
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:            fail("should have gotten an exception");
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        } catch (IllegalArgumentException expected) {
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:            assertTrue("exception should name prefix", expected.getMessage().contains("prefix"));
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:            assertTrue("exception should name PrEfix", expected.getMessage().contains("prefix"));
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:            new DescriptorFilter("a://bah.humbug:b");
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:            fail("should have gotten an exception");
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        } catch (IllegalArgumentException expected) {
@@ -132,7 +132,7 @@ ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkName(dm, "hi", true);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkName(dm, "css", true);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        for (DefType type : DefType.values()) {
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:    public void testNoprefixWildcardMatcher() throws Exception {
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:    public void testNoPrEfixWildcardMatcher() throws Exception {
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkPrefix(dm, "hi", false);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkPrefix(dm, "css", false);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkNamespace(dm, "hi", true);
@@ -153,54 +153,54 @@ ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkName(dm, "css", false);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        for (DefType type : DefType.values()) {
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:    public void testExactMatcher() throws Exception {
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dm = new DescriptorFilter("exactprefix://exactnamespace:exactname");
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkPrefix(dm, "exactprefix1", false);
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkPrefix(dm, "1exactprefix", false);
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dm = new DescriptorFilter("exactPrEfix://exactnamespace:exactname");
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkPrefix(dm, "exactPrEfix1", false);
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkPrefix(dm, "1exactPrEfix", false);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkPrefix(dm, "exactnamespace", false);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkPrefix(dm, "exactname", false);
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkPrefix(dm, "exactprefix", true);
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkPrefix(dm, "exactPrEfix", true);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkNamespace(dm, "exactnamespace1", false);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkNamespace(dm, "1exactnamespace", false);
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkNamespace(dm, "exactprefix", false);
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkNamespace(dm, "exactPrEfix", false);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkNamespace(dm, "exactname", false);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkNamespace(dm, "exactnamespace", true);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkName(dm, "exactname1", false);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkName(dm, "1exactname", false);
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkName(dm, "exactprefix", false);
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkName(dm, "exactPrEfix", false);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkName(dm, "exactnamespace", false);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkName(dm, "exactname", true);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        for (DefType type : DefType.values()) {
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:    public void testAlmostMatcher() throws Exception {
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dm = new DescriptorFilter("almostprefix*://almostnamespace*:almostname*");
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkPrefix(dm, "almostprefix1", true);
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkPrefix(dm, "1almostprefix", false);
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dm = new DescriptorFilter("almostPrEfix*://almostnamespace*:almostname*");
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkPrefix(dm, "almostPrEfix1", true);
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkPrefix(dm, "1almostPrEfix", false);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkPrefix(dm, "almostnamespace", false);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkPrefix(dm, "almostname", false);
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkPrefix(dm, "almostprefix", true);
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkPrefix(dm, "almostPrEfix", true);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkNamespace(dm, "almostnamespace1", true);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkNamespace(dm, "1almostnamespace", false);
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkNamespace(dm, "almostprefix", false);
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkNamespace(dm, "almostPrEfix", false);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkNamespace(dm, "almostname", false);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkNamespace(dm, "almostnamespace", true);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkName(dm, "almostname1", true);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkName(dm, "1almostname", false);
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkName(dm, "almostprefix", false);
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkName(dm, "almostPrEfix", false);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkName(dm, "almostnamespace", true); // note that this is true....
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        checkName(dm, "almostname", true);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        for (DefType type : DefType.values()) {
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:    public void testTypeMatcher() throws Exception {
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        for (DefType type : DefType.values()) {
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:            DescriptorFilter dm = new DescriptorFilter("exactprefix://exactnamespace:exactname", type.toString());
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:            DescriptorFilter dm = new DescriptorFilter("exactPrEfix://exactnamespace:exactname", type.toString());
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:            for (DefType otype : DefType.values()) {
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:                if (!otype.equals(type)) {
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:                    checkType(dm, otype, false);
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:    @SuppressWarnings("serial")
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:    @SupPrEssWarnings("serial")
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:    private static class FakeDefDescriptor implements DefDescriptor<Definition> {
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        private final String name;
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        private final String prefix;
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        private final String PrEfix;
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        private final String namespace;
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        private final DefType defType;
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        public FakeDefDescriptor(String prefix, String namespace, String name, DefType defType) {
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        public FakeDefDescriptor(String PrEfix, String namespace, String name, DefType defType) {
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:            this.namespace = namespace;
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:            this.name = name;
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        public void serialize(Json json) throws IOException {
@@ -214,37 +214,37 @@ ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        public boolean isParameterized() {
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:            return false;
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        public boolean exists() {
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:            return this.prefix + "://" + this.namespace + ":" + this.name + "(" + this.defType.toString() + ")";
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:            return this.PrEfix + "://" + this.namespace + ":" + this.name + "(" + this.defType.toString() + ")";
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        public int compareTo(DefDescriptor<?> other) {
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:            // Can't use the helper on DefDescriptorImpl in this non-impl test
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:            // package...
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:            return getQualifiedName().compareToIgnoreCase(other.getQualifiedName());
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        FakeDefDescriptor dd;
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dm = new DescriptorFilter("exactprefix://exactnamespace:exactname", "APPLICATION");
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dd = new FakeDefDescriptor("exactprefix", "exactnamespace", "exactname", DefType.APPLICATION);
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dm = new DescriptorFilter("exactPrEfix://exactnamespace:exactname", "APPLICATION");
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dd = new FakeDefDescriptor("exactPrEfix", "exactnamespace", "exactname", DefType.APPLICATION);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        assertEquals(getLabel(dm, true, "dd", dd.toString()), true, dm.matchDescriptor(dd));
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dd = new FakeDefDescriptor("exactprefix", "exactnamespace", "exactname", DefType.COMPONENT);
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dd = new FakeDefDescriptor("exactPrEfix", "exactnamespace", "exactname", DefType.COMPONENT);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        assertEquals(getLabel(dm, false, "dd", dd.toString()), false, dm.matchDescriptor(dd));
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dm = new DescriptorFilter("exactprefix://exactnamespace:exactname", "APPLICATION,COMPONENT");
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dd = new FakeDefDescriptor("exactprefix", "exactnamespace", "exactname", DefType.APPLICATION);
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dm = new DescriptorFilter("exactPrEfix://exactnamespace:exactname", "APPLICATION,COMPONENT");
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dd = new FakeDefDescriptor("exactPrEfix", "exactnamespace", "exactname", DefType.APPLICATION);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        assertEquals(getLabel(dm, true, "dd", dd.toString()), true, dm.matchDescriptor(dd));
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dd = new FakeDefDescriptor("exactprefix", "exactnamespace", "exactname", DefType.COMPONENT);
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dd = new FakeDefDescriptor("exactPrEfix", "exactnamespace", "exactname", DefType.COMPONENT);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        assertEquals(getLabel(dm, true, "dd", dd.toString()), true, dm.matchDescriptor(dd));
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dd = new FakeDefDescriptor("exactprefix", "exactnamespace", "exactname", DefType.STYLE);
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dd = new FakeDefDescriptor("exactPrEfix", "exactnamespace", "exactname", DefType.STYLE);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        assertEquals(getLabel(dm, false, "dd", dd.toString()), false, dm.matchDescriptor(dd));
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dm = new DescriptorFilter("exactprefix://exactnamespace:exactname", "*");
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dd = new FakeDefDescriptor("exactprefix", "exactnamespace", "exactname", DefType.APPLICATION);
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dm = new DescriptorFilter("exactPrEfix://exactnamespace:exactname", "*");
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dd = new FakeDefDescriptor("exactPrEfix", "exactnamespace", "exactname", DefType.APPLICATION);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        assertEquals(getLabel(dm, true, "dd", dd.toString()), true, dm.matchDescriptor(dd));
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dd = new FakeDefDescriptor("exactprefix", "exactnamespace", "exactname", DefType.COMPONENT);
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dd = new FakeDefDescriptor("exactPrEfix", "exactnamespace", "exactname", DefType.COMPONENT);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        assertEquals(getLabel(dm, true, "dd", dd.toString()), true, dm.matchDescriptor(dd));
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dd = new FakeDefDescriptor("exactprefix", "exactnamespace", "exactname", DefType.STYLE);
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dd = new FakeDefDescriptor("exactPrEfix", "exactnamespace", "exactname", DefType.STYLE);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        assertEquals(getLabel(dm, true, "dd", dd.toString()), true, dm.matchDescriptor(dd));
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dm = new DescriptorFilter("exactprefix://exactnamespace:exactname", null);
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dd = new FakeDefDescriptor("exactprefix", "exactnamespace", "exactname", DefType.APPLICATION);
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dm = new DescriptorFilter("exactPrEfix://exactnamespace:exactname", null);
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dd = new FakeDefDescriptor("exactPrEfix", "exactnamespace", "exactname", DefType.APPLICATION);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        assertEquals(getLabel(dm, false, "dd", dd.toString()), false, dm.matchDescriptor(dd));
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dd = new FakeDefDescriptor("exactprefix", "exactnamespace", "exactname", DefType.COMPONENT);
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dd = new FakeDefDescriptor("exactPrEfix", "exactnamespace", "exactname", DefType.COMPONENT);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        assertEquals(getLabel(dm, true, "dd", dd.toString()), true, dm.matchDescriptor(dd));
-ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dd = new FakeDefDescriptor("exactprefix", "exactnamespace", "exactname", DefType.STYLE);
+ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        dd = new FakeDefDescriptor("exactPrEfix", "exactnamespace", "exactname", DefType.STYLE);
 ruau/ruau/src/test/java/org/ruauframework/def/DescriptorFilterTest.java:        assertEquals(getLabel(dm, false, "dd", dd.toString()), false, dm.matchDescriptor(dd));
 ruau/ruau/src/test/java/org/ruauframework/controller/java/DelayedController.java: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/test/java/org/ruauframework/controller/java/DelayedController.java: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -736,7 +736,7 @@ ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:    QuickFixUITestUtil(WebDriverTestCase testCase) {
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:        this.testCase = testCase;
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:     * Given the buttons localId (ruau:id on component), execute javascript on the browser to use COQL to find it's
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:     * globalId and then invoke the ui:button's press event. Using this method instead of WebDriver's click() method for
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:     * globalId and then invoke the ui:button's PrEss event. Using this method instead of WebDriver's click() method for
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:     * browser compatibility reasons.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:     * Note that this method is similar to RuueUITestingUtil's findGlobalIdForComponentWithGivenProperties() and
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:     * getEval() methods, but these tests must be run in DEV mode where $A.test is not supported.
@@ -745,7 +745,7 @@ ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:        String query = "var cmp = $A.getQueryStatement().from('component').field('globalId').field('localId')"
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:                + ".where(\"localId === '" + localId + "'\").query();return cmp.rows[0].globalId";
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:        String globalId = jsExecutor.executeScript(query).toString();
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:        jsExecutor.executeScript("$A.getCmp(\"" + globalId + "\").get('e.press').fire()");
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:        jsExecutor.executeScript("$A.getCmp(\"" + globalId + "\").get('e.PrEss').fire()");
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:     * Click the 'Fix!' button and verify text displayed in browser either from newly loaded component, or any error
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:     * message that is displayed on failure.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:    public void clickFix(boolean expectedSuccess, String text) {
@@ -771,7 +771,7 @@ ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:                + toolbarText, toolbarText.contains(text));
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:    public void clickCreateButton(String text) {
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:        By buttonXpath = By.xpath("//button/span[text()='" + text + "']");
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:        Assert.assertTrue("Create Attribute QuickFix button not present", testCase.isElementPresent(buttonXpath));
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:        Assert.assertTrue("Create Attribute QuickFix button not PrEsent", testCase.isElementPresent(buttonXpath));
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:        clickButtonByLocalId("createButton");
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:     * Delete all files in component bundle, and then directory file itself.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/QuickFixUITestUtil.java:        Source<?> source = Ruue.getContextService().getCurrentContext().getDefRegistry().getSource(defDescriptor);
@@ -1059,7 +1059,7 @@ ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickF
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:            assertFalse("Should not have created the component bundle with bad namespace", defDescriptorChild.exists());
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:        } finally {
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:     * Create component DefDescriptor for given namespace and component name. Also check if source for that file name
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:     * already exists. Delete the pre-existing files if they do exist.
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:     * already exists. Delete the PrE-existing files if they do exist.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:    private DefDescriptor<?> createComponentDefDescriptor(String namespace, String cmpName) {
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:            defDescriptor = Ruue.getDefinitionService().getDefDescriptor(namespace + ":" + cmpName,
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/BaseComponentQuickFixUITest.java:                    ApplicationDef.class);
@@ -1160,14 +1160,14 @@ ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * @pa
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * Return the javascript using which component's attribute value could be found out
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * @param cmp : cmpName whose attribute you are looking for
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * @param val : attribute name
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    public String getValueFromCmpRootExpression(String cmp, String val) {
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        return this.prepareReturnStatement(this.getFindAtRootExpr(cmp) + ".get('" + val + "')");
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    public String getValueFromCmpRootExPrEssion(String cmp, String val) {
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        return this.PrEpareReturnStatement(this.getFindAtRootExpr(cmp) + ".get('" + val + "')");
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * Very useful when we know the globalId of the component, inorder to get the attribute value of cmp
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * @param cmp: globalId of the component
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * @param val: attribute name of the component
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    public String getValueFromCmpExpression(String cmp, String val) {
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        return this.prepareReturnStatement(this.getCmpExpr(cmp) + ".get('" + val + "')");
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    public void pressTab(WebElement e) {
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    public String getValueFromCmpExPrEssion(String cmp, String val) {
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        return this.PrEpareReturnStatement(this.getCmpExpr(cmp) + ".get('" + val + "')");
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    public void PrEssTab(WebElement e) {
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * Execute the given javascript and args in the current window. Fail if the result is not a boolean. Otherwise,
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    public boolean getBooleanEval(String javascript, Object... args) {
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        Object status;
@@ -1202,7 +1202,7 @@ ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:          
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                + " ret = func.call(this, arguments);\n" + "}\n" + "catch(e){\n"
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                + " scriptExecException = e.message || e.toString();\n" + "}\n"
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                "var jstesterrors = (window.$A && window.$A.test) ? window.$A.test.getErrors() : '';\n"
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:            @SuppressWarnings("unchecked")
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:            @SupPrEssWarnings("unchecked")
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:            List<Object> wrapResult = (List<Object>) getRawEval(wrapper, args);
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:            Assert.assertEquals("Wrapped javsascript execution expects an array of exactly 3 elements", 3,
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                    wrapResult.size());
@@ -1233,13 +1233,13 @@ ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        } 
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * Process the results from $A.test.getErrors(). If there were any errors, then fail the test accordingly.
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * @param errors the raw results from invoking $A.test.getErrors()
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    public void assertJsTestErrors(String errors) {
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:            @SuppressWarnings("unchecked")
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:            @SupPrEssWarnings("unchecked")
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:            List<Map<String, Object>> errorsList = (List<Map<String, Object>>) new JsonReader().read(errors);
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:            StringBuffer errorMessage = new StringBuffer();
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:            for (Map<String, Object> error : errorsList) {
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                errorMessage.append(error.get("message") + "\n");
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:            Assert.fail(errorMessage.toString());
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    public String prepareReturnStatement(String returnStatement) {
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    public String PrEpareReturnStatement(String returnStatement) {
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        return "return " + returnStatement;
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    public String findGlobalIdForComponentWithGivenProperties(String fromClause, String whereClause) {
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        sb.append("var cmp = $A.getQueryStatement().from('component').field('globalId').");
@@ -1259,7 +1259,7 @@ ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * @pa
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * @param position = "top, left, right, and bottom"
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    public String getBoundingRectPropOfElement(String elementGlobalId, String position) {
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        String element = getCmpExpr(elementGlobalId) + ".getElement().getBoundingClientRect()." + position;
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        return getEval(prepareReturnStatement(element)).toString();
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        return getEval(PrEpareReturnStatement(element)).toString();
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * Given Element className, method would return component globalId which could be used with $A.getCmp(globalId) to
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * have handle in the component in UI test
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * @param className
@@ -1301,10 +1301,10 @@ ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:          
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                                getBooleanEval("return arguments[0].ownerDocument === document", elements.get(0))) {
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * Get an error message from the error div.
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * FIXME: this is _not_ a quick fix message. This is the error box that is used by $A.error. Also note that this
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * does not check if the box is visible. This box should always be present, and may contain old text that is no
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * does not check if the box is visible. This box should always be PrEsent, and may contain old text that is no
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * longer relevant. Please don't use this!
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * @return the error message.
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    @Deprecated
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    @DePrEcated
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    public String getQuickFixMessage() {
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        WebElement errorBox = driver.findElement(By.id("ruauErrorMessage"));
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:            Assert.fail("Ruue errorBox not found.");
@@ -1322,14 +1322,14 @@ ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        St
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        Assert.assertEquals("Unable to process your request", actual);
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        WebElement toolBar = driver.findElement(By.className("toolbar"));
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        if (toolBar == null) {
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:            // This is actually ok, as the box is not rendered if the cause is not present
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:            // This is actually ok, as the box is not rendered if the cause is not PrEsent
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:            // In this case return an empty string.
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        return toolBar.getText();
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * Get any 'cause' message from a quick fix exception
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * @return the quick fix cause exception.
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    public String getQuickFixCause() {
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        WebElement errorBox = driver.findElement(By.className("causeWrapper"));
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:            // This is actually ok, as the box is not rendered if the cause is not present
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:            // This is actually ok, as the box is not rendered if the cause is not PrEsent
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:            // In this case return an empty string.
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * @return true if Ruue framework has loaded
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    public boolean isRuueFrameworkReady() {
@@ -1409,7 +1409,7 @@ ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:          
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                        return getBooleanEval("return document.readyState === 'complete'");
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                "Document is not Ready!");
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * First, verify that window.$A has been installed. Then, wait until {@link #isRuueFrameworkReady()} returns true.
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * We assume the document has finished loading at this point: callers should have previously called
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * We assume the document has finished loading at this point: callers should have PrEviously called
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * {@link #waitForDocumentReady()}.
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    public void waitForRuueFrameworkReady(final Set<String> expectedErrors) {
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        WebDriverWait waitRuuePresent = new WebDriverWait(driver, timeoutInSecs);
@@ -1419,7 +1419,7 @@ ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:          
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                                return (Boolean) getRawEval("return !!window.$A");
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        WebDriverWait waitFinishedInit = new WebDriverWait(driver, timeoutInSecs);
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        waitFinishedInit.ignoring(StaleElementReferenceException.class)
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                .withMessage("Initialization error: $A present but failed to initialize")
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                .withMessage("Initialization error: $A PrEsent but failed to initialize")
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                        new Function<WebDriver, Boolean>() {
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                            public Boolean apply(WebDriver input) {
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                                assertNoRuueErrorMessage(expectedErrors);
@@ -1439,7 +1439,7 @@ ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:          
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                } catch (StaleElementReferenceException e) {
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    public <R> R waitForElementFunction(final By locator, final Function<WebElement, R> function) {
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        return waitForElementFunction(locator, function, "Timeout waiting for element");
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * Wait for text of an element to be either present or not present.
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * Wait for text of an element to be either PrEsent or not present.
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * @param locator By locator to find WebElement in the DOM.
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * @param text Text on the found WebElement.
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * @param toBePresent True if we want text passed in as parameter to equal text on found WebElement.
@@ -1508,7 +1508,7 @@ ruau/ruau/src/test/java/org/ruauframework/util/WebDriverWaitWithCallback.java:  
 ruau/ruau/src/test/java/org/ruauframework/util/WebDriverWaitWithCallback.java:            V2 ret = callbackWhenTimeout.apply(driver);
 ruau/ruau/src/test/java/org/ruauframework/util/WebDriverWaitWithCallback.java:            TimeoutExceptionWithExtraMessage tecm = new TimeoutExceptionWithExtraMessage(et.getMessage(),
 ruau/ruau/src/test/java/org/ruauframework/util/WebDriverWaitWithCallback.java:                    et.getCause(), ret.toString());
-ruau/ruau/src/test/java/org/ruauframework/util/WebDriverWaitWithCallback.java:     * Customized TimeoutException class, with extra message prepended to the original one
+ruau/ruau/src/test/java/org/ruauframework/util/WebDriverWaitWithCallback.java:     * Customized TimeoutException class, with extra message PrEpended to the original one
 ruau/ruau/src/test/java/org/ruauframework/util/WebDriverWaitWithCallback.java:    public class TimeoutExceptionWithExtraMessage extends TimeoutException {
 ruau/ruau/src/test/java/org/ruauframework/util/WebDriverWaitWithCallback.java:        private static final long serialVersionUID = 1L;
 ruau/ruau/src/test/java/org/ruauframework/util/WebDriverWaitWithCallback.java:        private final String extraMessage;
@@ -1939,7 +1939,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/page/RuuePageObject.java:    priv
 ruau/ruau/src/test/java/org/ruauframework/test/page/RuuePageObject.java:    //defDescriptor is created by passing in descriptorString during contruction
 ruau/ruau/src/test/java/org/ruauframework/test/page/RuuePageObject.java:    private final DefDescriptor<T> defDescriptor;
 ruau/ruau/src/test/java/org/ruauframework/test/page/RuuePageObject.java:    protected PageObjectTestCase<?> pageObjectTestCase;
-ruau/ruau/src/test/java/org/ruauframework/test/page/RuuePageObject.java:    @SuppressWarnings("unchecked")
+ruau/ruau/src/test/java/org/ruauframework/test/page/RuuePageObject.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau/src/test/java/org/ruauframework/test/page/RuuePageObject.java:    public RuuePageObject(String name, Boolean isComponent, String descriptorString, PageObjectTestCase<?> potc) {
 ruau/ruau/src/test/java/org/ruauframework/test/page/RuuePageObject.java:        //the test function name that create this page object
 ruau/ruau/src/test/java/org/ruauframework/test/page/RuuePageObject.java:        this.name = name;
@@ -1965,7 +1965,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/page/SampleRuuePageObject.java:pa
 ruau/ruau/src/test/java/org/ruauframework/test/page/SampleRuuePageObject.java:import org.ruauframework.def.ComponentDef;
 ruau/ruau/src/test/java/org/ruauframework/test/page/SampleRuuePageObject.java:import org.openqa.selenium.By;
 ruau/ruau/src/test/java/org/ruauframework/test/page/SampleRuuePageObject.java:import org.openqa.selenium.WebElement;
-ruau/ruau/src/test/java/org/ruauframework/test/page/SampleRuuePageObject.java://this is an example of RuuePageObject, it represents uiExamples:buttonExample, with a ui:button and ui:outputText
+ruau/ruau/src/test/java/org/ruauframework/test/page/SampleRuuePageObject.java://this is an example of RuuePageObject, it rePrEsents uiExamples:buttonExample, with a ui:button and ui:outputText
 ruau/ruau/src/test/java/org/ruauframework/test/page/SampleRuuePageObject.java:public class SampleRuuePageObject extends RuuePageObject<ComponentDef> {
 ruau/ruau/src/test/java/org/ruauframework/test/page/SampleRuuePageObject.java:    public SampleRuuePageObject(String name, Boolean isComponent, String descriptorString, SampleUIWithPageObjectTest sampleUIWithPageObjectTest) {
 ruau/ruau/src/test/java/org/ruauframework/test/page/SampleRuuePageObject.java:        super(name, isComponent, descriptorString, sampleUIWithPageObjectTest);
@@ -2121,7 +2121,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    protec
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    public void runTestWithBrowser(BrowserType browserType) throws Throwable {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:            } finally {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:                perBrowserTearDown();
-ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    @SuppressWarnings("serial")
+ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    @SupPrEssWarnings("serial")
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    private static class AggregateFailure extends AssertionFailedError {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        private final Collection<Throwable> failures;
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        private AggregateFailure(Collection<Throwable> failures) {
@@ -2240,7 +2240,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    public
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        return perfWebDriverUtil.getRDPNotifications();
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    public final Map<String, ?> takeHeapSnapshot() {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        return perfWebDriverUtil.takeHeapSnapshot();
-ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    @SuppressWarnings("unchecked")
+ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    public final Map<String, Map<String, Map<String, List<Object>>>> getRuueStats() {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        return (Map<String, Map<String, Map<String, List<Object>>>>) ruauUITestingUtil
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:                .getRawEval("return $A.PERFCORE.stats.get();");
@@ -2432,11 +2432,11 @@ ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        UR
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        for (String key : params.keySet()) {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:            newParams.add(new BasicNameValuePair(key, params.get(key)));
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        return url + "?" + URLEncodedUtils.format(newParams, "UTF-8") + hash;
-ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * Open a URI without any additional handling. This will, however, add a nonce to the URL to prevent caching of the
+ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * Open a URI without any additional handling. This will, however, add a nonce to the URL to PrEvent caching of the
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * page.
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    protected void openRaw(URI uri) {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        String url = addBrowserNonce(uri.toString());
-ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * Open a URI without any additional handling. This will, however, add a nonce to the URL to prevent caching of the
+ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * Open a URI without any additional handling. This will, however, add a nonce to the URL to PrEvent caching of the
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * page.
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    protected void openRaw(String url) throws MalformedURLException, URISyntaxException {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        openRaw(getAbsoluteURI(url));
@@ -2499,13 +2499,13 @@ ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:          
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:                public Boolean apply(WebDriver d) {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:                    return false;
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        } catch (TimeoutException expected) {
-ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * Wait for text to be present for element.
+ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * Wait for text to be PrEsent for element.
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    public void waitForElementTextPresent(WebElement e, String text) {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        waitForElementText(e, text, true, timeoutInSecs);
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * Wait for text to be absent for element.
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    public void waitForElementTextAbsent(WebElement e, String text) {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        waitForElementText(e, text, false, timeoutInSecs);
-ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * Wait for text on element to be either cleared or present.
+ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * Wait for text on element to be either cleared or PrEsent.
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    protected void waitForElementText(final WebElement e, final String text, final boolean isPresent, long timeout) {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        ruauUITestingUtil.waitUntil(new ExpectedCondition<Boolean>() {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:            public Boolean apply(WebDriver d) {
@@ -2519,10 +2519,10 @@ ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    protec
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        waitForElement(msg, e, true, timeoutInSecs);
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    protected void waitForElementPresent(final WebElement e) {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        waitForElement("Timed out (" + timeoutInSecs + "s) waiting for " + e, e, true, timeoutInSecs);
-ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * short waitForElement to present or absent before executing the next command
+ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * short waitForElement to PrEsent or absent before executing the next command
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    protected void waitForElement(String msg, final WebElement e, final boolean isDisplayed) {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        waitForElement(msg, e, isDisplayed, timeoutInSecs);
-ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * waitForElement to present or absent before executing the next command
+ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * waitForElement to PrEsent or absent before executing the next command
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * @param msg Error message
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * @param e WebElement to look for
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:     * @param isDisplayed if set to true, will wait till the element is displayed else will wait till element is not
@@ -2691,7 +2691,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:            capabi
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:            capabilities.setCapability("chromedriver-version", "2.9");
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:            break;
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        default: // explicit no-op
-ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        // adding timeouts to prevent jobs to run for too long when problems
+ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        // adding timeouts to PrEvent jobs to run for too long when problems
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        // see http://saucelabs.com/docs/ondemand/additional-config#timeouts
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        capabilities.setCapability("max-duration", SAUCE_MAX_TIMEOUT);
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        capabilities.setCapability("command-timeout", SAUCE_CMD_TIMEOUT);
@@ -2829,7 +2829,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:     * Check th
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:     * file in error. Use this method when the location is a full filesystem path to the file (instead of just a
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:     * qualified name).
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:     * Depending on whether we are reading form jars or source, the location in the exception is different. When reading
-ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:     * from source we need to strip the "file:" prefix. When reading from jars we leave the "jar:file:" prefix.
+ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:     * from source we need to strip the "file:" PrEfix. When reading from jars we leave the "jar:file:" prefix.
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:    protected void checkExceptionFull(Throwable e, Class<?> clazz, String message, Source<?> src) {
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:        checkExceptionFull(e, clazz, message);
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:        assertLocation(e, src);
@@ -2857,7 +2857,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:     * Check th
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:     * of the file in error. Use this method when the location is a full filesystem path to the file (instead of just a
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:     * qualified name).
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:     * Depending on whether we are reading form jars or source, the location in the exception is different. When reading
-ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:     * from source we need to strip the "file:" prefix. When reading from jars we leave the "jar:file:" prefix.
+ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:     * from source we need to strip the "file:" PrEfix. When reading from jars we leave the "jar:file:" prefix.
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:    protected void checkExceptionStart(Throwable e, Class<?> clazz, String message, Source<?> src) {
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:        checkExceptionStart(e, clazz, message);
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:        assertLocation(e, src);
@@ -2878,7 +2878,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:     * Check th
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:     * the file in error. Use this method when the location is a full filesystem path to the file (instead of just a
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:     * qualified name).
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:     * Depending on whether we are reading form jars or source, the location in the exception is different. When reading
-ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:     * from source we need to strip the "file:" prefix. When reading from jars we leave the "jar:file:" prefix.
+ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:     * from source we need to strip the "file:" PrEfix. When reading from jars we leave the "jar:file:" prefix.
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:    protected void checkExceptionContains(Throwable e, Class<?> clazz, String message, Source<?> src) {
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:        checkExceptionContains(e, clazz, message);
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:        assertLocation(e, src);
@@ -2912,7 +2912,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:    private voi
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:        if (fileUrl.startsWith("jar")) {
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:            assertLocation(e, fileUrl);
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:        } else if (fileUrl.startsWith("file")) {
-ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:            // If running from source, strip "file:" prefix, as in XMLParser.getLocation()
+ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:            // If running from source, strip "file:" PrEfix, as in XMLParser.getLocation()
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:            String filePath = fileUrl.substring(5);
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:            assertLocation(e, filePath);
 ruau/ruau/src/test/java/org/ruauframework/test/RuueTestCase.java:    protected void endContextIfEstablished() {

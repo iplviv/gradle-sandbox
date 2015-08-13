@@ -357,8 +357,8 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        // component event h
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        // mock a ValueProvider that returns a synthetic action
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        component.addHandler(eventName, {
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:                    run : handler,
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:                    runDeprecated : handler
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        }, 'TESTHANDLER'); // expression is irrelevant
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:                    runDePrEcated : handler
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        }, 'TESTHANDLER'); // exPrEssion is irrelevant
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:// Used by tests to modify framework source to trigger JS last mod update
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:$A.ns.Test.prototype.getAppCacheEvents = function() {
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    return this.appCacheEvents;
@@ -392,12 +392,12 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test.js:                    that.sui
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    }catch(e){
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        this.doTearDown();
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    // Fail now if we got any unexpected errors or warnings during test initialization/setup
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.clearExpected(this.preErrors, ruauErrorsExpectedDuringInit);
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.clearExpected(this.PrEErrors, ruauErrorsExpectedDuringInit);
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.logErrors(true, "Did not receive expected error during init: ", ruauErrorsExpectedDuringInit);
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.clearExpected(this.preWarnings, ruauWarningsExpectedDuringInit);
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.logErrors(this.failOnWarning, "Received unexpected warning: ",this.preWarnings);
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.clearExpected(this.PrEWarnings, ruauWarningsExpectedDuringInit);
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.logErrors(this.failOnWarning, "Received unexpected warning: ",this.PrEWarnings);
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.logErrors(this.failOnWarning, "Did not receive expected warning during init: ", ruauWarningsExpectedDuringInit);
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.preWarnings = null;
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.PrEWarnings = null;
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.continueWhenReady();
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js://#include ruau.test.Test_export
 ruau/ruau-impl/src/main/resources/ruau/event/EventDef_export.js: * Copyright (C) 2013 salesforce.com, inc.
@@ -461,7 +461,7 @@ ruau/ruau-impl/src/main/resources/ruau/event/Event.js:                    var va
 ruau/ruau-impl/src/main/resources/ruau/event/Event.js:                    this.params[key] = value;
 ruau/ruau-impl/src/main/resources/ruau/event/Event.js:                    $A.warning("Attempt to set invalid property '" + key + "' on event");
 ruau/ruau-impl/src/main/resources/ruau/event/Event.js: * Gets an Event parameter. Returns the parameters.
-ruau/ruau-impl/src/main/resources/ruau/event/Event.js: * @param {String} name The name of the Event. For example, <code>event.getParam("button")</code> returns the value of the pressed mouse button (0, 1, or 2).
+ruau/ruau-impl/src/main/resources/ruau/event/Event.js: * @param {String} name The name of the Event. For example, <code>event.getParam("button")</code> returns the value of the PrEssed mouse button (0, 1, or 2).
 ruau/ruau-impl/src/main/resources/ruau/event/Event.js:Event.prototype.getParam = function(name){
 ruau/ruau-impl/src/main/resources/ruau/event/Event.js:    return this.params[name];
 ruau/ruau-impl/src/main/resources/ruau/event/Event.js: * Gets all the Event parameters. Returns the collection of parameters.
@@ -765,7 +765,7 @@ ruau/ruau-impl/src/main/java/configuration/RuueImplConfig.java:    public static
 ruau/ruau-impl/src/main/java/configuration/RuueImplConfig.java:        return new ExceptionAdapterImpl();
 ruau/ruau-impl/src/main/java/configuration/RuueImplConfig.java:    public static RegistryAdapter ruauImplRegistryAdapter() {
 ruau/ruau-impl/src/main/java/configuration/RuueImplConfig.java:        return new RuueRegistryProviderImpl();
-ruau/ruau-impl/src/main/java/configuration/RuueImplConfig.java:    public static PrefixDefaultsAdapter prefixDefaultsAdapter() {
+ruau/ruau-impl/src/main/java/configuration/RuueImplConfig.java:    public static PrefixDefaultsAdapter PrEfixDefaultsAdapter() {
 ruau/ruau-impl/src/main/java/configuration/RuueImplConfig.java:        return new RuuePrefixDefaultsProviderImpl();
 ruau/ruau-impl/src/main/java/configuration/RuueImplConfig.java:    @PrimaryImpl
 ruau/ruau-impl/src/main/java/configuration/RuueImplConfig.java:    public static RenderingService renderingService() {
@@ -1494,7 +1494,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/admin/AdminModel.java:      
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/admin/AdminModel.java:            Map<String, Object> data = Maps.newHashMap();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/admin/AdminModel.java:            data.put("class", dr.getClass().getName());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/admin/AdminModel.java:            data.put("deftypes", dr.getDefTypes().toString());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/admin/AdminModel.java:            data.put("prefixes", dr.getPrefixes().toString());
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/admin/AdminModel.java:            data.put("PrEfixes", dr.getPrefixes().toString());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/admin/AdminModel.java:            data.put("namespaces", dr.getNamespaces().toString());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/admin/AdminModel.java:            registryData.add(data);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/admin/AdminModel.java:        MBeanServer server = ManagementFactory.getPlatformMBeanServer();
@@ -1850,7 +1850,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BeanAdapterImpl.java
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BeanAdapterImpl.java:     * Note that this does not validate that the class can be constructed (e.g. it can throw
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BeanAdapterImpl.java:     * an exception during construction and fail that way).
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BeanAdapterImpl.java:     * @param clazz the class to validate
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BeanAdapterImpl.java:     * @throws QuickFixException if the constructor is not present or accessible.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BeanAdapterImpl.java:     * @throws QuickFixException if the constructor is not PrEsent or accessible.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BeanAdapterImpl.java:    public static void validateConstructor(Class<?> clazz) throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BeanAdapterImpl.java:            // Do the obvious check first, and if it fails, go on and do more work.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BeanAdapterImpl.java:            clazz.getConstructor();
@@ -1862,7 +1862,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BeanAdapterImpl.java
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BeanAdapterImpl.java:                throwConstructorError("No default constructor found.", clazz);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BeanAdapterImpl.java:        } catch (SecurityException se) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BeanAdapterImpl.java:            throwConstructorError("Class is not accessible.", clazz);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BeanAdapterImpl.java:     * Build an object for a class that was previously validated by {@link #validateConstructor()}.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BeanAdapterImpl.java:     * Build an object for a class that was PrEviously validated by {@link #validateConstructor()}.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BeanAdapterImpl.java:     * If the object would not pass validation, an exception will be generated.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BeanAdapterImpl.java:     * @param clazz the class to build
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/BeanAdapterImpl.java:     * @throws RuueRuntimeException if the constructor cannot be invoked.
@@ -1908,7 +1908,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/StyleAdapterImpl.jav
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/StyleAdapterImpl.java:        return ImmutableList.<Plugin>of();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/StyleAdapterImpl.java:    public List<Plugin> getContextualRuntimePlugins() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/StyleAdapterImpl.java:        List<Plugin> plugins = new ArrayList<>(1);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/StyleAdapterImpl.java:        // when pre-compilation is ready, this should probably be there instead
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/StyleAdapterImpl.java:        // when PrE-compilation is ready, this should probably be there instead
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/StyleAdapterImpl.java:        // also when we move to multiple app.css files, need to revisit this
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/StyleAdapterImpl.java:        plugins.add(new DuplicateFontFacePlugin());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java: * Copyright (C) 2013 salesforce.com, inc.
@@ -2031,10 +2031,10 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.ja
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java:    public boolean isPrivilegedNamespace(String namespace) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java:        return namespace != null && SYSTEM_NAMESPACES.contains(namespace.toLowerCase());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java:    public String getDefaultNamespace() {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java:    public boolean isUnsecuredPrefix(String prefix) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java:        return UNSECURED_PREFIXES.contains(prefix);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java:    public boolean isUnsecuredPrefix(String PrEfix) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java:        return UNSECURED_PREFIXES.contains(PrEfix);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java:    public boolean isUnsecuredNamespace(String namespace) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java:        // Deprecated stub will be removed once we remove the sfdc core usage
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java:        // DePrEcated stub will be removed once we remove the sfdc core usage
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java:        return false;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java:    public synchronized void regenerateRuueJS() {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java:         * If we're missing source, jsGroup will be an RuueResourceGroup and isStale() is always false. If we're in
@@ -2171,8 +2171,8 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.ja
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java:        SYSTEM_NAMESPACES.remove(namespace.toLowerCase());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java:    public boolean isDocumentedNamespace(String namespace) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java:        return !UNDOCUMENTED_NAMESPACES.contains(namespace) && !namespace.toLowerCase().endsWith("test");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java:    public boolean isCacheablePrefix(String prefix) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java:        return CACHEABLE_PREFIXES.contains(prefix);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java:    public boolean isCacheablePrefix(String PrEfix) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java:        return CACHEABLE_PREFIXES.contains(PrEfix);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java:     * This default implementation of {@link ConfigAdapter#getContentSecurityPolicy(String)}
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java:     * will return a default ContentSecurityPolicy object.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java:    public ContentSecurityPolicy getContentSecurityPolicy(String app, HttpServletRequest request) {
@@ -2778,7 +2778,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/html/offline/
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/html/offline/ApplicationDefOfflineHTMLFormatAdapter.java:        RuueContext context = contextService.getCurrentContext();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/html/offline/ApplicationDefOfflineHTMLFormatAdapter.java:            ComponentDef templateDef = def.getTemplateDef();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/html/offline/ApplicationDefOfflineHTMLFormatAdapter.java:            Map<String, Object> attributes = Maps.newHashMap();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/html/offline/ApplicationDefOfflineHTMLFormatAdapter.java:            // Get the preload css
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/html/offline/ApplicationDefOfflineHTMLFormatAdapter.java:            // Get the PrEload css
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/html/offline/ApplicationDefOfflineHTMLFormatAdapter.java:            List<String> styles = Lists.newArrayList(String.format("%s.css", appName));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/html/offline/ApplicationDefOfflineHTMLFormatAdapter.java:            File css = new File(outputDir, String.format("%s.css", appName));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/html/offline/ApplicationDefOfflineHTMLFormatAdapter.java:                Ruue.getServerService().writeAppCss(dependencies, cssWriter);
@@ -2799,7 +2799,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/html/offline/
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/html/offline/ApplicationDefOfflineHTMLFormatAdapter.java:                } finally {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/html/offline/ApplicationDefOfflineHTMLFormatAdapter.java:                    reader.close();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/html/offline/ApplicationDefOfflineHTMLFormatAdapter.java:            Application instance = instanceService.getInstance(def, null);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/html/offline/ApplicationDefOfflineHTMLFormatAdapter.java:            // Get the preload js
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/html/offline/ApplicationDefOfflineHTMLFormatAdapter.java:            // Get the PrEload js
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/html/offline/ApplicationDefOfflineHTMLFormatAdapter.java:            File js = new File(outputDir, String.format("%s.js", appName));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/html/offline/ApplicationDefOfflineHTMLFormatAdapter.java:                Ruue.getServerService().writeDefinitions(dependencies, jsWriter);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/html/offline/ApplicationDefOfflineHTMLFormatAdapter.java:                // Write the app at the bottom of the same file
@@ -2932,7 +2932,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/js/ClientLibr
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/js/ClientLibraryJSFormatAdapter.java:import javax.annotation.concurrent.ThreadSafe;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/js/ClientLibraryJSFormatAdapter.java:import org.ruauframework.clientlibrary.Combinable;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/js/ClientLibraryJSFormatAdapter.java:import org.ruauframework.throwable.quickfix.QuickFixException;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/js/ClientLibraryJSFormatAdapter.java: * Formats client library js. Compresses if not DEV or TEST modes
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/js/ClientLibraryJSFormatAdapter.java: * Formats client library js. ComPrEsses if not DEV or TEST modes
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/js/ClientLibraryJSFormatAdapter.java:@ThreadSafe
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/js/ClientLibraryJSFormatAdapter.java:public class ClientLibraryJSFormatAdapter extends JSFormatAdapter<Combinable> {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/format/js/ClientLibraryJSFormatAdapter.java:    public Class<?> getType() {

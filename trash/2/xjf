@@ -40,7 +40,7 @@ ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        var 
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        // failure to communicate with server
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        if (priv.isDisconnectedOrCancelled(response)) {
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:            priv.setConnected(false);
-ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        // If a disconnect event was previously fired, fire a connection
+ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        // If a disconnect event was PrEviously fired, fire a connection
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        // now that we have a response from a server.
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:            e = $A.get("e.ruau:connectionResumed");
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                priv.isDisconnected = false;
@@ -159,7 +159,7 @@ ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        		st
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        	stackName += actionToSend.getStorageKey(); 
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        stackName += "]";
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:            var action, actionResponses;
-ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:            // pre-decrement so that we correctly send the next response right after this.
+ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:            // PrE-decrement so that we correctly send the next response right after this.
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:            if (responseMessage) {
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                var token = responseMessage["token"];
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                $A.getContext().merge(responseMessage["context"]);
@@ -205,7 +205,7 @@ ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:    runClien
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        var action;
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        for ( var i = 0; i < actions.length; i++) {
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:            action = actions[i];
-ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:            action.runDeprecated();
+ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:            action.runDePrEcated();
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:            action.finishAction($A.getContext());
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:     * Start a request sequence for a set of actions and an 'in-flight' counter.
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:     * This routine will usually send off a request to the server, and will always walk through the steps to do so. If
@@ -540,7 +540,7 @@ ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:                
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:                        atts[key] = value.value;
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:        action.setParams({"components" : components});
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:        return action;
-ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:        if(ruau.util.isExpression(this.action)){
+ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:        if(ruau.util.isExPrEssion(this.action)){
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:            return this.action.evaluate(valueProvider);
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:            return valueFactory.create(this.action,null,valueProvider).evaluate();
 ruau/ruau-impl/src/main/resources/ruau/layouts/LayoutItemDef.js:LayoutItemDef.prototype.setCachedBody = function(inst){
@@ -976,7 +976,7 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js:                for (var i =
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:                    that.trash[i] = null;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:                that.trash = [];
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:                that.gcPending = false;
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Decodes the URL by replacing the encoded text with the character that it represents.
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Decodes the URL by replacing the encoded text with the character that it rePrEsents.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {String} url The URL string to be decoded.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    var ret = {};
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    var pairs = url.split("&");
@@ -995,7 +995,7 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js:$A.ns.Util.prototype.truncat
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    truncateByWord = !!truncateByWord;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        if (truncateByWord === false) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            /* Truncate the content of the string, then go back to the end of the
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:               previous word to ensure that we don't truncate in the middle of
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:               PrEvious word to ensure that we don't truncate in the middle of
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:               a word */
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            var st2 = st.replace(/\w+$/, '');
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Create a function that invokes the given callback after the tolerance period
@@ -1034,7 +1034,7 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        if (timeout === fals
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            setTimeout(timeoutCallback, toleranceMillis);
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Adds an event listener to a DOM element.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {HTMLElement} element The DOM element to which to apply the listener.
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {String} eventName The name of the DOM event, minus the "on" prefix (e.g. "click", "focus", "blur", etc.).
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {String} eventName The name of the DOM event, minus the "on" PrEfix (e.g. "click", "focus", "blur", etc.).
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {Object} handler The JS handler to add.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {Boolean} useCapture Whether to use event capturing.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {Number} timeout Optional timeout (in milliseconds) that will delay the handler execution.
@@ -1045,7 +1045,7 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        	var originalHandler
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:                handler = this.createTimeoutCallback(handler, timeout);
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:                originalHandler.registeredRuueHandler = handler;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:                element["addEventListener"](eventName, handler, useCapture);
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var preventDefault = function(){
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var PrEventDefault = function(){
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            this.returnValue = false;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var stopPropagation = function(){
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            this.cancelBubble = true;
@@ -1068,15 +1068,15 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            // Add standard 
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            var newHandler = function (event) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:                event.currentTarget = element;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:                event.target = event.srcElement;
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:                event.preventDefault = preventDefault;
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:                event.PrEventDefault = preventDefault;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:                event.stopPropagation = stopPropagation;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:                handler.call(element, event || window.event);
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:                event.currentTarget = event.target = event.which = event.preventDefault = event.stopPropagation = null;
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:                event.currentTarget = event.target = event.which = event.PrEventDefault = event.stopPropagation = null;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            originalHandler.registeredRuueHandler = newHandler;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            element["attachEvent"]('on' + eventName, newHandler, false);
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Removes an event listener from a DOM element. See also Util.on() a.k.a. $A.util.on()
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {HTMLElement} element The DOM element from which to remove the listener.
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {String} eventName The name of the DOM event, minus the "on" prefix (e.g. "click", "focus", "blur", etc.).
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {String} eventName The name of the DOM event, minus the "on" PrEfix (e.g. "click", "focus", "blur", etc.).
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {Function} listener The JS listener function to remove.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {Boolean} useCapture Whether to use event capturing.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:$A.ns.Util.prototype.removeOn = function(element, eventName, listener, useCapture) {
@@ -1400,7 +1400,7 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    $A.ns.Util.prototype.red
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        return array.reduce(method, initial);
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:     * Loops over an array, calling a function that provides the returned result of calling the function on the 
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:     * @param {Array} array to loop over.
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:     * @param {Function} reduction method that takes the resturned result from the previous call, the current element from 
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:     * @param {Function} reduction method that takes the resturned result from the PrEvious call, the current element from 
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:     * the input array and index. 
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:     * @param {Any} the initial object passed to the first element in the array's reduction method.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:     * @returns {Any} the final value returned from calling the reduction method on the last element.
@@ -1414,60 +1414,60 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        for (index = 0; inde
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            result = method.call(this, result, array[index], index);
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:/** every: see documentation below (attached to last definition so that it is picked up for doc generation). */
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:if (!!Array.prototype.every) {
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    $A.ns.Util.prototype.every = function(array, predicate, that) {
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        return array.every(predicate, that);
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    $A.ns.Util.prototype.every = function(array, PrEdicate, that) {
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        return array.every(PrEdicate, that);
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:     * Loops over an array, calling a function that returns some boolean. Returns true if all calls return a truthy result.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:     * @param {Array} array to loop over.
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:     * @param {Function} predicate that returns a boolean result based on the current array element.
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:     * @param {Function} PrEdicate that returns a boolean result based on the current array element.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:     * @param {Any} the 'this' instance inside the scope of provided transformation method.
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:     * @returns {Boolean} true if all elements of the array satisfy the predicate.
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    $A.ns.Util.prototype.every = function(array, predicate, that) {
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:     * @returns {Boolean} true if all elements of the array satisfy the PrEdicate.
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    $A.ns.Util.prototype.every = function(array, PrEdicate, that) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var util = this instanceof $A.ns.Util ? this : new $A.ns.Util();
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        if (!util.isArray(array)) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            throw new TypeError("$A.util.every called on non-array.");
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        if (!util.isFunction(predicate)) {
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            throw new TypeError("$A.util.every called with non-function predicate.");
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        if (!util.isFunction(PrEdicate)) {
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            throw new TypeError("$A.util.every called with non-function PrEdicate.");
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var index;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        for (index = 0; index < array.length; index++) {
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            if(!predicate.call(that, array[index], index)) {
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            if(!PrEdicate.call(that, array[index], index)) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:                return false;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:/** some: see documentation below (attached to last definition so that it is picked up for doc generation). */
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:if (!!Array.prototype.some) {
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    $A.ns.Util.prototype.some = function(array, predicate, that) {
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        return array.some(predicate, that);
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    $A.ns.Util.prototype.some = function(array, PrEdicate, that) {
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        return array.some(PrEdicate, that);
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:     * Loops over an array, calling a function that returns some boolean. Returns true if any calls return a truthy result.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:     * @param {Array} array to loop over.
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:     * @param {Function} predicate that returns a boolean result based on the current array element.
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:     * @param {Function} PrEdicate that returns a boolean result based on the current array element.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:     * @param {Any} the 'this' instance inside the scope of provided transformation method.
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:     * @returns {Boolean} true if any of the elements of the array satisfy the predicate.
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    $A.ns.Util.prototype.some = function(array, predicate, that) {
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:     * @returns {Boolean} true if any of the elements of the array satisfy the PrEdicate.
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    $A.ns.Util.prototype.some = function(array, PrEdicate, that) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var util = this instanceof $A.ns.Util ? this : new $A.ns.Util();
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        if (!util.isArray(array)) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            throw new TypeError("$A.util.some called on non-array.");
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        if (!util.isFunction(predicate)) {
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            throw new TypeError("$A.util.some called with non-function predicate.");
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        if (!util.isFunction(PrEdicate)) {
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            throw new TypeError("$A.util.some called with non-function PrEdicate.");
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var index;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        for (index = 0; index < array.length; index++) {
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            if(predicate.call(that, array[index], index)) {
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            if(PrEdicate.call(that, array[index], index)) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        return false;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:/** filter: see documentation below (attached to last definition so that it is picked up for doc generation). */
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:if (!!Array.prototype.filter) {
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    $A.ns.Util.prototype.filter = function(array, predicate, that) {
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        return array.filter(predicate, that);
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:     * Loops over an array, constructing a new array with the elements that pass the filter predicate.
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:     * @param {Function} predicate that returns a boolean result based on the current array element the result of which
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    $A.ns.Util.prototype.filter = function(array, PrEdicate, that) {
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        return array.filter(PrEdicate, that);
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:     * Loops over an array, constructing a new array with the elements that pass the filter PrEdicate.
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:     * @param {Function} PrEdicate that returns a boolean result based on the current array element the result of which
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:     *                   indicates whether the element will be returned in the filter result array.
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:     * @param {Any} the 'this' instance inside the scope of provided predicate.
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:     * @returns {Array} ordered array of elements that pass the predicate.
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    $A.ns.Util.prototype.filter = function(array, predicate, that) {
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:     * @param {Any} the 'this' instance inside the scope of provided PrEdicate.
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:     * @returns {Array} ordered array of elements that pass the PrEdicate.
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    $A.ns.Util.prototype.filter = function(array, PrEdicate, that) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var util = this instanceof $A.ns.Util ? this : new $A.ns.Util();
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        if (!util.isArray(array)) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            throw new TypeError("$A.util.filter called on non-array.");
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        if (!util.isFunction(predicate)) {
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            throw new TypeError("$A.util.filter called with non-function predicate.");
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        if (!util.isFunction(PrEdicate)) {
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            throw new TypeError("$A.util.filter called with non-function PrEdicate.");
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var index, result = [];
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        for (index = 0; index < array.length; index++) {
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            if(predicate.call(that, array[index], index)) {
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            if(PrEdicate.call(that, array[index], index)) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:                result.push(array[index]);
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Schedules the specified component to be asynchronously destroyed.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {Component} cmp
@@ -1531,14 +1531,14 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        $A.assert(false, "Bo
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    return false;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Simple event squasher.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {UIEvent} event the DOM event to squash
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {Boolean} preventDefault if preventDefault() should also be called
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:$A.ns.Util.prototype.squash = function(event, preventDefault) {
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {Boolean} PrEventDefault if preventDefault() should also be called
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:$A.ns.Util.prototype.squash = function(event, PrEventDefault) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    if(event.stopPropagation) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    	event.stopPropagation();
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    event.cancelBubble = true;
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    if (preventDefault) {
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        if(event.preventDefault) {
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        	event.preventDefault();
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    if (PrEventDefault) {
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        if(event.PrEventDefault) {
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        	event.PrEventDefault();
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:		event.returnValue = false;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Strip off html tags from html codes.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {String} input the input html codes
@@ -1559,9 +1559,9 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Checks if the object is a
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {Object} obj The object to check for.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @returns {Boolean} True if the object type is a component, or return false otherwise.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    return (obj && obj.ruauType === 'Component')||false;
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Checks if the object is an ruau value expression.
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Checks if the object is an ruau value exPrEssion.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {Object} obj The object to check for.
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @returns {Boolean} True if the object type is an expression, or false otherwise.
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @returns {Boolean} True if the object type is an exPrEssion, or false otherwise.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Checks if the object is an ruau value object via ruauType property.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {Object} obj The object to check for.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @returns {Boolean} True if the object type is a component, or return false otherwise.
@@ -1664,7 +1664,7 @@ ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:    this.hasNegative
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:    this.negativePrefix = null;
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:    this.negativeSuffix = null;
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:    var parsePhase = 0; // start
-ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:    var prefixEnd = 0;
+ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:    var PrEfixEnd = 0;
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:    var suffixStart = format.length;
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:    var zeros = 0;
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:    var leftNumber = false;
@@ -1725,8 +1725,8 @@ ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:        this.minFrac
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:        this.maxFractionDigits = this.minFractionDigits + rightNumbers;
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:    if (this.minDigits === this.minFractionDigits === 0) {
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:    var innerPattern = posPattern;
-ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:        this.prefix = posPattern.substring(0, prefixEnd);
-ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:        innerPattern = innerPattern.substring(prefixEnd);
+ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:        this.PrEfix = posPattern.substring(0, prefixEnd);
+ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:        innerPattern = innerPattern.substring(PrEfixEnd);
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:    if (suffixStart < posPattern.length) {
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:        this.suffix = posPattern.substring(suffixStart);
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:        innerPattern = innerPattern.substring(0, suffixStart);
@@ -1759,7 +1759,7 @@ ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js: * Replaces currency
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js: * @private
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:NumberFormat.prototype.replaceCurrencies = function() {
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:    if (this.hasCurrency) {
-ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:        this.prefix = this.replaceCurrency(this.prefix);
+ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:        this.PrEfix = this.replaceCurrency(this.prefix);
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:        this.suffix = this.replaceCurrency(this.suffix);
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:        this.negativePrefix = this.replaceCurrency(this.negativePrefix);
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:        this.negativeSuffix = this.replaceCurrency(this.negativeSuffix);
@@ -1773,7 +1773,7 @@ ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:        for (var i =
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:            charArray[i] = String.fromCharCode(charArray[i].charCodeAt(0) + this.zeroCharCodeOffset);
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:    return charArray;
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js: * Format a number into a string. Accepts a string of the format "#.#" for formatting numbers
-ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js: * requiring greater than double precision.
+ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js: * requiring greater than double PrEcision.
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js: * @param {Number|String} number The number to be formatted.
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:NumberFormat.prototype.format = function(number) {
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:    var ns;
@@ -1808,10 +1808,10 @@ ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:                char
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:        // might need an extra 1 at the beginning
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:            charArray.unshift("1");
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:            decimalPos++;
-ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:    var prefix = this.prefix;
+ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:    var PrEfix = this.prefix;
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:    var suffix = this.suffix;
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:    if (negative && this.hasNegativePattern) {
-ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:        prefix = this.negativePrefix;
+ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:        PrEfix = this.negativePrefix;
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:        suffix = this.negativeSuffix;
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:    var result = [];
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js:    if (negative && !this.hasNegativePattern) {
@@ -1847,7 +1847,7 @@ ruau/ruau-impl/src/main/resources/ruau/util/Bitset.js: * Unless required by appl
 ruau/ruau-impl/src/main/resources/ruau/util/Bitset.js: * distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau-impl/src/main/resources/ruau/util/Bitset.js: * See the License for the specific language governing permissions and
 ruau/ruau-impl/src/main/resources/ruau/util/Bitset.js: * limitations under the License.
-ruau/ruau-impl/src/main/resources/ruau/util/Bitset.js: * A representation of a set of individual bits, addressable as if organized as
+ruau/ruau-impl/src/main/resources/ruau/util/Bitset.js: * A rePrEsentation of a set of individual bits, addressable as if organized as
 ruau/ruau-impl/src/main/resources/ruau/util/Bitset.js: * an array.
 ruau/ruau-impl/src/main/resources/ruau/util/Bitset.js:    this.data = str.split('');
 ruau/ruau-impl/src/main/resources/ruau/util/Bitset.js: * Tests whether a specific individual bit is or is not set.
@@ -1865,7 +1865,7 @@ ruau/ruau-impl/src/main/resources/ruau/util/Bitset.js:Bitset.prototype.clearBit 
 ruau/ruau-impl/src/main/resources/ruau/util/Bitset.js:    var i = Math.floor(n / 6);
 ruau/ruau-impl/src/main/resources/ruau/util/Bitset.js:    if (i < this.data.length) {
 ruau/ruau-impl/src/main/resources/ruau/util/Bitset.js:        this.data[i] = Bitset.alphabet[Bitset.codes[this.data[i]]
-ruau/ruau-impl/src/main/resources/ruau/util/Bitset.js: * Returns a base64 representation of the Bitset.
+ruau/ruau-impl/src/main/resources/ruau/util/Bitset.js: * Returns a base64 rePrEsentation of the Bitset.
 ruau/ruau-impl/src/main/resources/ruau/util/Bitset.js:    return this.data.join('');
 ruau/ruau-impl/src/main/resources/ruau/util/Bitset.js: * Internal utility to remove trailing 0's from the bitset data.
 ruau/ruau-impl/src/main/resources/ruau/util/Bitset.js:    for ( var i = this.data.length - 1; i >= 0; i--) {
@@ -1931,18 +1931,18 @@ ruau/ruau-impl/src/main/resources/ruau/util/Style.js:    	}else if(elcsFF.getPro
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js:    		return elcsFF.getPropertyValue(cssprop);
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js:    }else{ //try and get inline style
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js://#include ruau.util.Style_export
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService_export.js: * Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService_export.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService_export.js: * you may not use this file except in compliance with the License.
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService_export.js: * You may obtain a copy of the License at
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService_export.js: *         http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService_export.js: * Unless required by applicable law or agreed to in writing, software
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService_export.js: * distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService_export.js: * See the License for the specific language governing permissions and
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService_export.js: * limitations under the License.
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService_export.js:    "create", expressionService.create,
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService_export.js:    "createPassthroughValue", expressionService.createPassthroughValue,
-ruau/ruau-impl/src/main/resources/ruau/RuueExpressionService_export.js:    "normalize",expressionService.normalize,
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService_export.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService_export.js: * Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService_export.js: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService_export.js: * You may obtain a copy of the License at
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService_export.js: *         http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService_export.js: * Unless required by applicable law or agreed to in writing, software
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService_export.js: * distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService_export.js: * See the License for the specific language governing permissions and
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService_export.js: * limitations under the License.
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService_export.js:    "create", expressionService.create,
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService_export.js:    "createPassthroughValue", expressionService.createPassthroughValue,
+ruau/ruau-impl/src/main/resources/ruau/RuueExPrEssionService_export.js:    "normalize",expressionService.normalize,
 ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService_export.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService_export.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-impl/src/main/resources/ruau/RuueLocalizationService_export.js: * you may not use this file except in compliance with the License.
@@ -2048,8 +2048,8 @@ ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:               
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:                decorators.decorating=false;
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:                decorators.value=null;
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:            value = this.values[key];
-ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:		value = ruau.expressionService.resolve(key, this.values);
-ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:	if (ruau.util.isExpression(value)) {
+ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:		value = ruau.exPrEssionService.resolve(key, this.values);
+ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:	if (ruau.util.isExPrEssion(value)) {
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:		value = value.evaluate();
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:    if(value instanceof ActionReferenceValue) {
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:        value = value.getAction();
@@ -2057,17 +2057,17 @@ ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:    if(this.sha
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:        value += this.getShadowValue(key);
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:	return value;
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:AttributeSet.prototype.getShadowValue=function(key){
-ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:    var value = ruau.expressionService.resolve(key, this.values, true);
+ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:    var value = ruau.exPrEssionService.resolve(key, this.values, true);
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:    if(value instanceof FunctionCallValue){
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:        if(this.shadowValues.hasOwnProperty(key)) {
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:            return this.shadowValues[key];
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:AttributeSet.prototype.setShadowValue=function(key,value){
-ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:    var oldValue = ruau.expressionService.resolve(key, this.values, true);
+ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:    var oldValue = ruau.exPrEssionService.resolve(key, this.values, true);
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:    if(oldValue instanceof FunctionCallValue){
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:        this.shadowValues[key]=value;
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js: * Set the attribute of the given name to the given value.
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js: * @param {String}
-ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js: *            key The key can be a path expression inside. E.g.
+ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js: *            key The key can be a path exPrEssion inside. E.g.
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js: *            attribute.nestedValue.value....}
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js: * @param {Object}
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js: *            value The value to be set.
@@ -2091,7 +2091,7 @@ ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:               
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:                    target[step] = {};
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:                    target[step] = [];
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:                target = target[step];
-ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:                if ($A.util.isExpression(nextTarget)) {
+ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:                if ($A.util.isExPrEssion(nextTarget)) {
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:                    target = nextTarget.evaluate();
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:                    target = nextTarget;
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:    if (target[key] instanceof PropertyReferenceValue && !target[key].isGlobal()) {
@@ -2104,7 +2104,7 @@ ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:        $A.warn
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js: * Clears a property reference value of the given name, and returns it. Does nothing if the attribute
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js: * does not exist or is not a property reference value.
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js: * @param {String}
-ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js: *            key The key can be a path expression inside. E.g.
+ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js: *            key The key can be a path exPrEssion inside. E.g.
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js: *            attribute.nestedValue.value....}
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js: * @returns {PropertyReferenceValue} the reference that was found and cleared, or null
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:AttributeSet.prototype.clearReference = function(key) {
@@ -2112,7 +2112,7 @@ ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:    var oldValu
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:    var target=this.values;
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:    var step=key;
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:        var path = key.split('.');
-ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:        target = ruau.expressionService.resolve(path.slice(0, path.length - 1), target);
+ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:        target = ruau.exPrEssionService.resolve(path.slice(0, path.length - 1), target);
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:        step=path[path.length-1];
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:    if(target) {
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:        oldValue = target[step];
@@ -2133,7 +2133,7 @@ ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:	if(!attributeD
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:		return false;
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:	var nativeType = attributeDef.getNativeType();
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:	// Do not validate property reference values or object types
-ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:	if($A.util.isExpression(value) || nativeType === "object") {
+ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:	if($A.util.isExPrEssion(value) || nativeType === "object") {
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:	// typeof [] == "object", so we need to do this one off for arrays.
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:	if(nativeType === "array") {
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:		return $A.util.isArray(value);
@@ -2179,7 +2179,7 @@ ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js: *            a
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js: * @private
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:AttributeSet.prototype.destroy = function(async) {
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:    var values = this.values;
-ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:    var expressions={};
+ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:    var exPrEssions={};
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:    for (var k in values) {
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:        var v = values[k];
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:        // Body is special because it's a map
@@ -2198,8 +2198,8 @@ ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:        //     
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:        if(!$A.util.isArray(v)){
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:        for(var i=0,value;i<v.length;i++){
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:            value = v[i];
-ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:            if($A.util.isExpression(value)){
-ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:                expressions[k]=value;
+ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:            if($A.util.isExPrEssion(value)){
+ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:                exPrEssions[k]=value;
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:            } else if (value && value.destroy) {
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:                value.destroy(async);
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:    this.values = this.attributeDefSet = undefined;
@@ -2238,15 +2238,15 @@ ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:    for(var att
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:        if(!this.hasAttribute(attribute)){
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:            unknownAttributes.push(attribute);
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:    $A.assert(unknownAttributes.length===0,"AttributeSet.initialize: The following unknown attributes could not be initialized: '"+unknownAttributes.join("', '")+"'. Please confirm the spelling and definition of these attributes.");
-ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:AttributeSet.prototype.isValid = function(expression) {
-ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:	return !this.errors.hasOwnProperty(expression);
-ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:AttributeSet.prototype.setValid = function(expression, valid) {
+ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:AttributeSet.prototype.isValid = function(exPrEssion) {
+ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:	return !this.errors.hasOwnProperty(exPrEssion);
+ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:AttributeSet.prototype.setValid = function(exPrEssion, valid) {
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:	if (valid) {
-ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:		this.clearErrors(expression);
-ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:		this.addErrors(expression, []);
-ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:AttributeSet.prototype.addErrors = function(expression, errors) {
-ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:	this.errors[expression] = this.errors[expression].concat(errors);
-ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:AttributeSet.prototype.clearErrors = function(expression) {
+ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:		this.clearErrors(exPrEssion);
+ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:		this.addErrors(exPrEssion, []);
+ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:AttributeSet.prototype.addErrors = function(exPrEssion, errors) {
+ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:	this.errors[exPrEssion] = this.errors[expression].concat(errors);
+ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeSet.js:AttributeSet.prototype.clearErrors = function(exPrEssion) {
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef.js: * you may not use this file except in compliance with the License.
@@ -2273,7 +2273,7 @@ ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef.js:        } else 
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef.js:            this.defaultValue=[];   
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef.js:AttributeDef.prototype.ruauType = "AttributeDef";
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef.js: * Gets the descriptor. Returns a DefDescriptor object that contains the metadata for the attribute.
-ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef.js: * @returns {DefDescriptor} The qualified name for a DefDescriptor object has the format <code>prefix://namespace:name</code>.
+ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef.js: * @returns {DefDescriptor} The qualified name for a DefDescriptor object has the format <code>PrEfix://namespace:name</code>.
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef.js: * Checks whether the attribute definition is required.
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef.js: * Returns true by default.
 ruau/ruau-impl/src/main/resources/ruau/attribute/AttributeDef.js: * @returns {Boolean} True by default.
@@ -2435,17 +2435,17 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js: * Unless required b
 ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js: * distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js: * See the License for the specific language governing permissions and
 ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js: * limitations under the License.
-ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js:$A.ns.Test.prototype.putMessage = function(pre, expected, msg) {
+ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js:$A.ns.Test.prototype.putMessage = function(PrE, expected, msg) {
 ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js:    for (var i = 0; i < expected.length; i++) {
 ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js:    return false;
-ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js:$A.ns.Test.prototype.expectMessage = function(pre, expected, msg) {
-ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js:        for (var i = 0; i < pre.length; i++) {
+ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js:$A.ns.Test.prototype.expectMessage = function(PrE, expected, msg) {
+ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js:        for (var i = 0; i < PrE.length; i++) {
 ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js: * Set any common entries in the two arrays to undefined.
-ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js: * This is used to compare two arrays of error messages, leaving only unexpected errors received (in the pre array)
+ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js: * This is used to compare two arrays of error messages, leaving only unexpected errors received (in the PrE array)
 ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js: * and expected errors not received (in the expected array).
 ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js: * @private
-ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js:$A.ns.Test.prototype.clearExpected = function(pre, expected) {
-ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js:    for (var i = 0; i < pre.length; i++) {
+ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js:$A.ns.Test.prototype.clearExpected = function(PrE, expected) {
+ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js:    for (var i = 0; i < PrE.length; i++) {
 ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js:        for (var j = 0; j < expected.length; j++) {
 ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js:                break;
 ruau/ruau-impl/src/main/resources/ruau/test/Test_private.js: * Register a global error handler to catch uncaught javascript errors.
@@ -2588,7 +2588,7 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.waits = [];
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.cleanups = [];
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.completed = {}; // A map of action name to boolean for 'named' actions that have been queued
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.inProgress = -1; // -1:uninitialized, 0:complete, 1:tearing down, 2:running, 3+:waiting
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.preWarnings = [];
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.PrEWarnings = [];
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.expectedWarnings = [];
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.failOnWarning = false;
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.stages = undefined;
@@ -2741,13 +2741,13 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test.js:$A.ns.Test.prototype.clearAn
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    if ($A.getContext().clearComponentConfigs(a.getId()) === 0) {
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        this.fail("No component configs were cleared for "+a.getStorageKey());
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Peek if there are any pending server actions.
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * NOTE: this is used as a predicate and does not have access to 'this'. If this function changes
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * NOTE: this is used as a PrEdicate and does not have access to 'this'. If this function changes
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * to rquire 'this', either the uses will need to be refactored, or isActionPending will need to be
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * auto-bound.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @returns {Boolean} Returns true if there are pending server actions, or false otherwise.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Mark an action so we can tell when it is complete.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * This sets the callback on the action to mark the action complete.
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * The action passed in may have a callback set previously, if so, that
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * The action passed in may have a callback set PrEviously, if so, that
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * callback will be called before the action is set as complete.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Action} action The action to modify
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {string} name The name to use (must be unique)
@@ -2761,7 +2761,7 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        if (a.getState() ===
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:            this.completed[myName] = "SUCCESS";
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:            this.completed[myName] = "FAILURE";
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Check to see if an action is complete.
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * If you have previously called <code>markForCompletion</code> this
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * If you have PrEviously called <code>markForCompletion</code> this
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * will check that the callback has been called (and thus
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * that the action is complete). It does not check for
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * success/failure.
@@ -2773,7 +2773,7 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    if ($A.util.isUndefinedO
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        this.fail("Unregistered name "+name);
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    return this.completed[name] !== "INCOMPLETE";
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Check to see if an action was successful
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * If you have previously called <code>markForCompletion</code> this
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * If you have PrEviously called <code>markForCompletion</code> this
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * will check that the callback has been called with a
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {string} name
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *          The name of the action to check for success
@@ -2783,7 +2783,7 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    if ($A.util.isUndefinedO
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        this.fail("Unregistered name "+name);
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    return this.completed[name] === "SUCCESS";
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Check to see if an action is complete.
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * If you have previously called <code>markForCompletion</code> this
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * If you have PrEviously called <code>markForCompletion</code> this
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * will check that the callback has been called (and thus
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * that the action is complete). It does not check for
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * success/failure.
@@ -2838,7 +2838,7 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test.js:$A.ns.Test.prototype.setServ
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    if (arguments.length === 0 || reachable) {
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Invoke a callback after the provided condition evaluates to truthy,
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * checking on the condition every specified interval.
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Truthy values can refer to a non-empty String, a non-zero number, a non-empty array, an object, or an expression evaluating to true.
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Truthy values can refer to a non-empty String, a non-zero number, a non-empty array, an object, or an exPrEssion evaluating to true.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Function} conditionFunction
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *             The function to evaluate
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Function} callback
@@ -2880,17 +2880,17 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Internally used error fun
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Object|String} e the error object or message.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @private
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:$A.ns.Test.prototype.ruauError = function(e) {
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    if (!this.putMessage(this.preErrors, this.expectedErrors, e)) {
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    if (!this.putMessage(this.PrEErrors, this.expectedErrors, e)) {
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        this.fail(e);
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Tell the test that we expect an error. Test will fail if expected error
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {string} e The error message that we expect.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:$A.ns.Test.prototype.expectRuueError = function(e) {
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.expectMessage(this.preErrors, this.expectedErrors, e);
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.expectMessage(this.PrEErrors, this.expectedErrors, e);
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Internally used warning function to log a warning for a given test.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {String} w The warning message.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @private
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:$A.ns.Test.prototype.ruauWarning = function(w) {
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    if (!this.putMessage(this.preWarnings, this.expectedWarnings, w)) {
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    if (!this.putMessage(this.PrEWarnings, this.expectedWarnings, w)) {
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        if(this.failOnWarning) {
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:            this.fail("Unexpected warning = "+w);
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        $A.log("Unexpected warning = "+w);
@@ -2899,7 +2899,7 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Tell the test that we exp
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * test does not receive the expected warning, the test will fail.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {String} w the warning message that we expect.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:$A.ns.Test.prototype.expectRuueWarning = function(w) {
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.expectMessage(this.preWarnings, this.expectedWarnings, w);
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.expectMessage(this.PrEWarnings, this.expectedWarnings, w);
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @description Assert that if(condition) check evaluates to true.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * A truthy value refers to an Object, a string, a non-zero number, a non-empty array, or true.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @example
@@ -2918,7 +2918,7 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Assert that the current c
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @description Calls the checkAccessibilty method to verify certain tags are accessible.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {String} errorMessage
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *          The message that is returned if the condition is not false
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @throws {Error} Throws Error containing concatenated string representation of all
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @throws {Error} Throws Error containing concatenated string rePrEsentation of all
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: *                 accessibility errors found
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:$A.ns.Test.prototype.assertAccessible = function() {
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    var res = ruau.devToolService.checkAccessibility();

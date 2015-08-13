@@ -941,7 +941,7 @@
 ./install/gradle-2.2.1/src/plugin-use/org/gradle/plugin/use/resolve/service/internal/PluginResolutionServiceClient.java
 ./install/gradle-2.2.1/src/plugin-use/org/gradle/plugin/use/resolve/service/internal/OfflinePluginResolutionServiceClient.java
 ./install/gradle-2.2.1/src/plugin-use/org/gradle/plugin/use/resolve/service/internal/PersistentCachingPluginResolutionServiceClient.java
-./install/gradle-2.2.1/src/plugin-use/org/gradle/plugin/use/resolve/service/internal/DeprecationListeningPluginResolutionServiceClient.java
+./install/gradle-2.2.1/src/plugin-use/org/gradle/plugin/use/resolve/service/internal/DePrEcationListeningPluginResolutionServiceClient.java
 ./install/gradle-2.2.1/src/plugin-use/org/gradle/plugin/use/internal
 ./install/gradle-2.2.1/src/plugin-use/org/gradle/plugin/use/internal/PluginResolutionApplicator.java
 ./install/gradle-2.2.1/src/plugin-use/org/gradle/plugin/use/internal/PluginResolverFactory.java
@@ -2338,10 +2338,10 @@
 ./install/gradle-2.2.1/src/core/org/gradle/internal/xml/XmlValidation.java
 ./install/gradle-2.2.1/src/core/org/gradle/internal/xml/XmlTransformer.java
 ./install/gradle-2.2.1/src/core/org/gradle/internal/featurelifecycle
-./install/gradle-2.2.1/src/core/org/gradle/internal/featurelifecycle/DeprecatedFeatureUsage.java
-./install/gradle-2.2.1/src/core/org/gradle/internal/featurelifecycle/LoggingDeprecatedFeatureHandler.java
+./install/gradle-2.2.1/src/core/org/gradle/internal/featurelifecycle/DePrEcatedFeatureUsage.java
+./install/gradle-2.2.1/src/core/org/gradle/internal/featurelifecycle/LoggingDePrEcatedFeatureHandler.java
 ./install/gradle-2.2.1/src/core/org/gradle/internal/featurelifecycle/ScriptUsageLocationReporter.java
-./install/gradle-2.2.1/src/core/org/gradle/internal/featurelifecycle/DeprecatedFeatureHandler.java
+./install/gradle-2.2.1/src/core/org/gradle/internal/featurelifecycle/DePrEcatedFeatureHandler.java
 ./install/gradle-2.2.1/src/core/org/gradle/internal/featurelifecycle/UsageLocationReporter.java
 ./install/gradle-2.2.1/src/core/org/gradle/internal/service
 ./install/gradle-2.2.1/src/core/org/gradle/internal/service/scopes
@@ -2869,7 +2869,7 @@
 ./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/ant
 ./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/ant/AntFileResource.java
 ./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/ant/BaseDirSelector.java
-./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/MaybeCompressedFileResource.java
+./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/MaybeComPrEssedFileResource.java
 ./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/FileLookup.java
 ./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/TemporaryFileProvider.java
 ./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/AbstractFileTree.java
@@ -2910,11 +2910,11 @@
 ./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/collections/SingleIncludePatternFileTree.java
 ./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/FileResolver.java
 ./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/archive
-./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/archive/compression
-./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/archive/compression/ArchiveOutputStreamFactory.java
-./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/archive/compression/Bzip2Archiver.java
-./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/archive/compression/GzipArchiver.java
-./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/archive/compression/SimpleCompressor.java
+./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/archive/comPrEssion
+./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/archive/comPrEssion/ArchiveOutputStreamFactory.java
+./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/archive/comPrEssion/Bzip2Archiver.java
+./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/archive/comPrEssion/GzipArchiver.java
+./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/archive/comPrEssion/SimpleCompressor.java
 ./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/archive/ZipCopyAction.java
 ./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/archive/TarFileTree.java
 ./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/archive/TarCopyAction.java
@@ -2939,7 +2939,7 @@
 ./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/copy/FileCopyDetailsInternal.java
 ./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/copy/DefaultCopySpec.java
 ./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/copy/CopySpecWrapper.java
-./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/copy/DefaultZipCompressor.java
+./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/copy/DefaultZipComPrEssor.java
 ./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/copy/CopySpecSource.java
 ./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/copy/SyncCopyActionDecorator.java
 ./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/copy/RegExpNameMapper.java
@@ -2957,7 +2957,7 @@
 ./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/copy/DelegatingCopySpecInternal.java
 ./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/copy/DestinationRootCopySpec.java
 ./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/copy/RenamingCopyAction.java
-./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/copy/ZipCompressor.java
+./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/copy/ZipComPrEssor.java
 ./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/copy/CopySpecActionImpl.java
 ./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/copy/DeleteActionImpl.java
 ./install/gradle-2.2.1/src/core/org/gradle/api/internal/file/copy/CopyActionProcessingStream.java

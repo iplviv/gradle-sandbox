@@ -21,11 +21,11 @@ ruau/ruau-components/src/main/components/ui/listSorter/listSorterController.js:	
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterController.js:	onMenuExpand: function(cmp, evt, helper) {
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterController.js:		var action = cmp.get('v.onOpen');
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterController.js:        if (action) {
-ruau/ruau-components/src/main/components/ui/listSorter/listSorterController.js:        	action.runDeprecated();
+ruau/ruau-components/src/main/components/ui/listSorter/listSorterController.js:        	action.runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterController.js:	onMenuCollapse: function(cmp, evt, helper) {
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterController.js:		var action = cmp.get('v.onCancel');
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterController.js:        if (action) {
-ruau/ruau-components/src/main/components/ui/listSorter/listSorterController.js:        	action.runDeprecated();
+ruau/ruau-components/src/main/components/ui/listSorter/listSorterController.js:        	action.runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterController.js:		helper.updateSortOrder(cmp);
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterController.js:		helper.handleApply(cmp);
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterController.js:		var visible = evt.getParam('value');
@@ -195,11 +195,11 @@ ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:<ruau:docume
 ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:	<ruau:description>
 ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:	        To toggle the spinner, use <code>get("e.toggle")</code>, set the <code>isVisible</code> parameter to <code>true</code> or <code>false</code>, and then fire the event.
 ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:	    <p>This example shows a spinner when a component is expecting a server response and removes the spinner when the component is no longer waiting for a response.</p>
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:<pre>&lt;ruau:component>
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:<PrE>&lt;ruau:component>
 ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:    &lt;ruau:handler event="ruau:waiting" action="{!c.showSpinner}"/>
 ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:    &lt;ruau:handler event="ruau:doneWaiting" action="{!c.hideSpinner}"/>
 ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:   &lt;center>&lt;ui:spinner ruau:id="spinner"/>&lt;/center>
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:&lt;/ruau:component></pre>
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:&lt;/ruau:component></PrE>
 ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:	<p>This client-side controllers shows and hides the spinner accordingly.</p>
 ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:        var spinner = component.find('spinner');
 ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:        var evt = spinner.get("e.toggle");
@@ -349,7 +349,7 @@ ruau/ruau-components/src/main/components/ui/dialog/dialog.cmp:        <ruau:if i
 ruau/ruau-components/src/main/components/ui/dialog/dialog.cmp:            <div ruau:id="buttons" class="buttons">{!v.buttons}</div>
 ruau/ruau-components/src/main/components/ui/dialog/dialog.cmp:        </ruau:if>
 ruau/ruau-components/src/main/components/ui/dialog/dialog.cmp:        <!-- close ("x") link - this DOM placement is intentional. DO NOT move, hide, or remove this element. see dialogManagerHelper#getFirstFocusableElement for more info -->
-ruau/ruau-components/src/main/components/ui/dialog/dialog.cmp:        <ui:button ruau:id="closeButton" class="{!'close ' + v.closeClass}" label="{!v.closeLabel}" buttonTitle="{!v.closeTitle}" press="{!c.close}" theme="{!v.theme}"/>
+ruau/ruau-components/src/main/components/ui/dialog/dialog.cmp:        <ui:button ruau:id="closeButton" class="{!'close ' + v.closeClass}" label="{!v.closeLabel}" buttonTitle="{!v.closeTitle}" PrEss="{!c.close}" theme="{!v.theme}"/>
 ruau/ruau-components/src/main/components/ui/dialog/dialog.cmp:</ruau:component>
 ruau/ruau-components/src/main/components/ui/dialog/dialogTest.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/dialog/dialogTest.js: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -492,7 +492,7 @@ ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:	<ruau:descrip
 ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:			To use <code>ui:dialog</code>, include one instance of <code>ui:dialogManager</code> component at the end of your component.
 ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:			Only one instance of <code>ui:dialogManager</code> is required to handle multiple dialogs.
 ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:			To handle the opening and closing of your dialogs, use the <code>ui:openDialog</code> and <code>ui:closeDialog</code> application events.
-ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:			To prevent the dialog from being closed when you click outside of the dialog area, set <code>clickOutToClose="false"</code>.
+ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:			To PrEvent the dialog from being closed when you click outside of the dialog area, set <code>clickOutToClose="false"</code>.
 ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:		   You can use the default buttons by placing the <code>ui:dialogButtons</code> component in the <code>&lt;ruau:set attribute="buttons"&gt;</code> tag.     
 ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:		   Setting <code>&lt;ui:dialogButtons defaultButtons="both"&gt;</code> provides default OK and Cancel buttons, but you can provide your own buttons using <code>ui:button</code> components.
 ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:	</ruau:description>	
@@ -514,7 +514,7 @@ ruau/ruau-components/src/main/components/ui/actionButton/actionButton.cmp:    Se
 ruau/ruau-components/src/main/components/ui/actionButton/actionButton.cmp:    limitations under the License.
 ruau/ruau-components/src/main/components/ui/actionButton/actionButton.cmp:<ruau:component extends="ui:action" support="PROTO" description="A button used in ui:dataGrid that enables row-level click events to bubble up to the grid.">
 ruau/ruau-components/src/main/components/ui/actionButton/actionButton.cmp:    <ruau:attribute name="disabled" type="Boolean"/>
-ruau/ruau-components/src/main/components/ui/actionButton/actionButton.cmp:    <ui:button label="{!v.label}" press="{!c.handleClick}" disabled="{!v.disabled}"/>
+ruau/ruau-components/src/main/components/ui/actionButton/actionButton.cmp:    <ui:button label="{!v.label}" PrEss="{!c.handleClick}" disabled="{!v.disabled}"/>
 ruau/ruau-components/src/main/components/ui/actionButton/actionButton.cmp:</ruau:component>
 ruau/ruau-components/src/main/components/ui/matchText/matchText.evt:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/matchText/matchText.evt:    Licensed under the Apache License, Version 2.0 (the "License");
@@ -651,7 +651,7 @@ ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:         
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:        var menuItem = this.getMenuItem(component, index);
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:            var action = menuItem.get("c.setFocus");
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:            if (action) {
-ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:                action.runDeprecated();
+ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:                action.runDePrEcated();
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:    	var concreteCmp = component.getConcreteComponent();
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:        var visible = concreteCmp.get("v.visible");
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:            if (currentlyVisible !== true) { // If menu changes from invisible to visible, let's set the initial focus
@@ -670,9 +670,9 @@ ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:    	if (
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:    		component._keyboardEventHandler = function(event) {
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:		        var concreteCmp = component.getConcreteComponent();
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:		            if (event.keyCode === 39 || event.keyCode === 40) {  // right or down arrow key
-ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:		                event.preventDefault();
+ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:		                event.PrEventDefault();
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:		            } else if (event.keyCode === 37 || event.keyCode === 38) {  // left or up arrow key
-ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:		                event.preventDefault();
+ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:		                event.PrEventDefault();
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:		                event.stopPropagation();
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:		                helper.handleEsckeydown(concreteCmp, event);
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:		            } else if (event.keyCode === 9) {  // tab key: dismiss the menu
@@ -683,7 +683,7 @@ ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:    handl
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:        // put the focus back to menu trigger
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:    	var action =  component.get("v.focusTrigger");
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:    	if (action) {
-ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:    		action.runDeprecated();
+ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:    		action.runDePrEcated();
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:        var nextIndex = 0;
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:        var srcComponent = this.getComponentForElement(event.target || event.srcElement);
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:        var menuItems = component.get("v.childMenuItems");
@@ -691,16 +691,16 @@ ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:        f
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:                break;
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:        var nextFocusCmp = menuItems[nextIndex];
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:        var action = nextFocusCmp.get("c.setFocus");
-ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:        action.runDeprecated();
-ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:        var previousIndex = 0;
+ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:        action.runDePrEcated();
+ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:        var PrEviousIndex = 0;
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:        var srcComponent = this.getComponentForElement(event.target || event.srcElement);
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:        var menuItems = component.get("v.childMenuItems");
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:        for (var i = 0; i < menuItems.length; i++) {
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:                break;
-ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:        var previousFocusCmp = menuItems[previousIndex];
-ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:        var action = previousFocusCmp.get("c.setFocus");
-ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:        action.runDeprecated();
-ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:     * Dismiss the menu when tab key is pressed.
+ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:        var PrEviousFocusCmp = menuItems[previousIndex];
+ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:        var action = PrEviousFocusCmp.get("c.setFocus");
+ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:        action.runDePrEcated();
+ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:     * Dismiss the menu when tab key is PrEssed.
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:    handleTabkeydown: function(component, event) {
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:		var closeOnTab = component.get('v.closeOnTabKey');
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:        var concreteComponent = component.getConcreteComponent();
@@ -718,7 +718,7 @@ ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:         
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:            var text = c.get("v.label");
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:            if(text.toLowerCase().indexOf(matchText) === 0) {
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:                var action = c.get("c.setFocus");
-ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:                action.runDeprecated();
+ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:                action.runDePrEcated();
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:                break;
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:        component._clearBufferId = setTimeout(function() {
 ruau/ruau-components/src/main/components/ui/menuList/menuListHelper.js:          var children = component.get("v.childMenuItems");
@@ -773,7 +773,7 @@ ruau/ruau-components/src/main/components/ui/menuList/menuList.cmp:    <ruau:regi
 ruau/ruau-components/src/main/components/ui/menuList/menuList.cmp:    <ruau:registerEvent name="refresh" type="ui:refresh" description="Fire this event to refresh the menuList."/>
 ruau/ruau-components/src/main/components/ui/menuList/menuList.cmp:    <ruau:handler name="refresh" action="{!c.update}"/>
 ruau/ruau-components/src/main/components/ui/menuList/menuList.cmp:    <div ruau:id="menu" role="menu">
-ruau/ruau-components/src/main/components/ui/menuList/menuList.cmp:    	 <ul ruau:id="datalist" role="presentation">
+ruau/ruau-components/src/main/components/ui/menuList/menuList.cmp:    	 <ul ruau:id="datalist" role="PrEsentation">
 ruau/ruau-components/src/main/components/ui/menuList/menuList.cmp:            <ruau:iteration items="{!v.menuItems}" var="item">
 ruau/ruau-components/src/main/components/ui/menuList/menuList.cmp:                <ui:menuItem ruau:id="item" class="{!item.className}" disabled="{!item.disabled}" label="{!item.label}" selected="{!item.selected}" type="{!item.type}" value="{!item.value}"/>
 ruau/ruau-components/src/main/components/ui/menuList/menuList.cmp:            </ruau:iteration>
@@ -923,7 +923,7 @@ ruau/ruau-components/src/main/components/ui/panelDialog/panelDialog.cmp:    	   
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialog.cmp:	    	        	<ruau:renderIf isTrue="{! v.detail != '' &amp;&amp; v.detail != null}">
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialog.cmp:	    					<div class="detail">{!v.detail}</div>
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialog.cmp:	    				</ruau:renderIf>
-ruau/ruau-components/src/main/components/ui/panelDialog/panelDialog.cmp:                <ui:button class="closeBtn" press="{!c.close}"
+ruau/ruau-components/src/main/components/ui/panelDialog/panelDialog.cmp:                <ui:button class="closeBtn" PrEss="{!c.close}"
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialog.cmp:                	label="{!$Label.Buttons.closeWindow}"
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialog.cmp:                	buttonTitle="{!$Label.Buttons.closeWindow}"
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialog.cmp:                	labelDisplay="false"
@@ -1107,8 +1107,8 @@ ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:   
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:    		containedCmp = p.find(localId);
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:    	return containedCmp;
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:	        var styles = window.getComputedStyle(document.documentElement, ''),
-ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:	            pre = (Array.prototype.slice.call(styles).join('').match(/-(moz|webkit|ms)-/) || (styles.OLink === '' && ['', 'o']))[1],
-ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:	        this._prefix = up ? pre.toUpperCase() : pre;
+ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:	            PrE = (Array.prototype.slice.call(styles).join('').match(/-(moz|webkit|ms)-/) || (styles.OLink === '' && ['', 'o']))[1],
+ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:	        this._PrEfix = up ? pre.toUpperCase() : pre;
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:	getAnimationEndEventName: function () {
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:        var eventName = this.ANIMATION_END_EVENT_NAMES[this.getPrefix()];
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:        return eventName ? eventName : 'animationend';
@@ -1289,7 +1289,7 @@ ruau/ruau-components/src/main/components/ui/panelDialog/panelDialog.css:		max-wi
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialog.css:.THIS .panelDialog .body {
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialog.css:	padding-top: 0;
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialog.css:	background-color: inherit;
-ruau/ruau-components/src/main/components/ui/panelDialog/panelDialog.css:.THIS .panelDialog .body.scrollbox > div.uiScrollerDeprecated > div {
+ruau/ruau-components/src/main/components/ui/panelDialog/panelDialog.css:.THIS .panelDialog .body.scrollbox > div.uiScrollerDePrEcated > div {
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialog.css:	padding-bottom: 14px
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialog.css:.THIS .panelDialog .label {
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialog.css:	max-width: 100%;
@@ -1371,7 +1371,7 @@ ruau/ruau-components/src/main/components/ui/createSlidePanel/createSlidePanel.ev
 ruau/ruau-components/src/main/components/ui/createSlidePanel/createSlidePanel.evt:    distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau-components/src/main/components/ui/createSlidePanel/createSlidePanel.evt:    See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ui/createSlidePanel/createSlidePanel.evt:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/createSlidePanel/createSlidePanel.evt:	 one:createSlidePanel and one:destroySlidePanel are deprecated.  
+ruau/ruau-components/src/main/components/ui/createSlidePanel/createSlidePanel.evt:	 one:createSlidePanel and one:destroySlidePanel are dePrEcated.  
 ruau/ruau-components/src/main/components/ui/createSlidePanel/createSlidePanel.evt:	 Please use force:createPanelSlider and force:destroyPanel instead
 ruau/ruau-components/src/main/components/ui/createSlidePanel/createSlidePanel.evt:	 (along with force:showPanelSlider and force:hidePanel if you like).
 ruau/ruau-components/src/main/components/ui/createSlidePanel/createSlidePanel.evt:	 See onetest:panelSliderWrapperTest.js for examples.
@@ -1415,7 +1415,7 @@ ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPrevious.
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPrevious.cmp:    <ruau:attribute name="Labels_First" type="String" default="First"          description="The text to display in the label of the link used to jump to the first page."/>
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPrevious.cmp:    <ruau:attribute name="Labels_Last" type="String" default="Last"            description="The text to display in the label of the link used to jump to the last page."/>
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPrevious.cmp:    <ruau:attribute name="Labels_Next" type="String" default="Next"            description="The text to display in the label of the link used to jump to the next page."/>
-ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPrevious.cmp:    <ruau:attribute name="Labels_Previous" type="String" default="Previous"    description="The text to display in the label of the link used to jump to the previous page."/>
+ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPrevious.cmp:    <ruau:attribute name="Labels_Previous" type="String" default="Previous"    description="The text to display in the label of the link used to jump to the PrEvious page."/>
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPrevious.cmp:   <div class="{!v.class+' pagerContainer pagerNextPrevious'+(v.totalItems==0?' empty':'')}">
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPrevious.cmp:        <a ruau:id="pager:first" class="{!'pagerControl first' + ((v.currentPage le 1)?' off':'')}" onclick="{!c.firstPage}" href="javascript:void('First')" aria-disabled="{!v.currentPage le 1}">
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPrevious.cmp:        	<ruau:renderIf isTrue="{!v.currentPage le 1}">
@@ -1424,7 +1424,7 @@ ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPrevious.
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPrevious.cmp:            <span class="visualization"></span>
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPrevious.cmp:            <span class="label">{!v.Labels_First}</span>
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPrevious.cmp:        </a>
-ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPrevious.cmp:        <a ruau:id="pager:previous" class="{!'pagerControl previous' + ((v.currentPage le 1)?' off':'')}" onclick="{!c.previousPage}" href="javascript:void('Previous')" aria-disabled="{!v.currentPage le 1}">
+ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPrevious.cmp:        <a ruau:id="pager:PrEvious" class="{!'pagerControl previous' + ((v.currentPage le 1)?' off':'')}" onclick="{!c.previousPage}" href="javascript:void('Previous')" aria-disabled="{!v.currentPage le 1}">
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPrevious.cmp:        	<ruau:renderIf isTrue="{!v.currentPage le 1}">
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPrevious.cmp:        	<span class="assistiveText">Disabled</span>
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPrevious.cmp:        	</ruau:renderIf>
@@ -1490,7 +1490,7 @@ ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousC
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousController.js:    	if (currentPage == pageCount) {
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousController.js:        var targetPage = Math.min(currentPage+1, pageCount);
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousController.js:        helper.changePage(component, targetPage, domEvent);
-ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousController.js:    previousPage:function (component, domEvent, helper) {
+ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousController.js:    PrEviousPage:function (component, domEvent, helper) {
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousController.js:    	var currentPage = parseInt(component.get("v.currentPage"), 10);
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousController.js:    	if (currentPage <= 1) {
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousController.js:        var targetPage = Math.max(currentPage-1, 1);
@@ -1508,53 +1508,53 @@ ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousT
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:	testFirstPage: {
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        attributes : {currentPage : 1, pageSize : 10, totalItems: 50},
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	first = cmp.find("pager:first").getElement();
-ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	previous = cmp.find("pager:previous").getElement();
+ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	PrEvious = cmp.find("pager:previous").getElement();
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	next = cmp.find("pager:next").getElement();
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	last = cmp.find("pager:last").getElement();
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	$A.test.assertTrue($A.util.hasClass(first,"off"), "first Link should be disable");
-ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	$A.test.assertTrue($A.util.hasClass(previous,"off"), "previous Link should be disable");
+ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	$A.test.assertTrue($A.util.hasClass(PrEvious,"off"), "previous Link should be disable");
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	$A.test.assertFalse($A.util.hasClass(next,"off"), "next Link should be enable");
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	$A.test.assertFalse($A.util.hasClass(last,"off"), "last Link should be enable");
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:     * Tests to verify links on last page
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:    testLastPage: {
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        attributes : {currentPage : 5, pageSize : 10, totalItems: 50},
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	first = cmp.find("pager:first").getElement();
-ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	previous = cmp.find("pager:previous").getElement();
+ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	PrEvious = cmp.find("pager:previous").getElement();
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	next = cmp.find("pager:next").getElement();
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	last = cmp.find("pager:last").getElement();
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	$A.test.assertFalse($A.util.hasClass(first,"off"), "first Link should be enable");
-ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	$A.test.assertFalse($A.util.hasClass(previous,"off"), "previous Link should be enable");
+ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	$A.test.assertFalse($A.util.hasClass(PrEvious,"off"), "previous Link should be enable");
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	$A.test.assertTrue($A.util.hasClass(next,"off"), "next Link should be disable");
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	$A.test.assertTrue($A.util.hasClass(last,"off"), "last Link should be disable");
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:     * Tests to verify links on middle page
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:    testMiddlePage: {
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        attributes : {currentPage : 3, pageSize : 10, totalItems: 50},
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	first = cmp.find("pager:first").getElement();
-ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	previous = cmp.find("pager:previous").getElement();
+ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	PrEvious = cmp.find("pager:previous").getElement();
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	next = cmp.find("pager:next").getElement();
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	last = cmp.find("pager:last").getElement();
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	$A.test.assertFalse($A.util.hasClass(first,"off"), "first Link should be enable");
-ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	$A.test.assertFalse($A.util.hasClass(previous,"off"), "previous Link should be enable");
+ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	$A.test.assertFalse($A.util.hasClass(PrEvious,"off"), "previous Link should be enable");
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	$A.test.assertFalse($A.util.hasClass(next,"off"), "next Link should be enable");
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	$A.test.assertFalse($A.util.hasClass(last,"off"), "last Link should be enable");
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:     * Test to verify default behavior when no attribute values are set
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:    testWithoutPassingAttributesValues: {
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	first = cmp.find("pager:first").getElement();
-ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	previous = cmp.find("pager:previous").getElement();
+ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	PrEvious = cmp.find("pager:previous").getElement();
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	next = cmp.find("pager:next").getElement();
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	last = cmp.find("pager:last").getElement();
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	$A.test.assertTrue($A.util.hasClass(first,"off"), "first Link should be disable");
-ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	$A.test.assertTrue($A.util.hasClass(previous,"off"), "previous Link should be disable");
+ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	$A.test.assertTrue($A.util.hasClass(PrEvious,"off"), "previous Link should be disable");
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	$A.test.assertTrue($A.util.hasClass(next,"off"), "next Link should be disable");
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	$A.test.assertTrue($A.util.hasClass(last,"off"), "last Link should be disable");
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:    testFilterListWithJustOnePage: {
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        attributes : {currentPage : 1, pageSize : 25 ,totalItems: 10},
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	first = cmp.find("pager:first").getElement();
-ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	previous = cmp.find("pager:previous").getElement();
+ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	PrEvious = cmp.find("pager:previous").getElement();
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	next = cmp.find("pager:next").getElement();
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	last = cmp.find("pager:last").getElement();
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	$A.test.assertTrue($A.util.hasClass(first,"off"), "first Link should be disable");
-ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	$A.test.assertTrue($A.util.hasClass(previous,"off"), "previous Link should be disable");
+ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	$A.test.assertTrue($A.util.hasClass(PrEvious,"off"), "previous Link should be disable");
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	$A.test.assertTrue($A.util.hasClass(next,"off"), "next Link should be disable");
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:        	$A.test.assertTrue($A.util.hasClass(last,"off"), "last Link should be disable");
 ruau/ruau-components/src/main/components/ui/pagerNextPrevious/pagerNextPreviousTest.js:     * Test exception is thrown when negative values are passed
@@ -1867,7 +1867,7 @@ ruau/ruau-components/src/main/components/ui/abstractList/abstractList.cmp:				ab
 ruau/ruau-components/src/main/components/ui/abstractList/abstractList.cmp:				implements="ui:visible, ui:pagingInterface"  
 ruau/ruau-components/src/main/components/ui/abstractList/abstractList.cmp:				description="An abstract component that provides a basic layout for the ui:list component.">
 ruau/ruau-components/src/main/components/ui/abstractList/abstractList.cmp:    <ruau:attribute name="itemTemplate" type="Ruue.ComponentDefRef[]" required="true" description="A ComponentDefRef to use as the template for each generated row in the list."/>
-ruau/ruau-components/src/main/components/ui/abstractList/abstractList.cmp:    <ruau:attribute name="items" type="Object[]" description="An array of arbitrary map objects representing the rows of data in the list."/>
+ruau/ruau-components/src/main/components/ui/abstractList/abstractList.cmp:    <ruau:attribute name="items" type="Object[]" description="An array of arbitrary map objects rePrEsenting the rows of data in the list."/>
 ruau/ruau-components/src/main/components/ui/abstractList/abstractList.cmp:    <ruau:attribute name="itemVar" type="String" required="true" description="The name by which to refer to the current data object inside of the template for each row."/>
 ruau/ruau-components/src/main/components/ui/abstractList/abstractList.cmp:    <ruau:attribute name="dataProvider" type="Ruue.Component[]" required="true" description="A list of data provider components. Use a ui:dataProvider component to provide list data."/>
 ruau/ruau-components/src/main/components/ui/abstractList/abstractList.cmp:    <ruau:attribute name="emptyListContent" type="Ruue.Component[]" description="Content to be shown if the list is empty"/>
@@ -1913,7 +1913,7 @@ ruau/ruau-components/src/main/components/ui/abstractList/abstractListHelper.js:	
 ruau/ruau-components/src/main/components/ui/abstractList/abstractListHelper.js:        this.showLoading(component, false);
 ruau/ruau-components/src/main/components/ui/abstractList/abstractListHelper.js:        if (callback) {
 ruau/ruau-components/src/main/components/ui/abstractList/abstractListHelper.js:        	callback(); 
-ruau/ruau-components/src/main/components/ui/abstractList/abstractListHelper.js:	/** Behavior to prepare the list for new data before a refresh **/
+ruau/ruau-components/src/main/components/ui/abstractList/abstractListHelper.js:	/** Behavior to PrEpare the list for new data before a refresh **/
 ruau/ruau-components/src/main/components/ui/abstractList/abstractListHelper.js:	updateEmptyListContent:function (component) {
 ruau/ruau-components/src/main/components/ui/abstractList/abstractListHelper.js:		// make sure we are referencing a concrete component.
 ruau/ruau-components/src/main/components/ui/abstractList/abstractListHelper.js:		var concrete_component = component.getConcreteComponent();
@@ -2182,7 +2182,7 @@ ruau/ruau-components/src/main/components/ui/pagerKeyed/pagerKeyed.evt:    Unless
 ruau/ruau-components/src/main/components/ui/pagerKeyed/pagerKeyed.evt:    distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau-components/src/main/components/ui/pagerKeyed/pagerKeyed.evt:    See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ui/pagerKeyed/pagerKeyed.evt:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/pagerKeyed/pagerKeyed.evt:<ruau:event type="COMPONENT" support="GA" description="Indicates that a tab has been key pressed.">    
+ruau/ruau-components/src/main/components/ui/pagerKeyed/pagerKeyed.evt:<ruau:event type="COMPONENT" support="GA" description="Indicates that a tab has been key PrEssed.">    
 ruau/ruau-components/src/main/components/ui/pagerKeyed/pagerKeyed.evt:    <ruau:attribute name="pageIndex" type="Integer"/>
 ruau/ruau-components/src/main/components/ui/pagerKeyed/pagerKeyed.evt:    <ruau:attribute name="event" type="Object"/>
 ruau/ruau-components/src/main/components/ui/pagerKeyed/pagerKeyed.evt:</ruau:event>
@@ -2195,7 +2195,7 @@ ruau/ruau-components/src/main/components/ui/destroySlidePanel/destroySlidePanel.
 ruau/ruau-components/src/main/components/ui/destroySlidePanel/destroySlidePanel.evt:    distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau-components/src/main/components/ui/destroySlidePanel/destroySlidePanel.evt:    See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ui/destroySlidePanel/destroySlidePanel.evt:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/destroySlidePanel/destroySlidePanel.evt:	 one:createSlidePanel and one:destroySlidePanel are deprecated.  
+ruau/ruau-components/src/main/components/ui/destroySlidePanel/destroySlidePanel.evt:	 one:createSlidePanel and one:destroySlidePanel are dePrEcated.  
 ruau/ruau-components/src/main/components/ui/destroySlidePanel/destroySlidePanel.evt:	 Please use force:createPanelSlider and force:destroyPanel instead
 ruau/ruau-components/src/main/components/ui/destroySlidePanel/destroySlidePanel.evt:	 (along with force:showPanelSlider and force:hidePanel if you like).
 ruau/ruau-components/src/main/components/ui/destroySlidePanel/destroySlidePanel.evt:	 See onetest:panelSliderWrapperTest.js for examples.
@@ -2217,336 +2217,336 @@ ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:           
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = false;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function () {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = true;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.clickHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.clickHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertTrue(actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesComponentToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = component;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetComponent;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.clickHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.clickHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesEventNameToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = "click";
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent, targetEventName) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetEventName;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.clickHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.clickHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesRawEventToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = {rawEvent:true};
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent, targetEventName, targetRawEvent) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetRawEvent;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.clickHandler").runDeprecated(expected);
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.clickHandler").runDePrEcated(expected);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:    testControllerDblClickHandler:{
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function CallsFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = false;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function () {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = true;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.dblclickHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.dblclickHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertTrue(actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesComponentToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = component;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetComponent;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.dblclickHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.dblclickHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesEventNameToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = "dblclick";
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent, targetEventName) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetEventName;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.dblclickHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.dblclickHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesRawEventToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = {rawEvent:true};
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent, targetEventName, targetRawEvent) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetRawEvent;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.dblclickHandler").runDeprecated(expected);
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.dblclickHandler").runDePrEcated(expected);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:    testControllerKeydownHandler:{
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function CallsFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = false;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function () {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = true;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.keydownHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.keydownHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertTrue(actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesComponentToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = component;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetComponent;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.keydownHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.keydownHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesEventNameToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = "keydown";
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent, targetEventName) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetEventName;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.keydownHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.keydownHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesRawEventToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = {rawEvent:true};
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent, targetEventName, targetRawEvent) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetRawEvent;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.keydownHandler").runDeprecated(expected);
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.keydownHandler").runDePrEcated(expected);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:    testControllerKeyupHandler:{
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function CallsFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = false;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function () {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = true;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.keyupHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.keyupHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertTrue(actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesComponentToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = component;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetComponent;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.keyupHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.keyupHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesEventNameToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = "keyup";
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent, targetEventName) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetEventName;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.keyupHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.keyupHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesRawEventToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = {rawEvent:true};
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent, targetEventName, targetRawEvent) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetRawEvent;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.keyupHandler").runDeprecated(expected);
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.keyupHandler").runDePrEcated(expected);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:    testControllerKeypressHandler:{
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:    testControllerKeyPrEssHandler:{
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function CallsFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = false;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function () {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = true;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.keypressHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.keyPrEssHandler").runDeprecated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertTrue(actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesComponentToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = component;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetComponent;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.keypressHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.keyPrEssHandler").runDeprecated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesEventNameToFireEvents(component) {
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = "keypress";
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = "keyPrEss";
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent, targetEventName) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetEventName;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.keypressHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.keyPrEssHandler").runDeprecated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesRawEventToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = {rawEvent:true};
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent, targetEventName, targetRawEvent) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetRawEvent;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.keypressHandler").runDeprecated(expected);
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.keyPrEssHandler").runDeprecated(expected);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:    testControllerMousedownHandler:{
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function CallsFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = false;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function () {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = true;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mousedownHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mousedownHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertTrue(actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesComponentToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = component;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetComponent;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mousedownHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mousedownHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesEventNameToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = "mousedown";
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent, targetEventName) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetEventName;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mousedownHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mousedownHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesRawEventToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = {rawEvent:true};
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent, targetEventName, targetRawEvent) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetRawEvent;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mousedownHandler").runDeprecated(expected);
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mousedownHandler").runDePrEcated(expected);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:    testControllerMouseoverHandler:{
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function CallsFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = false;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function () {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = true;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mouseoverHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mouseoverHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertTrue(actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesComponentToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = component;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetComponent;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mouseoverHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mouseoverHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesEventNameToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = "mouseover";
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent, targetEventName) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetEventName;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mouseoverHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mouseoverHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesRawEventToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = {rawEvent:true};
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent, targetEventName, targetRawEvent) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetRawEvent;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mouseoverHandler").runDeprecated(expected);
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mouseoverHandler").runDePrEcated(expected);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:    testControllerMouseoutHandler:{
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function CallsFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = false;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function () {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = true;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mouseoutHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mouseoutHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertTrue(actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesComponentToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = component;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetComponent;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mouseoutHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mouseoutHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesEventNameToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = "mouseout";
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent, targetEventName) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetEventName;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mouseoutHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mouseoutHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesRawEventToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = {rawEvent:true};
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent, targetEventName, targetRawEvent) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetRawEvent;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mouseoutHandler").runDeprecated(expected);
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mouseoutHandler").runDePrEcated(expected);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:    testControllerMouseupHandler:{
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function CallsFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = false;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function () {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = true;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mouseupHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mouseupHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertTrue(actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesComponentToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = component;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetComponent;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mouseupHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mouseupHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesEventNameToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = "mouseup";
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent, targetEventName) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetEventName;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mouseupHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mouseupHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesRawEventToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = {rawEvent:true};
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent, targetEventName, targetRawEvent) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetRawEvent;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mouseupHandler").runDeprecated(expected);
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.mouseupHandler").runDePrEcated(expected);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:    testControllerTouchstartHandler:{
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function CallsFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = false;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function () {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = true;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.touchstartHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.touchstartHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertTrue(actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesComponentToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = component;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetComponent;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.touchstartHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.touchstartHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesEventNameToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = "touchstart";
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent, targetEventName) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetEventName;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.touchstartHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.touchstartHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesRawEventToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = {rawEvent:true};
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent, targetEventName, targetRawEvent) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetRawEvent;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.touchstartHandler").runDeprecated(expected);
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.touchstartHandler").runDePrEcated(expected);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:    testControllerTouchmoveHandler:{
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function CallsFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = false;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function () {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = true;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.touchmoveHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.touchmoveHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertTrue(actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesComponentToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = component;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetComponent;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.touchmoveHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.touchmoveHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesEventNameToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = "touchmove";
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent, targetEventName) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetEventName;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.touchmoveHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.touchmoveHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesRawEventToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = {rawEvent:true};
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent, targetEventName, targetRawEvent) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetRawEvent;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.touchmoveHandler").runDeprecated(expected);
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.touchmoveHandler").runDePrEcated(expected);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:    testControllerTouchendHandler:{
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function CallsFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = false;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function () {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = true;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.touchendHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.touchendHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertTrue(actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesComponentToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = component;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetComponent;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.touchendHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.touchendHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesEventNameToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = "touchend";
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent, targetEventName) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetEventName;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.touchendHandler").runDeprecated();
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.touchendHandler").runDePrEcated();
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function PassesRawEventToFireEvents(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = {rawEvent:true};
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var actual = null;
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var mockWhile = this.getHelperMock(component, "fireEvents", function (targetComponent, targetEventName, targetRawEvent) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    actual = targetRawEvent;
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.touchendHandler").runDeprecated(expected);
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                    component.get("c.touchendHandler").runDePrEcated(expected);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function GuardsAgainstNullEventMap(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var helper = this.getHelper(component);
@@ -2763,7 +2763,7 @@ ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:           
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                mockGenerateComponent(function () {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                        helper.buildColumns(component, {columnTemplates:[templates]}, component.find("listView:header"));
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                $A.test.assertEquals(expected, actual);
-ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function SetsDelayedExpressionColumnHeaderTooltipToTemplateTitle(component) {
+ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:            function SetsDelayedExPrEssionColumnHeaderTooltipToTemplateTitle(component) {
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var helper = this.getHelper(component);
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var expected = "{#v.expected}";
 ruau/ruau-components/src/main/components/ui/listView/listViewTest.js:                var targetAttributes = {title:expected, fieldName:'FieldName'};

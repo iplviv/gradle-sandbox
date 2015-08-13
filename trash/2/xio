@@ -26,7 +26,7 @@ ruau/ruau/src/main/java/org/ruauframework/instance/Instance.java:     * Get the 
 ruau/ruau/src/main/java/org/ruauframework/instance/Instance.java:     * This path consists of the set of attributes and indices that leads to 
 ruau/ruau/src/main/java/org/ruauframework/instance/Instance.java:     * where this component was instantiated. This path must match the client
 ruau/ruau/src/main/java/org/ruauframework/instance/Instance.java:     * generated path.
-ruau/ruau/src/main/java/org/ruauframework/instance/Instance.java:     * @return the string representation of the path.
+ruau/ruau/src/main/java/org/ruauframework/instance/Instance.java:     * @return the string rePrEsentation of the path.
 ruau/ruau/src/main/java/org/ruauframework/instance/Instance.java:    String getPath();
 ruau/ruau/src/main/java/org/ruauframework/instance/ComponentConfig.java: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/main/java/org/ruauframework/instance/ComponentConfig.java: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -72,7 +72,7 @@ ruau/ruau/src/main/java/org/ruauframework/instance/EventHandler.java: * See the 
 ruau/ruau/src/main/java/org/ruauframework/instance/EventHandler.java: * limitations under the License.
 ruau/ruau/src/main/java/org/ruauframework/instance/EventHandler.java:package org.ruauframework.instance;
 ruau/ruau/src/main/java/org/ruauframework/instance/EventHandler.java:import org.ruauframework.def.EventHandlerDef;
-ruau/ruau/src/main/java/org/ruauframework/instance/EventHandler.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau/src/main/java/org/ruauframework/instance/EventHandler.java:import org.ruauframework.exPrEssion.PropertyReference;
 ruau/ruau/src/main/java/org/ruauframework/instance/EventHandler.java: * An event handler instance, similar to an attribute, maps a registered event
 ruau/ruau/src/main/java/org/ruauframework/instance/EventHandler.java: * to a controller action at runtime
 ruau/ruau/src/main/java/org/ruauframework/instance/EventHandler.java:public interface EventHandler extends Instance<EventHandlerDef> {
@@ -190,7 +190,7 @@ ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * @par
 ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * @throws QuickFixException if there was a problem instantiating components.
 ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * @throws IOException if it is unable to write the output.
 ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:    void run(Message message, RuueContext context, Writer out, Map<?, ?> extras)
-ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * This writes out CSS for the preloads + app to the response.
+ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * This writes out CSS for the PrEloads + app to the response.
 ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * @param out the appendable
 ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * @throws IOException if unable to write to the response
 ruau/ruau/src/main/java/org/ruauframework/service/ServerService.java:     * This writes out a single SVG for the requested app/component to the response.
@@ -356,7 +356,7 @@ ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java: * Ser
 ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java: * An Integration defines the scope of creating a set of component injection scripts
 ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java:public interface IntegrationService extends RuueService {
 ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java:	public static String NO_DEFAULT_PRELOADS_INTERFACE = "ruau:noDefaultPreloads";
-ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java:     * Create an Integration object that represents a set of components that
+ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java:     * Create an Integration object that rePrEsents a set of components that
 ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java:     * will be injected into a non-Ruue container.
 ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java:     * @param contextPath
 ruau/ruau/src/main/java/org/ruauframework/service/IntegrationService.java:     *            The portion of the request URI that is used to select the context of the request.
@@ -420,7 +420,7 @@ ruau/ruau/src/main/java/org/ruauframework/service/ContextService.java:     * Thi
 ruau/ruau/src/main/java/org/ruauframework/service/ContextService.java:     * server context, you must always popServerContext(). (i.e. with a try {} finally {}.
 ruau/ruau/src/main/java/org/ruauframework/service/ContextService.java:     * Anything done within the system context will not be serialized to the client.
 ruau/ruau/src/main/java/org/ruauframework/service/ContextService.java:    RuueContext pushSystemContext();
-ruau/ruau/src/main/java/org/ruauframework/service/ContextService.java:     * Pop a system context previously pushed.
+ruau/ruau/src/main/java/org/ruauframework/service/ContextService.java:     * Pop a system context PrEviously pushed.
 ruau/ruau/src/main/java/org/ruauframework/service/ContextService.java:     * Get the current context if there is one. Throws a runtime exception if
 ruau/ruau/src/main/java/org/ruauframework/service/ContextService.java:     * one is not established.
 ruau/ruau/src/main/java/org/ruauframework/service/ContextService.java:    RuueContext getCurrentContext();
@@ -466,12 +466,12 @@ ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * 
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * @return a descriptor. Never returns null.
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:    <T extends Definition, B extends Definition> DefDescriptor<T> getDefDescriptor(String qualifiedName, Class<T> defClass, DefDescriptor<B> bundle);
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * Create a {@link DefDescriptor} that has the same namespace and name as the provided descriptor but a different
-ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * DefType and prefix.
+ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * DefType and PrEfix.
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * The class must be retrieved from DefDescriptor.DefType.getPrimaryInterface()
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * @param desc the descriptor of the Definition
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * @param defClass The Interface of the type of definition you are trying to
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * @return a descriptor. Never returns null.
-ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:    <T extends Definition> DefDescriptor<T> getDefDescriptor(DefDescriptor<?> desc, String prefix, Class<T> defClass);
+ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:    <T extends Definition> DefDescriptor<T> getDefDescriptor(DefDescriptor<?> desc, String PrEfix, Class<T> defClass);
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * Get the Definition associated with the descriptor passed in, compiling if
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * necessary.
 ruau/ruau/src/main/java/org/ruauframework/service/DefinitionService.java:     * @param descriptor the descriptor to get/compile
@@ -818,32 +818,32 @@ ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    /
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given number for display using the appropriate format for the
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * locale.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param number the number to format
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String representation of the number
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String rePrEsentation of the number
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatNumber(int number);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given number for display using the appropriate format for the
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * locale.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param number the number to format
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String representation of the number
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String rePrEsentation of the number
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatNumber(long number);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given number for display using the appropriate format for the
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * locale.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param number the number to format
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String representation of the number
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String rePrEsentation of the number
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatNumber(double number);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given number for display using the appropriate format for the
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * locale.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param number the number to format
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String representation of the number
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String rePrEsentation of the number
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatNumber(Integer number);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given number for display using the appropriate format for the
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * locale.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param number the number to format
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String representation of the number
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String rePrEsentation of the number
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatNumber(Long number);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given number for display using the appropriate format for the
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * locale.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param number the number to format
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String representation of the number
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String rePrEsentation of the number
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatNumber(Double number);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given number for display using the appropriate format for the
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * locale. The caller can specify the minimum and maximum number of digits
@@ -852,13 +852,13 @@ ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param minFractionDigits the minimum number of digits after the decimal
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            separator
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param maxFractionDigits the maximum number of digits after the decimal
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            separator. If the input number has more precision than this
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            separator. If the input number has more PrEcision than this
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            allows, the value will be rounded
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String representation of the number
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String rePrEsentation of the number
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatNumber(Double number, int minFractionDigits, int maxFractionDigits);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format a BigDecimal for localized display.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param number the number to format
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String representation of the number
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String rePrEsentation of the number
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatNumber(BigDecimal number);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given number for display using the appropriate format for the
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * locale. The caller can specify the minimum and maximum number of digits
@@ -867,45 +867,45 @@ ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param minFractionDigits the minimum number of digits after the decimal
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            separator
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param maxFractionDigits the maximum number of digits after the decimal
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            separator. If the input number has more precision than this
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            separator. If the input number has more PrEcision than this
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            allows, the value will be rounded
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String representation of the number
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String rePrEsentation of the number
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatNumber(BigDecimal number, int minFractionDigits, int maxFractionDigits);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given number for display using the appropriate format for the
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * given Locale.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param number the number to format
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param locale the Locale to use to specify formatting
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String representation of the number
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String rePrEsentation of the number
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatNumber(int number, Locale locale);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given number for display using the appropriate format for the
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * given Locale.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param number the number to format
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param locale the Locale to use to specify formatting
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String representation of the number
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String rePrEsentation of the number
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatNumber(long number, Locale locale);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given number for display using the appropriate format for the
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * given Locale.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param number the number to format
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param locale the Locale to use to specify formatting
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String representation of the number
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String rePrEsentation of the number
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatNumber(double number, Locale locale);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given number for display using the appropriate format for the
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * given Locale.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param number the number to format
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param locale the Locale to use to specify formatting
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String representation of the number
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String rePrEsentation of the number
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatNumber(Integer number, Locale locale);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given number for display using the appropriate format for the
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * given Locale.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param number the number to format
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param locale the Locale to use to specify formatting
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String representation of the number
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String rePrEsentation of the number
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatNumber(Long number, Locale locale);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given number for display using the appropriate format for the
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * given Locale.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param number the number to format
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param locale the Locale to use to specify formatting
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String representation of the number
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String rePrEsentation of the number
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatNumber(Double number, Locale locale);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given number for display using the appropriate format for the
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * given Locale. The caller can specify the minimum and maximum number of
@@ -914,15 +914,15 @@ ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param minFractionDigits the minimum number of digits after the decimal
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            separator
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param maxFractionDigits the maximum number of digits after the decimal
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            separator. If the input number has more precision than this
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            separator. If the input number has more PrEcision than this
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            allows, the value will be rounded
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String representation of the number
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String rePrEsentation of the number
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatNumber(Double number, Locale locale, int minFractionDigits, int maxFractionDigits);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given number for display using the appropriate format for the
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * given Locale.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param number the number to format
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param locale the Locale to use to specify formatting
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String representation of the number
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String rePrEsentation of the number
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatNumber(BigDecimal number, Locale locale);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given number for display using the appropriate format for the
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * given Locale. The caller can specify the minimum and maximum number of
@@ -931,9 +931,9 @@ ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param minFractionDigits the minimum number of digits after the decimal
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            separator
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param maxFractionDigits the maximum number of digits after the decimal
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            separator. If the input number has more precision than this
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            separator. If the input number has more PrEcision than this
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            allows, the value will be rounded
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String representation of the number
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String rePrEsentation of the number
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatNumber(BigDecimal number, Locale locale, int minFractionDigits, int maxFractionDigits);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    // Format Percent (e.g. 75.5%)
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given number as a localized percentage. Generally this will
@@ -976,22 +976,22 @@ ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatPercent(double percent, Locale locale, int minFractionDigits, int maxFractionDigits);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    // Format Currency (e.g. $12,345.67)
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given number as a currency amount. This will generally assign
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * a currency symbol and apply a decimal precision commonly associated with
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * a currency symbol and apply a decimal PrEcision commonly associated with
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * the local currency.
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For more precise control of the output or to add your own currency
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For more PrEcise control of the output or to add your own currency
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * indicator, simply format as a number instead of a currency amount. This
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * could be useful to apply a "USD" suffix instead of a "$" prefix for
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * could be useful to apply a "USD" suffix instead of a "$" PrEfix for
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * example, or to have no symbol at all if that symbol is rendered
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * separately in a label outside of a field.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param value the number to format
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a formatted currency String
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatCurrency(double value);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given number as a currency amount. This will generally assign
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * a currency symbol and apply a decimal precision commonly associated with
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * a currency symbol and apply a decimal PrEcision commonly associated with
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * the local currency.
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For more precise control of the output or to add your own currency
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For more PrEcise control of the output or to add your own currency
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * indicator, simply format as a number instead of a currency amount. This
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * could be useful to apply a "USD" suffix instead of a "$" prefix for
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * could be useful to apply a "USD" suffix instead of a "$" PrEfix for
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * example, or to have no symbol at all if that symbol is rendered
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * separately in a label outside of a field.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param value the number to format
@@ -999,26 +999,26 @@ ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            the decimal separator in the String
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param maxFractionDigits the maximum number of digits to display after
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            the decimal separator in the String. If the input number has
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            more precision than this allows, the value will be rounded
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            more PrEcision than this allows, the value will be rounded
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a formatted currency String
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatCurrency(double value, int minFractionDigits, int maxFractionDigits);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given number as a currency amount. This will generally assign
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * a currency symbol and apply a decimal precision commonly associated with
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * a currency symbol and apply a decimal PrEcision commonly associated with
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * the Locale's currency.
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For more precise control of the output or to add your own currency
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For more PrEcise control of the output or to add your own currency
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * indicator, simply format as a number instead of a currency amount. This
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * could be useful to apply a "USD" suffix instead of a "$" prefix for
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * could be useful to apply a "USD" suffix instead of a "$" PrEfix for
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * example, or to have no symbol at all if that symbol is rendered
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * separately in a label outside of a field.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param value the number to format
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a formatted currency String
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatCurrency(double value, Locale locale);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given number as a currency amount. This will generally assign
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * a currency symbol and apply a decimal precision commonly associated with
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * a currency symbol and apply a decimal PrEcision commonly associated with
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * the Locale's currency.
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For more precise control of the output or to add your own currency
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For more PrEcise control of the output or to add your own currency
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * indicator, simply format as a number instead of a currency amount. This
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * could be useful to apply a "USD" suffix instead of a "$" prefix for
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * could be useful to apply a "USD" suffix instead of a "$" PrEfix for
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * example, or to have no symbol at all if that symbol is rendered
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * separately in a label outside of a field.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param value the number to format
@@ -1026,15 +1026,15 @@ ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            the decimal separator in the String
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param maxFractionDigits the maximum number of digits to display after
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            the decimal separator in the String. If the input number has
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            more precision than this allows, the value will be rounded
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            more PrEcision than this allows, the value will be rounded
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a formatted currency String
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatCurrency(double value, Locale locale, int minFractionDigits, int maxFractionDigits);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given number as a currency amount. This will generally assign
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * a currency symbol and apply a decimal precision commonly associated with
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * a currency symbol and apply a decimal PrEcision commonly associated with
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * the Locale's currency.
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For more precise control of the output or to add your own currency
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For more PrEcise control of the output or to add your own currency
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * indicator, simply format as a number instead of a currency amount. This
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * could be useful to apply a "USD" suffix instead of a "$" prefix for
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * could be useful to apply a "USD" suffix instead of a "$" PrEfix for
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * example, or to have no symbol at all if that symbol is rendered
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * separately in a label outside of a field.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param value the number to format
@@ -1042,27 +1042,27 @@ ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            the decimal separator in the String
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param maxFractionDigits the maximum number of digits to display after
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            the decimal separator in the String. If the input number has
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            more precision than this allows, the value will be rounded
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            more PrEcision than this allows, the value will be rounded
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param currency the currency to use with the format
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a formatted currency String
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatCurrency(double value, Locale locale, int minFractionDigits, int maxFractionDigits,
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given BigDecimal as a currency amount. This will generally
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * assign a currency symbol and apply a decimal precision commonly
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * assign a currency symbol and apply a decimal PrEcision commonly
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * associated with the local currency.
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For more precise control of the output or to add your own currency
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For more PrEcise control of the output or to add your own currency
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * indicator, simply format as a number instead of a currency amount. This
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * could be useful to apply a "USD" suffix instead of a "$" prefix for
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * could be useful to apply a "USD" suffix instead of a "$" PrEfix for
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * example, or to have no symbol at all if that symbol is rendered
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * separately in a label outside of a field.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param value the number to format
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a formatted currency String
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatCurrency(BigDecimal value);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given BigDecimal as a currency amount. This will generally
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * assign a currency symbol and apply a decimal precision commonly
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * assign a currency symbol and apply a decimal PrEcision commonly
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * associated with the local currency.
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For more precise control of the output or to add your own currency
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For more PrEcise control of the output or to add your own currency
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * indicator, simply format as a number instead of a currency amount. This
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * could be useful to apply a "USD" suffix instead of a "$" prefix for
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * could be useful to apply a "USD" suffix instead of a "$" PrEfix for
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * example, or to have no symbol at all if that symbol is rendered
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * separately in a label outside of a field.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param value the number to format
@@ -1070,26 +1070,26 @@ ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            the decimal separator in the String
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param maxFractionDigits the maximum number of digits to display after
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            the decimal separator in the String. If the input number has
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            more precision than this allows, the value will be rounded
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            more PrEcision than this allows, the value will be rounded
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a formatted currency String
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatCurrency(BigDecimal value, int minFractionDigits, int maxFractionDigits);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given BigDecimal as a currency amount. This will generally
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * assign a currency symbol and apply a decimal precision commonly
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * assign a currency symbol and apply a decimal PrEcision commonly
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * associated with the Locale's currency.
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For more precise control of the output or to add your own currency
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For more PrEcise control of the output or to add your own currency
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * indicator, simply format as a number instead of a currency amount. This
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * could be useful to apply a "USD" suffix instead of a "$" prefix for
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * could be useful to apply a "USD" suffix instead of a "$" PrEfix for
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * example, or to have no symbol at all if that symbol is rendered
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * separately in a label outside of a field.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param value the number to format
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a formatted currency String
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatCurrency(BigDecimal value, Locale locale);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given BigDecimal as a currency amount. This will generally
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * assign a currency symbol and apply a decimal precision commonly
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * assign a currency symbol and apply a decimal PrEcision commonly
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * associated with the Locale's currency.
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For more precise control of the output or to add your own currency
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For more PrEcise control of the output or to add your own currency
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * indicator, simply format as a number instead of a currency amount. This
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * could be useful to apply a "USD" suffix instead of a "$" prefix for
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * could be useful to apply a "USD" suffix instead of a "$" PrEfix for
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * example, or to have no symbol at all if that symbol is rendered
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * separately in a label outside of a field.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param value the number to format
@@ -1097,15 +1097,15 @@ ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            the decimal separator in the String
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param maxFractionDigits the maximum number of digits to display after
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            the decimal separator in the String. If the input number has
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            more precision than this allows, the value will be rounded
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            more PrEcision than this allows, the value will be rounded
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a formatted currency String
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatCurrency(BigDecimal value, Locale locale, int minFractionDigits, int maxFractionDigits);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format the given BigDecimal as a currency amount. This will generally
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * assign a currency symbol and apply a decimal precision commonly
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * assign a currency symbol and apply a decimal PrEcision commonly
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * associated with the Locale's currency.
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For more precise control of the output or to add your own currency
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For more PrEcise control of the output or to add your own currency
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * indicator, simply format as a number instead of a currency amount. This
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * could be useful to apply a "USD" suffix instead of a "$" prefix for
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * could be useful to apply a "USD" suffix instead of a "$" PrEfix for
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * example, or to have no symbol at all if that symbol is rendered
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * separately in a label outside of a field.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param value the number to format
@@ -1113,7 +1113,7 @@ ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            the decimal separator in the String
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param maxFractionDigits the maximum number of digits to display after
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            the decimal separator in the String. If the input number has
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            more precision than this allows, the value will be rounded
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     *            more PrEcision than this allows, the value will be rounded
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param currency the currency to use with the format
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a formatted currency String
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatCurrency(BigDecimal value, Locale locale, int minFractionDigits, int maxFractionDigits,
@@ -1397,7 +1397,7 @@ ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * the mathematical equivalent, not the language equivalent.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For example "75%" in en_US is returned as 0.75 not as 75.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param percent the percent String to parse
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a number representation of the percentage String
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a number rePrEsentation of the percentage String
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @throws ParseException if the percentage cannot be parsed
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public double parsePercent(String percent) throws ParseException;
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Returns a number from the given localized percentage String based on the
@@ -1405,7 +1405,7 @@ ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * not the language equivalent.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * For example "75%" in en_US is returned as 0.75 not as 75.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param percent the percent String to parse
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a number representation of the percentage String
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a number rePrEsentation of the percentage String
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @throws ParseException if the percentage cannot be parsed
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public double parsePercent(String percent, Locale locale) throws ParseException;
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    // Parse a Currency String to a BigDecimal amount
@@ -1422,15 +1422,15 @@ ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public BigDecimal parseCurrency(String currency, Locale locale) throws ParseException;
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format a Number for localized display.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param number the number to format
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String representation of the number
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String rePrEsentation of the number
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatNumber(Number number);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format a Number for localized display.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param number the number to format
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String representation of the number
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String rePrEsentation of the number
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatNumber(Number number, Locale locale);
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * Format a Number for localized display.
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @param number the number to format
-ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String representation of the number
+ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:     * @return a String rePrEsentation of the number
 ruau/ruau/src/main/java/org/ruauframework/service/LocalizationService.java:    public String formatNumber(Number number, Locale locale, int minFractionDigits, int maxFractionDigits);
 ruau/ruau/src/main/java/org/ruauframework/builder/ThemeDefBuilder.java: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/main/java/org/ruauframework/builder/ThemeDefBuilder.java: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -1764,7 +1764,7 @@ ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefRefBuilder.java:im
 ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefRefBuilder.java: * A builder for a {@link ComponentDef} reference.
 ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefRefBuilder.java:public interface ComponentDefRefBuilder extends DefBuilder<ComponentDef, ComponentDefRef> {
 ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefRefBuilder.java:     * Set an attribute.
-ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefRefBuilder.java:     * If the value is null, the default value will be used (previous setAttributes will
+ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefRefBuilder.java:     * If the value is null, the default value will be used (PrEvious setAttributes will
 ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefRefBuilder.java:     * be nullified) for this attribute.
 ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefRefBuilder.java:     * @param key the attribute key (must be a valid attribute).
 ruau/ruau/src/main/java/org/ruauframework/builder/ComponentDefRefBuilder.java:     * @param value the value to set (must be appropriate for the attribute).
@@ -1801,13 +1801,13 @@ ruau/ruau/src/main/java/org/ruauframework/builder/StyleDefBuilder.java:package o
 ruau/ruau/src/main/java/org/ruauframework/builder/StyleDefBuilder.java:import java.util.Set;
 ruau/ruau/src/main/java/org/ruauframework/builder/StyleDefBuilder.java:import org.ruauframework.def.StyleDef;
 ruau/ruau/src/main/java/org/ruauframework/builder/StyleDefBuilder.java:public interface StyleDefBuilder extends DefBuilder<StyleDef, StyleDef> {
-ruau/ruau/src/main/java/org/ruauframework/builder/StyleDefBuilder.java:     * Sets the parsed/preprocessed CSS content.
+ruau/ruau/src/main/java/org/ruauframework/builder/StyleDefBuilder.java:     * Sets the parsed/PrEprocessed CSS content.
 ruau/ruau/src/main/java/org/ruauframework/builder/StyleDefBuilder.java:     * Sets the class name that was used for .THIS replacements.
 ruau/ruau/src/main/java/org/ruauframework/builder/StyleDefBuilder.java:    StyleDefBuilder setClassName(String className);
-ruau/ruau/src/main/java/org/ruauframework/builder/StyleDefBuilder.java:     * Specifies all expressions found in the source.
-ruau/ruau/src/main/java/org/ruauframework/builder/StyleDefBuilder.java:     * An expression is the argument passed to the theme function. For example, in:
+ruau/ruau/src/main/java/org/ruauframework/builder/StyleDefBuilder.java:     * Specifies all exPrEssions found in the source.
+ruau/ruau/src/main/java/org/ruauframework/builder/StyleDefBuilder.java:     * An exPrEssion is the argument passed to the theme function. For example, in:
 ruau/ruau/src/main/java/org/ruauframework/builder/StyleDefBuilder.java:     *   margin: theme(small + large + 'px');
-ruau/ruau/src/main/java/org/ruauframework/builder/StyleDefBuilder.java:     * both "color" and "small + large + 'px'" would be theme expressions.
+ruau/ruau/src/main/java/org/ruauframework/builder/StyleDefBuilder.java:     * both "color" and "small + large + 'px'" would be theme exPrEssions.
 ruau/ruau/src/main/java/org/ruauframework/builder/DescriptionDefBuilder.java: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/main/java/org/ruauframework/builder/DescriptionDefBuilder.java: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau/src/main/java/org/ruauframework/builder/DescriptionDefBuilder.java: * you may not use this file except in compliance with the License.
@@ -1907,7 +1907,7 @@ ruau/ruau/src/main/java/org/ruauframework/cache/Cache.java:	void invalidate(K ke
 ruau/ruau/src/main/java/org/ruauframework/cache/Cache.java:	void invalidate(Iterable<K> keys);
 ruau/ruau/src/main/java/org/ruauframework/cache/Cache.java:	void invalidateAll();
 ruau/ruau/src/main/java/org/ruauframework/cache/Cache.java:	 * Invalidate those keys whose toString beginsWith the provided partial string
-ruau/ruau/src/main/java/org/ruauframework/cache/Cache.java:	 * @param partial - target keys will be invalidated if their toString representation beginsWith partial
+ruau/ruau/src/main/java/org/ruauframework/cache/Cache.java:	 * @param partial - target keys will be invalidated if their toString rePrEsentation beginsWith partial
 ruau/ruau/src/main/java/org/ruauframework/cache/Cache.java:	void invalidatePartial(String partial);
 ruau/ruau/src/main/java/org/ruauframework/cache/Cache.java:	 * returns a reference to the implementing cache - this should NEVER be 
 ruau/ruau/src/main/java/org/ruauframework/cache/Cache.java:	 * used for anything but admin and statistical access, specific to an implementation
@@ -1923,18 +1923,18 @@ ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java: * See the
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java: * limitations under the License.
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java:package org.ruauframework.css;
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java:import org.ruauframework.def.ThemeDescriptorProvider;
-ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java:import org.ruauframework.exPrEssion.PropertyReference;
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java:import org.ruauframework.instance.ValueProvider;
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java:import org.ruauframework.system.Location;
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java:import org.ruauframework.throwable.quickfix.QuickFixException;
-ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java: * Responsible for evaluating a theme expression to the string value. The expression may contain multiple references to
-ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java: * theme variables, as well as valid ruau expression syntax.
+ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java: * Responsible for evaluating a theme exPrEssion to the string value. The expression may contain multiple references to
+ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java: * theme variables, as well as valid ruau exPrEssion syntax.
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java:public interface ThemeValueProvider extends ValueProvider {
-ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java:     * Use this to resolve an expression from a String.
-ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java:     * @param expression The expression to evaluate.
-ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java:     * @param location The location of the expression in the source.
+ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java:     * Use this to resolve an exPrEssion from a String.
+ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java:     * @param exPrEssion The expression to evaluate.
+ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java:     * @param location The location of the exPrEssion in the source.
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java:     * @return The value, same as from {@link #getValue(PropertyReference)}
-ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java:    Object getValue(String expression, Location location) throws QuickFixException;
+ruau/ruau/src/main/java/org/ruauframework/css/ThemeValueProvider.java:    Object getValue(String exPrEssion, Location location) throws QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/css/MutableThemeList.java: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/main/java/org/ruauframework/css/MutableThemeList.java: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau/src/main/java/org/ruauframework/css/MutableThemeList.java: * you may not use this file except in compliance with the License.
@@ -1960,13 +1960,13 @@ ruau/ruau/src/main/java/org/ruauframework/css/MutableThemeList.java:     * <b>Im
 ruau/ruau/src/main/java/org/ruauframework/css/MutableThemeList.java:     * {@link ThemeDescriptorProvider}, the result of {@link ThemeDef#getConcreteDescriptor()} will be used instead.
 ruau/ruau/src/main/java/org/ruauframework/css/MutableThemeList.java:     * @param themeDescriptor Prepend this theme.
 ruau/ruau/src/main/java/org/ruauframework/css/MutableThemeList.java:     * @return this, for chaining.
-ruau/ruau/src/main/java/org/ruauframework/css/MutableThemeList.java:    MutableThemeList prepend(DefDescriptor<ThemeDef> themeDescriptor) throws QuickFixException;
+ruau/ruau/src/main/java/org/ruauframework/css/MutableThemeList.java:    MutableThemeList PrEpend(DefDescriptor<ThemeDef> themeDescriptor) throws QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/css/MutableThemeList.java:     * Prepends a collection of themes to the list.
 ruau/ruau/src/main/java/org/ruauframework/css/MutableThemeList.java:     * <b>Important</b>: The given themeDescriptors might not actually be stored in this list. If a theme uses a
 ruau/ruau/src/main/java/org/ruauframework/css/MutableThemeList.java:     * {@link ThemeDescriptorProvider}, the result of {@link ThemeDef#getConcreteDescriptor()} will be used instead.
 ruau/ruau/src/main/java/org/ruauframework/css/MutableThemeList.java:     * @param themeDescriptor Prepend this theme.
 ruau/ruau/src/main/java/org/ruauframework/css/MutableThemeList.java:     * @return this, for chaining.
-ruau/ruau/src/main/java/org/ruauframework/css/MutableThemeList.java:    MutableThemeList prependAll(Iterable<DefDescriptor<ThemeDef>> themeDescriptors) throws QuickFixException;
+ruau/ruau/src/main/java/org/ruauframework/css/MutableThemeList.java:    MutableThemeList PrEpendAll(Iterable<DefDescriptor<ThemeDef>> themeDescriptors) throws QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/css/MutableThemeList.java:     * Appends a theme to the list.
 ruau/ruau/src/main/java/org/ruauframework/css/MutableThemeList.java:     * <b>Important</b>: The given themeDescriptor might not actually be stored in this list. If a theme uses a
 ruau/ruau/src/main/java/org/ruauframework/css/MutableThemeList.java:     * {@link ThemeDescriptorProvider}, the result of {@link ThemeDef#getConcreteDescriptor()} will be used instead.
@@ -1997,7 +1997,7 @@ ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:import org.ruaufram
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:import org.ruauframework.def.ThemeMapProvider;
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:import com.google.common.base.Optional;
-ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java: * Represents a list of {@link ThemeDef}s.
+ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java: * RePrEsents a list of {@link ThemeDef}s.
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java: * This gives special attention to themes utilizing {@link ThemeDescriptorProvider} by storing the result of
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java: * {@link ThemeDef#getConcreteDescriptor()} wherever possible. This helps to minimize the number of calls to
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java: * {@link ThemeDescriptorProvider#provide()} to just once per theme (within this instance).
@@ -2021,12 +2021,12 @@ ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:     * @return The 
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:    Optional<Object> getValue(String name) throws QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:     * Returns the list of themes in the proper order for CSS theme token evaluation.
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:     * Generally this means that the list is reversed, to honor the "last one wins" contract. That is, if two themes
-ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:     * specify a value for the same var name, the last theme specified takes precedence.
+ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:     * specify a value for the same var name, the last theme specified takes PrEcedence.
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:     * @return The list of themes in the appropriate evaluation order.
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:    List<DefDescriptor<ThemeDef>> orderedForEvaluation();
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:     * Returns the map of dynamically specified vars (via a theme utilizing {@link ThemeMapProvider}).
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:     * It's possible that two such themes exist with vars having the same name. The word "active" here denotes that the
-ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:     * theme with precedence (according to {@link #orderedForEvaluation()}) will be the only one represented in the
+ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:     * theme with PrEcedence (according to {@link #orderedForEvaluation()}) will be the only one represented in the
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:     * returned map. In other words, this will return only the full set of dynamically specified vars that could
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:     * potentially be used in CSS theme token evaluation.
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:    Map<String, String> activeDynamicVars();
@@ -2038,7 +2038,7 @@ ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:     * See {@link #
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:     * @return The hash, or {@link Optional#absent()} if no dynamic vars are specified by themes in this list.
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:    Optional<String> getActiveDynamicVarsUid();
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:     * Gets whether any of the themes in this list have dynamic vars (e.g., utilizes a {@link ThemeMapProvider}).
-ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:     * @return true if dynamic vars are present.
+ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:     * @return true if dynamic vars are PrEsent.
 ruau/ruau/src/main/java/org/ruauframework/css/ThemeList.java:    boolean hasDynamicVars();
 ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -2060,7 +2060,7 @@ ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java:    DefDescrip
 ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java:    Boolean isAppcacheEnabled() throws QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java:    List<String> getAdditionalAppCacheURLs() throws QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java:    Boolean isOnePageApp() throws QuickFixException;
-ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java:     * Gets the application-wide override themes, if present.
+ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java:     * Gets the application-wide override themes, if PrEsent.
 ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java:     * Note that this differs from the "component theme" ({@link #getCmpTheme()}), as this is specifically the
 ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java:     * application-wide override theme. In contrast, the component theme is applicable only to its component/app
 ruau/ruau/src/main/java/org/ruauframework/def/ApplicationDef.java:     * bundle's css. Note that even if an application also has a component theme, it does not have an impact on this
@@ -2207,7 +2207,7 @@ ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:    Set<DefD
 ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:    boolean hasLocalDependencies() throws QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:    public static enum WhitespaceBehavior {
 ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:         * < keep or eliminate insignificant whitespace as the framework determines is best
-ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:        /** < treat all whitespace as significant, hence preserving it */
+ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:        /** < treat all whitespace as significant, hence PrEserving it */
 ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:    public static final WhitespaceBehavior DefaultWhitespaceBehavior = WhitespaceBehavior.OPTIMIZE;
 ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:    WhitespaceBehavior getWhitespaceBehavior();
 ruau/ruau/src/main/java/org/ruauframework/def/BaseComponentDef.java:    DefDescriptor<? extends BaseComponentDef> getDefaultExtendsDescriptor();
@@ -2431,7 +2431,7 @@ ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java:import
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java:public interface AttributeValueProvider {
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java:    Object getValue(String key) throws QuickFixException;
-ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java:    Object getExpression(String valueAttributeName) throws QuickFixException;
+ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java:    Object getExPrEssion(String valueAttributeName) throws QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java:    BaseComponent<?, ?> getValueProvider();
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java:    public static class ComponentAttributeValueProvider implements AttributeValueProvider {
 ruau/ruau/src/main/java/org/ruauframework/def/AttributeValueProvider.java:        public ComponentAttributeValueProvider(BaseComponent<?, ?> component) {
@@ -2506,8 +2506,8 @@ ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java:     * @return th
 ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java:    Set<String> getTestLabels();
 ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java:     * Specialized labels intended to describe target client platforms for this test case.
 ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java:     * @return the Set of "browsers" this test should apply to
-ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java:     * Definitions that are expected to be present for this test case to run, typically stubbed implementations of
-ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java:     * actual Definitions. These should take precedence over any existing Definitions with the same DefDescriptor.
+ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java:     * Definitions that are expected to be PrEsent for this test case to run, typically stubbed implementations of
+ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java:     * actual Definitions. These should take PrEcedence over any existing Definitions with the same DefDescriptor.
 ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java:     * @return the Set of Definitions expected by this test case
 ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java:    Collection<Definition> getLocalDefs();
 ruau/ruau/src/main/java/org/ruauframework/def/TestCaseDef.java:     * The set of Ruue errors (displayed via $A.error) that are allowed during initialization. These exceptions will not
@@ -2540,8 +2540,8 @@ ruau/ruau/src/main/java/org/ruauframework/def/ResourceDef.java:import org.ruaufr
 ruau/ruau/src/main/java/org/ruauframework/def/ResourceDef.java: * ResourceDef handles resources css and js within component bundle
 ruau/ruau/src/main/java/org/ruauframework/def/ResourceDef.java:public interface ResourceDef extends Definition {
 ruau/ruau/src/main/java/org/ruauframework/def/ResourceDef.java:     * This is actually not a good idea.
-ruau/ruau/src/main/java/org/ruauframework/def/ResourceDef.java:     * @deprecated use DefinitionService instead.
-ruau/ruau/src/main/java/org/ruauframework/def/ResourceDef.java:    @Deprecated
+ruau/ruau/src/main/java/org/ruauframework/def/ResourceDef.java:     * @dePrEcated use DefinitionService instead.
+ruau/ruau/src/main/java/org/ruauframework/def/ResourceDef.java:    @DePrEcated
 ruau/ruau/src/main/java/org/ruauframework/def/LayoutDef.java: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/main/java/org/ruauframework/def/LayoutDef.java: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau/src/main/java/org/ruauframework/def/LayoutDef.java: * you may not use this file except in compliance with the License.
@@ -2570,7 +2570,7 @@ ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:package org.ruaufram
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:import java.util.List;
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:import java.util.Map;
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:import java.util.Set;
-ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:import org.ruauframework.expression.PropertyReference;
+ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:import org.ruauframework.exPrEssion.PropertyReference;
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:import com.google.common.base.Optional;
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java: * {@link ThemeDef}s are top-level defs that contain ruau:var tags. They provide the information necessary to perform
@@ -2592,7 +2592,7 @@ ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:     * Gets the valu
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:     * Vars directly declared on this theme are checked first. If no declared var exists for the given name, imported
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:     * themes are checked, in reverse order (such that the last imported theme is checked first). This assumes the
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:     * requirement that imported themes are added before any declared vars. If no imported theme has the var then the
-ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:     * parent theme is checked, if present.
+ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:     * parent theme is checked, if PrEsent.
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:     * @param name Get the value for a variable with this name.
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:     * @return The value, which might be a String, an Integer, or even a {@link PropertyReference} if the value was an
 ruau/ruau/src/main/java/org/ruauframework/def/ThemeDef.java:    Optional<Object> getVar(String name) throws QuickFixException;
@@ -2703,7 +2703,7 @@ ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java: * A TypeDef is a wra
 ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java: * generally wraps and delegates to a Class definition from another language.
 ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java:public interface TypeDef extends Definition {
 ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java:     * Attempts to parse the stringRep and return the implementation-specific
-ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java:     * value of the Type represented by this TypeDef. If parsing fails, or if
+ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java:     * value of the Type rePrEsented by this TypeDef. If parsing fails, or if
 ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java:     * the delegate type does not support coersion from Strings, returns null.
 ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java:     * @param stringRep
 ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java:     * @return The parsed value, or null if the String value cannot be parsed.
@@ -2711,10 +2711,10 @@ ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java:    Object valueOf(Ob
 ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java:     * Wraps the given object, if it needs to be, in a Wrapper
 ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java:    Object wrap(Object o);
 ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java:     * @return The delegate type for the language specified by the passed in
-ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java:     *         prefix. In java, for example, this would be a java.lang.Class,
-ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java:     *         but for a custom java type where Apex is passed in as the prefix,
+ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java:     *         PrEfix. In java, for example, this would be a java.lang.Class,
+ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java:     *         but for a custom java type where Apex is passed in as the PrEfix,
 ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java:     *         Basic.ANYTYPE might be returned.
-ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java:    Object getExternalType(String prefix) throws QuickFixException;
+ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java:    Object getExternalType(String PrEfix) throws QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java:    Object initialize(Object config, BaseComponent<?, ?> valueProvider) throws QuickFixException;
 ruau/ruau/src/main/java/org/ruauframework/def/TypeDef.java:    void appendDependencies(Object instance, Set<DefDescriptor<?>> deps);
 ruau/ruau/src/main/java/org/ruauframework/def/optimizer/DefBuilderOptimizer.java: * Copyright (C) 2013 salesforce.com, inc.
@@ -2774,13 +2774,13 @@ ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:    private 
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:    private static final List<DefType> componentType = Collections.unmodifiableList(Arrays
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:            .asList(new DefType[] { DefType.COMPONENT }));
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:    private final List<DefType> defTypes;
-ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:    private final GlobMatcher prefixMatch;
+ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:    private final GlobMatcher PrEfixMatch;
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:    private final GlobMatcher namespaceMatch;
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:    private final GlobMatcher nameMatch;
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:    public DescriptorFilter(String matcher) {
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:        this(matcher, "*");
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:    public DescriptorFilter(String matcher, String typeStr) {
-ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:        String prefix = "*", namespace = "*", name = "*";
+ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:        String PrEfix = "*", namespace = "*", name = "*";
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:        String remainder = matcher;
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:        if (remainder.indexOf("://") != -1) {
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:            List<String> split = RuueTextUtil.splitSimpleLimit(remainder, "://", 2);
@@ -2791,9 +2791,9 @@ ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:            
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:            name = split.get(1);
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:        } else if (remainder.length() > 0) {
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:            namespace = remainder;
-ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:            this.prefixMatch = new GlobMatcher(prefix);
+ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:            this.PrEfixMatch = new GlobMatcher(prefix);
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:        } catch (IllegalArgumentException iae) {
-ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:            throw new IllegalArgumentException("Illegal prefix in " + matcher);
+ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:            throw new IllegalArgumentException("Illegal PrEfix in " + matcher);
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:            this.namespaceMatch = new GlobMatcher(namespace);
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:        } catch (IllegalArgumentException iae) {
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:            throw new IllegalArgumentException("Illegal namespace in " + matcher);
@@ -2805,8 +2805,8 @@ ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:            
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:            List<DefType> accum = Lists.newArrayList();
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:                accum.add(DefType.valueOf(t));
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:            this.defTypes = Collections.unmodifiableList(accum);
-ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:    public boolean matchPrefix(String prefix) {
-ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:        return this.prefixMatch.match(prefix);
+ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:    public boolean matchPrefix(String PrEfix) {
+ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:        return this.PrEfixMatch.match(prefix);
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:    public boolean matchNamespace(String namespace) {
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:        return this.namespaceMatch.match(namespace);
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:    public boolean matchName(String name) {
@@ -2818,12 +2818,12 @@ ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:        retu
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:                && matchNamespace(dd.getNamespace());
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:    public boolean matchDescriptorNoNS(DefDescriptor<?> dd) {
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:        return matchType(dd.getDefType()) && matchName(dd.getName()) && matchPrefix(dd.getPrefix());
-ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:        return this.prefixMatch + "://" + this.namespaceMatch + ":" + this.nameMatch
+ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:        return this.PrEfixMatch + "://" + this.namespaceMatch + ":" + this.nameMatch
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:                + ((this.defTypes == null) ? "(any)" : this.defTypes.toString());
-ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:     * Gets the prefix match for this instance.
-ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:     * @return The prefix matcher.
+ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:     * Gets the PrEfix match for this instance.
+ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:     * @return The PrEfix matcher.
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:    public GlobMatcher getPrefixMatch() {
-ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:        return this.prefixMatch;
+ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:        return this.PrEfixMatch;
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:     * Gets the namespace matcher for this instance.
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:     * @return The namespace matcher.
 ruau/ruau/src/main/java/org/ruauframework/def/DescriptorFilter.java:    public GlobMatcher getNamespaceMatch() {

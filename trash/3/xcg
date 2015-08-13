@@ -400,7 +400,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:import or
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:import com.google.common.base.Charsets;
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:public class JsonTest extends UnitTestCase {
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:    public void testSerializeNumbers() throws IOException {
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:        assertEquals("127", Json.serialize(b));
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:        assertEquals("100", Json.serialize(b));
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:        assertEquals("32767", Json.serialize(s));
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:        assertEquals("123", Json.serialize(123));
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:        assertEquals("123", Json.serialize(123L));

@@ -5,7 +5,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.ja
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        assertEquals(" var str = 'do nothing';", namedJsfuncObj.getBody());
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * Test for reading Strings.
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * FIXME: this is a mess.
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:    @SuppressWarnings("unchecked")
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:    public void testReadString() throws Exception {
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        String value1 = "value1";
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        String value2 = "value2";
@@ -32,7 +32,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.ja
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        } catch (JsonParseException e) {
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:            // should fail.
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * Tests to verify that maps are recognized and parsed correctly.
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:    @SuppressWarnings("unchecked")
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:    public void testReadMap() throws IOException {
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        String json = "{\"key1\":\"val1\",\"key2\":\"val2\"}";
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        Object o = parseAndRetrieve(json);
@@ -62,7 +62,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.ja
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        assertEquals(1.2, ((BigDecimal) parseAndRetrieve("+1.2")).doubleValue());
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * Test to cover JsonStreamReader.readObject(),
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * JsonStreamReader.readArray(), and JsonStreamReader.getHandlerProvider()
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:    @SuppressWarnings("unchecked")
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:    public void testReadComplexObject() throws IOException {
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        String json = "{\"key1\":" + "[" + "[\"string1\",\"string2\"]," + "true," + "10," + "[" + "false," + "1.5,"
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        Object o = parseAndRetrieve(json);
@@ -89,7 +89,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.ja
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * @newTestCase Invalid multi line comment
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * @hierarchy Ruue.Unit Tests.Json StreamReader
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * @userStorySyncIdOrName a07B0000000DUGn
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:    @SuppressWarnings("unchecked")
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        // Positive test Case1
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        String commentsAtStartOfObject = "/*Multiline comment \n Yeah really */ {\n"
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:                + "/** Some more multiline comments and Some speci@l character's\n * \n*/"
@@ -264,7 +264,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.ja
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:            Object temp = jsonStreamReader.getValue();
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:        } finally {
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:            jsonStreamReader.close();
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * A static class to represent a simple test success.
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:     * A static class to rePrEsent a simple test success.
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:    private static class ParseSuccess {
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:         * @param name the name of the test
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonStreamReaderTest.java:         * @param input the input that should fail.
@@ -580,12 +580,12 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:        }
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:        Json json = new Json(new StringBuilder(), false, false);
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:            fail("Should throw exception");
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:        } catch (Json.JsonException expected) {
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:            assertEquals("Json.writeCommentBody must be preceded by Json.writeCommentBegin", expected.getMessage());
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:            assertEquals("Json.writeCommentBody must be PrEceded by Json.writeCommentBegin", expected.getMessage());
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:        assertEquals("", json.getAppendable().toString());
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:            json.writeArrayBegin();
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:            fail("Should throw exception");
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:        } catch (Json.JsonException expected) {
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:            assertEquals("Json.writeCommentBody must be preceded by Json.writeCommentBegin", expected.getMessage());
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:            assertEquals("Json.writeCommentBody must be PrEceded by Json.writeCommentBegin", expected.getMessage());
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:        json = new Json(new StringBuilder(), true, false);
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:        assertEquals("\n/*\n * hi\n */", json.getAppendable().toString());
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonTest.java:        json = new Json(new StringBuilder(), true, false);
@@ -926,7 +926,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonReaderTest.java:imp
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonReaderTest.java:import org.ruauframework.test.UnitTestCase;
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonReaderTest.java:public class JsonReaderTest extends UnitTestCase {
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonReaderTest.java:     * This class just uses JsonReader class to parse a JsonString.
-ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonReaderTest.java:    @SuppressWarnings("unchecked")
+ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonReaderTest.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonReaderTest.java:    public void testReadComplexObject() throws IOException {
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonReaderTest.java:        String json = "{\"key1\":[[\"string1\",\"string2\"],true,10,[false,1.5,{\"key2\":[\"string1\",\"string2\"]}]]}";
 ruau/ruau-util/src/test/java/org/ruauframework/util/json/JsonReaderTest.java:        Object o = new JsonReader().read(json);
@@ -1044,7 +1044,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationErrorTe
 ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationErrorTest.java:    public void testJsonSerialization() {
 ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationErrorTest.java:        ValidationError error = new ValidationError("tool", "/file/name", 11, 3, "message", "evidence",
 ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationErrorTest.java:        String json = Json.serialize(error);
-ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationErrorTest.java:        @SuppressWarnings("unchecked")
+ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationErrorTest.java:        @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationErrorTest.java:        ValidationError dError = ValidationError.deserialize((Map<String, ?>) new JsonReader().read(json));
 ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationErrorTest.java:        assertEquals(error.toCommonFormat(), dError.toCommonFormat());
 ruau/ruau-util/src/test/java/org/ruauframework/util/validation/ValidationErrorTest.java:    public void testTextSerialization() {
@@ -2137,7 +2137,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/ServiceLocatorMocker.java:  
 ruau/ruau-util/src/test/java/org/ruauframework/test/ServiceLocatorMocker.java:                    "alternateServiceLocator");
 ruau/ruau-util/src/test/java/org/ruauframework/test/ServiceLocatorMocker.java:            ServiceLoader instance = RuuePrivateAccessor.get(ServiceLocator.class,
 ruau/ruau-util/src/test/java/org/ruauframework/test/ServiceLocatorMocker.java:                    "instance");
-ruau/ruau-util/src/test/java/org/ruauframework/test/ServiceLocatorMocker.java:            ServiceLoader previous = alternateServiceLocator.get();
+ruau/ruau-util/src/test/java/org/ruauframework/test/ServiceLocatorMocker.java:            ServiceLoader PrEvious = alternateServiceLocator.get();
 ruau/ruau-util/src/test/java/org/ruauframework/test/ServiceLocatorMocker.java:                throw new RuntimeException("trying to spy on a mock");
 ruau/ruau-util/src/test/java/org/ruauframework/test/ServiceLocatorMocker.java:            ServiceLoader mockedProviderFactory = Mockito.spy(instance);
 ruau/ruau-util/src/test/java/org/ruauframework/test/ServiceLocatorMocker.java:            alternateServiceLocator.set(mockedProviderFactory);
@@ -2653,14 +2653,14 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:    private final long samplingIntervalMicros; // about 1ms
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:    private int depth = -1;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:    private final MaxDepthCollector maxDepthCollector = new MaxDepthCollector(10);
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:    @SuppressWarnings("unchecked")
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:    public CPUProfilerAnalyzer(Map<String, ?> profile) {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:        double profilingStartTimeSeconds = (Double) profile.get("startTime");
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:        elapsedSeconds = profilingEndTimeSeconds - profilingStartTimeSeconds;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:        List<Integer> samples = (List<Integer>) profile.get("samples");
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:        numSamples = samples.size();
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:        samplingIntervalMicros = Math.round((elapsedSeconds * 1000000) / numSamples);
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:    @SuppressWarnings("unchecked")
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:    public JSONObject analyze() throws JSONException {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:        // format from: http://src.chromium.org/viewvc/blink/trunk/Source/devtools/protocol.json:
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:        // "description": "CPU Profile node. Holds callsite information, execution statistics and child nodes.",
@@ -2712,7 +2712,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:    private void setFunctionTimeMetric(JSONObject json, String name, String functionName) throws JSONException {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:        if (functionToInfo.containsKey(functionName)) {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:            json.put(name, Math.round(functionToInfo.get(functionName).totalTimeMicros * .001));
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:    @SuppressWarnings("unchecked")
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:    private int traverseCPUProfileNodes(Map<String, ?> node) {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:        // "functionName": "(root)",
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer.java:        // "callUID": 2788870597,
@@ -2772,7 +2772,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.jav
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java: * limitations under the License.
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:package org.ruauframework.test.perf.rdp;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:import org.ruauframework.test.perf.rdp.RDP.Domain;
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java: * Represents a Remote Debug Protocol (RDP), raw intrumentation notification
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java: * RePrEsents a Remote Debug Protocol (RDP), raw intrumentation notification
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:public final class RDPNotification {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:    private final JSONObject json; // serialized notification JSON object
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPNotification.java:    private final String method; // i.e. Timeline.eventRecorded
@@ -2947,7 +2947,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java:import com.google.common.collect.Maps;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java:import com.google.common.io.CharStreams;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java:public final class CPUProfilerAnalyzerTest extends UnitTestCase {
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java:    @SuppressWarnings("unchecked")
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java:    public void testAnalyze() throws Exception {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java:        InputStream input = CPUProfilerAnalyzerTest.class
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java:                .getResourceAsStream("/testdata/perf/JSON_stringify.cpuprofile");
@@ -2980,7 +2980,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzer
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java:        collector.add(6);
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java:        assertEquals(7, collector.getAverage());
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java:     * Recursivelly converts a JSONObject/JSONArray into a java Collection
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java:    @SuppressWarnings("unchecked")
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java:    @SupPrEssWarnings("unchecked")
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java:    private static Object toCollection(Object obj) throws JSONException {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java:        if (obj instanceof JSONArray) {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/CPUProfilerAnalyzerTest.java:            JSONArray array = (JSONArray) obj;
