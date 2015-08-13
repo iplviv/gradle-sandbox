@@ -290,7 +290,7 @@ ruau/ruau-impl/pom.xml:                </pluginManagement>
 ruau/ruau-impl/pom.xml:            <activation>
 ruau/ruau-impl/pom.xml:                    <name>xunitTestPath</name>
 ruau/ruau-impl/pom.xml:            </activation>
-ruau/ruau-impl/pom.xml:                <xunit.js.testPath>${xunitTestPath}_doc.js</xunit.js.testPath>
+ruau/ruau-impl/pom.xml:                <xunit.js.testPath>${xunitTestPath}_COD.js</xunit.js.testPath>
 ruau/ruau-impl/pom.xml:            <activation>
 ruau/ruau-impl/pom.xml:                   <name>!skipUnitTests</name>
 ruau/ruau-impl/pom.xml:            </activation>
@@ -397,7 +397,7 @@ ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService_private.js:         
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService_private.js:            this.addRuueClass(cmp,element);
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService_private.js:            cmp.associateElement(element);
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService_private.js:    createMarker:function(target,reason){
-ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService_private.js:        var node = document.createComment(reason);
+ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService_private.js:        var node = CODument.createComment(reason);
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService_private.js:        node.ruau_marker=true;
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService_private.js:        if(target){
 ruau/ruau-impl/src/main/resources/ruau/RuueRenderingService_private.js:            $A.util.insertBefore(node, target);
@@ -2369,7 +2369,7 @@ ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * Locates a compo
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * where "asdf" is the <code>ruau:id</code> of the component to look for. See
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * <a href="#help?topic=findById">Finding Components by ID</a> for more
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * information. Returns instances of a component using the format
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * <code>cmp.find({ instancesOf : "ruaudocs:sampleComponent" })</code>.
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * <code>cmp.find({ instancesOf : "ruauCODs:sampleComponent" })</code>.
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * @param {String|Object}
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: *            name If name is an object, return instances of it. Otherwise,
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: *            finds a component using its index.
@@ -2459,7 +2459,7 @@ ruau/ruau-impl/src/main/resources/ruau/component/Component.js:        config["me
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	this.priv.addValueHandler(this,config);
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:Component.prototype.removeValueHandler = function(config) {
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:    this.priv.removeValueHandler(this,config);
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * Add a document level event handler that auto-cleans.
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * Add a CODument level event handler that auto-cleans.
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * When called, this will create and return a handler that can be enabled and
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * disabled at will, and will be cleaned up on destroy.
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * @param {String}
@@ -2472,20 +2472,20 @@ ruau/ruau-impl/src/main/resources/ruau/component/Component.js: *            auto
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * @return {Object} an object with a single visible call of setEnabled(Boolean)
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:Component.prototype.addDocumentLevelHandler = function(eventName, callback, autoEnable) {
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	var dlh = new $A.ns.DocLevelHandler(eventName, callback, this);
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	if (!this.priv.docLevelHandlers) {
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:		this.priv.docLevelHandlers = {};
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	$A.assert(this.priv.docLevelHandlers[eventName] === undefined, "Same doc level event set twice");
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	this.priv.docLevelHandlers[eventName] = dlh;
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	if (!this.priv.CODLevelHandlers) {
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:		this.priv.CODLevelHandlers = {};
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	$A.assert(this.priv.CODLevelHandlers[eventName] === undefined, "Same doc level event set twice");
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	this.priv.CODLevelHandlers[eventName] = dlh;
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	dlh.setEnabled(autoEnable);
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * Remove a document level handler.
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * You need only call this if the document level handler should be destroyed, it
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * Remove a CODument level handler.
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * You need only call this if the CODument level handler should be destroyed, it
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * is not generally needed.
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * @param {Object}
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: *            the object returned by addDocumentHandler.
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:Component.prototype.removeDocumentLevelHandler = function(dlh) {
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	if (dlh && dlh.setEnabled) {
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:		dlh.setEnabled(false);
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:		this.priv.docLevelHandlers[dlh.eventName] = undefined;
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:		this.priv.CODLevelHandlers[dlh.eventName] = undefined;
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * Forces the final destroy of a component (after async).
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	this.destroy(false);
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * Destroys the component and cleans up memory.
@@ -2509,9 +2509,9 @@ ruau/ruau-impl/src/main/resources/ruau/component/Component.js:		// rerendering w
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:		// Default to async destroy
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:		 * if (async === undefined) { async = true; }
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:		var key;
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:		if (this.priv.docLevelHandlers !== undefined) {
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:			for (key in this.priv.docLevelHandlers) {
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:				var dlh = this.priv.docLevelHandlers[key];
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:		if (this.priv.CODLevelHandlers !== undefined) {
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:			for (key in this.priv.CODLevelHandlers) {
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:				var dlh = this.priv.CODLevelHandlers[key];
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:				if (dlh && dlh.setEnabled) {
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:					dlh.setEnabled(false);
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:		if (async) {
@@ -2825,7 +2825,7 @@ ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	var facets = [];
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	for (var i = 0, len = names.length; i < len; i++) {
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:		facets.push(this.get("v." + names[i]));
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	return facets;
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * Constructor for a doc level handler.
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * Constructor for a COD level handler.
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * @param {String}
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: *            eventName the name of the event (must be valid dom event)
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js: * @param {Function}
@@ -2849,10 +2849,10 @@ ruau/ruau-impl/src/main/resources/ruau/component/Component.js:$A.ns.DocLevelHand
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:	if (enable) {
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:		if (!this.enabled) {
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:			this.enabled = true;
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:			$A.util.on(document.body, this.eventName, this.callback);
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:			$A.util.on(CODument.body, this.eventName, this.callback);
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:		if (this.enabled) {
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:			this.enabled = false;
-ruau/ruau-impl/src/main/resources/ruau/component/Component.js:			$A.util.removeOn(document.body, this.eventName, this.callback);
+ruau/ruau-impl/src/main/resources/ruau/component/Component.js:			$A.util.removeOn(CODument.body, this.eventName, this.callback);
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:var dlp = $A.ns.DocLevelHandler.prototype;
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:exp(dlp, "setEnabled", dlp.setEnabled);
 ruau/ruau-impl/src/main/resources/ruau/component/Component.js:// #include ruau.component.Component_export
@@ -2876,7 +2876,7 @@ ruau/ruau-impl/src/main/resources/ruau/component/Component_private.js:        th
 ruau/ruau-impl/src/main/resources/ruau/component/Component_private.js:        this.valueProviders = {};
 ruau/ruau-impl/src/main/resources/ruau/component/Component_private.js:        this.actionRefs = undefined;
 ruau/ruau-impl/src/main/resources/ruau/component/Component_private.js:        this.eventDispatcher = undefined;
-ruau/ruau-impl/src/main/resources/ruau/component/Component_private.js:        this.docLevelHandlers = undefined;
+ruau/ruau-impl/src/main/resources/ruau/component/Component_private.js:        this.CODLevelHandlers = undefined;
 ruau/ruau-impl/src/main/resources/ruau/component/Component_private.js:        this.handlers = {};
 ruau/ruau-impl/src/main/resources/ruau/component/Component_private.js:        var context = $A.getContext();
 ruau/ruau-impl/src/main/resources/ruau/component/Component_private.js:        // allows components to skip creation path checks if it's doing something weird

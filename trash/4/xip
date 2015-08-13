@@ -1707,7 +1707,7 @@ ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/CreateAttributeQuic
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFix.java:        // Validates the attribute name
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFix.java:        if ((RuueTextUtil.validateAttributeName(attName)) != true) {
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFix.java:            throw new RuueRuntimeException("Invalid attribute name:'" + attName
-ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFix.java:                    + "',Refer to Ruuedocs for valid attribute names");
+ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFix.java:                    + "',Refer to RuueCODs for valid attribute names");
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFix.java:        // validates the type
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFix.java:            DefDescriptor<TypeDef> typeDesc = Ruue.getDefinitionService().getDefDescriptor(type, TypeDef.class);
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFix.java:        } catch (RuueRuntimeException e) {
@@ -1836,16 +1836,16 @@ ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.jav
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:            XMLEvent event = (XMLEvent) reader.next();
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:            writer.add(event);
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:            // create a new xml comment with character offset position info
-ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:            // (this will be handy when editing the xml document)
+ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:            // (this will be handy when editing the xml CODument)
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:            XMLEvent offsetComment = eventFactory.createComment(Integer.toString(event.getLocation()
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:                    .getCharacterOffset()));
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:            writer.add(offsetComment);
-ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:        Document doc = builder.parse(new ByteArrayInputStream(baos.toByteArray()));
-ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:    private Node findNode(Document doc, String xPathExpr) throws Exception {
+ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:        Document COD = builder.parse(new ByteArrayInputStream(baos.toByteArray()));
+ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:    private Node findNode(Document COD, String xPathExpr) throws Exception {
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:        XPathFactory factory = XPathFactory.newInstance();
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:        XPath xpath = factory.newXPath();
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:        XPathExpression expr = xpath.compile(xPathExpr);
-ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:        NodeList nodes = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
+ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:        NodeList nodes = (NodeList) expr.evaluate(COD, XPathConstants.NODESET);
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:            throw new RuueRuntimeException(String.format("Unable to find node: %s", xPathExpr));
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:    protected Node findNode(Source<?> source, String xPathExpr) throws Exception {
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/RuueXMLQuickFix.java:        return findNode(getXMLDoc(source), xPathExpr);
@@ -2113,7 +2113,7 @@ ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/CreateThemeVarQuick
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/CreateThemeVarQuickFix.java:            throw new RuueRuntimeException("Cannot leave the name field blank");
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/CreateThemeVarQuickFix.java:        if ((RuueTextUtil.validateAttributeName(name)) != true) {
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/CreateThemeVarQuickFix.java:            throw new RuueRuntimeException("Invalid var name:'" + name
-ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/CreateThemeVarQuickFix.java:                    + "', Refer to Ruuedocs for valid attribute names");
+ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/CreateThemeVarQuickFix.java:                    + "', Refer to RuueCODs for valid attribute names");
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/CreateThemeVarQuickFix.java:            throw new RuueError("Cannot find source for " + desc.getQualifiedName());
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/CreateThemeVarQuickFix.java:        Matcher m = TAG.matcher(s);
 ruau/ruau/src/main/java/org/ruauframework/throwable/quickfix/CreateThemeVarQuickFix.java:            sb.append(s.subSequence(0, m.end()));

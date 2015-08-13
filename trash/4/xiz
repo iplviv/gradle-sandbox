@@ -2536,11 +2536,11 @@ ruau/ruau/src/test/java/org/ruauframework/components/ui/carousel/CarouselUITest.
 ruau/ruau/src/test/java/org/ruauframework/components/ui/carousel/CarouselUITest.java:    private boolean moveToCarousel(WebDriver d, WebElement c)
 ruau/ruau/src/test/java/org/ruauframework/components/ui/carousel/CarouselUITest.java:        boolean result = false;
 ruau/ruau/src/test/java/org/ruauframework/components/ui/carousel/CarouselUITest.java:        } catch (Exception e) {
-ruau/ruau/src/test/java/org/ruauframework/components/ui/carousel/CarouselUITest.java:            String mouseOverScript = "if(document.createEvent){" +
-ruau/ruau/src/test/java/org/ruauframework/components/ui/carousel/CarouselUITest.java:                    "var evObj = document.createEvent('MouseEvents');" +
+ruau/ruau/src/test/java/org/ruauframework/components/ui/carousel/CarouselUITest.java:            String mouseOverScript = "if(CODument.createEvent){" +
+ruau/ruau/src/test/java/org/ruauframework/components/ui/carousel/CarouselUITest.java:                    "var evObj = CODument.createEvent('MouseEvents');" +
 ruau/ruau/src/test/java/org/ruauframework/components/ui/carousel/CarouselUITest.java:                    "evObj.initEvent('mouseover', true, false);" +
 ruau/ruau/src/test/java/org/ruauframework/components/ui/carousel/CarouselUITest.java:                    "arguments[0].dispatchEvent(evObj);" +
-ruau/ruau/src/test/java/org/ruauframework/components/ui/carousel/CarouselUITest.java:                    "} else if(document.createEventObject) {" +
+ruau/ruau/src/test/java/org/ruauframework/components/ui/carousel/CarouselUITest.java:                    "} else if(CODument.createEventObject) {" +
 ruau/ruau/src/test/java/org/ruauframework/components/ui/carousel/CarouselUITest.java:                    "arguments[0].fireEvent('onmouseover');}";
 ruau/ruau/src/test/java/org/ruauframework/components/ui/carousel/CarouselUITest.java:            ruauUITestingUtil.getEval(mouseOverScript, c);
 ruau/ruau/src/test/java/org/ruauframework/components/ui/carousel/CarouselUITest.java:    private List<WebElement> getPagesOnCarousel(WebElement c) {

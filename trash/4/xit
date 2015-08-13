@@ -459,7 +459,7 @@ ruau/ruau/src/test/components/ruautest/unrender/unrenderController.js: * See the
 ruau/ruau/src/test/components/ruautest/unrender/unrenderController.js: * limitations under the License.
 ruau/ruau/src/test/components/ruautest/unrender/unrenderController.js:        var evtToken = event.getParam("event")
 ruau/ruau/src/test/components/ruautest/unrender/unrenderController.js:        var log = cmp.find("log").getElement();
-ruau/ruau/src/test/components/ruautest/unrender/unrenderController.js:        var div = document.createElement("div");
+ruau/ruau/src/test/components/ruautest/unrender/unrenderController.js:        var div = CODument.createElement("div");
 ruau/ruau/src/test/components/ruautest/unrender/unrenderController.js:        var targetCmp = cmp.find("root");
 ruau/ruau/src/test/components/ruautest/unrender/unrenderController.js:        targetCmp && targetCmp.destroy();
 ruau/ruau/src/test/components/ruautest/unrender/unrenderTest.js: * Copyright (C) 2013 salesforce.com, inc.
@@ -671,7 +671,7 @@ ruau/ruau/src/test/components/ruautest/testPerfRunnerContainer/testPerfRunnerCon
 ruau/ruau/src/test/components/ruautest/testPerfRunnerContainer/testPerfRunnerContainerHelper.js:                        '<a href="' + t.jsConsole + '" target="_blank">','<span class="icon icon-meter"></span></a>',
 ruau/ruau/src/test/components/ruautest/testPerfRunnerContainer/testPerfRunnerContainerHelper.js:                '<div class="exception"></div>',
 ruau/ruau/src/test/components/ruautest/testPerfRunnerContainer/testPerfRunnerContainerHelper.js:    buildDOM: function (testArray) {
-ruau/ruau/src/test/components/ruautest/testPerfRunnerContainer/testPerfRunnerContainerHelper.js:        var placeholder = document.createElement('div'),
+ruau/ruau/src/test/components/ruautest/testPerfRunnerContainer/testPerfRunnerContainerHelper.js:        var placeholder = CODument.createElement('div'),
 ruau/ruau/src/test/components/ruautest/testPerfRunnerContainer/testPerfRunnerContainerHelper.js:            tmp = '<div class="test-container"><ul class="list">', i;
 ruau/ruau/src/test/components/ruautest/testPerfRunnerContainer/testPerfRunnerContainerHelper.js:        for (i = 0; i < testArray.length; i++) {
 ruau/ruau/src/test/components/ruautest/testPerfRunnerContainer/testPerfRunnerContainerHelper.js:            tmp += this.createRow(testArray[i]);
@@ -734,7 +734,7 @@ ruau/ruau/src/test/components/ruautest/testPerfRunnerContainer/testPerfRunnerCon
 ruau/ruau/src/test/components/ruautest/testPerfRunnerContainer/testPerfRunnerContainerHelper.js:            alert('You must select at least one test');
 ruau/ruau/src/test/components/ruautest/testPerfRunnerContainer/testPerfRunnerContainerHelper.js:    updateStatus: function (status) {
 ruau/ruau/src/test/components/ruautest/testPerfRunnerContainer/testPerfRunnerContainerHelper.js:        //TODO: Send an event instead
-ruau/ruau/src/test/components/ruautest/testPerfRunnerContainer/testPerfRunnerContainerHelper.js:        i = document.body.querySelector('.status-bar');
+ruau/ruau/src/test/components/ruautest/testPerfRunnerContainer/testPerfRunnerContainerHelper.js:        i = CODument.body.querySelector('.status-bar');
 ruau/ruau/src/test/components/ruautest/testPerfRunnerContainer/testPerfRunnerContainerHelper.js:        i.textContent = status;
 ruau/ruau/src/test/components/ruautest/testPerfRunnerContainer/testPerfRunnerContainerHelper.js:    updateTests: function (result, dom) {
 ruau/ruau/src/test/components/ruautest/testPerfRunnerContainer/testPerfRunnerContainerHelper.js:        var testsMap     = result.testsWithPropsMap,
@@ -1254,8 +1254,8 @@ ruau/ruau/src/test/components/ruautest/aisAsyncApp/aisAsyncAppController.js: * d
 ruau/ruau/src/test/components/ruautest/aisAsyncApp/aisAsyncAppController.js: * See the License for the specific language governing permissions and
 ruau/ruau/src/test/components/ruautest/aisAsyncApp/aisAsyncAppController.js: * limitations under the License.
 ruau/ruau/src/test/components/ruautest/aisAsyncApp/aisAsyncAppController.js:	handlerPressFromInject : function(cmp, evt) {
-ruau/ruau/src/test/components/ruautest/aisAsyncApp/aisAsyncAppController.js:		document._click3HandlerCalled = true;  
-ruau/ruau/src/test/components/ruautest/aisAsyncApp/aisAsyncAppController.js:        document.__click3EventParam=evt.getParams().strAttr;
+ruau/ruau/src/test/components/ruautest/aisAsyncApp/aisAsyncAppController.js:		CODument._click3HandlerCalled = true;  
+ruau/ruau/src/test/components/ruautest/aisAsyncApp/aisAsyncAppController.js:        CODument.__click3EventParam=evt.getParams().strAttr;
 ruau/ruau/src/test/components/ruautest/test_NumberFormatting/test_NumberFormatting.cmp:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/test/components/ruautest/test_NumberFormatting/test_NumberFormatting.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau/src/test/components/ruautest/test_NumberFormatting/test_NumberFormatting.cmp:    you may not use this file except in compliance with the License.
@@ -1337,7 +1337,7 @@ ruau/ruau/src/test/components/ruautest/cmpBackRefTest/cmpBackRefTestTest.js: * S
 ruau/ruau/src/test/components/ruautest/cmpBackRefTest/cmpBackRefTestTest.js: * limitations under the License.
 ruau/ruau/src/test/components/ruautest/cmpBackRefTest/cmpBackRefTestTest.js:    testBackRefsAreCorrect:{
 ruau/ruau/src/test/components/ruautest/cmpBackRefTest/cmpBackRefTestTest.js:        labels: ["ruauSanity"],
-ruau/ruau/src/test/components/ruautest/cmpBackRefTest/cmpBackRefTestTest.js:            var element = document.getElementById("ifDiv");
+ruau/ruau/src/test/components/ruautest/cmpBackRefTest/cmpBackRefTestTest.js:            var element = CODument.getElementById("ifDiv");
 ruau/ruau/src/test/components/ruautest/cmpBackRefTest/cmpBackRefTestTest.js:            var component = $A.services.component.getRenderingComponentForElement(element).getAttributeValueProvider();
 ruau/ruau/src/test/components/ruautest/cmpBackRefTest/cmpBackRefTestTest.js:            $A.test.assertEquals(cmp, component, "call to $A.services.component.getRenderingComponentForElement(elm) should have returned this component");
 ruau/ruau/src/test/components/ruautest/cmpBackRefTest/cmpBackRefTestTest.js:            component = $A.services.component.getRenderingComponentForElement(element).getAttributeValueProvider();
@@ -2447,7 +2447,7 @@ ruau/ruau/src/test/components/ruautest/test_ColorButton/test_ColorButtonRenderer
 ruau/ruau/src/test/components/ruautest/test_ColorButton/test_ColorButtonRenderer.js: * distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau/src/test/components/ruautest/test_ColorButton/test_ColorButtonRenderer.js: * See the License for the specific language governing permissions and
 ruau/ruau/src/test/components/ruautest/test_ColorButton/test_ColorButtonRenderer.js: * limitations under the License.
-ruau/ruau/src/test/components/ruautest/test_ColorButton/test_ColorButtonRenderer.js:        var ret = document.createElement('div');
+ruau/ruau/src/test/components/ruautest/test_ColorButton/test_ColorButtonRenderer.js:        var ret = CODument.createElement('div');
 ruau/ruau/src/test/components/ruautest/test_ColorButton/test_ColorButtonRenderer.js:        ret.id = component.getGlobalId();
 ruau/ruau/src/test/components/ruautest/test_ColorButton/test_ColorButtonRenderer.js:        ret.innerHTML = component.get('v.label');
 ruau/ruau/src/test/components/ruautest/test_ColorButton/test_ColorButtonRenderer.js:        ret.style.backgroundColor = component.get('v.color');
@@ -2717,7 +2717,7 @@ ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:      
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:                     date_picker = input_date.find("datePicker");
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:                    date_picker.set("v.visible", true);
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:                    //date picker should disappear when click anywhere outside of it, like on the outputText
-ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:                    var output_text = document.getElementById("dlh_outputText");
+ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:                    var output_text = CODument.getElementById("dlh_outputText");
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:                    //one event is enough to make date picker disappear, just to simulate mouse click, we have both here
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js:                    $A.test.assertFalse(date_picker.get("v.visible"));
 ruau/ruau/src/test/components/uitest/inputDate_Test/inputDate_TestTest.js: 	 * Firing the openPicker component event should open the date picker.

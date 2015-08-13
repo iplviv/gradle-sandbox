@@ -337,12 +337,12 @@ ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        var 
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:            priv.loadEventQueue.push(eventName);
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        var context = $A.getContext();
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:    getManifestURL : function() {
-ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        var htmlNode = document.body.parentNode;
+ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        var htmlNode = CODument.body.parentNode;
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        return htmlNode ? htmlNode.getAttribute("manifest") : null;
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:    isManifestPresent : function() {
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        return !!priv.getManifestURL();
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:    handleAppcacheChecking : function(e) {
-ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:    	document._appcacheChecking = true;
+ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:    	CODument._appcacheChecking = true;
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:            // TODO IBOGDANOV Why are you checking in commented out code like
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:             * setTimeout( function(){ if(window.applicationCache.status === window.applicationCache.CHECKING){
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:    handleAppcacheUpdateReady : function(event) {
@@ -379,7 +379,7 @@ ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:    handleAp
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:    handleAppcacheCached : function(e) {
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:    handleAppcacheObsolete : function(e) {
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:    	priv.hardRefresh();
-ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        var progressContEl = document.getElementById("ruauAppcacheProgress");
+ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        var progressContEl = CODument.getElementById("ruauAppcacheProgress");
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                progressContEl.style.display = "block";
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                var progressEl = progressContEl.firstChild;
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:                progressContEl.style.display = "none";
@@ -407,7 +407,7 @@ ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:$A.ns.Util.p
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        priv.isUnloading = true;
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:$A.ns.Util.prototype.on(window, "load", function(event) {
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:    // Lazy load data-src scripts
-ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:    var scripts = document.getElementsByTagName("script");
+ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:    var scripts = CODument.getElementsByTagName("script");
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:        for ( var i = 0, len = scripts.length; i < len; i++) {
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:            var script = scripts[i];
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_private.js:            if (script.getAttribute("data-src") && !script.getAttribute("src")) {
@@ -683,7 +683,7 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * limitations under the Lic
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @description The top-level namespace/object for all SFDC Util code.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Util methods provide utility functions for browsers in addition to
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * functions for retrieving, manipulating, or checking DOM elements.
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    this.trashcan = document.createDocumentFragment();
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    this.trashcan = CODument.createDocumentFragment();
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    this.trash = [];
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    this.transport = new Transport();
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    this["transport"] = this.transport;
@@ -884,7 +884,7 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {String} markup Th
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @returns {Array} An array of the elements that were generated.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:$A.ns.Util.prototype.createElementsFromMarkup=function(markup){
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    if(!this.isUndefinedOrNull(markup)) {
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var tmpNode = document.createElement("span");
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var tmpNode = CODument.createElement("span");
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        tmpNode.innerHTML = markup;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        return this.toArray(tmpNode.childNodes);
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Inserts element(s) as the first child of the parent element.
@@ -892,7 +892,7 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {Object} newE1 The
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {Object} referenceE1 The reference element
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @returns {Object} The element that was inserted.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    if (this.isArray(newEl)) {
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var frag = document.createDocumentFragment();
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var frag = CODument.createDocumentFragment();
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        this.appendChild(newEl, frag);
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        this.insertFirst(frag, referenceEl);
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    var firstChild = referenceEl.firstChild;
@@ -903,7 +903,7 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {Object} newE1 The
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {Object} referenceE1 The reference element
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @returns {Object} The element that was inserted.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    if (this.isArray(newEl)) {
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var frag = document.createDocumentFragment();
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var frag = CODument.createDocumentFragment();
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        this.appendChild(newEl, frag);
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        this.insertBefore(frag, referenceEl);
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    var parent = referenceEl.parentNode;
@@ -915,7 +915,7 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {Object} newE1 The
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {Object} referenceE1 The reference element
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @returns {Object} The element that was inserted.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    if (this.isArray(newEl)) {
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var frag = document.createDocumentFragment();
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var frag = CODument.createDocumentFragment();
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        this.appendChild(newEl, frag);
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        this.insertAfter(frag, referenceEl);
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    var parent = referenceEl.parentNode;
@@ -933,7 +933,7 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @returns {Object} The new
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:$A.ns.Util.prototype.appendChild = function(newEl, referenceEl) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    if (referenceEl.canHaveChildren===false){
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    if (this.isArray(newEl)) {
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var frag = document.createDocumentFragment();
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var frag = CODument.createDocumentFragment();
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var len = newEl.length;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        for(var i=0;i<len;i++){
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:                frag.appendChild(newEl[i]);
@@ -1231,14 +1231,14 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            attrValue = elem
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            attrValue = null;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    return attrValue;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @description Returns a custom data attribute value from a DOM element.
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * For more information on custom data attributes, see http://html5doctor.com/html5-custom-data-attributes/
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * For more information on custom data attributes, see http://html5CODtor.com/html5-custom-data-attributes/
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {HTMLElement} element The element from which to retrieve data.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {String} key The data key to look up on element.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:$A.ns.Util.prototype.getDataAttribute = function(element, key) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:	if (!this.acceptsData(element) || this.isUndefined(key)) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    key = this.getDataAttributeName(key);
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @description Sets a custom data attribute value from a DOM element.
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * For more information on custom data attributes, see http://html5doctor.com/html5-custom-data-attributes/
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * For more information on custom data attributes, see http://html5CODtor.com/html5-custom-data-attributes/
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {HTMLElement} element The element from which to retrieve data.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {String} key The data key to add to element.
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {String} value The value of the data to add to an element. If value is undefined, the key data attribute will be removed from element.
@@ -1268,7 +1268,7 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        return typeof obj ==
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * Attach the element to the HTML body
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {DOMElement} element
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:$A.ns.Util.prototype.attachToDocumentBody = function(element) {
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var body = document.getElementsByTagName("body")[0];
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var body = CODument.getElementsByTagName("body")[0];
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        body.appendChild(element);
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:	var lastIndex = fullstr.lastIndexOf(substr);
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    return (lastIndex !== -1) && (lastIndex + substr.length === fullstr.length);
@@ -1360,7 +1360,7 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        if (!util.isArray(ar
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            throw "Merge takes only arrays as arguments.";
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    util.forEach(arrays, function(array) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        util.forEach(array, function(element) {
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:/** forEach: see documentation below (attached to last definition so that it is picked up for doc generation). */
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:/** forEach: see CODumentation below (attached to last definition so that it is picked up for doc generation). */
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:if (!!Array.prototype.forEach) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    $A.ns.Util.prototype.forEach = function(array, method, that) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        array.forEach(method, that);
@@ -1376,7 +1376,7 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            throw new TypeEr
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var index;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        for (index = 0; index < array.length; index++) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            method.call(that, array[index], index);
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:/** map: see documentation below (attached to last definition so that it is picked up for doc generation). */
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:/** map: see CODumentation below (attached to last definition so that it is picked up for doc generation). */
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:if (!!Array.prototype.map) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    $A.ns.Util.prototype.map = function(array, method, that) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        return array.map(method, that);
@@ -1394,7 +1394,7 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            throw new TypeEr
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var index, result = [];
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        for (index = 0; index < array.length; index++) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            result.push(method.call(that, array[index], index));
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:/** reduce: see documentation below (attached to last definition so that it is picked up for doc generation). */
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:/** reduce: see CODumentation below (attached to last definition so that it is picked up for doc generation). */
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:if (!!Array.prototype.reduce) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    $A.ns.Util.prototype.reduce = function(array, method, initial) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        return array.reduce(method, initial);
@@ -1412,7 +1412,7 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            throw new TypeEr
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var index, result = initial;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        for (index = 0; index < array.length; index++) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            result = method.call(this, result, array[index], index);
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:/** every: see documentation below (attached to last definition so that it is picked up for doc generation). */
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:/** every: see CODumentation below (attached to last definition so that it is picked up for doc generation). */
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:if (!!Array.prototype.every) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    $A.ns.Util.prototype.every = function(array, predicate, that) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        return array.every(predicate, that);
@@ -1431,7 +1431,7 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var index;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        for (index = 0; index < array.length; index++) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            if(!predicate.call(that, array[index], index)) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:                return false;
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:/** some: see documentation below (attached to last definition so that it is picked up for doc generation). */
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:/** some: see CODumentation below (attached to last definition so that it is picked up for doc generation). */
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:if (!!Array.prototype.some) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    $A.ns.Util.prototype.some = function(array, predicate, that) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        return array.some(predicate, that);
@@ -1450,7 +1450,7 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var index;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        for (index = 0; index < array.length; index++) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:            if(predicate.call(that, array[index], index)) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        return false;
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:/** filter: see documentation below (attached to last definition so that it is picked up for doc generation). */
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:/** filter: see CODumentation below (attached to last definition so that it is picked up for doc generation). */
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:if (!!Array.prototype.filter) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    $A.ns.Util.prototype.filter = function(array, predicate, that) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        return array.filter(predicate, that);
@@ -1545,7 +1545,7 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {String} input the
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @param {Array} tags the html tag names to be removed
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js: * @return {String} an output string without those specified tags
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:$A.ns.Util.prototype.stripTags = function(input, tags) {
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    var div = document.createElement('div');
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    var div = CODument.createElement('div');
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    if (!this.isArray(tags)) {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        tags = [tags];
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:    for (var j = 0; j < tags.length; j++) {
@@ -1600,7 +1600,7 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var length = collect
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        var newCollection = new Array(length);
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        for(var c=0;c<length;c++){
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:	 * Gets the ruau debug tool component whether in an iframe or not.
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:			var debugElem = this.debugToolWindow.document.getElementById('__ruau_debug_tool');
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:			var debugElem = this.debugToolWindow.CODument.getElementById('__ruau_debug_tool');
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:				return this.debugToolWindow["ruau"].componentService.getAttributeProviderForElement(debugElem);
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:	 * Gets the ruau instance of debug tool which has been opened in a child window
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:	 * @returns {Object} Ruue instance
@@ -1628,12 +1628,12 @@ ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        	if (script.state ==
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        		callback.call();
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        		script.queue.push(callback);
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:        	cache[url] = { state: "LOADING", queue: [callback] };
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:			var s = document.createElement("script");
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:			var s = CODument.createElement("script");
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:			s.onload = function() {
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:				cache[url].state = "LOADED";
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:				var queue = cache[url].queue;
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js:					queue.shift().call();
-ruau/ruau-impl/src/main/resources/ruau/util/Util.js:			document.head.appendChild( s ).parentNode.removeChild( s );
+ruau/ruau-impl/src/main/resources/ruau/util/Util.js:			CODument.head.appendChild( s ).parentNode.removeChild( s );
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js://#include ruau.storage.adapters.SizeEstimator
 ruau/ruau-impl/src/main/resources/ruau/util/Util.js://#include ruau.util.Util_export
 ruau/ruau-impl/src/main/resources/ruau/util/NumberFormat.js: * Copyright (C) 2013 salesforce.com, inc.
@@ -1898,10 +1898,10 @@ ruau/ruau-impl/src/main/resources/ruau/util/Style.js: * distributed under the Li
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js: * See the License for the specific language governing permissions and
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js: * limitations under the License.
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js:    this.head = null;
-ruau/ruau-impl/src/main/resources/ruau/util/Style.js: * Gets the head element of the HTML document.
+ruau/ruau-impl/src/main/resources/ruau/util/Style.js: * Gets the head element of the HTML CODument.
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js:Style.prototype.getHead = function(){
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js:    var ret = this.head;
-ruau/ruau-impl/src/main/resources/ruau/util/Style.js:        this.head = document.getElementsByTagName("head")[0];
+ruau/ruau-impl/src/main/resources/ruau/util/Style.js:        this.head = CODument.getElementsByTagName("head")[0];
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js:        ret = this.head;
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js: * Applies a CSS style to an element using the HTML style element.
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js: * Appends the HTML style element as a child of the head element.
@@ -1909,13 +1909,13 @@ ruau/ruau-impl/src/main/resources/ruau/util/Style.js: * @param {String} styleTex
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js: * @private
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js:Style.prototype.apply = function(styleText) {
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js:    //FIXME - This should see if it's already been applied
-ruau/ruau-impl/src/main/resources/ruau/util/Style.js:    var styleElement = document.createElement('style');
+ruau/ruau-impl/src/main/resources/ruau/util/Style.js:    var styleElement = CODument.createElement('style');
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js:    this.getHead().appendChild(styleElement);
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js: * Includes a CSS style link element with href, rel, and type attributes.
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js: * Append the HTML link element as a child of the head element.
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js: * @param {String} href Defines the location of the style sheet.
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js:    //FIXME - This should see if it's already been included
-ruau/ruau-impl/src/main/resources/ruau/util/Style.js:    var styleElement = document.createElement('link');
+ruau/ruau-impl/src/main/resources/ruau/util/Style.js:    var styleElement = CODument.createElement('link');
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js:    this.getHead().appendChild(styleElement);
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js: * Gets the CSS property of an element.
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js: * note for "background": if we specify "background" in  CSS, Firefox will use "background-color" as key
@@ -1925,8 +1925,8 @@ ruau/ruau-impl/src/main/resources/ruau/util/Style.js: * @param {String} cssprop 
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js:	var elcsIE = el.currentStyle;
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js:    	else if(elcsIE.getPropertyValue!=undefined){//IE9 or up
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js:    		return elcsIE.getPropertyValue(cssprop);
-ruau/ruau-impl/src/main/resources/ruau/util/Style.js:    }else if (document.defaultView && document.defaultView.getComputedStyle){ //Firefox
-ruau/ruau-impl/src/main/resources/ruau/util/Style.js:    	var elcsFF = document.defaultView.getComputedStyle(el, "");
+ruau/ruau-impl/src/main/resources/ruau/util/Style.js:    }else if (CODument.defaultView && document.defaultView.getComputedStyle){ //Firefox
+ruau/ruau-impl/src/main/resources/ruau/util/Style.js:    	var elcsFF = CODument.defaultView.getComputedStyle(el, "");
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js:    	}else if(elcsFF.getPropertyValue(cssprop)!=undefined){
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js:    		return elcsFF.getPropertyValue(cssprop);
 ruau/ruau-impl/src/main/resources/ruau/util/Style.js:    }else{ //try and get inline style

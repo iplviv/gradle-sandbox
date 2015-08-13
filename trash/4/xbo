@@ -75,38 +75,38 @@ ruau/ruau-components/src/main/components/ui/message/messageTest.js:            $
 ruau/ruau-components/src/main/components/ui/message/messageTest.js:                    "ui:message rendered without _suffix CSS class");
 ruau/ruau-components/src/main/components/ui/message/messageTest.js:            $A.test.assertTrue($A.util.hasClass(div, "-able"),
 ruau/ruau-components/src/main/components/ui/message/messageTest.js:                    "ui:message rendered without -able CSS class");
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:			The <code>severity</code> attribute indicates a message's severity level and determines the style to use when displaying the message. 
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:	If the <code>closable</code> attribute is set to true, the message can be dismissed by pressing the &times; symbol.  
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:    	<p>This example shows a success message when a condition evaluates to true or an error message otherwise.</p>
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:<pre>&lt;ruau:component>
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:    &lt;ruau:attribute name="myBool" type="Boolean" default="true"/>
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:    &lt;ruau:renderIf isTrue="!{v.myBool}">
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:        &lt;ui:message title="Success" severity="confirm">
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:           The operation is successful.
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:        &lt;/ui:message>
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:        &lt;ruau:set attribute="else">
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:            &lt;ui:message title="Error" severity="error">
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:                This is an error.
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:            &lt;/ui:message>
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:        &lt;/ruau:set>
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:    &lt;/ruau:renderIf>
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:&lt;/ruau:component></pre>
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:	</ruau:description>	
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:		<ruau:example name="message" ref="ruaudocs:demoMessage" label="Using ui:message">
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:    	<p>This example shows messages in varying severity levels.</p>
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:	   </ruau:example>
-ruau/ruau-components/src/main/components/ui/message/message.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:			The <code>severity</code> attribute indicates a message's severity level and determines the style to use when displaying the message. 
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:	If the <code>closable</code> attribute is set to true, the message can be dismissed by pressing the &times; symbol.  
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:    	<p>This example shows a success message when a condition evaluates to true or an error message otherwise.</p>
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:<pre>&lt;ruau:component>
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:    &lt;ruau:attribute name="myBool" type="Boolean" default="true"/>
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:    &lt;ruau:renderIf isTrue="!{v.myBool}">
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:        &lt;ui:message title="Success" severity="confirm">
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:           The operation is successful.
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:        &lt;/ui:message>
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:        &lt;ruau:set attribute="else">
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:            &lt;ui:message title="Error" severity="error">
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:                This is an error.
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:            &lt;/ui:message>
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:        &lt;/ruau:set>
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:    &lt;/ruau:renderIf>
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:&lt;/ruau:component></pre>
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:	</ruau:description>	
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:		<ruau:example name="message" ref="ruaudocs:demoMessage" label="Using ui:message">
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:    	<p>This example shows messages in varying severity levels.</p>
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:	   </ruau:example>
+ruau/ruau-components/src/main/components/ui/message/message.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/scrollEnd/scrollEnd.evt:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/scrollEnd/scrollEnd.evt:    Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/scrollEnd/scrollEnd.evt:    you may not use this file except in compliance with the License.
@@ -160,36 +160,36 @@ ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrencyTest.js: 
 ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrencyTest.js:           value = component.getElement().value;
 ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrencyTest.js:           $A.test.assertEquals(1234, component.get("v.value"), "Cmp value does not equal expected");
 ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrencyTest.js:     	   $A.test.assertEquals("$1,234.0000", value, "Element value does not equal expected");
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:			A <code>ui:inputCurrency</code> component represents an input field for a number as a currency, which is rendered as an HTML <code>input</code> tag of type <code>text</code>.
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:			The browser's locale is used by default. To render the output from a <code>ui:inputCurrency</code> component, use the <code>ui:outputCurrency</code> component.
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:		<p>This is a basic set up of a <code>ui:inputCurrency</code> component, which renders an input field with the value <code>$50.00</code> when the browser's currency locale is <code>$</code>.</p>
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:		<pre>&lt;ui:inputCurrency ruau:id="amount" label="Amount" class="field" value="50"/></pre>
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:		<p>This example results in the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:<pre>&lt;div class="uiInput uiInputText uiInputNumber">
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:    &lt;label class="uiLabel-left uiLabel">
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:        &lt;span>Amount&lt;/span>
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:    &lt;/label>
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:    &lt;input class="field" aria-describedby="" max="99999999999999" step="1" placeholder="" type="text" min="-99999999999999">
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:		<p>To override the browser's locale, set the new format on the <code>v.format</code> attribute of the <code>ui:inputCurrency</code> component.
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:		   This example renders an input field with the value <code>£50.00</code>.</p>
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:<pre>var curr = component.find("amount");
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:curr.set("v.format", '£#,###.00');</pre>
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:	</ruau:description>	
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:		<ruau:example name="inputTextExample" ref="uiExamples:inputExample" label="Using ui:inputCurrency">
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:    	<p>This example shows a <code>ui:inputCurrency</code> component and a corresponding <code>ui:outputCurrency</code> component.</p>
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:	</ruau:example>
-ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruauCOD:			A <code>ui:inputCurrency</code> component represents an input field for a number as a currency, which is rendered as an HTML <code>input</code> tag of type <code>text</code>.
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruauCOD:			The browser's locale is used by default. To render the output from a <code>ui:inputCurrency</code> component, use the <code>ui:outputCurrency</code> component.
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruauCOD:		<p>This is a basic set up of a <code>ui:inputCurrency</code> component, which renders an input field with the value <code>$50.00</code> when the browser's currency locale is <code>$</code>.</p>
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruauCOD:		<pre>&lt;ui:inputCurrency ruau:id="amount" label="Amount" class="field" value="50"/></pre>
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruauCOD:		<p>This example results in the following HTML.</p>
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruauCOD:<pre>&lt;div class="uiInput uiInputText uiInputNumber">
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruauCOD:    &lt;label class="uiLabel-left uiLabel">
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruauCOD:        &lt;span>Amount&lt;/span>
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruauCOD:    &lt;/label>
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruauCOD:    &lt;input class="field" aria-describedby="" max="99999999999999" step="1" placeholder="" type="text" min="-99999999999999">
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruauCOD:		<p>To override the browser's locale, set the new format on the <code>v.format</code> attribute of the <code>ui:inputCurrency</code> component.
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruauCOD:		   This example renders an input field with the value <code>£50.00</code>.</p>
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruauCOD:<pre>var curr = component.find("amount");
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruauCOD:curr.set("v.format", '£#,###.00');</pre>
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruauCOD:	</ruau:description>	
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruauCOD:		<ruau:example name="inputTextExample" ref="uiExamples:inputExample" label="Using ui:inputCurrency">
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruauCOD:    	<p>This example shows a <code>ui:inputCurrency</code> component and a corresponding <code>ui:outputCurrency</code> component.</p>
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruauCOD:	</ruau:example>
+ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrency.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrencyHelper.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrencyHelper.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/inputCurrency/inputCurrencyHelper.js: * you may not use this file except in compliance with the License.
@@ -317,12 +317,12 @@ ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextHelper.js
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextHelper.js:			var plainText;
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextHelper.js:			if (editorInstance) {
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextHelper.js:				//Get the plain text before destroy
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextHelper.js:				plainText = editorInstance.document.getBody().getText();
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextHelper.js:				plainText = editorInstance.CODument.getBody().getText();
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextHelper.js:				editorInstance.destroy();
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextHelper.js:				plainText = cmp.get('v.value');
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextHelper.js:			// TODO: determine if we want the <p></p> surrounding plain text when we toggle to rich text
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextHelper.js:			// Set the textarea contents to be the plaintext b/c ckeditor doesn't
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextHelper.js:			document.getElementById(this.getEditorId(cmp)).value = plainText;
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextHelper.js:			CODument.getElementById(this.getEditorId(cmp)).value = plainText;
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextHelper.js:			cmp.set('v.value', plainText);
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextHelper.js:	getEditorInstance : function (cmp) {
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextHelper.js:		return typeof CKEDITOR === "undefined" ? null : CKEDITOR.instances[this.getEditorId(cmp)];
@@ -593,29 +593,29 @@ ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextRenderer.
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextRenderer.js:            	//Cannot listen to v.value change event to update content
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextRenderer.js:            	//since the parent component inputTextArea also listens v.value change event and update v.value again
 ruau/ruau-components/src/main/components/ui/inputRichText/inputRichTextRenderer.js:            	helper.setContent(cmp, cmp.get("v.value"));
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruaudoc:		    By default, <code>ui:inputRichText</code> renders a WYSIWYG editor for entering rich text. 
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruaudoc:		    Setting <code>isRichText="false"</code> uses the <code>ui:inputTextArea</code> component instead of a WYSIWYG editor.
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruaudoc:			The width and height of the rich text editor are independent of those on the <code>ui:inputTextArea</code> component.
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruaudoc:		  	To set the width and height of the component when you set <code>isRichText="false"</code>, use the <code>cols</code> and <code>rows</code> attributes.
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruaudoc:		    Otherwise, use the <code>width</code> and <code>height</code> attributes.    	
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruaudoc:			<code>ui:outputRichText</code> supports a list of HTML tags that are supported by CKEditor.
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruaudoc:    	   Tags such as <code>&lt;script&gt;</code> are removed.
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruaudoc:	</ruau:description>	
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruaudoc:		<ruau:example name="inputRichText" ref="ruaudocs:demoInputRT" label="Using ui:inputRichText">
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruaudoc:    	<p>This example shows a text area and WYSIWYG editor.</p>
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruaudoc:	   </ruau:example>
-ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruauCOD:		    By default, <code>ui:inputRichText</code> renders a WYSIWYG editor for entering rich text. 
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruauCOD:		    Setting <code>isRichText="false"</code> uses the <code>ui:inputTextArea</code> component instead of a WYSIWYG editor.
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruauCOD:			The width and height of the rich text editor are independent of those on the <code>ui:inputTextArea</code> component.
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruauCOD:		  	To set the width and height of the component when you set <code>isRichText="false"</code>, use the <code>cols</code> and <code>rows</code> attributes.
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruauCOD:		    Otherwise, use the <code>width</code> and <code>height</code> attributes.    	
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruauCOD:			<code>ui:outputRichText</code> supports a list of HTML tags that are supported by CKEditor.
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruauCOD:    	   Tags such as <code>&lt;script&gt;</code> are removed.
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruauCOD:	</ruau:description>	
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruauCOD:		<ruau:example name="inputRichText" ref="ruaudocs:demoInputRT" label="Using ui:inputRichText">
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruauCOD:    	<p>This example shows a text area and WYSIWYG editor.</p>
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruauCOD:	   </ruau:example>
+ruau/ruau-components/src/main/components/ui/inputRichText/inputRichText.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/createPanelSlider/createPanelSlider.evt:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/createPanelSlider/createPanelSlider.evt:    Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/createPanelSlider/createPanelSlider.evt:    you may not use this file except in compliance with the License.
@@ -696,37 +696,37 @@ ruau/ruau-components/src/main/components/ui/inputRadio/inputRadioHelper.js: * di
 ruau/ruau-components/src/main/components/ui/inputRadio/inputRadioHelper.js: * See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ui/inputRadio/inputRadioHelper.js: * limitations under the License.
 ruau/ruau-components/src/main/components/ui/inputRadio/inputRadioHelper.js:	getDomElementValue: function(element) {
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:			A <code>ui:inputRadio</code> component represents a radio button whose state is controlled by the <code>value</code> and <code>disabled</code> attributes. It's rendered as an HTML <code>input</code> tag of type <code>radio</code>.
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:		<p>This is a basic set up of a radio button.</p>		
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:		<pre>&lt;ui:inputRadio label="Yes"/></pre>
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:		<p>This example results in the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:		<pre>&lt;div class="uiInput uiInputRadio">
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:    &lt;label class="uiLabel-left uiLabel">
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:        &lt;span>Yes&lt;/span>
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:    &lt;/label>
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:    &lt;input aria-describedby="" type="radio">
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:	<p>This example shows a list of radio buttons whose labels are provided by a component attribute.</p>
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:	<pre>&lt;!-- Component Markup -->
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:&lt;ruau:attribute name="stages" type="String[]" default="Any,Open,Closed,Closed Won"/>
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:&lt;ruau:iteration items="{!v.stages}" var="stage">
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:    &lt;ui:inputRadio label="{!stage}" change="{!c.doSomething}" />
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:&lt;/ruau:iteration></pre>
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:	</ruau:description>
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:	<ruau:example name="inputExample" ref="ruaudocs:demoSelect" label="Using ui:inputRadio">
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:    		This example shows how you can retrieve the value of an <code>ui:inputRadio</code> component.
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:    </ruau:example>		
-ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruauCOD:			A <code>ui:inputRadio</code> component represents a radio button whose state is controlled by the <code>value</code> and <code>disabled</code> attributes. It's rendered as an HTML <code>input</code> tag of type <code>radio</code>.
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruauCOD:		<p>This is a basic set up of a radio button.</p>		
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruauCOD:		<pre>&lt;ui:inputRadio label="Yes"/></pre>
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruauCOD:		<p>This example results in the following HTML.</p>
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruauCOD:		<pre>&lt;div class="uiInput uiInputRadio">
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruauCOD:    &lt;label class="uiLabel-left uiLabel">
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruauCOD:        &lt;span>Yes&lt;/span>
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruauCOD:    &lt;/label>
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruauCOD:    &lt;input aria-describedby="" type="radio">
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruauCOD:	<p>This example shows a list of radio buttons whose labels are provided by a component attribute.</p>
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruauCOD:	<pre>&lt;!-- Component Markup -->
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruauCOD:&lt;ruau:attribute name="stages" type="String[]" default="Any,Open,Closed,Closed Won"/>
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruauCOD:&lt;ruau:iteration items="{!v.stages}" var="stage">
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruauCOD:    &lt;ui:inputRadio label="{!stage}" change="{!c.doSomething}" />
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruauCOD:&lt;/ruau:iteration></pre>
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruauCOD:	</ruau:description>
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruauCOD:	<ruau:example name="inputExample" ref="ruaudocs:demoSelect" label="Using ui:inputRadio">
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruauCOD:    		This example shows how you can retrieve the value of an <code>ui:inputRadio</code> component.
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruauCOD:    </ruau:example>		
+ruau/ruau-components/src/main/components/ui/inputRadio/inputRadio.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/inputRadio/inputRadioTest.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/inputRadio/inputRadioTest.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/inputRadio/inputRadioTest.js: * you may not use this file except in compliance with the License.
@@ -1243,24 +1243,24 @@ ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTriggerHel
 ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTriggerHelper.js:		$A.get('e.ui:showDatePicker').setParams({
 ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTriggerHelper.js:			value      	: self.getDateString(currentDate),
 ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTriggerHelper.js:				component.getConcreteComponent().set('v.value', evt.getParam('value'));
-ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruaudoc:<ruau:documentation> 
-ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruaudoc:			Use only one instance of <code>ui:datePickerManager</code> to manage multiple instances of <code>ui:inputDateTrigger</code>.
-ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruaudoc:			This renders only one date picker in the DOM, which improves load time if you have multiple date pickers in a component. The date picker is opened when you click the date picker icon on each date field.
-ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruaudoc:	</ruau:description>	
-ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruaudoc:		<ruau:example name="datePicker" ref="uiExamples:datePicker" label="Using the Date Picker">
-ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruaudoc:    	<p>This example shows managed date pickers. Only one instance of <code>ui:datePickerManager</code> is required to manage date pickers on a component.</p>
-ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruaudoc:	</ruau:example>
-ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruauCOD:<ruau:documentation> 
+ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruauCOD:			Use only one instance of <code>ui:datePickerManager</code> to manage multiple instances of <code>ui:inputDateTrigger</code>.
+ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruauCOD:			This renders only one date picker in the DOM, which improves load time if you have multiple date pickers in a component. The date picker is opened when you click the date picker icon on each date field.
+ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruauCOD:	</ruau:description>	
+ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruauCOD:		<ruau:example name="datePicker" ref="uiExamples:datePicker" label="Using the Date Picker">
+ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruauCOD:    	<p>This example shows managed date pickers. Only one instance of <code>ui:datePickerManager</code> is required to manage date pickers on a component.</p>
+ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruauCOD:	</ruau:example>
+ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.cmp:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/inputDateTrigger/inputDateTrigger.cmp:    you may not use this file except in compliance with the License.
@@ -1570,45 +1570,45 @@ ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	        	var inputDateStr  = cmp.find("inputText").getElement().value;
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:		        var dt            = '09-23-2004 16:30:00.000';
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeTest.js:	    		ruau.test.assertEquals(dt, inputDateStr, "Dates are not the same and they should be");
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:			A <code>ui:inputDateTime</code> component represents a date and time input field, which is rendered as an HTML <code>input</code> tag of type <code>text</code>.
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:			The value is displayed in the default format specified language locale of the browser. 
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:		<p>This is a basic set up of a date and time field with a date picker, which displays the current date and time in the format <code>7/29/2014 1:11 PM</code>.</p>
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:		<pre>&lt;!-- Component markup -->
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:&lt;ruau:attribute name="today" type="DateTime" />
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:&lt;ui:inputDateTime ruau:id="expdate" label="Expense Date" class="form-control"
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:   value="{!v.today}" displayDatePicker="true" /&gt;
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc: var today = new Date(); 
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:component.set("v.today", today);</pre>
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:		<p>This example results in the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:		<pre>&lt;div class="uiInput uiInputDateTime">
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:&lt;label class="uiLabel-left uiLabel">
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:    &lt;span>Expense Date&lt;/span>
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:&lt;/label>
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:&lt;input class="form-control uiInput uiInputDateTime" aria-describedby="" placeholder="M/d/yyyy h:mm a" type="text">
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:&lt;a class="datePicker-openIcon" aria-haspopup="true">
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:    &lt;span class="assistiveText">Date Picker&lt;/span>
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:&lt;/a>
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:&lt;a class="clearIcon" href="javascript:void(0);">
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:    &lt;span class="assistiveText">Clear Button&lt;/span>
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:&lt;/a>
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:&lt;div class="uiDatePicker">
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:    &lt;!-- Date picker set to visible when icon is clicked -->
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:	</ruau:description>		
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:	<ruau:example name="inputExample" ref="uiExamples:inputExample" label="Using ui:inputDate">
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:    		This example shows how you can use <code>ui:inputDate</code> to get user input.
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:    </ruau:example>
-ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:			A <code>ui:inputDateTime</code> component represents a date and time input field, which is rendered as an HTML <code>input</code> tag of type <code>text</code>.
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:			The value is displayed in the default format specified language locale of the browser. 
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:		<p>This is a basic set up of a date and time field with a date picker, which displays the current date and time in the format <code>7/29/2014 1:11 PM</code>.</p>
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:		<pre>&lt;!-- Component markup -->
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:&lt;ruau:attribute name="today" type="DateTime" />
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:&lt;ui:inputDateTime ruau:id="expdate" label="Expense Date" class="form-control"
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:   value="{!v.today}" displayDatePicker="true" /&gt;
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD: var today = new Date(); 
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:component.set("v.today", today);</pre>
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:		<p>This example results in the following HTML.</p>
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:		<pre>&lt;div class="uiInput uiInputDateTime">
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:&lt;label class="uiLabel-left uiLabel">
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:    &lt;span>Expense Date&lt;/span>
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:&lt;/label>
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:&lt;input class="form-control uiInput uiInputDateTime" aria-describedby="" placeholder="M/d/yyyy h:mm a" type="text">
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:&lt;a class="datePicker-openIcon" aria-haspopup="true">
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:    &lt;span class="assistiveText">Date Picker&lt;/span>
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:&lt;/a>
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:&lt;a class="clearIcon" href="javascript:void(0);">
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:    &lt;span class="assistiveText">Clear Button&lt;/span>
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:&lt;/a>
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:&lt;div class="uiDatePicker">
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:    &lt;!-- Date picker set to visible when icon is clicked -->
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:	</ruau:description>		
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:	<ruau:example name="inputExample" ref="uiExamples:inputExample" label="Using ui:inputDate">
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:    		This example shows how you can use <code>ui:inputDate</code> to get user input.
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:    </ruau:example>
+ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTime.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeRenderer.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeRenderer.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/inputDateTime/inputDateTimeRenderer.js: * you may not use this file except in compliance with the License.
@@ -2093,25 +2093,25 @@ ruau/ruau-components/src/main/components/ui/outputPhone/outputPhoneHelper.js:   
 ruau/ruau-components/src/main/components/ui/outputPhone/outputPhoneHelper.js:     ** Remove spaces (if there is any) in value and return the no-space result.
 ruau/ruau-components/src/main/components/ui/outputPhone/outputPhoneHelper.js:    removeSpaces: function(value) {
 ruau/ruau-components/src/main/components/ui/outputPhone/outputPhoneHelper.js:        return (value || "").replace(/\s/g, "");
-ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:			A <code>ui:outputPhone</code> component represents a phone number output that is wrapped in an HTML <code>span</code> tag.
-ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:			This component can be used with <code>ui:inputPhone</code>, which takes in a phone number input. The following example is
-ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:			a simple set up of a <code>ui:outputPhone</code> component.
-ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:		<pre>&lt;ui:outputPhone value="415-123-4567" label="outputPhone"/></pre>
-ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:		<p>The previous example renders the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:		<pre>&lt;a href="tel:415-123-4567" class="uiOutputPhone">415-123-4567&lt;/a></pre>
-ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:	</ruau:description>	
-ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruauCOD:			A <code>ui:outputPhone</code> component represents a phone number output that is wrapped in an HTML <code>span</code> tag.
+ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruauCOD:			This component can be used with <code>ui:inputPhone</code>, which takes in a phone number input. The following example is
+ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruauCOD:			a simple set up of a <code>ui:outputPhone</code> component.
+ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruauCOD:		<pre>&lt;ui:outputPhone value="415-123-4567" label="outputPhone"/></pre>
+ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruauCOD:		<p>The previous example renders the following HTML.</p>
+ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruauCOD:		<pre>&lt;a href="tel:415-123-4567" class="uiOutputPhone">415-123-4567&lt;/a></pre>
+ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruauCOD:	</ruau:description>	
+ruau/ruau-components/src/main/components/ui/outputPhone/outputPhone.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/outputPhone/outputPhoneRenderer.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/outputPhone/outputPhoneRenderer.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/outputPhone/outputPhoneRenderer.js: * you may not use this file except in compliance with the License.
@@ -2206,30 +2206,30 @@ ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.css: *
 ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.css: * See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.css: * limitations under the License.
 ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.css:.uiOutputDateTime{
-ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:			A <code>ui:outputDateTime</code> component represents a date and time output that is wrapped in an HTML <code>span</code> tag.
-ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:			This component can be used with <code>ui:inputDateTime</code>, which takes in a date input. <code>ui:outputDateTime</code> retrieves the browser's locale information and displays 
-ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:			the date accordingly.
-ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:			To display a date and time, you can use an attribute value and bind it to the <code>ui:outputDateTime</code> component.
-ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:		<pre>&lt;ruau:attribute name="myDateTime" type="Date" default="2014-09-29T00:17:08z"/>
-ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:&lt;ui:outputDateTime value="{!v.myDateTime}" label="outputDateTime"/></pre>
-ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:		<p>The previous example renders the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:		<pre>&lt;span class="uiOutputDateTime">Sep 29, 2014 12:17:08 AM&lt;/span></pre>
-ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:	</ruau:description>	
-ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:	<ruau:example name="outputExample" ref="uiExamples:outputExample" label="Using the Output Components">
-ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:    	<p>This example shows how you can bind data to the output components by using component attributes.</p>
-ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:	</ruau:example>
-ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruauCOD:			A <code>ui:outputDateTime</code> component represents a date and time output that is wrapped in an HTML <code>span</code> tag.
+ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruauCOD:			This component can be used with <code>ui:inputDateTime</code>, which takes in a date input. <code>ui:outputDateTime</code> retrieves the browser's locale information and displays 
+ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruauCOD:			the date accordingly.
+ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruauCOD:			To display a date and time, you can use an attribute value and bind it to the <code>ui:outputDateTime</code> component.
+ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruauCOD:		<pre>&lt;ruau:attribute name="myDateTime" type="Date" default="2014-09-29T00:17:08z"/>
+ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruauCOD:&lt;ui:outputDateTime value="{!v.myDateTime}" label="outputDateTime"/></pre>
+ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruauCOD:		<p>The previous example renders the following HTML.</p>
+ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruauCOD:		<pre>&lt;span class="uiOutputDateTime">Sep 29, 2014 12:17:08 AM&lt;/span></pre>
+ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruauCOD:	</ruau:description>	
+ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruauCOD:	<ruau:example name="outputExample" ref="uiExamples:outputExample" label="Using the Output Components">
+ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruauCOD:    	<p>This example shows how you can bind data to the output components by using component attributes.</p>
+ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruauCOD:	</ruau:example>
+ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTime.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTimeRenderer.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTimeRenderer.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/outputDateTime/outputDateTimeRenderer.js: * you may not use this file except in compliance with the License.
@@ -2549,29 +2549,29 @@ ruau/ruau-components/src/main/components/ui/outputDate/outputDate.cmp:<ruau:comp
 ruau/ruau-components/src/main/components/ui/outputDate/outputDate.cmp:    <ruau:attribute name="value" type="String" required="true" access="GLOBAL" description="The output value of the date. It should be a date string in ISO-8601 format (YYYY-MM-DD)."/>
 ruau/ruau-components/src/main/components/ui/outputDate/outputDate.cmp:    <span ruau:id="span" class="{!v.class}"></span>
 ruau/ruau-components/src/main/components/ui/outputDate/outputDate.cmp:</ruau:component>
-ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:			A <code>ui:outputDate</code> component represents a date output in the YYYY-MM-DD format and is wrapped in an HTML <code>span</code> tag.
-ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:			This component can be used with <code>ui:inputDate</code>, which takes in a date input. <code>ui:outputDate</code> retrieves the browser's locale information and displays 
-ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:			the date accordingly. To display a date, you can use an attribute value and bind it to the <code>ui:outputDate</code> component.
-ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:		<pre>&lt;ruau:attribute name="myDate" type="Date" default="2014-09-29"/>
-ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:&lt;ui:outputDate value="{!v.myDate}" label="outputDate"/></pre>
-ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:	<p>The previous example renders the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:	<pre>&lt;span class="uiOutputDate">Sep 29, 2014&lt;/span></pre>
-ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:	</ruau:description>	
-ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:	<ruau:example name="outputExample" ref="uiExamples:outputExample" label="Using the Output Components">
-ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:    	<p>This example shows how you can bind data to the output components by using component attributes.</p>
-ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:	</ruau:example>
-ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruauCOD:			A <code>ui:outputDate</code> component represents a date output in the YYYY-MM-DD format and is wrapped in an HTML <code>span</code> tag.
+ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruauCOD:			This component can be used with <code>ui:inputDate</code>, which takes in a date input. <code>ui:outputDate</code> retrieves the browser's locale information and displays 
+ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruauCOD:			the date accordingly. To display a date, you can use an attribute value and bind it to the <code>ui:outputDate</code> component.
+ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruauCOD:		<pre>&lt;ruau:attribute name="myDate" type="Date" default="2014-09-29"/>
+ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruauCOD:&lt;ui:outputDate value="{!v.myDate}" label="outputDate"/></pre>
+ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruauCOD:	<p>The previous example renders the following HTML.</p>
+ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruauCOD:	<pre>&lt;span class="uiOutputDate">Sep 29, 2014&lt;/span></pre>
+ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruauCOD:	</ruau:description>	
+ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruauCOD:	<ruau:example name="outputExample" ref="uiExamples:outputExample" label="Using the Output Components">
+ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruauCOD:    	<p>This example shows how you can bind data to the output components by using component attributes.</p>
+ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruauCOD:	</ruau:example>
+ruau/ruau-components/src/main/components/ui/outputDate/outputDate.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/toggleLoadingIndicator/toggleLoadingIndicator.evt:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/toggleLoadingIndicator/toggleLoadingIndicator.evt:    Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/toggleLoadingIndicator/toggleLoadingIndicator.evt:    you may not use this file except in compliance with the License.
@@ -2708,7 +2708,7 @@ ruau/ruau-components/src/main/components/ui/panelManager/panelManager.css:	posit
 ruau/ruau-components/src/main/components/ui/panelManager/panelManager.css:.THIS .uiButton.default .label {
 ruau/ruau-components/src/main/components/ui/panelManager/panelManager.css:	text-shadow: none;
 ruau/ruau-components/src/main/components/ui/panelManager/panelManager.css:	font-weight: normal;
-ruau/ruau-components/src/main/components/ui/panelManager/panelManager.css: * This prevents inactive panels from stretching the document height.
+ruau/ruau-components/src/main/components/ui/panelManager/panelManager.css: * This prevents inactive panels from stretching the CODument height.
 ruau/ruau-components/src/main/components/ui/panelManager/panelManager.css:.THIS .panel:not(:last-child):not(.active) {
 ruau/ruau-components/src/main/components/ui/panelManager/panelManager.cmp:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/panelManager/panelManager.cmp:    Licensed under the Apache License, Version 2.0 (the "License");

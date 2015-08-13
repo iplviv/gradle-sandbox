@@ -663,7 +663,7 @@ ruau/ruau/src/test/components/uitest/accessibilityTool/accessibilityToolTest.js:
 ruau/ruau/src/test/components/uitest/accessibilityTool/accessibilityToolTest.js:                caseToRender: 'ckeditor_test'
 ruau/ruau/src/test/components/uitest/accessibilityTool/accessibilityToolTest.js:            attributes: {
 ruau/ruau/src/test/components/uitest/accessibilityTool/accessibilityToolTest.js:                caseToRender: 'full'
-ruau/ruau/src/test/components/uitest/accessibilityTool/accessibilityToolTest.js:                    this.runTest(4, "Unexpected return from CheckAccessibility, should return 4 error. output: \n", document.getElementById("table1"));
+ruau/ruau/src/test/components/uitest/accessibilityTool/accessibilityToolTest.js:                    this.runTest(4, "Unexpected return from CheckAccessibility, should return 4 error. output: \n", CODument.getElementById("table1"));
 ruau/ruau/src/test/components/uitest/accessibilityTool/accessibilityToolTest.js:            attributes: {
 ruau/ruau/src/test/components/uitest/accessibilityTool/accessibilityToolTest.js:                caseToRender: 'None'
 ruau/ruau/src/test/components/uitest/accessibilityTool/accessibilityToolTest.js:        testSkipVisualForceIframes: {
@@ -682,10 +682,10 @@ ruau/ruau/src/test/components/uitest/accessibilityTool/accessibilityToolRenderer
 ruau/ruau/src/test/components/uitest/accessibilityTool/accessibilityToolHelper.js:	       //Function that will only inject if we are looking at the correct component
 ruau/ruau/src/test/components/uitest/accessibilityTool/accessibilityToolHelper.js:           if(cmp.get("v.caseToRender") === "imageTagTest"){
 ruau/ruau/src/test/components/uitest/accessibilityTool/accessibilityToolHelper.js:    	      var div = cmp.find("injectableDiv").getElement();
-ruau/ruau/src/test/components/uitest/accessibilityTool/accessibilityToolHelper.js:    	      var img = document.createElement("img");
+ruau/ruau/src/test/components/uitest/accessibilityTool/accessibilityToolHelper.js:    	      var img = CODument.createElement("img");
 ruau/ruau/src/test/components/uitest/accessibilityTool/accessibilityToolHelper.js:    	      img.alt = "Hell World!";
 ruau/ruau/src/test/components/uitest/accessibilityTool/accessibilityToolHelper.js:    	      div.appendChild(img);
-ruau/ruau/src/test/components/uitest/accessibilityTool/accessibilityToolHelper.js:    	      img = document.createElement("img");
+ruau/ruau/src/test/components/uitest/accessibilityTool/accessibilityToolHelper.js:    	      img = CODument.createElement("img");
 ruau/ruau/src/test/components/uitest/accessibilityTool/accessibilityToolHelper.js:    	      div.appendChild(img);
 ruau/ruau/src/test/components/uitest/outputDateTime_OverriddenGetTimeZone/outputDateTime_OverriddenGetTimeZone.cmp:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/test/components/uitest/outputDateTime_OverriddenGetTimeZone/outputDateTime_OverriddenGetTimeZone.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
@@ -1252,7 +1252,7 @@ ruau/ruau/src/test/components/uitest/inputError_CustomTest/inputError_CustomTest
 ruau/ruau/src/test/components/uitest/inputError_CustomTest/inputError_CustomTestController.js:	    cleanErrorEvent.fire();
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestHelper.js:	//Helper function that will go to the component, and either validate it or invalidate it
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestHelper.js:	addErrorsToCmp : function(invalidCmp){		    	
-ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestHelper.js:    	 var ariaDesc = document.getElementById(invalidCmp.get("v.ariaDescribedBy"))
+ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestHelper.js:    	 var ariaDesc = CODument.getElementById(invalidCmp.get("v.ariaDescribedBy"))
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestHelper.js:    	 var value = "v.value";
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestHelper.js:    	 if($A.util.isEmpty(ariaDesc)){
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestHelper.js:    		 invalidCmp.setValid(value, false);
@@ -1439,7 +1439,7 @@ ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_Te
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:    testInputDefaultShowsWithOnlyOneItem : {
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:    	attributes : {"caseToRender" : "default"},
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:    		//Verify that there are no inputDefaultErrors or uls on the page
-ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:    		$A.test.assertEquals(document.getElementsByTagName("ul").length, 0, "There should be no uls present")
+ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:    		$A.test.assertEquals(CODument.getElementsByTagName("ul").length, 0, "There should be no uls present")
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:    		//Validate the components
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:    		this.fireErrorValidation(cmp.find("validate"), false);
 ruau/ruau/src/test/components/uitest/inputDefaultError_Test/inputDefaultError_TestTest.js:    		var chldsText = "",
@@ -1686,7 +1686,7 @@ ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTestTe
 ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTestTest.js:          if(elements[i].tagName != "!"){
 ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTestTest.js:            elementArray.push(elements[i]);
 ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTestTest.js:      return elementArray;
-ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTestTest.js:            var tbody = document.getElementsByTagName("tbody")[0];
+ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTestTest.js:            var tbody = CODument.getElementsByTagName("tbody")[0];
 ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTestTest.js:            var trs = this.getOnlyTrs(tbody.children);
 ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTestTest.js:            var itemsInBody =  cmp.find("grid").get("v.items");
 ruau/ruau/src/test/components/uitest/dataGrid_ColumnsTest/dataGrid_ColumnsTestTest.js:            $A.test.assertEquals(colCount, trs.length, "The total amount of items on the page are incorrect");
@@ -2048,7 +2048,7 @@ ruau/ruau/src/test/components/uitest/menu_AttachToBodyTest/menu_AttachToBodyTest
 ruau/ruau/src/test/components/uitest/menu_AttachToBodyTest/menu_AttachToBodyTestTest.js:				//make sure menuItem is attached to body directly and its not attached to uiMenu instead
 ruau/ruau/src/test/components/uitest/menu_AttachToBodyTest/menu_AttachToBodyTestTest.js:	            //Test case for W-2181713
 ruau/ruau/src/test/components/uitest/menu_AttachToBodyTest/menu_AttachToBodyTestTest.js:				var actionMenuParentElement = actionMenu.getElement().parentNode;
-ruau/ruau/src/test/components/uitest/menu_AttachToBodyTest/menu_AttachToBodyTestTest.js:				var bodyElement = document.getElementsByTagName("body")[0];
+ruau/ruau/src/test/components/uitest/menu_AttachToBodyTest/menu_AttachToBodyTestTest.js:				var bodyElement = CODument.getElementsByTagName("body")[0];
 ruau/ruau/src/test/components/uitest/menu_AttachToBodyTest/menu_AttachToBodyTestTest.js:	            $A.test.assertEquals(actionMenuParentElement, bodyElement,"Menu Item List should be attached to body");
 ruau/ruau/src/test/components/uitest/menu_AttachToBodyTest/menu_AttachToBodyTestTest.js:	            //Make sure horizontal alignment of menuItem is correct with reference to triggerElement
 ruau/ruau/src/test/components/uitest/menu_AttachToBodyTest/menu_AttachToBodyTestTest.js:	            var actionMenuLeftPostionValue = actionMenu.getElement().getBoundingClientRect().left;
@@ -2586,15 +2586,15 @@ ruau/ruau/src/test/components/uitest/scrollerNative/scrollerNative.cmp:				<div 
 ruau/ruau/src/test/components/uitest/scrollerNative/scrollerNative.cmp:	<div id="footer" class="common">This is a footer</div>
 ruau/ruau/src/test/components/uitest/scrollerNative/scrollerNative.cmp:	<span id="scrollMoveHandlerCalled">0</span>
 ruau/ruau/src/test/components/uitest/scrollerNative/scrollerNative.cmp:</ruau:component>
-ruau/ruau/src/test/components/uitest/scrollerNative/scrollerNativeController.js:		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+ruau/ruau/src/test/components/uitest/scrollerNative/scrollerNativeController.js:		CODument.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 ruau/ruau/src/test/components/uitest/scrollerNative/scrollerNativeController.js:    scrollMoveHandler: function(component, event, helper){
-ruau/ruau/src/test/components/uitest/scrollerNative/scrollerNativeController.js:    	var span = document.getElementById('scrollMoveHandlerCalled');
+ruau/ruau/src/test/components/uitest/scrollerNative/scrollerNativeController.js:    	var span = CODument.getElementById('scrollMoveHandlerCalled');
 ruau/ruau/src/test/components/uitest/scrollerNative/scrollerNativeController.js:    	if(span.textContent.trim() === "0"){
 ruau/ruau/src/test/components/uitest/scrollerNative/scrollerNativeController.js:    		span.textContent = "1";
 ruau/ruau/src/test/components/uitest/scrollerNative/scrollerNativeHelper.js:	makeDOM : function(resultSet, cssClassName){
 ruau/ruau/src/test/components/uitest/scrollerNative/scrollerNativeHelper.js:		var dom = [],
 ruau/ruau/src/test/components/uitest/scrollerNative/scrollerNativeHelper.js:		for(var i in resultSet){
-ruau/ruau/src/test/components/uitest/scrollerNative/scrollerNativeHelper.js:			divItem = document.createElement('div');
+ruau/ruau/src/test/components/uitest/scrollerNative/scrollerNativeHelper.js:			divItem = CODument.createElement('div');
 ruau/ruau/src/test/components/uitest/scrollerNative/scrollerNativeHelper.js:			divItem.textContent = resultSet[i].label;
 ruau/ruau/src/test/components/uitest/scrollerNative/scrollerNativeHelper.js:			divItem.id = resultSet[i].value + cssClassName;
 ruau/ruau/src/test/components/uitest/scrollerNative/scrollerNativeHelper.js:			divItem.className = "item " + cssClassName;
@@ -2736,18 +2736,18 @@ ruau/ruau/src/test/components/uitest/treeNode_Test/treeNode_TestTest.js:        
 ruau/ruau/src/test/components/uitest/treeNode_Test/treeNode_TestTest.js:            var A = cmp.find('A');
 ruau/ruau/src/test/components/uitest/treeNode_Test/treeNode_TestTest.js:            ruau.test.assertFalse(A.get('v.expanded'));
 ruau/ruau/src/test/components/uitest/treeNode_Test/treeNode_TestTest.js:            // First click expands.
-ruau/ruau/src/test/components/uitest/treeNode_Test/treeNode_TestTest.js:            var elemA = document.getElementById('node_' + A.getGlobalId());
+ruau/ruau/src/test/components/uitest/treeNode_Test/treeNode_TestTest.js:            var elemA = CODument.getElementById('node_' + A.getGlobalId());
 ruau/ruau/src/test/components/uitest/treeNode_Test/treeNode_TestTest.js:            ruau.test.assertTrue(A.get('v.expanded'));
 ruau/ruau/src/test/components/uitest/treeNode_Test/treeNode_TestTest.js:            // Second one collapses.
 ruau/ruau/src/test/components/uitest/treeNode_Test/treeNode_TestTest.js:            ruau.test.assertFalse(A.get('v.expanded'));
 ruau/ruau/src/test/components/uitest/treeNode_Test/treeNode_TestTest.js:            // Clicking other elements below doesn't actually affect our expansion state.
 ruau/ruau/src/test/components/uitest/treeNode_Test/treeNode_TestTest.js:            ruau.test.assertFalse(cmp.find('C').get('v.expanded'));
-ruau/ruau/src/test/components/uitest/treeNode_Test/treeNode_TestTest.js:            document.getElementById('node_' + cmp.find('C').getGlobalId()).click();
+ruau/ruau/src/test/components/uitest/treeNode_Test/treeNode_TestTest.js:            CODument.getElementById('node_' + cmp.find('C').getGlobalId()).click();
 ruau/ruau/src/test/components/uitest/treeNode_Test/treeNode_TestTest.js:            ruau.test.assertFalse(A.get('v.expanded'));
 ruau/ruau/src/test/components/uitest/treeNode_Test/treeNode_TestTest.js:            ruau.test.assertTrue(cmp.find('C').get('v.expanded'));
 ruau/ruau/src/test/components/uitest/treeNode_Test/treeNode_TestTest.js:            // Likewise, clicking elements above do not affect the local state.
 ruau/ruau/src/test/components/uitest/treeNode_Test/treeNode_TestTest.js:            ruau.test.assertTrue(cmp.find('root').get('v.expanded'));
-ruau/ruau/src/test/components/uitest/treeNode_Test/treeNode_TestTest.js:            document.getElementById('node_' + cmp.find('root').getGlobalId()).click();
+ruau/ruau/src/test/components/uitest/treeNode_Test/treeNode_TestTest.js:            CODument.getElementById('node_' + cmp.find('root').getGlobalId()).click();
 ruau/ruau/src/test/components/uitest/treeNode_Test/treeNode_TestTest.js:            ruau.test.assertFalse(A.get('v.expanded'));
 ruau/ruau/src/test/components/uitest/treeNode_Test/treeNode_TestTest.js:            ruau.test.assertFalse(cmp.find('root').get('v.expanded'));
 ruau/ruau/src/test/components/uitest/treeNode_Test/treeNode_Test.cmp:    Copyright (C) 2013 salesforce.com, inc.
@@ -2929,36 +2929,36 @@ ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHe
 ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:        var amountToCreate = cmp.get("v.total");
 ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:        var body = cmp.find("tbody").getElement();
 ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:        for(var i = 1; i <= amountToCreate; i++){
-ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            tr = document.createElement("tr")
-ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            td = document.createElement("td");
-ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            input = document.createElement("input");
+ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            tr = CODument.createElement("tr")
+ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            td = CODument.createElement("td");
+ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            input = CODument.createElement("input");
 ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            td.appendChild(input);
 ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            tr.appendChild(td);
-ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            td = document.createElement("td");
-ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            span = document.createElement("span");
+ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            td = CODument.createElement("td");
+ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            span = CODument.createElement("span");
 ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            span.innerText = i;
 ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            td.appendChild(span);
 ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            tr.appendChild(td);
-ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            td = document.createElement("td");
-ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            span = document.createElement("span");
+ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            td = CODument.createElement("td");
+ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            span = CODument.createElement("span");
 ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            span.innerText = "Foo "+i;
 ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            td.appendChild(span);
 ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            tr.appendChild(td);
 ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            //Name
-ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            td = document.createElement("td");
-ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            span = document.createElement("span");
+ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            td = CODument.createElement("td");
+ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            span = CODument.createElement("span");
 ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            span.innerText = "John Doe"
 ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            td.appendChild(span);
 ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            tr.appendChild(td);
 ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            //Related to
-ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            td = document.createElement("td");
-ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            span = document.createElement("span");
+ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            td = CODument.createElement("td");
+ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            span = CODument.createElement("span");
 ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            span.innerText = "Acme"
 ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            td.appendChild(span);
 ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            tr.appendChild(td);
 ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            //Due date
-ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            td = document.createElement("td");
-ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            span = document.createElement("span");
+ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            td = CODument.createElement("td");
+ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            span = CODument.createElement("span");
 ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            span.innerText = "2014-01-01"
 ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            td.appendChild(span);
 ruau/ruau/src/test/components/uitest/dataGridPureHtmlTest/dataGridPureHtmlTestHelper.js:            tr.appendChild(td);

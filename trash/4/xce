@@ -58,26 +58,26 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:Function.RegisterNamespa
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:System.Script.ScriptLoadStrategy.Dom=function(){    
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    // ILoadStrategy Members
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Import=function(path,callback){
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var script=document.createElement('script');
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var script=CODument.createElement('script');
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var loadDelegate=Function.GetDelegate(Script_OnLoad,this,path,callback);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var errorDelegate=Function.GetDelegate(Script_OnError,this,path,callback);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        Object.Set(script,{type:'text/javascript',onload:loadDelegate,onerror:errorDelegate,src:path});
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        return document.body.appendChild(script);
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        return CODument.body.appendChild(script);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.ImportJson=function(path,callback){
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var target=document.createElement('iframe');
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var target=CODument.createElement('iframe');
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var loadDelegate=Function.GetDelegate(Frame_OnLoad,this,path,callback,target);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var errorDelegate=Function.GetDelegate(Frame_OnError,this,path,callback,target);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        Object.Set(script,{onload:loadDelegate,onerror:errorDelegate,src:path});
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        document.body.appendChild(target);
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        CODument.body.appendChild(target);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Load=function(source){
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var script=document.createElement('script');
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var script=CODument.createElement('script');
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        Object.Set(script,{type:'text/javascript',text:source});
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        return document.body.appendChild(script);
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        return CODument.body.appendChild(script);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    // IStrategySpecification Members
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.IsSatisfiedBy=function(candidate){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    function Frame_OnLoad(path,callback,frame){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        frame.parentNode.removeChild(frame);
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var frameContent=frame.contentWindow.documentElement;
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var frameContent=frame.contentWindow.CODumentElement;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var script=frameContent.textContent||frameContent.innerText;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var serializer=new System.Script.ObjectSerializer();
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var result=serializer.Deserialize(String.Format("return false||({0})",script));
@@ -413,14 +413,14 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        window.onunload=
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    // IEnvironmentStrategy methods
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.Execute=function(command,parameters,voidOutput){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        throw new Error("System.EnvironmentStrategy.Dom.Execute: Not Implemented. Sandbox violations are not allowed.");
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var container=document.createElement("div");
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var container=CODument.createElement("div");
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        container.innerHTML="<br/>";
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        return _newLine=(container.textContent||container.innerText);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.GetParameters=function(){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var args={
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            named:{},
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            unnamed:[]
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var params=((document.location+'').split('?')[1]||'').split('&');
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var params=((CODument.location+'').split('?')[1]||'').split('&');
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        for(var i=0;i<params.length;i++){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            if(String.Contains(params[i],'=')){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:                var param=params[i].split('=');
@@ -437,12 +437,12 @@ ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:            writeLine(ar
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    // IStrategySpecification members
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    this.IsSatisfiedBy=function(candidate){
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:    // Private methods
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var line=document.createElement('div');
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        line.appendChild(document.createTextNode(text));
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var line=CODument.createElement('div');
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        line.appendChild(CODument.createTextNode(text));
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        return _outputDiv.appendChild(line);
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var outputDiv=document.createElement('div');
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var outputDiv=CODument.createElement('div');
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        Object.Set(outputDiv,{className:'Output'});
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        document.body.appendChild(outputDiv);
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        CODument.body.appendChild(outputDiv);
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        var unload=_oldUnload;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        _outputDiv=_oldUnload=null;
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:        if(unload)unload();
@@ -2973,7 +2973,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:            maxXDataPointForChart = Collections.max(dataPoints);
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:        return maxXDataPointForChart;
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:     * Creates a Map of the params necessary to make a request to the Google
-ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:     * Charts API. See http://code.google.com/apis/chart/docs/making_charts.html
+ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:     * Charts API. See http://code.google.com/apis/chart/CODs/making_charts.html
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:     * to try and make sense of the param names.
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:     * @returns A Map of request parameters and their values.
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:    public Map<String, String> buildRequestParams() {

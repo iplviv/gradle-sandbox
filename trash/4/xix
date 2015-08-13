@@ -95,7 +95,7 @@ ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComp
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:    <ruau:attribute name="submitCount" type="number"/>
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:    <ruau:registerevent name="press" type="ui:press"/>
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:    <script type="text/javascript">
-ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        CODument.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:    <div id="outSubmitCountDiv" class="banner top">
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:        Submit count: <ui:outputText ruau:id="outSubmitCount" value="0"/>
 ruau/ruau/src/test/components/uitest/localizationComponent_Test/localizationComponent_Test.app:    <div id="localeDataDiv" class="banner down">
@@ -1116,161 +1116,161 @@ ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:		 var activ
 ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:		 //Custom way to get an element in ie8/7
 ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:		 if($A.util.isUndefinedOrNull(activeElm)) {
 ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:			 //IE8 custom way
-ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:				 activeElm = document.querySelectorAll(elmTagName + "." +classToUse.replace(/ /g, "."));
+ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:				 activeElm = CODument.querySelectorAll(elmTagName + "." +classToUse.replace(/ /g, "."));
 ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:			 //IE7 custom way
 ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:				 activeElm = [];
-ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:				 var elmArray = document.getElementsByTagName(elmTagName);
+ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:				 var elmArray = CODument.getElementsByTagName(elmTagName);
 ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:				 var className = "";
 ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:				 for(var i = 0; i< elmArray.length; i++){
 ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:					 className = $A.util.getElementAttributeValue(elmArray[i], "class");
 ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:					 if(!$A.util.isUndefinedOrNull(className) && className.indexOf(classToUse) > -1){
 ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:						 activeElm.push(elmArray[i]);
 ruau/ruau/src/test/components/uitest/tabset_Test/tabset_TestTest.js:		 return activeElm;
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:    you may not use this file except in compliance with the License.
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:    You may obtain a copy of the License at
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:    See the License for the specific language governing permissions and
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:    limitations under the License.
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:<ruau:component model="java://org.ruauframework.components.ruaudocs.SearchFilterTreeTestModel" >
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:    <ruau:handler name="init" value="{!this}" action="{!c.doInit}" />
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:    <ruaudocs:searchFilterTree ruau:id='searchTree'>
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:	    <ui:tree ruau:id="tree">
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		    <ui:treeNode ruau:id="root" title="root">
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		        <ui:treeNode ruau:id="iota" href="#iota" title="Iota is lonely" />
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		        <ui:treeNode ruau:id="A" title="A">
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		            <ui:treeNode ruau:id="mu" href="#mu" title="Moo cows" />
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		            <ui:treeNode ruau:id="B" title="VHS or Beta?">
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		                <ui:treeNode ruau:id="lambda" href="#lambda" title="Lambda is after moo" />
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		                <ui:treeNode ruau:id="D" title="D">
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		                    <ui:treeNode ruau:id="gamma" href="#gamma" title="Gamma rays" />
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		                    <ui:treeNode ruau:id="G" title="G has Rho as a child">
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		                        <ui:treeNode ruau:id="pi" href="#pi" title="Pi is delicious" />
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		                        <ui:treeNode ruau:id="rho" href="#rho" title="Rho Rho Rho your boat" />
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		                        <ui:treeNode ruau:id="tau" href="#tau" title="Some argue Tau is better than Pi" />
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		                <ui:treeNode ruau:id="E" title="E">
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		                    <ui:treeNode ruau:id="alpha" href="#alpha" title="The alpha and the omega" />
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		                    <ui:treeNode ruau:id="beta" href="#beta" title="Beta means Ship it" />
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		                <ui:treeNode ruau:id="F" title="F" />
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		                <ui:treeNode ruau:id="H" title="H">
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		                    <ui:treeNode ruau:id="chi" href="#chi" title="Tea" />
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		                    <ui:treeNode ruau:id="psi" href="#psi" title="Pressure Bars" />
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		                    <ui:treeNode ruau:id="omega" href="#omega" title="Where's alpha?" />
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		            <ui:treeNode ruau:id="C" title="C is lonely" />
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		    <ui:treeNode ruau:id="secondRoot" title="secondRoot">
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		       <ui:treeNode ruau:id="foo" href="#foo" title="foo" />
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		       <ui:treeNode ruau:id="bar" href="#bar" title="bar" />
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:    </ruaudocs:searchFilterTree>
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTest.cmp:</ruau:component>
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestController.js: * Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestController.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestController.js: * you may not use this file except in compliance with the License.
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestController.js: * You may obtain a copy of the License at
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestController.js: *         http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestController.js: * Unless required by applicable law or agreed to in writing, software
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestController.js: * distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestController.js: * See the License for the specific language governing permissions and
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestController.js: * limitations under the License.
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestController.js:      cmp.find('searchTree').set('v.tree', cmp.find('tree'));
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js: * Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js: * you may not use this file except in compliance with the License.
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js: * You may obtain a copy of the License at
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js: *         http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js: * Unless required by applicable law or agreed to in writing, software
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js: * distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js: * See the License for the specific language governing permissions and
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js: * limitations under the License.
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:     * Fire the searchEvent on the searchFilterTree.
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:    doSearch : function(cmp, searchTerm) {
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:        var searchTree = cmp.find('searchTree');
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:        searchTree.getEvent('search').setParams({
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            'searchTerm' : searchTerm
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:     * Convenience method for printing nodes in assertion messages.
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:        var string = node.get('v.item.title') || '' + node.get('v.title') || '';
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:        string += " (" + (node.get('v.expanded') ? 'expanded' : 'collapsed');
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:     * @param cmp
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:     *            the searchFilterTree
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:     * @param ids
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:     *            an array of ruau:ids
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:     * @return An array of components correspdonding to the given ids.
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:        var nodes = [];
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:        for ( var i = 0, n = ids.length; i < n; i++) {
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:     * Create a visitor to collect and validate the expansion state of a tree.
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:    initExpansionValidator : function(expectedNodes, expectedState) {
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:        var self = this;
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:        if (!self.ExpansionValidator) {
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            self.ExpansionValidator = function(expectedNodes, expectedState) {
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                this.expansion = expectedState;
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                this.actual = [];
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            self.ExpansionValidator.prototype.visit = function(node) {
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            self.ExpansionValidator.prototype.accept = function(node) {
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                if (node.get('v.expanded') == this.expansion) {
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                    this.actual.push(node);
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            self.ExpansionValidator.prototype.endVisit = function(node) {
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:             * Assert that the only nodes in the given expansion state were the
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            self.ExpansionValidator.prototype.validate = function() {
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                this.actual = this.actual.sort();
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                $A.test.assertEquals(this.expected.length, this.actual.length,
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                        "Incorrect # of matching nodes");
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                for ( var i = 0, n = this.expected.length; i < n; i++) {
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                    $A.test.assertTrue(this.actual[i] === this.expected[i],
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                                    + self.nodeToString(this.actual[i])
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:        return new self.ExpansionValidator(expectedNodes, expectedState);
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:     * Conveience method to run the expansion visitor and validation.
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:    validateExpansion : function(root, expectedNodes, expectedState) {
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:        var expansionVisitor = this.initExpansionValidator(expectedNodes,
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                expectedState);
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:        root.getEvent('makeVisitor').setParams({
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            "traverser" : "PreOrderTraverser",
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            "callback" : function(args) {
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                args.visitor = expansionVisitor;
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                root.getEvent("traverse").setParams(args).fire();
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:        expansionVisitor.validate();
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:     * Make sure we can do a simple, one level search.
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:    testOneLevelSearch : {
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            this.doSearch(cmp, "iota");
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            $A.test.assertTrue(cmp.find('root').get('v.expanded'))
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            $A.test.assertTrue(!cmp.find('A').get('v.expanded'));
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            this.validateExpansion(cmp.find('root'), this.idsToNodes(cmp, [
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                    "root", "iota" ]), true);
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:     * Make sure we can search over multiple roots (aka the tree as the virtual
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            this.doSearch(cmp, "root");
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            $A.test.assertTrue(cmp.find('root').get('v.expanded'));
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            $A.test.assertTrue(cmp.find('secondRoot').get('v.expanded'));
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            $A.test.assertTrue(!cmp.find('A').get('v.expanded'));
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            this.validateExpansion(cmp.find('A'), [], true); // A and all of
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                                                                // descendants
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                                                                // collapsed.
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:     * Make sure that multiple matches are handled correctly.
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:    testMultipleMatch : {
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            // Multiple matches under one root.
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            this.doSearch(cmp, "beta");
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            this.validateExpansion(cmp.find('root'), this.idsToNodes(cmp, [
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                    "root", "A", "B", "E", "beta" ]), true);
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            // Multiple matches across roots
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            this.doSearch(cmp, "bar");
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            this.validateExpansion(cmp.find('root'), this.idsToNodes(cmp, [
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            this.validateExpansion(cmp.find('secondRoot'), this.idsToNodes(cmp,
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                    [ "secondRoot", "bar" ]), true);
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:     * Queries that match every node should expand the entire tree, and those
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:     * that match none should collapse it.
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            // A query that matches everything expands everything. So, none
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            // should be collapsed.
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            this.doSearch(cmp, "\\w");
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            this.validateExpansion(cmp.find('root'), [], false);
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            this.validateExpansion(cmp.find('secondRoot'), [], false);
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            // Conversely, a query that matches nothing collapses everything.
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            // So, none should be expanded.
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            this.doSearch(cmp, "hiybbprqag");
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            this.validateExpansion(cmp.find('root'), [], true);
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            this.validateExpansion(cmp.find('secondRoot'), [], true);
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:     * Exercise the tree with a single model generated node.
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            cmp.find('searchTree').set('v.nodes', cmp.get('m.tree'));
-ruau/ruau/src/test/components/docstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            // TODO(cconroy): sadly this doesn't seem to actually update the tree..
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:    you may not use this file except in compliance with the License.
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:    You may obtain a copy of the License at
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:    See the License for the specific language governing permissions and
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:    limitations under the License.
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:<ruau:component model="java://org.ruauframework.components.ruaudocs.SearchFilterTreeTestModel" >
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:    <ruau:handler name="init" value="{!this}" action="{!c.doInit}" />
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:    <ruaudocs:searchFilterTree ruau:id='searchTree'>
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:	    <ui:tree ruau:id="tree">
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		    <ui:treeNode ruau:id="root" title="root">
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		        <ui:treeNode ruau:id="iota" href="#iota" title="Iota is lonely" />
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		        <ui:treeNode ruau:id="A" title="A">
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		            <ui:treeNode ruau:id="mu" href="#mu" title="Moo cows" />
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		            <ui:treeNode ruau:id="B" title="VHS or Beta?">
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		                <ui:treeNode ruau:id="lambda" href="#lambda" title="Lambda is after moo" />
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		                <ui:treeNode ruau:id="D" title="D">
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		                    <ui:treeNode ruau:id="gamma" href="#gamma" title="Gamma rays" />
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		                    <ui:treeNode ruau:id="G" title="G has Rho as a child">
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		                        <ui:treeNode ruau:id="pi" href="#pi" title="Pi is delicious" />
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		                        <ui:treeNode ruau:id="rho" href="#rho" title="Rho Rho Rho your boat" />
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		                        <ui:treeNode ruau:id="tau" href="#tau" title="Some argue Tau is better than Pi" />
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		                <ui:treeNode ruau:id="E" title="E">
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		                    <ui:treeNode ruau:id="alpha" href="#alpha" title="The alpha and the omega" />
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		                    <ui:treeNode ruau:id="beta" href="#beta" title="Beta means Ship it" />
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		                <ui:treeNode ruau:id="F" title="F" />
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		                <ui:treeNode ruau:id="H" title="H">
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		                    <ui:treeNode ruau:id="chi" href="#chi" title="Tea" />
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		                    <ui:treeNode ruau:id="psi" href="#psi" title="Pressure Bars" />
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		                    <ui:treeNode ruau:id="omega" href="#omega" title="Where's alpha?" />
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		            <ui:treeNode ruau:id="C" title="C is lonely" />
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		    <ui:treeNode ruau:id="secondRoot" title="secondRoot">
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		       <ui:treeNode ruau:id="foo" href="#foo" title="foo" />
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:		       <ui:treeNode ruau:id="bar" href="#bar" title="bar" />
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:    </ruaudocs:searchFilterTree>
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTest.cmp:</ruau:component>
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestController.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestController.js: * Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestController.js: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestController.js: * You may obtain a copy of the License at
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestController.js: *         http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestController.js: * Unless required by applicable law or agreed to in writing, software
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestController.js: * distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestController.js: * See the License for the specific language governing permissions and
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestController.js: * limitations under the License.
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestController.js:      cmp.find('searchTree').set('v.tree', cmp.find('tree'));
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js: * Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js: * you may not use this file except in compliance with the License.
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js: * You may obtain a copy of the License at
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js: *         http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js: * Unless required by applicable law or agreed to in writing, software
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js: * distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js: * See the License for the specific language governing permissions and
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js: * limitations under the License.
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:     * Fire the searchEvent on the searchFilterTree.
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:    doSearch : function(cmp, searchTerm) {
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:        var searchTree = cmp.find('searchTree');
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:        searchTree.getEvent('search').setParams({
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            'searchTerm' : searchTerm
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:     * Convenience method for printing nodes in assertion messages.
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:        var string = node.get('v.item.title') || '' + node.get('v.title') || '';
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:        string += " (" + (node.get('v.expanded') ? 'expanded' : 'collapsed');
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:     * @param cmp
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:     *            the searchFilterTree
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:     * @param ids
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:     *            an array of ruau:ids
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:     * @return An array of components correspdonding to the given ids.
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:        var nodes = [];
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:        for ( var i = 0, n = ids.length; i < n; i++) {
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:     * Create a visitor to collect and validate the expansion state of a tree.
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:    initExpansionValidator : function(expectedNodes, expectedState) {
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:        var self = this;
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:        if (!self.ExpansionValidator) {
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            self.ExpansionValidator = function(expectedNodes, expectedState) {
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                this.expansion = expectedState;
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                this.actual = [];
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            self.ExpansionValidator.prototype.visit = function(node) {
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            self.ExpansionValidator.prototype.accept = function(node) {
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                if (node.get('v.expanded') == this.expansion) {
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                    this.actual.push(node);
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            self.ExpansionValidator.prototype.endVisit = function(node) {
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:             * Assert that the only nodes in the given expansion state were the
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            self.ExpansionValidator.prototype.validate = function() {
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                this.actual = this.actual.sort();
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                $A.test.assertEquals(this.expected.length, this.actual.length,
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                        "Incorrect # of matching nodes");
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                for ( var i = 0, n = this.expected.length; i < n; i++) {
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                    $A.test.assertTrue(this.actual[i] === this.expected[i],
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                                    + self.nodeToString(this.actual[i])
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:        return new self.ExpansionValidator(expectedNodes, expectedState);
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:     * Conveience method to run the expansion visitor and validation.
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:    validateExpansion : function(root, expectedNodes, expectedState) {
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:        var expansionVisitor = this.initExpansionValidator(expectedNodes,
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                expectedState);
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:        root.getEvent('makeVisitor').setParams({
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            "traverser" : "PreOrderTraverser",
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            "callback" : function(args) {
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                args.visitor = expansionVisitor;
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                root.getEvent("traverse").setParams(args).fire();
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:        expansionVisitor.validate();
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:     * Make sure we can do a simple, one level search.
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:    testOneLevelSearch : {
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            this.doSearch(cmp, "iota");
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            $A.test.assertTrue(cmp.find('root').get('v.expanded'))
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            $A.test.assertTrue(!cmp.find('A').get('v.expanded'));
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            this.validateExpansion(cmp.find('root'), this.idsToNodes(cmp, [
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                    "root", "iota" ]), true);
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:     * Make sure we can search over multiple roots (aka the tree as the virtual
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            this.doSearch(cmp, "root");
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            $A.test.assertTrue(cmp.find('root').get('v.expanded'));
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            $A.test.assertTrue(cmp.find('secondRoot').get('v.expanded'));
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            $A.test.assertTrue(!cmp.find('A').get('v.expanded'));
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            this.validateExpansion(cmp.find('A'), [], true); // A and all of
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                                                                // descendants
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                                                                // collapsed.
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:     * Make sure that multiple matches are handled correctly.
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:    testMultipleMatch : {
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            // Multiple matches under one root.
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            this.doSearch(cmp, "beta");
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            this.validateExpansion(cmp.find('root'), this.idsToNodes(cmp, [
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                    "root", "A", "B", "E", "beta" ]), true);
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            // Multiple matches across roots
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            this.doSearch(cmp, "bar");
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            this.validateExpansion(cmp.find('root'), this.idsToNodes(cmp, [
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            this.validateExpansion(cmp.find('secondRoot'), this.idsToNodes(cmp,
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:                    [ "secondRoot", "bar" ]), true);
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:     * Queries that match every node should expand the entire tree, and those
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:     * that match none should collapse it.
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            // A query that matches everything expands everything. So, none
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            // should be collapsed.
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            this.doSearch(cmp, "\\w");
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            this.validateExpansion(cmp.find('root'), [], false);
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            this.validateExpansion(cmp.find('secondRoot'), [], false);
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            // Conversely, a query that matches nothing collapses everything.
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            // So, none should be expanded.
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            this.doSearch(cmp, "hiybbprqag");
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            this.validateExpansion(cmp.find('root'), [], true);
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            this.validateExpansion(cmp.find('secondRoot'), [], true);
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:     * Exercise the tree with a single model generated node.
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            cmp.find('searchTree').set('v.nodes', cmp.get('m.tree'));
+ruau/ruau/src/test/components/CODstest/searchFilterTreeTest/searchFilterTreeTestTest.js:            // TODO(cconroy): sadly this doesn't seem to actually update the tree..
 ruau/ruau/src/test/components/updateTest/updateBase/updateBase.app:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/test/components/updateTest/updateBase/updateBase.app:    Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau/src/test/components/updateTest/updateBase/updateBase.app:    you may not use this file except in compliance with the License.
@@ -1341,7 +1341,7 @@ ruau/ruau/src/test/components/updateTest/updateWithoutHandling/updateWithoutHand
 ruau/ruau/src/test/components/updateTest/updateWithoutHandling/updateWithoutHandlingController.js: * See the License for the specific language governing permissions and
 ruau/ruau/src/test/components/updateTest/updateWithoutHandling/updateWithoutHandlingController.js: * limitations under the License.
 ruau/ruau/src/test/components/updateTest/updateWithoutHandling/updateWithoutHandlingController.js:    updateText:function(c,e,h){
-ruau/ruau/src/test/components/updateTest/updateWithoutHandling/updateWithoutHandlingController.js:        document.__PageModifiedTestFlag = true;
+ruau/ruau/src/test/components/updateTest/updateWithoutHandling/updateWithoutHandlingController.js:        CODument.__PageModifiedTestFlag = true;
 ruau/ruau/src/test/components/updateTest/updateWithoutHandling/updateWithoutHandlingController.js:     * this routine builds a request where the 'loaded' map is incorrect.
 ruau/ruau/src/test/components/updateTest/updateWithoutHandling/updateWithoutHandlingController.js:     * In order to do this it randomly picks a character from the UID, and replaces it with
 ruau/ruau/src/test/components/updateTest/updateWithoutHandling/updateWithoutHandlingController.js:     * some other character in the set of alphanumerics, making sure that it is different.
@@ -1970,8 +1970,8 @@ ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:    
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:                ControllerDef.class, String.format("%s://%s.%s", DefDescriptor.JAVASCRIPT_PREFIX, namespace, cmpName),
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:                "{ cssalert:function(c){"
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:                        + "var val = '';"
-ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:                        + "if(document.defaultView && document.defaultView.getComputedStyle){"
-ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:                        + "val = document.defaultView.getComputedStyle(elem, '').getPropertyValue(style);"
+ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:                        + "if(CODument.defaultView && document.defaultView.getComputedStyle){"
+ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:                        + "val = CODument.defaultView.getComputedStyle(elem, '').getPropertyValue(style);"
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:                        + "style = style.replace(/\\-(\\w)/g, function (s, ch){"
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:                        + "return ch.toUpperCase();"
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:                        + "val = elem.currentStyle[style];"
@@ -2351,7 +2351,7 @@ ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:    
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:    private void updateCookie(String name, String value, Date expiry, String path) {
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:        SimpleDateFormat sd = new SimpleDateFormat();
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:        String expiryFormatted = sd.format(expiry);
-ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:        String command = "document.cookie = '" + name + "="+value+"; expires=" + expiryFormatted + "; path=" + path + "';";
+ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:        String command = "CODument.cookie = '" + name + "="+value+"; expires=" + expiryFormatted + "; path=" + path + "';";
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheResourcesUITest.java:        ruauUITestingUtil.getEval(command);
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/test/java/org/ruauframework/http/AppCacheManifestHttpTest.java: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -2656,7 +2656,7 @@ ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:       
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        openNoRuue(uri);
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        // generate an intentional csp report
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        ruauUITestingUtil
-ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:                .getRawEval("var s=document.createElement('script');s.type='text/javascript';s.async=true;s.src='http://expectedreport.salesforce.com/';document.getElementsByTagName('head')[0].appendChild(s);");
+ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:                .getRawEval("var s=CODument.createElement('script');s.type='text/javascript';s.async=true;s.src='http://expectedreport.salesforce.com/';document.getElementsByTagName('head')[0].appendChild(s);");
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        List<Map<String, Object>> logs = getCspReportLogs(1);
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        @SuppressWarnings("unchecked")
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        Map<String, Object> cspReport = (Map<String, Object>) logs.get(0).get(CSPReporterServlet.JSON_NAME);
@@ -2728,7 +2728,7 @@ ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:	      
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:	        assertViolatedDirective(cspReport, "connect-src 'self'");
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:    private void assertDocumentUri(Map<String, Object> cspReport, String expectedContains) {
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:        if (!reportedDocumentUri.toString().contains(expectedContains)) {
-ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:            fail(String.format("Unexpected document URI, expected: %s, actual: %s", expectedContains,
+ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:            fail(String.format("Unexpected CODument URI, expected: %s, actual: %s", expectedContains,
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:    private void assertSourceFile(Map<String, Object> cspReport, String expectedSuffix) {
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:            assertNull(reportedSourceFile);
 ruau/ruau/src/test/java/org/ruauframework/http/CSPReportLoggingTest.java:                fail(String.format("Unexpected source file, expected: %s, actual: %s", expectedSuffix,

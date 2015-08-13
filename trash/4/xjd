@@ -95,7 +95,7 @@ ruau/ruau-impl/src/main/resources/ruau/component/Component_private.js:          
 ruau/ruau-impl/src/main/resources/ruau/component/Component_private.js:                        reference.addChangeHandler(cmp,"v."+attribute);
 ruau/ruau-impl/src/main/resources/ruau/component/Component_private.js:                        value = reference.evaluate();
 ruau/ruau-impl/src/main/resources/ruau/component/Component_private.js:                	// So I'm not quite sure when or why we would want to go in here.
-ruau/ruau-impl/src/main/resources/ruau/component/Component_private.js:                	// Hopefully I can find the reason the tests try to do this and document that here.
+ruau/ruau-impl/src/main/resources/ruau/component/Component_private.js:                	// Hopefully I can find the reason the tests try to do this and CODument that here.
 ruau/ruau-impl/src/main/resources/ruau/component/Component_private.js:	                    value=[value];
 ruau/ruau-impl/src/main/resources/ruau/component/Component_private.js:	                    $A.warning("Component_private.setupAttributes: CDR[] WAS NOT AN ARRAY");
 ruau/ruau-impl/src/main/resources/ruau/component/Component_private.js:                var cdrs=[];
@@ -849,12 +849,12 @@ ruau/ruau-impl/src/main/resources/ruau/RuueClientService.js:         * This shou
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService.js:         * @param {Object} config the configuration for ruau.
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService.js:         * @param {string} token the XSS token.
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService.js:         * @param {function} callback the callback when init is complete.
-ruau/ruau-impl/src/main/resources/ruau/RuueClientService.js:         * @param {object} container the place to install ruau (defaults to document.body).
+ruau/ruau-impl/src/main/resources/ruau/RuueClientService.js:         * @param {object} container the place to install ruau (defaults to CODument.body).
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService.js:         * @private
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService.js:        init : function(config, token, callback, container) {
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService.js:            $A.Perf.mark("Initial Component Created");
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService.js:            $A.Perf.mark("Initial Component Rendered");
-ruau/ruau-impl/src/main/resources/ruau/RuueClientService.js:            var body = document.body;
+ruau/ruau-impl/src/main/resources/ruau/RuueClientService.js:            var body = CODument.body;
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService.js:            // not on in dev modes to preserve stacktrace in debug tools
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService.js:            // I think this should be done in all cases, the $A.error can be more
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService.js:            // instructive than an uncaught exception.
@@ -1126,7 +1126,7 @@ ruau/ruau-impl/src/main/resources/ruau/RuueClientService.js:         * @param {S
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService.js:         * @param {Object} [actionEventHandlers] - event handlers
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService.js:        renderInjection: function(component, locatorDomId, actionEventHandlers) {
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService.js:            var error = null,
-ruau/ruau-impl/src/main/resources/ruau/RuueClientService.js:                hostEl = document.getElementById(locatorDomId);
+ruau/ruau-impl/src/main/resources/ruau/RuueClientService.js:                hostEl = CODument.getElementById(locatorDomId);
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService.js:                error = "Invalid locatorDomId specified - no element found in the DOM with id=" + locatorDomId;
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService.js:            if (component.isInstanceOf("ruau:text")) {
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService.js:                // check for component creation error
@@ -1573,8 +1573,8 @@ ruau/ruau-impl/src/main/resources/ruau/Logging.js:    function devAssertError(le
 ruau/ruau-impl/src/main/resources/ruau/Logging.js:        $A.trace();
 ruau/ruau-impl/src/main/resources/ruau/Logging.js:        var elt = $A.util.getElement("ruauErrorMessage");
 ruau/ruau-impl/src/main/resources/ruau/Logging.js:            elt.innerHTML = message;
-ruau/ruau-impl/src/main/resources/ruau/Logging.js:            $A.util.removeClass(document.body, "loading");
-ruau/ruau-impl/src/main/resources/ruau/Logging.js:            $A.util.addClass(document.body, "ruauError");
+ruau/ruau-impl/src/main/resources/ruau/Logging.js:            $A.util.removeClass(CODument.body, "loading");
+ruau/ruau-impl/src/main/resources/ruau/Logging.js:            $A.util.addClass(CODument.body, "ruauError");
 ruau/ruau-impl/src/main/resources/ruau/Logging.js:            alert(message);
 ruau/ruau-impl/src/main/resources/ruau/Logging.js:        throw new Error(message);
 ruau/ruau-impl/src/main/resources/ruau/RuueClientService_export.js: * Copyright (C) 2013 salesforce.com, inc.
@@ -1714,10 +1714,10 @@ ruau/ruau-impl/src/main/resources/ruau/RuueDevToolService.js: * See the License 
 ruau/ruau-impl/src/main/resources/ruau/RuueDevToolService.js: * limitations under the License.
 ruau/ruau-impl/src/main/resources/ruau/RuueDevToolService.js: * @description The Ruue Dev Tool Service, accessible using $A.devToolServices.
 ruau/ruau-impl/src/main/resources/ruau/RuueDevToolService.js:var RuueDevToolService = function() {
-ruau/ruau-impl/src/main/resources/ruau/RuueDevToolService.js:    var port = document.createElement("span");
+ruau/ruau-impl/src/main/resources/ruau/RuueDevToolService.js:    var port = CODument.createElement("span");
 ruau/ruau-impl/src/main/resources/ruau/RuueDevToolService.js:    port.id = "RuueDevToolServicePort";
 ruau/ruau-impl/src/main/resources/ruau/RuueDevToolService.js:    port.style.display = "none";
-ruau/ruau-impl/src/main/resources/ruau/RuueDevToolService.js:    document.body.appendChild(port);
+ruau/ruau-impl/src/main/resources/ruau/RuueDevToolService.js:    CODument.body.appendChild(port);
 ruau/ruau-impl/src/main/resources/ruau/RuueDevToolService.js:        var root = $A.getRoot();
 ruau/ruau-impl/src/main/resources/ruau/RuueDevToolService.js:    var highlightedElements = [];
 ruau/ruau-impl/src/main/resources/ruau/RuueDevToolService.js:    var appliedHighlightStyle = false;
@@ -2104,7 +2104,7 @@ ruau/ruau-impl/src/main/resources/ruau/RuueDevToolService.js:                   
 ruau/ruau-impl/src/main/resources/ruau/RuueDevToolService.js:                    if(!$A.util.isEmpty(alt) && alt.replace(/[\s\t\r\n]/g,'') !== ""){
 ruau/ruau-impl/src/main/resources/ruau/RuueDevToolService.js:                       return false;    
 ruau/ruau-impl/src/main/resources/ruau/RuueDevToolService.js:             * Method looks at the given arrays for anchor statements that are the empty string
-ruau/ruau-impl/src/main/resources/ruau/RuueDevToolService.js:             * @param   anchors - The anchor tags in the document
+ruau/ruau-impl/src/main/resources/ruau/RuueDevToolService.js:             * @param   anchors - The anchor tags in the CODument
 ruau/ruau-impl/src/main/resources/ruau/RuueDevToolService.js:             * @returns Array - Returns an array of all erroneous values
 ruau/ruau-impl/src/main/resources/ruau/RuueDevToolService.js:             checkAnchorHasInnerText : function (anchors){
 ruau/ruau-impl/src/main/resources/ruau/RuueDevToolService.js:                var errArray = [];
@@ -2214,7 +2214,7 @@ ruau/ruau-impl/src/main/resources/ruau/RuueDevToolService.js:                  *
 ruau/ruau-impl/src/main/resources/ruau/RuueDevToolService.js:                  * @param   nextTag  - String representation of the very next tag that we should see. 
 ruau/ruau-impl/src/main/resources/ruau/RuueDevToolService.js:                  *             i.e. if tags contains all h1 tags, nextTag should be "h2"
 ruau/ruau-impl/src/main/resources/ruau/RuueDevToolService.js:                  * @param   allHdrs  - Dictionary of all possible h# we can see.
-ruau/ruau-impl/src/main/resources/ruau/RuueDevToolService.js:                  *                i.e. if tags is a list of all h1 tags in the document, then allHdrs will be a dictionary
+ruau/ruau-impl/src/main/resources/ruau/RuueDevToolService.js:                  *                i.e. if tags is a list of all h1 tags in the CODument, then allHdrs will be a dictionary
 ruau/ruau-impl/src/main/resources/ruau/RuueDevToolService.js:                  * @returns Array    - Array of all the errors
 ruau/ruau-impl/src/main/resources/ruau/RuueDevToolService.js:                 findNextHeader : function(tags, nextTag, allHdrs){
 ruau/ruau-impl/src/main/resources/ruau/RuueDevToolService.js:                     var errorArray = [];
@@ -2524,8 +2524,8 @@ ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService_private.js:        evt.
 ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService_private.js:        this.fireOnload();
 ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService_private.js:    fireOnload : function(){
 ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService_private.js:        var frame = window.frameElement;
-ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService_private.js:        if (frame && document.createEvent) {
-ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService_private.js:            var loadEvent = document.createEvent('HTMLEvents');
+ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService_private.js:        if (frame && CODument.createEvent) {
+ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService_private.js:            var loadEvent = CODument.createEvent('HTMLEvents');
 ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService_private.js:            loadEvent.initEvent("load", true, true); // event type,bubbling,cancelable
 ruau/ruau-impl/src/main/resources/ruau/RuueLayoutService_private.js:            frame.dispatchEvent(loadEvent);
 ruau/ruau-impl/src/main/resources/ruau/RuueHistoryService.js: * Copyright (C) 2013 salesforce.com, inc.
@@ -2617,8 +2617,8 @@ ruau/ruau-impl/src/main/resources/ruau/RuueHistoryService.js:            that.ch
 ruau/ruau-impl/src/main/resources/ruau/RuueHistoryService.js:        var hash = location["hash"];
 ruau/ruau-impl/src/main/resources/ruau/RuueHistoryService.js:        this.history.push(hash);
 ruau/ruau-impl/src/main/resources/ruau/RuueHistoryService.js:        // Checks for existence of event, and also ie8 in ie7 mode (misreports existence)
-ruau/ruau-impl/src/main/resources/ruau/RuueHistoryService.js:        var docMode = document["documentMode"];
-ruau/ruau-impl/src/main/resources/ruau/RuueHistoryService.js:        var hasOnHashChangeEvent = 'onhashchange' in window && (docMode === undefined || docMode > 7);
+ruau/ruau-impl/src/main/resources/ruau/RuueHistoryService.js:        var CODMode = document["documentMode"];
+ruau/ruau-impl/src/main/resources/ruau/RuueHistoryService.js:        var hasOnHashChangeEvent = 'onhashchange' in window && (CODMode === undefined || docMode > 7);
 ruau/ruau-impl/src/main/resources/ruau/RuueHistoryService.js:        if (hasOnHashChangeEvent) {
 ruau/ruau-impl/src/main/resources/ruau/RuueHistoryService.js:            window["onhashchange"] = function(){
 ruau/ruau-impl/src/main/resources/ruau/RuueHistoryService.js:                that.changeHandler();

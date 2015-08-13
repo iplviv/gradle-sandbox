@@ -160,7 +160,7 @@
 ./mudial_site/db/migrate/20141209024615_create_resource_pools.rb
 ./mudial_site/db/migrate/20130509030764_add_allocation_group_to_spot_allocation.rb
 ./mudial_site/db/migrate/20111225062303_add_cc_token_to_user.rb
-./mudial_site/db/migrate/20121025093250_add_feature_key_for_flowdock_integration_to_account_configs.rb
+./mudial_site/db/migrate/20121025093250_add_feature_key_for_flowCODk_integration_to_account_configs.rb
 ./mudial_site/db/migrate/20120519103557_remove_ssh_key_fields_from_suite.rb
 ./mudial_site/db/migrate/20130301013313_add_scheduling_mode_to_suite.rb
 ./mudial_site/db/migrate/20150712691732_add_workers_to_session.rb
@@ -234,7 +234,7 @@
 ./mudial_site/app/controllers/admin/repos_controller.rb
 ./mudial_site/app/controllers/admin/accounts_controller.rb
 ./mudial_site/app/controllers/admin/deploy_groups_controller.rb
-./mudial_site/app/controllers/admin/docs_controller.rb
+./mudial_site/app/controllers/admin/CODs_controller.rb
 ./mudial_site/app/controllers/admin/account_watches_controller.rb
 ./mudial_site/app/controllers/admin/oauth_connections_controller.rb
 ./mudial_site/app/controllers/admin/reports_controller.rb
@@ -420,8 +420,8 @@
 ./mudial_site/app/views/admin/resources/new.html.haml
 ./mudial_site/app/views/admin/resources/show.html.haml
 ./mudial_site/app/views/admin/resources/_resource.html.haml
-./mudial_site/app/views/admin/docs
-./mudial_site/app/views/admin/docs/index.html.haml
+./mudial_site/app/views/admin/CODs
+./mudial_site/app/views/admin/CODs/index.html.haml
 ./mudial_site/app/views/admin/users
 ./mudial_site/app/views/admin/users/_user.html.haml
 ./mudial_site/app/views/admin/users/index.csv.csvbuilder

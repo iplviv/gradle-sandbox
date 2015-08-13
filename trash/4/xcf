@@ -10,7 +10,7 @@ ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:        return StringUtils.join(seriesNames.iterator(), "|");
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:     * Encodes a list of values into the Google Charts API "extended encoding",
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:     * scaling to the supplied max value.
-ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:     * http://code.google.com/apis/chart/docs/data_formats.html#extended
+ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:     * http://code.google.com/apis/chart/CODs/data_formats.html#extended
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:     * Try and dig into their data formats sometime. They're pretty annoying.
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:    public String buildDataPoints() {
 ruau/ruau-util/src/test/java/org/ruauframework/util/perfomance/PTestGoogleChart.java:        StringBuilder data = new StringBuilder();

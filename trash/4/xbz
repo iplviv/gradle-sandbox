@@ -678,7 +678,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.j
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                error("ADSAFE: Use the fragment option.");
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                error("Expected '{a}' and instead saw '{b}'.",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:        if (option.adsafe) {
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                error("Currently, ADsafe does not operate on whole HTML documents. It operates on <div> fragments and .js files.", token);
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                error("Currently, ADsafe does not operate on whole HTML CODuments. It operates on <div> fragments and .js files.", token);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:            if (option.fragment) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                    error("ADsafe violation: Wrap the widget in a div.", token);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                error("Use the fragment option.", token);
@@ -1062,8 +1062,8 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.j
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:        var m = identifier();
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:        that.left = left;
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:        that.right = m;
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:        if (!option.evil && left && left.value === 'document' &&
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:            warning("document.write can be a form of eval.", left);
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:        if (!option.evil && left && left.value === 'CODument' &&
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:            warning("CODument.write can be a form of eval.", left);
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:        } else if (option.adsafe) {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:            if (left && left.value === 'ADSAFE') {
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:                    warning("ADsafe violation.", that);
@@ -1696,7 +1696,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * See t
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js: * limitations under the License.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:Copyright (c) 2013 Nicole Sullivan and Nicholas C. Zakas. All rights reserved.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:Permission is hereby granted, free of charge, to any person obtaining a copy
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:of this software and associated documentation files (the "Software"), to deal
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:of this software and associated CODumentation files (the "Software"), to deal
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:in the Software without restriction, including without limitation the rights
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:copies of the Software, and to permit persons to whom the Software is
@@ -1707,7 +1707,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:var CSSL
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:Parser-Lib
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:Copyright (c) 2009-2011 Nicholas C. Zakas. All rights reserved.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:Permission is hereby granted, free of charge, to any person obtaining a copy
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:of this software and associated documentation files (the "Software"), to deal
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:of this software and associated CODumentation files (the "Software"), to deal
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:in the Software without restriction, including without limitation the rights
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:copies of the Software, and to permit persons to whom the Software is
@@ -2055,7 +2055,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:TokenStr
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:Parser-Lib
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:Copyright (c) 2009-2011 Nicholas C. Zakas. All rights reserved.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:Permission is hereby granted, free of charge, to any person obtaining a copy
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:of this software and associated documentation files (the "Software"), to deal
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:of this software and associated CODumentation files (the "Software"), to deal
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:in the Software without restriction, including without limitation the rights
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:copies of the Software, and to permit persons to whom the Software is
@@ -2161,7 +2161,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    whea
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    yellowgreen     :"#9acd32",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    activeBorder        :"Active window border.",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    activecaption       :"Active window caption.",
-ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    appworkspace        :"Background color of multiple document interface.",
+ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    appworkspace        :"Background color of multiple CODument interface.",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    background          :"Desktop background.",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    buttonface          :"The face background color for 3-D elements that appear 3-D due to one layer of surrounding border.",
 ruau/ruau-util/src/main/resources/org/ruauframework/util/css/csslint.js:    buttonhighlight     :"The color of the border facing the light source for 3-D elements that appear 3-D due to one layer of surrounding border.",

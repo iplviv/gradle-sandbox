@@ -1302,7 +1302,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:    /
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:     * @return the usedJSHeapSize from window.performance.memory
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:    public long getUsedJSHeapSize() {
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:        return (long) ((JavascriptExecutor) driver).executeScript("return window.performance.memory.usedJSHeapSize");
-ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:     * See https://developers.google.com/chrome-developer-tools/docs/network and http://www.w3.org/TR/resource-timing
+ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:     * See https://developers.google.com/chrome-developer-tools/CODs/network and http://www.w3.org/TR/resource-timing
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:     * @return Resource Timing API performance
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:    @SuppressWarnings("unchecked")
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfWebDriverUtil.java:    public List<Map<String, ?>> getResourceTimingData() {
@@ -1676,7 +1676,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfResultsUtil.java:       
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfResultsUtil.java:            file.getParentFile().mkdirs();
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfResultsUtil.java:            FileOutputStream out = new FileOutputStream(file);
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfResultsUtil.java:            // write using same format as CDT Save:
-ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfResultsUtil.java:            // https://developers.google.com/chrome-developer-tools/docs/heap-profiling
+ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfResultsUtil.java:            // https://developers.google.com/chrome-developer-tools/CODs/heap-profiling
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfResultsUtil.java:            writer = new BufferedWriter(new OutputStreamWriter(out, Charsets.US_ASCII));
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfResultsUtil.java:            writer.write(JSONObject.quote("snapshot"));
 ruau/ruau/src/test/java/org/ruauframework/test/perf/PerfResultsUtil.java:            new JSONObject((Map<String, ?>) data.get("snapshot")).write(writer);

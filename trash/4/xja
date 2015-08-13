@@ -666,7 +666,7 @@ ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuic
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:        open("/ruautest/createAttributeQuickFix.cmp", Mode.DEV);
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:        verifyToolbarAndClickCreateButton();
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:        setAttributeNameType("!foo", "String");
-ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:        util.clickFix(false, "Invalid attribute name:'!foo',Refer to Ruuedocs for valid attribute names");
+ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:        util.clickFix(false, "Invalid attribute name:'!foo',Refer to RuueCODs for valid attribute names");
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:        assertNull(fooAttr);
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:     * Enter invalid attribute type and verify proper error message is displayed to user.
 ruau/ruau/src/test/java/org/ruauframework/throwable/quickfix/CreateAttributeQuickFixUITest.java:    public void testInvalidAttributeType() throws Exception {
@@ -1298,7 +1298,7 @@ ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        re
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                .ignoring(StaleElementReferenceException.class).until(new ExpectedCondition<List<WebElement>>() {
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                    public List<WebElement> apply(WebDriver d) {
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                        List<WebElement> elements = driver.findElements(locator);
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                                getBooleanEval("return arguments[0].ownerDocument === document", elements.get(0))) {
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                                getBooleanEval("return arguments[0].ownerDocument === CODument", elements.get(0))) {
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * Get an error message from the error div.
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * FIXME: this is _not_ a quick fix message. This is the error box that is used by $A.error. Also note that this
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * does not check if the box is visible. This box should always be present, and may contain old text that is no
@@ -1401,15 +1401,15 @@ ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    public
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        waitForDocumentReady();
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        waitForRuueFrameworkReady(expectedErrors);
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        waitForAppCacheReady();
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * Wait for the document to enter the complete readyState.
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * Wait for the CODument to enter the complete readyState.
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    public void waitForDocumentReady() {
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        waitUntil(
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                new ExpectedCondition<Boolean>() {
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                    public Boolean apply(WebDriver d) {
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                        return getBooleanEval("return document.readyState === 'complete'");
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                        return getBooleanEval("return CODument.readyState === 'complete'");
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:                "Document is not Ready!");
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * First, verify that window.$A has been installed. Then, wait until {@link #isRuueFrameworkReady()} returns true.
-ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * We assume the document has finished loading at this point: callers should have previously called
+ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * We assume the CODument has finished loading at this point: callers should have previously called
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:     * {@link #waitForDocumentReady()}.
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:    public void waitForRuueFrameworkReady(final Set<String> expectedErrors) {
 ruau/ruau/src/test/java/org/ruauframework/util/RuueUITestingUtil.java:        WebDriverWait waitRuuePresent = new WebDriverWait(driver, timeoutInSecs);
@@ -2462,18 +2462,18 @@ ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        Ma
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        params.put("ruau.mode", mode.name());
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        params.put("ruau.test", getQualifiedName());
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        url = addUrlParams(url, params);
-ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        ruauUITestingUtil.getRawEval("document._waitingForReload = true;");
+ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        ruauUITestingUtil.getRawEval("CODument._waitingForReload = true;");
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:            openAndWait(url, waitForInit);
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        } catch (TimeoutException e) {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:            // Hack to avoid timeout issue for IE7 and IE8. Appears that tests fail for the first time when we run the
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:            // test in new vm session on Sauce.
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:                openAndWait(url, waitForInit);
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:    private void openAndWait(String url, boolean waitForInit) throws MalformedURLException, URISyntaxException {
-ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        ruauUITestingUtil.getRawEval("document._waitingForReload = true;");
+ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        ruauUITestingUtil.getRawEval("CODument._waitingForReload = true;");
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        openRaw(url);
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        ruauUITestingUtil.waitUntil(new ExpectedCondition<Boolean>() {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:            public Boolean apply(WebDriver d) {
-ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:                Object ret = ruauUITestingUtil.getRawEval("return !document._waitingForReload");
+ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:                Object ret = ruauUITestingUtil.getRawEval("return !CODument._waitingForReload");
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:                if (ret != null && ((Boolean) ret).booleanValue()) {
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:                return false;
 ruau/ruau/src/test/java/org/ruauframework/test/WebDriverTestCase.java:        }, timeoutInSecs,"fail on loading url:"+url);
@@ -2692,7 +2692,7 @@ ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:            capabi
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:            break;
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        default: // explicit no-op
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        // adding timeouts to prevent jobs to run for too long when problems
-ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        // see http://saucelabs.com/docs/ondemand/additional-config#timeouts
+ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        // see http://saucelabs.com/CODs/ondemand/additional-config#timeouts
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        capabilities.setCapability("max-duration", SAUCE_MAX_TIMEOUT);
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        capabilities.setCapability("command-timeout", SAUCE_CMD_TIMEOUT);
 ruau/ruau/src/test/java/org/ruauframework/test/SauceUtil.java:        capabilities.setCapability("idle-timeout", SAUCE_IDLE_TIMEOUT);

@@ -1440,159 +1440,159 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/LocalizationServiceImpl.java
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/LocalizationServiceImpl.java:        nf.setMinimumFractionDigits(minFractionDigits);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/LocalizationServiceImpl.java:        nf.setMaximumFractionDigits(maxFractionDigits);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/LocalizationServiceImpl.java:        return nf.format(number);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java: * Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java: * you may not use this file except in compliance with the License.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java: * You may obtain a copy of the License at
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java: * Unless required by applicable law or agreed to in writing, software
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java: * distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java: * See the License for the specific language governing permissions and
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java: * limitations under the License.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:package org.ruauframework.impl.documentation;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:import java.io.IOException;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:import java.util.Set;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:import org.ruauframework.builder.ExampleDefBuilder;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:import org.ruauframework.def.*;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:import org.ruauframework.impl.system.DefDescriptorImpl;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:import org.ruauframework.impl.system.DefinitionImpl;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:import org.ruauframework.throwable.quickfix.InvalidDefinitionException;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:import org.ruauframework.throwable.quickfix.QuickFixException;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:import org.ruauframework.util.RuueTextUtil;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:import org.ruauframework.util.json.Json;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:public class ExampleDefImpl extends DefinitionImpl<ExampleDef> implements ExampleDef {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:	private static final long serialVersionUID = -4467201134487458023L;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:    private DefDescriptor<ComponentDef> ref;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:    private String name;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:    private String label;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:	protected ExampleDefImpl(Builder builder) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:        this.name = builder.name;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:        this.label = builder.label;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:    public String getName() {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:        return name;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:    public String getLabel() {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:        return label;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:    public void appendDependencies(Set<DefDescriptor<?>> dependencies) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:        super.appendDependencies(dependencies);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:        dependencies.add(ref);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:    public void validateDefinition() throws QuickFixException {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:        super.validateDefinition();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:        if (RuueTextUtil.isNullEmptyOrWhitespace(name)) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:            throw new InvalidDefinitionException("<ruau:example> must have attribute 'name'.", getLocation());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:        if (RuueTextUtil.isNullEmptyOrWhitespace(label)) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:            throw new InvalidDefinitionException("<ruau:example> must have attribute 'label'.", getLocation());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:        if (RuueTextUtil.isNullEmptyOrWhitespace(description)) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:            throw new InvalidDefinitionException("<ruau:example> must contain a description.", getLocation());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:            throw new InvalidDefinitionException(String.format("<ruau:example> reference component %s does not exist.", ref.toString()), getLocation());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:    public static class Builder extends DefinitionImpl.BuilderImpl<ExampleDef> implements ExampleDefBuilder {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:        private DefDescriptor<ComponentDef> ref;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:        private String name;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:        private String label;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:            super(ExampleDef.class);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:         * @see org.ruauframework.impl.system.DefinitionImpl.BuilderImpl#build()
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:        public ExampleDefImpl build() {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:            return new ExampleDefImpl(this);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:        public ExampleDefBuilder setRef(String qualifiedName) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:            this.ref = DefDescriptorImpl.getInstance(qualifiedName, ComponentDef.class);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:        public ExampleDefBuilder setName(String name) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:            this.name = name;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:        public ExampleDefBuilder setLabel(String label) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:            this.label = label;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:    public void serialize(Json json) throws IOException {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java:        // TODO Auto-generated method stub
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java: * Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java: * you may not use this file except in compliance with the License.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java: * You may obtain a copy of the License at
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java: * Unless required by applicable law or agreed to in writing, software
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java: * distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java: * See the License for the specific language governing permissions and
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java: * limitations under the License.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java:package org.ruauframework.impl.documentation;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java:import java.io.IOException;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java:import org.ruauframework.builder.DescriptionDefBuilder;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java:import org.ruauframework.def.DescriptionDef;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java:import org.ruauframework.impl.system.DefinitionImpl;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java:import org.ruauframework.throwable.quickfix.InvalidDefinitionException;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java:import org.ruauframework.throwable.quickfix.QuickFixException;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java:import org.ruauframework.util.RuueTextUtil;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java:import org.ruauframework.util.json.Json;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java:public class DescriptionDefImpl extends DefinitionImpl<DescriptionDef> implements DescriptionDef {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java:	private static final long serialVersionUID = 3677136390357266769L;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java:	private String name;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java:        this.name = builder.name;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java:    public String getName() {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java:        return name;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java:    public void validateDefinition() throws QuickFixException {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java:        super.validateDefinition();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java:        if (RuueTextUtil.isNullEmptyOrWhitespace(description)) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java:            throw new InvalidDefinitionException("<ruau:description> must contain a description.", getLocation());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java:    public void serialize(Json json) throws IOException {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java:        // TODO Auto-generated method stub
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java:    public static class Builder extends DefinitionImpl.BuilderImpl<DescriptionDef> implements DescriptionDefBuilder {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java:		private String name;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java:            super(DescriptionDef.class);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java:         * @see org.ruauframework.impl.system.DefinitionImpl.BuilderImpl#build()
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java:        public DescriptionDefBuilder setName(String name) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java:            this.name = name;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java: * Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java: * you may not use this file except in compliance with the License.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java: * You may obtain a copy of the License at
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java: * Unless required by applicable law or agreed to in writing, software
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java: * distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java: * See the License for the specific language governing permissions and
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java: * limitations under the License.
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:package org.ruauframework.impl.documentation;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:import java.io.IOException;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:import java.util.*;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:import org.ruauframework.builder.DocumentationDefBuilder;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:import org.ruauframework.def.*;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:import org.ruauframework.impl.root.RootDefinitionImpl;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:import org.ruauframework.impl.system.DefDescriptorImpl;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:import org.ruauframework.throwable.quickfix.InvalidDefinitionException;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:import org.ruauframework.throwable.quickfix.QuickFixException;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:import org.ruauframework.util.json.Json;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:public class DocumentationDefImpl extends RootDefinitionImpl<DocumentationDef> implements DocumentationDef {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:    private static final long serialVersionUID = 7808842576422413967L;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:    private final LinkedHashMap<String, DescriptionDef> descriptionDefs;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:    private final LinkedHashMap<String, ExampleDef> exampleDefs;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:    protected DocumentationDefImpl(Builder builder) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:        this.descriptionDefs = builder.descriptionMap;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:        this.exampleDefs = builder.exampleMap;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:    public Map<String, RegisterEventDef> getRegisterEventDefs() throws QuickFixException {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:    	throw new UnsupportedOperationException("DocumentationDef cannot contain RegisterEventDefs.");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:    public Map<DefDescriptor<AttributeDef>, AttributeDef> getAttributeDefs() throws QuickFixException {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:    	throw new UnsupportedOperationException("DocumentationDef cannot contain AttributeDefs.");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:        return Lists.newArrayList(descriptionDefs.values());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:    public Map<String, DescriptionDef> getDescriptionDefsAsMap() {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:        ArrayList<String> ret = new ArrayList<String>();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:        for (DescriptionDef descDef : descriptionDefs.values()) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:            ret.add(descDef.getDescription());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:    public List<ExampleDef> getExampleDefs() {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:        return Lists.newArrayList(exampleDefs.values());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:    public Map<String, ExampleDef> getExampleDefsAsMap() {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:        return exampleDefs;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:    public boolean isInstanceOf(DefDescriptor<? extends RootDefinition> other) throws QuickFixException {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:        return DefDescriptorImpl.compare(descriptor, other) == 0;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:    public void serialize(Json json) throws IOException {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:        // TODO Auto-generated method stub
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:    public void validateDefinition() throws QuickFixException {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:        super.validateDefinition();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:            throw new InvalidDefinitionException("<ruau:documentation> must contain at least one <ruau:description>", getLocation());
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:    public static class Builder extends RootDefinitionImpl.Builder<DocumentationDef> implements DocumentationDefBuilder {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:            super(DocumentationDef.class);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:    	private final LinkedHashMap<String, DescriptionDef> descriptionMap = new LinkedHashMap<String, DescriptionDef>();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:        private final LinkedHashMap<String, ExampleDef> exampleMap = new LinkedHashMap<String, ExampleDef>();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:         * @see org.ruauframework.impl.system.DefinitionImpl.BuilderImpl#build()
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:        public DocumentationDefImpl build() {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:            return new DocumentationDefImpl(this);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:        public DocumentationDefBuilder addDescription(String id, DescriptionDef description) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:            this.descriptionMap.put(id, description);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:        public DocumentationDefBuilder addExample(String id, ExampleDef example) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java:            this.exampleMap.put(id, example);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java: * You may obtain a copy of the License at
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java: * Unless required by applicable law or agreed to in writing, software
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java: * distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java: * See the License for the specific language governing permissions and
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java: * limitations under the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:package org.ruauframework.impl.documentation;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:import java.io.IOException;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:import java.util.Set;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:import org.ruauframework.builder.ExampleDefBuilder;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:import org.ruauframework.def.*;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:import org.ruauframework.impl.system.DefDescriptorImpl;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:import org.ruauframework.impl.system.DefinitionImpl;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:import org.ruauframework.throwable.quickfix.InvalidDefinitionException;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:import org.ruauframework.throwable.quickfix.QuickFixException;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:import org.ruauframework.util.RuueTextUtil;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:import org.ruauframework.util.json.Json;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:public class ExampleDefImpl extends DefinitionImpl<ExampleDef> implements ExampleDef {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:	private static final long serialVersionUID = -4467201134487458023L;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:    private DefDescriptor<ComponentDef> ref;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:    private String name;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:    private String label;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:	protected ExampleDefImpl(Builder builder) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:        this.name = builder.name;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:        this.label = builder.label;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:    public String getName() {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:        return name;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:    public String getLabel() {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:        return label;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:    public void appendDependencies(Set<DefDescriptor<?>> dependencies) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:        super.appendDependencies(dependencies);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:        dependencies.add(ref);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:    public void validateDefinition() throws QuickFixException {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:        super.validateDefinition();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:        if (RuueTextUtil.isNullEmptyOrWhitespace(name)) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:            throw new InvalidDefinitionException("<ruau:example> must have attribute 'name'.", getLocation());
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:        if (RuueTextUtil.isNullEmptyOrWhitespace(label)) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:            throw new InvalidDefinitionException("<ruau:example> must have attribute 'label'.", getLocation());
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:        if (RuueTextUtil.isNullEmptyOrWhitespace(description)) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:            throw new InvalidDefinitionException("<ruau:example> must contain a description.", getLocation());
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:            throw new InvalidDefinitionException(String.format("<ruau:example> reference component %s does not exist.", ref.toString()), getLocation());
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:    public static class Builder extends DefinitionImpl.BuilderImpl<ExampleDef> implements ExampleDefBuilder {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:        private DefDescriptor<ComponentDef> ref;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:        private String name;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:        private String label;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:            super(ExampleDef.class);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:         * @see org.ruauframework.impl.system.DefinitionImpl.BuilderImpl#build()
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:        public ExampleDefImpl build() {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:            return new ExampleDefImpl(this);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:        public ExampleDefBuilder setRef(String qualifiedName) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:            this.ref = DefDescriptorImpl.getInstance(qualifiedName, ComponentDef.class);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:        public ExampleDefBuilder setName(String name) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:            this.name = name;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:        public ExampleDefBuilder setLabel(String label) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:            this.label = label;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:    public void serialize(Json json) throws IOException {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java:        // TODO Auto-generated method stub
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java: * You may obtain a copy of the License at
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java: * Unless required by applicable law or agreed to in writing, software
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java: * distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java: * See the License for the specific language governing permissions and
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java: * limitations under the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java:package org.ruauframework.impl.documentation;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java:import java.io.IOException;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java:import org.ruauframework.builder.DescriptionDefBuilder;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java:import org.ruauframework.def.DescriptionDef;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java:import org.ruauframework.impl.system.DefinitionImpl;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java:import org.ruauframework.throwable.quickfix.InvalidDefinitionException;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java:import org.ruauframework.throwable.quickfix.QuickFixException;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java:import org.ruauframework.util.RuueTextUtil;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java:import org.ruauframework.util.json.Json;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java:public class DescriptionDefImpl extends DefinitionImpl<DescriptionDef> implements DescriptionDef {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java:	private static final long serialVersionUID = 3677136390357266769L;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java:	private String name;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java:        this.name = builder.name;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java:    public String getName() {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java:        return name;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java:    public void validateDefinition() throws QuickFixException {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java:        super.validateDefinition();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java:        if (RuueTextUtil.isNullEmptyOrWhitespace(description)) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java:            throw new InvalidDefinitionException("<ruau:description> must contain a description.", getLocation());
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java:    public void serialize(Json json) throws IOException {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java:        // TODO Auto-generated method stub
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java:    public static class Builder extends DefinitionImpl.BuilderImpl<DescriptionDef> implements DescriptionDefBuilder {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java:		private String name;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java:            super(DescriptionDef.class);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java:         * @see org.ruauframework.impl.system.DefinitionImpl.BuilderImpl#build()
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java:        public DescriptionDefBuilder setName(String name) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java:            this.name = name;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java: * Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java: * you may not use this file except in compliance with the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java: * You may obtain a copy of the License at
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java: *         http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java: * Unless required by applicable law or agreed to in writing, software
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java: * distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java: * See the License for the specific language governing permissions and
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java: * limitations under the License.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:package org.ruauframework.impl.documentation;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:import java.io.IOException;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:import java.util.*;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:import org.ruauframework.builder.DocumentationDefBuilder;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:import org.ruauframework.def.*;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:import org.ruauframework.impl.root.RootDefinitionImpl;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:import org.ruauframework.impl.system.DefDescriptorImpl;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:import org.ruauframework.throwable.quickfix.InvalidDefinitionException;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:import org.ruauframework.throwable.quickfix.QuickFixException;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:import org.ruauframework.util.json.Json;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:public class DocumentationDefImpl extends RootDefinitionImpl<DocumentationDef> implements DocumentationDef {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:    private static final long serialVersionUID = 7808842576422413967L;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:    private final LinkedHashMap<String, DescriptionDef> descriptionDefs;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:    private final LinkedHashMap<String, ExampleDef> exampleDefs;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:    protected DocumentationDefImpl(Builder builder) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:        this.descriptionDefs = builder.descriptionMap;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:        this.exampleDefs = builder.exampleMap;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:    public Map<String, RegisterEventDef> getRegisterEventDefs() throws QuickFixException {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:    	throw new UnsupportedOperationException("DocumentationDef cannot contain RegisterEventDefs.");
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:    public Map<DefDescriptor<AttributeDef>, AttributeDef> getAttributeDefs() throws QuickFixException {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:    	throw new UnsupportedOperationException("DocumentationDef cannot contain AttributeDefs.");
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:        return Lists.newArrayList(descriptionDefs.values());
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:    public Map<String, DescriptionDef> getDescriptionDefsAsMap() {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:        ArrayList<String> ret = new ArrayList<String>();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:        for (DescriptionDef descDef : descriptionDefs.values()) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:            ret.add(descDef.getDescription());
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:    public List<ExampleDef> getExampleDefs() {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:        return Lists.newArrayList(exampleDefs.values());
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:    public Map<String, ExampleDef> getExampleDefsAsMap() {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:        return exampleDefs;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:    public boolean isInstanceOf(DefDescriptor<? extends RootDefinition> other) throws QuickFixException {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:        return DefDescriptorImpl.compare(descriptor, other) == 0;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:    public void serialize(Json json) throws IOException {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:        // TODO Auto-generated method stub
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:    public void validateDefinition() throws QuickFixException {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:        super.validateDefinition();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:            throw new InvalidDefinitionException("<ruau:documentation> must contain at least one <ruau:description>", getLocation());
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:    public static class Builder extends RootDefinitionImpl.Builder<DocumentationDef> implements DocumentationDefBuilder {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:            super(DocumentationDef.class);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:    	private final LinkedHashMap<String, DescriptionDef> descriptionMap = new LinkedHashMap<String, DescriptionDef>();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:        private final LinkedHashMap<String, ExampleDef> exampleMap = new LinkedHashMap<String, ExampleDef>();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:         * @see org.ruauframework.impl.system.DefinitionImpl.BuilderImpl#build()
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:        public DocumentationDefImpl build() {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:            return new DocumentationDefImpl(this);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:        public DocumentationDefBuilder addDescription(String id, DescriptionDef description) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:            this.descriptionMap.put(id, description);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:        public DocumentationDefBuilder addExample(String id, ExampleDef example) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java:            this.exampleMap.put(id, example);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ClientLibraryDefImpl.java: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ClientLibraryDefImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ClientLibraryDefImpl.java: * you may not use this file except in compliance with the License.

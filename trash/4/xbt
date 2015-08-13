@@ -15,42 +15,42 @@ ruau/ruau-components/src/main/components/ui/inputNumber/inputNumberHelper.js:   
 ruau/ruau-components/src/main/components/ui/inputNumber/inputNumberHelper.js:        return cmp.get("v.value");
 ruau/ruau-components/src/main/components/ui/inputNumber/inputNumberHelper.js:    getDefaultFormatter: function(cmp) {
 ruau/ruau-components/src/main/components/ui/inputNumber/inputNumberHelper.js:        return $A.localizationService.getDefaultNumberFormat();
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:			A <code>ui:inputNumber</code> component represents a number input field, which is rendered as an HTML <code>input</code> tag of type <code>text</code>.
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:			This example shows a number field, which displays a value of <code>10</code>.
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:			<pre>&lt;ruau:attribute name="num" type="integer" default="10"/>
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:&lt;ui:inputNumber ruau:id="num" label="Age" value="{!v.num}"/></pre>
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:			<p>The previous example results in the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:			<pre>&lt;div class="uiInput uiInputText uiInputNumber">
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:&lt;label class="uiLabel-left uiLabel">
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:    &lt;span>Age&lt;/span>
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:&lt;/label>
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:&lt;input aria-describedby="" max="99999999999999" step="1" placeholder="" type="text" 
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:        min="-99999999999999" class="uiInput uiInputText uiInputNumber">
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:			<p>To render the output from a <code>ui:inputNumber</code> component, use the <code>ui:inputNumber</code> component. When providing a number value with commas, use <code>type="integer"</code>. This example returns <code>100,000</code>.
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:<pre>&lt;ruau:attribute name="number" type="integer" default="100,000"/>
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:&lt;ui:inputNumber label="Number" value="{!v.number}"/></pre>
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:		<p>For <code>type="string"</code>, provide the number without commas for the output to be formatted accordingly. This example also returns <code>100,000</code>.
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:<pre>&lt;ruau:attribute name="number" type="string" default="100000"/>
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:&lt;ui:inputNumber label="Number" value="{!v.number}"/>
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:		<p>Specifying <code>format="#,##0,000.00#"</code> returns a formatted number value like <code>10,000.00</code>.</p>
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:		<pre>&lt;ui:label label="Cost"/>
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:&lt;ui:inputNumber ruau:id="costField" format="#,##0,000.00#" value="10000"/></pre>
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:	</ruau:description>		
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:	<ruau:example name="inputExample" ref="uiExamples:inputNumberExample" label="Using ui:inputNumber">
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:    		This example shows how you can use <code>ui:inputNumber</code> to validate user input.
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:    </ruau:example>
-ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:			A <code>ui:inputNumber</code> component represents a number input field, which is rendered as an HTML <code>input</code> tag of type <code>text</code>.
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:			This example shows a number field, which displays a value of <code>10</code>.
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:			<pre>&lt;ruau:attribute name="num" type="integer" default="10"/>
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:&lt;ui:inputNumber ruau:id="num" label="Age" value="{!v.num}"/></pre>
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:			<p>The previous example results in the following HTML.</p>
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:			<pre>&lt;div class="uiInput uiInputText uiInputNumber">
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:&lt;label class="uiLabel-left uiLabel">
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:    &lt;span>Age&lt;/span>
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:&lt;/label>
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:&lt;input aria-describedby="" max="99999999999999" step="1" placeholder="" type="text" 
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:        min="-99999999999999" class="uiInput uiInputText uiInputNumber">
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:			<p>To render the output from a <code>ui:inputNumber</code> component, use the <code>ui:inputNumber</code> component. When providing a number value with commas, use <code>type="integer"</code>. This example returns <code>100,000</code>.
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:<pre>&lt;ruau:attribute name="number" type="integer" default="100,000"/>
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:&lt;ui:inputNumber label="Number" value="{!v.number}"/></pre>
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:		<p>For <code>type="string"</code>, provide the number without commas for the output to be formatted accordingly. This example also returns <code>100,000</code>.
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:<pre>&lt;ruau:attribute name="number" type="string" default="100000"/>
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:&lt;ui:inputNumber label="Number" value="{!v.number}"/>
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:		<p>Specifying <code>format="#,##0,000.00#"</code> returns a formatted number value like <code>10,000.00</code>.</p>
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:		<pre>&lt;ui:label label="Cost"/>
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:&lt;ui:inputNumber ruau:id="costField" format="#,##0,000.00#" value="10000"/></pre>
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:	</ruau:description>		
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:	<ruau:example name="inputExample" ref="uiExamples:inputNumberExample" label="Using ui:inputNumber">
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:    		This example shows how you can use <code>ui:inputNumber</code> to validate user input.
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:    </ruau:example>
+ruau/ruau-components/src/main/components/ui/inputNumber/inputNumber.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/inputNumber/inputNumberTest.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/inputNumber/inputNumberTest.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/inputNumber/inputNumberTest.js: * you may not use this file except in compliance with the License.
@@ -243,9 +243,9 @@ ruau/ruau-components/src/main/components/ui/dataTable/dataTableRenderer.js:	    
 ruau/ruau-components/src/main/components/ui/dataTable/dataTableRenderer.js:	        if (headerEl) {
 ruau/ruau-components/src/main/components/ui/dataTable/dataTableRenderer.js:	            for (var j = 0; j < headerValues.length; j++) {
 ruau/ruau-components/src/main/components/ui/dataTable/dataTableRenderer.js:	                var headerValue = headerValues[j];
-ruau/ruau-components/src/main/components/ui/dataTable/dataTableRenderer.js:	                var th = document.createElement("th");
+ruau/ruau-components/src/main/components/ui/dataTable/dataTableRenderer.js:	                var th = CODument.createElement("th");
 ruau/ruau-components/src/main/components/ui/dataTable/dataTableRenderer.js:	                th.setAttribute("class", "header");
-ruau/ruau-components/src/main/components/ui/dataTable/dataTableRenderer.js:	                th.appendChild(document.createTextNode(headerValue));
+ruau/ruau-components/src/main/components/ui/dataTable/dataTableRenderer.js:	                th.appendChild(CODument.createTextNode(headerValue));
 ruau/ruau-components/src/main/components/ui/dataTable/dataTableRenderer.js:	                headerEl.appendChild(th);
 ruau/ruau-components/src/main/components/ui/dataTable/dataTable.css: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/dataTable/dataTable.css: * Licensed under the Apache License, Version 2.0 (the "License");
@@ -494,50 +494,50 @@ ruau/ruau-components/src/main/components/ui/inputDate/inputDateController.js:   
 ruau/ruau-components/src/main/components/ui/inputDate/inputDateController.js:        var dateValue = event.getParam("value");
 ruau/ruau-components/src/main/components/ui/inputDate/inputDateController.js:        if (dateValue) {
 ruau/ruau-components/src/main/components/ui/inputDate/inputDateController.js:            component.set("v.value", dateValue);
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:			A <code>ui:inputDate</code> component represents a date input field, which is rendered as an HTML <code>input</code> tag of type <code>text</code>.
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:			The value is displayed in the default format specified language locale of the browser. 
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:		<p>This is a basic set up of a date field with a date picker, which displays the field value <code>1/30/2014</code>. Specifying <code>format="MMMM d, yyyy"</code> renders the field value as <code>January 30, 2014</code>. </p>
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:		<pre>&lt;ui:inputDate ruau:id="dateField" label="Birthday" value="2014-01-30" displayDatePicker="true"/></pre>
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:		<p>This example results in the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:		<pre>&lt;div class="uiInput uiInputDate">
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:  &lt;label class="uiLabel-left uiLabel">
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:    &lt;span>Birthday&lt;/span>
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:  &lt;/label>
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:  &lt;input placeholder="M/d/yyyy" type="text" class="uiInput uiInputDate">
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:  &lt;a class="datePicker-openIcon" aria-haspopup="true">
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:    &lt;span class="assistiveText">Date Picker&lt;/span>
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:  &lt;/a>
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:  &lt;a class="clearIcon">
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:    &lt;span class="assistiveText">Clear Button&lt;/span>
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:  &lt;/a>
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:  &lt;div class="uiDatePicker">
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:    &lt;!--Date picker set to visible when icon is clicked-->
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:	<h4>Setting a Default Date</h4>
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:	<p>This example sets today's date on the date field.</p>
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:	<pre>&lt;!-- Component Markup -->
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:&lt;ruau:handler name="init" value="{!this}" action="{!c.doInit}"/>
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:&lt;ruau:attribute name="today" type="Date" default=""/>
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:&lt;ui:inputDate label="Today's Date" value="{!v.today}" /></pre>
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:	<p>During initialization, the client-side controller <code>doInit</code> sets today's date on the <code>v.today</code> attribute by passing in a default value.</p>
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:        var today = new Date();
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:        component.set('v.today', today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate());
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:        component.set('v.deadline', today);
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:	</ruau:description>		
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:	<ruau:example name="inputExample" ref="uiExamples:inputExample" label="Using ui:inputDate">
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:    		This example shows how you can use <code>ui:inputDate</code> to get user input.
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:    </ruau:example>
-ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:			A <code>ui:inputDate</code> component represents a date input field, which is rendered as an HTML <code>input</code> tag of type <code>text</code>.
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:			The value is displayed in the default format specified language locale of the browser. 
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:		<p>This is a basic set up of a date field with a date picker, which displays the field value <code>1/30/2014</code>. Specifying <code>format="MMMM d, yyyy"</code> renders the field value as <code>January 30, 2014</code>. </p>
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:		<pre>&lt;ui:inputDate ruau:id="dateField" label="Birthday" value="2014-01-30" displayDatePicker="true"/></pre>
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:		<p>This example results in the following HTML.</p>
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:		<pre>&lt;div class="uiInput uiInputDate">
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:  &lt;label class="uiLabel-left uiLabel">
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:    &lt;span>Birthday&lt;/span>
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:  &lt;/label>
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:  &lt;input placeholder="M/d/yyyy" type="text" class="uiInput uiInputDate">
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:  &lt;a class="datePicker-openIcon" aria-haspopup="true">
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:    &lt;span class="assistiveText">Date Picker&lt;/span>
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:  &lt;/a>
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:  &lt;a class="clearIcon">
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:    &lt;span class="assistiveText">Clear Button&lt;/span>
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:  &lt;/a>
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:  &lt;div class="uiDatePicker">
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:    &lt;!--Date picker set to visible when icon is clicked-->
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:	<h4>Setting a Default Date</h4>
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:	<p>This example sets today's date on the date field.</p>
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:	<pre>&lt;!-- Component Markup -->
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:&lt;ruau:handler name="init" value="{!this}" action="{!c.doInit}"/>
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:&lt;ruau:attribute name="today" type="Date" default=""/>
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:&lt;ui:inputDate label="Today's Date" value="{!v.today}" /></pre>
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:	<p>During initialization, the client-side controller <code>doInit</code> sets today's date on the <code>v.today</code> attribute by passing in a default value.</p>
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:        var today = new Date();
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:        component.set('v.today', today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate());
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:        component.set('v.deadline', today);
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:	</ruau:description>		
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:	<ruau:example name="inputExample" ref="uiExamples:inputExample" label="Using ui:inputDate">
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:    		This example shows how you can use <code>ui:inputDate</code> to get user input.
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:    </ruau:example>
+ruau/ruau-components/src/main/components/ui/inputDate/inputDate.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/inputDate/inputDateHelper.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/inputDate/inputDateHelper.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/inputDate/inputDateHelper.js: * you may not use this file except in compliance with the License.
@@ -630,49 +630,49 @@ ruau/ruau-components/src/main/components/ui/toolbar/toolbar.css:.uiToolbar{
 ruau/ruau-components/src/main/components/ui/toolbar/toolbar.css:    margin:0;
 ruau/ruau-components/src/main/components/ui/toolbar/toolbar.css:    padding:0;
 ruau/ruau-components/src/main/components/ui/toolbar/toolbar.css:	text-align: center;
-ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruaudoc:	        <code>ui:toolbar</code> represents a horizontal menu that is rendered as an HTML <code>menu</code> element of type <code>toolbar</code>. It can contain input elements such as <code>ui:button</code>.
-ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruaudoc:			Note that the HTML <code>menu</code> tag is currently not supported for all browsers.
-ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruaudoc:	</ruau:description>	
-ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruaudoc:		<ruau:example name="scroller" ref="ruaudocs:demoToolbar" label="Using ui:toolbar">
-ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruaudoc:    	<p>This example shows a simple implementation of the toolbar.</p>
-ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruaudoc:	   </ruau:example>
-ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruaudoc:</ruau:documentation>
-ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruaudoc:			A <code>ui:inputSecret</code> component represents a password field, which is rendered as an HTML <code>input</code> tag of type <code>password</code>.
-ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruaudoc:		<p>This is a basic set up of a password field.</p>
-ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruaudoc:		<pre>&lt;ui:inputSecret ruau:id="secret" label="Pin" class="field" value="123456"/></pre>
-ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruaudoc:		<p>This example results in the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruaudoc:<pre>&lt;div class="uiInput uiInputText uiInputSecret">
-ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruaudoc:    &lt;label class="uiLabel-left uiLabel">
-ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruaudoc:        <span>Pin</span>
-ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruaudoc:    &lt;/label>
-ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruaudoc:    &lt;input class="field" aria-describedby="" placeholder="" type="password">
-ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruaudoc:	</ruau:description>	
-ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruaudoc:		<ruau:example name="inputExample" ref="uiExamples:inputExample" label="Using ui:inputSecret">
-ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruaudoc:    	<p>This example shows a simple implementation of <code>ui:inputSecret</code> component.</p>
-ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruaudoc:	</ruau:example>
-ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruauCOD:	        <code>ui:toolbar</code> represents a horizontal menu that is rendered as an HTML <code>menu</code> element of type <code>toolbar</code>. It can contain input elements such as <code>ui:button</code>.
+ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruauCOD:			Note that the HTML <code>menu</code> tag is currently not supported for all browsers.
+ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruauCOD:	</ruau:description>	
+ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruauCOD:		<ruau:example name="scroller" ref="ruaudocs:demoToolbar" label="Using ui:toolbar">
+ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruauCOD:    	<p>This example shows a simple implementation of the toolbar.</p>
+ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruauCOD:	   </ruau:example>
+ruau/ruau-components/src/main/components/ui/toolbar/toolbar.ruauCOD:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruauCOD:			A <code>ui:inputSecret</code> component represents a password field, which is rendered as an HTML <code>input</code> tag of type <code>password</code>.
+ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruauCOD:		<p>This is a basic set up of a password field.</p>
+ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruauCOD:		<pre>&lt;ui:inputSecret ruau:id="secret" label="Pin" class="field" value="123456"/></pre>
+ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruauCOD:		<p>This example results in the following HTML.</p>
+ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruauCOD:<pre>&lt;div class="uiInput uiInputText uiInputSecret">
+ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruauCOD:    &lt;label class="uiLabel-left uiLabel">
+ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruauCOD:        <span>Pin</span>
+ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruauCOD:    &lt;/label>
+ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruauCOD:    &lt;input class="field" aria-describedby="" placeholder="" type="password">
+ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruauCOD:	</ruau:description>	
+ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruauCOD:		<ruau:example name="inputExample" ref="uiExamples:inputExample" label="Using ui:inputSecret">
+ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruauCOD:    	<p>This example shows a simple implementation of <code>ui:inputSecret</code> component.</p>
+ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruauCOD:	</ruau:example>
+ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.cmp:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/inputSecret/inputSecret.cmp:    you may not use this file except in compliance with the License.
@@ -915,37 +915,37 @@ ruau/ruau-components/src/main/components/ui/popup/popup.cmp:    <ruau:handler na
 ruau/ruau-components/src/main/components/ui/popup/popup.cmp:    <ruau:handler name="refresh" action="{!c.onRefresh}"/>
 ruau/ruau-components/src/main/components/ui/popup/popup.cmp:    <div ruau:id="app" class="{!v.class}">
 ruau/ruau-components/src/main/components/ui/popup/popup.cmp:</ruau:component>
-ruau/ruau-components/src/main/components/ui/popup/popup.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/popup/popup.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/popup/popup.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/popup/popup.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/popup/popup.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/popup/popup.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/popup/popup.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/popup/popup.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/popup/popup.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/popup/popup.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/popup/popup.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/popup/popup.ruaudoc:			A <code>ui:popup</code> component represents a popup with a nested trigger, <code>ui:popupTrigger</code>, and a popup target, <code>ui:popupTarget</code>.
-ruau/ruau-components/src/main/components/ui/popup/popup.ruaudoc:		<p>This is a basic setup of a <code>ui:popup</code> component, which displays a trigger that when clicked displays the content in <code>ui:popupTarget</code>. </p>
-ruau/ruau-components/src/main/components/ui/popup/popup.ruaudoc:		<pre>&lt;ui:popup label="trigger">
-ruau/ruau-components/src/main/components/ui/popup/popup.ruaudoc:    &lt;ui:popupTarget>
-ruau/ruau-components/src/main/components/ui/popup/popup.ruaudoc:        This displays in a popup.
-ruau/ruau-components/src/main/components/ui/popup/popup.ruaudoc:    &lt;/ui:popupTarget>
-ruau/ruau-components/src/main/components/ui/popup/popup.ruaudoc:		<p>To toggle the popup using a custom trigger, fire the <code>ui:popupTargetToggle</code> event and set <code>show</code> to <code>true</code> or <code>false</code>.</p>
-ruau/ruau-components/src/main/components/ui/popup/popup.ruaudoc:    hideTarget : function(component) {
-ruau/ruau-components/src/main/components/ui/popup/popup.ruaudoc:        var evt = $A.get('e.ui:popupTargetToggle');
-ruau/ruau-components/src/main/components/ui/popup/popup.ruaudoc:        evt.setParams({
-ruau/ruau-components/src/main/components/ui/popup/popup.ruaudoc:            show : false
-ruau/ruau-components/src/main/components/ui/popup/popup.ruaudoc:		<p>When using <code>ui:popupTargetToggle</code>, register this event in your component.</p>
-ruau/ruau-components/src/main/components/ui/popup/popup.ruaudoc:		<pre>&lt;ruau:registerevent name="popupTargetToggle" type="ui:popupTargetToggle" /></pre>
-ruau/ruau-components/src/main/components/ui/popup/popup.ruaudoc:        <p>To prevent popup from closing when a user clicks outside of the popup, set <code>closeOnClickOutside</code> on <code>ui:popupTarget</code> to <code>false</code>.
-ruau/ruau-components/src/main/components/ui/popup/popup.ruaudoc:           This ensures that the popup can be closed only by clicking the trigger. To enable closing of popup when a user clicks inside the popup, set <code>closeOnClickInside</code> on <code>ui:popupTarget</code> to <code>true</code>.
-ruau/ruau-components/src/main/components/ui/popup/popup.ruaudoc:	</ruau:description>	
-ruau/ruau-components/src/main/components/ui/popup/popup.ruaudoc:		<ruau:example name="popupExample" ref="uiExamples:popupExample" label="Using ui:popup">
-ruau/ruau-components/src/main/components/ui/popup/popup.ruaudoc:    	<p>This example shows various ways to implement the <code>ui:popup</code> component.</p>
-ruau/ruau-components/src/main/components/ui/popup/popup.ruaudoc:	</ruau:example>
-ruau/ruau-components/src/main/components/ui/popup/popup.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/popup/popup.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/popup/popup.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/popup/popup.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/popup/popup.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/popup/popup.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/popup/popup.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/popup/popup.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/popup/popup.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/popup/popup.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/popup/popup.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/popup/popup.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/popup/popup.ruauCOD:			A <code>ui:popup</code> component represents a popup with a nested trigger, <code>ui:popupTrigger</code>, and a popup target, <code>ui:popupTarget</code>.
+ruau/ruau-components/src/main/components/ui/popup/popup.ruauCOD:		<p>This is a basic setup of a <code>ui:popup</code> component, which displays a trigger that when clicked displays the content in <code>ui:popupTarget</code>. </p>
+ruau/ruau-components/src/main/components/ui/popup/popup.ruauCOD:		<pre>&lt;ui:popup label="trigger">
+ruau/ruau-components/src/main/components/ui/popup/popup.ruauCOD:    &lt;ui:popupTarget>
+ruau/ruau-components/src/main/components/ui/popup/popup.ruauCOD:        This displays in a popup.
+ruau/ruau-components/src/main/components/ui/popup/popup.ruauCOD:    &lt;/ui:popupTarget>
+ruau/ruau-components/src/main/components/ui/popup/popup.ruauCOD:		<p>To toggle the popup using a custom trigger, fire the <code>ui:popupTargetToggle</code> event and set <code>show</code> to <code>true</code> or <code>false</code>.</p>
+ruau/ruau-components/src/main/components/ui/popup/popup.ruauCOD:    hideTarget : function(component) {
+ruau/ruau-components/src/main/components/ui/popup/popup.ruauCOD:        var evt = $A.get('e.ui:popupTargetToggle');
+ruau/ruau-components/src/main/components/ui/popup/popup.ruauCOD:        evt.setParams({
+ruau/ruau-components/src/main/components/ui/popup/popup.ruauCOD:            show : false
+ruau/ruau-components/src/main/components/ui/popup/popup.ruauCOD:		<p>When using <code>ui:popupTargetToggle</code>, register this event in your component.</p>
+ruau/ruau-components/src/main/components/ui/popup/popup.ruauCOD:		<pre>&lt;ruau:registerevent name="popupTargetToggle" type="ui:popupTargetToggle" /></pre>
+ruau/ruau-components/src/main/components/ui/popup/popup.ruauCOD:        <p>To prevent popup from closing when a user clicks outside of the popup, set <code>closeOnClickOutside</code> on <code>ui:popupTarget</code> to <code>false</code>.
+ruau/ruau-components/src/main/components/ui/popup/popup.ruauCOD:           This ensures that the popup can be closed only by clicking the trigger. To enable closing of popup when a user clicks inside the popup, set <code>closeOnClickInside</code> on <code>ui:popupTarget</code> to <code>true</code>.
+ruau/ruau-components/src/main/components/ui/popup/popup.ruauCOD:	</ruau:description>	
+ruau/ruau-components/src/main/components/ui/popup/popup.ruauCOD:		<ruau:example name="popupExample" ref="uiExamples:popupExample" label="Using ui:popup">
+ruau/ruau-components/src/main/components/ui/popup/popup.ruauCOD:    	<p>This example shows various ways to implement the <code>ui:popup</code> component.</p>
+ruau/ruau-components/src/main/components/ui/popup/popup.ruauCOD:	</ruau:example>
+ruau/ruau-components/src/main/components/ui/popup/popup.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/popup/popupRenderer.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/popup/popupRenderer.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/popup/popupRenderer.js: * you may not use this file except in compliance with the License.
@@ -1145,7 +1145,7 @@ ruau/ruau-components/src/main/components/ui/popupTarget/popupTargetHelper.js:   
 ruau/ruau-components/src/main/components/ui/popupTarget/popupTargetHelper.js:        var el,
 ruau/ruau-components/src/main/components/ui/popupTarget/popupTargetHelper.js:	        names;
 ruau/ruau-components/src/main/components/ui/popupTarget/popupTargetHelper.js:        if (!component._transitionEndEventName) {
-ruau/ruau-components/src/main/components/ui/popupTarget/popupTargetHelper.js:        	el = document.createElement('div');
+ruau/ruau-components/src/main/components/ui/popupTarget/popupTargetHelper.js:        	el = CODument.createElement('div');
 ruau/ruau-components/src/main/components/ui/popupTarget/popupTargetHelper.js:	        names = {
 ruau/ruau-components/src/main/components/ui/popupTarget/popupTargetHelper.js:	            'transition':'transitionend',
 ruau/ruau-components/src/main/components/ui/popupTarget/popupTargetHelper.js:	            'OTransition':'otransitionend',
@@ -1232,7 +1232,7 @@ ruau/ruau-components/src/main/components/ui/popupTarget/popupTargetHelper.js:   
 ruau/ruau-components/src/main/components/ui/popupTarget/popupTargetHelper.js:        if (!$A.util.isUndefined(cached)) {
 ruau/ruau-components/src/main/components/ui/popupTarget/popupTargetHelper.js:            return cached;
 ruau/ruau-components/src/main/components/ui/popupTarget/popupTargetHelper.js:        // fill the cache
-ruau/ruau-components/src/main/components/ui/popupTarget/popupTargetHelper.js:        this.getOnClickEventProp.cache["isTouchDevice"] = !$A.util.isUndefined(document.ontouchstart);
+ruau/ruau-components/src/main/components/ui/popupTarget/popupTargetHelper.js:        this.getOnClickEventProp.cache["isTouchDevice"] = !$A.util.isUndefined(CODument.ontouchstart);
 ruau/ruau-components/src/main/components/ui/popupTarget/popupTargetHelper.js:        if (this.getOnClickEventProp.cache["isTouchDevice"]) {
 ruau/ruau-components/src/main/components/ui/popupTarget/popupTargetHelper.js:            this.getOnClickEventProp.cache["onClickStartEvent"] = "touchstart";
 ruau/ruau-components/src/main/components/ui/popupTarget/popupTargetHelper.js:            this.getOnClickEventProp.cache["onClickEndEvent"] = "touchend";
@@ -1288,10 +1288,10 @@ ruau/ruau-components/src/main/components/ui/popupTarget/popupTargetHelper.js:   
 ruau/ruau-components/src/main/components/ui/popupTarget/popupTargetHelper.js:            currentNode = currentNode.parentNode;
 ruau/ruau-components/src/main/components/ui/popupTarget/popupTargetHelper.js:        return false;
 ruau/ruau-components/src/main/components/ui/popupTarget/popupTargetHelper.js:    addDismissEvents : function(component) {
-ruau/ruau-components/src/main/components/ui/popupTarget/popupTargetHelper.js:    	$A.util.on(document.body, this.getOnClickEventProp("onClickStartEvent"), this.getOnClickStartFunction(component));
+ruau/ruau-components/src/main/components/ui/popupTarget/popupTargetHelper.js:    	$A.util.on(CODument.body, this.getOnClickEventProp("onClickStartEvent"), this.getOnClickStartFunction(component));
 ruau/ruau-components/src/main/components/ui/popupTarget/popupTargetHelper.js:        // window blur event is to hide/show menu when clicking on an iframe (as events do not bubble up and out of an iframe)
 ruau/ruau-components/src/main/components/ui/popupTarget/popupTargetHelper.js:        $A.util.on(window, "blur", this.getWindowBlurHandler(component));
-ruau/ruau-components/src/main/components/ui/popupTarget/popupTargetHelper.js:    	$A.util.removeOn(document.body, this.getOnClickEventProp("onClickStartEvent"), this.getOnClickStartFunction(component));
+ruau/ruau-components/src/main/components/ui/popupTarget/popupTargetHelper.js:    	$A.util.removeOn(CODument.body, this.getOnClickEventProp("onClickStartEvent"), this.getOnClickStartFunction(component));
 ruau/ruau-components/src/main/components/ui/popupTarget/popupTargetHelper.js:    	$A.util.removeOn(window, "blur", this.getWindowBlurHandler(component));
 ruau/ruau-components/src/main/components/ui/popupTarget/popupTargetHelper.js:     * This method is here for components that extend this one to hook into keyboard events
 ruau/ruau-components/src/main/components/ui/popupTarget/popupTargetHelper.js:    handleKeyboardEvent : function(component, event) {
@@ -1381,34 +1381,34 @@ ruau/ruau-components/src/main/components/ui/inputDateComponent/inputDateComponen
 ruau/ruau-components/src/main/components/ui/inputDateComponent/inputDateComponent.intf:    <ruau:attribute name="format" type="String" access="GLOBAL" description="The java.text.SimpleDateFormat style format string."/>
 ruau/ruau-components/src/main/components/ui/inputDateComponent/inputDateComponent.intf:    <ruau:attribute name="langLocale" type="String" access="GLOBAL" description="The language locale used to format date time."/>
 ruau/ruau-components/src/main/components/ui/inputDateComponent/inputDateComponent.intf:</ruau:interface>
-ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruaudoc:			A <code>ui:outputCurrency</code> component represents a number as a currency that is wrapped in an HTML <code>span</code> tag.
-ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruaudoc:			This component can be used with <code>ui:inputCurrency</code>, which takes in a number as a currency. 
-ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruaudoc:			To display a currency, you can use an attribute value and bind it to the <code>ui:outputCurrency</code> component. 
-ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruaudoc:<pre>&lt;ruau:attribute name="myCurr" type="Decimal" default="50000"/>
-ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruaudoc:&lt;ui:outputCurrency ruau:id="curr" value="{!v.myCurr}" label="outputCurrency"</pre>
-ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruaudoc:		<p>The previous example renders the following HTML.</p> 
-ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruaudoc:		<pre>&lt;span class="uiOutputCurrency">$50,000.00&lt;/span></pre>
-ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruaudoc:		<p>To override the browser's locale, use the <code>currencySymbol</code> attribute.</p>
-ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruaudoc:<pre>&lt;ruau:attribute name="myCurr" type="Decimal" default="50" currencySymbol="£"/></pre>
-ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruaudoc:	    <p>You can also override it by specifying the format.</p>
-ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruaudoc:<pre>var curr = cmp.find("curr");
-ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruaudoc:curr.set("v.format", '£#,###.00');</pre>	    
-ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruaudoc:	</ruau:description>	
-ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruaudoc:		<ruau:example name="outputExample" ref="uiExamples:outputExample" label="Using the Output Components">
-ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruaudoc:    	<p>This example shows how you can bind data to the output components by using component attributes.</p>
-ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruaudoc:	</ruau:example>
-ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruauCOD:			A <code>ui:outputCurrency</code> component represents a number as a currency that is wrapped in an HTML <code>span</code> tag.
+ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruauCOD:			This component can be used with <code>ui:inputCurrency</code>, which takes in a number as a currency. 
+ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruauCOD:			To display a currency, you can use an attribute value and bind it to the <code>ui:outputCurrency</code> component. 
+ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruauCOD:<pre>&lt;ruau:attribute name="myCurr" type="Decimal" default="50000"/>
+ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruauCOD:&lt;ui:outputCurrency ruau:id="curr" value="{!v.myCurr}" label="outputCurrency"</pre>
+ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruauCOD:		<p>The previous example renders the following HTML.</p> 
+ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruauCOD:		<pre>&lt;span class="uiOutputCurrency">$50,000.00&lt;/span></pre>
+ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruauCOD:		<p>To override the browser's locale, use the <code>currencySymbol</code> attribute.</p>
+ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruauCOD:<pre>&lt;ruau:attribute name="myCurr" type="Decimal" default="50" currencySymbol="£"/></pre>
+ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruauCOD:	    <p>You can also override it by specifying the format.</p>
+ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruauCOD:<pre>var curr = cmp.find("curr");
+ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruauCOD:curr.set("v.format", '£#,###.00');</pre>	    
+ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruauCOD:	</ruau:description>	
+ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruauCOD:		<ruau:example name="outputExample" ref="uiExamples:outputExample" label="Using the Output Components">
+ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruauCOD:    	<p>This example shows how you can bind data to the output components by using component attributes.</p>
+ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruauCOD:	</ruau:example>
+ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrency.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrencyTest.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrencyTest.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/outputCurrency/outputCurrencyTest.js: * you may not use this file except in compliance with the License.
@@ -1635,21 +1635,21 @@ ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.css: * Unless 
 ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.css: * distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.css: * See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.css: * limitations under the License.
-ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.ruaudoc:			A <code>ui:inputPhone</code> component represents an input field for entering a phone number, which is rendered as an HTML <code>input</code> tag of type <code>tel</code>.
-ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.ruaudoc:			To render the output from a <code>ui:inputPhone</code> component, use the <code>ui:outputPhone</code> component. 
-ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.ruaudoc:	</ruau:description>		
-ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.ruauCOD:			A <code>ui:inputPhone</code> component represents an input field for entering a phone number, which is rendered as an HTML <code>input</code> tag of type <code>tel</code>.
+ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.ruauCOD:			To render the output from a <code>ui:inputPhone</code> component, use the <code>ui:outputPhone</code> component. 
+ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.ruauCOD:	</ruau:description>		
+ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.cmp:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/inputPhone/inputPhone.cmp:    you may not use this file except in compliance with the License.
@@ -2140,7 +2140,7 @@ ruau/ruau-components/src/main/components/ui/tree/tree.css:	position: relative;
 ruau/ruau-components/src/main/components/ui/tree/tree.css:	margin-left: -15px;
 ruau/ruau-components/src/main/components/ui/tree/tree.css:	margin-left: -1px;
 ruau/ruau-components/src/main/components/ui/tree/tree.css:.THIS li.file a {
-ruau/ruau-components/src/main/components/ui/tree/tree.css:	background: url(/ruauFW/resources/img/tree_icons/document.png) 0 0 no-repeat;
+ruau/ruau-components/src/main/components/ui/tree/tree.css:	background: url(/ruauFW/resources/img/tree_icons/CODument.png) 0 0 no-repeat;
 ruau/ruau-components/src/main/components/ui/tree/tree.css:	padding-left: 21px;
 ruau/ruau-components/src/main/components/ui/tree/tree.css:	text-decoration: none;
 ruau/ruau-components/src/main/components/ui/tree/tree.css:	display: block;
@@ -2764,54 +2764,54 @@ ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.
 ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.cmp:	        </ruau:iteration>
 ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.cmp:	</ruau:renderIf>
 ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.cmp:</ruau:component>
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:			<code>ui:inputDefaultError</code> is the default error handling for your input components. This component displays as a list of errors below the field.
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:			Field-level error messages can be added using <code>addErrors()</code>. You can use the default error handling by setting the input value to false and adding the error message. 
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:			For example, this component validates if the input is a number.
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:<pre>&lt;ruau:component>
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:    Enter a number: &lt;ui:inputNumber ruau:id="inputCmp" label="number"/>
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:    &lt;ui:button label="Submit" press="{!c.doAction}"/>
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:&lt;/ruau:component></pre>
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:  		<p>This client-side controller displays an error if the input is not a number.</p>
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:    var inputCmp = cmp.find("inputCmp");
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:    var value = inputCmp.get("v.value");
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:    if (isNaN(value)) {
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:        inputCmp.setValue("v.value", false);
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:        inputCmp.addErrors("v.value", [{message:"Input not a number: " + value}]);
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:        //clear error
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:        inputCmp.setValid("v.value", true);
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:		<p>Alternatively, you can provide your own <code>ui:inputDefaultError</code> component. This example returns an error message if
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:		the <code>warnings</code> attribute contains any messages.</p>
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:<pre>&lt;ruau:component>
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:      &lt;ruau:attribute name="warnings" type="String[]" description="Warnings for input text"/>
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:    Enter a number: &lt;ui:inputNumber ruau:id="inputCmp" label="number"/>
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:    &lt;ui:button label="Submit" press="{!c.doAction}"/>
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:    &lt;ruau:renderIf isTrue="{!v.warnings.length != 0}">
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:   		 &lt;ui:inputDefaultError ruau:id="number" value="{!v.warnings}" />
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:    &lt;/ruau:renderIf>
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:&lt;/ruau:component></pre>
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:		<p>This client-side controller diplays an error by adding a string to the <code>warnings</code> attribute.</p>
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:    var inputCmp = component.find("inputCmp");
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:    var value = inputCmp.get("v.value");
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:    if (isNaN(value)) {
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:       component.set("v.warnings", "Input is not a number");
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:       // clear error
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:       component.set("v.warnings", null);
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:	</ruau:description>	
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:		<ruau:example name="inputDefaultError" ref="uiExamples:inputTextExample" label="Using Field-Level Errors">
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:    	<p>This example shows a <code>ui:inputText</code> component with the default error handling, and a corresponding <code>ui:outputText</code> component for text rendering.</p>
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:	</ruau:example>
-ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:			<code>ui:inputDefaultError</code> is the default error handling for your input components. This component displays as a list of errors below the field.
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:			Field-level error messages can be added using <code>addErrors()</code>. You can use the default error handling by setting the input value to false and adding the error message. 
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:			For example, this component validates if the input is a number.
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:<pre>&lt;ruau:component>
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:    Enter a number: &lt;ui:inputNumber ruau:id="inputCmp" label="number"/>
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:    &lt;ui:button label="Submit" press="{!c.doAction}"/>
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:&lt;/ruau:component></pre>
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:  		<p>This client-side controller displays an error if the input is not a number.</p>
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:    var inputCmp = cmp.find("inputCmp");
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:    var value = inputCmp.get("v.value");
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:    if (isNaN(value)) {
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:        inputCmp.setValue("v.value", false);
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:        inputCmp.addErrors("v.value", [{message:"Input not a number: " + value}]);
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:        //clear error
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:        inputCmp.setValid("v.value", true);
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:		<p>Alternatively, you can provide your own <code>ui:inputDefaultError</code> component. This example returns an error message if
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:		the <code>warnings</code> attribute contains any messages.</p>
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:<pre>&lt;ruau:component>
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:      &lt;ruau:attribute name="warnings" type="String[]" description="Warnings for input text"/>
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:    Enter a number: &lt;ui:inputNumber ruau:id="inputCmp" label="number"/>
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:    &lt;ui:button label="Submit" press="{!c.doAction}"/>
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:    &lt;ruau:renderIf isTrue="{!v.warnings.length != 0}">
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:   		 &lt;ui:inputDefaultError ruau:id="number" value="{!v.warnings}" />
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:    &lt;/ruau:renderIf>
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:&lt;/ruau:component></pre>
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:		<p>This client-side controller diplays an error by adding a string to the <code>warnings</code> attribute.</p>
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:    var inputCmp = component.find("inputCmp");
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:    var value = inputCmp.get("v.value");
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:    if (isNaN(value)) {
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:       component.set("v.warnings", "Input is not a number");
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:       // clear error
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:       component.set("v.warnings", null);
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:	</ruau:description>	
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:		<ruau:example name="inputDefaultError" ref="uiExamples:inputTextExample" label="Using Field-Level Errors">
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:    	<p>This example shows a <code>ui:inputText</code> component with the default error handling, and a corresponding <code>ui:outputText</code> component for text rendering.</p>
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:	</ruau:example>
+ruau/ruau-components/src/main/components/ui/inputDefaultError/inputDefaultError.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/inputSearch/inputSearchController.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/inputSearch/inputSearchController.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/inputSearch/inputSearchController.js: * you may not use this file except in compliance with the License.
@@ -2938,63 +2938,63 @@ ruau/ruau-components/src/main/components/ui/inputSearch/inputSearchHelper.js:   
 ruau/ruau-components/src/main/components/ui/inputSearch/inputSearchHelper.js:            if ($A.util.isEmpty(elem.value)) {
 ruau/ruau-components/src/main/components/ui/inputSearch/inputSearchHelper.js:                $A.util.addClass(clearButtonElem, "hide");
 ruau/ruau-components/src/main/components/ui/inputSearch/inputSearchHelper.js:                $A.util.removeClass(clearButtonElem, "hide");
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:    <ruau:description>
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:        <p><code>ui:​tabset</code>​ displays the content of an active tab. By default, the tabs are displayed horizontally inline with content shown below it. 
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:        The first tab is activated by default, but you can change the default tab by setting <code>&lt;ui:tab title="Tab 3" active="{!true}" ></code> on the target tab.
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:        This is a basic setup of a <code>ui:tabset</code> component.
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:&lt;ui:tabset class="tabset">
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:    &lt;ui:tab title="Tab 1">
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:        &lt;p>Tab 1&lt;/p>
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:            Tab 1 Content
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:    &lt;/ui:tab>
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:    &lt;ui:tab title="Tab 2" >
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:         &lt;p>Tab 2&lt;/p>
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:             Tab 2 Content
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:         &lt;/ui:tab>
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:    &lt;ui:tab title="Tab 3" active="{!true}" >
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:        &lt;p>Tab 3&lt;/p>
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:              Tab 3 Content
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:    &lt;/ui:tab>
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:    &lt;ui:tab title="Tab 4" >
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:        &lt;p>Tab 4&lt;/p>
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:               Tab 4 Content
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:    &lt;/ui:tab>
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:&lt;/ui:tabset>        
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:        <p>To retrieve an active tab, use <code>event.getParam("tab")</code>. See the <code>ui:tabsetEvent</code> component reference for supported parameters. This example retrieves a tab and its title. 
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:        <pre>onActivated : function(cmp, evt) {
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:  var tab = evt.getParam("tab");
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:  alert(tab.get("v.title") + " activated");
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:        The component event <code>evt</code> is fired by the <code>activateTab</code> handler in <code>ui:tabset</code>.</p>
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:        <p>This example retrieves a tabset and identifies the active tab by firing the <code>getActiveTab</code> event.
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:        <pre>var tabset = cmp.find("myTabset");
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:var e = tabset.get("e.getActiveTab");
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc://Set tab parameters using e.setParams()</pre>
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:         <h4>Rendering a Tab Selectively</h4>
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:         <p>To determine if a tab and its content should be rendered, use <code>ruau:if</code> to wrap the tab. This example doesn't render the second tab 
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:         since <code>v.active</code> returns false. </p>
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:&lt;ruau:attribute name="active" type="Boolean" default="false"/>
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:&lt;ui:tabset class="tabset">
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:  &lt;ui:tab title="Tab 1" >
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:  tab 1 content
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:  &lt;/ui:tab>
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:&lt;ruau:if isTrue="{!v.active}">
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:  &lt;ui:tab title="Tab 2">
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:  tab 2 content
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc: &lt;/ui:tab>
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:&lt;/ruau:if>
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:&lt;/ui:tabset>
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:        <h4>Adding Tabs and Content Dynamically</h4>
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:        <p>A tab's content can be created dynamically using the <code>onActivated</code> attribute on <code>ui:tab</code>.
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:var tab = evt.getParam("tab");
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:    tab.set("v.body", [newCmp]);
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc: }, {"componentDef": "markup://ruau:text", 
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:    <ruau:description>
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:        <p><code>ui:​tabset</code>​ displays the content of an active tab. By default, the tabs are displayed horizontally inline with content shown below it. 
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:        The first tab is activated by default, but you can change the default tab by setting <code>&lt;ui:tab title="Tab 3" active="{!true}" ></code> on the target tab.
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:        This is a basic setup of a <code>ui:tabset</code> component.
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:&lt;ui:tabset class="tabset">
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:    &lt;ui:tab title="Tab 1">
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:        &lt;p>Tab 1&lt;/p>
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:            Tab 1 Content
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:    &lt;/ui:tab>
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:    &lt;ui:tab title="Tab 2" >
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:         &lt;p>Tab 2&lt;/p>
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:             Tab 2 Content
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:         &lt;/ui:tab>
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:    &lt;ui:tab title="Tab 3" active="{!true}" >
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:        &lt;p>Tab 3&lt;/p>
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:              Tab 3 Content
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:    &lt;/ui:tab>
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:    &lt;ui:tab title="Tab 4" >
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:        &lt;p>Tab 4&lt;/p>
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:               Tab 4 Content
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:    &lt;/ui:tab>
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:&lt;/ui:tabset>        
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:        <p>To retrieve an active tab, use <code>event.getParam("tab")</code>. See the <code>ui:tabsetEvent</code> component reference for supported parameters. This example retrieves a tab and its title. 
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:        <pre>onActivated : function(cmp, evt) {
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:  var tab = evt.getParam("tab");
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:  alert(tab.get("v.title") + " activated");
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:        The component event <code>evt</code> is fired by the <code>activateTab</code> handler in <code>ui:tabset</code>.</p>
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:        <p>This example retrieves a tabset and identifies the active tab by firing the <code>getActiveTab</code> event.
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:        <pre>var tabset = cmp.find("myTabset");
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:var e = tabset.get("e.getActiveTab");
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD://Set tab parameters using e.setParams()</pre>
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:         <h4>Rendering a Tab Selectively</h4>
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:         <p>To determine if a tab and its content should be rendered, use <code>ruau:if</code> to wrap the tab. This example doesn't render the second tab 
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:         since <code>v.active</code> returns false. </p>
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:&lt;ruau:attribute name="active" type="Boolean" default="false"/>
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:&lt;ui:tabset class="tabset">
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:  &lt;ui:tab title="Tab 1" >
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:  tab 1 content
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:  &lt;/ui:tab>
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:&lt;ruau:if isTrue="{!v.active}">
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:  &lt;ui:tab title="Tab 2">
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:  tab 2 content
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD: &lt;/ui:tab>
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:&lt;/ruau:if>
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:&lt;/ui:tabset>
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:        <h4>Adding Tabs and Content Dynamically</h4>
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:        <p>A tab's content can be created dynamically using the <code>onActivated</code> attribute on <code>ui:tab</code>.
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:var tab = evt.getParam("tab");
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:    tab.set("v.body", [newCmp]);
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD: }, {"componentDef": "markup://ruau:text", 

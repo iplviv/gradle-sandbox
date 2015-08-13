@@ -726,7 +726,7 @@ ruau/ruau/src/main/java/org/ruauframework/http/CSPReporterServlet.java:    publi
 ruau/ruau/src/main/java/org/ruauframework/http/CSPReporterServlet.java:    public static final String JSON_NAME = "csp-report";
 ruau/ruau/src/main/java/org/ruauframework/http/CSPReporterServlet.java:    public static final String BLOCKED_URI = "blocked-uri";
 ruau/ruau/src/main/java/org/ruauframework/http/CSPReporterServlet.java:    public static final String COLUMN_NUMBER = "column-number";
-ruau/ruau/src/main/java/org/ruauframework/http/CSPReporterServlet.java:    public static final String DOCUMENT_URI = "document-uri";
+ruau/ruau/src/main/java/org/ruauframework/http/CSPReporterServlet.java:    public static final String DOCUMENT_URI = "CODument-uri";
 ruau/ruau/src/main/java/org/ruauframework/http/CSPReporterServlet.java:    public static final String LINE_NUMBER = "line-number";
 ruau/ruau/src/main/java/org/ruauframework/http/CSPReporterServlet.java:    public static final String ORIGINAL_POLICY = "original-policy";
 ruau/ruau/src/main/java/org/ruauframework/http/CSPReporterServlet.java:    public static final String REFERRER = "referrer";
@@ -763,7 +763,7 @@ ruau/ruau/src/main/java/org/ruauframework/http/RuueDocsRewriteFilter.java: * A q
 ruau/ruau/src/main/java/org/ruauframework/http/RuueDocsRewriteFilter.java: * RuueDocs that will always use PROD mode.
 ruau/ruau/src/main/java/org/ruauframework/http/RuueDocsRewriteFilter.java:public class RuueDocsRewriteFilter implements Filter {
 ruau/ruau/src/main/java/org/ruauframework/http/RuueDocsRewriteFilter.java:    private ServletContext servletContext;
-ruau/ruau/src/main/java/org/ruauframework/http/RuueDocsRewriteFilter.java:    private static final String uriPattern = "/ruau?ruau.tag=ruaudocs:docs&ruau.format=HTML&ruau.deftype=APPLICATION&ruau.access=AUTHENTICATED&ruau.mode=PROD";
+ruau/ruau/src/main/java/org/ruauframework/http/RuueDocsRewriteFilter.java:    private static final String uriPattern = "/ruau?ruau.tag=ruauCODs:docs&ruau.format=HTML&ruau.deftype=APPLICATION&ruau.access=AUTHENTICATED&ruau.mode=PROD";
 ruau/ruau/src/main/java/org/ruauframework/http/RuueDocsRewriteFilter.java:    public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws ServletException,
 ruau/ruau/src/main/java/org/ruauframework/http/RuueDocsRewriteFilter.java:        RequestDispatcher dispatcher = servletContext.getRequestDispatcher(uriPattern);
 ruau/ruau/src/main/java/org/ruauframework/http/RuueDocsRewriteFilter.java:        if (dispatcher != null) {
@@ -845,7 +845,7 @@ ruau/ruau/src/main/java/org/ruauframework/http/RuueServlet.java:    private fina
 ruau/ruau/src/main/java/org/ruauframework/http/RuueServlet.java:    // FIXME: is this really a good idea?
 ruau/ruau/src/main/java/org/ruauframework/http/RuueServlet.java:    private final static StringParam nocacheParam = new StringParam("nocache", 0, false);
 ruau/ruau/src/main/java/org/ruauframework/http/RuueServlet.java:     * Check for the nocache parameter and redirect as necessary.
-ruau/ruau/src/main/java/org/ruauframework/http/RuueServlet.java:     * Not entirely sure what this is used for (need doco). It is part of the appcache refresh, forcing a reload while
+ruau/ruau/src/main/java/org/ruauframework/http/RuueServlet.java:     * Not entirely sure what this is used for (need CODo). It is part of the appcache refresh, forcing a reload while
 ruau/ruau/src/main/java/org/ruauframework/http/RuueServlet.java:     * avoiding the appcache.
 ruau/ruau/src/main/java/org/ruauframework/http/RuueServlet.java:     * It maybe should be done differently (e.g. a nonce).
 ruau/ruau/src/main/java/org/ruauframework/http/RuueServlet.java:     * @param request The request to retrieve the parameter.

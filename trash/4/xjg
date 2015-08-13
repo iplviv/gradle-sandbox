@@ -158,7 +158,7 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test.js:            handler.apply(th
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:            originalFunction.apply(this, arguments);
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Get a DOM node's outerHTML.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Node} node
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        var div = document.createElement('div');
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        var div = CODument.createElement('div');
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        div.appendChild(n.cloneNode(true));
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        var h = div.innerHTML;
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Get the text content of a DOM node. Tries <code>innerText</code> followed by
@@ -177,8 +177,8 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {String} Style
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * 				The property name to retrieve
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * 				The CSS property value of the specified DOMElement
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:	var val = "";
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    if(document.defaultView && document.defaultView.getComputedStyle){
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        val = document.defaultView.getComputedStyle(elem, "").getPropertyValue(style);
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    if(CODument.defaultView && document.defaultView.getComputedStyle){
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        val = CODument.defaultView.getComputedStyle(elem, "").getPropertyValue(style);
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        style = style.replace(/\-(\w)/g, function (s, ch){
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:            return ch.toUpperCase();
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        val = elem.currentStyle[style];
@@ -194,14 +194,14 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Node} node
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @returns {Boolean}
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * 				Returns true if the specified node has been deleted, or false otherwise
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    if (!node.parentNode){
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    var div = document.createElement("div");
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    document.documentElement.appendChild(div);
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    var div = CODument.createElement("div");
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    CODument.documentElement.appendChild(div);
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    ruau.util.removeElement(div);
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    return node.parentNode === div.parentNode;
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Return a node list and pass each argument as a separate parameter.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @returns {Array}
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * 				The list of nodes contained in the document node
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    return document.querySelectorAll.apply(document, arguments);
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * 				The list of nodes contained in the CODument node
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    return CODument.querySelectorAll.apply(document, arguments);
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Check if a string contains another string.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {String} testString
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {String} targetString
@@ -210,12 +210,12 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * 				Return true if testSt
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:$A.ns.Test.prototype.contains = function(testString, targetString){
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        return (testString.indexOf(targetString) != -1);
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    return false;
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Returns a reference to the object that is currently designated as the active element in the document.
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Returns a reference to the object that is currently designated as the active element in the CODument.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @returns {DOMElement} The current active element.
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    return document.activeElement;
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Returns the inner text of the current active element in the document.
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    return CODument.activeElement;
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Returns the inner text of the current active element in the CODument.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @returns {String} The text of the current active DOM element.
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    return this.getText(document.activeElement);
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    return this.getText(CODument.activeElement);
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Used by getElementsByClassNameCustom for IE7
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @private
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:$A.ns.Test.prototype.walkTheDOM = function (node, func) {
@@ -225,7 +225,7 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @private
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:$A.ns.Test.prototype.getElementsByClassNameCustom = function (className, parentElement) {
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    var results = [];
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    if($A.util.isUndefinedOrNull(parentElement)){
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        parentElement = document.body;
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        parentElement = CODument.body;
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    this.walkTheDOM(parentElement, function(node) {
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        var a, c = node.className,
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:            a = c.split(' ');
@@ -243,9 +243,9 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {String} classname
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @returns {Object} The element denoting the class, or null if none is found.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:$A.ns.Test.prototype.getElementByClass = function(classname){
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:     var ret;
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:     if(document.getElementsByClassName){
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:         ret = document.getElementsByClassName(classname);
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:         ret = document.querySelectorAll("." + classname);
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:     if(CODument.getElementsByClassName){
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:         ret = CODument.getElementsByClassName(classname);
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:         ret = CODument.querySelectorAll("." + classname);
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        ret = this.getElementsByClassNameCustom(classname);
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Given an HTML element and an eventName, fire the corresponding DOM event. Code adapted from a stack overflow
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * question's answer.
@@ -255,13 +255,13 @@ ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Boolean} canBubbl
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {Boolean} cancelable Optional. Indicates whether the event is cancelable or not, defaults to true.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:$A.ns.Test.prototype.fireDomEvent = function (element, eventName, canBubble, cancelable) {
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    var event;
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    if (document.createEvent) {
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        event = document.createEvent("HTMLEvents");
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:    if (CODument.createEvent) {
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        event = CODument.createEvent("HTMLEvents");
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        canBubble = $A.util.isUndefinedOrNull(canBubble) ?  true : canBubble;
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        cancelable = $A.util.isUndefinedOrNull(cancelable) ?  true : cancelable;
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        event.initEvent(eventName, canBubble, cancelable);
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        element.dispatchEvent(event);
-ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        event = document.createEventObject();
+ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        event = CODument.createEventObject();
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js:        event.eventType = eventName;
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * Issue a click on the element.
 ruau/ruau-impl/src/main/resources/ruau/test/Test.js: * @param {HTMLElement} element
@@ -1969,7 +1969,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.ja
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java:    private static final String VALIDATE_CSS_CONFIG = "ruau.css.validate";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java:    private static final Set<String> SYSTEM_NAMESPACES = Sets.newHashSet();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java:    private static final Set<String> UNSECURED_PREFIXES = new ImmutableSortedSet.Builder<>(String.CASE_INSENSITIVE_ORDER).add("ruau", "layout").build();
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java:    private static final Set<String> UNDOCUMENTED_NAMESPACES = new ImmutableSortedSet.Builder<>(String.CASE_INSENSITIVE_ORDER).add("ruaudocs").build();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java:    private static final Set<String> UNDOCUMENTED_NAMESPACES = new ImmutableSortedSet.Builder<>(String.CASE_INSENSITIVE_ORDER).add("ruauCODs").build();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java:    private static final Set<String> CACHEABLE_PREFIXES = ImmutableSet.of("ruau", "java");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java:    protected final Set<Mode> allModes = EnumSet.allOf(Mode.class);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/adapter/ConfigAdapterImpl.java:    private final JavascriptGroup jsGroup;

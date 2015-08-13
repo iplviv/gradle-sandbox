@@ -168,29 +168,29 @@ ruau/ruau-components/src/main/components/ruau/component/component.cmp:    <ruau:
 ruau/ruau-components/src/main/components/ruau/component/component.cmp:    <ruau:dependency resource="ruau://*" type="CONTROLLER" />
 ruau/ruau-components/src/main/components/ruau/component/component.cmp:    <ruau:attribute name="body" type="Ruue.Component[]" access="GLOBAL" description="The body of the component. In markup, this is everything in the body of the tag."/>
 ruau/ruau-components/src/main/components/ruau/component/component.cmp:</ruau:component>
-ruau/ruau-components/src/main/components/ruau/component/component.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ruau/component/component.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ruau/component/component.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ruau/component/component.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ruau/component/component.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ruau/component/component.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ruau/component/component.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ruau/component/component.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ruau/component/component.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ruau/component/component.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ruau/component/component.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ruau/component/component.ruaudoc:			Components are the functional units of Ruue, which encapsulate modular and reusable sections of UI. They can contain other components or HTML markup.
-ruau/ruau-components/src/main/components/ruau/component/component.ruaudoc:			The public parts of a component are its attributes and events. Ruue provides out-of-the-box components in the <code>ruau</code> and <code>ui</code> namespaces.
-ruau/ruau-components/src/main/components/ruau/component/component.ruaudoc:			Every component is part of a namespace. For example, the <code>button</code> component is saved as <code>button.cmp</code> in the <code>ui</code> namespace can be referenced in another component
-ruau/ruau-components/src/main/components/ruau/component/component.ruaudoc:			with the syntax <code>&lt;ui:button label="Submit"/&gt;</code>, where <code>label="Submit"</code> is an attribute setting.
-ruau/ruau-components/src/main/components/ruau/component/component.ruaudoc:			To create a component, follow this syntax.
-ruau/ruau-components/src/main/components/ruau/component/component.ruaudoc:&lt;ruau:component&gt;
-ruau/ruau-components/src/main/components/ruau/component/component.ruaudoc:  &lt;!-- Optional coponent attributes here -->
-ruau/ruau-components/src/main/components/ruau/component/component.ruaudoc:  &lt;!-- Optional HTML markup -->
-ruau/ruau-components/src/main/components/ruau/component/component.ruaudoc:  &lt;div class="container"&gt; 
-ruau/ruau-components/src/main/components/ruau/component/component.ruaudoc:&lt;/ruau:component&gt;
-ruau/ruau-components/src/main/components/ruau/component/component.ruaudoc:	</ruau:description>	
-ruau/ruau-components/src/main/components/ruau/component/component.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ruau/component/component.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ruau/component/component.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ruau/component/component.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ruau/component/component.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ruau/component/component.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ruau/component/component.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ruau/component/component.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ruau/component/component.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ruau/component/component.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ruau/component/component.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ruau/component/component.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ruau/component/component.ruauCOD:			Components are the functional units of Ruue, which encapsulate modular and reusable sections of UI. They can contain other components or HTML markup.
+ruau/ruau-components/src/main/components/ruau/component/component.ruauCOD:			The public parts of a component are its attributes and events. Ruue provides out-of-the-box components in the <code>ruau</code> and <code>ui</code> namespaces.
+ruau/ruau-components/src/main/components/ruau/component/component.ruauCOD:			Every component is part of a namespace. For example, the <code>button</code> component is saved as <code>button.cmp</code> in the <code>ui</code> namespace can be referenced in another component
+ruau/ruau-components/src/main/components/ruau/component/component.ruauCOD:			with the syntax <code>&lt;ui:button label="Submit"/&gt;</code>, where <code>label="Submit"</code> is an attribute setting.
+ruau/ruau-components/src/main/components/ruau/component/component.ruauCOD:			To create a component, follow this syntax.
+ruau/ruau-components/src/main/components/ruau/component/component.ruauCOD:&lt;ruau:component&gt;
+ruau/ruau-components/src/main/components/ruau/component/component.ruauCOD:  &lt;!-- Optional coponent attributes here -->
+ruau/ruau-components/src/main/components/ruau/component/component.ruauCOD:  &lt;!-- Optional HTML markup -->
+ruau/ruau-components/src/main/components/ruau/component/component.ruauCOD:  &lt;div class="container"&gt; 
+ruau/ruau-components/src/main/components/ruau/component/component.ruauCOD:&lt;/ruau:component&gt;
+ruau/ruau-components/src/main/components/ruau/component/component.ruauCOD:	</ruau:description>	
+ruau/ruau-components/src/main/components/ruau/component/component.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:    you may not use this file except in compliance with the License.
@@ -222,9 +222,9 @@ ruau/ruau-components/src/main/components/ruau/template/template.cmp:    <ruau:at
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:    <ruau:attribute name="extraMetaTags" type="Ruue.Component[]" description="Additional &lt;meta&gt; elements such as description, keywords, author, etc. Set this attribute using ruau:set if overriding the template."/>
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:    <ruau:attribute name="defaultBodyClass" type="String" default="loading" description="The default CSS style used to display the body of the template. Default value is &#8220;loading&#8221;."/>
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:    <ruau:attribute name="bodyClass" type="String" description="The CSS style used to display the body of the template. May be used with defaultBodyClass."/>
-ruau/ruau-components/src/main/components/ruau/template/template.cmp:    <ruau:attribute name="manifest" type="String" description="Specifies the location of the document's cache manifest. Works with HTML5 only."/>
+ruau/ruau-components/src/main/components/ruau/template/template.cmp:    <ruau:attribute name="manifest" type="String" description="Specifies the location of the CODument's cache manifest. Works with HTML5 only."/>
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:    <ruau:attribute name="lastMod" type="String" description="The last modified date."/>
-ruau/ruau-components/src/main/components/ruau/template/template.cmp:    <ruau:attribute name="doctype" type="String" default="&lt;!DOCTYPE html&gt;" description="The DOCTYPE declaration for the template. Default value is &lt;!DOCTYPE html&gt;."/>
+ruau/ruau-components/src/main/components/ruau/template/template.cmp:    <ruau:attribute name="CODtype" type="String" default="&lt;!DOCTYPE html&gt;" description="The DOCTYPE declaration for the template. Default value is &lt;!DOCTYPE html&gt;."/>
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:    <ruau:attribute name="extraStyleTags" type="Ruue.Component[]" description="Additional &lt;link&gt; elements for external CSS. Use multiple &lt;link&gt; elements to include more than one external CSS file. Set this attribute using ruau:set if overriding the template."/>
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:    <ruau:attribute name="normalizeCss" type="Boolean" default="false" description="Use normalize or resetCSS"/>
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:    <ruau:attribute name="inlineStyle" type="Ruue.Component[]" description="The CSS style used to display inline elements. We recommend using external CSS with extraStyleTags instead.">
@@ -319,13 +319,13 @@ ruau/ruau-components/src/main/components/ruau/template/template.cmp:            
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:                    $A.initAsync({!v.ruauInit});
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:                } else if ({!v.autoInitializeSync}){
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:                    $A.initConfig({!v.ruauInitSync});
-ruau/ruau-components/src/main/components/ruau/template/template.cmp:                    $A.util.removeClass(document.body,'ruauError');
+ruau/ruau-components/src/main/components/ruau/template/template.cmp:                    $A.util.removeClass(CODument.body,'ruauError');
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:                    $A.util.removeClass(ruauErrorMask,'ruauForcedErrorBox');
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:                if (window.addEventListener) {
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:                    window.addEventListener('load', function() {
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:                        // If server-side only ruau rendering, window.FastClick won't be loaded
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:                        if (window.FastClick) {
-ruau/ruau-components/src/main/components/ruau/template/template.cmp:                            window.FastClick.attach(document.body, {tapDelay: 100, touchBoundary: 10});
+ruau/ruau-components/src/main/components/ruau/template/template.cmp:                            window.FastClick.attach(CODument.body, {tapDelay: 100, touchBoundary: 10});
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:                    }, false);
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:            {!v.ruauInitBlock}
 ruau/ruau-components/src/main/components/ruau/template/template.cmp:            {!v.ruauNamespacesScriptTags}
@@ -440,7 +440,7 @@ ruau/ruau-components/src/main/components/ruau/unescapedHtml/unescapedHtmlRendere
 ruau/ruau-components/src/main/components/ruau/unescapedHtml/unescapedHtmlRenderer.js:        if (cmp.isDirty("v.value")) {
 ruau/ruau-components/src/main/components/ruau/unescapedHtml/unescapedHtmlRenderer.js:            var el = cmp.getElement();
 ruau/ruau-components/src/main/components/ruau/unescapedHtml/unescapedHtmlRenderer.js:            var placeholder=null;
-ruau/ruau-components/src/main/components/ruau/unescapedHtml/unescapedHtmlRenderer.js:                placeholder = document.createTextNode("");
+ruau/ruau-components/src/main/components/ruau/unescapedHtml/unescapedHtmlRenderer.js:                placeholder = CODument.createTextNode("");
 ruau/ruau-components/src/main/components/ruau/unescapedHtml/unescapedHtmlRenderer.js:                $A.util.insertBefore(placeholder, el);
 ruau/ruau-components/src/main/components/ruau/unescapedHtml/unescapedHtmlRenderer.js:                placeholder=$A.renderingService.getMarker(cmp);
 ruau/ruau-components/src/main/components/ruau/unescapedHtml/unescapedHtmlRenderer.js:            var results = $A.render(cmp);
@@ -736,24 +736,24 @@ ruau/ruau-components/src/main/components/ruau/iteration/iterationProvider.js: * 
 ruau/ruau-components/src/main/components/ruau/iteration/iterationProvider.js: * See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ruau/iteration/iterationProvider.js: * limitations under the License.
 ruau/ruau-components/src/main/components/ruau/iteration/iterationProvider.js:    provide : function IterationProvider(component) {
-ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruaudoc:		<p><code>ruau:iteration</code> iterates over a collection of items and renders the body of the tag for each item.
-ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruaudoc:		   Data changes in the collection are rerendered automatically on the page. It also supports iterations containing components that are created exlusively on the client-side or components that have server-side dependencies.
-ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruaudoc:	</ruau:description>	
-ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruaudoc:	<ruau:example name="iterationExample" ref="uiExamples:iterationExample" label="Using ruau:iteration">
-ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruaudoc:		<p>This example shows a basic way to use <code>ruau:iteration</code> exclusively on the client-side.</p>
-ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruaudoc:	</ruau:example>
-ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruauCOD:		<p><code>ruau:iteration</code> iterates over a collection of items and renders the body of the tag for each item.
+ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruauCOD:		   Data changes in the collection are rerendered automatically on the page. It also supports iterations containing components that are created exlusively on the client-side or components that have server-side dependencies.
+ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruauCOD:	</ruau:description>	
+ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruauCOD:	<ruau:example name="iterationExample" ref="uiExamples:iterationExample" label="Using ruau:iteration">
+ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruauCOD:		<p>This example shows a basic way to use <code>ruau:iteration</code> exclusively on the client-side.</p>
+ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruauCOD:	</ruau:example>
+ruau/ruau-components/src/main/components/ruau/iteration/iteration.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ruau/iteration/iteration.cmp:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ruau/iteration/iteration.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ruau/iteration/iteration.cmp:    you may not use this file except in compliance with the License.
@@ -800,29 +800,29 @@ ruau/ruau-components/src/main/components/ruau/expression/expression.cmp:        
 ruau/ruau-components/src/main/components/ruau/expression/expression.cmp:                        referenced &quot;property reference value&quot; set to the value attribute when expressions are found in free text or markup.">
 ruau/ruau-components/src/main/components/ruau/expression/expression.cmp:    <ruau:attribute name="value" type="String" access="GLOBAL" description="The expression to evaluate and render."/>
 ruau/ruau-components/src/main/components/ruau/expression/expression.cmp:</ruau:component>
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:			An expression is any set of literal values, variables, sub-expressions, or operators that can be resolved to a single value.
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:			It is used for dynamic output or passing a value into components by assigning them to attributes.
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:			The syntax for an expression is <code>{!expression}</code>. <code>expression</code> is evaluated and dynamically replaced when the component is rendered or when the value is used by the component.
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:			The resulting value can be a primitive (integer, string, and so on), a boolean, a JavaScript or Ruue object, an Ruue component or collection, a controller method
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:            such as an action method, and other useful results.
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:			An expression uses a value provider to access data and can also use operators and functions for more complex expressions.
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:			Value providers include <code>m</code> (data from model), <code>v</code>(attribute data from component), and <code>c</code> (controller action). 
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:			This example show an expression <code>{!v.num}</code> whose value is resolved by the attribute <code>num</code>.
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:&lt;ruau:attribute name="num" type="integer" default="10"/>
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:&lt;ui:inputNumber label="Enter age" ruau:id="num" value="{!v.num}"/>
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:	</ruau:description>	
-ruau/ruau-components/src/main/components/ruau/expression/expression.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ruau/expression/expression.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ruau/expression/expression.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ruau/expression/expression.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ruau/expression/expression.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ruau/expression/expression.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ruau/expression/expression.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ruau/expression/expression.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ruau/expression/expression.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ruau/expression/expression.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ruau/expression/expression.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ruau/expression/expression.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ruau/expression/expression.ruauCOD:			An expression is any set of literal values, variables, sub-expressions, or operators that can be resolved to a single value.
+ruau/ruau-components/src/main/components/ruau/expression/expression.ruauCOD:			It is used for dynamic output or passing a value into components by assigning them to attributes.
+ruau/ruau-components/src/main/components/ruau/expression/expression.ruauCOD:			The syntax for an expression is <code>{!expression}</code>. <code>expression</code> is evaluated and dynamically replaced when the component is rendered or when the value is used by the component.
+ruau/ruau-components/src/main/components/ruau/expression/expression.ruauCOD:			The resulting value can be a primitive (integer, string, and so on), a boolean, a JavaScript or Ruue object, an Ruue component or collection, a controller method
+ruau/ruau-components/src/main/components/ruau/expression/expression.ruauCOD:            such as an action method, and other useful results.
+ruau/ruau-components/src/main/components/ruau/expression/expression.ruauCOD:			An expression uses a value provider to access data and can also use operators and functions for more complex expressions.
+ruau/ruau-components/src/main/components/ruau/expression/expression.ruauCOD:			Value providers include <code>m</code> (data from model), <code>v</code>(attribute data from component), and <code>c</code> (controller action). 
+ruau/ruau-components/src/main/components/ruau/expression/expression.ruauCOD:			This example show an expression <code>{!v.num}</code> whose value is resolved by the attribute <code>num</code>.
+ruau/ruau-components/src/main/components/ruau/expression/expression.ruauCOD:&lt;ruau:attribute name="num" type="integer" default="10"/>
+ruau/ruau-components/src/main/components/ruau/expression/expression.ruauCOD:&lt;ui:inputNumber label="Enter age" ruau:id="num" value="{!v.num}"/>
+ruau/ruau-components/src/main/components/ruau/expression/expression.ruauCOD:	</ruau:description>	
+ruau/ruau-components/src/main/components/ruau/expression/expression.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ruau/expression/expressionHelper.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ruau/expression/expressionHelper.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ruau/expression/expressionHelper.js: * you may not use this file except in compliance with the License.
@@ -833,7 +833,7 @@ ruau/ruau-components/src/main/components/ruau/expression/expressionHelper.js: * 
 ruau/ruau-components/src/main/components/ruau/expression/expressionHelper.js: * See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ruau/expression/expressionHelper.js: * limitations under the License.
 ruau/ruau-components/src/main/components/ruau/expression/expressionHelper.js:			// Create a reference comment node for rerendering support
-ruau/ruau-components/src/main/components/ruau/expression/expressionHelper.js:			component._referenceNode = document.createComment("render expression: " + component);
+ruau/ruau-components/src/main/components/ruau/expression/expressionHelper.js:			component._referenceNode = CODument.createComment("render expression: " + component);
 ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ruau/expression/expressionRenderer.js: * you may not use this file except in compliance with the License.
@@ -949,7 +949,7 @@ ruau/ruau-components/src/main/components/ruau/text/textRenderer.js:        var t
 ruau/ruau-components/src/main/components/ruau/text/textRenderer.js:        var truncateByWord = $A.util.getBooleanValue(component.get("v.truncateByWord"));
 ruau/ruau-components/src/main/components/ruau/text/textRenderer.js:        var ellipsis = $A.util.getBooleanValue(component.get("v.ellipsis"));
 ruau/ruau-components/src/main/components/ruau/text/textRenderer.js:            value = ruau.util.truncate(value, trunc, ellipsis, truncateByWord);
-ruau/ruau-components/src/main/components/ruau/text/textRenderer.js:        return [document.createTextNode($A.util.isUndefinedOrNull(value)?'':value)];
+ruau/ruau-components/src/main/components/ruau/text/textRenderer.js:        return [CODument.createTextNode($A.util.isUndefinedOrNull(value)?'':value)];
 ruau/ruau-components/src/main/components/ruau/text/textRenderer.js:        var element=component.getElement();
 ruau/ruau-components/src/main/components/ruau/text/textRenderer.js:        // Check for unowned node so IE doesn't crash
 ruau/ruau-components/src/main/components/ruau/text/textRenderer.js:        if (element && element.parentNode) {
@@ -1000,7 +1000,7 @@ ruau/ruau-components/src/main/components/ruau/label/labelRenderer.js:        var
 ruau/ruau-components/src/main/components/ruau/label/labelRenderer.js:        var vPattern = new RegExp("\\{(0|[1-9][0-9]*)\\}"); // match {#}
 ruau/ruau-components/src/main/components/ruau/label/labelRenderer.js:        var vEndPattern = new RegExp("\\}"); // match }
 ruau/ruau-components/src/main/components/ruau/label/labelRenderer.js:        if (!(base && base.search(vPattern) > -1)) { // nothing to replace
-ruau/ruau-components/src/main/components/ruau/label/labelRenderer.js:            return document.createTextNode(base);
+ruau/ruau-components/src/main/components/ruau/label/labelRenderer.js:            return CODument.createTextNode(base);
 ruau/ruau-components/src/main/components/ruau/label/labelRenderer.js:        var body = component.get("v.body");
 ruau/ruau-components/src/main/components/ruau/label/labelRenderer.js:            var items = [];
 ruau/ruau-components/src/main/components/ruau/label/labelRenderer.js:            for (var i = 0; i < body.length; i++) {
@@ -1015,13 +1015,13 @@ ruau/ruau-components/src/main/components/ruau/label/labelRenderer.js:           
 ruau/ruau-components/src/main/components/ruau/label/labelRenderer.js:                    if (typeof el == "number") {// something we should replace
 ruau/ruau-components/src/main/components/ruau/label/labelRenderer.js:                        var sub = items[el];
 ruau/ruau-components/src/main/components/ruau/label/labelRenderer.js:                            // there was nothing passed in to substitute
-ruau/ruau-components/src/main/components/ruau/label/labelRenderer.js:                            sub = document.createTextNode("{" + el + "}");
+ruau/ruau-components/src/main/components/ruau/label/labelRenderer.js:                            sub = CODument.createTextNode("{" + el + "}");
 ruau/ruau-components/src/main/components/ruau/label/labelRenderer.js:                        if(!ruau.util.isArray(sub)){
 ruau/ruau-components/src/main/components/ruau/label/labelRenderer.js:                            for (var k = 0; k < sub.length; k++) {
 ruau/ruau-components/src/main/components/ruau/label/labelRenderer.js:                                results.push(sub[k].cloneNode(true));  // insert a copy of the node, since appendChild cannot add the same node more than once.
 ruau/ruau-components/src/main/components/ruau/label/labelRenderer.js:                            for (var n = 0; n < sub.length; n++) {
-ruau/ruau-components/src/main/components/ruau/label/labelRenderer.js:                        results.push(document.createTextNode(el));
-ruau/ruau-components/src/main/components/ruau/label/labelRenderer.js:        return document.createTextNode(base);
+ruau/ruau-components/src/main/components/ruau/label/labelRenderer.js:                        results.push(CODument.createTextNode(el));
+ruau/ruau-components/src/main/components/ruau/label/labelRenderer.js:        return CODument.createTextNode(base);
 ruau/ruau-components/src/main/components/ruau/label/labelRenderer.js:    rerender: function LabelRenderer(component){
 ruau/ruau-components/src/main/components/ruau/label/labelRenderer.js:        var body = component.get("v.body");
 ruau/ruau-components/src/main/components/ruau/label/labelRenderer.js:        for (var i = 0; i < body.length; i++) {
@@ -1068,7 +1068,7 @@ ruau/ruau-components/src/main/components/ruau/label/labelHelper.js:    tokenize 
 ruau/ruau-components/src/main/components/ruau/label/labelHelper.js:        var elems = [];
 ruau/ruau-components/src/main/components/ruau/label/labelHelper.js:        var matchPos = base.search(vPattern);
 ruau/ruau-components/src/main/components/ruau/label/labelHelper.js:        if (matchPos < 0) {
-ruau/ruau-components/src/main/components/ruau/label/labelHelper.js:            elems.push(document.createTextNode(base));
+ruau/ruau-components/src/main/components/ruau/label/labelHelper.js:            elems.push(CODument.createTextNode(base));
 ruau/ruau-components/src/main/components/ruau/label/labelHelper.js:        while (matchPos > -1) {
 ruau/ruau-components/src/main/components/ruau/label/labelHelper.js:            if (matchPos > 0) {
 ruau/ruau-components/src/main/components/ruau/label/labelHelper.js:                elems.push(base.substring(0, matchPos));
@@ -1170,21 +1170,21 @@ ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.cmp:    <ruau:ha
 ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.cmp:    <ruau:handler name="change" value="{!v.else}" action="{!c.facetChange}"/>
 ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.cmp:    <ruau:expression value="{!v.isTrue==true || v.isTrue=='true'?v.body:v.else}" ruau:id="expression"/>
 ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.cmp:</ruau:component>
-ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruaudoc:			The expression in <code>isTrue</code> is re-evaluated every time any value used in the expression changes. When the results of the expression change, it triggers a re-rendering of the component.
-ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruaudoc:		     Use <code>ruau:if</code> instead if you want to instantiate the components in either its body or the else attribute, but not both. Otherwise, use <code>ruau:renderIf</code> if you expect to show the components for both the true and false states, and it would require a server round trip to instantiate the components that aren't initially rendered.
-ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruaudoc:	</ruau:description>	
-ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruauCOD:			The expression in <code>isTrue</code> is re-evaluated every time any value used in the expression changes. When the results of the expression change, it triggers a re-rendering of the component.
+ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruauCOD:		     Use <code>ruau:if</code> instead if you want to instantiate the components in either its body or the else attribute, but not both. Otherwise, use <code>ruau:renderIf</code> if you expect to show the components for both the true and false states, and it would require a server round trip to instantiate the components that aren't initially rendered.
+ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruauCOD:	</ruau:description>	
+ruau/ruau-components/src/main/components/ruau/renderIf/renderIf.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ruau/renderIf/renderIfController.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ruau/renderIf/renderIfController.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ruau/renderIf/renderIfController.js: * you may not use this file except in compliance with the License.
@@ -2705,65 +2705,65 @@ ruau/ruau-components/src/main/components/ruaudev/library/MyDependency.js: * See 
 ruau/ruau-components/src/main/components/ruaudev/library/MyDependency.js: * limitations under the License.
 ruau/ruau-components/src/main/components/ruaudev/library/MyDependency.js:        getValue: function() {
 ruau/ruau-components/src/main/components/ruaudev/library/MyDependency.js:            return "MyDependency And Externally: " + jsfile.getValue();
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:    <ruau:description>
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:            Libraries allow for the bundling of related resources, which encapsulate modular and reusable Javascript code.
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:            A library can then be imported by a component via the <code>ruau:import</code> tag. The resources files will the be
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:            attached to the component's helper (using a specifiable property name). 
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:            Every library is part of a namespace. For example, the <code>MyLib</code> library is saved as <code>MyLib</code> in the <code>jsLibraries</code> namespace can be referenced in another component
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:            with the syntax <code>&lt;ruau:import library="jsLibraries:MyLib" property="MyLib"/&gt;</code>, where
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:            <code>library="jsLibraries:MyLib"</code> specifies the location of the Library and
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:            <code>property="MyLib"</code> specifies that the files modules include in MyLib are accessible via <code>helper.MyLib</code>.
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:            To create a library, follow this syntax.
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:&lt;ruau:library&gt;
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:  &lt;!-- Here fileName.js depends on the file dependency.js --&gt;
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:  &lt;!-- also note that the name field is specified without the .js suffix --&gt;
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:  &lt;ruau:include name="dependency"&gt;
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:  &lt;ruau:include name="fileName" import="dependency"&gt; 
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:&lt;/ruau:library&gt;
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:        <h3>Supported Tags</h3>
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:        <table class="bordered striped">
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:            <thead>
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:                    <th>Name</th>
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:            </thead>
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:                        <a href="#reference?descriptor=ruau:include&amp;defType=component">
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:                            ruau:include
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:                        </a>
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:                    <td>Allows for the specification of which Javascript files are loaded and which modules depend on which.</td>
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:        </table>
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:        <h3>Javascript file format</h3>
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:            Importable javascript files must be functions. The return value of these functions is what is attached to the helper when
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:            the library is imported by a component.
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:            If the Javascript module requires another file in the library, provide a comma separated list of file names (without the .js) in the
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:            <code>ruau:include</code> tag. The imported modules will be passed in as arguments to the module's function.
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:            <h5>Example:</h5>
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:                Here there are two files: MyLib.js and MyDependency.js. MyLib.js requires MyDependency.js.
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:                        &lt;ruau:include name="MyDependency" import="namespace:library:jsfile"&gt;
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:                        &lt;ruau:include name="MyLib" import="MyDependency"&gt;
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:                Here, the both files define an object with a getId method and MyLib's getValue method includes
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:                the result of it's dependency's getValue method. MyDependency imports and uses the jsfile
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:                include in the namespace:library library bundle (in the live example the file is located in the
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:                uiExamples:libraryExternal bundle).
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:    var MyDependency = {
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:        getValue: function(jsfile) {
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:            return "MyDependency and externally: " + jsfile;
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:    var MyLib = {
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:        getValue: function() {
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:            return "MyLib (parend Id: " + MyDependency.getValue() + ")";
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:    </ruau:description>
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:    <ruau:example name="libraryExample" ref="uiExamples:libraryExample" label="Using ruau:library">
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:        <p>This example shows a basic way to use <code>ruau:library</code>.</p>
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:    </ruau:example>
-ruau/ruau-components/src/main/components/ruaudev/library/library.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:    <ruau:description>
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:            Libraries allow for the bundling of related resources, which encapsulate modular and reusable Javascript code.
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:            A library can then be imported by a component via the <code>ruau:import</code> tag. The resources files will the be
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:            attached to the component's helper (using a specifiable property name). 
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:            Every library is part of a namespace. For example, the <code>MyLib</code> library is saved as <code>MyLib</code> in the <code>jsLibraries</code> namespace can be referenced in another component
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:            with the syntax <code>&lt;ruau:import library="jsLibraries:MyLib" property="MyLib"/&gt;</code>, where
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:            <code>library="jsLibraries:MyLib"</code> specifies the location of the Library and
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:            <code>property="MyLib"</code> specifies that the files modules include in MyLib are accessible via <code>helper.MyLib</code>.
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:            To create a library, follow this syntax.
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:&lt;ruau:library&gt;
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:  &lt;!-- Here fileName.js depends on the file dependency.js --&gt;
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:  &lt;!-- also note that the name field is specified without the .js suffix --&gt;
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:  &lt;ruau:include name="dependency"&gt;
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:  &lt;ruau:include name="fileName" import="dependency"&gt; 
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:&lt;/ruau:library&gt;
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:        <h3>Supported Tags</h3>
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:        <table class="bordered striped">
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:            <thead>
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:                    <th>Name</th>
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:            </thead>
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:                        <a href="#reference?descriptor=ruau:include&amp;defType=component">
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:                            ruau:include
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:                        </a>
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:                    <td>Allows for the specification of which Javascript files are loaded and which modules depend on which.</td>
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:        </table>
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:        <h3>Javascript file format</h3>
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:            Importable javascript files must be functions. The return value of these functions is what is attached to the helper when
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:            the library is imported by a component.
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:            If the Javascript module requires another file in the library, provide a comma separated list of file names (without the .js) in the
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:            <code>ruau:include</code> tag. The imported modules will be passed in as arguments to the module's function.
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:            <h5>Example:</h5>
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:                Here there are two files: MyLib.js and MyDependency.js. MyLib.js requires MyDependency.js.
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:                        &lt;ruau:include name="MyDependency" import="namespace:library:jsfile"&gt;
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:                        &lt;ruau:include name="MyLib" import="MyDependency"&gt;
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:                Here, the both files define an object with a getId method and MyLib's getValue method includes
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:                the result of it's dependency's getValue method. MyDependency imports and uses the jsfile
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:                include in the namespace:library library bundle (in the live example the file is located in the
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:                uiExamples:libraryExternal bundle).
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:    var MyDependency = {
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:        getValue: function(jsfile) {
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:            return "MyDependency and externally: " + jsfile;
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:    var MyLib = {
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:        getValue: function() {
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:            return "MyLib (parend Id: " + MyDependency.getValue() + ")";
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:    </ruau:description>
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:    <ruau:example name="libraryExample" ref="uiExamples:libraryExample" label="Using ruau:library">
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:        <p>This example shows a basic way to use <code>ruau:library</code>.</p>
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:    </ruau:example>
+ruau/ruau-components/src/main/components/ruaudev/library/library.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ruaudev/quickFix/quickFixController.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ruaudev/quickFix/quickFixController.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ruaudev/quickFix/quickFixController.js: * you may not use this file except in compliance with the License.

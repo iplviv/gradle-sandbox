@@ -10,7 +10,7 @@
 ./install/go/src/go/build/syslist.go
 ./install/go/src/go/build/read_test.go
 ./install/go/src/go/build/syslist_test.go
-./install/go/src/go/build/doc.go
+./install/go/src/go/build/COD.go
 ./install/go/src/go/build/read.go
 ./install/go/src/go/build/build_test.go
 ./install/go/src/go/token
@@ -110,7 +110,7 @@
 ./install/go/src/sync/atomic/export_linux_arm_test.go
 ./install/go/src/sync/atomic/asm_amd64.s
 ./install/go/src/sync/atomic/asm_freebsd_arm.s
-./install/go/src/sync/atomic/doc.go
+./install/go/src/sync/atomic/COD.go
 ./install/go/src/sync/atomic/value_test.go
 ./install/go/src/sync/atomic/asm_amd64p32.s
 ./install/go/src/sync/pool.go
@@ -237,7 +237,7 @@
 ./install/go/src/net/http/status.go
 ./install/go/src/net/http/server.go
 ./install/go/src/net/http/header_test.go
-./install/go/src/net/http/doc.go
+./install/go/src/net/http/COD.go
 ./install/go/src/net/http/fcgi
 ./install/go/src/net/http/fcgi/child.go
 ./install/go/src/net/http/fcgi/fcgi_test.go
@@ -536,7 +536,7 @@
 ./install/go/src/runtime/race/README
 ./install/go/src/runtime/race/output_test.go
 ./install/go/src/runtime/race/race_darwin_amd64.syso
-./install/go/src/runtime/race/doc.go
+./install/go/src/runtime/race/COD.go
 ./install/go/src/runtime/race/race_freebsd_amd64.syso
 ./install/go/src/runtime/defs_nacl_386.h
 ./install/go/src/runtime/os_freebsd_arm.c
@@ -829,7 +829,7 @@
 ./install/debs/git-daemon-run_1.7.9.5-1ubuntu0.1_all.deb
 ./install/debs/git-daemon-sysvinit_1.7.9.5-1ubuntu0.1_all.deb
 ./install/debs/git-svn_1.7.9.5-1ubuntu0.1_all.deb
-./install/debs/git-doc_1.7.9.5-1ubuntu0.1_all.deb
+./install/debs/git-COD_1.7.9.5-1ubuntu0.1_all.deb
 ./install/debs/git-arch_1.7.9.5-1ubuntu0.1_all.deb
 ./install/debs/git_1.7.9.5-1ubuntu0.1_amd64.deb
 ./install/debs/git-gui_1.7.9.5-1ubuntu0.1_all.deb
@@ -1852,7 +1852,7 @@
 ./SalesforceMobileSDK-Android/install.sh
 ./SalesforceMobileSDK-Android/mudial.yml
 ./SalesforceMobileSDK-Android/tools
-./SalesforceMobileSDK-Android/tools/generate_doc.sh
+./SalesforceMobileSDK-Android/tools/generate_COD.sh
 ./SalesforceMobileSDK-Android/tools/build_windows_file_list.js
 ./SalesforceMobileSDK-Android/tools/sdk.sh
 ./SalesforceMobileSDK-Android/tools/symlink_files.txt
@@ -2686,18 +2686,18 @@
 ./mudial_devops/ansible/sync/sensu-plugins/postgres-replication.rb
 ./mudial_devops/ansible/sync/sensu-plugins/check_es.rb
 ./mudial_devops/ansible/sync/sensu-plugins/postgres-alive.rb
-./mudial_devops/doc
-./mudial_devops/doc/security
-./mudial_devops/doc/security/README
-./mudial_devops/doc/security/scripts
-./mudial_devops/doc/security/scripts/install_update_script
-./mudial_devops/doc/security/scripts/update_script
+./mudial_devops/COD
+./mudial_devops/COD/security
+./mudial_devops/COD/security/README
+./mudial_devops/COD/security/scripts
+./mudial_devops/COD/security/scripts/install_update_script
+./mudial_devops/COD/security/scripts/update_script
 ./mudial_devops/Rakefile
 ./mudial_devops/deploy
 ./mudial_devops/deploy/Capfile.devops
 ./mudial_devops/deploy/Capfile.apiscripts
 ./mudial_devops/deploy/appliance-deploy
-./mudial_devops/deploy/update-docs
+./mudial_devops/deploy/update-CODs
 ./mudial_devops/deploy/config
 ./mudial_devops/deploy/config/deploy-db.rb
 ./mudial_devops/deploy/config/deploy
@@ -2725,7 +2725,7 @@
 ./mudial_devops/chef/cookbooks
 ./mudial_devops/chef/cookbooks/openssl
 ./mudial_devops/chef/cookbooks/openssl/metadata.json
-./mudial_devops/chef/cookbooks/openssl/README.rdoc
+./mudial_devops/chef/cookbooks/openssl/README.rCOD
 ./mudial_devops/chef/cookbooks/openssl/libraries
 ./mudial_devops/chef/cookbooks/openssl/libraries/secure_password.rb
 ./mudial_devops/chef/cookbooks/openssl/recipes
@@ -2833,7 +2833,7 @@
 ./mudial_devops/chef/cookbooks/apache2/definitions/apache_site.rb
 ./mudial_devops/chef/cookbooks/apache2/definitions/apache_module.rb
 ./mudial_devops/chef/cookbooks/apache2/metadata.json
-./mudial_devops/chef/cookbooks/apache2/README.rdoc
+./mudial_devops/chef/cookbooks/apache2/README.rCOD
 ./mudial_devops/chef/cookbooks/apache2/templates
 ./mudial_devops/chef/cookbooks/apache2/templates/default
 ./mudial_devops/chef/cookbooks/apache2/templates/default/default-site.erb
@@ -2956,7 +2956,7 @@
 ./mudial_devops/chef/cookbooks/build-essential/metadata.rb
 ./mudial_devops/chef/cookbooks/xfs
 ./mudial_devops/chef/cookbooks/xfs/metadata.json
-./mudial_devops/chef/cookbooks/xfs/README.rdoc
+./mudial_devops/chef/cookbooks/xfs/README.rCOD
 ./mudial_devops/chef/cookbooks/xfs/recipes
 ./mudial_devops/chef/cookbooks/xfs/recipes/default.rb
 ./mudial_devops/chef/cookbooks/xfs/metadata.rb

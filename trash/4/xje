@@ -662,7 +662,7 @@ ruau/ruau-impl/src/main/resources/ruau/Ruue.js: *       IntegrationService when 
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js: * @private
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:$A.ns.Ruue.prototype.finishInit = function(doNotCallUIPerfOnLoad) {
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:        $A.Perf.mark("Ruue.finishInit");
-ruau/ruau-impl/src/main/resources/ruau/Ruue.js:        $A.util.removeClass(document.body, "loading");
+ruau/ruau-impl/src/main/resources/ruau/Ruue.js:        $A.util.removeClass(CODument.body, "loading");
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:        $A.Perf.endMark("Ruue.finishInit");
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:        if (doNotCallUIPerfOnLoad) {
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:            $A.Perf.setTimer("Ruue Init");
@@ -695,9 +695,9 @@ ruau/ruau-impl/src/main/resources/ruau/Ruue.js: * @param {String} msg The messag
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:$A.ns.Ruue.prototype.message = function(msg) {
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:    var message = $A.util.getElement("ruauErrorMessage");
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js:    message.innerHTML = "";
-ruau/ruau-impl/src/main/resources/ruau/Ruue.js:    message.appendChild(document.createTextNode(msg));
-ruau/ruau-impl/src/main/resources/ruau/Ruue.js:    $A.util.removeClass(document.body, "loading");
-ruau/ruau-impl/src/main/resources/ruau/Ruue.js:    $A.util.addClass(document.body, "ruauError");
+ruau/ruau-impl/src/main/resources/ruau/Ruue.js:    message.appendChild(CODument.createTextNode(msg));
+ruau/ruau-impl/src/main/resources/ruau/Ruue.js:    $A.util.removeClass(CODument.body, "loading");
+ruau/ruau-impl/src/main/resources/ruau/Ruue.js:    $A.util.addClass(CODument.body, "ruauError");
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js: * Returns the value referenced using property syntax. Gets the value from the specified global value provider.
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js: * @param {String} key The data key to look up on element, for example, <code>$A.get("$Label.section.key")</code>.
 ruau/ruau-impl/src/main/resources/ruau/Ruue.js: * @param {Function} callback The method to call with the result if a server trip is expected.

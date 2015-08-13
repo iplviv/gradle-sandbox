@@ -352,7 +352,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java:import
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java:import java.io.StringReader;
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java: * prepends a mini dtd that has common html entity references in it to the real
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java: * reader to work around the fact that we can't get the stax parser to resove
-ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java: * these entity references by any other documented mechanism. Hopefully the
+ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java: * these entity references by any other CODumented mechanism. Hopefully the
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java: * features of the stax parser will be fixed in the future, and then we can
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java: * This includes an arbitrarily shortened list of entities from html -- the ones
 ruau/ruau-util/src/main/java/org/ruauframework/util/maven/HTMLReader.java:public class HTMLReader extends FilterReader {
@@ -1785,7 +1785,7 @@ ruau/ruau-util/src/test/tools/xUnit/junit.xsl:			</xsl:for-each>
 ruau/ruau-util/src/test/tools/xUnit/junit.xsl:	</xsl:template>
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:// Copyright (c) 2006-2013 John Buchanan 
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:// Permission is hereby granted, free of charge, to any person obtaining  
-ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:// a copy of this software and associated documentation files (the "Software"),  
+ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:// a copy of this software and associated CODumentation files (the "Software"),  
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:// to deal in the Software without restriction, including without limitation the  
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:// rights to use, copy, modify, merge, publish, distribute, sublicense, and/or  
 ruau/ruau-util/src/test/tools/xUnit/xUnit.js.Console.js:// sell copies of the Software, and to permit persons to whom the Software is  

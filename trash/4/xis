@@ -1729,7 +1729,7 @@ ruau/ruau/src/test/components/ruautest/aisAsyncTemplate/aisAsyncTemplate.cmp:   
 ruau/ruau/src/test/components/ruautest/aisAsyncTemplate/aisAsyncTemplate.cmp:<ruau:component isTemplate="true" extends="ruau:integrationServiceTemplate">
 ruau/ruau/src/test/components/ruautest/aisAsyncTemplate/aisAsyncTemplate.cmp:    <ruau:set attribute="extraScriptTags">
 ruau/ruau/src/test/components/ruautest/aisAsyncTemplate/aisAsyncTemplate.cmp:            function click2Handler__t(event) {
-ruau/ruau/src/test/components/ruautest/aisAsyncTemplate/aisAsyncTemplate.cmp:            document._click2HandlerCalled = true;
+ruau/ruau/src/test/components/ruautest/aisAsyncTemplate/aisAsyncTemplate.cmp:            CODument._click2HandlerCalled = true;
 ruau/ruau/src/test/components/ruautest/aisAsyncTemplate/aisAsyncTemplate.cmp:    </ruau:set>
 ruau/ruau/src/test/components/ruautest/aisAsyncTemplate/aisAsyncTemplate.cmp:</ruau:component>
 ruau/ruau/src/test/components/ruautest/testApplication3/testApplication3.app:    Copyright (C) 2013 salesforce.com, inc.
@@ -2815,9 +2815,9 @@ ruau/ruau/src/test/components/ruautest/html/htmlTest.js:                $A.test.
 ruau/ruau/src/test/components/ruautest/html/htmlTest.js:                }, "Handler function not called on click event");
 ruau/ruau/src/test/components/ruautest/html/htmlTest.js:                var anchor = cmp.find("anchor").getElement();
 ruau/ruau/src/test/components/ruautest/html/htmlTest.js:                // Manually fire touch events
-ruau/ruau/src/test/components/ruautest/html/htmlTest.js:                var ts = document.createEvent('UIEvent');
+ruau/ruau/src/test/components/ruautest/html/htmlTest.js:                var ts = CODument.createEvent('UIEvent');
 ruau/ruau/src/test/components/ruautest/html/htmlTest.js:                ts.initUIEvent('touchstart', true, true); 
-ruau/ruau/src/test/components/ruautest/html/htmlTest.js:                var te = document.createEvent('UIEvent');
+ruau/ruau/src/test/components/ruautest/html/htmlTest.js:                var te = CODument.createEvent('UIEvent');
 ruau/ruau/src/test/components/ruautest/html/htmlTest.js:                anchor.dispatchEvent(ts);
 ruau/ruau/src/test/components/ruautest/html/htmlTest.js:                anchor.dispatchEvent(te);
 ruau/ruau/src/test/components/ruautest/html/htmlTest.js:                $A.test.addWaitForWithFailureMessage(2, function() {
@@ -2825,7 +2825,7 @@ ruau/ruau/src/test/components/ruautest/html/htmlTest.js:                }, "Hand
 ruau/ruau/src/test/components/ruautest/html/htmlTest.js:    fireTouchEndEventOnElement:function(component, targetElement){
 ruau/ruau/src/test/components/ruautest/html/htmlTest.js:        component._OnClickHandler = false;
 ruau/ruau/src/test/components/ruautest/html/htmlTest.js:        component._TouchEndHandler = false;
-ruau/ruau/src/test/components/ruautest/html/htmlTest.js:        var touchEndEvt =  document.createEvent("TouchEvent");
+ruau/ruau/src/test/components/ruautest/html/htmlTest.js:        var touchEndEvt =  CODument.createEvent("TouchEvent");
 ruau/ruau/src/test/components/ruautest/html/htmlTest.js:        targetElement.dispatchEvent(touchEndEvt);
 ruau/ruau/src/test/components/ruautest/test_css_c/test_css_c.cmp:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau/src/test/components/ruautest/test_css_c/test_css_c.cmp:    Licensed under the Apache License, Version 2.0 (the "License");

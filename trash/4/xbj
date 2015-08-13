@@ -2102,7 +2102,7 @@ ruau/settings.gradle:include ':ruau-tools'
 ruau/settings.gradle:include ':ruau-resources'
 ruau/settings.gradle:include ':ruau-jetty'
 ruau/settings.gradle:include ':ruau-integration-test'
-ruau/settings.gradle:include ':ruaudocs-integration-test'
+ruau/settings.gradle:include ':ruauCODs-integration-test'
 ruau/settings.gradle:include ':simple-ruau-archetype'
 ruau/settings.gradle:project(':ruau-util').projectDir = "$rootDir/ruau-util" as File
 ruau/settings.gradle:project(':ruau').projectDir = "$rootDir/ruau" as File
@@ -2113,7 +2113,7 @@ ruau/settings.gradle:project(':ruau-tools').projectDir = "$rootDir/ruau-tools" a
 ruau/settings.gradle:project(':ruau-resources').projectDir = "$rootDir/ruau-resources" as File
 ruau/settings.gradle:project(':ruau-jetty').projectDir = "$rootDir/ruau-jetty" as File
 ruau/settings.gradle:project(':ruau-integration-test').projectDir = "$rootDir/ruau-integration-test" as File
-ruau/settings.gradle:project(':ruaudocs-integration-test').projectDir = "$rootDir/ruaudocs-integration-test" as File
+ruau/settings.gradle:project(':ruauCODs-integration-test').projectDir = "$rootDir/ruaudocs-integration-test" as File
 ruau/settings.gradle:project(':simple-ruau-archetype').projectDir = "$rootDir/ruau-archetype" as File
 ruau/.gitignore:.metadata/
 ruau/.gitignore:target
@@ -2188,14 +2188,14 @@ ruau/ruau-devtools/ruau-inspector/devtoolsPanel.css:	position: relative;
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.css:	margin-left: -15px;
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.css:	margin-left: -1px !important;
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.css:li.file a
-ruau/ruau-devtools/ruau-inspector/devtoolsPanel.css:	background: url(document.png) 0 0 no-repeat;
+ruau/ruau-devtools/ruau-inspector/devtoolsPanel.css:	background: url(CODument.png) 0 0 no-repeat;
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.css:	padding-left: 21px;
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.css:	text-decoration: none;
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.css:	display: block;
-ruau/ruau-devtools/ruau-inspector/devtoolsPanel.css:li.file a[href *= '.pdf']	{ background: url(document.png) 0 0 no-repeat; }
-ruau/ruau-devtools/ruau-inspector/devtoolsPanel.css:	li.file a[href *= '.html']	{ background: url(document.png) 0 0 no-repeat; }
-ruau/ruau-devtools/ruau-inspector/devtoolsPanel.css:	li.file a[href $= '.css']	{ background: url(document.png) 0 0 no-repeat; }
-ruau/ruau-devtools/ruau-inspector/devtoolsPanel.css:	li.file a[href $= '.js']		{ background: url(document.png) 0 0 no-repeat; }
+ruau/ruau-devtools/ruau-inspector/devtoolsPanel.css:li.file a[href *= '.pdf']	{ background: url(CODument.png) 0 0 no-repeat; }
+ruau/ruau-devtools/ruau-inspector/devtoolsPanel.css:	li.file a[href *= '.html']	{ background: url(CODument.png) 0 0 no-repeat; }
+ruau/ruau-devtools/ruau-inspector/devtoolsPanel.css:	li.file a[href $= '.css']	{ background: url(CODument.png) 0 0 no-repeat; }
+ruau/ruau-devtools/ruau-inspector/devtoolsPanel.css:	li.file a[href $= '.js']		{ background: url(CODument.png) 0 0 no-repeat; }
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.css:	position: absolute;
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.css:	margin-left: 0;
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.css:	opacity: 0;
@@ -2213,7 +2213,7 @@ ruau/ruau-devtools/ruau-inspector/devtoolsPanel.css:li input:checked + ol > li {
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.css:li input:checked + ol > li:last-child { margin: 0 0 0.063em; /* 1px */ }
 Binary file ruau/ruau-devtools/ruau-inspector/folder-horizontal.png matches
 Binary file ruau/ruau-devtools/ruau-inspector/toggle-small.png matches
-Binary file ruau/ruau-devtools/ruau-inspector/document.png matches
+Binary file ruau/ruau-devtools/ruau-inspector/CODument.png matches
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:var RuueInspectorDevtoolsPanel = {
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:        RuueInspectorDevtoolsPanel.port = chrome.extension.connect({name : "RuueInspectorDevtoolsPanel"});
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:        RuueInspectorDevtoolsPanel.port.onMessage.addListener(RuueInspectorDevtoolsPanel.handleMessage);
@@ -2226,7 +2226,7 @@ ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:        RuueInspectorDevtools
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:    actions : {
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:            RuueInspectorDevtoolsPanel.port.postMessage({action : "requestComponentTree"});
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:        publishComponentTree : function(params){
-ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:            var treeElement = document.getElementById("tree");
+ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:            var treeElement = CODument.getElementById("tree");
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:            var tree = JSON.parse(params);
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:            treeElement.appendChild(RuueInspectorDevtoolsPanel.createFolder({value:tree, expanded : true}));
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:        highlightElements : function(globalId){
@@ -2235,7 +2235,7 @@ ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:    isArray : function(obj){
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:        return obj && obj.constructor === Array;
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:        return !!obj && Object.prototype.toString.apply(obj) === '[object Object]';
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:    createFolder : function(config){
-ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:        var root = document.createElement("li");
+ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:        var root = CODument.createElement("li");
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:            RuueInspectorDevtoolsPanel.actions.highlightElements();
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:        var value = config.value;
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:        var text = config.label || "" ;
@@ -2252,7 +2252,7 @@ ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:            hasBody = true;
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:            if(value._descriptor){
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:                text += value._descriptor;
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:        if(hasBody){
-ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:            var label = document.createElement("label");
+ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:            var label = CODument.createElement("label");
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:            label.for = "folder"+(RuueInspectorDevtoolsPanel.nodeId++);
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:            if(config.value && config.value.globalId){
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:                var globalId = config.value.globalId;
@@ -2260,13 +2260,13 @@ ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:                label.onmouse
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:                    RuueInspectorDevtoolsPanel.actions.highlightElements(globalId);
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:            label.innerHTML = text;
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:            root.appendChild(label);
-ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:            var checkbox = document.createElement("input");
+ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:            var checkbox = CODument.createElement("input");
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:            checkbox.id = label.for;
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:            if(config.expanded){
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:            if(config.disabled){
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:                checkbox.disabled = "disabled";
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:            root.appendChild(checkbox);
-ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:            var contents = document.createElement("ol");
+ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:            var contents = CODument.createElement("ol");
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:            function createContents(){
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:                if(RuueInspectorDevtoolsPanel.isObject(value)){
 ruau/ruau-devtools/ruau-inspector/devtoolsPanel.js:                    for(var key in value){
@@ -2294,7 +2294,7 @@ ruau/ruau-devtools/ruau-inspector/manifest.json:	"background": {
 ruau/ruau-devtools/ruau-inspector/manifest.json:                "scripts" : [ "background.js" ]
 ruau/ruau-devtools/ruau-inspector/manifest.json:	"devtools_page": "devtools.html",
 ruau/ruau-devtools/ruau-inspector/manifest.json:		"matches": ["http://*/*", "https://*/*"],
-ruau/ruau-devtools/ruau-inspector/manifest.json:		"run_at": "document_idle",
+ruau/ruau-devtools/ruau-inspector/manifest.json:		"run_at": "CODument_idle",
 ruau/ruau-devtools/ruau-inspector/manifest.json:		"all_frames": false
 ruau/ruau-devtools/ruau-inspector/manifest.json:	"permissions": ["tabs", "background"]
 Binary file ruau/ruau-devtools/ruau-inspector/icon48.png matches
@@ -2355,7 +2355,7 @@ ruau/ruau-devtools/ruau-inspector/background.html:		chrome.extension.onConnect.a
 ruau/ruau-devtools/ruau-inspector/background.html:  </head>
 Binary file ruau/ruau-devtools/ruau-inspector/toggle-small-expand.png matches
 ruau/ruau-devtools/ruau-inspector/contentScript.js:var RuueInspectorContentScript = {
-ruau/ruau-devtools/ruau-inspector/contentScript.js:        RuueInspectorContentScript.dtsPort = document.getElementById("RuueDevToolServicePort");
+ruau/ruau-devtools/ruau-inspector/contentScript.js:        RuueInspectorContentScript.dtsPort = CODument.getElementById("RuueDevToolServicePort");
 ruau/ruau-devtools/ruau-inspector/contentScript.js:        if (!RuueInspectorContentScript.dtsPort) {
 ruau/ruau-devtools/ruau-inspector/contentScript.js:            RuueInspectorContentScript.dtsPort = null;
 ruau/ruau-devtools/ruau-inspector/contentScript.js:            setTimeout(RuueInspectorContentScript.connect, 1500);
@@ -2371,15 +2371,15 @@ ruau/ruau-devtools/ruau-inspector/contentScript.js:        RuueInspectorContentS
 ruau/ruau-devtools/ruau-inspector/contentScript.js:        setTimeout(RuueInspectorContentScript.connect, 1500);
 ruau/ruau-devtools/ruau-inspector/contentScript.js:    actions : {
 ruau/ruau-devtools/ruau-inspector/contentScript.js:            if (RuueInspectorContentScript.port == null || RuueInspectorContentScript.dtsPort == null) {
-ruau/ruau-devtools/ruau-inspector/contentScript.js:            var customEvent = document.createEvent('Event');
-ruau/ruau-devtools/ruau-inspector/contentScript.js:            document.body.dispatchEvent(customEvent);
+ruau/ruau-devtools/ruau-inspector/contentScript.js:            var customEvent = CODument.createEvent('Event');
+ruau/ruau-devtools/ruau-inspector/contentScript.js:            CODument.body.dispatchEvent(customEvent);
 ruau/ruau-devtools/ruau-inspector/contentScript.js:            RuueInspectorContentScript.port.postMessage({action : "publishComponentTree",
 ruau/ruau-devtools/ruau-inspector/contentScript.js:                                                         params : RuueInspectorContentScript.dtsPort.innerText});
 ruau/ruau-devtools/ruau-inspector/contentScript.js:            RuueInspectorContentScript.dtsPort.innerText = "";
 ruau/ruau-devtools/ruau-inspector/contentScript.js:        highlightElements : function(globalId){
-ruau/ruau-devtools/ruau-inspector/contentScript.js:            var customEvent = document.createEvent('MessageEvent');
+ruau/ruau-devtools/ruau-inspector/contentScript.js:            var customEvent = CODument.createEvent('MessageEvent');
 ruau/ruau-devtools/ruau-inspector/contentScript.js:            customEvent.initMessageEvent('highlightElementsEvent', true, true, globalId);
-ruau/ruau-devtools/ruau-inspector/contentScript.js:            document.body.dispatchEvent(customEvent);
+ruau/ruau-devtools/ruau-inspector/contentScript.js:            CODument.body.dispatchEvent(customEvent);
 ruau/ruau-devtools/ruau-inspector/contentScript.js:RuueInspectorContentScript.connect();
 ruau/ruau-tools/.settings/org.eclipse.jdt.core.prefs:org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.7
 ruau/ruau-tools/.settings/org.eclipse.jdt.core.prefs:encoding/src/main/java=UTF-8
@@ -2515,7 +2515,7 @@ ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/ApplicationSeri
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/ApplicationSerializer.java:        contextService.startContext(Mode.PROD, Format.HTML, Authentication.AUTHENTICATED, appDesc);
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/ApplicationSerializer.java:        SerializationService serializationService = Ruue.getSerializationService();
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/ApplicationSerializer.java:            Map<String, Object> atts = Maps.newHashMap();
-ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/ApplicationSerializer.java:                    "/home/dpletter/dev/lumen-beta/ruau-integration-test/src/test/resources/htdocs/app");
+ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/ApplicationSerializer.java:                    "/home/dpletter/dev/lumen-beta/ruau-integration-test/src/test/resources/htCODs/app");
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/ApplicationSerializer.java:            atts.put("outputPath", outputDir.getAbsolutePath());
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/ApplicationSerializer.java:            serializationService.write(appDesc.getDef(), atts, ApplicationDef.class, System.out, "OFFLINE_HTML");
 ruau/ruau-tools/src/main/java/org/ruauframework/tools/definition/ApplicationSerializer.java:        } catch (Throwable e) {

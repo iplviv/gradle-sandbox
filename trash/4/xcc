@@ -674,8 +674,8 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializable.java:p
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializable.java:import java.io.IOException;
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializable.java: * Interface for anything that can be serialized to json.
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializable.java: * Please read <a href=
-ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializable.java: * "https://sites.google.com/a/salesforce.com/user-interface/documentation/json"
-ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializable.java: * >Json docs</a> on how to use this properly!
+ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializable.java: * "https://sites.google.com/a/salesforce.com/user-interface/CODumentation/json"
+ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializable.java: * >Json CODs</a> on how to use this properly!
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializable.java:public interface JsonSerializable {
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializable.java:     * serialize this object in json format
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonSerializable.java:    public void serialize(Json json) throws IOException;
@@ -1142,8 +1142,8 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java: * second, me
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java: * expensive. This means that we use a separate stack in the case that we are
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java: * not formatting to avoid the allocation of the object.
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java: * @see <a
-ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java: *      href="https://sites.google.com/a/salesforce.com/user-interface/documentation/json">SFDC
-ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java: *      json documentation</a>
+ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java: *      href="https://sites.google.com/a/salesforce.com/user-interface/CODumentation/json">SFDC
+ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java: *      json CODumentation</a>
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:public class Json {
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:    @SuppressWarnings("serial")
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/Json.java:    public static class JsonException extends RuntimeException {
@@ -1613,7 +1613,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonReader.java:import 
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonReader.java:import java.io.Reader;
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonReader.java:import java.io.StringReader;
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonReader.java: * Parses a single top-level object and returns it as an Object. See the class
-ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonReader.java: * documentation for JsonStreamReader for the default mappings of what type that
+ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonReader.java: * CODumentation for JsonStreamReader for the default mappings of what type that
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonReader.java: * Object will be so that you can cast it appropriately. If you need to parse
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonReader.java: * multiple top level objects or provide custom handlers for parsing directly
 ruau/ruau-util/src/main/java/org/ruauframework/util/json/JsonReader.java: * into your own types, use JsonStreamReader instead.

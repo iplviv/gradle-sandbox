@@ -1133,7 +1133,7 @@ ruau/ruau-jetty/pom.xml:                <configuration>
 ruau/ruau-jetty/pom.xml:                        <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
 ruau/ruau-jetty/pom.xml:                            <maxIdleTime>${jetty.idleWait}</maxIdleTime>
 ruau/ruau-jetty/pom.xml:                    <scanIntervalSeconds>${scanInterval}</scanIntervalSeconds>
-ruau/ruau-jetty/pom.xml:                    <webAppSourceDirectory>${ruau.home}/ruau-integration-test/src/test/resources/htdocs</webAppSourceDirectory>
+ruau/ruau-jetty/pom.xml:                    <webAppSourceDirectory>${ruau.home}/ruau-integration-test/src/test/resources/htCODs</webAppSourceDirectory>
 ruau/ruau-jetty/pom.xml:                        <contextPath>/</contextPath>
 ruau/ruau-jetty/pom.xml:                        <descriptor>${ruau.home}/ruau/src/main/http/WEB-INF/web.xml</descriptor>
 ruau/ruau-jetty/pom.xml:                        <defaultsDescriptor>${ruau.home}/ruau/src/main/http/WEB-INF/webdefault.xml</defaultsDescriptor>
@@ -1327,7 +1327,7 @@ ruau/ruau-jetty/src/main/http/WEB-INF/webdefault.xml:  <!-- brackets):          
 ruau/ruau-jetty/src/main/http/WEB-INF/webdefault.xml:  <!--   checkInterval       If development is false and reloading is true, -->
 ruau/ruau-jetty/src/main/http/WEB-INF/webdefault.xml:  <!--                       background compiles are enabled. checkInterval -->
 ruau/ruau-jetty/src/main/http/WEB-INF/webdefault.xml:  <!--                       if a JSP page needs to be recompiled. [300]    -->
-ruau/ruau-jetty/src/main/http/WEB-INF/webdefault.xml:  <!--                       pages.  See the Ant documenation for more      -->
+ruau/ruau-jetty/src/main/http/WEB-INF/webdefault.xml:  <!--                       pages.  See the Ant CODumenation for more      -->
 ruau/ruau-jetty/src/main/http/WEB-INF/webdefault.xml:  <!--                       information. [javac]                           -->
 ruau/ruau-jetty/src/main/http/WEB-INF/webdefault.xml:  <!--   classdebuginfo      Should the class file be compiled with         -->
 ruau/ruau-jetty/src/main/http/WEB-INF/webdefault.xml:  <!--                       debugging information?  [true]                 -->
@@ -1689,7 +1689,7 @@ ruau/ruau-integration-test/pom.xml:            <groupId>org.uiautomation</groupI
 ruau/ruau-integration-test/pom.xml:            <artifactId>ios-client</artifactId>
 ruau/ruau-integration-test/pom.xml:        <chromedriver.url>http://chromedriver.storage.googleapis.com/{version}/{artifactId}_{classifier}.zip</chromedriver.url>
 ruau/ruau-integration-test/pom.xml:        <jetty.spawn>true</jetty.spawn>
-ruau/ruau-integration-test/pom.xml:        <jetty.resources>${basedir}/src/test/resources/htdocs</jetty.resources>
+ruau/ruau-integration-test/pom.xml:        <jetty.resources>${basedir}/src/test/resources/htCODs</jetty.resources>
 ruau/ruau-integration-test/pom.xml:        <ruau.build.id />
 ruau/ruau-integration-test/pom.xml:        <ruau.home>${basedir}/..</ruau.home>
 ruau/ruau-integration-test/pom.xml:        <screenshots.baseurl>file://${screenshots.directory}</screenshots.baseurl>

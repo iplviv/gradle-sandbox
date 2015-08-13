@@ -621,7 +621,7 @@ ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				// DE
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:				$A.Perf.endMark("FullRender" + component);
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:		// Create a floating node as our translation container
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:		if (!this.translator)
-ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:			this.translator = document.createElement("div");
+ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:			this.translator = CODument.createElement("div");
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:		var translator = this.translator;
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:		translator.innerHTML = htmlString;
 ruau/ruau-components/src/main/components/ui/listView/listViewHelper.js:		var textContent = translator.textContent || translator.innerText;
@@ -965,30 +965,30 @@ ruau/ruau-components/src/main/components/ui/tabsetEvent/tabsetEvent.evt:    <rua
 ruau/ruau-components/src/main/components/ui/tabsetEvent/tabsetEvent.evt:    <ruau:attribute name="active" type="Boolean" description="Indicates the tab is active or not."/>
 ruau/ruau-components/src/main/components/ui/tabsetEvent/tabsetEvent.evt:    <ruau:attribute name="callback" type="Object" description="A callback function." />
 ruau/ruau-components/src/main/components/ui/tabsetEvent/tabsetEvent.evt:</ruau:event>
-ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:			A <code>ui:outputCheckbox</code> component represents a checkbox that is rendered as an HTML <code>img</code> tag.
-ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:			This component can be used with <code>ui:inputCheckbox</code>, which enables users to select or deselect the checkbox. 
-ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:			To select or deselect the checkbox, set the <code>value</code> attribute to <code>true</code> or <code>false</code>.
-ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:			To display a checkbox, you can use an attribute value and bind it to the <code>ui:outputCheckbox</code> component.
-ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:		<pre>&lt;ruau:attribute name="myBool" type="Boolean" default="true"/>
-ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:&lt;ui:outputCheckbox value="{!v.myBool}" label="outputCheckbox"/></pre>
-ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:	<p>The previous example renders the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:	<pre>&lt;img class="checked uiImage uiOutputCheckbox" alt="checkbox checked" src="path/to/checkbox"></pre>
-ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:	</ruau:description>	
-ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:	<ruau:example name="outputExample" ref="uiExamples:outputExample" label="Using the Output Components">
-ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:    	<p>This example shows how you can bind data to the output components by using component attributes.</p>
-ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:	</ruau:example>
-ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruauCOD:			A <code>ui:outputCheckbox</code> component represents a checkbox that is rendered as an HTML <code>img</code> tag.
+ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruauCOD:			This component can be used with <code>ui:inputCheckbox</code>, which enables users to select or deselect the checkbox. 
+ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruauCOD:			To select or deselect the checkbox, set the <code>value</code> attribute to <code>true</code> or <code>false</code>.
+ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruauCOD:			To display a checkbox, you can use an attribute value and bind it to the <code>ui:outputCheckbox</code> component.
+ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruauCOD:		<pre>&lt;ruau:attribute name="myBool" type="Boolean" default="true"/>
+ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruauCOD:&lt;ui:outputCheckbox value="{!v.myBool}" label="outputCheckbox"/></pre>
+ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruauCOD:	<p>The previous example renders the following HTML.</p>
+ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruauCOD:	<pre>&lt;img class="checked uiImage uiOutputCheckbox" alt="checkbox checked" src="path/to/checkbox"></pre>
+ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruauCOD:	</ruau:description>	
+ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruauCOD:	<ruau:example name="outputExample" ref="uiExamples:outputExample" label="Using the Output Components">
+ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruauCOD:    	<p>This example shows how you can bind data to the output components by using component attributes.</p>
+ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruauCOD:	</ruau:example>
+ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.cmp:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/outputCheckbox/outputCheckbox.cmp:    you may not use this file except in compliance with the License.
@@ -1265,37 +1265,37 @@ ruau/ruau-components/src/main/components/ui/button/button.cmp:                <s
 ruau/ruau-components/src/main/components/ui/button/button.cmp:            </ruau:set>
 ruau/ruau-components/src/main/components/ui/button/button.cmp:        </ruau:if>
 ruau/ruau-components/src/main/components/ui/button/button.cmp:</ruau:component>
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:			A <code>ui:button</code> component represents a button element that executes an action defined by a controller. Clicking the button triggers the client-side controller method set for the <code>press</code> event.
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:			The button can be created in several ways.
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:		<p>A text-only button has only the required <code>label</code> attribute set on it.</p>
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:		<pre>&lt;ui:button label="Find"/></pre>
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:		<p>An image-only button uses both the <code>label</code> and <code>labelClass</code> attributes with CSS.</p>
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:		<pre>&lt;!-- Component markup -->
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:&lt;ui:button label="Find" labelClass="assistiveText" class="img" />
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:background: url(/path/to/img) no-repeat;
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:		<p>The <code>assistiveText</code> class hides the label from view but makes it available to assistive technologies. To create a button with both image and text, use the <code>label</code> attribute and add styles for the button.</p>
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:		<pre>&lt;!-- Component markup -->
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:&lt;ui:button label="Find" />
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:background: url(/path/to/img) no-repeat;
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:		<p>The previous markup for a button with text and image results in the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:		<pre>&lt;button class="default uiBlock uiButton" accesskey type="button">
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:&lt;span class="label bBody truncate" dir="ltr">Find&lt;/span>
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:	</ruau:description>	
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:    <ruau:example name="buttonExample" ref="uiExamples:buttonExample" label="Using ui:button">
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:        <p>This example shows a button that displays the input value you enter.</p>
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:    </ruau:example>
-ruau/ruau-components/src/main/components/ui/button/button.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/button/button.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/button/button.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/button/button.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/button/button.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/button/button.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/button/button.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/button/button.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/button/button.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/button/button.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/button/button.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/button/button.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/button/button.ruauCOD:			A <code>ui:button</code> component represents a button element that executes an action defined by a controller. Clicking the button triggers the client-side controller method set for the <code>press</code> event.
+ruau/ruau-components/src/main/components/ui/button/button.ruauCOD:			The button can be created in several ways.
+ruau/ruau-components/src/main/components/ui/button/button.ruauCOD:		<p>A text-only button has only the required <code>label</code> attribute set on it.</p>
+ruau/ruau-components/src/main/components/ui/button/button.ruauCOD:		<pre>&lt;ui:button label="Find"/></pre>
+ruau/ruau-components/src/main/components/ui/button/button.ruauCOD:		<p>An image-only button uses both the <code>label</code> and <code>labelClass</code> attributes with CSS.</p>
+ruau/ruau-components/src/main/components/ui/button/button.ruauCOD:		<pre>&lt;!-- Component markup -->
+ruau/ruau-components/src/main/components/ui/button/button.ruauCOD:&lt;ui:button label="Find" labelClass="assistiveText" class="img" />
+ruau/ruau-components/src/main/components/ui/button/button.ruauCOD:background: url(/path/to/img) no-repeat;
+ruau/ruau-components/src/main/components/ui/button/button.ruauCOD:		<p>The <code>assistiveText</code> class hides the label from view but makes it available to assistive technologies. To create a button with both image and text, use the <code>label</code> attribute and add styles for the button.</p>
+ruau/ruau-components/src/main/components/ui/button/button.ruauCOD:		<pre>&lt;!-- Component markup -->
+ruau/ruau-components/src/main/components/ui/button/button.ruauCOD:&lt;ui:button label="Find" />
+ruau/ruau-components/src/main/components/ui/button/button.ruauCOD:background: url(/path/to/img) no-repeat;
+ruau/ruau-components/src/main/components/ui/button/button.ruauCOD:		<p>The previous markup for a button with text and image results in the following HTML.</p>
+ruau/ruau-components/src/main/components/ui/button/button.ruauCOD:		<pre>&lt;button class="default uiBlock uiButton" accesskey type="button">
+ruau/ruau-components/src/main/components/ui/button/button.ruauCOD:&lt;span class="label bBody truncate" dir="ltr">Find&lt;/span>
+ruau/ruau-components/src/main/components/ui/button/button.ruauCOD:	</ruau:description>	
+ruau/ruau-components/src/main/components/ui/button/button.ruauCOD:    <ruau:example name="buttonExample" ref="uiExamples:buttonExample" label="Using ui:button">
+ruau/ruau-components/src/main/components/ui/button/button.ruauCOD:        <p>This example shows a button that displays the input value you enter.</p>
+ruau/ruau-components/src/main/components/ui/button/button.ruauCOD:    </ruau:example>
+ruau/ruau-components/src/main/components/ui/button/button.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/button/buttonTest.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/button/buttonTest.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/button/buttonTest.js: * you may not use this file except in compliance with the License.
@@ -1583,14 +1583,14 @@ ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:			var item =
 ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:	 * Add new tab item to the tabBar
 ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:	addTab: function(cmp, index, tab) {
 ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:		var self = this, items = cmp._tabItems;
-ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:			var docFrag = document.createDocumentFragment();
+ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:			var CODFrag = document.createDocumentFragment();
 ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:			var tabValues = [tab];
 ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:			var pNode = cmp.find("tabItemsContainer").getElement();
-ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:			this.createAndRenderComponents(cmp, tabValues, docFrag, function(newItems){
-ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:				    pNode.appendChild(docFrag);
+ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:			this.createAndRenderComponents(cmp, tabValues, CODFrag, function(newItems){
+ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:				    pNode.appendChild(CODFrag);
 ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:					var el = items[index].getElement();
 ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:					var pn = el.parentNode;
-ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:					pn.insertBefore(docFrag, el);
+ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:					pn.insertBefore(CODFrag, el);
 ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:				items.splice.apply(items, [index, 0].concat(newItems));
 ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:				//TODO: revisit to support adding array of tabs
 ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:				if (newItems[0].get("v.active")) {
@@ -1624,10 +1624,10 @@ ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:			el = el.pa
 ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:	 * @private
 ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:	renderTabItems: function(cmp) {
 ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:		cmp._tabItems = [];
-ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:		var docFrag = document.createDocumentFragment();
-ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:		this.createAndRenderComponents(cmp, cmp.get("v.tabs"), docFrag, function(items) {
+ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:		var CODFrag = document.createDocumentFragment();
+ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:		this.createAndRenderComponents(cmp, cmp.get("v.tabs"), CODFrag, function(items) {
 ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:			cmp._tabItems = items;
-ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:			cmp.find('tabItemsContainer').getElement().appendChild(docFrag);
+ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:			cmp.find('tabItemsContainer').getElement().appendChild(CODFrag);
 ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:	 * @private
 ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:	createAndRenderComponents: function (cmp, tabValues, parentEl, callback) {
 ruau/ruau-components/src/main/components/ui/tabBar/tabBarHelper.js:		var items = [],
@@ -1992,34 +1992,34 @@ ruau/ruau-components/src/main/components/ui/image/imageTest.js:    testGetImageE
 ruau/ruau-components/src/main/components/ui/image/imageTest.js:    	attributes : {src: '/ruauFW/resources/ruau/ruaulogo.png', imageType:'decorative'},
 ruau/ruau-components/src/main/components/ui/image/imageTest.js:    		var imgEl = cmp.getDef().getHelper().getImageElement(cmp);
 ruau/ruau-components/src/main/components/ui/image/imageTest.js:    		$A.test.assertTrue($A.test.isInstanceOfImageElement(imgEl));
-ruau/ruau-components/src/main/components/ui/image/imageTest.js:    		$A.test.assertEquals(imgEl, document.getElementsByTagName("img")[0]);
+ruau/ruau-components/src/main/components/ui/image/imageTest.js:    		$A.test.assertEquals(imgEl, CODument.getElementsByTagName("img")[0]);
 ruau/ruau-components/src/main/components/ui/image/imageTest.js:    testGetImageElementWithAnchor:{
 ruau/ruau-components/src/main/components/ui/image/imageTest.js:    	attributes : {src: '/ruauFW/resources/ruau/ruaulogo.png', href: 'http://www.salesforce.com', imageType:'decorative'},
 ruau/ruau-components/src/main/components/ui/image/imageTest.js:    		var imgEl = cmp.getDef().getHelper().getImageElement(cmp);
 ruau/ruau-components/src/main/components/ui/image/imageTest.js:    		$A.test.assertTrue($A.test.isInstanceOfImageElement(imgEl));
-ruau/ruau-components/src/main/components/ui/image/imageTest.js:    		$A.test.assertEquals(imgEl, document.getElementsByTagName("img")[0]);
+ruau/ruau-components/src/main/components/ui/image/imageTest.js:    		$A.test.assertEquals(imgEl, CODument.getElementsByTagName("img")[0]);
 ruau/ruau-components/src/main/components/ui/image/imageTest.js:            var imgElement = cmp.getElement();
 ruau/ruau-components/src/main/components/ui/image/imageTest.js:            $A.test.assertTrue($A.test.isInstanceOfImageElement(imgElement))
 ruau/ruau-components/src/main/components/ui/image/imageTest.js:            $A.test.assertEquals("",imgElement.alt, "Expected a empty alt text for all image tags.");
 ruau/ruau-components/src/main/components/ui/image/imageTest.js:            cmp.set("v.alt",'Help Accessibility');
 ruau/ruau-components/src/main/components/ui/image/imageTest.js:            cmp.set("v.src",'http://www.google.com/intl/en_com/images/srpr/logo3w.png');
 ruau/ruau-components/src/main/components/ui/image/imageTest.js:            $A.test.assertEquals("Help Accessibility",imgElement.alt, "Expected alt text for the image element.");
-ruau/ruau-components/src/main/components/ui/image/image.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/image/image.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/image/image.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/image/image.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/image/image.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/image/image.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/image/image.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/image/image.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/image/image.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/image/image.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/image/image.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/image/image.ruaudoc:	</ruau:description>	
-ruau/ruau-components/src/main/components/ui/image/image.ruaudoc:		<ruau:example name="buttonExample" ref="uitest:image_ErrorTest" label="Using ui:image">
-ruau/ruau-components/src/main/components/ui/image/image.ruaudoc:    	<p>This example shows how broken and unbroken images are rendered when passing onerror ruau action to ui:image</p>
-ruau/ruau-components/src/main/components/ui/image/image.ruaudoc:	</ruau:example>
-ruau/ruau-components/src/main/components/ui/image/image.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/image/image.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/image/image.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/image/image.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/image/image.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/image/image.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/image/image.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/image/image.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/image/image.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/image/image.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/image/image.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/image/image.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/image/image.ruauCOD:	</ruau:description>	
+ruau/ruau-components/src/main/components/ui/image/image.ruauCOD:		<ruau:example name="buttonExample" ref="uitest:image_ErrorTest" label="Using ui:image">
+ruau/ruau-components/src/main/components/ui/image/image.ruauCOD:    	<p>This example shows how broken and unbroken images are rendered when passing onerror ruau action to ui:image</p>
+ruau/ruau-components/src/main/components/ui/image/image.ruauCOD:	</ruau:example>
+ruau/ruau-components/src/main/components/ui/image/image.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/image/image.css: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/image/image.css: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/image/image.css: * you may not use this file except in compliance with the License.
@@ -2133,7 +2133,7 @@ ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHel
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:        if (!$A.util.isUndefined(cached)) {
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:            return cached;
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:        // fill the cache
-ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:        this.getOnClickEventProp.cache["isTouchDevice"] = !$A.util.isUndefined(document.ontouchstart);
+ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:        this.getOnClickEventProp.cache["isTouchDevice"] = !$A.util.isUndefined(CODument.ontouchstart);
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:        if (this.getOnClickEventProp.cache["isTouchDevice"]) {
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:            this.getOnClickEventProp.cache["onClickStartEvent"] = "touchstart";
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListHelper.js:            this.getOnClickEventProp.cache["onClickEndEvent"] = "touchend";
@@ -2280,10 +2280,10 @@ ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListRen
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListRenderer.js:        if (helper.getOnClickEventProp.cache && 
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListRenderer.js:            helper.getOnClickEventProp.cache.onClickStartEvent && 
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListRenderer.js:            component._onClickStartFunc) {
-ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListRenderer.js:            $A.util.removeOn(document.body, helper.getOnClickEventProp.cache.onClickStartEvent, component._onClickStartFunc, false);
+ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListRenderer.js:            $A.util.removeOn(CODument.body, helper.getOnClickEventProp.cache.onClickStartEvent, component._onClickStartFunc, false);
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListRenderer.js:        if (helper.getOnClickEventProp.cache &&
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListRenderer.js:            helper.getOnClickEventProp.cache.onClickEndEvent && 
-ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListRenderer.js:            $A.util.removeOn(document.body, helper.getOnClickEventProp.cache.onClickEndEvent, component._onClickEndFunc, false);
+ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListRenderer.js:            $A.util.removeOn(CODument.body, helper.getOnClickEventProp.cache.onClickEndEvent, component._onClickEndFunc, false);
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteList.css: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteList.css: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteList.css: * you may not use this file except in compliance with the License.
@@ -2335,10 +2335,10 @@ ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListCon
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListController.js:            obj["aria-activedescendant"] = "",
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListController.js:            obj["aria-expanded"] = false;
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListController.js:            // De-register list expand/collapse events
-ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListController.js:            $A.util.removeOn(document.body, helper.getOnClickEventProp("onClickStartEvent"), helper.getOnClickStartFunction(component));
+ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListController.js:            $A.util.removeOn(CODument.body, helper.getOnClickEventProp("onClickStartEvent"), helper.getOnClickStartFunction(component));
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListController.js:        } else { // Register list expand/collapse events
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListController.js:            obj["aria-expanded"] = true;
-ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListController.js:            $A.util.on(document.body, helper.getOnClickEventProp("onClickStartEvent"), helper.getOnClickStartFunction(component));
+ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListController.js:            $A.util.on(CODument.body, helper.getOnClickEventProp("onClickStartEvent"), helper.getOnClickStartFunction(component));
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListController.js:        // Update accessibility attributes
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListController.js:        var updateAriaEvt = component.get("e.updateAriaAttributes");
 ruau/ruau-components/src/main/components/ui/autocompleteList/autocompleteListController.js:        if (updateAriaEvt) {

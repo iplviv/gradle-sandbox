@@ -639,7 +639,7 @@ ruau/ruau/src/test/components/uitest/scroller_basicPerf/scroller_basicPerfContro
 ruau/ruau/src/test/components/uitest/scroller_basicPerf/scroller_basicPerfController.js: * distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau/src/test/components/uitest/scroller_basicPerf/scroller_basicPerfController.js: * See the License for the specific language governing permissions and
 ruau/ruau/src/test/components/uitest/scroller_basicPerf/scroller_basicPerfController.js: * limitations under the License.
-ruau/ruau/src/test/components/uitest/scroller_basicPerf/scroller_basicPerfController.js:		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+ruau/ruau/src/test/components/uitest/scroller_basicPerf/scroller_basicPerfController.js:		CODument.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 ruau/ruau/src/test/components/uitest/scroller_basicPerf/scroller_basicPerfController.js:		var collection=[];
 ruau/ruau/src/test/components/uitest/scroller_basicPerf/scroller_basicPerfController.js:    	for(var i=0; i<500; i++){
 ruau/ruau/src/test/components/uitest/scroller_basicPerf/scroller_basicPerfController.js:    handleClick: function(component, event, helper){
@@ -2603,7 +2603,7 @@ ruau/ruau/src/test/components/uitest/dataGrid_Actions/dataGrid_ActionsTest.js:	 
 ruau/ruau/src/test/components/uitest/dataGrid_Actions/dataGrid_ActionsTest.js:	        if(elements[i].tagName != "!"){
 ruau/ruau/src/test/components/uitest/dataGrid_Actions/dataGrid_ActionsTest.js:	        	elementArray.push(elements[i]);
 ruau/ruau/src/test/components/uitest/dataGrid_Actions/dataGrid_ActionsTest.js:    	return elementArray;
-ruau/ruau/src/test/components/uitest/dataGrid_Actions/dataGrid_ActionsTest.js:            var tbody = document.getElementsByTagName("tbody")[0];
+ruau/ruau/src/test/components/uitest/dataGrid_Actions/dataGrid_ActionsTest.js:            var tbody = CODument.getElementsByTagName("tbody")[0];
 ruau/ruau/src/test/components/uitest/dataGrid_Actions/dataGrid_ActionsTest.js:            var trs = this.getOnlyTrs(tbody.children);
 ruau/ruau/src/test/components/uitest/dataGrid_Actions/dataGrid_ActionsTest.js:            var itemsInBody = this.getGridAttribute(cmp, "items");
 ruau/ruau/src/test/components/uitest/dataGrid_Actions/dataGrid_ActionsTest.js:            $A.test.assertEquals(colCount, trs.length, "The total amount of items on the page are incorrect");

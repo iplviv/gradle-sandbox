@@ -2488,7 +2488,7 @@ ruau/ruau-impl/src/test/javascript/ruau/storage/adapters/SizeEstimatorTest.js:Te
 ruau/ruau-impl/src/test/javascript/ruau/storage/adapters/SizeEstimatorTest.js:    var ruauMock=function(delegate){
 ruau/ruau-impl/src/test/javascript/ruau/storage/adapters/SizeEstimatorTest.js:        Mocks.GetMocks(Object.Global(),{
 ruau/ruau-impl/src/test/javascript/ruau/storage/adapters/SizeEstimatorTest.js:            window: Object.Global(),
-ruau/ruau-impl/src/test/javascript/ruau/storage/adapters/SizeEstimatorTest.js:            document: { createDocumentFragment: function() {} },
+ruau/ruau-impl/src/test/javascript/ruau/storage/adapters/SizeEstimatorTest.js:            CODument: { createDocumentFragment: function() {} },
 ruau/ruau-impl/src/test/javascript/ruau/storage/adapters/SizeEstimatorTest.js:            Transport: function() {},
 ruau/ruau-impl/src/test/javascript/ruau/storage/adapters/SizeEstimatorTest.js:            NumberFormat: {},
 ruau/ruau-impl/src/test/javascript/ruau/storage/adapters/SizeEstimatorTest.js:                    isArray: function(value) { return Array.isArray(value); },

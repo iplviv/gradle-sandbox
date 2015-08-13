@@ -358,10 +358,10 @@
 ./ruau-serial/ruau-impl/src/main/java/org/ruauframework/impl/LoggingServiceImpl.java
 ./ruau-serial/ruau-impl/src/main/java/org/ruauframework/impl/ContextAdapterImpl.java
 ./ruau-serial/ruau-impl/src/main/java/org/ruauframework/impl/LocalizationServiceImpl.java
-./ruau-serial/ruau-impl/src/main/java/org/ruauframework/impl/documentation
-./ruau-serial/ruau-impl/src/main/java/org/ruauframework/impl/documentation/ExampleDefImpl.java
-./ruau-serial/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DescriptionDefImpl.java
-./ruau-serial/ruau-impl/src/main/java/org/ruauframework/impl/documentation/DocumentationDefImpl.java
+./ruau-serial/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation
+./ruau-serial/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/ExampleDefImpl.java
+./ruau-serial/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DescriptionDefImpl.java
+./ruau-serial/ruau-impl/src/main/java/org/ruauframework/impl/CODumentation/DocumentationDefImpl.java
 ./ruau-serial/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary
 ./ruau-serial/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/SourceNotifier.java
 ./ruau-serial/ruau-impl/src/main/java/org/ruauframework/impl/clientlibrary/ClientLibraryDefImpl.java
@@ -1727,7 +1727,7 @@
 ./ruau-serial/ruau-impl/src/test/components/test/testActionExpressionChainingFixture
 ./ruau-serial/ruau-impl/src/test/components/test/testActionExpressionChainingFixture/testActionExpressionChainingFixture.cmp
 ./ruau-serial/ruau-impl/src/test/components/test/fakeInterface
-./ruau-serial/ruau-impl/src/test/components/test/fakeInterface/fakeInterface.ruaudoc
+./ruau-serial/ruau-impl/src/test/components/test/fakeInterface/fakeInterface.ruauCOD
 ./ruau-serial/ruau-impl/src/test/components/test/fakeInterface/fakeInterface.intf
 ./ruau-serial/ruau-impl/src/test/components/test/test_Provider_InterfaceChain
 ./ruau-serial/ruau-impl/src/test/components/test/test_Provider_InterfaceChain/test_Provider_InterfaceChain.intf
@@ -1739,7 +1739,7 @@
 ./ruau-serial/ruau-impl/src/test/components/test/test_Provider_InterfaceChainComponent
 ./ruau-serial/ruau-impl/src/test/components/test/test_Provider_InterfaceChainComponent/test_Provider_InterfaceChainComponent.cmp
 ./ruau-serial/ruau-impl/src/test/components/test/fakeApplication
-./ruau-serial/ruau-impl/src/test/components/test/fakeApplication/fakeApplication.ruaudoc
+./ruau-serial/ruau-impl/src/test/components/test/fakeApplication/fakeApplication.ruauCOD
 ./ruau-serial/ruau-impl/src/test/components/test/fakeApplication/fakeApplication.app
 ./ruau-serial/ruau-impl/src/test/components/test/test_Provider_ThrowsQFE
 ./ruau-serial/ruau-impl/src/test/components/test/test_Provider_ThrowsQFE/test_Provider_ThrowsQFE.cmp
@@ -2018,7 +2018,7 @@
 ./ruau-serial/ruau-impl/src/test/components/test/fakeDesign/fakeDesign.design
 ./ruau-serial/ruau-impl/src/test/components/test/fakeDesign/fakeDesign.cmp
 ./ruau-serial/ruau-impl/src/test/components/test/fakeComponent
-./ruau-serial/ruau-impl/src/test/components/test/fakeComponent/fakeComponent.ruaudoc
+./ruau-serial/ruau-impl/src/test/components/test/fakeComponent/fakeComponent.ruauCOD
 ./ruau-serial/ruau-impl/src/test/components/test/fakeComponent/fakeComponent.svg
 ./ruau-serial/ruau-impl/src/test/components/test/fakeComponent/fakeComponent.cmp
 ./ruau-serial/ruau-impl/src/test/components/test/fakeComponent/fakeComponent.design
@@ -2129,7 +2129,7 @@
 ./ruau-serial/ruau-impl/src/test/components/test/test_Events_Event/test_Events_Event.evt
 ./ruau-serial/ruau-impl/src/test/components/test/fakeTheme
 ./ruau-serial/ruau-impl/src/test/components/test/fakeTheme/fakeTheme.theme
-./ruau-serial/ruau-impl/src/test/components/test/fakeTheme/fakeTheme.ruaudoc
+./ruau-serial/ruau-impl/src/test/components/test/fakeTheme/fakeTheme.ruauCOD
 ./ruau-serial/ruau-impl/src/test/components/test/facetAttribute
 ./ruau-serial/ruau-impl/src/test/components/test/facetAttribute/facetAttribute.cmp
 ./ruau-serial/ruau-impl/src/test/components/test/test_Provider_InterfaceChain2
@@ -2170,7 +2170,7 @@
 ./ruau-serial/ruau-impl/src/test/components/test/testJSHelperExplicitInheritance/testJSHelperExplicitInheritanceTest.js
 ./ruau-serial/ruau-impl/src/test/components/test/testJSHelperExplicitInheritance/testJSHelperExplicitInheritance.cmp
 ./ruau-serial/ruau-impl/src/test/components/test/anevent
-./ruau-serial/ruau-impl/src/test/components/test/anevent/anevent.ruaudoc
+./ruau-serial/ruau-impl/src/test/components/test/anevent/anevent.ruauCOD
 ./ruau-serial/ruau-impl/src/test/components/test/anevent/anevent.evt
 ./ruau-serial/ruau-impl/src/test/components/test/test_CompoundCntrlrApp
 ./ruau-serial/ruau-impl/src/test/components/test/test_CompoundCntrlrApp/test_CompoundCntrlrAppController.js
@@ -2358,8 +2358,8 @@
 ./ruau-serial/ruau-impl/src/test/java/org/ruauframework/system
 ./ruau-serial/ruau-impl/src/test/java/org/ruauframework/system/ClientTest.java
 ./ruau-serial/ruau-impl/src/test/java/org/ruauframework/component
-./ruau-serial/ruau-impl/src/test/java/org/ruauframework/component/docs
-./ruau-serial/ruau-impl/src/test/java/org/ruauframework/component/docs/ApiContentsModelTest.java
+./ruau-serial/ruau-impl/src/test/java/org/ruauframework/component/CODs
+./ruau-serial/ruau-impl/src/test/java/org/ruauframework/component/CODs/ApiContentsModelTest.java
 ./ruau-serial/ruau-impl/src/test/java/org/ruauframework/component/ruauStorage
 ./ruau-serial/ruau-impl/src/test/java/org/ruauframework/component/ruauStorage/NamedRuueStorageUITest.java
 ./ruau-serial/ruau-impl/src/test/java/org/ruauframework/component/ruau
@@ -2443,8 +2443,8 @@
 ./ruau-serial/ruau-impl/src/test/java/org/ruauframework/impl/component
 ./ruau-serial/ruau-impl/src/test/java/org/ruauframework/impl/component/def
 ./ruau-serial/ruau-impl/src/test/java/org/ruauframework/impl/component/def/ComponentDefDescriptorTest.java
-./ruau-serial/ruau-impl/src/test/java/org/ruauframework/impl/documentation
-./ruau-serial/ruau-impl/src/test/java/org/ruauframework/impl/documentation/DocumentationDefTest.java
+./ruau-serial/ruau-impl/src/test/java/org/ruauframework/impl/CODumentation
+./ruau-serial/ruau-impl/src/test/java/org/ruauframework/impl/CODumentation/DocumentationDefTest.java
 ./ruau-serial/ruau-impl/src/test/java/org/ruauframework/impl/clientlibrary
 ./ruau-serial/ruau-impl/src/test/java/org/ruauframework/impl/clientlibrary/ClientLibraryResolverRegistryImplTest.java
 ./ruau-serial/ruau-impl/src/test/java/org/ruauframework/impl/clientlibrary/ClientLibraryDefImplTest.java
@@ -2743,11 +2743,11 @@
 ./ruau-serial/ruau-resources
 ./ruau-serial/ruau-resources/pom.xml
 ./ruau-serial/ruau-resources/config
-./ruau-serial/ruau-resources/config/jsdoc3
-./ruau-serial/ruau-resources/config/jsdoc3/jsdoc
-./ruau-serial/ruau-resources/config/jsdoc3/jsdoc/plugins
-./ruau-serial/ruau-resources/config/jsdoc3/jsdoc/plugins/ruauJSON.js
-./ruau-serial/ruau-resources/config/jsdoc3/conf.json
+./ruau-serial/ruau-resources/config/jsCOD3
+./ruau-serial/ruau-resources/config/jsCOD3/jsdoc
+./ruau-serial/ruau-resources/config/jsCOD3/jsdoc/plugins
+./ruau-serial/ruau-resources/config/jsCOD3/jsdoc/plugins/ruauJSON.js
+./ruau-serial/ruau-resources/config/jsCOD3/conf.json
 ./ruau-serial/ruau-resources/src
 ./ruau-serial/ruau-resources/src/main
 ./ruau-serial/ruau-resources/src/main/resources
@@ -2775,7 +2775,7 @@
 ./ruau-serial/ruau-resources/src/main/resources/ruau/resources/img/tree_icons
 ./ruau-serial/ruau-resources/src/main/resources/ruau/resources/img/tree_icons/folder-horizontal.png
 ./ruau-serial/ruau-resources/src/main/resources/ruau/resources/img/tree_icons/toggle-small.png
-./ruau-serial/ruau-resources/src/main/resources/ruau/resources/img/tree_icons/document.png
+./ruau-serial/ruau-resources/src/main/resources/ruau/resources/img/tree_icons/CODument.png
 ./ruau-serial/ruau-resources/src/main/resources/ruau/resources/img/tree_icons/toggle-small-expand.png
 ./ruau-serial/ruau-resources/src/main/resources/ruau/resources/fastclick
 ./ruau-serial/ruau-resources/src/main/resources/ruau/resources/fastclick/LICENSE.txt
@@ -2813,7 +2813,7 @@
 ./ruau-serial/ruau-resources/src/main/resources/ruau/resources/ruau/images/refresh.png
 ./ruau-serial/ruau-resources/src/main/resources/ruau/resources/ruau/images/search.png
 ./ruau-serial/ruau-resources/src/main/resources/ruau/resources/ruau/images/bug.png
-./ruau-serial/ruau-resources/src/main/resources/ruau/resources/ruau/images/docsspinner.gif
+./ruau-serial/ruau-resources/src/main/resources/ruau/resources/ruau/images/CODsspinner.gif
 ./ruau-serial/ruau-resources/src/main/resources/ruau/resources/ruau/images/arrow-right.png
 ./ruau-serial/ruau-resources/src/main/resources/ruau/resources/ruau/images/checkbox.png
 ./ruau-serial/ruau-resources/src/main/resources/ruau/resources/ruau/images/uiMessage.png

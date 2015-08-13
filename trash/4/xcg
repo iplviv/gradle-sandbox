@@ -2860,12 +2860,12 @@ ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:  
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:     * Analyzes the Network domain events and returns a set of PerfMetrics derived from them
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:    public List<PerfMetric> analyzeNetworkDomain() {
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:        // Sequence and relevant fields:
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:        // requestWillBeSent: timestamp requestId params.documentURL
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:        // requestWillBeSent: timestamp requestId params.CODumentURL
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:        // responseReceived: timestamp params.requestId params.response.timing?
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:        // dataReceived+: timestamp params.requestId params.dataLength params.encodedDataLength
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:        // loadingFinished/Failed: timestamp params.requestId params.encodedDataLength?
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:        // numRequests: details: documentURL + size
-ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:        // totalEncodedDataLength: details: documentURL+size
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:        // numRequests: details: CODumentURL + size
+ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:        // totalEncodedDataLength: details: CODumentURL+size
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:        Map<String, JSONObject> requestIdToDetail = Maps.newHashMap();
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:        int totalEncodedDataLength = 0;
 ruau/ruau-util/src/test/java/org/ruauframework/test/perf/rdp/RDPAnalyzer.java:        JSONArray details = new JSONArray();

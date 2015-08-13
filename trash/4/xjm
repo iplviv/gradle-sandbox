@@ -2197,7 +2197,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:                    // if no, check normally
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:                    return super.match(browser, minVer, maxVer);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:            return false;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        // https://developer.mozilla.org/en-US/docs/Gecko_user_agent_string_reference
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        // https://developer.mozilla.org/en-US/CODs/Gecko_user_agent_string_reference
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        boolean match(String ua) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:            return (ua.contains(UA.FIREFOX) && ua.contains(UA.GECKO)
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:                && !ua.contains(UA.NAVIGATOR)
@@ -2232,7 +2232,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:                return 10 * Integer.parseInt(ua.substring(verStart, verEnd));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:            } catch (NumberFormatException | IndexOutOfBoundsException ignored) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        // http://www.useragentstring.com/pages/Chrome/
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        // https://developers.google.com/chrome/mobile/docs/user-agent
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        // https://developers.google.com/chrome/mobile/CODs/user-agent
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        boolean match(String ua) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:            // We would normally exclude matches to UA.CHROMEFRAME since we log
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:            // it separately, but if somebody asks "is this browser Chrome?"
@@ -2263,7 +2263,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:            if (ua.contains(UA.MOBILE)
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:                    || ua.contains(UA.NEXUS)
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:                    || ua.contains(UA.PHONE)) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        // http://developer.apple.com/library/ios/#documentation/AppleApplications/Reference/SafariWebContent/OptimizingforSafarioniPhone/OptimizingforSafarioniPhone.html
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        // http://developer.apple.com/library/ios/#CODumentation/AppleApplications/Reference/SafariWebContent/OptimizingforSafarioniPhone/OptimizingforSafarioniPhone.html
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        // http://www.useragentstring.com/pages/Safari/
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:        boolean match(String ua) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/util/UserAgent.java:            return (ua.contains(UA.SAFARI) && ua.contains(UA.APPLE_WEBKIT)

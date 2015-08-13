@@ -91,7 +91,7 @@ ruau/ruau-components/src/main/components/ruaudev/quickFixTemplate/quickFixTempla
 ruau/ruau-components/src/main/components/ruaudev/quickFixTemplate/quickFixTemplate.cmp:    See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ruaudev/quickFixTemplate/quickFixTemplate.cmp:    limitations under the License.
 ruau/ruau-components/src/main/components/ruaudev/quickFixTemplate/quickFixTemplate.cmp:<ruau:component isTemplate="true" extends="ruau:template">
-ruau/ruau-components/src/main/components/ruaudev/quickFixTemplate/quickFixTemplate.cmp:    <ruau:set attribute="doctype" value=""/>
+ruau/ruau-components/src/main/components/ruaudev/quickFixTemplate/quickFixTemplate.cmp:    <ruau:set attribute="CODtype" value=""/>
 ruau/ruau-components/src/main/components/ruaudev/quickFixTemplate/quickFixTemplate.cmp:    <ruau:set attribute="title" value="Ruue Quick Fix"/>
 ruau/ruau-components/src/main/components/ruaudev/quickFixTemplate/quickFixTemplate.cmp:    <ruau:set attribute="extraStyleTags">
 ruau/ruau-components/src/main/components/ruaudev/quickFixTemplate/quickFixTemplate.cmp:                margin: 0;
@@ -478,32 +478,32 @@ ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.css: * distrib
 ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.css: * See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.css: * limitations under the License.
 ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.css:.uiInputEmail{
-ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruaudoc:			A <code>ui:inputEmail</code> component represents an email input field, which is rendered as an HTML <code>input</code> tag of type <code>email</code>.
-ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruaudoc:			To render the output from a <code>ui:inputEmail</code> component, use the <code>ui:outputEmail</code> component. 
-ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruaudoc:		<p>This is a basic set up of an email field.</p>
-ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruaudoc:		<pre>&lt;ui:inputEmail ruau:id="email" label="Email" placeholder="abc@email.com"/></pre>
-ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruaudoc:		<p>This example results in the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruaudoc:		<pre>&lt;div class="uiInput uiInputText uiInputEmail">
-ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruaudoc:  &lt;label class="uiLabel-left uiLabel">
-ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruaudoc:    &lt;span>Email&lt;/span>
-ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruaudoc:  &lt;/label>
-ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruaudoc:  &lt;input aria-describedby placeholder="abc@email.com" type="email" class="uiInput uiInputText uiInputEmail">
-ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruaudoc:	</ruau:description>	
-ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruaudoc:	<ruau:example name="inputExample" ref="uiExamples:inputExample" label="Using ui:inputEmail">
-ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruaudoc:    		This example shows how you can use <code>ui:inputEmail</code> to get user input.
-ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruaudoc:    </ruau:example>	
-ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruauCOD:			A <code>ui:inputEmail</code> component represents an email input field, which is rendered as an HTML <code>input</code> tag of type <code>email</code>.
+ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruauCOD:			To render the output from a <code>ui:inputEmail</code> component, use the <code>ui:outputEmail</code> component. 
+ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruauCOD:		<p>This is a basic set up of an email field.</p>
+ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruauCOD:		<pre>&lt;ui:inputEmail ruau:id="email" label="Email" placeholder="abc@email.com"/></pre>
+ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruauCOD:		<p>This example results in the following HTML.</p>
+ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruauCOD:		<pre>&lt;div class="uiInput uiInputText uiInputEmail">
+ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruauCOD:  &lt;label class="uiLabel-left uiLabel">
+ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruauCOD:    &lt;span>Email&lt;/span>
+ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruauCOD:  &lt;/label>
+ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruauCOD:  &lt;input aria-describedby placeholder="abc@email.com" type="email" class="uiInput uiInputText uiInputEmail">
+ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruauCOD:	</ruau:description>	
+ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruauCOD:	<ruau:example name="inputExample" ref="uiExamples:inputExample" label="Using ui:inputEmail">
+ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruauCOD:    		This example shows how you can use <code>ui:inputEmail</code> to get user input.
+ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruauCOD:    </ruau:example>	
+ruau/ruau-components/src/main/components/ui/inputEmail/inputEmail.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/collapse/collapse.evt:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/collapse/collapse.evt:    Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/collapse/collapse.evt:    you may not use this file except in compliance with the License.
@@ -545,38 +545,38 @@ ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckboxHelper.js
 ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckboxHelper.js: * See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckboxHelper.js: * limitations under the License.
 ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckboxHelper.js:	getDomElementValue: function(element) {
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:			A <code>ui:inputCheckbox</code> component represents a checkbox whose state is controlled by the <code>value</code> and <code>disabled</code> attributes. It's rendered as an HTML <code>input</code> tag of type <code>checkbox</code>.
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:			To render the output from a <code>ui:inputCheckbox</code> component, use the <code>ui:outputCheckbox</code> component. 
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:		<p>This is a basic set up of a checkbox.</p>		
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:		<pre>&lt;ui:inputCheckbox ruau:id="reimbursed" label="Reimbursed?"/></pre>
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:		<p>This example results in the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:		<pre>&lt;div class="uiInput uiInputCheckbox">
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:  &lt;label class="uiLabel-left uiLabel">
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:    &lt;span>Reimbursed?&lt;/span>
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:  &lt;/label>
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:  &lt;input type="checkbox" class="uiInput uiInputCheckbox">
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:	<p>The <code>value</code> attribute controls the state of a checkbox, and events such as <code>click</code> and <code>change</code> determine its behavior. This example updates the checkbox CSS class on a click event.</p>
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:	<pre>&lt;!-- Component Markup -->
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:&lt;ui:inputCheckbox label="Color me" click="{!c.update}"/>
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:update : function (cmp, event) {
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:  var elem = event.getSource().getElement();
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:  $A.util.toggleClass(elem, "red");
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:	</ruau:description>
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:	<ruau:example name="inputExample" ref="ruaudocs:demoSelect" label="Using ui:inputCheckbox">
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:    		This example shows how you can retrieve the value of an <code>ui:inputCheckbox</code> component.
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:    </ruau:example>		
-ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:			A <code>ui:inputCheckbox</code> component represents a checkbox whose state is controlled by the <code>value</code> and <code>disabled</code> attributes. It's rendered as an HTML <code>input</code> tag of type <code>checkbox</code>.
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:			To render the output from a <code>ui:inputCheckbox</code> component, use the <code>ui:outputCheckbox</code> component. 
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:		<p>This is a basic set up of a checkbox.</p>		
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:		<pre>&lt;ui:inputCheckbox ruau:id="reimbursed" label="Reimbursed?"/></pre>
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:		<p>This example results in the following HTML.</p>
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:		<pre>&lt;div class="uiInput uiInputCheckbox">
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:  &lt;label class="uiLabel-left uiLabel">
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:    &lt;span>Reimbursed?&lt;/span>
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:  &lt;/label>
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:  &lt;input type="checkbox" class="uiInput uiInputCheckbox">
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:	<p>The <code>value</code> attribute controls the state of a checkbox, and events such as <code>click</code> and <code>change</code> determine its behavior. This example updates the checkbox CSS class on a click event.</p>
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:	<pre>&lt;!-- Component Markup -->
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:&lt;ui:inputCheckbox label="Color me" click="{!c.update}"/>
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:update : function (cmp, event) {
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:  var elem = event.getSource().getElement();
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:  $A.util.toggleClass(elem, "red");
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:	</ruau:description>
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:	<ruau:example name="inputExample" ref="ruaudocs:demoSelect" label="Using ui:inputCheckbox">
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:    		This example shows how you can retrieve the value of an <code>ui:inputCheckbox</code> component.
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:    </ruau:example>		
+ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.cmp:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/inputCheckbox/inputCheckbox.cmp:    you may not use this file except in compliance with the License.
@@ -846,7 +846,7 @@ ruau/ruau-components/src/main/components/ui/input/inputHelper.js:        var cac
 ruau/ruau-components/src/main/components/ui/input/inputHelper.js:        if (!$A.util.isUndefined(cached)) {
 ruau/ruau-components/src/main/components/ui/input/inputHelper.js:            return cached;
 ruau/ruau-components/src/main/components/ui/input/inputHelper.js:        // fill the cache by checking if an new input of "type" comes out with that type
-ruau/ruau-components/src/main/components/ui/input/inputHelper.js:        var test = document.createElement("input");
+ruau/ruau-components/src/main/components/ui/input/inputHelper.js:        var test = CODument.createElement("input");
 ruau/ruau-components/src/main/components/ui/input/inputHelper.js:        return (this.isHTML5Input.cache[type] = (test.type === type));
 ruau/ruau-components/src/main/components/ui/input/inputHelper.js:    isEventSupported: function(eventName) {
 ruau/ruau-components/src/main/components/ui/input/inputHelper.js:        // create the cache
@@ -856,7 +856,7 @@ ruau/ruau-components/src/main/components/ui/input/inputHelper.js:        // chec
 ruau/ruau-components/src/main/components/ui/input/inputHelper.js:        var cached = this.isEventSupported.cache[eventName];
 ruau/ruau-components/src/main/components/ui/input/inputHelper.js:        if (!$A.util.isUndefined(cached)) {
 ruau/ruau-components/src/main/components/ui/input/inputHelper.js:            return cached;
-ruau/ruau-components/src/main/components/ui/input/inputHelper.js:        var el = document.createElement('input');
+ruau/ruau-components/src/main/components/ui/input/inputHelper.js:        var el = CODument.createElement('input');
 ruau/ruau-components/src/main/components/ui/input/inputHelper.js:        var _eventName = 'on' + eventName;
 ruau/ruau-components/src/main/components/ui/input/inputHelper.js:        var isSupported = (_eventName in el);
 ruau/ruau-components/src/main/components/ui/input/inputHelper.js:            el.setAttribute(_eventName, 'return;');
@@ -973,26 +973,26 @@ ruau/ruau-components/src/main/components/ui/input/inputController.js:           
 ruau/ruau-components/src/main/components/ui/input/inputController.js:            $A.error("labelPosition must be one of the following values: 'top', 'right', 'bottom', 'left', 'hidden'");
 ruau/ruau-components/src/main/components/ui/input/inputController.js:            //default labelPosition to 'left'
 ruau/ruau-components/src/main/components/ui/input/inputController.js:            //cmp.getDef().getHelper().setAttribute(cmp, {key: 'labelPosition', value: 'left'});
-ruau/ruau-components/src/main/components/ui/vbox/vbox.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/vbox/vbox.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/vbox/vbox.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/vbox/vbox.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/vbox/vbox.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/vbox/vbox.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/vbox/vbox.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/vbox/vbox.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/vbox/vbox.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/vbox/vbox.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/vbox/vbox.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/vbox/vbox.ruaudoc:			You can insert content into the top and bottom of the <code>ui:vbox</code> by adding it to the <code>north</code> and <code>south</code> attributes respectively. The body of the component is inserted in the middle of the <code>ui:vbox</code>.
-ruau/ruau-components/src/main/components/ui/vbox/vbox.ruaudoc:    <code>north</code>, <code>body</code>, and <code>south</code> are facets of the <code>ui:vbox</code> component. The <code>north</code> and <code>south</code> facets, if set, are contained in their own HTML wrapper markup.
-ruau/ruau-components/src/main/components/ui/vbox/vbox.ruaudoc:    <code>ui:vbox</code> is a lightweight component that attempts to add the minimum markup possible to the DOM, and use minimal memory. To achieve this efficiency, set each facet to a single component only. That component can itself contain multiple child components, &quot;wrapping&quot; them for the <code>ui:vbox</code>.
-ruau/ruau-components/src/main/components/ui/vbox/vbox.ruaudoc:		    You can use <code>ui:vbox</code> with <code>ui:block</code>, another &quot;structural&quot; component, to create a box-oriented layout that can be fine-tuned using CSS to produce virtually any page or section layout you desire.
-ruau/ruau-components/src/main/components/ui/vbox/vbox.ruaudoc:	</ruau:description>	
-ruau/ruau-components/src/main/components/ui/vbox/vbox.ruaudoc:		<ruau:example name="vbox" ref="ruaudocs:demoVbox" label="Using ui:vbox">
-ruau/ruau-components/src/main/components/ui/vbox/vbox.ruaudoc:    	<p>This example shows a simple setup of a <code>ui:vbox</code> component.</p>
-ruau/ruau-components/src/main/components/ui/vbox/vbox.ruaudoc:	</ruau:example>
-ruau/ruau-components/src/main/components/ui/vbox/vbox.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/vbox/vbox.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/vbox/vbox.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/vbox/vbox.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/vbox/vbox.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/vbox/vbox.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/vbox/vbox.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/vbox/vbox.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/vbox/vbox.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/vbox/vbox.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/vbox/vbox.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/vbox/vbox.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/vbox/vbox.ruauCOD:			You can insert content into the top and bottom of the <code>ui:vbox</code> by adding it to the <code>north</code> and <code>south</code> attributes respectively. The body of the component is inserted in the middle of the <code>ui:vbox</code>.
+ruau/ruau-components/src/main/components/ui/vbox/vbox.ruauCOD:    <code>north</code>, <code>body</code>, and <code>south</code> are facets of the <code>ui:vbox</code> component. The <code>north</code> and <code>south</code> facets, if set, are contained in their own HTML wrapper markup.
+ruau/ruau-components/src/main/components/ui/vbox/vbox.ruauCOD:    <code>ui:vbox</code> is a lightweight component that attempts to add the minimum markup possible to the DOM, and use minimal memory. To achieve this efficiency, set each facet to a single component only. That component can itself contain multiple child components, &quot;wrapping&quot; them for the <code>ui:vbox</code>.
+ruau/ruau-components/src/main/components/ui/vbox/vbox.ruauCOD:		    You can use <code>ui:vbox</code> with <code>ui:block</code>, another &quot;structural&quot; component, to create a box-oriented layout that can be fine-tuned using CSS to produce virtually any page or section layout you desire.
+ruau/ruau-components/src/main/components/ui/vbox/vbox.ruauCOD:	</ruau:description>	
+ruau/ruau-components/src/main/components/ui/vbox/vbox.ruauCOD:		<ruau:example name="vbox" ref="ruaudocs:demoVbox" label="Using ui:vbox">
+ruau/ruau-components/src/main/components/ui/vbox/vbox.ruauCOD:    	<p>This example shows a simple setup of a <code>ui:vbox</code> component.</p>
+ruau/ruau-components/src/main/components/ui/vbox/vbox.ruauCOD:	</ruau:example>
+ruau/ruau-components/src/main/components/ui/vbox/vbox.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/vbox/vboxHelper.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/vbox/vboxHelper.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/vbox/vboxHelper.js: * you may not use this file except in compliance with the License.
@@ -1032,7 +1032,7 @@ ruau/ruau-components/src/main/components/ui/vbox/vboxRenderer.js:               
 ruau/ruau-components/src/main/components/ui/vbox/vboxRenderer.js:                if(el.nodeType !== 8 && (el.nodeType !== 3 || ruau.util.trim(el.nodeValue).length > 0)){
 ruau/ruau-components/src/main/components/ui/vbox/vboxRenderer.js:                        onlyOne = false;
 ruau/ruau-components/src/main/components/ui/vbox/vboxRenderer.js:                    // Wrap elements in a single DIV to giv us a place to style with flex box layout
-ruau/ruau-components/src/main/components/ui/vbox/vboxRenderer.js:                    var centerWrapper = document.createElement("DIV");
+ruau/ruau-components/src/main/components/ui/vbox/vboxRenderer.js:                    var centerWrapper = CODument.createElement("DIV");
 ruau/ruau-components/src/main/components/ui/vbox/vboxRenderer.js:                    $A.util.appendChild(center, centerWrapper);
 ruau/ruau-components/src/main/components/ui/vbox/vboxRenderer.js:                    center = centerWrapper;
 ruau/ruau-components/src/main/components/ui/vbox/vboxRenderer.js:                    $A.util.addClass(center, "dynamicCenterWrapperAddedByVBox bContainer bVerticalContainer");
@@ -1400,7 +1400,7 @@ ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecate
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:			'marginTop'  , 'marginBottom' ,
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:			'paddingTop' , 'paddingBottom',
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:		// note that the box model *must* be content-box for this to be correct.
-ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:		// https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
+ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:		// https://developer.mozilla.org/en-US/CODs/Web/CSS/box-sizing
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:		var offset = 0;
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:		for (var i = 0; i < dims.length; i++){
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:			offset += this.parseIntHelper(el_info[dims[i]]);
@@ -1589,7 +1589,7 @@ ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecate
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:							'Rubberbanding detected: actual content width does not match cached width', c, errors);
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:		 * ! iScroll v4.2.5 ~ Copyright (c) 2012 Matteo Spinelli,
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:		 * http://cubiq.org Released under MIT license, http://cubiq.org/license
-ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:			var m = Math, dummyStyle = doc.createElement('div').style, vendor = (function() {
+ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:			var m = Math, dummyStyle = COD.createElement('div').style, vendor = (function() {
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:				var vendors = 't,webkitT,MozT,msT,OT'.split(','), t, i = 0, l = vendors.length;
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:					t = vendors[i] + 'ransform';
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:				return false;
@@ -1619,7 +1619,7 @@ ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecate
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:						|| window.mozCancelRequestAnimationFrame || window.oCancelRequestAnimationFrame || window.msCancelRequestAnimationFrame || clearTimeout;
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:			translateZ = has3d ? ' translateZ(0)' : '',
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:				var that = this, i;
-ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:				that.wrapper = typeof el == 'object' ? el : doc.getElementById(el);
+ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:				that.wrapper = typeof el == 'object' ? el : COD.getElementById(el);
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:				that.wrapper.style.overflow = 'hidden';
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:				that.scroller = that.wrapper.children[0];
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:				that.RESIZE_EV = RESIZE_EV;
@@ -1732,7 +1732,7 @@ ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecate
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:							that[dir + 'ScrollbarIndicator'] = null;
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:					if (!that[dir + 'ScrollbarWrapper']) {
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:						// Create the scrollbar wrapper
-ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:						bar = doc.createElement('div');
+ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:						bar = COD.createElement('div');
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:						if (that.options.scrollbarClass)
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:							bar.className = that.options.scrollbarClass + dir.toUpperCase();
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:							bar.style.cssText = 'position:absolute;z-index:100;'
@@ -1743,7 +1743,7 @@ ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecate
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:						that.wrapper.appendChild(bar);
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:						that[dir + 'ScrollbarWrapper'] = bar;
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:						// Create the scrollbar indicator
-ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:						bar = doc.createElement('div');
+ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:						bar = COD.createElement('div');
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:						if (!that.options.scrollbarClass) {
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:							bar.style.cssText = 'position:absolute;z-index:100;background:rgba(0,0,0,0.5);border:1px solid rgba(255,255,255,0.9);' + cssVendor
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:									+ 'background-clip:padding-box;' + cssVendor + 'box-sizing:border-box;' + (dir == 'h' ? 'height:100%' : 'width:100%') + ';'
@@ -1942,7 +1942,7 @@ ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecate
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:									while (target.nodeType != 1)
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:										target = target.parentNode;
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:									if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA') {
-ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:										ev = doc.createEvent('MouseEvents');
+ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:										ev = COD.createEvent('MouseEvents');
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:												e.ctrlKey, e.altKey, e.shiftKey, e.metaKey, 0, null);
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:										ev._fake = true;
 ruau/ruau-components/src/main/components/ui/scrollerDeprecated/scrollerDeprecatedHelper.js:										target.dispatchEvent(ev);
@@ -2537,29 +2537,29 @@ ruau/ruau-components/src/main/components/ui/outputURL/outputURLTest.js:    	 fai
 ruau/ruau-components/src/main/components/ui/outputURL/outputURLTest.js:         ruauWarningsExpectedDuringInit : ["\"alt\" attribute should not be empty for informational image"],
 ruau/ruau-components/src/main/components/ui/outputURL/outputURLTest.js:         attributes: {value : 'www.salesforce.com', iconClass : "somethingSomethingDarkSide"},
 ruau/ruau-components/src/main/components/ui/outputURL/outputURLTest.js:        	// This is testing component "init" which is already tested above (ruauWarningsExpectedDuringInit).
-ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruaudoc:			A <code>ui:outputURL</code> component represents a URL that is wrapped in an HTML <code>a</code> tag.
-ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruaudoc:			This component can be used with <code>ui:inputURL</code>, which takes in a URL input. 
-ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruaudoc:			To display a URL, you can use an attribute value and bind it to the <code>ui:outputURL</code> component.
-ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruaudoc:		<pre>&lt;ruau:attribute name="myURL" type="String" default="http://www.google.com"/>
-ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruaudoc:&lt;ui:outputURL value="{!v.myURL}" label="{!v.myURL}"/></pre>
-ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruaudoc:		<p>The previous example renders the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruaudoc:		<pre>&lt;a href="http://www.google.com" dir="ltr" class="uiOutputURL">http://www.google.com&lt;/a></pre>
-ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruaudoc:	</ruau:description>	
-ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruaudoc:		<ruau:example name="outputExample" ref="uiExamples:outputExample" label="Using the Output Components">
-ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruaudoc:    	<p>This example shows how you can bind data to the output components by using component attributes.</p>
-ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruaudoc:	</ruau:example>
-ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruauCOD:			A <code>ui:outputURL</code> component represents a URL that is wrapped in an HTML <code>a</code> tag.
+ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruauCOD:			This component can be used with <code>ui:inputURL</code>, which takes in a URL input. 
+ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruauCOD:			To display a URL, you can use an attribute value and bind it to the <code>ui:outputURL</code> component.
+ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruauCOD:		<pre>&lt;ruau:attribute name="myURL" type="String" default="http://www.google.com"/>
+ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruauCOD:&lt;ui:outputURL value="{!v.myURL}" label="{!v.myURL}"/></pre>
+ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruauCOD:		<p>The previous example renders the following HTML.</p>
+ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruauCOD:		<pre>&lt;a href="http://www.google.com" dir="ltr" class="uiOutputURL">http://www.google.com&lt;/a></pre>
+ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruauCOD:	</ruau:description>	
+ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruauCOD:		<ruau:example name="outputExample" ref="uiExamples:outputExample" label="Using the Output Components">
+ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruauCOD:    	<p>This example shows how you can bind data to the output components by using component attributes.</p>
+ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruauCOD:	</ruau:example>
+ruau/ruau-components/src/main/components/ui/outputURL/outputURL.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/outputURL/outputURLRenderer.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/outputURL/outputURLRenderer.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/outputURL/outputURLRenderer.js: * you may not use this file except in compliance with the License.
@@ -2800,32 +2800,32 @@ ruau/ruau-components/src/main/components/ui/inputURL/inputURL.cmp:    limitation
 ruau/ruau-components/src/main/components/ui/inputURL/inputURL.cmp:<ruau:component access="GLOBAL" support="GA" extends="ui:inputText" extensible="true" description="An input field for entering a URL.">
 ruau/ruau-components/src/main/components/ui/inputURL/inputURL.cmp:    <ruau:set attribute="type" value="url"/>
 ruau/ruau-components/src/main/components/ui/inputURL/inputURL.cmp:</ruau:component>
-ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruaudoc:			A <code>ui:inputURL</code> component represents an input field for a URL, which is rendered as an HTML <code>input</code> tag of type <code>url</code>.
-ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruaudoc:			To render the output from a <code>ui:inputURL</code> component, use the <code>ui:outputURL</code> component.
-ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruaudoc:		<p>This is a basic set up of a <code>ui:inputURL</code> component.</p>
-ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruaudoc:		<pre>&lt;ui:inputURL ruau:id="url" label="Venue URL" class="field" value="http://www.myURL.com"/></pre>
-ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruaudoc:		<p>This example results in the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruaudoc:<pre>&lt;div class="uiInput uiInputText uiInputURL">
-ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruaudoc:    &lt;label class="uiLabel-left uiLabel">
-ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruaudoc:        &lt;span class="">Venue URL&lt;/span>
-ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruaudoc:    &lt;/label>
-ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruaudoc:    &lt;input class="field" aria-describedby="" placeholder="" type="url">
-ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruaudoc:	</ruau:description>	
-ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruaudoc:		<ruau:example name="inputTextExample" ref="uiExamples:inputExample" label="Using ui:inputURL">
-ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruaudoc:    	<p>This example shows a <code>ui:inputURL</code> component and a corresponding <code>ui:outputURL</code> component.</p>
-ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruaudoc:	</ruau:example>
-ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruauCOD:			A <code>ui:inputURL</code> component represents an input field for a URL, which is rendered as an HTML <code>input</code> tag of type <code>url</code>.
+ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruauCOD:			To render the output from a <code>ui:inputURL</code> component, use the <code>ui:outputURL</code> component.
+ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruauCOD:		<p>This is a basic set up of a <code>ui:inputURL</code> component.</p>
+ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruauCOD:		<pre>&lt;ui:inputURL ruau:id="url" label="Venue URL" class="field" value="http://www.myURL.com"/></pre>
+ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruauCOD:		<p>This example results in the following HTML.</p>
+ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruauCOD:<pre>&lt;div class="uiInput uiInputText uiInputURL">
+ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruauCOD:    &lt;label class="uiLabel-left uiLabel">
+ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruauCOD:        &lt;span class="">Venue URL&lt;/span>
+ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruauCOD:    &lt;/label>
+ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruauCOD:    &lt;input class="field" aria-describedby="" placeholder="" type="url">
+ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruauCOD:	</ruau:description>	
+ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruauCOD:		<ruau:example name="inputTextExample" ref="uiExamples:inputExample" label="Using ui:inputURL">
+ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruauCOD:    	<p>This example shows a <code>ui:inputURL</code> component and a corresponding <code>ui:outputURL</code> component.</p>
+ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruauCOD:	</ruau:example>
+ruau/ruau-components/src/main/components/ui/inputURL/inputURL.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/tab/tabRenderer.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/tab/tabRenderer.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/tab/tabRenderer.js: * you may not use this file except in compliance with the License.

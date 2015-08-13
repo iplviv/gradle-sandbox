@@ -90,7 +90,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js: *
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js: * limitations under the License.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:// Copyright (c) 2002 Douglas Crockford  (www.JSLint.com)
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:// Permission is hereby granted, free of charge, to any person obtaining a copy
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:// of this software and associated documentation files (the "Software"), to deal
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:// of this software and associated CODumentation files (the "Software"), to deal
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:// in the Software without restriction, including without limitation the rights
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:// copies of the Software, and to permit persons to whom the Software is
@@ -273,7 +273,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:  
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        block_var,     // vars defined in the current block
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:// browser contains a set of global names that are commonly provided by a
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        browser = array_to_object([
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            'clearInterval', 'clearTimeout', 'document', 'event', 'FormData',
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            'clearInterval', 'clearTimeout', 'CODument', 'event', 'FormData',
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            'frames', 'history', 'Image', 'localStorage', 'location', 'name',
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            'navigator', 'Option', 'parent', 'screen', 'sessionStorage',
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            'setInterval', 'setTimeout', 'Storage', 'window', 'XMLHttpRequest'
@@ -409,7 +409,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:  
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                "expression is the result of a function, and not the " +
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            wrap_regexp: "Wrap the /regexp/ literal in parens to " +
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:                "disambiguate the slash operator.",
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            write_is_wrong: "document.write can be a form of eval."
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:            write_is_wrong: "CODument.write can be a form of eval."
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        closure = array_to_object([
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        ], false),
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint.js:        couch = array_to_object([
@@ -2282,7 +2282,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.j
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js: * limitations under the License.
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:Copyright (c) 2002 Douglas Crockford  (www.JSLint.com)
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:Permission is hereby granted, free of charge, to any person obtaining a copy of
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:this software and associated documentation files (the "Software"), to deal in
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:this software and associated CODumentation files (the "Software"), to deal in
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:the Software without restriction, including without limitation the rights to
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:of the Software, and to permit persons to whom the Software is furnished to do
@@ -2346,7 +2346,7 @@ ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.j
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:    darksalmon, darkseagreen, darkslateblue, darkslategray, darkturquoise,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:    darkviolet, dd, debug, decodeURI, decodeURIComponent, deeppink,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:    deepskyblue, defaultStatus, defineClass, del, deserialize, dfn, dimgray,
-ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:    dir, direction, display, div, dl, document, dodgerblue, dt, edition,
+ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:    dir, direction, display, div, dl, CODument, dodgerblue, dt, edition,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:    entityify, eqeqeq, errors, escape, eval, event, evidence, evil, ex,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:    "first-letter", "first-line", float, floor, floralwhite, focus,
 ruau/ruau-util/src/main/resources/org/ruauframework/util/javascript/jslint2009.js:    focusWidget, font, "font-face", "font-family", "font-size",

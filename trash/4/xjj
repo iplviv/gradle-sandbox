@@ -1070,7 +1070,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        addExtension(".intf", NameFormat.BUNDLE, "markup", DefType.INTERFACE, Format.XML);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        addExtension(".xml", NameFormat.NAMESPACE, "markup", DefType.NAMESPACE, Format.XML);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        addExtension(".theme", NameFormat.BUNDLE, "markup", DefType.THEME, Format.XML);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        addExtension(".ruaudoc", NameFormat.BUNDLE, "markup", DefType.DOCUMENTATION, Format.XML);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        addExtension(".ruauCOD", NameFormat.BUNDLE, "markup", DefType.DOCUMENTATION, Format.XML);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        addExtension(".design", NameFormat.BUNDLE, "markup", DefType.DESIGN, Format.XML);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        addExtension(".svg", NameFormat.BUNDLE, "markup", DefType.SVG, Format.SVG);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/DescriptorFileMapper.java:        addExtension("Layouts.xml", NameFormat.BUNDLE, "markup", DefType.LAYOUTS, Format.XML);
@@ -1491,7 +1491,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceListen
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceListener.java:    static {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceListener.java:        extensions.put(DefDescriptor.DefType.APPLICATION, ".app");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceListener.java:        extensions.put(DefDescriptor.DefType.LAYOUTS, "Layouts.xml");
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceListener.java:        extensions.put(DefDescriptor.DefType.DOCUMENTATION, ".ruaudoc");
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceListener.java:        extensions.put(DefDescriptor.DefType.DOCUMENTATION, ".ruauCOD");
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceListener.java:    public void fileCreated(FileChangeEvent event) throws Exception {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceListener.java:        notifySourceChanges(event, SourceMonitorEvent.CREATED);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/source/file/FileSourceListener.java:    public void fileDeleted(FileChangeEvent event) throws Exception {
@@ -1874,7 +1874,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:    private static final long serialVersionUID = -3649366896204152939L;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:    protected final Map<DefDescriptor<AttributeDef>, AttributeDef> attributeDefs;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:    protected final List<DefDescriptor<ProviderDef>> providerDescriptors;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:    protected final DefDescriptor<DocumentationDef> documentationDescriptor;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:    protected final DefDescriptor<DocumentationDef> CODumentationDescriptor;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:    private final int hashCode;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:    private final SupportLevel support;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:        if (builder.attributeDefs == null || builder.attributeDefs.size() == 0) {
@@ -1882,7 +1882,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:            this.attributeDefs = Collections
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:                    .unmodifiableMap(new LinkedHashMap<DefDescriptor<AttributeDef>, AttributeDef>(builder.attributeDefs));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:        this.providerDescriptors = RuueUtil.immutableList(builder.providerDescriptors);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:        this.documentationDescriptor = builder.documentationDescriptor;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:        this.CODumentationDescriptor = builder.documentationDescriptor;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:        this.hashCode = RuueUtil.hashCode(descriptor, location, attributeDefs);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:    public void appendDependencies(Set<DefDescriptor<?>> dependencies) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:        super.appendDependencies(dependencies);
@@ -1900,7 +1900,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:        public Map<DefDescriptor<AttributeDef>, AttributeDef> attributeDefs;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:        private List<DefDescriptor<ProviderDef>> providerDescriptors;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:        private SupportLevel support;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:        private DefDescriptor<DocumentationDef> documentationDescriptor;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:        private DefDescriptor<DocumentationDef> CODumentationDescriptor;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:        public Builder(Class<T> defClass) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:            super(defClass);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:            this.attributeDefs = Maps.newLinkedHashMap();
@@ -1908,7 +1908,7 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:                this.providerDescriptors = Lists.newArrayList();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:            this.providerDescriptors.add(DefDescriptorImpl.getInstance(name, ProviderDef.class));
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:        public Builder<T> setDocumentation(String name) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:            documentationDescriptor = DefDescriptorImpl.getInstance(name, DocumentationDef.class);
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:            CODumentationDescriptor = DefDescriptorImpl.getInstance(name, DocumentationDef.class);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:         * Gets the attributeDefs for this instance.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:         * @return The attributeDefs.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:        public Map<DefDescriptor<AttributeDef>, AttributeDef> getAttributeDefs() {
@@ -1922,11 +1922,11 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:     * @return The primary provider def. If multiple exist, this will be the remote one.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:                if (!def.isLocal()) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:                    break;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:     * @return The documentation def, which explains the spirit and usage of this application or component.
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:     * @return The CODumentation def, which explains the spirit and usage of this application or component.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:    public DocumentationDef getDocumentationDef() throws QuickFixException {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:        DocumentationDef def = null;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:        if (documentationDescriptor != null) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:            def = documentationDescriptor.getDef();
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:        if (CODumentationDescriptor != null) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:            def = CODumentationDescriptor.getDef();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:     * Method to check if this is a Definition of an Interface/Abstract Component and if it has a local provider.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:     * @return True if there are no providers or there is a local provider False if there is only a remtre provider and
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/RootDefinitionImpl.java:     *         no local provider
@@ -2233,11 +2233,11 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:            super(LibraryDef.class);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:         * @see org.ruauframework.impl.system.DefinitionImpl.BuilderImpl#build()
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:        public LibraryDefImpl build() {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:            // Lookup associated documentation in present:
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:            DefDescriptor<DocumentationDef> documentationDescriptor = DefDescriptorImpl.getAssociateDescriptor(
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:            // Lookup associated CODumentation in present:
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:            DefDescriptor<DocumentationDef> CODumentationDescriptor = DefDescriptorImpl.getAssociateDescriptor(
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:                    getDescriptor(), DocumentationDef.class, DefDescriptor.MARKUP_PREFIX
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:            if (documentationDescriptor.exists()) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:                setDocumentation(documentationDescriptor.getQualifiedName());
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:            if (CODumentationDescriptor.exists()) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:                setDocumentation(CODumentationDescriptor.getQualifiedName());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/library/LibraryDefImpl.java:            return new LibraryDefImpl(this);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/ComponentDefRefArrayImpl.java: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/component/ComponentDefRefArrayImpl.java: * Licensed under the Apache License, Version 2.0 (the "License");

@@ -182,36 +182,36 @@ ruau/ruau-components/src/main/components/ui/spinner/spinner.cmp:    <div ruau:id
 ruau/ruau-components/src/main/components/ui/spinner/spinner.cmp:        <div class="loading">
 ruau/ruau-components/src/main/components/ui/spinner/spinner.cmp:        	<ui:image class="spinner-img" src="/ruauFW/resources/ruau/images/spinner.gif" alt="Loading" />
 ruau/ruau-components/src/main/components/ui/spinner/spinner.cmp:</ruau:component>
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:	        To toggle the spinner, use <code>get("e.toggle")</code>, set the <code>isVisible</code> parameter to <code>true</code> or <code>false</code>, and then fire the event.
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:	    <p>This example shows a spinner when a component is expecting a server response and removes the spinner when the component is no longer waiting for a response.</p>
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:<pre>&lt;ruau:component>
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:    &lt;ruau:handler event="ruau:waiting" action="{!c.showSpinner}"/>
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:    &lt;ruau:handler event="ruau:doneWaiting" action="{!c.hideSpinner}"/>
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:   &lt;center>&lt;ui:spinner ruau:id="spinner"/>&lt;/center>
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:&lt;/ruau:component></pre>
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:	<p>This client-side controllers shows and hides the spinner accordingly.</p>
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:        var spinner = component.find('spinner');
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:        var evt = spinner.get("e.toggle");
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:        evt.setParams({ isVisible : true });
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:       var spinner = component.find('spinner');
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:       var evt = spinner.get("e.toggle");
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:       evt.setParams({ isVisible : false });
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:	</ruau:description>	
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:		<ruau:example name="spinner" ref="ruaudocs:demoSpinner" label="Using ui:spinner">
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:    	<p>This example shows a spinner that can be toggled.</p>
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:	   </ruau:example>
-ruau/ruau-components/src/main/components/ui/spinner/spinner.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruauCOD:	        To toggle the spinner, use <code>get("e.toggle")</code>, set the <code>isVisible</code> parameter to <code>true</code> or <code>false</code>, and then fire the event.
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruauCOD:	    <p>This example shows a spinner when a component is expecting a server response and removes the spinner when the component is no longer waiting for a response.</p>
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruauCOD:<pre>&lt;ruau:component>
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruauCOD:    &lt;ruau:handler event="ruau:waiting" action="{!c.showSpinner}"/>
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruauCOD:    &lt;ruau:handler event="ruau:doneWaiting" action="{!c.hideSpinner}"/>
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruauCOD:   &lt;center>&lt;ui:spinner ruau:id="spinner"/>&lt;/center>
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruauCOD:&lt;/ruau:component></pre>
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruauCOD:	<p>This client-side controllers shows and hides the spinner accordingly.</p>
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruauCOD:        var spinner = component.find('spinner');
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruauCOD:        var evt = spinner.get("e.toggle");
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruauCOD:        evt.setParams({ isVisible : true });
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruauCOD:       var spinner = component.find('spinner');
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruauCOD:       var evt = spinner.get("e.toggle");
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruauCOD:       evt.setParams({ isVisible : false });
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruauCOD:	</ruau:description>	
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruauCOD:		<ruau:example name="spinner" ref="ruaudocs:demoSpinner" label="Using ui:spinner">
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruauCOD:    	<p>This example shows a spinner that can be toggled.</p>
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruauCOD:	   </ruau:example>
+ruau/ruau-components/src/main/components/ui/spinner/spinner.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/spinner/spinnerController.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/spinner/spinnerController.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/spinner/spinnerController.js: * you may not use this file except in compliance with the License.
@@ -478,31 +478,31 @@ ruau/ruau-components/src/main/components/ui/dialog/dialogController.js:        v
 ruau/ruau-components/src/main/components/ui/dialog/dialogController.js:        closeEvent.setParams({
 ruau/ruau-components/src/main/components/ui/dialog/dialogController.js:            dialog : cmp,
 ruau/ruau-components/src/main/components/ui/dialog/dialogController.js:            confirmClicked : false
-ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:			To use <code>ui:dialog</code>, include one instance of <code>ui:dialogManager</code> component at the end of your component.
-ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:			Only one instance of <code>ui:dialogManager</code> is required to handle multiple dialogs.
-ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:			To handle the opening and closing of your dialogs, use the <code>ui:openDialog</code> and <code>ui:closeDialog</code> application events.
-ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:			To prevent the dialog from being closed when you click outside of the dialog area, set <code>clickOutToClose="false"</code>.
-ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:		   You can use the default buttons by placing the <code>ui:dialogButtons</code> component in the <code>&lt;ruau:set attribute="buttons"&gt;</code> tag.     
-ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:		   Setting <code>&lt;ui:dialogButtons defaultButtons="both"&gt;</code> provides default OK and Cancel buttons, but you can provide your own buttons using <code>ui:button</code> components.
-ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:	</ruau:description>	
-ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:		<ruau:example name="dialog" ref="ruaudocs:demoDialog" label="Creating an Overlay Dialog">
-ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:    	<p>This example shows an overlay dialog.</p>
-ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:	   </ruau:example>
-ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:	   <ruau:example name="dialog1" ref="ruaudocs:demoModal" label="Creating a Modal Dialog">
-ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:	   <p>This demo shows a modal dialog, which is set using <code>isModal="true"</code>.</p>
-ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:	   </ruau:example>
-ruau/ruau-components/src/main/components/ui/dialog/dialog.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/dialog/dialog.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/dialog/dialog.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/dialog/dialog.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/dialog/dialog.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/dialog/dialog.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/dialog/dialog.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/dialog/dialog.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/dialog/dialog.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/dialog/dialog.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/dialog/dialog.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/dialog/dialog.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/dialog/dialog.ruauCOD:			To use <code>ui:dialog</code>, include one instance of <code>ui:dialogManager</code> component at the end of your component.
+ruau/ruau-components/src/main/components/ui/dialog/dialog.ruauCOD:			Only one instance of <code>ui:dialogManager</code> is required to handle multiple dialogs.
+ruau/ruau-components/src/main/components/ui/dialog/dialog.ruauCOD:			To handle the opening and closing of your dialogs, use the <code>ui:openDialog</code> and <code>ui:closeDialog</code> application events.
+ruau/ruau-components/src/main/components/ui/dialog/dialog.ruauCOD:			To prevent the dialog from being closed when you click outside of the dialog area, set <code>clickOutToClose="false"</code>.
+ruau/ruau-components/src/main/components/ui/dialog/dialog.ruauCOD:		   You can use the default buttons by placing the <code>ui:dialogButtons</code> component in the <code>&lt;ruau:set attribute="buttons"&gt;</code> tag.     
+ruau/ruau-components/src/main/components/ui/dialog/dialog.ruauCOD:		   Setting <code>&lt;ui:dialogButtons defaultButtons="both"&gt;</code> provides default OK and Cancel buttons, but you can provide your own buttons using <code>ui:button</code> components.
+ruau/ruau-components/src/main/components/ui/dialog/dialog.ruauCOD:	</ruau:description>	
+ruau/ruau-components/src/main/components/ui/dialog/dialog.ruauCOD:		<ruau:example name="dialog" ref="ruaudocs:demoDialog" label="Creating an Overlay Dialog">
+ruau/ruau-components/src/main/components/ui/dialog/dialog.ruauCOD:    	<p>This example shows an overlay dialog.</p>
+ruau/ruau-components/src/main/components/ui/dialog/dialog.ruauCOD:	   </ruau:example>
+ruau/ruau-components/src/main/components/ui/dialog/dialog.ruauCOD:	   <ruau:example name="dialog1" ref="ruaudocs:demoModal" label="Creating a Modal Dialog">
+ruau/ruau-components/src/main/components/ui/dialog/dialog.ruauCOD:	   <p>This demo shows a modal dialog, which is set using <code>isModal="true"</code>.</p>
+ruau/ruau-components/src/main/components/ui/dialog/dialog.ruauCOD:	   </ruau:example>
+ruau/ruau-components/src/main/components/ui/dialog/dialog.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/actionButton/actionButton.cmp:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/actionButton/actionButton.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/actionButton/actionButton.cmp:    you may not use this file except in compliance with the License.
@@ -910,7 +910,7 @@ ruau/ruau-components/src/main/components/ui/panelDialog/panelDialog.cmp:	     	 
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialog.cmp:         	 role="dialog" 
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialog.cmp:             aria-labeled-by="{!'title_' + globalId}"
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialog.cmp:	         style="display:none">
-ruau/ruau-components/src/main/components/ui/panelDialog/panelDialog.cmp:	        <div role="document" class="{! v.body.length || v.detail ? 'headerAndBody' : 'headerOnly' }"> 
+ruau/ruau-components/src/main/components/ui/panelDialog/panelDialog.cmp:	        <div role="CODument" class="{! v.body.length || v.detail ? 'headerAndBody' : 'headerOnly' }"> 
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialog.cmp:                <span class="assistiveText">{!$Label.Global.startOfDialog}</span>
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialog.cmp:    	       	<ui:header class="titleBar modalWindow">
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialog.cmp:    	        	<ruau:renderIf isTrue="{! v.title != '' &amp;&amp; v.title != null}">
@@ -989,7 +989,7 @@ ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:   
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:                	panelId: cmp.getGlobalId(),
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:                	isTransient: cmp.get('v.isTransient')
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:        // remove key event listener when modal is hidden
-ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:		$A.util.removeOn(document, "keydown", cmp._windowKeyHandler);
+ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:		$A.util.removeOn(CODument, "keydown", cmp._windowKeyHandler);
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:        $A.get('e.ui:panelTransitionBegin').setParams({ panel: cmp, isOpening: false }).fire();
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:        //trigger animation
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:        panel.addEventListener(animEnd, finishHandler, false);
@@ -1042,7 +1042,7 @@ ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:   
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:                // This is use by the WebDriver test to detect that the sliding animation is done.
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:                $A.util.addClass(panel, 'panelReady');
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:                // add key event listener when modal is shown
-ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:        		$A.util.on(document, "keydown", cmp._windowKeyHandler);		
+ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:        		$A.util.on(CODument, "keydown", cmp._windowKeyHandler);		
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:        //move the dialog to the right position
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:        if (!isModal) {
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:        $A.get('e.ui:panelTransitionBegin').setParams({ panel: cmp, isOpening: true }).fire();
@@ -1070,14 +1070,14 @@ ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:   
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:            // Vertical alignment
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:            // getBoundingClientRect method does not return height and width in IE7 and Ie8
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:            var height = typeof panelElemRect.height != 'undefined' ? panelElemRect.height : panelElemRect.bottom - panelElemRect.top;
-ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:            var scrollY = document.documentElement.scrollTop;
+ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:            var scrollY = CODument.documentElement.scrollTop;
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:            if ((viewPort.height - referenceElemRect.bottom) < height) { // no enough space below
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:                if (referenceElemRect.top < height) { // no enough space above either. Put it in the middle then
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:                } else { // put it above
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:            // Horizontal alignment
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:            // getBoundingClientRect method does not return height and width in IE7 and Ie8
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:            var width = typeof panelElemRect.width != 'undefined' ? panelElemRect.width : panelElemRect.right - panelElemRect.left;
-ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:            var scrollX = document.documentElement.scrollLeft;
+ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:            var scrollX = CODument.documentElement.scrollLeft;
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:     * Returns the modal glass element to panel manager to stack the zIndex
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:    getModalGlassElement: function(cmp) {
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:    	var el = null,
@@ -1106,7 +1106,7 @@ ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:   
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:    	while (!containedCmp && p.isInstanceOf("ui:panelDialog")) {
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:    		containedCmp = p.find(localId);
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:    	return containedCmp;
-ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:	        var styles = window.getComputedStyle(document.documentElement, ''),
+ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:	        var styles = window.getComputedStyle(CODument.documentElement, ''),
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:	            pre = (Array.prototype.slice.call(styles).join('').match(/-(moz|webkit|ms)-/) || (styles.OLink === '' && ['', 'o']))[1],
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:	        this._prefix = up ? pre.toUpperCase() : pre;
 ruau/ruau-components/src/main/components/ui/panelDialog/panelDialogHelper.js:	getAnimationEndEventName: function () {

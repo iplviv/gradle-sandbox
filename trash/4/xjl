@@ -910,10 +910,10 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComp
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:            if (templateName != null) {
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:                builder.templateDefDescriptor = DefDescriptorImpl.getInstance(
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:                        templateName, ComponentDef.class);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:            DefDescriptor<DocumentationDef> documentationDescriptor = DefDescriptorImpl.getAssociateDescriptor(
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:            DefDescriptor<DocumentationDef> CODumentationDescriptor = DefDescriptorImpl.getAssociateDescriptor(
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:                    builder.getDescriptor(), DocumentationDef.class, DefDescriptor.MARKUP_PREFIX);
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:            if (mdr.exists(documentationDescriptor)) {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:                builder.setDocumentation(documentationDescriptor.getQualifiedName());
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:            if (mdr.exists(CODumentationDescriptor)) {
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:                builder.setDocumentation(CODumentationDescriptor.getQualifiedName());
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:            DefDescriptor<DesignDef> designDescriptor = DefDescriptorImpl.getAssociateDescriptor(
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:                    builder.getDescriptor(), DesignDef.class, DefDescriptor.MARKUP_PREFIX);
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/BaseComponentDefHandler.java:            DefDescriptor<SVGDef> svgDescriptor = DefDescriptorImpl.getAssociateDescriptor(builder.getDescriptor(),
@@ -1265,12 +1265,12 @@ ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/Document
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DocumentationDefHandler.java:import javax.xml.stream.XMLStreamReader;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DocumentationDefHandler.java:import org.ruauframework.builder.RootDefinitionBuilder;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DocumentationDefHandler.java:import org.ruauframework.def.*;
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DocumentationDefHandler.java:import org.ruauframework.impl.documentation.DocumentationDefImpl;
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DocumentationDefHandler.java:import org.ruauframework.impl.CODumentation.DocumentationDefImpl;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DocumentationDefHandler.java:import org.ruauframework.system.Source;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DocumentationDefHandler.java:import org.ruauframework.throwable.quickfix.QuickFixException;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DocumentationDefHandler.java:import org.ruauframework.util.RuueTextUtil;
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DocumentationDefHandler.java:public class DocumentationDefHandler extends RootTagHandler<DocumentationDef> {
-ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DocumentationDefHandler.java:    public static final String TAG = "ruau:documentation";
+ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DocumentationDefHandler.java:    public static final String TAG = "ruau:CODumentation";
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DocumentationDefHandler.java:    protected final static Set<String> ALLOWED_ATTRIBUTES = Collections.emptySet();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DocumentationDefHandler.java:    private final DocumentationDefImpl.Builder builder = new DocumentationDefImpl.Builder();
 ruau/ruau-impl/src/main/java/org/ruauframework/impl/root/parser/handler/DocumentationDefHandler.java:    private int idCounter = 0;

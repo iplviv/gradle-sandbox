@@ -496,23 +496,23 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        *
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * @params items {HTMLElement[]} Array of items to insert in the scroller
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * @method _prependData
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        _prependData: function (items) {
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var docfrag = w.document.createDocumentFragment(),
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var CODfrag = w.document.createDocumentFragment(),
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                scrollerContainer = this.scroller,
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                ptrContainer = scrollerContainer.firstChild;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            items.forEach(function (i) {
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                docfrag.appendChild(i);
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                CODfrag.appendChild(i);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            if (scrollerContainer.lastChild === ptrContainer) {
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                scrollerContainer.appendChild(docfrag);
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                scrollerContainer.insertBefore(docfrag, ptrContainer.nextSibling);
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                scrollerContainer.appendChild(CODfrag);
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                scrollerContainer.insertBefore(CODfrag, ptrContainer.nextSibling);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * Append an Array of elements into the scroller.
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * This function is overriden by SurfaceManager to allow a custom DOM manipulation.
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * @params items {HTMLElement[]} Array of items to insert in the scroller
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * @method _appendData
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        _appendData: function (items) {
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var docfrag           = w.document.createDocumentFragment(),
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var CODfrag           = w.document.createDocumentFragment(),
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                scrollerContainer = this.scroller,
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                docfrag.appendChild(items[i]);
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            scrollerContainer.appendChild(docfrag);
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                CODfrag.appendChild(items[i]);
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            scrollerContainer.appendChild(CODfrag);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * Scroll to a {x,y} position, given a specific time and easing function.
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * If `useCSSTransition: true`, the CSS changes are applied to the scroller.
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        * Otherwise, an animation that interpolates
@@ -630,9 +630,9 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:         
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            this._initializeSurfaces();
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            this._initializePositions();
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        _destroySurfaceManager: function () {
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var docfrag = w.document.createDocumentFragment();
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            this.items.forEach(function (i) {docfrag.appendChild(i.dom);});
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            this.scroller.appendChild(docfrag);
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var CODfrag = w.document.createDocumentFragment();
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            this.items.forEach(function (i) {CODfrag.appendChild(i.dom);});
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            this.scroller.appendChild(CODfrag);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            this.surfacesPool       = [];
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            this.surfacesPositioned = [];
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        _bootstrapItems: function () {
@@ -649,7 +649,7 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:         
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                heightSum     += this._attachItemInSurface(item, surface, {index: i, offset: heightSum});
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                positioned[i] = surface;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        _createSurfaceDOM: function (options, domContent) {
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var rawSurface   = w.document.createElement('div'),
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var rawSurface   = w.CODument.createElement('div'),
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                surfaceStyle = rawSurface.style;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            rawSurface.className = options['class'] ? 'surface ' + options['class'] : 'surface';
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            surfaceStyle.height  = options.height && options.height + 'px';
@@ -694,13 +694,13 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:         
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            surface.offset       = null;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            surface.dom.removeChild(surface.dom.firstChild);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        _attachSurfaces: function (surfaces) {
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var docfrag = w.document.createDocumentFragment(),
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var CODfrag = w.document.createDocumentFragment(),
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                surface, i;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            for (i = 0 ; i < surfaces.length; i++) {
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                surface = surfaces[i];
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                docfrag.appendChild(surface.dom);
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                CODfrag.appendChild(surface.dom);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                this.surfacesPool.push(surface);
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            this.scroller.appendChild(docfrag);
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            this.scroller.appendChild(CODfrag);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        _getAvailableSurface: function () {
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var pool = this.surfacesPool,
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                surfaces, surface;
@@ -918,7 +918,7 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:         
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            'border:1px solid rgba(255,255,255,0.9)',
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            'border-radius:3px'
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:    function Indicator (scroller, options) {
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        this.wrapper        = typeof options.el === 'string' ? document.querySelector(options.el) : options.el;
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        this.wrapper        = typeof options.el === 'string' ? CODument.querySelector(options.el) : options.el;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        this.indicator      = this.wrapper.children[0];
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        this.indicatorStyle = this.indicator.style;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        this.scrollVertical = scroller.scrollVertical;
@@ -1122,8 +1122,8 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:         
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                el          : scrollbar,
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                interactive : interactive
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        _createDefaultScrollbar: function (vertical, interactive, customStyle) {
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var scrollbar            = w.document.createElement('div'),
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                indicator            = w.document.createElement('div'),
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var scrollbar            = w.CODument.createElement('div'),
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                indicator            = w.CODument.createElement('div'),
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                inlineStyleScrollbar = DEFAULT_STYLE_SCROLLBAR,
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                inlineStyleIndicator = DEFAULT_STYLE_INDICATOR;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            indicator.className     = 'scrollbar';
@@ -1165,7 +1165,7 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        C
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        CLASS_LABEL        = 'label',
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            this.on('_initialize', this._appendPullToRefresh);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        _createPullToRefreshMarkup: function () {
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var ptr_container = w.document.createElement('div'),
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var ptr_container = w.CODument.createElement('div'),
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                pullLabel     = this.opts.pullToRefreshConfig.labelPull,
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                subtitleLabel = this.opts.pullToRefreshConfig.labelSubtitle;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            ptr_container.innerHTML = [
@@ -1280,7 +1280,7 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:         
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            if (!this._ptlLoading) {
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                this._setPTLLoadingState(true);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        _createPullToLoadMarkup: function () {
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var ptl_container = w.document.createElement('div'),
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var ptl_container = w.CODument.createElement('div'),
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            pullLabel     = this.opts.pullToLoadMoreConfig.labelPull,
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            subtitleLabel = this.opts.pullToLoadMoreConfig.labelSubtitle;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            ptl_container.innerHTML = [
@@ -1290,7 +1290,7 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:         
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            ptl_container.className = CLASS_PTL;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            return ptl_container;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        _createPullToLoadSpacer: function () {
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var ptl_spacer = w.document.createElement('div');
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var ptl_spacer = w.CODument.createElement('div');
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            ptl_spacer.classList.add('spacer-pull-to-load-more');
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            return ptl_spacer;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var spacer = this.ptlSpacer,
@@ -1311,14 +1311,14 @@ ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:         
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            this._ptlSnapTime   = PULL_TO_SNAP_TIME;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            this.togglePullToLoadMore(this.opts.pullToLoadMore, true);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        _appendData: function (items) {
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var docfrag = w.document.createDocumentFragment(),
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            var CODfrag = w.document.createDocumentFragment(),
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                scrollerContainer = this.scroller,
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                ptlContainer = this.ptlSpacer;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            items.forEach(function (i) {
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                docfrag.appendChild(i);
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                CODfrag.appendChild(i);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            if (ptlContainer) {
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                scrollerContainer.insertBefore(docfrag, ptlContainer);
-ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                scrollerContainer.appendChild(docfrag);
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                scrollerContainer.insertBefore(CODfrag, ptlContainer);
+ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:                scrollerContainer.appendChild(CODfrag);
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        _ptlIsEnabled: function () {
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:            return this.opts.pullToLoadMore;
 ruau/ruau-components/src/main/components/ui/scroller/scrollerHelper.js:        _ptlToggle: function (action, force) {
@@ -1851,29 +1851,29 @@ ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColum
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckbox.cmp:    <label class="{!v.labelClass?v.labelClass:null}" for="{!'ui:listViewColumnCheckbox:'+globalId}">{!v.label}</label>
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckbox.cmp:    <input class="{!v.class?v.class:null}" id="{!'ui:listViewColumnCheckbox:'+globalId}" type="checkbox" checked="{!v.checked=='true'||v.checked==true?'checked':null}" onclick="{!c.changeHandler}" />
 ruau/ruau-components/src/main/components/ui/listViewColumnCheckbox/listViewColumnCheckbox.cmp:</ruau:component>
-ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:			A <code>ui:outputEmail</code> component represents an email output that is wrapped in an HTML <code>span</code> tag.
-ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:			This component can be used with <code>ui:inputEmail</code>, which takes in an email input. 
-ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:			The email output is wrapped in an HTML anchor element and <code>mailto</code> is automatically appended to it.
-ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:			This is a simple set up of a <code>ui:outputEmail</code> component.
-ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:		<pre>&lt;ui:outputEmail value="abc@email.com" label="abc@email.com"/></pre>
-ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:		<p>The previous example renders the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:		<pre>&lt;a href="mailto:abc@email.com" class="uiOutputEmail">abc@email.com&lt;/span></pre>
-ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:	</ruau:description>	
-ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:	<ruau:example name="outputExample" ref="uiExamples:outputExample" label="Using the Output Components">
-ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:    	<p>This example shows how you can bind data to the output components by using component attributes.</p>
-ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:	</ruau:example>
-ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruauCOD:			A <code>ui:outputEmail</code> component represents an email output that is wrapped in an HTML <code>span</code> tag.
+ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruauCOD:			This component can be used with <code>ui:inputEmail</code>, which takes in an email input. 
+ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruauCOD:			The email output is wrapped in an HTML anchor element and <code>mailto</code> is automatically appended to it.
+ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruauCOD:			This is a simple set up of a <code>ui:outputEmail</code> component.
+ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruauCOD:		<pre>&lt;ui:outputEmail value="abc@email.com" label="abc@email.com"/></pre>
+ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruauCOD:		<p>The previous example renders the following HTML.</p>
+ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruauCOD:		<pre>&lt;a href="mailto:abc@email.com" class="uiOutputEmail">abc@email.com&lt;/span></pre>
+ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruauCOD:	</ruau:description>	
+ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruauCOD:	<ruau:example name="outputExample" ref="uiExamples:outputExample" label="Using the Output Components">
+ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruauCOD:    	<p>This example shows how you can bind data to the output components by using component attributes.</p>
+ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruauCOD:	</ruau:example>
+ruau/ruau-components/src/main/components/ui/outputEmail/outputEmail.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/outputEmail/outputEmailTest.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/outputEmail/outputEmailTest.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/outputEmail/outputEmailTest.js: * you may not use this file except in compliance with the License.
@@ -2644,29 +2644,29 @@ ruau/ruau-components/src/main/components/ui/carousel/carousel.cmp:					</nav>
 ruau/ruau-components/src/main/components/ui/carousel/carousel.cmp:				</ruau:if>		          
 ruau/ruau-components/src/main/components/ui/carousel/carousel.cmp:		</article>		
 ruau/ruau-components/src/main/components/ui/carousel/carousel.cmp:</ruau:component>
-ruau/ruau-components/src/main/components/ui/carousel/carousel.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/carousel/carousel.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/carousel/carousel.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/carousel/carousel.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/carousel/carousel.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/carousel/carousel.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/carousel/carousel.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/carousel/carousel.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/carousel/carousel.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/carousel/carousel.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/carousel/carousel.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/carousel/carousel.ruaudoc:			<code>ui:carousel</code> displays a list of items horizontally where users can swipe through the list or click through the page indicators. 
-ruau/ruau-components/src/main/components/ui/carousel/carousel.ruaudoc:			Note that the carousel will not be accessible if <code>visible="false"</code> is set on the <code>ui:carouselPageIndicatorItem</code>, since this setting hides the page indicators from view. 
-ruau/ruau-components/src/main/components/ui/carousel/carousel.ruaudoc:			Similarly, <code>continuousFlow="true"</code> hides the page indicators from view.
-ruau/ruau-components/src/main/components/ui/carousel/carousel.ruaudoc:		    You can use <code>ui:carouselPage</code> in a <code>ui:carousel</code> component to create carousel pages.
-ruau/ruau-components/src/main/components/ui/carousel/carousel.ruaudoc:		    To add carousel pages, use <code>&lt;ruau:set attribute="pageComponents"&gt;</code> in the <code>ui:carousel</code> component and nest the <code>ui:carouselPage</code> components in the <code>ruau:set</code> tag.</p>
-ruau/ruau-components/src/main/components/ui/carousel/carousel.ruaudoc:		    For a continuous horizontal flow, use the <code>continuousFlow="true"</code> attribute in <code>ui:carousel</code>.
-ruau/ruau-components/src/main/components/ui/carousel/carousel.ruaudoc:		    <p>If multiple carousels are used, specify the <code>width</code> and <code>height</code> attributes for each carousel. Additionally, ensure that the child carousel has a smaller dimension than its parent carousel. If the <code>width</code> and <code>height</code> attributes are not specified, these values default to the screen length and height.</p>
-ruau/ruau-components/src/main/components/ui/carousel/carousel.ruaudoc:	</ruau:description>	
-ruau/ruau-components/src/main/components/ui/carousel/carousel.ruaudoc:		<ruau:example name="carousel" ref="ruaudocs:demoCarousel" label="Using ui:carousel">
-ruau/ruau-components/src/main/components/ui/carousel/carousel.ruaudoc:    	<p>This example shows a carousel that loads content from a client-side model.</p>
-ruau/ruau-components/src/main/components/ui/carousel/carousel.ruaudoc:	</ruau:example>
-ruau/ruau-components/src/main/components/ui/carousel/carousel.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/carousel/carousel.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/carousel/carousel.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/carousel/carousel.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/carousel/carousel.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/carousel/carousel.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/carousel/carousel.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/carousel/carousel.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/carousel/carousel.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/carousel/carousel.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/carousel/carousel.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/carousel/carousel.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/carousel/carousel.ruauCOD:			<code>ui:carousel</code> displays a list of items horizontally where users can swipe through the list or click through the page indicators. 
+ruau/ruau-components/src/main/components/ui/carousel/carousel.ruauCOD:			Note that the carousel will not be accessible if <code>visible="false"</code> is set on the <code>ui:carouselPageIndicatorItem</code>, since this setting hides the page indicators from view. 
+ruau/ruau-components/src/main/components/ui/carousel/carousel.ruauCOD:			Similarly, <code>continuousFlow="true"</code> hides the page indicators from view.
+ruau/ruau-components/src/main/components/ui/carousel/carousel.ruauCOD:		    You can use <code>ui:carouselPage</code> in a <code>ui:carousel</code> component to create carousel pages.
+ruau/ruau-components/src/main/components/ui/carousel/carousel.ruauCOD:		    To add carousel pages, use <code>&lt;ruau:set attribute="pageComponents"&gt;</code> in the <code>ui:carousel</code> component and nest the <code>ui:carouselPage</code> components in the <code>ruau:set</code> tag.</p>
+ruau/ruau-components/src/main/components/ui/carousel/carousel.ruauCOD:		    For a continuous horizontal flow, use the <code>continuousFlow="true"</code> attribute in <code>ui:carousel</code>.
+ruau/ruau-components/src/main/components/ui/carousel/carousel.ruauCOD:		    <p>If multiple carousels are used, specify the <code>width</code> and <code>height</code> attributes for each carousel. Additionally, ensure that the child carousel has a smaller dimension than its parent carousel. If the <code>width</code> and <code>height</code> attributes are not specified, these values default to the screen length and height.</p>
+ruau/ruau-components/src/main/components/ui/carousel/carousel.ruauCOD:	</ruau:description>	
+ruau/ruau-components/src/main/components/ui/carousel/carousel.ruauCOD:		<ruau:example name="carousel" ref="ruaudocs:demoCarousel" label="Using ui:carousel">
+ruau/ruau-components/src/main/components/ui/carousel/carousel.ruauCOD:    	<p>This example shows a carousel that loads content from a client-side model.</p>
+ruau/ruau-components/src/main/components/ui/carousel/carousel.ruauCOD:	</ruau:example>
+ruau/ruau-components/src/main/components/ui/carousel/carousel.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/copy/copy.evt:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/copy/copy.evt:    Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/copy/copy.evt:    you may not use this file except in compliance with the License.
@@ -2829,27 +2829,27 @@ ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:			fo
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:						item.set('v.isAscending', selectedItems[i].ascending);
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:			this.updateSortOrder(cmp);
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:	attachEventHandler : function(cmp) {
-ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:		$A.util.on(document, 'keydown', this.getKeydownHandler(cmp));
-ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:		$A.util.on(document.body, this.getOnClickEventProp("onClickStartEvent"), this.getOnClickStartFunction(cmp));
+ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:		$A.util.on(CODument, 'keydown', this.getKeydownHandler(cmp));
+ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:		$A.util.on(CODument.body, this.getOnClickEventProp("onClickStartEvent"), this.getOnClickStartFunction(cmp));
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:        $A.util.on(window, 'orientationchange', this.getOrientationChangeHandler(cmp));
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:	removeEventHandler : function(cmp) {
-ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:		$A.util.removeOn(document, 'keydown', this.getKeydownHandler(cmp));
-ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:		$A.util.removeOn(document.body, this.getOnClickEventProp("onClickStartEvent"), this.getOnClickStartFunction(cmp));
+ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:		$A.util.removeOn(CODument, 'keydown', this.getKeydownHandler(cmp));
+ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:		$A.util.removeOn(CODument.body, this.getOnClickEventProp("onClickStartEvent"), this.getOnClickStartFunction(cmp));
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:        $A.util.removeOn(window, 'orientationchange', this.getOrientationChangeHandler(cmp));
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:	appendElementToBody : function(cmp) {
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:		if (!cmp.get('v.modal')) {
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:		var id = this.CONSTANTS.CONTAINER_ELEMENT_ID;
-ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:		var containerEl = document.getElementById(id);
+ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:		var containerEl = CODument.getElementById(id);
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:		var maskEl = cmp.find('mask').getElement();
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:		var sorterEl = cmp.find('sorterContainer').getElement();
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:		if (!containerEl) {
-ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:			//attach the dom to the document body as a modal dialog
-ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:    		containerEl = document.createElement('div');
+ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:			//attach the dom to the CODument body as a modal dialog
+ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:    		containerEl = CODument.createElement('div');
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:    		containerEl.setAttribute('id', id);
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:    		$A.util.addClass(containerEl, cmp.getConcreteComponent().getDef().getStyleClassName());
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:    		containerEl.appendChild(maskEl);
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:    		containerEl.appendChild(sorterEl);    		
-ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:    		document.getElementsByTagName("body")[0].appendChild(containerEl);
+ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:    		CODument.getElementsByTagName("body")[0].appendChild(containerEl);
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:		} else if (!$A.util.contains(containerEl, sorterEl)) {
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:			containerEl.appendChild(maskEl);
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:			containerEl.appendChild(sorterEl);
@@ -2880,7 +2880,7 @@ ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:    	
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:			cmp._keydownHandler = function(event) {
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:		            case 9: // tab key, keep focus inside the dialog
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:		            	var container = cmp.find('sorterContainer').getElement(),
-ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:		    			currentFocus = document.activeElement,
+ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:		    			currentFocus = CODument.activeElement,
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:		    			applyBtn = cmp.find('set').getElement();  	
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:	                    if (currentFocus === applyBtn && !shiftPressed) {
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:	                        $A.util.squash(event, true);
@@ -2923,7 +2923,7 @@ ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:     
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:        if (!$A.util.isUndefined(cached)) {
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:            return cached;
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:        // fill the cache
-ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:        this.getOnClickEventProp.cache["isTouchDevice"] = !$A.util.isUndefined(document.ontouchstart);
+ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:        this.getOnClickEventProp.cache["isTouchDevice"] = !$A.util.isUndefined(CODument.ontouchstart);
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:        if (this.getOnClickEventProp.cache["isTouchDevice"]) {
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:            this.getOnClickEventProp.cache["onClickStartEvent"] = "touchstart";
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:            this.getOnClickEventProp.cache["onClickEndEvent"] = "touchend";
@@ -2939,7 +2939,7 @@ ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:	    
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:	        for (var index = 0; index < componentElements.length ; index++) {
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:	        currentNode = currentNode.parentNode;
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:	    return false;
-ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:    	var containerEl = document.getElementById(this.CONSTANTS.CONTAINER_ELEMENT_ID);
+ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:    	var containerEl = CODument.getElementById(this.CONSTANTS.CONTAINER_ELEMENT_ID);
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:    	if (containerEl) {
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:    		$A.util.removeElement(containerEl);
 ruau/ruau-components/src/main/components/ui/listSorter/listSorterHelper.js:    	var sorterMenu = cmp.find('sorterMenu');

@@ -36,7 +36,7 @@ ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:     * m
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:     * enough so that we don't really care.
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:    private final static long WIGGLE_FACTOR = (1000L * 60 * 60 * 1);
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:     * Submit a request and check that the 'long cache' is set correctly.
-ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:     * See documentation for {@link #WIGGLE_FACTOR}.
+ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:     * See CODumentation for {@link #WIGGLE_FACTOR}.
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:     * @param url the url
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:    private void assertResponseSetToLongCache(String url) throws Exception {
 ruau/ruau/src/test/java/org/ruauframework/http/RuueServletHttpTest.java:        Date expected = new Date(System.currentTimeMillis() + RuueBaseServlet.LONG_EXPIRE - WIGGLE_FACTOR);
@@ -643,14 +643,14 @@ ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingUITest.java:    
 ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingUITest.java:        findDomElement(By.cssSelector(".update")).click();
 ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingUITest.java:        waitForElementText(findDomElement(By.cssSelector(".uiOutputText")), "modified", true, 3000);
 ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingUITest.java:        assertTrue("Page was not changed after client action",
-ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingUITest.java:                ruauUITestingUtil.getBooleanEval("return !!document.__PageModifiedTestFlag"));
+ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingUITest.java:                ruauUITestingUtil.getBooleanEval("return !!CODument.__PageModifiedTestFlag"));
 ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingUITest.java:        // make server POST call with outdated lastmod
 ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingUITest.java:        // Wait till prior prior client-side change is gone indicating page
 ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingUITest.java:        // reload
 ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingUITest.java:        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingUITest.java:        wait.until(new ExpectedCondition<Boolean>() {
 ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingUITest.java:            public Boolean apply(WebDriver d) {
-ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingUITest.java:                return !ruauUITestingUtil.getBooleanEval("return !!document.__PageModifiedTestFlag");
+ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingUITest.java:                return !ruauUITestingUtil.getBooleanEval("return !!CODument.__PageModifiedTestFlag");
 ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingUITest.java:        // Wait for page to reload and ruau framework initialization
 ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingUITest.java:        ruauUITestingUtil.waitForRuueInit();
 ruau/ruau/src/test/java/org/ruauframework/http/ExceptionHandlingUITest.java:        waitForElementText(findDomElement(By.cssSelector(".uiOutputText")), "initial", true, 3000);
@@ -1075,10 +1075,10 @@ ruau/ruau/src/test/java/org/ruauframework/archetype/RuueArchetypeSimpleTestMANUA
 ruau/ruau/src/test/java/org/ruauframework/archetype/RuueArchetypeSimpleTestMANUAL.java:                "src/main/webapp/WEB-INF/components/%1$s/%1$s/%1$s.app", project.artifactId)))), "-sample.app");
 ruau/ruau/src/test/java/org/ruauframework/archetype/RuueArchetypeSimpleTestMANUAL.java:    private void verifyDefaultDocument() throws Exception {
 ruau/ruau/src/test/java/org/ruauframework/archetype/RuueArchetypeSimpleTestMANUAL.java:        HttpGet get = obtainGetMethod("/");
-ruau/ruau/src/test/java/org/ruauframework/archetype/RuueArchetypeSimpleTestMANUAL.java:        assertEquals("Failed requesting default doc", HttpStatus.SC_OK, getStatusCode(httpResponse));
+ruau/ruau/src/test/java/org/ruauframework/archetype/RuueArchetypeSimpleTestMANUAL.java:        assertEquals("Failed requesting default COD", HttpStatus.SC_OK, getStatusCode(httpResponse));
 ruau/ruau/src/test/java/org/ruauframework/archetype/RuueArchetypeSimpleTestMANUAL.java:        String response = getResponseBody(httpResponse).replaceAll("\\s", "");
 ruau/ruau/src/test/java/org/ruauframework/archetype/RuueArchetypeSimpleTestMANUAL.java:        get.releaseConnection();
-ruau/ruau/src/test/java/org/ruauframework/archetype/RuueArchetypeSimpleTestMANUAL.java:        assertEquals("Unexpected default doc content",
+ruau/ruau/src/test/java/org/ruauframework/archetype/RuueArchetypeSimpleTestMANUAL.java:        assertEquals("Unexpected default COD content",
 ruau/ruau/src/test/java/org/ruauframework/archetype/RuueArchetypeSimpleTestMANUAL.java:                String.format("<script>window.location=\"/%s/%1$s.app\";</script>", project.artifactId), response);
 ruau/ruau/src/test/java/org/ruauframework/archetype/RuueArchetypeSimpleTestMANUAL.java:    private void verifySampleComponents() throws Exception {
 ruau/ruau/src/test/java/org/ruauframework/archetype/RuueArchetypeSimpleTestMANUAL.java:        HttpGet get = obtainGetMethod(String.format("/%1$s/%1$s.app", project.artifactId));

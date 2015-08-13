@@ -757,11 +757,11 @@ ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basic.cmp:</ruau:co
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicHelper.js:	makeDOM : function(resultSet, cssClassName){
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicHelper.js:		var dom = [],
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicHelper.js:		for(var i in resultSet){
-ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicHelper.js:			divItem = document.createElement('div');
+ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicHelper.js:			divItem = CODument.createElement('div');
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicHelper.js:			divItem.textContent = resultSet[i].label;
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicHelper.js:			divItem.id = resultSet[i].value + cssClassName;
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicHelper.js:			divItem.className = "item " + cssClassName;
-ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:		CODument.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:    fetchDataPTR : function(component, callback, helper) {
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:        var result,
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:        	act = component.get("c.getItemsPTR"),
@@ -787,19 +787,19 @@ ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:        act.setCallback(component, actionCallback);
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:        $A.enqueueAction(act);
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:    beforeScrollStartHandler: function(component, event, helper){
-ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:    	var span = document.getElementById('beforeScrollStartHandlerCalled');
+ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:    	var span = CODument.getElementById('beforeScrollStartHandlerCalled');
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:    	if(span.textContent.trim() === "0"){
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:    		span.textContent = "1";
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:    scrollStartHandler: function(component, event, helper){
-ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:    	var span = document.getElementById('scrollStartHandlerCalled');
+ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:    	var span = CODument.getElementById('scrollStartHandlerCalled');
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:    	if(span.textContent.trim() === "0"){
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:    		span.textContent = "1";
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:    scrollMoveHandler: function(component, event, helper){
-ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:    	var span = document.getElementById('scrollMoveHandlerCalled');
+ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:    	var span = CODument.getElementById('scrollMoveHandlerCalled');
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:    	if(span.textContent.trim() === "0"){
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:    		span.textContent = "1";
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:    scrollEndHandler: function(component, event, helper){
-ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:    	var span = document.getElementById('scrollEndHandlerCalled');
+ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:    	var span = CODument.getElementById('scrollEndHandlerCalled');
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:    	if(span.textContent.trim() === "0"){
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basicController.js:    		span.textContent = "1";
 ruau/ruau/src/test/components/uitest/scroller_basic/scroller_basic.css: * Copyright (C) 2013 salesforce.com, inc.
@@ -1723,13 +1723,13 @@ ruau/ruau/src/test/components/uitest/tree_Test/tree_TestTest.js:        // TODO(
 ruau/ruau/src/test/components/uitest/tree_Test/tree_TestTest.js:        	// tree 1 expand node
 ruau/ruau/src/test/components/uitest/tree_Test/tree_TestTest.js:        	var toyota = cmp.find("toyota");
 ruau/ruau/src/test/components/uitest/tree_Test/tree_TestTest.js:            ruau.test.assertFalse(toyota.get("v.expanded"), "Toyota should not be expanded");
-ruau/ruau/src/test/components/uitest/tree_Test/tree_TestTest.js:            var elemToyota = document.getElementById("node_" + toyota.getGlobalId());
+ruau/ruau/src/test/components/uitest/tree_Test/tree_TestTest.js:            var elemToyota = CODument.getElementById("node_" + toyota.getGlobalId());
 ruau/ruau/src/test/components/uitest/tree_Test/tree_TestTest.js:            elemToyota.click();
 ruau/ruau/src/test/components/uitest/tree_Test/tree_TestTest.js:            ruau.test.assertTrue(toyota.get("v.expanded"), "Toyota should be expanded");
 ruau/ruau/src/test/components/uitest/tree_Test/tree_TestTest.js:			// tree 2 expand node
 ruau/ruau/src/test/components/uitest/tree_Test/tree_TestTest.js:            var airbus = cmp.find("airbus");
 ruau/ruau/src/test/components/uitest/tree_Test/tree_TestTest.js:            ruau.test.assertFalse(airbus.get("v.expanded"), "Airbus should not be expanded");
-ruau/ruau/src/test/components/uitest/tree_Test/tree_TestTest.js:            var elemAirbus = document.getElementById("node_" + airbus.getGlobalId());
+ruau/ruau/src/test/components/uitest/tree_Test/tree_TestTest.js:            var elemAirbus = CODument.getElementById("node_" + airbus.getGlobalId());
 ruau/ruau/src/test/components/uitest/tree_Test/tree_TestTest.js:            ruau.test.assertTrue(airbus.get("v.expanded"), "Airbus should be expanded");
 ruau/ruau/src/test/components/uitest/tree_Test/tree_TestTest.js:            // tree 1 collaspe node
 ruau/ruau/src/test/components/uitest/tree_Test/tree_TestTest.js:            elemToyota.click();
@@ -2235,7 +2235,7 @@ ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:     * T
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:    testSelectingDeselectingItemsWithPaginations : {
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:    	  attributes : {"pageSize" : 10},
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            //Select all items
-ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            var thead = document.getElementsByTagName("thead")[0];
+ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            var thead = CODument.getElementsByTagName("thead")[0];
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            this.selectCheckBox(0, 0, thead.children);
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            var elements = this.getRowElements(cmp, 10);
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            var trs = elements[0];
@@ -2252,7 +2252,7 @@ ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:        
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            	//Add rows in and wait for them to be present
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:        		this.pressButton(cmp, "addRow");
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:	        	 $A.test.addWaitFor(true, function() {
-ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:	     			return document.getElementsByTagName("tbody")[0].children.length > 0;
+ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:	     			return CODument.getElementsByTagName("tbody")[0].children.length > 0;
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:        		//verify that the row is correct 
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:        		this.checkBasicElements(cmp, ["6000", "Spidey 6000", "Peter Parker 6000", "Media Inc 6000", "2020-10-12 6000"],
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:                		["6010", "Spidey 6010", "Peter Parker 6010", "Media Inc 6010", "2020-10-12 6010"],
@@ -2310,7 +2310,7 @@ ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:    	att
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:    		var elements = this.getRowElements(cmp, 10);
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            var trs = elements[0];
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:    		//Select all items
-ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            var thead = document.getElementsByTagName("thead")[0];
+ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            var thead = CODument.getElementsByTagName("thead")[0];
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            this.selectCheckBox(0, 0, thead.children);
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            this.verifySelectedElements(cmp, this.createOutputArray(1, 10, this.BASIC_ROW_ARRAY), trs);
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            // Deselect all
@@ -2322,7 +2322,7 @@ ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:        
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            //Select the first 2 elements (excluding select all)
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            this.verifySelectedElements(cmp, this.createOutputArray(1, 2,  this.BASIC_ROW_ARRAY), trs.slice(0, 2));
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            //Select the head checkbox to select all and verify
-ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            var thead = document.getElementsByTagName("thead")[0];
+ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            var thead = CODument.getElementsByTagName("thead")[0];
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            this.selectCheckBox(0, 0, thead.children);
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            this.verifySelectedElements(cmp, this.createOutputArray(1, 10,  this.BASIC_ROW_ARRAY), trs);
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            this.verifySelectedElements(cmp, this.createOutputArray(2, 10, this.BASIC_ROW_ARRAY), trs.slice(1));
@@ -2388,7 +2388,7 @@ ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:        
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:     * Get a grid attribute
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:    getGridAttribute : function( cmp, attributeName){
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:        return cmp.find("grid").get("v."+attributeName);
-ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            var tbody = document.getElementsByTagName("tbody")[0];
+ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            var tbody = CODument.getElementsByTagName("tbody")[0];
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            var trs = this.getOnlyTrs(tbody.children);
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            var itemsInBody = this.getGridAttribute(cmp, "items");
 ruau/ruau/src/test/components/uitest/dataGrid_Test/dataGrid_TestTest.js:            $A.test.assertEquals(colCount, trs.length, "The total amount of items on the page are incorrect");

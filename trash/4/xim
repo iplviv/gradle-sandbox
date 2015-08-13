@@ -532,17 +532,17 @@ ruau/xlog.full:  js_valueChange.simpleValueChange$testList(org.ruauframework.tes
 ruau/xlog.full:  js_valueChange.componentInit$testInitEventNotFiredForAttributeValues(org.ruauframework.test.ComponentJSTestSuiteTest$ComponentTestCase): class java.lang.Error: Failed to get a new PooledRemoteWebDriver after 3 tries(..)
 ruau/xlog.full:  js_valueChange.componentInit$testInitEventFired(org.ruauframework.test.ComponentJSTestSuiteTest$ComponentTestCase): class java.lang.Error: Failed to get a new PooledRemoteWebDriver after 3 tries(..)
 ruau/xlog.full:  js_valueChange.componentInit$testInitEventOnFacetInitialization(org.ruauframework.test.ComponentJSTestSuiteTest$ComponentTestCase): class java.lang.Error: Failed to get a new PooledRemoteWebDriver after 3 tries(..)
-ruau/xlog.full:  js_docstest.searchFilterTreeTest$testMultipleRoots(org.ruauframework.test.ComponentJSTestSuiteTest$ComponentTestCase): class java.lang.Error: Failed to get a new PooledRemoteWebDriver after 3 tries(..)
-ruau/xlog.full:  js_docstest.searchFilterTreeTest$testMultipleMatch(org.ruauframework.test.ComponentJSTestSuiteTest$ComponentTestCase): class java.lang.Error: Failed to get a new PooledRemoteWebDriver after 3 tries(..)
-ruau/xlog.full:  js_docstest.searchFilterTreeTest$testSingleModelNode(org.ruauframework.test.ComponentJSTestSuiteTest$ComponentTestCase): class java.lang.Error: Failed to get a new PooledRemoteWebDriver after 3 tries(..)
+ruau/xlog.full:  js_CODstest.searchFilterTreeTest$testMultipleRoots(org.ruauframework.test.ComponentJSTestSuiteTest$ComponentTestCase): class java.lang.Error: Failed to get a new PooledRemoteWebDriver after 3 tries(..)
+ruau/xlog.full:  js_CODstest.searchFilterTreeTest$testMultipleMatch(org.ruauframework.test.ComponentJSTestSuiteTest$ComponentTestCase): class java.lang.Error: Failed to get a new PooledRemoteWebDriver after 3 tries(..)
+ruau/xlog.full:  js_CODstest.searchFilterTreeTest$testSingleModelNode(org.ruauframework.test.ComponentJSTestSuiteTest$ComponentTestCase): class java.lang.Error: Failed to get a new PooledRemoteWebDriver after 3 tries(..)
 ruau/xlog.full:  js_ruau.label$testValueEmpty(org.ruauframework.test.ComponentJSTestSuiteTest$ComponentTestCase): class java.lang.Error: Failed to get a new PooledRemoteWebDriver after 3 tries(..)
 ruau/xlog.full:  js_ruau.label$testValueOfTokenOnly(org.ruauframework.test.ComponentJSTestSuiteTest$ComponentTestCase): class java.lang.Error: Failed to get a new PooledRemoteWebDriver after 3 tries(..)
 ruau/xlog.full:  js_updateTest.updateHandling$testOutdatedServerAction(org.ruauframework.test.ComponentJSTestSuiteTest$ComponentTestCase): class java.lang.Error: Failed to get a new PooledRemoteWebDriver after 3 tries(..)
 ruau/xlog.full:  js_ruau.label$testValueString(org.ruauframework.test.ComponentJSTestSuiteTest$ComponentTestCase): class java.lang.Error: Failed to get a new PooledRemoteWebDriver after 3 tries(..)
 ruau/xlog.full:  js_ruau.label$testValueWithTokens(org.ruauframework.test.ComponentJSTestSuiteTest$ComponentTestCase): class java.lang.Error: Failed to get a new PooledRemoteWebDriver after 3 tries(..)
-ruau/xlog.full:  js_docstest.searchFilterTreeTest$testAllAndNothing(org.ruauframework.test.ComponentJSTestSuiteTest$ComponentTestCase): class java.lang.Error: Failed to get a new PooledRemoteWebDriver after 3 tries(..)
+ruau/xlog.full:  js_CODstest.searchFilterTreeTest$testAllAndNothing(org.ruauframework.test.ComponentJSTestSuiteTest$ComponentTestCase): class java.lang.Error: Failed to get a new PooledRemoteWebDriver after 3 tries(..)
 ruau/xlog.full:  testServerErrorUsingOnError(org.ruauframework.components.ui.inputError.InputErrorUITest): class java.lang.Error: Failed to get a new PooledRemoteWebDriver after 3 tries(..)
-ruau/xlog.full:  js_docstest.searchFilterTreeTest$testOneLevelSearch(org.ruauframework.test.ComponentJSTestSuiteTest$ComponentTestCase): class java.lang.Error: Failed to get a new PooledRemoteWebDriver after 3 tries(..)
+ruau/xlog.full:  js_CODstest.searchFilterTreeTest$testOneLevelSearch(org.ruauframework.test.ComponentJSTestSuiteTest$ComponentTestCase): class java.lang.Error: Failed to get a new PooledRemoteWebDriver after 3 tries(..)
 ruau/xlog.full:  testPopupCloseOnClickInsideAndOutside(org.ruauframework.components.ui.popup.PopupUITest): class java.lang.Error: Failed to get a new PooledRemoteWebDriver after 3 tries(..)
 ruau/xlog.full:  testErrorWithoutSettingErrorMessage(org.ruauframework.components.ui.inputError.InputErrorUITest): class java.lang.Error: Failed to get a new PooledRemoteWebDriver after 3 tries(..)
 ruau/xlog.full:  js_appCache.appCacheEvents$testAppCacheEvents(org.ruauframework.test.ComponentJSTestSuiteTest$ComponentTestCase): class java.lang.Error: Failed to get a new PooledRemoteWebDriver after 3 tries(..)
@@ -1039,7 +1039,7 @@ ruau/ruau/config/build/jenkins/auto-pre:#  - Checkout our branch, and merge to t
 ruau/ruau/config/build/jenkins/auto-pre:#  - The remaining stuff will occur in post.
 ruau/ruau/config/build/jenkins/auto-pre:${GIT} rebase ${INTEGRATE} 
 ruau/ruau/config/build/jenkins/auto-post:# Auto-Integrate Jenkins 'post' script.
-ruau/ruau/config/build/jenkins/auto-post:# See auto-pre for more documentation.
+ruau/ruau/config/build/jenkins/auto-post:# See auto-pre for more CODumentation.
 ruau/ruau/config/build/jenkins/auto-post:# Start by doing exit on fail.
 ruau/ruau/config/build/jenkins/auto-post:# Some basic variables:
 ruau/ruau/config/build/jenkins/auto-post:#  GIT: The full path to git (only needed if git can't be found)
@@ -1266,7 +1266,7 @@ ruau/ruau/src/main/http/WEB-INF/webdefault.xml:  <!-- brackets):                
 ruau/ruau/src/main/http/WEB-INF/webdefault.xml:  <!--   checkInterval       If development is false and reloading is true, -->
 ruau/ruau/src/main/http/WEB-INF/webdefault.xml:  <!--                       background compiles are enabled. checkInterval -->
 ruau/ruau/src/main/http/WEB-INF/webdefault.xml:  <!--                       if a JSP page needs to be recompiled. [300]    -->
-ruau/ruau/src/main/http/WEB-INF/webdefault.xml:  <!--                       pages.  See the Ant documenation for more      -->
+ruau/ruau/src/main/http/WEB-INF/webdefault.xml:  <!--                       pages.  See the Ant CODumenation for more      -->
 ruau/ruau/src/main/http/WEB-INF/webdefault.xml:  <!--                       information. [javac]                           -->
 ruau/ruau/src/main/http/WEB-INF/webdefault.xml:  <!--   classdebuginfo      Should the class file be compiled with         -->
 ruau/ruau/src/main/http/WEB-INF/webdefault.xml:  <!--                       debugging information?  [true]                 -->
@@ -1535,21 +1535,21 @@ ruau/ruau/src/main/http/WEB-INF/web.xml:    <servlet-mapping>
 ruau/ruau/src/main/http/WEB-INF/web.xml:        <servlet-name>RuueServlet</servlet-name>
 ruau/ruau/src/main/http/WEB-INF/web.xml:        <url-pattern>/ruau</url-pattern>
 ruau/ruau/src/main/http/WEB-INF/web.xml:    </servlet-mapping>
-ruau/ruau/src/main/http/WEB-INF/web.xml:    <!-- Begin rewrite for docs.app mountpoint.  Force loading to prod mode.  After context -->
+ruau/ruau/src/main/http/WEB-INF/web.xml:    <!-- Begin rewrite for CODs.app mountpoint.  Force loading to prod mode.  After context -->
 ruau/ruau/src/main/http/WEB-INF/web.xml:        <filter-name>RuueDocsRewriteFilter</filter-name>
 ruau/ruau/src/main/http/WEB-INF/web.xml:        <filter-class>org.ruauframework.http.RuueDocsRewriteFilter</filter-class>
 ruau/ruau/src/main/http/WEB-INF/web.xml:    <filter-mapping>
 ruau/ruau/src/main/http/WEB-INF/web.xml:        <filter-name>RuueContextFilter</filter-name>
-ruau/ruau/src/main/http/WEB-INF/web.xml:        <url-pattern>/ruaudocs</url-pattern>
+ruau/ruau/src/main/http/WEB-INF/web.xml:        <url-pattern>/ruauCODs</url-pattern>
 ruau/ruau/src/main/http/WEB-INF/web.xml:        <dispatcher>REQUEST</dispatcher>
 ruau/ruau/src/main/http/WEB-INF/web.xml:        <dispatcher>FORWARD</dispatcher>
 ruau/ruau/src/main/http/WEB-INF/web.xml:        <dispatcher>INCLUDE</dispatcher>
 ruau/ruau/src/main/http/WEB-INF/web.xml:    </filter-mapping>
 ruau/ruau/src/main/http/WEB-INF/web.xml:    <filter-mapping>
 ruau/ruau/src/main/http/WEB-INF/web.xml:    	<filter-name>RuueDocsRewriteFilter</filter-name>
-ruau/ruau/src/main/http/WEB-INF/web.xml:        <url-pattern>/ruaudocs</url-pattern>
+ruau/ruau/src/main/http/WEB-INF/web.xml:        <url-pattern>/ruauCODs</url-pattern>
 ruau/ruau/src/main/http/WEB-INF/web.xml:    </filter-mapping>
-ruau/ruau/src/main/http/WEB-INF/web.xml:    <!-- End rewrite for docs.app -->
+ruau/ruau/src/main/http/WEB-INF/web.xml:    <!-- End rewrite for CODs.app -->
 ruau/ruau/src/main/http/WEB-INF/web.xml:    <!-- Begin Ruue ResourceServlet -->
 ruau/ruau/src/main/http/WEB-INF/web.xml:        <filter-name>RuueResourceRewriteFilter</filter-name>
 ruau/ruau/src/main/http/WEB-INF/web.xml:        <filter-class>org.ruauframework.http.RuueResourceRewriteFilter</filter-class>
@@ -2559,7 +2559,7 @@ ruau/ruau/src/main/java/org/ruauframework/http/RuueBaseServlet.java:            
 ruau/ruau/src/main/java/org/ruauframework/http/RuueBaseServlet.java:            Throwable mappedEx = t;
 ruau/ruau/src/main/java/org/ruauframework/http/RuueBaseServlet.java:            boolean map = !quickfix;
 ruau/ruau/src/main/java/org/ruauframework/http/RuueBaseServlet.java:            Format format = context.getFormat();
-ruau/ruau/src/main/java/org/ruauframework/http/RuueBaseServlet.java:            // This seems to fail, though the documentation implies that you can do
+ruau/ruau/src/main/java/org/ruauframework/http/RuueBaseServlet.java:            // This seems to fail, though the CODumentation implies that you can do
 ruau/ruau/src/main/java/org/ruauframework/http/RuueBaseServlet.java:            // written = false;
 ruau/ruau/src/main/java/org/ruauframework/http/RuueBaseServlet.java:                setNoCache(response);
 ruau/ruau/src/main/java/org/ruauframework/http/RuueBaseServlet.java:            if (mappedEx instanceof IOException) {

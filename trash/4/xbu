@@ -1,17 +1,17 @@
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:     "attributes":{"values": {"value":"New tab content"}}});        
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:        <p>To add a tab dynamically, set the tab's parameters and fire the <code>addTab</code> event. The new tab will be added after the last tab. To change its position,
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:        set <code>index: 0</code> in <code>e.setParams()</code>, which adds a tab at the head of the tabset in this case.
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:var e = cmp.find("myTabSet").get("e.addTab");
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:e.setParams({tab: {
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:                    "name": name,
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:                               "componentDef": { descriptor:"markup://ruau:text" },
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:                                 "attributes": {
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:                                     "values": { "value": content }
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:    </ruau:description>
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:    <ruau:example name="tabset" ref="uiExamples:tabsetExample" label="Using ui:tabset">
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:        <p>This example shows different ways to implement a tabset.</p>
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:    </ruau:example>
-ruau/ruau-components/src/main/components/ui/tabset/tabset.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:     "attributes":{"values": {"value":"New tab content"}}});        
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:        <p>To add a tab dynamically, set the tab's parameters and fire the <code>addTab</code> event. The new tab will be added after the last tab. To change its position,
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:        set <code>index: 0</code> in <code>e.setParams()</code>, which adds a tab at the head of the tabset in this case.
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:var e = cmp.find("myTabSet").get("e.addTab");
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:e.setParams({tab: {
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:                    "name": name,
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:                               "componentDef": { descriptor:"markup://ruau:text" },
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:                                 "attributes": {
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:                                     "values": { "value": content }
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:    </ruau:description>
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:    <ruau:example name="tabset" ref="uiExamples:tabsetExample" label="Using ui:tabset">
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:        <p>This example shows different ways to implement a tabset.</p>
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:    </ruau:example>
+ruau/ruau-components/src/main/components/ui/tabset/tabset.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/tabset/tabsetController.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/tabset/tabsetController.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/tabset/tabsetController.js: * you may not use this file except in compliance with the License.
@@ -245,10 +245,10 @@ ruau/ruau-components/src/main/components/ui/tabset/tabsetHelper.js:     * @priva
 ruau/ruau-components/src/main/components/ui/tabset/tabsetHelper.js:    renderTabBody: function(cmp, tabComponent) {
 ruau/ruau-components/src/main/components/ui/tabset/tabsetHelper.js://cmp.find("tabContainer").set("v.body",tabComponent);
 ruau/ruau-components/src/main/components/ui/tabset/tabsetHelper.js:    	var container = cmp.find("tabContainer").getElement(),
-ruau/ruau-components/src/main/components/ui/tabset/tabsetHelper.js:    		docFrag = document.createDocumentFragment();
-ruau/ruau-components/src/main/components/ui/tabset/tabsetHelper.js:    	$A.render(tabComponent, docFrag);
+ruau/ruau-components/src/main/components/ui/tabset/tabsetHelper.js:    		CODFrag = document.createDocumentFragment();
+ruau/ruau-components/src/main/components/ui/tabset/tabsetHelper.js:    	$A.render(tabComponent, CODFrag);
 ruau/ruau-components/src/main/components/ui/tabset/tabsetHelper.js:		$A.afterRender(tabComponent);
-ruau/ruau-components/src/main/components/ui/tabset/tabsetHelper.js:		container.appendChild(docFrag);
+ruau/ruau-components/src/main/components/ui/tabset/tabsetHelper.js:		container.appendChild(CODFrag);
 ruau/ruau-components/src/main/components/ui/tabset/tabsetHelper.js:     * Clean up
 ruau/ruau-components/src/main/components/ui/tabset/tabsetHelper.js:     * @private
 ruau/ruau-components/src/main/components/ui/tabset/tabsetHelper.js:    	 cmp._tabCollection.destroy();
@@ -1621,44 +1621,44 @@ ruau/ruau-components/src/main/components/ui/menu/menuHelper.js:    setTargetEven
 ruau/ruau-components/src/main/components/ui/menu/menuHelper.js:        this.addCloseHandler(component, targetComponent);
 ruau/ruau-components/src/main/components/ui/menu/menuHelper.js:        var focusActionHandler = $A.expressionService.create(component, component.getConcreteComponent().get('c.focusTrigger'));
 ruau/ruau-components/src/main/components/ui/menu/menuHelper.js:        targetComponent.set("v.focusTrigger", focusActionHandler);
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:			A <code>ui:menu</code> component contains a trigger and list items. You can wire up list items to actions in a client-side controller so that selection of the item triggers an action.
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:			This example shows a menu with list items, which when pressed updates the label on the trigger.
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:    &lt;ui:menuTriggerLink ruau:id="trigger" label="Opportunity Status"/>
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:        &lt;ui:menuList class="actionMenu" ruau:id="actionMenu">
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:              &lt;ui:actionMenuItem ruau:id="item1" label="Any" click="{!c.updateTriggerLabel}"/>
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:              &lt;ui:actionMenuItem ruau:id="item2" label="Open" click="{!c.updateTriggerLabel}" disabled="true"/>
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:              &lt;ui:actionMenuItem ruau:id="item3" label="Closed" click="{!c.updateTriggerLabel}"/>
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:              &lt;ui:actionMenuItem ruau:id="item4" label="Closed Won" click="{!c.updateTriggerLabel}"/>
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:&lt;/ui:menu></pre><p>This client-side controller updates the trigger label when a menu item is clicked.</p>
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:    updateTriggerLabel: function(cmp, event) {
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:        var triggerCmp = cmp.find("trigger");
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:            var source = event.getSource();
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:            var label = source.get("v.label");
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:            triggerCmp.set("v.label", label);
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:		    The dropdown menu and its menu items are hidden by default. You can change this by setting the <code>visible</code> attribute on the <code>ui:menuList</code> component to <code>true</code>.
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:		     The menu items are shown only when you click the <code>ui:menuTriggerLink</code> component.
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:			To use a trigger, which opens the menu, nest the <code>ui:menuTriggerLink</code> component in <code>ui:menu</code>. For list items, use the <code>ui:menuList</code> component, and include any of these
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:			list item components that can trigger a client-side controller action:
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:			    <li><code>ui:actionMenuItem</code> - A menu item</li>
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:			    <li><code>ui:checkboxMenuItem</code> - A checkbox that supports multiple selections</li>
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:			    <li><code>ui:radioMenuItem</code> - A radio item that supports single selection</li>
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:			To include a separator for these menu items, use <code>ui:menuItemSeparator</code>.
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:	</ruau:description>
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:	<ruau:example name="menu" ref="ruaudocs:demoMenu" label="Using ui:menu">
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:    	<p>This example shows several ways to create a menu.</p>
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:	</ruau:example>
-ruau/ruau-components/src/main/components/ui/menu/menu.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:			A <code>ui:menu</code> component contains a trigger and list items. You can wire up list items to actions in a client-side controller so that selection of the item triggers an action.
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:			This example shows a menu with list items, which when pressed updates the label on the trigger.
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:    &lt;ui:menuTriggerLink ruau:id="trigger" label="Opportunity Status"/>
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:        &lt;ui:menuList class="actionMenu" ruau:id="actionMenu">
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:              &lt;ui:actionMenuItem ruau:id="item1" label="Any" click="{!c.updateTriggerLabel}"/>
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:              &lt;ui:actionMenuItem ruau:id="item2" label="Open" click="{!c.updateTriggerLabel}" disabled="true"/>
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:              &lt;ui:actionMenuItem ruau:id="item3" label="Closed" click="{!c.updateTriggerLabel}"/>
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:              &lt;ui:actionMenuItem ruau:id="item4" label="Closed Won" click="{!c.updateTriggerLabel}"/>
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:&lt;/ui:menu></pre><p>This client-side controller updates the trigger label when a menu item is clicked.</p>
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:    updateTriggerLabel: function(cmp, event) {
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:        var triggerCmp = cmp.find("trigger");
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:            var source = event.getSource();
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:            var label = source.get("v.label");
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:            triggerCmp.set("v.label", label);
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:		    The dropdown menu and its menu items are hidden by default. You can change this by setting the <code>visible</code> attribute on the <code>ui:menuList</code> component to <code>true</code>.
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:		     The menu items are shown only when you click the <code>ui:menuTriggerLink</code> component.
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:			To use a trigger, which opens the menu, nest the <code>ui:menuTriggerLink</code> component in <code>ui:menu</code>. For list items, use the <code>ui:menuList</code> component, and include any of these
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:			list item components that can trigger a client-side controller action:
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:			    <li><code>ui:actionMenuItem</code> - A menu item</li>
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:			    <li><code>ui:checkboxMenuItem</code> - A checkbox that supports multiple selections</li>
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:			    <li><code>ui:radioMenuItem</code> - A radio item that supports single selection</li>
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:			To include a separator for these menu items, use <code>ui:menuItemSeparator</code>.
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:	</ruau:description>
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:	<ruau:example name="menu" ref="ruaudocs:demoMenu" label="Using ui:menu">
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:    	<p>This example shows several ways to create a menu.</p>
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:	</ruau:example>
+ruau/ruau-components/src/main/components/ui/menu/menu.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/menu/menuController.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/menu/menuController.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/menu/menuController.js: * you may not use this file except in compliance with the License.
@@ -1728,29 +1728,29 @@ ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.cmp:  
 ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.cmp:<ruau:component access="GLOBAL" support="GA" extends="ui:output" extensible="true" description="Displays the text area as specified by the value attribute.">
 ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.cmp:    <span ruau:id='span' class="{!v.class}">{!v.value}</span>
 ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.cmp:</ruau:component>
-ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:			A <code>ui:outputTextArea</code> component represents text output that is wrapped in an HTML <code>span</code> tag.
-ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:			This component can be used with <code>ui:inputTextArea</code>, which takes in a multi-line text input. 
-ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:			To display text, you can use an attribute value and bind it to the <code>ui:outputTextArea</code> component.
-ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:		<pre>&lt;ruau:attribute name="myTextArea" type="String" default="some string"/>
-ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:&lt;ui:outputTextArea value="{!v.myTextArea}" label="my output"/></pre>
-ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:		<p>The previous example renders the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:		<pre>&lt;span class="uiOutputTextArea">some string&lt;/span></pre>
-ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:	</ruau:description>	
-ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:		<ruau:example name="outputExample" ref="uiExamples:outputExample" label="Using the Output Components">
-ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:    	<p>This example shows how you can bind data to the output components by using component attributes.</p>
-ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:	</ruau:example>
-ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruauCOD:			A <code>ui:outputTextArea</code> component represents text output that is wrapped in an HTML <code>span</code> tag.
+ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruauCOD:			This component can be used with <code>ui:inputTextArea</code>, which takes in a multi-line text input. 
+ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruauCOD:			To display text, you can use an attribute value and bind it to the <code>ui:outputTextArea</code> component.
+ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruauCOD:		<pre>&lt;ruau:attribute name="myTextArea" type="String" default="some string"/>
+ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruauCOD:&lt;ui:outputTextArea value="{!v.myTextArea}" label="my output"/></pre>
+ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruauCOD:		<p>The previous example renders the following HTML.</p>
+ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruauCOD:		<pre>&lt;span class="uiOutputTextArea">some string&lt;/span></pre>
+ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruauCOD:	</ruau:description>	
+ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruauCOD:		<ruau:example name="outputExample" ref="uiExamples:outputExample" label="Using the Output Components">
+ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruauCOD:    	<p>This example shows how you can bind data to the output components by using component attributes.</p>
+ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruauCOD:	</ruau:example>
+ruau/ruau-components/src/main/components/ui/outputTextArea/outputTextArea.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/calendar/calendar.css: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/calendar/calendar.css: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/calendar/calendar.css: * you may not use this file except in compliance with the License.
@@ -1773,49 +1773,49 @@ ruau/ruau-components/src/main/components/ui/calendar/calendar.cmp:    limitation
 ruau/ruau-components/src/main/components/ui/calendar/calendar.cmp:<ruau:component extensible="true" support="PROTO">
 ruau/ruau-components/src/main/components/ui/calendar/calendar.cmp:    TODO: ui:calendar
 ruau/ruau-components/src/main/components/ui/calendar/calendar.cmp:</ruau:component>
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:	        <code>ui:infiniteList</code> provides a paging interface to navigate lists. This is a basic setup of a <code>ui:infiniteList</code> component.
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:&lt;ui:infinitelist ruau:id="listData" itemVar="item">
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:    &lt;ruau:set attribute="dataProvider">
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:      &lt;ruaudocs:demoDataProvider />
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:    &lt;/ruau:set>
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:    &lt;ruau:set attribute="footer">
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:     &lt;ui:button label="Show More" press="{!c.show}"/>
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:    &lt;/ruau:set>
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:    &lt;ruau:set attribute="itemTemplate">
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:      &lt;ruaudocs:demoListTemplate label="{!item.label}" />
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:    &lt;/ruau:set>
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:	        To retrieve and display more data as necessary, using event such as <code>refresh</code>, <code>showMore</code>, and <code>triggerDataProvider</code>.
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:	    	The <code>refresh</code> event handles a list data refresh and fires the <code>triggerDataProvider</code> event.
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:var listData = cmp.find("listData");
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:listData.get("e.refresh").fire();	    
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:	    	The <code>showMore</code> event handles the fetching of your data and displays it, which then fires <code>triggerDataProvider</code>.
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:	    	<code>triggerDataProvider</code> triggers the providing of data from a data provider. It is run during component initialization and refresh. Use this event to retrieve more data.
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:cmp.set("v.currentPage", targetPage);
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:var listData = component.find("listData");
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:listData.get("e.triggerDataProvider").fire();
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:	</ruau:description>	
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:		<ruau:example name="infinitelist" ref="ruaudocs:demoList" label="Using ui:infiniteList">
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:    	<p>This example shows a simple implementation of a list embedded in a <code>ui:scroller</code> component. To load new data, either pull to refresh or click the Show More button.</p>
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:	   </ruau:example>
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:	   <ruau:example name="infinitelist2" ref="uitest:infiniteListCscc_Test" label="Handing Events after ui:infiniteList Renders">
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:	     <p>This example shows how you can handle the component using the <code>rerenderComplete</code> attribute after it renders.</p>
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:	   </ruau:example>
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:	   <ruau:example name="infiniteListRow" ref="uitest:infiniteListRow_Test" label="Using Row Actions">
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:    	<p>This example shows a simple implementation of a list Action Row that has swipe behavior. To load new data, either pull to refresh or click the Show More button.</p>
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:	   	<p>To use the swipe gesture in this example, emulate any mobile devices using the developer tool on your browser</p>
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:	   </ruau:example>
-ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:	        <code>ui:infiniteList</code> provides a paging interface to navigate lists. This is a basic setup of a <code>ui:infiniteList</code> component.
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:&lt;ui:infinitelist ruau:id="listData" itemVar="item">
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:    &lt;ruau:set attribute="dataProvider">
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:      &lt;ruaudocs:demoDataProvider />
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:    &lt;/ruau:set>
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:    &lt;ruau:set attribute="footer">
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:     &lt;ui:button label="Show More" press="{!c.show}"/>
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:    &lt;/ruau:set>
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:    &lt;ruau:set attribute="itemTemplate">
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:      &lt;ruaudocs:demoListTemplate label="{!item.label}" />
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:    &lt;/ruau:set>
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:	        To retrieve and display more data as necessary, using event such as <code>refresh</code>, <code>showMore</code>, and <code>triggerDataProvider</code>.
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:	    	The <code>refresh</code> event handles a list data refresh and fires the <code>triggerDataProvider</code> event.
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:var listData = cmp.find("listData");
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:listData.get("e.refresh").fire();	    
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:	    	The <code>showMore</code> event handles the fetching of your data and displays it, which then fires <code>triggerDataProvider</code>.
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:	    	<code>triggerDataProvider</code> triggers the providing of data from a data provider. It is run during component initialization and refresh. Use this event to retrieve more data.
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:cmp.set("v.currentPage", targetPage);
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:var listData = component.find("listData");
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:listData.get("e.triggerDataProvider").fire();
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:	</ruau:description>	
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:		<ruau:example name="infinitelist" ref="ruaudocs:demoList" label="Using ui:infiniteList">
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:    	<p>This example shows a simple implementation of a list embedded in a <code>ui:scroller</code> component. To load new data, either pull to refresh or click the Show More button.</p>
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:	   </ruau:example>
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:	   <ruau:example name="infinitelist2" ref="uitest:infiniteListCscc_Test" label="Handing Events after ui:infiniteList Renders">
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:	     <p>This example shows how you can handle the component using the <code>rerenderComplete</code> attribute after it renders.</p>
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:	   </ruau:example>
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:	   <ruau:example name="infiniteListRow" ref="uitest:infiniteListRow_Test" label="Using Row Actions">
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:    	<p>This example shows a simple implementation of a list Action Row that has swipe behavior. To load new data, either pull to refresh or click the Show More button.</p>
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:	   	<p>To use the swipe gesture in this example, emulate any mobile devices using the developer tool on your browser</p>
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:	   </ruau:example>
+ruau/ruau-components/src/main/components/ui/infiniteList/infiniteList.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/infiniteList/infiniteListHelper.js: * you may not use this file except in compliance with the License.
@@ -2542,29 +2542,29 @@ ruau/ruau-components/src/main/components/ui/dataProvider/dataProviderController.
 ruau/ruau-components/src/main/components/ui/dataProvider/dataProviderController.js: * distributed under the License is distributed on an "AS IS" BASIS,
 ruau/ruau-components/src/main/components/ui/dataProvider/dataProviderController.js: * See the License for the specific language governing permissions and
 ruau/ruau-components/src/main/components/ui/dataProvider/dataProviderController.js: * limitations under the License.
-ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:			A <code>ui:dataProvider</code> component fetches and returns rows of data to a consuming component, such as <code>ui:list</code>.
-ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:			This component can fetch data in various ways.  It can fire a server action to get rows from a server-side database, or create data in JavaScript and require no server interaction, or even some combination of the two.
-ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:			When a <code>ui:dataProvider</code> component has new data to report (e.g., when a server action has returned), it attaches the relevant data to the <code>ui:dataChanged</code> event.  <code>ui:dataProvider</code>'s helper provides a function <code>fireDataChangeEvent(dataProvider, data)</code> to surface this event.
-ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:			A <code>ui:dataProvider</code> can also be triggered by the wrapping component to provide data, via the <code>ui:dataProvide</code> event.  This event has a <code>parameters</code> attribute that can be used as input to the <code>ui:dataProvider</code>.
-ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:			To customize this behavior, set the event handler in the component that extends <code>ui:dataProvider</code> by using the <code>ruau:handler</code> tag with the attribute <code>name="provide"</code>.
-ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:	</ruau:description>
-ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:	<ruau:example name="example1" ref="uiExamples:dataProviderExample" label="Using ui:dataProvider">
-ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:    	<p>This example shows how to fetch data using <code>ui:dataProvider</code> in a <code>ui:list</code> component. The data provider is represented by the <code>uitest:infiniteDataProvider</code>component, which extends <code>ui:dataProvider</code>.</p>
-ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:    	<p>When the list data is initialized, the <code>provide</code> handler is called, which runs the controller-side action. This action sets the callback using the <code>action.setCallback</code> method to return any new data. In the callback, this code attaches the data to the <code>ui:dataChanged</code> event.</p>
-ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:         data = action.getReturnValue();<br/>helper.fireDataChangeEvent(component, data);
-ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:	</ruau:example>
-ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruauCOD:			A <code>ui:dataProvider</code> component fetches and returns rows of data to a consuming component, such as <code>ui:list</code>.
+ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruauCOD:			This component can fetch data in various ways.  It can fire a server action to get rows from a server-side database, or create data in JavaScript and require no server interaction, or even some combination of the two.
+ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruauCOD:			When a <code>ui:dataProvider</code> component has new data to report (e.g., when a server action has returned), it attaches the relevant data to the <code>ui:dataChanged</code> event.  <code>ui:dataProvider</code>'s helper provides a function <code>fireDataChangeEvent(dataProvider, data)</code> to surface this event.
+ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruauCOD:			A <code>ui:dataProvider</code> can also be triggered by the wrapping component to provide data, via the <code>ui:dataProvide</code> event.  This event has a <code>parameters</code> attribute that can be used as input to the <code>ui:dataProvider</code>.
+ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruauCOD:			To customize this behavior, set the event handler in the component that extends <code>ui:dataProvider</code> by using the <code>ruau:handler</code> tag with the attribute <code>name="provide"</code>.
+ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruauCOD:	</ruau:description>
+ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruauCOD:	<ruau:example name="example1" ref="uiExamples:dataProviderExample" label="Using ui:dataProvider">
+ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruauCOD:    	<p>This example shows how to fetch data using <code>ui:dataProvider</code> in a <code>ui:list</code> component. The data provider is represented by the <code>uitest:infiniteDataProvider</code>component, which extends <code>ui:dataProvider</code>.</p>
+ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruauCOD:    	<p>When the list data is initialized, the <code>provide</code> handler is called, which runs the controller-side action. This action sets the callback using the <code>action.setCallback</code> method to return any new data. In the callback, this code attaches the data to the <code>ui:dataChanged</code> event.</p>
+ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruauCOD:         data = action.getReturnValue();<br/>helper.fireDataChangeEvent(component, data);
+ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruauCOD:	</ruau:example>
+ruau/ruau-components/src/main/components/ui/dataProvider/dataProvider.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.cmp:    Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.cmp:    Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.cmp:    you may not use this file except in compliance with the License.
@@ -2579,30 +2579,30 @@ ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.cmp:    <r
 ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.cmp:    <ruau:attribute name="format" type="String" access="GLOBAL" description="The format of the number. For example, format=&ldquo;.00&rdquo; displays the number followed by two decimal places. If not specified, the Locale default format will be used."/>
 ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.cmp:    <span ruau:id="span" class="{!v.class}"/>
 ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.cmp:</ruau:component>
-ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:    Copyright (C) 2013 salesforce.com, inc.
-ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:    Licensed under the Apache License, Version 2.0 (the "License");
-ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:    you may not use this file except in compliance with the License.
-ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:    You may obtain a copy of the License at
-ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:            http://www.apache.org/licenses/LICENSE-2.0
-ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:    Unless required by applicable law or agreed to in writing, software
-ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:    distributed under the License is distributed on an "AS IS" BASIS,
-ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:    See the License for the specific language governing permissions and
-ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:    limitations under the License.
-ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:<ruau:documentation>
-ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:	<ruau:description>
-ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:			A <code>ui:outputNumber</code> component represents a number output that is rendered as an HTML <code>span</code> tag.
-ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:			This component can be used with <code>ui:inputNumber</code>, which takes in a number input. 
-ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:			<code>ui:outputNumber</code> retrieves the browser's locale information and displays the number in the given decimal format. 
-ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:			To display a number, you can use an attribute value and bind it to the <code>ui:outputNumber</code> component.
-ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:		<pre>&lt;ruau:attribute name="myNum" type="Decimal" default="10.10"/>
-ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:&lt;ui:outputNumber value="{!v.myNum}" label="my number" format=".00"/></pre>
-ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:		<p>The previous example renders the following HTML.</p>
-ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:		<pre>&lt;span class="uiOutputNumber">10.10&lt;/span></pre>
-ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:	</ruau:description>	
-ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:	<ruau:example name="outputExample" ref="uiExamples:outputExample" label="Using the Output Components">
-ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:    	<p>This example shows how you can bind data to the output components by using component attributes.</p>
-ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:	</ruau:example>
-ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruaudoc:</ruau:documentation>
+ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruauCOD:    Copyright (C) 2013 salesforce.com, inc.
+ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruauCOD:    Licensed under the Apache License, Version 2.0 (the "License");
+ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruauCOD:    you may not use this file except in compliance with the License.
+ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruauCOD:    You may obtain a copy of the License at
+ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruauCOD:            http://www.apache.org/licenses/LICENSE-2.0
+ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruauCOD:    Unless required by applicable law or agreed to in writing, software
+ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruauCOD:    distributed under the License is distributed on an "AS IS" BASIS,
+ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruauCOD:    See the License for the specific language governing permissions and
+ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruauCOD:    limitations under the License.
+ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruauCOD:<ruau:documentation>
+ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruauCOD:	<ruau:description>
+ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruauCOD:			A <code>ui:outputNumber</code> component represents a number output that is rendered as an HTML <code>span</code> tag.
+ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruauCOD:			This component can be used with <code>ui:inputNumber</code>, which takes in a number input. 
+ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruauCOD:			<code>ui:outputNumber</code> retrieves the browser's locale information and displays the number in the given decimal format. 
+ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruauCOD:			To display a number, you can use an attribute value and bind it to the <code>ui:outputNumber</code> component.
+ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruauCOD:		<pre>&lt;ruau:attribute name="myNum" type="Decimal" default="10.10"/>
+ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruauCOD:&lt;ui:outputNumber value="{!v.myNum}" label="my number" format=".00"/></pre>
+ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruauCOD:		<p>The previous example renders the following HTML.</p>
+ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruauCOD:		<pre>&lt;span class="uiOutputNumber">10.10&lt;/span></pre>
+ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruauCOD:	</ruau:description>	
+ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruauCOD:	<ruau:example name="outputExample" ref="uiExamples:outputExample" label="Using the Output Components">
+ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruauCOD:    	<p>This example shows how you can bind data to the output components by using component attributes.</p>
+ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruauCOD:	</ruau:example>
+ruau/ruau-components/src/main/components/ui/outputNumber/outputNumber.ruauCOD:</ruau:documentation>
 ruau/ruau-components/src/main/components/ui/outputNumber/outputNumberTest.js: * Copyright (C) 2013 salesforce.com, inc.
 ruau/ruau-components/src/main/components/ui/outputNumber/outputNumberTest.js: * Licensed under the Apache License, Version 2.0 (the "License");
 ruau/ruau-components/src/main/components/ui/outputNumber/outputNumberTest.js: * you may not use this file except in compliance with the License.

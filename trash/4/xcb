@@ -1567,7 +1567,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/Javascr
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:     * in ptest everything is compressed to reduce file size. This mode is used to conditionally include performance
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    PTEST("ptest", false, JavascriptWriter.CLOSURE_AURA_PROD, true),
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    PRODUCTIONDEBUG("proddebug", false, JavascriptWriter.CLOSURE_AURA_DEBUG, true),
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:     * mode used for documentation (jsdoc), but never served in any context
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:     * mode used for CODumentation (jsdoc), but never served in any context
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:     * mock modes for testing the parser and generator itself. dunt use
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    MOCK1("mock1", false, null), MOCK2("mock2", false, null);
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/directive/JavascriptGeneratorMode.java:    private final String suffix;
@@ -1799,7 +1799,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptGroup.j
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptGroup.java:public interface JavascriptGroup extends FileGroup {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptGroup.java:     * stage 1: parse the files and collect metadata
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptGroup.java:    void parse() throws IOException;
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptGroup.java:     * stage 2: generate the physical files in htdocs
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptGroup.java:     * stage 2: generate the physical files in htCODs
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptGroup.java:    void generate(File destRoot, boolean doValidation) throws IOException;
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptGroup.java:     * stage 3: post processing and cleanup of intermediate junk, only needed if
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/JavascriptGroup.java:     * regenerates a group. it is up to the group how it will regenerate,
@@ -1826,7 +1826,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/module/Javascript
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/module/JavascriptGroupProvider.java:public interface JavascriptGroupProvider {
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/module/JavascriptGroupProvider.java:     * The name should be the same as the module the javascript is in, its
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/module/JavascriptGroupProvider.java:     * primarily used as part of the url of the generated file, which is of the
-ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/module/JavascriptGroupProvider.java:     * form /sfdc/htdocs/javascript/module/group.js
+ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/module/JavascriptGroupProvider.java:     * form /sfdc/htCODs/javascript/module/group.js
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/module/JavascriptGroupProvider.java:     * @return the name of the module this is for
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/module/JavascriptGroupProvider.java:    String getModuleName();
 ruau/ruau-util/src/main/java/org/ruauframework/util/javascript/module/JavascriptGroupProvider.java:     * called once during app startup to create the javascript groups, this is
@@ -2005,7 +2005,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:  
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:            throw new IllegalArgumentException("Unknown style name '" + style + "'");
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:     * Expects a two character style string, based on joda-time's style syntax:
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:     * @see <a
-ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:     *      href="http://joda-time.sourceforge.net/apidocs/org/joda/time/format/DateTimeFormat.html#patternForStyle(java.lang.String, java.util.Locale)">DateTimeFormat</a>
+ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:     *      href="http://joda-time.sourceforge.net/apiCODs/org/joda/time/format/DateTimeFormat.html#patternForStyle(java.lang.String, java.util.Locale)">DateTimeFormat</a>
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:     *      Style and results:
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:     * FS   Friday, June 1, 2012 10:37 PM
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateServiceImpl.java:     * FM   Friday, June 1, 2012 10:37:14 PM
@@ -2179,7 +2179,7 @@ ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateService.java:    pu
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateService.java:     * Pattern is normally based on java.date.SimpleDateFormat syntax.
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateService.java:     * Implementation may differ.
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateService.java:     * @see <a
-ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateService.java:     *      href="http://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html">SimpleDateFormat</a>
+ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateService.java:     *      href="http://CODs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html">SimpleDateFormat</a>
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateService.java:    public DateConverter getPatternConverter(Locale locale, String pattern);
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateService.java:     * Converts the words small, medium, large, or full to a DateFormat style
 ruau/ruau-util/src/main/java/org/ruauframework/util/date/DateOnly.java: * Copyright (C) 2013 salesforce.com, inc.

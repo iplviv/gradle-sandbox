@@ -1680,7 +1680,7 @@ ruau/ruau-impl/src/test/javascript/ruau/util/BrowserSupportedUtilTest.js:       
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserSupportedUtilTest.js:        var utilMock = function(override, delegate) {
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserSupportedUtilTest.js:            Mocks.GetMocks(Object.Global(),{
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserSupportedUtilTest.js:                window:Object.Global(),
-ruau/ruau-impl/src/test/javascript/ruau/util/BrowserSupportedUtilTest.js:                document:{createDocumentFragment:function() {}},
+ruau/ruau-impl/src/test/javascript/ruau/util/BrowserSupportedUtilTest.js:                CODument:{createDocumentFragment:function() {}},
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserSupportedUtilTest.js:                Transport:function() {},
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserSupportedUtilTest.js:                NumberFormat:{},            
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserSupportedUtilTest.js:                navigator:{userAgent:''},
@@ -1770,7 +1770,7 @@ ruau/ruau-impl/src/test/javascript/ruau/util/BrowserUnsupportedUtilTest.js:     
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserUnsupportedUtilTest.js:        var utilMock = function(override, delegate) {
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserUnsupportedUtilTest.js:            Mocks.GetMocks(Object.Global(),{
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserUnsupportedUtilTest.js:                window:Object.Global(),
-ruau/ruau-impl/src/test/javascript/ruau/util/BrowserUnsupportedUtilTest.js:                document:{createDocumentFragment:function() {}},
+ruau/ruau-impl/src/test/javascript/ruau/util/BrowserUnsupportedUtilTest.js:                CODument:{createDocumentFragment:function() {}},
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserUnsupportedUtilTest.js:                Transport:function() {},
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserUnsupportedUtilTest.js:                NumberFormat:{},            
 ruau/ruau-impl/src/test/javascript/ruau/util/BrowserUnsupportedUtilTest.js:                navigator:{userAgent:''},
@@ -1883,7 +1883,7 @@ ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js:Test.Ruue.UtilTest=func
 ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js:	var ruauMock=function(delegate){
 ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js:		Mocks.GetMocks(Object.Global(),{
 ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js:			window:Object.Global(),
-ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js:			document:{createDocumentFragment:function() {}},
+ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js:			CODument:{createDocumentFragment:function() {}},
 ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js:			Transport:function() {},
 ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js:			NumberFormat:{},			
 ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js:			navigator:{userAgent:''}
@@ -1947,7 +1947,7 @@ ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js:					this.innerHTML = t
 ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js:				if(element.name == 'style') {
 ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js:					this.innerHTML = this.innerHTML.replace('<style>', '');
 ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js:					this.innerHTML = this.innerHTML.replace('</style>', '');
-ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js:		var mockDocument = Mocks.GetMock(Object.Global(), "document", {				
+ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js:		var mockDocument = Mocks.GetMock(Object.Global(), "CODument", {				
 ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js:			createElement:function(value){
 ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js:				if(value == 'div') return mockDiv;										
 ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js:		var mockRemoveElement = Mocks.GetMock(targetUtil, "removeElement", function(element){
@@ -2000,7 +2000,7 @@ ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js:            Assert.Equa
 ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js:		var ruauMockCustomUserAgent=function(delegate, userAgentOverride){
 ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js:			Mocks.GetMocks(Object.Global(),{
 ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js:				window:Object.Global(),
-ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js:				document:{createDocumentFragment:function() {}},
+ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js:				CODument:{createDocumentFragment:function() {}},
 ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js:				Transport:function() {},
 ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js:				NumberFormat:{},			
 ruau/ruau-impl/src/test/javascript/ruau/util/UtilTest.js:				navigator:{userAgent : userAgentOverride }
