@@ -14,6 +14,10 @@ submodules: true
 - type: junit
   command: cd java/multiproject && gradle test
   mode: basic
+#  mode: parallel
+#  output: exit-status
+#  files:
+#    - include: '**/*Test.java'
   report_files:
-  - "java/multiproject/**/test-results/TEST-*.xml"
+    - "java/multiproject/**/test-results/TEST-*.xml"
 
