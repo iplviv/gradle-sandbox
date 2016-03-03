@@ -1,0 +1,261 @@
+1.8.3
+-- Fix both the retention system and the undo partitioning functions/scripts not cleaning up the custom_time_partitions table when using a custom time interval (Github Issue #49).
+-- When using sub-partitioning, the call to create_parent() that is within create_partition_id() & create_partition_time() was passing 2 of the parameters through incorrectly. p_use_run_maintenance was being fed to p_inherit_fk and vice versa, so the inherit_fk and use_run_maintenance columns in part_config & part_config_sub may be reversed. Since these are both boolean parameters, no error was being raised. If you've used sub-partitioning and used anything other than the default values for either of these configuration options, please double-check the part_config & part_config_sub tables to ensure the proper values are there. If you did not set them specifically, the default values were set for both and things should be fine.
+    -- If p_use_run_maintenance was set wrong, you likely noticed that new partitons were not getting created for new sub-partition sets. You'll still have to fix any existing config settings, but future ones shoould be fine now.
+    -- If p_inherit_fk was set wrong, child tables were likely not inheriting FKs or they were inheriting them when you didn't want them to. Again, fix this for existing partition sets by correcting the config table and all future sub-partitions should now be set properly. If you need to generate FKs on child tables that were missing them, you can use the reapply_foreign_keys.py script.
+
+
+1.8.2
+-- Fixed a bug in sub-partitioning that would cause child tables outside of the time boundaries of the parent partitions to be created when using time->time sub-partitioning. A user encountered the error when doing weekly->daily subpartitioning, but it was possible it could have happened in other interval combinations I had not tested as well (Github Issue #47).
+-- Updated reapply_indexes.py script to, by default, only add new indexes and drop ones that don't exist on the parent. Previously it would drop all indexes on all children and recreate them to match the parent. Now it only does the minimal amount of work to make the children match the parent. An additional option (--recreate_all/-R) was added to allow the old behavior of redoing all indexes from scratch if desired (Github Issue #41)
+-- Changed the minimal interval that serial partitioning can be done to 10. Ran into issues with an interval of 2 and partitioning anything this low is unrealistic and provides no benefit. 10 seems like a reasonable minimal to have at this point to avoid any future issues. This does not affect any existing partition sets, only newly created ones (Github Issue #39).
+-- Serial partition maintenance when using run_maintenance() is now much more efficient. Should run significantly faster for very large partition sets.
+-- Fixed bug in subpartition creation when using "time-custom" partitioning type. May have created subpartition child tables that were outside the time boundaries of the parent partitions.
+-- Fixed bug in additional constraint management when using "time-custom" partitioning type. May not have always added additional constraints on old child tables.
+-- Added constraint on part_config_sub to ensure valid partition types.
+
+
+1.8.1
+-- The p_analyze parameter to the apply_constraint() function is now FALSE by default instead of TRUE. This makes it so that by default, an analyze is only run by the create_partition_id/time() functions upon new partition creation. The parameter was left in apply_contraints() in case someone needs to call it directly and ensure an analyze is run so statistics are updated. (Github Issue #45)
+    -- Note: If using reapply_constraints.py, an ANALYZE is always done at the end of the script. It was like that before this update.
+-- Changed the manner in which new partition creation is logged in pg_jobmon. Previously, each individual child table creation was logged as its own, separate job entry in pg_jobmon. Now, if multiple child partitions are created for a single partition set, all those child tables are logged as steps for a single job log entry. This now allows the analyze step (if it is done) to be logged as well in pg_jobmon and allows for easier diagnosis if this if holding up partition maintenance.
+
+
+1.8.0
+-- PG Partman now supports sub-partitioning. This allows automatic configuration to turn the child tables of an existing partition set into parent tables of their own partition sets. (Github Issue #26)
+    -- New function "create_sub_parent()" works exactly like "create_parent()", even taking similar parameters. Instead, the parent_table you're giving it as a parameter is telling it which parent's child tables to partition and how to partition them.
+    -- This can be chained down as many levels as desired. Just recall the 63 character limit on object names since this will be adding a new partition suffix every level down. The final suffix is always guarenteed to be added on in full, but the parent suffix name may get truncated off.
+    -- Due to logical complexity (and possible contention issues at larger data sizes), when using subpartitioning, all parent tables at all partition levels are set to use run_maintenance() by default. This includes serial partitioning which normally by default can use a trigger based method to create future partitions. You can still set it to false so you can force maintenance to run at specific times (see new run_maintenance() feature below), but you MUST force it to run at some point otherwise new partitions will never be made.
+    -- Note that there will ALWAYS be at least one child partition created, even for subpartition parents that are outside the current trigger range. Data outside the currently covered trigger range will still be inserted the the relevant parent.
+    -- Note that for retention policies, whatever retention period is set on the highest level will be honored and ALL child tables will be dropped, cascading all the way down to the bottom. Use this option even more carefully!
+
+-- New parent table name parameter to run_maintenance(). If set, skips all other tables for that maintenance run and only does the one given. (Github Issue #32)
+    -- This is an optional parameter, so should not affect any existing use of the function. When not given, maintenance is run for all partition sets set to use it in the part_config table.
+    -- The already existing configuration option in part_config (use_run_maintenance) can be used to tell run_maintenance() to skip any partition sets for which you do not want it to run when no table name parameter is given. You can then schedule partition maintenance for specific tables to run at specific times using the new argument to run_maintenance(). Note that if a parent table argument is explicitely given to run_maintenance, it will always run the maintenance for it no matter what the configuration table has set.
+    -- Note that when a table argument is given to run_maintenance(), retention settings will only be run for that one specific table given (if configured).
+    -- Be aware that the "use_run_maintenance" configuration option is always set to true for time-based partitioning & subpartition sets and set false for serial based partitioning (when not subpartitioned) when calling create_parent() or create_sub_parent(). Adjust this configuration setting accordingly so run_maintenance() does what you require after you create your partition sets.
+    -- The trigger constraint on the **part_config** table that would not allow "use_run_maintenance" to be set to false for time based partitioning has been removed.
+
+-- New analyze parameter to run_maintenance(). 
+    -- Defaults to true so that if any partition set has a new child table created, an analyze is run on that whole partition set. This is to ensure constraint exclusion works properly.
+    -- Large partition sets were causing run_maintenance() to take a long time to run since the analyze would hold it up. This could cause some contention.
+    -- Setting p_analyze to false will cause the analyze to not run for ALL partition sets that are eligible for new partiton creation or retention management at the time it is called.
+    -- If you set this to false, it is advised that you have some other means to ensure a regular analyze is being run on your partition sets.
+    -- NOTE this parameter is set as the second argument since it's likely to be more commonly used, so make sure to check any current run_maintenence() calls to account for this (previously p_jobmon was the second parameter).
+
+-- Analyze is no longer automatically run on the parent table after create_parent() is run. Since create_parent() takes an exclusive lock on the parent table during setup, tables that already had a lot of existing data where being locked for the length of the analyze run, which could be quite long. When data is partitioned out later, analyze is automatically run. Also, whenever new partitions are created in the future, an analyze will be run as well (if the p_analyze argument to run_maintenance() is true which it is by default). Both those cases should take care of updating the planner statistics when it begins to matter. Run an analyze on the parent table after setup if you want to be sure.
+-- Fixed bug in show_partitions() that caused an error when the values in the control column of a serial partition set were larger than the max int value. This would also cause errors when partitioning existing data with values that high since the partitioning functions use show_partitions() internally. (Reported by S. Kristensen)
+-- create_parent() and new create_sub_parent() now return a boolean value to determine whether they succeeded.
+-- For all pythons scripts, changed the --connection default to "host=" instead of "host=localhost". This makes the default connection to the database use the local socket instead of TCP. Makes it act more predictibly like all other postgres executables (psql, pg_dump, etc). Please check any that you many have scheduled to run to ensure they are still working properly.
+-- Added a --version argument to all python scripts. This tells you the minimum version of pg_partman this script is meant to work with.
+-- Made sure all scripts in bin folder are added to Makefile for installation.
+-- Make sure autovacuum is reset if SIGINT (Ctrl+C) is fired when using partition_data.py or undo_partition.py.
+-- Added howto.md file to doc folder with some more extensive examples.
+-- last_partition column in part_config table no longer in use. Dropped it.
+-- Renamed internal functions create_id_partition(), create_id_function(), create_time_partition() & create_time_function() to create_partition_id(), create_function_id(), create_partition_time() & create_function_time() respectively. This gives all functions a consistent naming pattern.
+
+
+1.7.2
+-- Fixed bug in apply_foreign_keys() where new partition creation would fail when the partition set's schema is in the current search_path. Most commonly happened when partition sets with foreign keys were in public, but any schema in current search_path would cause this to manifest. Reported by Isaías Sánchez via my blog. (Github Issue #27)
+-- Foreign key inheritance is now optional since more complex FK relationships may not work ideally with pg_partman's default method. New configuration option in part_config table and parameter to create_parent().
+
+
+1.7.1
+-- Foreign keys placed on the parent table are now inherited to child tables.
+    -- Any new partitions created after this update is installed will have the FKs applied to children.
+    -- Existing child partitions will not have FKs applied. See the reapply_foreign_keys.py python script to reapply FKs to all child tables.
+    -- The new apply_foreign_keys() function & reapply_foreign_keys.py script can be applied to any table inheritance set, not just the ones managed by pg_partman.
+    -- See blog post for some more information about partitioning & foreign keys - http://www.keithf4.com/table-partitioning-and-foreign-keys
+-- Unlogged table property on parent table is now automatically inherited to child tables. Note this only applies to newly created child partitions after this update is installed.
+-- Added lockwait options to the undo partition functions (plpgsql & python)
+-- Added the same autovacuum feature & option to undo_partition.py that partition_data.py has.
+-- Made python scripts compatible with python 3
+-- PgTAP tests for unlogged tables and FK inheritance
+
+
+1.7.0
+-- New configuration option to allow serial partitioning to use run_maintenance() instead of creating next partition via trigger.
+    -- Use "p_use_run_maintenance" argument to create_parent() to set this during partition creation.
+    -- part_config table has new boolean column "use_run_maintenance"
+    -- Serial/ID based partitoning defaults to FALSE. This means serial partitioning uses the parent partition trigger function to make new child partitions when the current one reaches 50% of its configured capacity (the same way it used to work). If set to TRUE, then you must schedule run_maintenance() to run often enough to keep up with your insertion rate. Otherwise rows will get inserted to the parent table.
+    -- Time based partitioning defaults to TRUE and config values for using run_maintenance cannot be set to false. All time-based partitioning still requires run_maintenance() for creating new child tables.
+    -- Existing partition sets have their config table values set to the defaults above.
+    -- If you'd like to change an existing serial partition set to use run_maintenance instead of the trigger, update the "use_run_maintenance" column in part_config to set it to TRUE for that parent table. You must then run the "create_id_function()" function giving it a parameter of the schema qualified parent table of the set. This will remove the code in the trigger that automatically makes new child tables.
+        -- Ex: SELECT partman.create_id_function('parent_schema.parent_table');
+-- reapply_indexes.py can now handle too long or duplicate index names. Please see docs for how this is handled since it can change index naming patterns (Github Issue #21).
+-- Fixed partition_data_id() & partition_data_time() to properly return the number of rows moved when the parent table is empty before the batch limit is reached (Github Issue #22).
+-- Fixed creation of new child partition tables not working when parent tables had OIDs turned on. (Github Issue #20)
+-- Fixed check_unique_constraint.py to avoid index scans and check underlying table data. Option added to try and allow index scans if desired.
+-- Fixed reapply_constraints.py & reapply_indexes.py to properly run jobs in parallel.
+-- Ensure an analyze is run on parent table of a set after any child table is created so that constraint exclusion works properly for all child tables.
+-- Ensure an analyze is run on a child table whenever additional column constraints are automatically added. Also analyze partition set if reapply_constraints.py is run.
+-- Added pgtap tests that ensure the partitioning functions are returning the proper number of rows.
+-- Added pgtap tests for new features in reapply_index.py
+
+
+1.6.1
+-- The python partitioning script now turns off autovacuum on the entire partition set while it is running. This should help reduce load since it will prevent the autovacuum daemon from kicking off while data is being migrated. When the script is done running, the default value for autovacuum is restored to all tables in the partition set. Also, VACUUM ANALYZE is run on the parent table when all data has finished moving as well. There is an option to disable the turning off of autovacuum if the ALTER TABLE statements are causing more contention and issues than the autovacuum. There is no option for turning off autovacuum when using the plpgsql partitioning functions (inability to COMMIT within function loop would cause too much contention).
+-- The order that data is migrated from the parent to the children can now be determined via an option to the partition_data_id/time() functions or the python script. The default is the way it originally moved data (ascending order). Thanks for bougyman from #postgresql on freenode for this idea.
+-- Removed plpgsql function "check_unique_column()" and created python script "check_unique_constraint.py". This runs far more efficiently and causes less contention within the database while checking if a unique constraint is consistent across all child tables. Also now supports checking multi-column constraints. See doc file for more info on script options.
+-- Fixed syntax error in create_parent(), create_id_function() exception blocks. Reported by bougyman.
+-- Added pgtap tests for additional constraints feature.
+
+
+1.6.0
+-- A new partitioning type has been added to allow setting almost any desired time interval (time-custom). The smallest interval supported is 1 second and the upper limit is bounded by the minimum and maximum timestamp values that PostgreSQL supports (http://www.postgresql.org/docs/current/static/datatype-datetime.html). This feature uses the range data type for internal configuration management, so it is only supported in PostgreSQL 9.2+.
+  -- The custom time interval is less efficient than both time-static and time-dynamic since it must use a lookup table. If your needed partitioning interval can fit in one of the pre-made intervals given in the documentation, it is highly recommended to use one of those for better performance. time-static is still the best method when performance of inserts is important. See the documentation for more details on this new partitioning type.
+-- New parameter to create_parent() that sets what the first partition in the set will be (p_start_partition). 
+  -- Must be a valid timestamp (for time-based) or positive integer (for id-based) value. Be aware, though, the actual paramater data type is text. 
+  -- For time-based partitioning, all partitions starting with the given timestamp up to CURRENT_TIMESTAMP (plus premake) will be created.
+  -- For id-based partitioning, only the partition starting at the given value (plus premake) will be made. 
+-- pg_jobmon is now truly optional. Additonal configuration option for each individual partition set to turn it off and on. run_maintenance() now has an optional parameter to turn it off when being run. If you tried to partition pg_jobmon tables before, it would cause a permanent lockwait. Turn pg_jobmon off for those tables to avoid this.
+-- Fixed partition_data_time() & partition_data_id() functions to recreate the parent trigger function when static partitioning is used. Without this, partitioning more recent data that may have gotten into the parent table could possibly leave the function without conditions for the new partitions. run_maintenance() would eventually fix this for time partitioning, but id partitioning could be left in a broken state forever. (Github issue #16) 
+-- Fixed bug in partition_data_time() & partition_data_id() to reset the lock wait counter properly between loops. Bug reported & fixed by bougyman from #postgresql on Freenode.
+-- pg_partman only supports id intervals greater than 1. May see if I can get an interval of 1 working later, but changed create_parent() to check for this and not allow it since it won't work properly at this time. New partitions were not automatically created if interval was set to 1. (Github issue #15)
+-- Clarify in docs that the id interval value passed to create_parent() must actually be in text type format.
+-- Changed drop & undo partition functions to use transaction based advistory locks.
+-- Removed need for internally used function create_next_time_partition() and therefore dropped the function. 
+-- Simplified the create_time_partition() & create_id_partition() parameter lists.
+
+
+1.5.1
+-- Fix create_parent() to actually insert the contraint_cols value passed into the function to the config table when using time based partitioning. Thanks to Jeff Amiel for reporting the issue.
+
+
+1.5.0
+-- New functions that can manage additional constraints on child tables older than premake value based on what their min/max values are. This allows constraint exclusion to become usable on columns other than the partitioning column. However, this is only useful if older tables are no longer editing the columns that will have constraints placed on them, otherwise you risk constraint violations. See blog post for a more thorough explanation and examples: http://www.keithf4.com/managing-constraint-exclusion-in-table-partitioning
+-- New python script for using above functions to drop/apply constraints on an entire partition set without causing excessive lock issues.
+-- show_partitions() function is now guarenteed to return a list of partitions in the order that makes sense for the partition type/interval for the set. Additional option to specify ascending or descending order (defaults to ascending).
+-- Check for valid parameter values in partition creation function (github issue #14 from Josh Berkus)
+-- Added drop index concurrently option (--drop_concurrently) to reapply_indexes.py script. Only works for 9.2+ 
+-- Changed run_maintenance() to use advisory transaction lock instead of session level lock.
+-- Fixed missing library import in python scripts.
+-- Organized docmentation of functions.
+
+
+1.4.5
+-- Fixed bug in reapply_indexes.py script that could cause all new indexes to be added to the parent instead of the children. This was happening if the parent table's schema was in the search_path of the role that the script uses to connect to the database.
+-- Removed any unneeded library imports in all python scripts.
+-- Moved python scripts from "extras" folder to "bin" folder. Now that they're actually getting installed as part of "make install" they're not really extras anymore.
+
+
+1.4.4
+-- Bug fix: Typos in partition_time_data/id() functions. Only ran into this if a lockwait was hit while trying to partition data.
+
+
+1.4.3
+-- Fix "make install" to work in PostgreSQL 9.3.x without throwing an error.
+-- "make install" now installs the python script files to <postgresql_install_prefix>/bin. They are now also executable and have the proper #! line at the top.
+-- Updated the rest of the python scripts to use argparse library for options (thanks to Josh Berkus for the assistance on this).
+  -- Some of the command line options have changed for the scripts. See the --help for each script to ensure you are using the correct parameters.
+
+
+1.4.2
+-- Added lockwait functionality to background data partitioning, including partition_data_id, partition_data_time, and partition_data.py (Thanks to Josh Berkus for this feature).
+
+
+1.4.1
+-- Assign child partitions to the tablespace of the parent. This will only apply to newly created partitions after this update is installed. To fix existing partitions, you will have to manually alter the child tables. Thanks to https://github.com/joelhoffman for the fix.
+
+
+1.4.0
+-- Updated creation of child partition, function & trigger names to take into account the max object length an object can have to guarentee the partition suffix. Involved extensive rewrite of many core functions.
+-- WARNING: If your table names were already long enough to be causing name truncation (over 63 characters), you may get duplicate child tables, functions & triggers created. Please check your object name lengths on your partition sets before installing this update to see if you may be affected by this edge case and its subsequent fix. 
+-- New python script (reapply-indexes.py) to re-apply indexes to child tables when they have changed on the parent. See docs for more info.
+-- New function to check the uniqueness of a column in a partition set (check_unique_column()). Helps to overcome the inability of a unique constraint to be applied efficiently across all partitions in a set. Does not prevent a unique violation, but provides a method to monitor for it happening.
+-- More pgTAP tests to ensure name trunucation process is working. 
+-- Changed pgTAP tests to assume pgTAP is installed in public schema to try and avoid issues when it isn't.
+
+
+1.3.0
+-- New configuration option for retention system that allows child tables that are eligible for removal to instead be moved to another schema. Set the "retention_schema" option in the configuration table to move the table to the designated schema instead of dropping it. This overrides the retention_keep_table & retention_keep_index options.
+-- New python script, dump_partition.py, that will dump any tables found in a given schema using pg_dump, create a SHA-512 hash of the dumped file and then drop the table from the database.
+-- The combination of the retention_schema option and the dump_partition.py script give a way to reliably dump out tables for archiving when they are no longer needed in the database. Idea for this feature adapted from conversation at PGDay NYC 2013 (lost the card of the individual I was talking with :( ).
+-- New function show_partitions() that gives a list of child tables in a partition set. Adapted from fork by https://github.com/ebaptistella
+-- Previously the functions that created the new partitions were using only the "INCLUDING DEFAULTS INCLUDING INDEXES" options when using the CREATE TABLE ... (LIKE ...) syntax. This caused some contraints on the parent to be missed in child tables. Changed to include all available options as of PostgreSQL 9.1: INCLUDING DEFAULTS INCLUDING CONSTRAINTS INCLUDING INDEXES INCLUDING STORAGE INCLUDING COMMENTS. Change will apply to all newly created child tables in all partition sets managed by pg_partman. You'll have to go back and manually fix any already existing child tables that may be missing constraints. Issue reported by Nick Ebbitt.
+-- Added TAP tests for drop partition functions. 
+-- Fixed some tap tests to more accurately test for table (non)existance
+-- Clarified the drop_partition_id() function's retention parameter meaning.
+
+
+1.2.0
+-- Bug fix: Make child table lookups more intelligent to be able to deal with schemas being in the current search_path. Functions this affects are: drop_time_partition(), drop_id_partition(), reapply_privileges(), undo_partition(), undo_partition_id(), undo_partition_time(). Before table names may not have matched properly when looping through all tables to drop or reset privileges. Thanks to https://github.com/terrorobe for reporting this issue.
+-- Bug fix: reapply_privileges() had unconditional calls to pg_jobmon functions and would fail if it wasn't installed.
+-- Added new parameter to drop partition functions to manually set an interval you'd like to drop. Makes it easier to cleanup a bunch of old partitions you don't need anymore without having to go through the whole retention policy setup if that's not needed.
+-- Renamed drop_time_partition() to drop_partition_time() and drop_id_partition() to drop_partition_id() to be more consistent with the other function names. Please check function ownership & privileges before and after update to ensure they are reset properly.
+
+
+1.1.0
+-- New python scripts in extras folder to allow partition creation and undoing using smaller commit batches, as is suggested in the documentation for the partition_data_* and undo_partition_* functions. This helps avoid transaction locks when there is a large amount of data to move around. There are also options to commit more slowly and ease the load on very busy systems.
+-- Changed the ordering of batch arguments in partition_data_id() & partition_data_time(). This makes their order the same as the undo functions and is a more sensical order (I think anyway).
+-- Made partition functions quieter. No more notices and just returns number of rows moved.
+-- Changed the undo partition functions to remove partitions in the order they were originally created. They were doing it alphabetically before, which could cause an odd order for serial based partitioning (p100 would be before p2). Creation order may not remove them in ascending order of the data at first, which would be ideal, but it makes more sense than alphabetically.
+-- Bug fix: undo_partition() could return 0 prematurely if some of the partitions were empty. Will now automatically uninherit/drop any empty partitions and continue on if there are still child tables, not counting them against p_batch_count if given.
+
+
+1.0.0
+-- New functions to undo partitioning. These all either move or copy data from the child tables and put it into the parent. All have an option to allow you either uninherit the child tables (default) or drop them when all their data has been put into the parent.
+    --  undo_partition_time() & undo_partition_id are functions that move the data from the child partitions to the parent tables. Data is deleted from the child table and inserted to the parent. These functions allow smaller interval batches to be given as a parameter and are better able to handle larger partitioning sets. 
+    -- undo_partition() can work on an any parent/child table set in PostgreSQL, not just partition sets created by pg_partman. Just pass it the name of the parent table. This method only copies the data out of the child tables instead of deleting it, allowing you to keep all the partitioned data if desired. Because of this it can only process an entire partition at a time and cannot handle batches smaller than the partition interval.
+-- Changed create_prev_id_partition() to partition_data_id() & create_prev_time_partition() to partition_data_time(). This clarifies what these actually do since they don't always create a partition nor is it always necessarily "previous" data.
+-- Changed how the above functions work to move data from parent into partitions. You can now feed them a smaller interval value for the rows that you'd like moved instead of it always moving exactly one entire partition of data. This allows smaller batch sizes when you've got a lot of data even in just one partition. That interval is now the second parameter. A third parameter can tell it how many of those interval batches you'd like to move in a single run of the function. Both of these parameters are optional. If not given, the interval defaults to the partition interval and the batch count is one (so it works exactly like it used to with no parameters but the parent table given). 
+-- Partition premake system is now able to catch up if it falls behind for some reason. Also makes it so that if the premake value is increased, within the next few runs it will have that many partitions premade automatically.
+-- Bug fix: create_time_partition() & create_time_function() now handle the "timestamp with time zone" data type much better. Was getting some mismatches in the trigger rules and table constraints when timestamptz was in use on server not running in UTC/GMT time. Would cause constraint violations during data insert at certain time boundaries. If you ran into this issue, there are two ways to fix it: 1) Manually recreate the constraints for the most recent partitions and any future partitions already created. You may have to move some data around as well. 2) Use the new undo functions to move all the data back into the parent table and then repartition again using the partition_data_* functions. This will fix the issue for all partitions.
+-- Bug fix: Determining how many partitions to premake in run_maintenance() is now more accurate. Previous date math would occasionally premake 1 extra partition depending on the time differences. This can still occur with weekly partitioning due to differing month lengths (especially February) and daylight savings. Doesn't hurt anything and will self-correct.
+-- Much more complete pgTAP test suite.
+
+
+0.4.2
+-- The static partitioning trigger function can now handle partitions based on the configured premake value. For example, the default premake value is 4 so it can now handle data for the current partition, 4 previous partitions and 4 future partitions. Changing the premake value will cause the trigger function to be changed appropriately the next time a partition is automatically created. Except for initial setup, at no time does the automated partitioning system create old partitions (see the create_prev_* functions if you need to do this). If you change the premake value and there is no previous partition for it to put data in, it will go to the parent table.
+-- create_parent() now accounts for the new static partitioning rules. For time-static, it will create the current partition as well as previous and future partitions equal to the configured premake number (default premake being 4, you will end up with 9 partitions). For id-static, it will only create previous partitions if the resulting rules handle id values greater than zero. So if you're starting from zero you will only have future partitions created, and no previous.
+-- Constraint now ensures that premake value is greater than zero.
+-- create_parent() now ensures interval value for serial partitioning is greater than zero.
+-- Much more extensive pgTAP tests.
+
+
+0.4.1
+-- Changed the privilege management system to apply the current parent's privileges only to new child tables at the time they're created. No longer re-applies privileges to existing child tables. When partition sets grew large, this was causing serious performance problems and was too expensive an operation to run every time a child was created.
+-- Dropped apply_grants() function. New child table privileges are now managed by the partition creation functions themselves.
+-- Created reapply_privileges() function to reset the privileges of all child tables in a given partition set. Uses the given parent's privileges at the time the function is run. All new grants will be set and all that don't exist will be revoked. Ownership will be updated if it has changed.
+-- First round of pgTAP tests.
+
+
+0.4.0
+-- No separate configuration required for setting privileges on child tables anymore. Grants config table has been dropped. Please apply the grants you need to the parent table and they will be set for all children using that. Note that unlike before, privilges that don't exist on the parent will now be revoked from all child tables.
+-- create_parent() now enforces that a given parent table be schema qualified. Ensures that a custom search_path doesn't affect the wrong table by accident.
+-- Removed enum custom type and replace with check function.
+-- Applying of grants is now logged in pg_jobmon so if there's any issues with that step, it's clear where it failed.
+
+
+0.3.2
+-- Allow multiple grant commands for the same partition set in case different roles need different grants. Removed primary key constraint from part_grants table and updated apply_grants function 
+-- create_parent() function now ensures that the control column has a not null constraint.
+-- Make select-only functions STABLE
+
+
+0.3.1
+-- Added check to dynamic id & time trigger functions to see if target table exists. If it doesn't, insert to parent instead of throwing error. Better than losing data! check_parent() function can monitor for this happening and create_prev_* functions can easily fix it. Thought of having it auto-create the needed partition, but if something is going wrong, that could end up creating a lot of unwanted partitions and be harder to clean up. 
+
+
+0.3.0
+-- Added grants configuration table to propagate permissions to newly created child partitions. Will also apply those permissions to the parent table and all existing child tables whenever a new partition is created. Permissions are only granted, never revoked. See docs for more info.
+
+
+0.2.0
+-- New functions to manage dropping old partitions. Does not actually need to be called directly unless necessary. Use run_maintenance() function.
+-- Added ability to run_maintenance() function to manage dropping old tables in addition to managing time-based partitioning.
+-- Removed raise notice in run_maintenance and make sure old search path is reset after function finishes running.
+-- Lot of documentation updates
+
+
+0.1.2
+-- Added support for quarterly time partitioning (trickier than it first appeared)
+-- Fixed bug in run_maintenance() that would give an invalid cast to integer error.
+-- Fixed some calls to pg_jobmon that were outside the checks to see if it's actually installed
+-- Properly reset search path back to original before partman functions were run if pg_jobmon is being used
+-- Changed the default premake to 4 instead of 3. This will cause pg_jobmon's default monitoring for 3 consecutive failing jobs to trigger an before the last premade partition is used up.
+-- Added optional jobmon logging to run_maintenance() so that if it fails, pg_jobmon can notify that maintenance didn't work.
+
+
+0.1.1
+-- Only re-create partition functions if a new partition is made. 
